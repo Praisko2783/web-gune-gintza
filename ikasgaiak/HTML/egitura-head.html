@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Web gunearean egiturarako bigarren atala 'dokumentuaren burua'-->
+    <article class="ikasgaia" id="html-egitura-burua">
+        <div class="azpitituluak">
+          <h3><strong>Dokumentuaren burua: &lt;head&gt;&lt;/head&gt;</em></strong></h3>
+        </div>
+        <p>Buruak web-orria sortzeko behar diren informazio eta baliabide guztiak biltzen ditu. Ikus dezagun.</p>
+        <p><strong>&lt;title&gt;&lt;/title&gt;</strong> —Web-orriaren izena ezartzeko. </p>
+        <p><strong>&lt;base&gt;&lt;/base&gt;</strong> —Nabigatzaileak URL erlatiboen benetako kokapena ezartzeko
+          erabiltzen duen URLa definitzen du. Elementuak href atributua izan behar du oinarrizko URLa deklaratzeko. 
+          Elementu hori deklaratzen denean, egungo URLaren ordez, nabigatzaileak href atributuari esleitutako URLa erabiltzen du
+          URL erlatiboak osatzeko. </p>
+        <p><strong>&lt;meta&gt;</strong> —Dokumentuarekin lotutako metadatuak adierazten ditu, hala nola
+          dokumentuaren deskribapena, hitz gakoak, karaktereen kodifikazio mota, etab. Elementuak <strong>name</strong> atributuak
+          barne har ditzake metadata mota deskribatzeko, <strong>content</strong> balioa zehazteko, eta <strong>charset</strong> edukia prozesatzerakoan erabili beharreko karaktereen kodifikazio mota adierazteko. </p>
+        <p><strong>&lt;link&gt;</strong> —Dokumentuaren eta kanpoko baliabide baten arteko erlazioa
+          zehazten du (normalean CSS fitxategiak kargatzeko erabiltzen da). Baliabidearen kokapena adierazteko href eta erlazio
+          mota definitzeko rel atributuak erabili ohiditu. Horiez gain baliabidea lotuta dagoen bitartekoa zehazteko
+          batez bestekoa (pantaila, inprimagailua, etab.), eta baliabide-mota eta haren tamaina adierazteko <strong>type</strong> eta <strong>sizes</strong> atributuak ere har ditzake. </p>
+        <p><strong>&lt;style&gt;&lt;/style&gt;</strong>—Dokumentuaren barruan CSS estiloak adierazteko erabiltzen da. </p>
+        <p><strong>&lt;script&gt;&lt;/script&gt;</strong> —JavaScript kodea kargatzeko edo deklaratzeko erabiltzen da.
+        </p>
+        <div class="banaketaTxikia"></div>
+<!-- web-orriaren izenburua buruaren barruan  <title>----------------- -->
+        <h4>&lt;title&gt;&lt;/title&gt;</h4>
+        <strong>&lt;head&gt;&lt;/head&gt;</strong> elementua deklaratzen dugunean, normalean, lehenik eta behin, haren barruan barruan izenburua zehaztu ohi da. Hori <strong>&lt;title&gt;&lt;/title&gt;</strong> etiketez inguratua egin ohi da. Testu hori web-orriko erlaitzean agertzen da, eta horixe da erabiltzaileek gure webgunea pantailaratzen dutenean ikusten dutena.
+<pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    <b>&lt;title&gt;Webgunegintza&lt;/title&gt;</b>
+  &lt;/head&gt;
+  &lt;body&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/HTML/titleerlaitzean.png" alt="Bezero zerbitzari web egitura" width="50%" srcset="">
+          <figcaption>HTML-egitura(1): &lt;title&gt;&lt;/title&gt; elementua</figcaption>
+        </div>
+        <div class="garrantzi-oinarrizko">
+          <p><strong>Adi!: </strong>aurreko adibideko <strong>&lt;title&gt;&lt;/title&gt;</strong> elementua
+            eskuinerantz mugitu dugu tabuladorearekin garatzaileari hierarkiaren barruan elementuaren posizioa
+            ikusten laguntzeko. Nabigatzaileek ez dituzte kontuan hartzen zuriuneak eta elementuetatik kanpoko
+            lerro-jauziak.
+          </p>
+        </div>
+        <div class="banaketaTxikia"></div>
+<!-- web-orriaren 'meta' atributuak buruaren barruan  <meta>--------- -->
+        <h4>&lt;meta&gt;</h4>
+        <p>Izenburuaz gain, dokumentuaren metadatuak ere buruan adierazten dira.</p>
+        <p>Metadatuek nabigatzaileek eta bilatzaileek web-orria sortzeko eta sailkatzeko erabiltzen duten orriari
+          buruzko informazioa biltzen dute.</p>
+        <p>Balioak <strong>&lt;meta&gt;</strong> elementuarekin adierazten dira. Elementu honek hainbat ezaugarri ditu. Ikus dezagun.</p>
+        <p>Garrantzitsuenak pantailan testua aurkezteko erabili beharreko karaktere-taula definitzen du, <strong>charset</strong> atributuarekin adierazten dena. </p>
+<pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Webgunegintza&lt;/title&gt;
+    <b>&lt;meta charset="utf-8"&gt;</b>
+  &lt;/head&gt;
+  &lt;body&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+        <div class="garrantzi-oinarrizko">
+          <p><strong>Gogoratu: </strong>adibideak utf-8 gisa definitzen du
+          karaktere-multzoa, hizkuntza gehienetan erabiltzen diren karaktere guztiak biltzen dituena, baina beste
+          batzuk ere badaude eskuragarri.</p>
+          <p>Informazio gehigarria deklaratzeko &lt;meta&gt; elementu ugari sar daitezke.</p>
+          <p> Adibidez, gure dokumentuak prozesatzeko orduan nabigatzaileek kontuan har ditzaketen bi datu dira
+          orriaren deskribapena eta edukia identifikatzen duten gako-hitzak.</p>
+          <p><strong>&lt;meta&gt;</strong> elementu horiek <strong>name</strong> atributua eskatzen dute
+          <strong>description</strong> eta <strong>keywords</strong> balioekin, eta
+          <strong>content</strong> atributua deskribapen eta gako-hitz gisa esleitu nahi dugun testuarekin
+          <em>(gako-hitzak komaz bereizi behar dira)</em>.</p>
+        </div>
+
+<pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+&lt;title&gt;Webgunegintza&lt;/title&gt;
+&lt;meta charset="utf-8"&gt;
+<b>&lt;meta name="description" content="Hau ikasmaterialaren lehen atalaren web-orria da."&gt;</b>
+<b>&lt;meta name="keywords" content="HTML, CSS, JavaScript, Euskara"&gt;</b>
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<div class="banaketaTxikia"></div>
+<!-- web-orriaren buruan barruan kanpo lotura <link>   'ICON' ------------ -->
+        <h4>&lt;link&gt;icon</h4>
+        <p>Elementu hori erabiltzen da dokumentuari kanpoko artxiboetatik estiloak, kodeak, irudiak edo ikonoak
+          gehitzeko.</p>
+        <p>Adibidez, nabigatzaile batzuek ikono bat erakusten dute leihoaren goiko aldean, orrialdearen
+          izenburuarekin
+          batera. Ikono hori kargatzeko, &lt;link&gt;&lt;/link&gt; elementu bat erabili ohi dugu. Haren barruan
+          hainbat
+          atributu sartu ohi ditugu:</p>
+        <ul class="zerrendaArruntak">
+          <li><p><strong>icon</strong> balioa duen <strong>rel</strong> atributua</p></li>
+          <li><p>ikonoa duen fitxategiaren kokapena zehazten duen duen <strong>href</strong> atributua</p></li>
+          <li><p>ikonoaren formatua zehazten duen <strong>type</strong> atributu</p></li>
+          <li><p>eta ikonoaren zabalera eta altuera biderkatzen dituen <strong>sizes</strong> atributua</p></li>
+        </ul>
+<pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+&lt;title&gt;Webgunegintza&lt;/title&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta name="description" content="Hau ikasmaterialaren lehen atalaren web-orria da."&gt;
+&lt;meta name="keywords" content="HTML, CSS, JavaScript, Euskara"&gt;
+<b>&lt;link rel="icon" href="imagenes/favicon.png" type="image/png" sizes="16x16"&gt;</b>
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+        <p>Nabigatzaileak leku gutxi du ikonoa erakusteko, beraz, irudi honen tamaina tipikoa 16 pixel bider 16
+          pixelekoa
+          da. Irudiak erakusten du nola ikusten den leihoa ikono bat duen dokumentu bat irekitzen dugunean (kasu
+          honetan,
+          izenburuaren ezkerraldean irudi bat agertzen da).</p>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/HTML/ikonoaerlaitzean.png" alt="Ikonoa erakusten du erlaitzean" width="50%" srcset="">
+          <figcaption>HTML-egitura(2): ikonoa erlaitzean</figcaption>
+        </div>
+
+        <div class="garrantzi-oinarrizko">
+          <p><strong>Gogoratu: </strong>&lt;link&gt;&lt;/link&gt; elementuaren <strong>type</strong> atributuari esleitutako balioa <strong>MIME</strong> mota gisa zehaztu behar da. Fitxategi guztiek dute <strong>MIME</strong> mota bat, sistemari edukiaren formatua adierazteko. Adibidez HTML fitxategi baten MIME mota <strong>text/html</strong> da.</p>
+          <p>MIME mota bat dago erabilgarri dagoen fitxategi mota bakoitzerako, JPEG eta PNG irudietarako <strong>image/jpeg</strong> eta <strong>image/png</strong> barne hartzen dituena.</p>
+        </div>
+        <div class="banaketaTxikia"></div>
+        <!-- web-orriaren 'link' atributuak buruaren barruan REL-stylesheet- 'css' ----------------- -->
+        <h4>&lt;link&gt;CSS</h4>
+        <p>&lt;link&gt;&lt;/link&gt; elementua web orria sortzeko behar diren estiloak dituzten CSS fitxategiak
+          kargatzeko
+          erabiltzen da. Adibidez, hurrengo dokumentuak misestilos.css fitxategia kargatzen du.</p>
+        <p>Fitxategia kargatu ondoren, barruan adierazitako estilo guztiak dokumentuaren elementuei aplikatzen
+          zaizkie.
+          Kasu
+          honetan, baliabide-mota deklaratzeko <strong>rel</strong> atributuari CSS estilo-orrietarako
+          <strong>"stylesheet"</strong> balioa esleitu behar diogu eta <strong>href</strong> atributuari
+          fitxategiaren
+          kokapena zehazten duen <strong>URLa</strong>. CSS estiloak zehazten dituen fitxategia nola definitu
+          hurrengo
+          kapitulu batean aztertuko dugu.
+        </p>
+<pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+&lt;title&gt;Webgunegintza&lt;/title&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta name="description" content="Hau ikasmaterialaren lehen atalaren web-orria da."&gt;
+&lt;meta name="keywords" content="HTML, CSS, JavaScript, Euskara"&gt;
+&lt;link rel="icon" href="imagenes/favicon.png" type="image/png" sizes="16x16"&gt;
+<b>&lt;link rel="stylesheet" href="estiloa.css"&gt;</b>
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+        <h5>Dokumentuaren burua prest! Jarraian gorputza osatzeari ekingo diogu.</h5>
+      </article>
+</body>
+</html>

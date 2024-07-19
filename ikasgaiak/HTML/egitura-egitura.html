@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <article class="ikasgaia" id="html-egitura-elementua">
+        <div class="azpitituluak">
+          <h3><strong>Egiturazko elementuak</strong></h3>
+        </div>
+        <p>Atariko kapituluan aipatu dugun bezala, HTML elementuek zuhaitz moduko egitura bat osatzen dute,
+          elementua
+          sustraitzat hartuta. Egitura horrek antolamendu-maila ugari ditu, eta elementu batzuk dokumentuaren atal
+          orokorrak
+          definitzeaz arduratzen dira, eta beste batzuk atal txikiak edo edukia irudikatzeaz. Hauek dira egituraren
+          bizkarrezurra definitzeko eta nabigatzaileak orria pantailan erakusteko behar duen informazioa emateko
+          erabilgarri
+          dauden elementuak:</p>
+          <div class="banaketaTxikia"></div>
+        <!--  Web orrien egiturako (1.1 Web-orrien egitura) lehen atala 'Dokumentu mota' saila. ----------- -->
+        <h4>Dokumentu mota</h4>
+        <p>Gure dokumentuen edukia HTML kode gisa behar bezala interpretatzen dela ziurtatzeko, fitxategiaren
+          hasieran
+          erantsi behar dugu adierazpena. Adierazpen hori HTML etiketen antzekoa da, eta dokumentu bakoitzaren
+          hasieran
+          eskatzen da, nabigatzaileari web-orria nola sortu behar duen erabakitzen laguntzeko. HTML5ekin
+          programatutako
+          dokumentuen kasuan, deklarazioak html atributua barne hartu behar du, hurrengo adibidean definitutakoaren
+          arabera.
+        </p>
+        <div class="banaketaTxikia"></div>
+        <h4><strong>&lt;!DOCTYPE html&gt; </em></strong></h4>
+        <div class="garrantzi-oinarrizko">
+          <p><strong>GARRANTZITSUA: </strong>adierazpenaren ildoa
+            dokumentuaren lehen lerroa izan behar da, inolako espazio edo koderik gabe. Horrek modu estandarra
+            aktibatzen du,
+            eta nabigatzaileak HTML5 interpretatzera behartzen ditu, ahal denean, edo, bestela, alde batera uztera.
+          </p>
+          <p><strong>Oinarrizkoa: </strong>HTML5en sartutako elementu eta atributu
+            batzuk ez daude eskuragarri Internet Explorer bezalako nabigatzaile zaharretan. Elementu horiek edo
+            HTML5ek
+            sartutako beste funtzio batzuk zein nabigatzailek inplementatzen dituzten jakiteko, bisitatu
+            www.caniuse.com</em>. Webgune horrek HTML5en eskuragarri dauden elementu, atributu, CSS propietate
+            eta
+            JavaScript kode guztien zerrenda eskaintzen du, horiek onartzen dituzten nabigatzaileekin batera.
+          </p>
+        </div>
+
+        <ul class="zerrendaArruntak">
+          <li><p> <strong>&lt;html&gt;&lt;/html&gt;</strong>—— Elementu honek HTML kodea mugatzen du. Dokumentuaren edukiaren hizkuntza definitzeko
+            lang atributua sar dezake. </p></li>
+          <li><p><strong>&lt;head&gt;&lt;/head&gt;</strong>—— Elementu hau web orria konfiguratzeko behar den informazioa definitzeko erabiltzen da,
+            hala nola, izenburua, karaktereen kodetze mota eta dokumentuak eskatzen dituen kanpoko fitxategiak.</p></li>
+          <li><p><strong>&lt;body&gt;&lt;/body&gt;</strong>—— Elementu honek dokumentuaren edukia mugatzen du (orrialdearen ageriko zatia).</p></li>
+        </ul>
+        <p>Dokumentu mota adierazi ondoren, zuhaitz motako egitura eraiki behar dugu HTML elementuekin, &lt;html&gt;&lt;/html&gt; elementuarekin
+          hasita. Elementu horrek <strong>lang</strong> atributua izan dezake, orriaren edukia zein hizkuntzatan idatziko dugun adierazteko,
+          hurrengo adibideak erakusten duen bezala.</p>
+<pre>
+<code>
+&lt;!DOCTYPE html&gt; 
+&lt;html lang="es"&gt; 
+
+&lt;/html&gt;  
+</code>
+</pre>
+        <div class="garrantzi-oinarrizko">
+          <p><strong>Oinarrizkoa: </strong><strong>lang </strong>atributurako hainbat balio daude, <strong>eu</strong> euskararako (Basque language), <strong>en</strong> ingeleserako, <strong>es</strong>
+            espainierarako eta <strong>fr</strong> frantseserako, besteak beste. Zerrenda osoa daukazue:
+            https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes</em> helbidean.
+          </p>
+        </div>
+        <p><strong>&lt;html&gt;&lt;/html&gt;</strong> etiketen artean txertatutako HTML kodea bi atal nagusitan banatu behar da: head
+          (burua) eta body (gorputza).</p>
+        <p>Jakina, <strong>&lt;head&gt;&lt;/head&gt;</strong>-a lehenengo doa eta, gainerako egiturazko elementuak bezala, irekiera- eta
+          itxiera-etiketek osatzen dute.</p>
+          <div class="banaketaTxikia"></div>
+        <!--  Web orrien egiturako (1.1 Web-orrien egitura) '<head>' elementua. ----------- -->
+        <h4 class="w3-center"><strong>&lt;head&gt;&lt;/head&gt;</strong></h4>
+<pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+&lt;/html&gt;
+</code>
+</pre>
+        <p><strong>&lt;head&gt;&lt;/head&gt;</strong> etiketen artean, web-orriaren izenburua definitzen dugu,
+          karaktereen kodetze mota adierazten dugu, dokumentuari buruzko informazio orokorra ematen dugu, eta orria
+          sortzeko
+          beharrezkoak diren estiloak eta kodeak dituzten kanpoko fitxategiak sartzen ditugu. Izenburuaren eta
+          ikonoen
+          kasuan izan ezik, etiketa horien artean txertatutako gainerako informazioa ezin da ikusi
+          erabiltzailearentzat.
+        </p>
+        <div class="banaketaTxikia"></div>
+<!--  Web orrien egiturako (1.1 Web-orrien egitura) '<body>' elementua. ----------- -->
+        <h4 class="w3-center"><strong>&lt;body&gt;&lt;/body&gt;</strong></h4>
+<pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<p><strong>&lt;body&gt;&lt;/body&gt;</strong> etiketen artean HTML dokumentuaren antolaketa nagusia idazten da. Horixe da, hain zuzen ere pantailan ikusiko dena.</p>
+        <div class="garrantzi-oinarrizko">
+          <p><strong>Oinarrizkoa: </strong>aipatu dugun bezala, HTML egitura zuhaitz
+            gisa deskriba daiteke, <strong>&lt;html&gt;&lt;/html&gt;</strong> elementua sustraitzat hartuta, baina elementuen arteko harremana
+            definitzeko
+            beste modu bat guraso, seme-alaba edo anai-arreba gisa deskribatzea da, egituran duten posizioaren
+            arabera.
+          </p>
+        </div>
+        <p>Adibidez, HTML dokumentu tipiko batean <strong>&lt;body&gt;&lt;/body&gt;</strong> elementua <strong>&lt;html&gt;&lt;/html&gt;</strong> elementuaren semea eta <strong>&lt;head&gt;&lt;/head&gt;</strong> elementuaren anaia da. Biek, <strong>&lt;body&gt;&lt;/body&gt;</strong>k eta <strong>&lt;head&gt;&lt;/head&gt;</strong>ek, <strong>&lt;html&gt;&lt;/html&gt;</strong> elementua bere aitatzat dute.
+        </p>
+        <br>
+        <div class="banaketaTxikia"></div>
+        <h4 style="text-align: center;">Oinarrizko egitura prest. <br>Orain orrialdea eraiki behar dugu.</h4>
+  </article>
+    
+</body>
+</html>

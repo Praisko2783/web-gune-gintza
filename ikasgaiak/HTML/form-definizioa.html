@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+    <article class="ikasgaia" id="html-egitura-elementua">
+        <div class="azpitituluak">
+            <h3><strong>Definizioa</strong></h3>
+        </div>
+    <p>Formularioak dokumentu batean sar ditzakegun tresnak dira, erabiltzaileek informazioa txertatu, erabakiak hartu, datuak komunikatu eta aplikazio baten portaera aldatzeko aukera izan dezaten. Formularioen helburu nagusia da erabiltzaileak informazioa hautatu edo txertatu ahal izatea eta zerbitzarira bidaltzea, prozesatzeko. Irudiak helburu horretarako HTMLk eskaitzen dituen tresnetako batzuk erakusten ditu.</p>
+    <div class="irudiKutxa">
+      <img src="../../irudiak/HTML/form-0-hastapenekoa.png" width="600" alt="Formulario eredua">
+      <figcaption>HTML-form(1): Formulario eredua.</figcaption>
+    </div>
+    <p>Formularioek hainbat tresna aurkez ditzakete, erabiltzaileak dokumentuarekin elkarreragiteko aukera izan dezan, testu-eremuak, kontrol-laukiak, goitibeherako menuak eta botoiak barne. Tresna horietako bakoitza elementu batek irudikatzen du, eta formularioa <strong>&lt;form&gt;&lt;/form&gt;</strong> elementuak definitzen du. Elementu horrek irekitze- eta ixte-etiketak ditu, gainerako elementuak multzokatzeko, eta zenbait atributu behar ditu informazioa zerbitzarira nola bidaltzen den zehazteko.</p>
+    <ul class="zerrendaArruntak">
+      <li><p><strong>name </strong> — Atributu honek formularioaren izena zehazten du. Beste elementu batzuetarako ere eskuragarri dago, baina bereziki erabilgarria da formulario-elementuetarako, aurrerago ikusiko dugun bezala.</p></li>
+      <li><p><strong>method </strong> — Atributu honek informazioa zerbitzarira bidaltzeko erabili beharreko metodoa zehazten du. Bi balio daude eskuragarri: GET eta POST. GET metodoa informazio-kopuru mugatu bat modu publikoan bidaltzeko erabiltzen da (datuak URLan sartzen dira, eta horrek ezin ditu 255 karaktere baino gehiago izan). Bestalde, POST metodoa informazio-kopuru mugagabea modu pribatuan bidaltzeko erabiltzen da (datuak ez dira erabiltzaileak ikusteko modukoak eta behar dugun luzera izan dezakete).</p></li>
+      <li><p><strong>action </strong> — Atributu honek fitxategiaren URLa adierazten du formularioak bidalitako informazioa prozesatuko duen zerbitzarian.</p></li>
+      <li><p><strong>target </strong> — Atributu honek zehazten du non erakutsiko den zerbitzaritik jasotako erantzuna. Balio hauek daude eskuragarri:
+        <ul class="zerrendaArruntak">
+          <li><p><strong>_blank</strong> (pantaila berria)</p></li>
+          <li><p><strong>_self</strong> (pantaila bera). Balio hau lehenetsita dago, eta horrek esan nahi du zerbitzaritik jasotako erantzuna leiho berean agertuko dela.</p></li>
+          <li><p><strong>_parent</strong (pantaila aita)</p></li>
+          <li><p><strong>_top</strong> (pantailaren goiko aldea)</p></li>
+        </ul>
+      </li>
+      <li><p><strong>enctype </strong>— Atributu honek formularioak bidaltzen dituen datuei aplikatutako kodifikazioa adierazten du. Hiru balio har ditzake:</p></li>
+      <ul class="zerrendaArruntak">
+        <li><p><strong>application/x-www-form-urlencoded</strong> (karaktere kodetuak) lehenetsita</p></li>
+        <li><p><strong>multipart/form-data</strong> (karaktere kodetu gabeak)</p></li>
+        <li><p><strong>text/plain</strong> (kodetutako espazioak bakarrik)</p></li>
+      </ul>
+      </li>
+      <li><p><strong>accept-charset </strong>— Atributu honek formularioaren testuari aplikatutako kodifikazio mota adierazten du. Balio ohikoenak UTF-8 eta ISO-8859-1 dira. Lehenetsitako balioa < meta> elementua duen dokumentuari esleitzen zaio.</p></li>
+    </ul>
+    <p>Hurrengo adibideak oinarrizko formulario bat definitzen du. <strong>name</strong>atributuak formularioa "formulario" izenarekin identifikatzen du, <strong>method</strong> atributuak datuak URLan (GET) sartuko direla zehazten du, eta <strong>action</strong> atributuak
+      adierazten du <em>"prozesatu.php"</em>  dela informazioa prozesatzeko eta emaitza itzultzeko zerbitzarian exekutatuko den fitxategia.</p>
+<pre>
+<code>
+&lt;!doctype html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Formularioak&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;section&gt;
+<h6>&lt;form name="formulario" method="get" action"prozesatu.php"&gt;</h6>
+
+<h6>&lt;/form&gt;</h6>
+&lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+
+    <div class="garrantzi-oinarrizko">
+      <p><strong>Egizu zuk zeuk:</strong> sortu HTML fitxategi berri bat editorean edo aldatu aurreko adibideko artxiboa 2-45 zerrendaren kodearekin eta ireki dokumentua zure nabigatzailean. Une honetan ez duzu pantailan ezer ikusiko, formularioa hutsik dagoela adierazi baita. Jarraian, haren edukia garatuko dugu.</p>
+    </div>
+  </article>
+  <hr>
+</body>
+</html>

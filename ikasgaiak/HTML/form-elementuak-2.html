@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+    <article class="ikasgaia" id="html-egitura-elementua">
+        <div class="azpitituluak">
+          <h3><strong>Formularioko elementuak (2)</strong></h3>
+        </div>
+    <div class="banaketaTxikia"></div>
+    <h4>type="radio" eta type="checkbox"</h4>
+    <p><strong>range</strong> motako ikurra ez da nabigatzaileak aurkeztu ohi duen bakarra. Adibidez, <strong>radio</strong> motak ere izaten du bere ikonoa: botoi zirkular bat <strong>true</strong> edo <strong>false</strong> moduan egon daitekeena (hautatua -true-, ez hautatua -false-). Horri esker, balio-zerrenda bat sor dezakegu, eta erabiltzaileak dagokion botoian klik eginda hauta dezake.</p>
+    <p>Erabiltzaileari aukera guztiak eskaintzeko, <strong>&lt;input&gt;</strong> elementu bat txertatu behar dugu aukera bakoitzeko. <strong>&lt;input&gt;</strong> elementuak beren artean lotzen dira <strong>name</strong> atributuaren balioaren bidez, eta aukera bakoitzaren balioa <strong>value</strong> atributuaren bidez definitzen da, hurrengo adibideak erakusten duen bezala. </p>
+    <div class="banaketaTxikia"></div>
+    <pre>
+<code>
+&lt;form name="formulario" method="get" action"prozesatu.php"&gt;
+&lt;p&gt;&lt;label for="izena"&gt;Izena: &lt;input type="text" name="izena" maxlength="15"&gt;&lt;/label&gt;&lt;/p&gt;
+/*====>*/&lt;p&gt;&lt;label&gt;&lt; input type="radio" name="adina" value="15" checked&gt;15 eta 25 urte artekoa&lt;/label&gt;&lt;/p&gt;/*<====*/
+/*====>*/&lt;p&gt;&lt;label&gt;&lt; input type="radio" name="adina" value="25"&gt;25 eta 35 urte artekoa&lt;/label&gt;&lt;/p&gt;/*<====*/
+/*====>*/&lt;p&gt;&lt;label&gt;&lt; input type="radio" name="adina" value="35"&gt;35 eta 45 urt artekoa&lt;/label&gt;&lt;/p&gt;/*<====*/
+/*====>*/&lt;p&gt;&lt;label&gt;&lt; input type="radio" name="adina" value="45"&gt;45 eta 55 urte artekoa&lt;/label&gt;&lt;/p&gt;/*<====*/
+/*====>*/&lt;p&gt;&lt;label&gt;&lt; input type="radio" name="adina" value="55"&gt;55 eta 65 urte artekoa&lt;/label&gt;&lt;/p&gt;/*<====*/
+/*====>*/&lt;p&gt;&lt;label&gt;&lt; input type="radio" name="adina" value="65"&gt;65 urte baino gehiago&lt;/label&gt;&lt;/p&gt;/*<====*/
+/*====>*/&lt;p&gt;&lt;input type="submit" value="Igorri"&gt;&lt;/p&gt;/*<====*/
+&lt;/form&gt;
+</code>
+</pre>
+<div class="banaketaTxikia"></div>
+    <p>Goiko formularioan <strong>radio</strong> motako sei <strong>&lt;input&gt;</strong> elementu dauzkagu, erabiltzaileak aukeratzeko zein adin tarteko den. Elementu guztiek <strong>name</strong> atributuiaren balio bera dutenez (adina), talde beraren ataltzat hartzen dira, eta, beraz, aukeretako bat bakarrik hauta daiteke aldi berean. <strong>name</strong> atributuaz gain, <strong>checked</strong> izeneko atributu boolearra ere ezartzen dugu. Atributu horrek nabigatzaileari botoia aukeratu gisara erakusteko esaten dio, dokumentua kargatzean. Horregatik '15 eta 25 urte artekoa' agertuko da balio lehenetsi gisa dokumentua kargatzean denean, nahiz eta gero gurea hauta dezakegun (irudian esaterako '45 eta 55 urte artekoa' hautatzean, '15 eta 25 urte artekoa' libre geratu da.).</p>
+    <div class="irudiKutxa">
+      <img src="../../irudiak/HTML/form-6-radio.png" alt="Formularioa 'radio' elementuez" width="50%" srcset="">
+      <figcaption>HTML-form(6): <strong>radiobutton</strong> elementuak.</figcaption>
+    </div>
+    <p>Aipatu dugun bezala, botoi horietako bat bakarrik hauta daiteke aldi berean. Hautatutako elementuaren <strong>value</strong> atributuari esleitutako balioa zerbitzariari bidaliko zaiona da. <strong>checkbox</strong> motako balioak antzeko sarrera-mota sortzen du. Kasu horretan, erabiltzaileak hainbat balio hauta ditzake, dagozkion laukitxoetan klik eginez.</p>
+    <div class="banaketaTxikia"></div>
+<pre>
+<code>
+&lt;form name="formulario" method="get" action"prozesatu.php"&gt;
+&lt;p&gt;&lt;label for="izena"&gt;Izena: &lt;input type="text" 
+name="izena" maxlength="15"&gt;&lt;/label&gt;&lt;/p&gt;
+/*====>*/&lt;p&gt;&lt;label&gt;&lt;input type="checkbox" name="gorria" value="gorria" checked&gt;Gorria&lt;/label&gt;&lt;/p&gt;/*<====*/
+/*====>*/&lt;p&gt;&lt;label&gt;&lt;input type="checkbox" name="urdina" value="urdina"&gt;Urdina&lt;/label&gt;&lt;/p&gt;/*<====*/
+/*====>*/&lt;p&gt;&lt;label&gt;&lt;input type="checkbox" name="berdea" value="berdea"&gt;Berdea&lt;/label&gt;&lt;/p&gt;/*<====*/
+/*====>*/&lt;p&gt;&lt;label&gt;&lt;input type="checkbox" name="beltza" value="beltza"&gt;Beltza&lt;/label&gt;&lt;/p&gt;/*<====*/
+/*====>*/&lt;p&gt;&lt;label&gt;&lt;input type="checkbox" name="zuria" value="zuria"&gt;Zuria&lt;/label&gt;&lt;/p&gt;/*<====*/
+/*====>*/&lt;p&gt;&lt;label&gt;&lt;input type="checkbox" name="morea" value="morea"&gt;Morea&lt;/label&gt;&lt;/p&gt;/*<====*/
+/*====>*/&lt;p&gt;&lt;input type="submit" value="Igorri"&gt;&lt;/p&gt;/*<====*/
+&lt;/form&gt;
+</code>
+</pre>
+<div class="banaketaTxikia"></div>
+    <div class="irudiKutxa">
+      <img src="../../irudiak/HTML/form-7-checkbox.png" alt="Formularioa 'radio' elementuez" width="50%" srcset="">
+      <figcaption>HTML-form(7): <strong>checkbox</strong> elementuak.</figcaption>
+    </div>
+    <div class="banaketaTxikia"></div>
+    <p><strong>checkbox</strong> motako balioak <strong>radio</strong> motako balioak antz handia dute. <strong>checkbox</strong> motako balioetan <strong>name</strong> bakoitzari izen desberdina eman behar diogu, erabiltzaileak aldi berean bat baino gehiago aukeratzeko bidea eman behar baitiogu. Erabiltzaileak aukera bat edo gehiago hautatzen dituenean, elementu horien guztien <strong>checkbox</strong>balioak zerbitzarira bidaltzen dira. Sarrera-eremu mota horretan, lehenetsitako aukerak ere sar daitezke <strong>checked</strong> atributua erantsiz. Gure adibidean Marinok lehentsi gisara eskaini zaion Gorriaz gain Berdea eta Morea hautatu ditu.</p>
+    <div class="banaketaTxikia"></div>
+    <h4>type="time" eta enparauak </h4>
+    <p>Ikusizko tresna batek sortzen duen beste sarrera mota bat <strong>date</strong> da. Kontrol honek erabiltzaileari data bat aukeratzen lagunduko dio. Nabigatzaile batzuek egutegi bat bezala inplementatzen dute, erabiltzaileak eremuan klik egiten duen bakoitzean erakusten dena. Mota horretako eremuek zerbitzariari bidalitako balioak urte-hilabete-eguna sintaxia du. Beraz, hasierako balio bat zehaztu nahi badugu edo nabigatzaileak ez badu tresna bat ematen aukeratzeko, formatu honetan adierazi behar dugu.</p>
+    <div class="banaketaTxikia"></div>
+    <pre><code>
+&lt;input type="date" name="data" value="2017-02-05"&gt;
+</code></pre>
+<div class="banaketaTxikia"></div>
+    <p>Goiko kodean <strong>&lt;input&gt;</strong> elementuak sarrera-eremu bat sortzen du, lehenetsitako balio gisa '2017-02-05' data duena. Elementu hori nabigatzaile batzuek data hautatzeko egutegi bat ematen duen irudi batean agertzen bada (Google Chromen, adibidez), egutegian aukeratutako hasierako data <strong>value</strong> atributuak definitzen duena izango da.
+    </p>
+    <div class="irudiKutxa">
+      <img src="../../irudiak/HTML/form-8-egutegia.png" alt="DATE-TIME data jartzeko kodea" width="50%" srcset="">
+      <figcaption>HTML-form(8): <strong>date</strong> motako elementuak.</figcaption>
+    </div>
+    <strong>date</strong> mota ez da datak sartzeko eskuragarri dagoen bakarra. HTMLk <strong>datetime-local</strong> ere eskaintzen du data eta ordua aukeratzeko, <strong>week</strong> mota aste bat aukeratzeko, <strong>month</strong> mota hilabete bat hautatzeko, eta <strong>time</strong> mota orduak eta minutuak hautatzeko. </p>
+    <div class="banaketaTxikia"></div>
+    <h5>Mota horiek helburu desberdinekin sortu ziren eta, beraz, sintaxi desberdineko balioak espero dituzte. </h5>
+    <ul class="zerrendaArruntak">
+      <li><p><strong>datetime-local</strong> motak data eta ordua adierazten dituen balio bat espero du urte-hileroko formatuan: minutuak: segundoak, T letrarekin, data eta ordua bereizita, 2017-02an bezala: 05T10: 35:00.</p></li>
+      <li><p><strong>week</strong> motak balio bat espero du 2017-W30 sintaxiarekin, non 2017 urtea den eta 30 asteko zenbakia den.</p></li>
+      <li><p><strong>month</strong> motak urte-hilabete sintaxi bat espero du. </p></li>
+      <li><p><strong>time</strong> motak orduak eta minutuak adierazten dituen balio bat espero du, orduak eta minutuak sintaxiarekin: minutuak (karakterea: % 3ª karaktere-katera bihurtzen da balioa zerbitzarira bidaltzen denean).</p></li>
+    </ul>
+    <div class="banaketaTxikia"></div>
+    <div class="garrantzi-oinarrizko">
+      <p><strong>Egin ezazu zuk zeuk:</strong>erantsi <strong>&lt;input type="date" name="data" value="2017-02-05"&gt;</strong> elementua zure formularioari eta ireki dokumentua zure nabigatzailean. Egin klik elementuan. Nabigatzaile moderno batean, egutegi bat duen leihatila bat
+        ikusi beharko zenuke, eta bertan data bat aukeratu. Aldatu <strong>&lt;input&gt;</strong> elementuko <strong>type="date"</strong> goian aipatutako edozeinekin (datetime-local, week, month, edo time) tipoarekin, balio mota horiek nabigatzaileak nola hartzen dituen ikusteko. 'Igorri' botoia sakatuz gero, hautatutakoa edo eremuetan sartutako balioa URLari gehituko zaio, eta nabigatzailea zerbitzarian   <em>prozesar.php</em> fitxategian sartzen saiatuko da, prozesatzeko. Fitxategi hori oraindik ez dagoenez, nabigatzaileak errore bat itzultzen du, baina, gutxienez, balioak URLan nola sartzen diren ikusi ahal izango duzu nabigazio-barran. Kapitulu honetan baina aurreraxeago, formulario bat nola bidali eta balioak zerbitzarian nola prozesatzen diren aztertuko dugu.</p>
+        <div class="banaketaTxikia"></div>
+        <h5>Honelako zerbait ikusiko duzue:</h5>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/HTML/form-9-navBarra.png" alt="Datuen bidalketa" width="75%" srcset="">
+        <figcaption>HTML-form(9): datuen bidalketa.</figcaption>
+      </div>
+      <h5>Gogoratu gure formularioko datuak GET metodoaz bidaltzen ari garela, horregatik agertzen dira nabigazio barran. </h5>
+    </div>
+    <h3>type="color"</h3>
+    <p>Datak sartzeko erabilgarri dauden sarrera-eremu motez gain, bada <strong>color</strong> izeneko eremu tipo bat, balio bat hautatzeko aurrez definitutako interfaze bat eskaintzen duena.</p>
+    <p>Oro har, eremu horietan espero den balioa zenbaki hexadezial bat da, <strong>#00FF00</strong> bezalakoa.</p>
+    <div class="banaketaTxikia"></div>
+    <pre><code>
+&lt;input type="color" name="nire-kolorea" value="#99BB00"&gt;
+</code></pre>
+<div class="banaketaTxikia"></div>
+    <p>Kolore motako <strong>&lt;input&gt;</strong> elementu bat lehenetsitako kolorez margotutako laukizuzen gisa aurkezten da pantailan, erabiltzaileak aukeratuta edo value atributuak definituta. Erabiltzaileak laukizuzen horretan klik egiten duenean, nabigatzaileak kolore berri bat hautatzeko aukera ematen digun tresna bat irekitzen du.</p>
+    <div class="irudiKutxa">
+      <img src="../../irudiak/HTML/form-10-kolorea.png" alt="Kolore motako sarrera-eremua" width="75%" srcset="">
+      <figcaption>HTML-form(10): Kolore motako sarrera-eremua.</figcaption>
+    </div>
+    <div class="banaketaTxikia"></div>
+    <div class="garrantzi-oinarrizko">
+      <p><strong>Oinarrizkoa: </strong>koloreak hainbat formatutan adieraz daitezke, eta kolore-sistema desberdinetatik hauta daitezke. Nomenklaturarik ohikoena hamaseitarra da. Haren sintaxiak #karakterea hartzen du, eta, ondoren, kolorearen osagaiak adierazten dituzten hiru balio hexadezimal (gorria, berdea eta urdina). 3. kapituluan koloreak nola definitu aztertuko dugu.</p>
+    </div>
+    <div class="banaketaTxikia"></div>
+    <h4>Type="submit"</h4>
+    <p>Orain arte, submit motako <strong>&lt;input&gt;</strong> elementu bat erabili dugu erabiltzaileak formularioa bidaltzeko sakatu behar den botoia sortzeko. Sarrera-mota horrek izenburu batekin identifikatutako botoi estandar bat sortzen du.</p>
+    <p>Diseinua hobetu nahi badugu, irudi bat duen botoi bat sortzen duen image sarrera-mota ezar dezakegu. Eremu mota horiek botoirako erabili nahi dugun irudia duen fitxategiaren URLarekiko <strong>src</strong> atributua eskatzen dute, eta <strong>width</strong> eta <strong>height</strong> atributuak izan ditzakete tamaina definitzeko.</p>
+    <div class="banaketaTxikia"></div>
+    <pre><code>
+&lt;input type="image" src="irudiak/form-11-botoia.png" width="200"&gt;
+</code></pre>
+<div class="banaketaTxikia"></div>
+    <p>Goiko kode horrek formularioaren barnean bidalketa agintzeko botoia duen <strong>&lt;input&gt;</strong> bat sortzen du. Honako honetan elementuak <strong>irudiak</strong> karpetaren barruan dagoen <strong>form-12-botoIrudi.png</strong> fitxategia kargatzen du pantailan erakusteko. Erabiltzaileak irudian klik egiten duenean, formularioa aurretik erabili ditugun botoiekin bezala bidaltzen da.</p>
+    <div class="irudiKutxa">
+      <img src="../../irudiak/HTML/form-11-botoia.png" alt="image tipoko botoia" width="50%" srcset="">
+      <figcaption>HTML-form(11): 'image' motako botoia.</figcaption>
+    </div>
+    <div class="banaketaTxikia"></div>
+    <div class="garrantzi-oinarrizko">
+      <p><strong>Egin ezazu zuk zeuk: </strong>ordeztu formularioa zure HTML fitxategian 2-59 zerrendako formularioaren bidez. Deskargatu botonenviar.png irudia gure webgunetik. Ireki dokumentua zure nabigatzailean. Irudiak 150 pixeleko tamaina du, baina width atributua 100eko balioarekin aitortzen dugunez, nabigatzaileak irudiaren zabalera 100 pixelera murrizten du. Kendu atributu hau irudia jatorrizko dimentsioetan ikusteko. </p>
+    </div>
+    <div class="banaketaTxikia"></div>
+    <p><strong>&lt;input&gt;</strong> elementuekin sortutako botoiak proiektu gehienetarako nahikoak izango diren arren, HTMLk botoiak sortzeko <strong>&lt;button&gt;</strong> izeneko elementu moldakorragoa eskaintzen du. Elementu honek <strong>type</strong> atributua barne hartzen du, sortu nahi dugun botoi mota zehazteko. Adibidez, formularioa bidaltzeko botoi bat sortu nahi badugu, <strong>submit</strong> balioa adierazi behar dugu.</p>
+    <div class="banaketaTxikia"></div>
+    <pre>
+<code>
+&lt;form name="formulario" method="get" action"prozesatu.php"&gt;
+&lt;p&gt;&lt;label for="izena"&gt;Izena: &lt;input type="text" name="izena" maxlength="15"&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label for="adina"&gt;Adina: &lt;input type="text" name="izena" maxlength="15"&gt;&lt;/label&gt;&lt;/p&gt;
+/*====>*/&lt;p&gt;&lt;button type="submit"&gt; Igorri datuok"&lt;/button&gt;&lt;/p&gt;/*<====*/
+&lt;/form&gt;
+</code>
+</pre>
+<div class="banaketaTxikia"></div>
+    <div class="irudiKutxa">
+      <img src="../../irudiak/HTML/form-13-button.png" alt="'method=get' datu bidalketa" width="75%" srcset="">
+      <figcaption>HTML-form(12): method="get" datu bidalketa.</figcaption>
+    </div>
+    <div class="banaketaTxikia"></div>
+    <div class="garrantzi-oinarrizko">
+      <p><strong>Oinarrizkoa: </strong> <strong>&lt;button&gt;&lt;/button&gt;</strong> elementuak botoi estandar bat sortzen du, <strong>&lt;input&gt;</strong> elementuak sortutako botoiaren ezaugarri berberekin. Aldea da botoi horien izenburua irekitze- eta ixte-etiketen artean definitzen dela, eta horrek aukera ematen digula beste HTML elementu batzuk erabiltzeko, baita adierazteko irudiak ere. Horregatik, <strong>&lt;button&gt;&lt;/button&gt;</strong> elementua hobetsiko dugu CSS estiloak erabiliz pertsonalizatu nahi dugunean edo JavaScript kodeak exekutatzeko erabili nahi dugunean, hurrengo kapituluetan ikusiko dugun bezala.
+    </p>
+    </div>
+    <div class="banaketaTxikia"></div>
+    <h4>&lt;textarea&gt;&lt;/textarea&gt;</h4>
+    <p><strong>&lt;input&gt;</strong> elementuak aukera ematen dio erabiltzaileari hainbat balio mota txertatu edo hautatzeko, baina elementu horrek sortutako sarrera-eremuek testu-lerro bakar bat sartzen uzten digute. HTMLk <strong>&lt;textarea&gt;&lt;/textarea&gt;</strong> elementua eskaintzen du hainbat testu-lerro txertatzeko. Elementua irekitzeko eta ixteko etiketek osatzen dute, eta <strong>rows</strong> eta <strong>cols</strong>. atributuak izan ditzake, eremuaren zabalera eta altuera karakteretan definitzeko.</p>
+    <div class="banaketaTxikia"></div>
+    <pre>
+<code>
+&lt;form name="formulario" method="get" action"prozesatu.php"&gt;
+&lt;p&gt;&lt;label for="izena"&gt;Izena: &lt;input type="text" name="izena" maxlength="15"&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label for="adina"&gt;Adina: &lt;input type="text" name="izena" maxlength="15"&gt;&lt;/label&gt;&lt;/p&gt;
+/*====>*/&lt;p&gt;&lt;label for="texto"&gt;Zure iritzia: &lt;textarea name="iritzia" cols="25" rows="15" &gt;&lt;/textarea&gt;&lt;/label&gt;&lt;/p&gt;/*<====*/
+&lt;p&gt;&lt;button type="submit"&gt; Igorri datuok"&lt;/button&gt;&lt;/p&gt;
+&lt;/form&gt;
+</code>
+</pre>
+<div class="banaketaTxikia"></div>
+    <div class="irudiKutxa">
+      <img src="../../irudiak/HTML/form-14-textarea.png" alt="'button' elementua botoi bat sortzeko" width="75%" srcset="">
+      <figcaption>HTML-form(13): &lt;textarea&gt;&lt;/textarea&gt; elementua.</figcaption>
+    </div>
+    <div class="banaketaTxikia"></div>
+    <div class="garrantzi-oinarizko">
+      <p><strong>Egin ezazu zuk zeuk:</strong>ordeztu formularioa zure HTML fitxategian 2-61 zerrendako formularioaren bidez eta ireki dokumentua zure nabigatzailean. Idatzi zenbait testu-lerro, testua arlo barruan nola banatzen den ikusteko.</p>
+      <p><strong>Oinarrizkoa: </strong><strong>&lt;textarea&gt;&lt;/textarea&gt;</strong> elementuarentzat hasierako balioa aitortu behar baduzu, irekitzeko eta ixteko etiketen artean sar dezakezu.</p>
+    </div>
+    <div class="banaketaTxikia"></div>
+    <h4>&lt;select&gt;&lt;/select&gt;</h4>
+    <p>Aurretik aztertutako irrati eta checkbox sarrera-eremu motez gain, HTMLk &lt;select&gt;&lt;/select&gt; elementua eskaintzen du erabiltzaileari balio-zerrenda bat aurkezteko. Erabiltzaileak elementu horretan klik egiten duenean, goitibeherako leiho batean agertuko da zerrenda, eta, gero, erabiltzaileak hautatutako balioa eremuan txertatuko da. </p>
+    <p><strong>&lt;select&gt;&lt;/select&gt;</strong> elementuak sarrera-eremu bat sortzen ez duenez, erabiltzaileak ezin ditu zerrendan sartuta ez dauden balioak txertatu.</p>
+    <p><strong>&lt;select&gt;&lt;/select&gt;</strong> elementuak <strong>&lt;option&gt;&lt;/option&gt;</strong> elementuarekin batera lan egiten du aukerak definitzeko.</p>
+    <p><strong>&lt;select&gt;&lt;/select&gt;</strong> elementuak <strong>name</strong> atributua izan behar du balioa identifikatzeko, eta &lt;option&gt;&lt;/option&gt; elementu bakoitzak <strong>value</strong> atributua izan behar du adierazten duen balioa definitzeko.</p>
+
+    <div class="banaketaTxikia"></div>
+    <pre>
+<code>
+&lt;form name="formulario" method="get" action"prozesatu.php"&gt;
+&lt;p&gt;
+&lt;label for="liburuak"&gt;Liburu zerrenda:&lt;/label&gt;&lt;/p&gt;
+/*====>*/&lt;select&gt; name="liburua" id="zerrenda"&gt;/*<====*/
+/*====>*/&lt;option&gt;value="1"&gt;Soinujolearen semea&lt;/option&gt;/*<====*/
+/*====>*/&lt;option&gt;value="2"&gt;Ipuin zirimiria&lt;/option&gt;/*<====*/
+/*====>*/&lt;option&gt;value="3"&gt;TWIST&lt;/option&gt;/*<====*/
+/*====>*/&lt;option&gt;value="4"&gt;TXIMELETRAK&lt;/option&gt;/*<====*/
+/*====>*/&lt;/select&gt;/*<====*/
+&lt;/p&gt;&lt;button type="submit"&gt; Igorri datuok"&lt;/button&gt;&lt;/p&gt;
+&lt;/form&gt;
+</code>
+</pre>
+<div class="banaketaTxikia"></div>
+    <p>
+    Goiko adibideko kodearen bitartez, lau aukera ematen diogu erabiltzaileari, zerrendan erakutsi nahi dugun liburu bakoitzeko bana. Aukeren balioak <strong>value</strong> 1etik 4ra definitzen dira. Beraz, erabiltzaileak liburu bat aukeratu eta formularioa bidaltzen duen bakoitzean, liburu horri dagokion zenbakia zerbitzarira bidaltzen da "liburua" identifikatzailearekin (name atributuaren balioa).
+  </p>
+  <div class="irudiKutxa">
+    <img src="../../irudiak/HTML/form-15-select.png" alt="'select' elementuarekin balio bat hautatzeko" width="75%" srcset="">
+    <figcaption>HTML-form(14): &lt;select&gt;&lt;/select&gt; elementua.</figcaption>
+  </div>
+  <p>Aurrez definitutako zerrenda bat sortzeko beste modu bat &lt;datalist&gt;&lt;/datalist&gt; elementua da. Elementu honek, <strong>list</strong> atributuaren laguntzaz, sarrera-eremu batean iradokizun gisa erabil daitezkeen itemen zerrenda bat definitzen du. &lt;select&gt;&lt;/select&gt; elementurako aukerak bezala, elementu horretarako aukerak &lt;option&gt;&lt;/option&gt; elementuek definitzen dituzte, baina kasu honetan <strong>label</strong> atributua sartu behar dute, balioaren deskribapenarekin. Hurrengo adibideak sarrera-eremu bat duen formulario bat sortzen du telefono-zenbaki bat txertatzeko. Kodeak &lt;datalist&gt;&lt;/datalist&gt; elementu bat du, bi &lt;option&gt;&lt;/option&gt; elementurekin , erabiltzaileari iradoki nahi dizkiogun balioak definitzen dituena.</p>
+  <div class="banaketaTxikia"></div>
+  <pre>
+<code>
+&lt;form name="formulario" method="get" action"prozesatu.php"&gt;
+/*====>*/&lt;datalist id="tl-zenbakiak"&gt;/*<====*/
+/*====>*/&lt;option value="946123123" label=1.telefonoa&gt;/*<====*/
+/*====>*/&lt;option value="698123123" label=2.telefonoa&gt;/*<====*/
+/*====>*/&lt;/datalist&gt;/*<====*/
+&lt;p&gt;
+&lt;label&gt;
+Telefonoa: &lt;input type="tel" name="telefono-zenbakia" /*====>*/list="tl-zenbakiak"&gt;/*<====*/
+&lt;/label&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;button type="submit"&gt; Igorri datuok&lt;/button&gt;&lt;/p&gt;
+&lt;/form&gt;
+</code>
+</pre> 
+<div class="banaketaTxikia"></div>
+<p>Sarrera-eremu bat <strong>&lt;datalist&gt;&lt;/datalist&gt; </strong>elementu batekin konektatzeko, <strong>list</strong> atributua &lt;input&gt; elementuan sartu behar dugu, <strong>&lt;datalist&gt;&lt;/datalist&gt; </strong> elementua identifikatzeko erabiltzen dugun balio berarekin. Horretarako, goiko formularioan, <strong>id</strong> atributua <strong>&lt;datalist&gt;&lt;/datalist&gt; </strong> elementuan sartuko dugu, <strong>"tl-zenbakiak"</strong>  balioarekin, eta, gero, balio hori bera emango diogu &lt;input&gt; elementuaren <strong>list</strong> atributuari. Ondorioz, sarrerako eremuak aurrez definitutako balioen zerrenda bat zabalduko da, punteroa gainean jarri eta klik eginez gero; erabiltzaileak aukera bat hauta dezake formularioa betetzeko.</p>
+
+<div class="irudiKutxa">
+  <img src="../../irudiak/HTML/form-16-datalist.png" alt="&lt;datalist&gt;&lt;/datalist&gt; elementua" width="75%" srcset="">
+  <figcaption>HTML-form(14): &lt;datalist&gt;&lt;/datalist&gt; elementua.</figcaption>
+</div>
+<div class="banaketaTxikia"></div>
+<div class="garrantzi-oinarrizko">
+  <p><strong>Egin ezazu zuk zeuk: </strong>ordeztu formularioa zure HTML fitxategian goiko kodearekin. Ireki dokumentua zure nabigatzaileetan, egin klik eremuaren eskuineko aldean eta ikusi nabigatzaile bakoitza nola erakusten dituen aukerak. Gero hautatu horietako bat eta ikusiko duzu telefono zenbakia agertuko dela eremuan.</p>
+</div>
+<div class="banaketaTxikia"></div>
+<h4>&lt;progress&gt;&lt;/progress&gt;, &lt;meter&gt;&lt;/meter&gt;  </h4>
+<p>HTMLk formulario batean erabil ditzakegun beste bi elementu ditu: <strong>&lt;progress&gt;&lt;/progress&gt;</strong> eta <strong>&lt;meter&gt;&lt;/meter&gt;</strong>, formularioko elementutzat hartzen ez direnak, baina neurriak adierazten dituztenez, gure formularioak informazio mota hori sortzen duenean erzabiliko ditugu. 
+  <div class="banaketaTxikia"></div>
+  <pre>
+<code>&lt;progress value="30" max="100"&gt;0%&lt;/progress&gt;</code>
+</pre> 
+<div class="banaketaTxikia"></div>           
+  <p>
+    <strong>&lt;progress&gt;&lt;/progress&gt;</strong> elementua ataza bat gauzatzean izandako aurrerapenaren berri emateko erabiltzen da. Uneko balioa eta balio maximoa zehazten duten bi atributu behar dira. <strong>value</strong> atributuak orain arte lortutako aurrerapena adierazten du, eta <strong>max</strong> atributuak zeregina amaitutzat emateko lortu behar dugun balioa adierazten du.
+  </p>
+  
+  <p><strong>&lt;meter&gt;&lt;/meter&gt;</strong> elementua eskala bat erakusteko erabiltzen da, baina ez du aurrerapena adierazten. Bere helburua aurrez definitutako balio-tarte bat irudikatzea da (adibidez, disko gogor batean okupatutako espazioa). </p>
+  <div class="banaketaTxikia"></div>
+  <pre>
+<code>&lt;meter value="60" min="0" max="100" low="40" high="80" optimum="100" &gt;60&lt;/meter&gt;</code>
+</pre>  
+<div class="banaketaTxikia"></div>            
+  <p>
+    Elementu honek lotutako hainbat atributu ditu. <strong>min</strong> eta <strong>max</strong> atributuek tartearen mugak zehazten dituzte, <strong>value</strong>k neurtutako balioa zehazten du, eta <strong>low</strong>, <strong>high</strong>, eta <strong>optimum</strong> maila atal bereizietan segmentatzeko eta posizio onena adierazteko erabiltzen dira.
+  </p>
+  <div class="irudiKutxa">
+    <img src="../../irudiak/HTML/form-17-progress-meter.png" alt="&lt;meter&gt;&lt;/meter&gt; elementua" width="75%" srcset="">
+    <figcaption>HTML-form(15): &lt;progress&gt;&lt;/progress&gt; (goian) eta <br> &lt;meter&gt;&lt;/meter&gt; (behean) elementuak.</figcaption>
+  </div>
+  <p><strong>&lt;progress&gt;&lt;/progress&gt;</strong> elementua (Aurrerapen barra) bi koloretako barra bat sortu ohi du pantailan. Aurrerapena irudikatzen duen zatia urdina da, lehenetsita. Nabigatzaileak ez badu elementua ezagutzen, irekitzeko eta ixteko etiketen arteko balioa agertuko du (0%) irudiaren ordez.</p>
+  <p><strong>&lt;meter&gt;&lt;/meter&gt;</strong> elementuak ere (Eskala barra) bi koloretako barra sortzen du pantailan, 0tik 100era bitarteko eskalan 60ko maila erakusten duena (<strong>value</strong>, <strong>min</strong> eta <strong>max</strong> atributuek adierazitako balioen arabera). Elementuak sortutako barraren kolorea <strong>low</strong>, <strong>high</strong> eta <strong>optimum</strong> ezaugarriek zehaztutako mailen araberakoa da. Gure adibidean egungo balioa <strong>low</strong> eta <strong>high</strong> atributuen balioen artean dagoenez, barra hori kolorekoa da.</p>
+  <div class="banaketaTxikia"></div>
+  <h5>Hona hemen orain arteko formularioa: </h5>
+  <div class="banaketaTxikia"></div>
+  <pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Formularioak&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;section&gt;
+&lt;form name="formulario" method="get" action"prozesatu.php"&gt;
+&lt;p&gt;&lt;label for="izena"&gt;Izena: &lt;input type="text" name="izena" maxlength="15"&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label for="adina"&gt;Adina: &lt;input type="number" name="adina" &gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label for="posta-helbidea"&gt;Posta helbidea: &lt;input type="email" name="posta-helbidea" &gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label for="telefonoa"&gt;Telefono zkia.: &lt;input type="tel" name="telefonoa"&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label for="webgunea"&gt;Webgunea: &lt;input type="url" name="webgunea"&gt;&lt;/label&gt;&lt;/p&gt;
+<h6>radio--------------------------------------</h6>
+&lt;p&gt;&lt;label&gt;&lt;input type="radio" name="adina" value="15" checked&gt;15 eta 25 urte artekoa&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;&lt;input type="radio" name="adina" value="25"&gt;25 eta 35 urte artekoa&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;&lt;input type="radio" name="adina" value="35"&gt;35 eta 45 urt artekoa&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;&lt;input type="radio" name="adina" value="45"&gt;45 eta 55 urte artekoa&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;&lt;input type="radio" name="adina" value="55"&gt;55 eta 65 urte artekoa&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;&lt;input type="radio" name="adina" value="65"&gt;65 urte baino gehiago&lt;/label&gt;&lt;/p&gt;
+<h6>checkbox ---------------------------------------------</h6>
+&lt;p&gt;&lt;label&gt;&lt;input type="checkbox" name="gorria" value="gorria" checked&gt;Gorria&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;&lt;input type="checkbox" name="urdina" value="urdina"&gt;Urdina&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;&lt;input type="checkbox" name="berdea" value="berdea"&gt;Berdea&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;&lt;input type="checkbox" name="beltza" value="beltza"&gt;Beltza&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;&lt;input type="checkbox" name="zuria" value="zuria"&gt;Zuria&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;&lt;input type="checkbox" name="morea" value="morea"&gt;Morea&lt;/label&gt;&lt;/p&gt;
+<h6>Select-----------------------------------------</h6>
+&lt;p&gt;
+&lt;label for="liburuak"&gt;Liburu zerrenda:&lt;/label&gt;&lt;/p&gt;
+&lt;select&gt; name="liburua" id="zerrenda"&gt;
+&lt;option&gt;value="1"&gt;Soinujolearen semea&lt;/option&gt;
+&lt;option&gt;value="2"&gt;Ipuin zirimiria&lt;/option&gt;
+&lt;option&gt;value="3"&gt;TWIST&lt;/option&gt;
+&lt;option&gt;value="4"&gt;TXIMELETRAK&lt;/option&gt;
+&lt;/select&gt;
+&lt;/p&gt;
+<h6>datalist--------------------------------------</h6>
+&lt;datalist id="tl-zenbakiak"&gt;
+&lt;option value="946123123" label=1.telefonoa&gt;
+&lt;option value="698123123" label=2.telefonoa&gt;
+&lt;/datalist&gt;
+&lt;p&gt;
+&lt;label&gt;
+Telefonoa: &lt;input type="tel" name="telefono-zenbakia" list="tl-zenbakiak"&gt;
+&lt;/label&gt;
+&lt;/p&gt;
+<h6>Range---------------------------------------------</h6>
+&lt;p&gt;&lt;input type="number" name="adina" min="13" max"100"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;input type="range" name="adina" min="13" max"100"&gt;&lt;/p&gt;
+<h6>Aurrerapenb barra----------------------</h6>
+&lt;p&gt;&lt;progress value="30" max="100"&gt;0%&lt;/progress&gt;&lt;/p&gt;
+<h6>Eskala barra---------------------------------</h6>
+&lt;p&gt;&lt;meter value="60" min="0" max="100" low="40" high="80" 
+optimum="100" &gt;60&lt;/meter&gt;&lt;/p&gt;
+<h6>Textarea----------------------------------</h6>
+&lt;p&gt;&lt;label for="texto"&gt;Zure iritzia: &lt;textarea input 
+name="iritzia" cols="25" rows="15" &gt;&lt;/textarea&gt;&lt;/label&gt;&lt;/p&gt;
+<h6>Botoiak type="submit" lehena: button, bigarrena: input ---------</h6>
+&lt;p&gt;&lt;button type="submit"&gt; Igorri datuok&lt;/button&gt;&lt;/p&gt;
+&lt;p&gt;&lt;input type="submit" value="Igorri"&gt;&lt;/p&gt;
+&lt;/form&gt;
+&lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+</article>
+<div class="banaketaTxikia"></div>
+<!-- FORMULARIOEN ELEMENTUEI  BURUZKO BIGARREN BIDEOA hasi ---------------------  -->
+<section class="ikasgaia" id="html-taulatributu-bideoa">
+  <article>
+    <h4 class="bideontziBurua">Formularioko elementuen atributuak<br><i class="fa fa-television"></i></h4>
+    <div class="bideontzia">
+      <iframe width="100%" height="350" src="https://www.youtube.com/embed/7_eInlArV_U?si=KRu5X6Bnk_fyp4Nz"
+        title="YouTube video player" "></iframe>
+    </div>
+    <figcaption>HTML-formularioak: Formularioko elementuen atributuak.</figcaption>
+  </article>
+</section>
+<!-- FORMULARIOEN ELEMENTUEI  BURUZKO BIGARREN BIDEOA buka ---------------------  -->
+</body>
+</html>

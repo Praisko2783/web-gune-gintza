@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+    <article class="ikasgaia" id="html-egitura-elementua">
+        <div class="azpitituluak">
+            <h3><strong>Irudiak</strong> </h3>
+        </div>
+        <div class="banaketaTxikia"></div>
+        <h5>Irudiak Webeko bigarren baliabide garrantzitsuena izan daitezke.</h5>
+        <p>HTMLk honako elementu hauek ditu gure dokumentuetan irudiak sartzeko. </p>
+        <ul class="zerrendaArruntak">
+          <li><p><strong>&lt;img&gt; —</strong> Elementu horrek irudi bat txertatzen du dokumentuan. Elementuak <strong>src</strong> atributua behar du fitxategiaren URLa eta erantsi nahi dugun irudia zehazteko.</p> </li>
+          <li><p><strong>&lt;picture&gt; —</strong> Elementu horrek irudi bat txertatzen du dokumentuan.</p> </li>
+          <li><p><strong>&lt;source&gt;</strong> elementuarekin batera lan egiten du, hainbat bereizmenetan irudi ugari eskaintzeko. Erabilgarria da webgune moldagarriak sortzeko, 5. kapituluan ikusiko dugun bezala.</p></li>
+          <li><p><strong>&lt;figure&gt; —</strong> Elementu honek eduki nagusiarekin lotutako edukia adierazten du, baina ezabatu egin daiteke eraginik izan gabe, hala nola argazkiak, bideoak, etab.</p> </li>
+          <li><p><strong>&lt;figcaption&gt; —</strong> Elementu honek &lt;figure&gt; elementurako izenburu bat sartzen du. Dokumentuan irudi bat sartzeko, &lt;img&gt;elementua baino ez dugu adierazi behar, eta fitxategiaren URLa src atributuari esleitu.</p> </li>
+        </ul>
+<pre>
+<code>
+&lt;article&gt;
+&lt;p&gt;Heriotza kimera bat da: ni existitzen
+naizen bitartean, ez baita heriotzarik; &lt;br&gt;
+eta heriotza dagoenean, ez da ni existitzen. &lt;br&gt;
+Samoseko Epikuroa &lt;/p &gt;
+  <b>&lt;img src="nireIrudia.jpg"&gt;</b> 
+&lt;/article&gt;
+</code>
+</pre>
+        <p>Goiko kodeak <em>"nireIrudia.jpg"</em>artxiboaren irudia kargatzen du, eta pantailan erakusten du jatorrizko tamainan, 2-15 irudiak erakusten duen bezala. Irudia jatorrizko tamainan irudikatzen da, baina tamaina pertsonalizatua eta konfigurazio-parametro batzuk defini ditzakegu.</p>
+        <div class="banaketaTxikia"></div>
+        <ul class="zerrendaArruntak">
+          <li><p><strong>width</strong> atributuak esaterako irudiaren zabalera adierazten du.</p></li>
+          <li><p><strong>height</strong> atributuak irudiaren altuera adierazten du.</p></li>
+          <li><p><strong>alt</strong> atributuak irudia kargatu ezin denean erakusten den testua zehazten du.</p></li>
+          <li><p><strong>Srcset</strong> atributuak nabigatzaileak elementu bererako karga ditzakeen bereizmen desberdinetako irudien zerrenda bat zehazteko aukera ematen digu.</p></li>
+          <li><p><strong>Sizes</strong> atributuak queries erdiko zerrenda bat (bitartekoen kontsulta) eta irudi tamaina desberdinak zehazten ditu, nabigatzaileak pantailaren bereizmenaren arabera zer erakutsi erabaki dezan. 'Media queries' eta web diseinu moldagarria 5. kapituluan aztertuko ditugu. </p></li>
+          <li><p><strong>crossorigin</strong> atributuak jatorri gurutzatuko (jatorri anitzeko) irudietarako kredentzialak ezartzen ditu. Balio posibleak <strong>anonymous</strong> (kredentzialik gabe) eta <strong>usecredentials</strong> (kredentzialak behar ditu) dira. CORS teknologia eta jatorri desberdinetako irudiekin nola lan egin 11. kapituluan aztertuko dugu.</p></li>
+        </ul>
+        <p><strong>Width</strong> eta <strong>height</strong> atributuek irudiaren dimentsioak zehazten dituzte, baina ez dute harremana kontuan hartzen.</p>
+        <p>Bi balioak irudiaren jatorrizko proportzioa kontuan hartu gabe adierazten baditugu, nabigatzaileak irudia luzatu edo xaxatu beharko du, zehaztutako dimentsioetara egokitzeko. </p>
+        <p>Irudia jatorrizko proportzioa aldatu gabe murrizteko, atributu bakar bat zehaztu dezakegu, eta nabigatzaileari bestea kalkulatzen utzi.</p>
+<pre>
+<code>
+&lt;article&gt;
+&lt;p&gt;Heriotza kimera bat da: ni existitzen 
+naizen bitartean, ez baita heriotzarik; &lt;br&gt;
+eta heriotza dagoenean, ez da ni existitzen. &lt;br&gt;
+Samoseko Epikuroa &lt;/p &gt;
+  <b>&lt;img src="koadrilaPerdidon.jpg" width="600" 
+    alt="Koadrilakoak Perdidon"&gt;</b>
+&lt;/article&gt;
+</code>
+</pre>
+        <p>Goiko kodeak aurreko adibidean sartutako &lt;img &gt; elementuari <em>600</em> balioa gehitzen dio. Horrek irudiaren zabalera 600 pixelera murrizten du, eta <em>height</em> atributua adierazi ez denez, irudiaren altuera automatikoki kalkulatzen da irudiaren jatorrizko proportzioak kontuan hartuta. </p>
+
+        <p>Horra emaitza: </p>
+        <div class="banaketaTxikia"></div>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/HTML\irudia-html.png" width="600" alt="&lt;img&gt; elementua">
+          <figcaption>HTML-irudizerren(1): &lt;img&gt; elementua.</figcaption>
+        </div>
+        <div class="garrantzi-oinarrizko">
+          <p><strong>Egin ezazu zuk zeuk: </strong>deskargatu <em>nireIrudia.jpg</em> irudia gure webgunetik. Ordeztu &lt;article&gt;&lt;/article&gt; elementua index.html fitxategian, goiko kodearekin, eta ireki dokumentua zure nabigatzailean. Goiko irudiaren antzeko zerbait ikusi beharko zenuke. Errepikatu prozesua 2-32 zerrendaren kodearekin. Orain irudia murriztuta ikusi beharko zenuke, 2-16 irudian ikus daitekeenez. 2-32 zerrendaren kodeko &lt;img&gt; elementuak <strong>alt</strong> atributua ere barne hartzen du. Atributu hori probatzeko, ezabatu miimagen.jpg fitxategia eta eguneratu dokumentua zure nabigatzailean. Nabigatzaileak jada ezin duenez irudiaren fitxategia aurkitu, alt atributuari dagokion testua erakutsiko du haren ordez.</p>
+        </div>
+        <p>Irudi batzuk, ikonoak adibidez, garrantzitsuak dira gainerako edukiari esanahi bat ematen diotelako, baina beste batzuk, adibide horien irudia kasu, osagarri gisa jokatzen dute eta ezabatu egin daitezke informazio-fluxuari eragin gabe. Informazio mota hori presente dagoenean, &lt;figure&gt;&lt;/figure&gt; elementua erabil daiteke identifikatzeko.</p>
+        <p>Elementu hori &lt;figcaption&gt;&lt;/figcaption&gt; elementuarekin batera ezarri ohi da, testu deskribatzailea sartzea. Hurrengo adibidean bi elementu horiek erabiltzen ditugu gure irudia eta erabiltzaileari bere izenburua erakustea.</p>
+
+<pre>
+<code>
+&lt;article&gt;
+&lt;p&gt;Heriotza kimera bat da: ni existitzen naizen bitartean, ez baita heriotzarik; &lt;br&gt;
+eta heriotza dagoenean, ez da ni existitzen. &lt;br&gt;
+Samoseko Epikuroa &lt;/p &gt;
+&lt;figure&gt;
+  &lt;img src="koadrilaPerdidon.jpg" width="600" alt="Koadrilakoak Perdidon"&gt;
+  <b>&lt;figcaption&gt;Koadrilakoak Perdidon&lt;/figcaption&gt;</b>
+&lt;/figure&gt;
+&lt;/article&gt;
+</code>
+</pre>
+
+        <div class="irudiKutxa">
+          <img src="../../irudiak/HTML/irudia-html-figcaption.png" width="600" alt="&lt;figcaption&gt;&lt;/figcaption&gt; elementua">
+          <figcaption>HTML-irudizerren(2): &lt;figcaption&gt;&lt;/figcaption&gt; elementua.</figcaption>
+        </div>
+      </article>
+      <div class="banaketaTxikia"></div>
+<!-- EDUKIA HTML SAILEKO Irudiak atalaren BIDEOA hasi ---------------------  -->
+<section class="ikasgaia" id="html-taulatributu-bideoa">
+  <article>
+    <h4 class="bideontziBurua">Irudiak<br><i class="fa fa-television"></i></h4>
+    <div class="bideontzia">
+      <iframe width="100%" height="350" src="https://www.youtube.com/embed/7_eInlArV_U?si=KRu5X6Bnk_fyp4Nz"
+        title="YouTube video player" "></iframe>
+    </div>
+    <figcaption>HTML-irudiak: Irudiei buruzko bideoa.</figcaption>
+  </article>
+</section>
+<!-- EDUKIA HTML SAILEKO Irudiak atalaren BIDEOA buka ---------------------  -->
+</body>
+</html>

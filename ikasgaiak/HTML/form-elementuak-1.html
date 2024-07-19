@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <article class="ikasgaia" id="html-egitura-elementua">
+        <div class="azpitituluak">
+          <h3><strong>Formularioko elementuak (1)</strong></h3>
+        </div>
+        <p>Formulario batek hainbat tresna izan ditzake erabiltzaileak aukeratu edo informazioa txertatzea. HTMLk tresna horiek sortzeko hainbat elementu ditu. Hona hemen erabilienak.</p>
+        <ul class="zerrendaArruntak">
+          <li><P><strong>&lt;input&gt;</strong>— Elementu honek sarrera-eremu bat sortzen du. Hainbat sarrera mota jaso ditzake, <strong>type</strong>
+            atributuaren balioaren arabera.</P></li>
+          <li><P><strong>&lt;textarea&gt;&lt;/textarea&gt;</strong>— Elementu honek sarrera-eremu bat sortzen du hainbat testu-lerro txertatzeko. Tamaina zenbaki osoetan adieraz daiteke <strong>rows</strong> eta <strong>cols</strong> atributuak erabiliz, edo CSS estiloak dituzten pixeletan, 3. kapituluan ikusiko dugun bezala.></li>
+          <li><P><strong>&lt;select&gt;&lt;/select&gt;</strong>— Elementu honek aukeren zerrenda bat sortzen du, eta erabiltzaileak aukera dezake. Egin lan &lt;option&gt; elementuarekin aukera bakoitza definitzeko, eta &lt;optgroup&gt; elementuarekin, aukerak taldeka antolatzeko.</P></li>
+          <li><P><strong>&lt;button&gt;&lt;/button&gt; </strong>— Elementu honek botoi bat sortzen du. Botoiaren helburua definitzeko <strong>type</strong> atributua barne hartzen du. Eskura dauden balioak hauek dira: formularioa bidaltzeko submit-a (lehenetsita), formularioa berrabiarazteko reset -a, eta zeregin pertsonalizatuak egiteko button -a.</P></li>
+          <li><P><strong>&lt;output&gt;&lt;/output&gt;</strong>— Elementu honek formularioak sortutako emaitza bat adierazten du. <strong>JavaScript</strong> kodearen bidez inplementatzen da, eragiketa baten emaitza erabiltzaileari erakusteko.</P></li>
+          <li><P><strong>&lt;meter&gt;&lt;/meter&gt;</strong>— Elementu honek maila baten egungo balioa edo neurria adierazten du.</P></li>
+          <li><P>><strong>&lt;progress&gt;&lt;/progress&gt;</strong> — Elementu honek eragiketa baten aurrerapena adierazten du.</P></li>
+          <li><P><strong>&lt;datalist&gt;&lt;/datalist&gt;</strong>— Elementu honek beste kontrol batzuetarako erabilgarri dauden balioen zerrenda bat sortzen du. Balio bakoitza definitzeko &lt;option&gt; elementuarekin batera lan egiten du.</P></li>
+          <li><P><strong>&lt;label&gt;&lt;/label&gt;</strong>— Elementu honek etiketa bat sortzen du formulario-elementu bat identifikatzeko.</P></li>
+          <li><P><strong>&lt;fieldset&gt;&lt;/fieldset&gt;</strong> — Elementu honek formularioko beste elementu batzuk biltzen ditu. Formulario luzeen barruan sekzioak sortzeko erabiltzen da. Elementuak &lt;legend&gt; elementu bat izan dezake atalaren izenburua definitzeko.</P></li>
+        </ul>
+<div class="banaketaTxikia"></div>
+        <h4>&lt;input&gt;</h4>
+        <p><strong>&lt;input&gt;</strong> elementua da guztietan moldakorrena. Elementu horrek sarrera-eremu bat sortzen du, eta bertan erabiltzaileak informazioa hautatu edo txerta dezake, baina hainbat ezaugarri izan ditzake eta hainbat balio mota onar ditzake, <strong>type</strong> atributuaren balioaren arabera. </p>
+        <div class="banaketaTxikia"></div>
+        <h5>Hona hemen atributu horretarako erabilgarri dauden balioak.</h5>
+        <ul class="zerrendaArruntak">
+          <li><p><strong>text </strong>— Balio horrek sarrera-eremu bat sortzen du testu generikoa txertatzeko.</p></li>
+          <li><p><strong>email </strong>— Balio honek posta-kontuak txertatzeko sarrera-eremu bat sortzen du.</p></li>
+          <li><p><strong>search </strong>— Balio horrek bilaketa-terminoak txertatzeko sarrera-eremu bat sortzen du.</p></li>
+          <li><p><strong>url</strong>— Balio horrek sarrera-eremu bat sortzen du URLa txertatzeko.</p></li>
+          <li><p><strong>tel</strong>— Balio horrek sarrera-eremu bat sortzen du telefono-zenbakiak txertatzeko.</p></li>
+          <li><p><strong>number </strong>— Balio horrek sarrera-eremu bat sortzen du zenbakiak txertatzeko.</p></li>
+          <li><p><strong>range </strong>— Balio horrek sarrera-eremu bat sortzen du zenbaki-tarte bat txertatzeko.</p></li>
+          <li><p><strong>date </strong>— Balio horrek sarrera-eremu bat sortzen du data bat txertatzeko.</p></li>
+          <li><p><strong>datetime-local</strong>— Balio horrek sarrera-eremu bat sortzen du data eta ordua txertatzeko.<</p>/li>
+          <li><p><strong>week </strong>— Balio horrek sarrera-eremu bat sortzen du asteko zenbakia txertatzeko (urtean).</p></li>
+          <li><p><strong>month </strong>— Balio horrek sarrera-eremu bat sortzen du hileko zenbakia txertatzeko.</p></li>
+          <li><p><strong>time </strong>— Balio horrek sarrera-eremu bat sortzen du ordubete (orduak eta minutuak) txertatzeko.</p></li>
+          <li><p><strong>hidden </strong>— Balio horrek sarrerako eremua ezkutatzen du. Zerbitzariari informazio osagarria bidaltzeko erabiltzen da.</p></li>
+          <li><p><strong>password </strong>— Balio horrek sarrera-eremu bat sortzen du gako bat txertatzeko. Izarrekin edo puntuekin txertatutako karaktereak ordezten ditu, informazio sentikorra ezkutatzeko.</p></li>
+          <li><p>strong>kolorea </strong>— Balio horrek sarrerako eremu bat sortzen du kolore bat txertatzeko.</p></li>
+          <li><p><strong>checkbox </strong>— Balio horrek kontrol-lauki bat sortzen du, erabiltzaileak aukera bat aktibatu edo desaktibatu ahal izateko.</p></li>
+          <li><p><strong>radio </strong>— Balio horrek aukera botoi bat sortzen du hainbat aukera hautatzeko.</p></li>
+          <li><p><strong>File </strong>— Balio horrek sarrera-eremu bat sortzen du erabiltzailearen ordenagailuan fitxategi bat hautatzeko.</p></li>
+          <li><p><strong>button </strong>— Balio horrek botoi bat sortzen du. Botoiak button motako <strong>&lt;button&gt;&lt;/button&gt; </strong> elementua bezala lan egiten du. Ez du ekintza lehenetsirik egiten; ekintza JavaScriptetik definitu behar da, hurrengo kapituluetan ikusiko dugun bezala.</p></li>
+          <li><p><strong>submit </strong>— Balio horrek botoi bat sortzen du formularioa bidaltzeko.</p></li>
+          <li><p><strong>reset </strong>— Balio horrek botoi bat sortzen du formularioa berrabiarazteko.</p></li>
+          <li><p><strong>image </strong>— Balio horrek irudi bat kargatzen du, formularioa bidaltzeko botoi gisa erabiltzen dena. Mota horretako &lt;input&gt; elementu batek <strong>src</strong> atributua izan behar du irudiaren URLa zehazteko.</p></li>
+        </ul>
+
+        <p>Formulario bat gure dokumentuan sartzeko, &lt;form&gt;&lt;/form&gt; elementuaz deklaratu behar dugu, eta erabiltzaileak informazioa txertatzeko eta zerbitzarira bidaltzeko beharko dituen elementu guztiak bere barruan kokatu. </p>
+        <div class="banaketaTxikia"></div>
+        <h4>type="text"</h4>
+        <div class="banaketaTxikia"></div>
+        <pre>
+<code>
+&lt;! doctype html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Formularioak&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;section&gt;
+&lt;form name="formulario" method="get" action"prozesatu.php"&gt;
+  /*====>*/&lt;p&gt;&lt;input type="text" name="izena"&gt;&lt;/p&gt;/*<====*/;
+  /*====>*/&lt;p&gt;&lt;input type="text" name="adina"&gt;&lt;/p&gt;/*<====*/
+  /*====>*/&lt;p&gt;&lt;input type="submit"&gt;&lt;/p&gt;/*<====*/
+&lt;/form&gt;
+&lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<div class="banaketaTxikia"></div>
+        <p>Formularioan sartutako informazioa zerbitzarira bidaltzen da prozesatzeko. Horretarako, zerbitzariak balio bakoitza identifika dezake, elementuek <strong>name</strong> atributua izan behar dute. Horrekin elementu bakoitzari izen bakarra eman diezaiokegu. </p>
+        <p>Adibidean, sarrera-eremuei "izena" eta "adina" deitzen diegu (formularioa bidaltzeko botoia sortzen duen <strong>&lt;input&gt;</strong> elementuak ez du izenik behar, zerbitzariari daturik bidaltzen ez diolako).</p>
+        <p>Formularioko elementuek ez dute lerro-jauzirik sortzen; bata bestearen atzean agertzen dira pantailan. </p>
+        <p>Nabigatzaileak lerro bakoitzean elementu bat erakustea nahi badugu, guk geuk aldatu behar dugula diseinua.</p>
+        <p>Adibidean, <strong>&lt;p&gt;&lt;/p&gt;</strong> elementuak erabiltzen ditugu formularioko elementuak bereizteko, baina diseinu hori normalean CSS estiloen bidez egiten da, hurrengo kapituluan ikusiko dugun bezala.</p>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/HTML/form-1.png" alt="Formularioa '&lt;p&gt;&lt;/p&gt; elementuekin" width="50%" srcset="">
+          <figcaption>HTML-form(2): Formularioa '&lt;p&gt;&lt;/p&gt; elementuekin.</figcaption>
+        </div>
+        <p>Botoiari nabigatzaileak bere kabuz <em>'Bidali eskaera'</em>  testua jarri dio botoiari. Nik nabigatzailea euskaraz daukadalako izan da, bestel 'Enviar' edo 'Send' hizkuntzaren arabera. </p>
+        <p>Formularioetako botoian, ez badugu nahi nabigatzaileak botoian ipintzen digun testua ez badugu gustuko <strong>value</strong> erabil dezakegu. Ikusi dugun bezala <strong>submit</strong> motako botoiei nabigatzaileek beren kabuz ematen diote izenburua. <strong>value</strong> atributuaz aldatu egin dezakegu.</p>
+        <div class="banaketaTxikia"></div>
+        <pre>
+<code>
+&lt;! doctype html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Formularioak&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;section&gt;
+&lt;form name="formulario" method="get" action="prozesatu.php"&gt;
+  /*====>*/&lt;p&gt;&lt;input type="text" name="izena"&gt;&lt;/p&gt;/*<====*/;
+  /*====>*/&lt;p&gt;&lt;input type="text" name="adina"&gt;&lt;/p&gt;/*<====*/
+  /*====>*/&lt;p&gt;&lt;input type="submit" value="Igorri"&gt;&lt;/p&gt;/*<====*/
+&lt;/form&gt;
+&lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<div class="banaketaTxikia"></div>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/HTML/form-2.png" alt="'text' motako bi &lt;input&gt; eta 'submit' motako botoiaz" width="50%" srcset="">
+          <figcaption>HTML-form(3): 'text' motako bi &lt;input&gt; eta 'submit' motako botoiaz.</figcaption>
+        </div>
+        <p><strong>value</strong> atributua elementu baten hasierako balioa adierazteko ere erabil daiteke. Adibidez, erabiltzailearen 'adina' sar dezakegu adinaren eremuan, lehendik ezagutzen badugu.</p>
+        <div class="banaketaTxikia"></div>
+        <pre>
+<code>
+&lt;! doctype html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Formularioak&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;section&gt;
+&lt;form name="formulario" method="get" action"prozesatu.php"&gt;
+  /*====>*/&lt;p&gt;&lt;input type="text" name="izena"&gt;&lt;/p&gt;/*<====*/;
+  /*====>*/&lt;p&gt;&lt;input type="text" name="adina" value="45"&gt;&lt;/p&gt;/*<====*/
+  /*====>*/&lt;p&gt;&lt;input type="submit" value="Igorri"&gt;&lt;/p&gt;/*<====*/
+&lt;/form&gt;
+&lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<div class="banaketaTxikia"></div>
+        <div class="garrantzi-oinarrizko">
+          <p><strong>Egin ezazu zuk zeuk: </strong> kopiatu goiko kodea zure HTML fitxategiaren barruan eta ireki dokumentua zure nabigatzailean. Irudian duzun antzeko formulario bat ikusi beharko zenuke, baina 45 zenbakiarekin adinaren eremuan eta <em>'Igorri'</em>  izenburua duen formularioa bidaltzeko botoia.</p>
+        </div>
+        <div class="banaketaTxikia"></div>
+        <p>Formularioetan erabiltzaileari zer datu sartu behar dituen adieraziko dioten deskribapenak sartu behar dira. Horregatik, HTMLk <strong>&lt;label&gt;&lt;/label&gt;</strong> elementua eskaintzen du. Elementu horiek erabiltzaileari zer balio sartu behar duen adierazteaz gain, nabigatzaileari formularioaren zati bakoitza identifikatzen laguntzen diotenez, elementu horri lotu behar zaizkio.</p>
+        <p><strong>&lt;label&gt;&lt;/label&gt;</strong> elementu bat dagokion formulario-elementuarekin lotzeko, formulario-elementua <strong>&lt;label&gt;&lt;/label&gt;</strong> elementuaren barruan sar dezakegu, adibide honek erakusten duen bezala.</p>
+        <p>Bestalde <strong>&lt;label&gt;&lt;/label&gt;</strong> elementu bat bere formulario-elementuarekin lotzeko beste aukera bat <strong>form</strong> atributua ezartzea da. <strong>for</strong> atributuak <strong>&lt;label&gt;&lt;/label&gt;</strong> elementua formulario-elementuarekin lotzen du, <strong>id</strong> atributuaren balioaren bidez, adibide honek erakusten den bezala.
+        </p>
+        <div class="banaketaTxikia"></div>
+        <h4>type="text" eta type="number"</h4>
+        <div class="banaketaTxikia"></div>
+        <pre>
+<code>
+&lt;! doctype html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Formularioak&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;section&gt;
+&lt;form name="formulario" method="get" action"prozesatu.php"&gt;
+  /*====>*/&lt;p&gt;&lt;label for="izena"&gt;Izena: &lt;input type="text" name="izena"&gt;&lt;/label&gt;&lt;/p&gt;/*<====*/;
+  /*====>*/&lt;p&gt;&lt;label for="adina"&gt;Adina: &lt;input type="text" name="adina" value="45"&gt;&lt;/label&gt;&lt;/p&gt;/*<====*/
+  /*====>*/&lt;p&gt;&lt;input type="submit" value="Igorri"&gt;&lt;/p&gt;/*<====*/
+&lt;/form&gt;
+&lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<div class="banaketaTxikia"></div>
+        <p><strong>&lt;label&gt;</strong> elementuak ez du berezko estilorik; etiketa bat elementu batekin lotzen du eta, beraz, testua letra-motarekin eta berezko tamainarekin agertzen da pantailan.</p>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/HTML/form-3.png" alt="&lt;label&gt;&lt;/label&gt; elementuak." width="50%" srcset="">
+          <figcaption>HTML-form(3): &lt;label&gt;&lt;/label&gt; elementuak.</figcaption>
+        </div>
+        <p>Aurreko adibideetan erabilitako sarrera-eremuak <strong>text</strong> tipokoak ziren, eta horrek esan nahi du erabiltzaileek nahi duten edozein testu mota sar dezaketela, baina hori ez da formulario honetarako behar duguna. Lehenengo eremuak izen bat espero du, eta, beraz, ez du zenbaki edo testu oso luzeak sartzen utzi behar.</p>
+        <p>Bigarren eremuak, berriz, erabiltzailearen adina eskatzen du; beraz, zenbakiak baino ez lituzke onartu behar. Zenbat karaktere sar daitezkeen zehazteko, <strong>&lt;input&gt;</strong> elementuak honako atributu hauek izan behar ditu.</p>
+        <ul class="zerrendaArruntak">
+          <li><p><strong>maxlength</strong>— Atributu honek eremuan sar daitekeen karaktere kopuru handiena zehazten du.</p></li>
+          <li><p><strong>minlength </strong>— Atributu honek eremuan sar daitekeen karaktere kopuru txikiena zehazten du.</p></li>
+        </ul>
+        <p>Hurrengo adibideak gehienez 15 karaktere ditu.</p>
+        <div class="banaketaTxikia"></div>
+        <pre>
+<code>
+&lt;! doctype html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Formularioak&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;section&gt;
+&lt;form name="formulario" method="get" action"prozesatu.php"&gt;
+  /*====>*/&lt;p&gt;&lt;label for="izena"&gt;Izena: &lt;input type="text" name="izena" maxlength="15"&gt;&lt;/label&gt;&lt;/p&gt;/*<====*/;
+  &lt;p&gt;&lt;label for="adina"&gt;Adina: &lt;input type="text" name="adina" value="45"&gt;&lt;/label&gt;&lt;/p&gt;
+  /*====>*/&lt;p&gt;&lt;input type="submit" value="Igorri"&gt;&lt;/p&gt;/*<====*/
+&lt;/form&gt;
+&lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<div class="banaketaTxikia"></div>
+        <p>Goiko formularioan ezarritako <strong>maxlength</strong> atributuak mugatu egiten du erabiltzaileak sar dezakeen karaktere kopurua, baina eremua <strong>text</strong> motakoa da oraindik, eta horrek esan nahi du eremuan edozein motako balioa idatz daitekeela. </p>
+        <p>Erabiltzaileak izena eremuan zenbakiak idazten baditu edo letrak adina eremuan, nabigatzaileak sarrera baliozkotzat joko du. Erabiltzaileak sar dezakeena kontrolatzeko, <strong>type</strong> atributua erabiliko dugu, eremuari dagokion balio mota zehazteko. Hurrengo adibideak adinaren eremurako <strong>number</strong> mota zehaztu dugu, zenbakiak bakarrik sartu ahal izateko. Gauza bera egingo dugu posta-helbidea eremuarentzat, edota telefono-zenbakia eta webgunea eremuetan datuak sartzeko.</p>
+        <div class="banaketaTxikia"></div>
+        <pre>
+<code>
+&lt;! doctype html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Formularioak&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;section&gt;
+&lt;form name="formulario" method="get" action"prozesatu.php"&gt;
+&lt;p&gt;&lt;label for="izena"&gt;Izena: &lt;input type="text" 
+name="izena" maxlength="15"&gt;&lt;/label&gt;&lt;/p&gt;
+/*====>*/&lt;p&gt;&lt;label for="adina"&gt;Adina: &lt;input type="number" name="adina" &gt;&lt;/label&gt;&lt;/p&gt;/*<====*/
+/*====>*/&lt;p&gt;&lt;label for="posta-helbidea"&gt;Posta helbidea: &lt;input type="email" name="posta-helbidea" &gt;&lt;/label&gt;&lt;/p&gt;/*<====*/
+/*====>*/&lt;p&gt;&lt;label for="telefonoa"&gt;Telefono zkia.: &lt;input type="tel" name="telefonoa"&gt;&lt;/label&gt;&lt;/p&gt;/*<====*/
+/*====>*/&lt;p&gt;&lt;label for="webgunea"&gt;Webgunea: &lt;input type="url" name="webgunea"&gt;&lt;/label&gt;&lt;/p&gt;/*<====*/
+/*====>*/&lt;p&gt;&lt;input type="submit" value="Igorri"&gt;&lt;/p&gt;/*<====*/
+&lt;/form&gt;
+&lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<div class="banaketaTxikia"></div>
+        <p>Goiko adibidean adinaren eremuari esleitutako <strong>number</strong> balio motak bakarrik zenbakiak onartzeko esaten dio elementuari. Adibide horretan ezarritako gainerako sarrera-motek ez dute inolako mugarik ezartzen sartutako karaktereetan, baina erabiltzailearengandik espero diren balio-motak adierazten dizkiote nabigatzaileari. </p>
+        <div class="banaketaTxikia"></div>
+        <h4>type="email", type="url", type="tel" </h4>
+        <p>Adibidez, <strong>email</strong> balio motak posta-kontu bat itxaroten du; beraz, sartutako datua posta-kontua ez bada, nabigatzaileak ez du uzten formularioa bidaltzen eta errore bat erakutsiko du pantailan. </p>
+        <p><strong>URL</strong> tipoko eremuak, <strong>email</strong> motak bezalaxe lan egiten du, baina web helbideekin. Eremu mota honek URL absolutuak bakarrik onartzen ditu eta errore bat itzultzen du balioa baliozkoa ez bada. Beste tele mota batzuek ez dute sintaxi berezirik eskatzen, baina nabigatzaileari onartzen du bere eremuan.</p>
+        <p><strong>tel</strong> tipoko eremuak karaktereak sartzeko teklatu espezifiko bat eskatzen duten gailuetan erabiltzeko pentsatuak daude (gailu mugikorretan, erabiltzaileak telefono-eremuan klik egiten duenean agertzen den teklatuak digituak baino ez ditu, telefono-zenbakiak sartzea errazteko.)</p>
+        <p>Eremu mota horiek beren mugak badituzte ere, denak berdinak dira nabigatzailean.</p>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/HTML/form-4.png" alt="Formularioa hainbat eremurekin" width="50%" srcset="">
+          <figcaption>HTML-form(4): Formularioa hainbat eremurekin.</figcaption>
+        </div>
+        <p>Goiko irudiak erakusten duen bezala, nabigatzaileek, lehenetsita, geziak sartzen dituzte number motako eremu baten eskuinaldean, zenbaki bat hautatzeko. Erabiltzaileak gezi horiekin hauta ditzakeen zenbakietan murrizketak ezartzeko edo baimendutako zenbakiak kontrolatzeko, mota horretako <strong>&lt;input&gt;</strong> elementuek honako atributu hauek izan ditzakete.</p>
+        <ul class="zerrendaArruntak">
+          <li><p><strong>min </strong>— Atributu honen balioak zehazten du eremuak onartzen duen gutxieneko balioa.</p></li>
+          <li><p><strong>max </strong>— Atributu honen balioak zehazten du eremuak onartzen duen gehieneko balioa.</p></li>
+          <li><p><strong>step </strong>— Atributu honen balioak zehazten du eremuaren balioa zenbat handitu edo murriztu daitekeen. Adibidez, atributu horretarako 5 balioa eta eremurako gutxienez 0 balioa eta gehienez 10 aitortzen baditugu, nabigatzaileak ez digu utziko 0 eta 5 edo 5 eta 10 arteko balioak sartzen.</p></li>
+        </ul>
+        <div class="banaketaTxikia"></div>
+        <h4>type="range"</h4>
+        <p>Hurrengo adibideak gure formularioko adinaren eremuan txertatutako balioa gutxienez 13ra eta gehienez 100era mugatzen du.</p>
+        <div class="banaketaTxikia"></div>
+        <pre>
+<code>
+&lt;input type="number" name="adina" min="13" max"100"&gt;
+</code>
+</pre>
+<div class="banaketaTxikia"></div>
+        <p>Ezaugarri horiek berak ezartzen dituen beste sarrera mota bat <strong>range</strong> da. <strong>range</strong> motak balio-tarte batetik zenbaki bat hautatzeko aukera ematen digun eremu bat sortzen du. Hasierako balioa <strong>min</strong> eta <strong>max</strong> atributuen balioen arabera ezartzen da, baina balio espezifiko bat adieraz dezakegu <strong>value</strong> atributuarekin, hurrengo adibideak erakusten duen bezala.</p>
+        <div class="banaketaTxikia"></div>
+        <pre>
+<code>
+&lt;input type="range" name="adina" min="13" max"100"&gt;
+</code>
+</pre>
+<div class="banaketaTxikia"></div>
+        <p>Nabigatzaileek <strong>range</strong> motako sarrera-eremu bat erakusten dute, erabiltzaileak balio bat hautatzeko irristatu dezakeen kontrol bat bezala.</p>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/HTML/form-5.png" alt="'range' motako sarrera-eremua" width="50%" srcset="">
+          <figcaption>HTML-form(5): <strong>range</strong> motako sarrera-eremua.</figcaption>
+        </div>
+        <div class="banaketaTxikia"></div>
+        <div class="garrantzi-oinarrizko">
+          <p><strong>Egin ezazu zuk zeuk:</strong> ordezkatu <strong>&lt;input&gt;</strong> elementua zure formularioan ikusitako kodeetako elementuekin, adibide horiek probatzeko. Ireki dokumentua zure nabigatzailean eta sartu edo aukeratu zenbaki bat sarrera mota horiek nola lan egiten duten ikusteko. Saiatu formularioa baimendutakoak baino balio txikiagoarekin edo handiagoarekin bidaltzen. Nabigatzaileak akats bat erakutsi beharko luke.</p>
+        </div>
+        <div class="banaketaTxikia"></div>
+        <p>Aurreko adibidean, adina eremuan ezarritako <strong>range</strong> motako balioak ez dira testu-eremu batean sartzen, baizik eta nabigatzaileak sortutako ikus-tresna batetik hautatzen dira. </p>
+    </article>
+    <div class="banaketaTxikia"></div>
+    <!-- FORMULARIOEN ELEMENTUAK 1  BURUZKO BIDEOA hasi ---------------------  -->
+  <section class="ikasgaia" id="html-taulatributu-bideoa">
+    <article>
+      <h4 class="bideontziBurua">Formularioko elementuak: lehen atala<br><i class="fa fa-television"></i></h4>
+      <div class="bideontzia">
+        <iframe width="100%" height="350" src="https://www.youtube.com/embed/7_eInlArV_U?si=KRu5X6Bnk_fyp4Nz"
+          title="YouTube video player" "></iframe>
+      </div>
+      <figcaption>HTML-formularioak: Formularioko elementuak lehen atala.</figcaption>
+    </article>
+  </section>
+<!-- FORMULARIOEN ATRIBUTUEI  BURUZKO BIDEOA buka ---------------------  -->
+</body>
+</html>

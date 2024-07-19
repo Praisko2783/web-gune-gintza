@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <article class="ikasgaia" id="html-egitura-elementua">
+        <div class="azpitituluak">
+          <h3><strong>Atributu globalak</strong></h3>
+        </div>
+        <div class="banaketaTxikia"></div>
+        <h4>id, class</h4>
+        <p>Egiturazko elementu gehienek beren izenetan islatzen den helburu inplizitua duten arren, horrek ez du esan nahi behin bakarrik erabili behar direnik dokumentu berean. </p>
+        <p>Adibidez, &lt;section&gt; eta &lt;aside&gt; bezalako elementu batzuk askotan erabil daitezke egituraren zati ezberdinak irudikatzeko, eta beste batzuk, &lt;div&gt;&lt;/div&gt; oraindik ere behin eta berriz inplementatzen dira, atalen barruan edukia bereizteko. </p>
+        <p>Horregatik, HTMLk elementu bakoitzari identifikatzaile pertsonalizatuak esleitzeko erabil ditzakegun atributu globalak definitzen ditu.</p>
+        <p><strong>id—</strong> Atributu horrek elementu bati identifikatzaile bakarra esleitzeko aukera ematen digu.</p>
+        <p><strong>class—</strong> Atributu horrek identifikatzaile bera esleitzen dio elementu-talde bati. </p>
+        <strong>id—</strong> atributuak balio bakarreko elementu independenteak identifikatzen ditu, eta <strong>class—</strong> atributuaren balioa bikoiztu egin daiteke antzeko ezaugarriak dituzten elementuak lotzeko.
+        Adibidez, elkarren artean bereizi behar ditugun &lt;section&gt; motako bi elementu edo gehiago baditugu, <strong>id</strong> atributua erants diezaiokegu bakoitzari bere helburuak adierazten dituzten balioekin.
+<pre>
+<code>
+(...)
+&lt;main&gt;
+<b>&lt;section id="albisteak"&gt;</b>
+Artikulu luzeak
+<b>&lt;/section&gt;</b>
+<b>&lt;section id="gertukoalbisteak"&gt;</b>
+Artikulu laburrak
+<b>&lt;/section&gt;</b>
+&lt;aside&gt;
+<u>lehen artikulura esteka</u>
+<u>Bigarren artikulura esteka</u>
+<u>Hirugarren artikulura esteka</u>
+&lt;/aside&gt;
+&lt;/main&gt;
+(...)
+</code>
+</pre>
+<div class="banaketaTxikia"></div>
+        <p><strong>id</strong> atributua duten elementuak identifikatuz. Adibideak bi &lt;/section&gt; elementu ditu dokumentuaren atal nagusian, artikuluak luzapenaren arabera bereizteko. Elementu horien edukia desberdina denez, estilo desberdinak eskatzen dituzte eta, beraz, balio desberdinekin identifikatu behar ditugu. Lehenengo elementua &lt;/section&gt; <strong>"albisteak"</strong> balioarekin identifikatu da, eta bigarrena <strong>"tokiko albisteak"</strong> balioarekin.</p>
+        <p>Bestalde, antzeko ezaugarriak dituen elementu multzo bat identifikatu behar badugu, class atributua erabil dezakegu.</p>
+<div class="banaketaTxikia"></div>
+<!-- Hemen doa gorputzaren 'body' aren atala  <div> elementu librea-----------  -->
+        <h4>&lt;div&gt;&lt;/div&gt;</h4>
+        <p>Hurrengo adibideak <strong>&lt;div&gt;&lt;/div&gt;</strong> elementuak dituen atal baten edukia banatzen du. Guztiek antzeko edukia dutenez, estilo berberak partekatuko dituzte eta, beraz, balio berarekin identifikatu beharko genituzke (denak mota berekoak dira).</p>
+<pre>
+<code>
+(...)
+&lt;main&gt;
+&lt;section id="albisteak"&gt;
+Artikulu luzeak
+&lt;/section&gt;
+&lt;section id="gertukoalbisteak"&gt;
+Artikulu laburrak
+&lt;/section&gt;
+&lt;section id="misterioa"&gt;
+Misterio liburuak
+<b>&lt;div class="liburuak"&gt;
+  Libro: IT, Stephen King&lt;/div&gt;</b>
+<b>&lt;div class="liburuak"&gt;
+  Libro: Carrie, Stephen King&lt;/div&gt;</b>
+<b>&lt;div class="liburuak"&gt;
+  Libro: El resplandor, Stephen King&lt;/div&gt;</b>
+<b>&lt;div class="liburuak"&gt;
+  Libro: Misery, Stephen King&lt;/div&gt;</b>
+&lt;/section&gt;
+&lt;aside&gt;
+<u>lehen artikulura esteka</u>
+<u>Bigarren artikulura esteka</u>
+<u>Hirugarren artikulura esteka</u>
+&lt;/aside&gt;
+&lt;/main&gt;
+(...)
+</code>
+</pre>
+        <p>Kodean elementu bat dugu &lt;section id="misterioa"&gt; misterio liburuen eduki nagusia irudikatzeko, baina hainbat banaketa sortu ditugu haren barruan &lt;div&gt; elementuekin, edukia antolatzeko.</p>
+        <p>Elementu horiek <strong>class</strong> atributuarekin eta <strong>"liburuak"</strong> balioarekin identifikatu direnez, "liburuak" klasea erreferentziatuz elementu berriak sartzen edo aldatzen ditugun bakoitzean, elementu horiek guztiek klase horri erantsitako propietateen eragina jasango dute.</p>
+        <div class="banaketaTxikia"></div>
+        <div class="garrantzi-oinarrizko">
+          <p><strong>GARRANTZITSUA:</strong> <strong>id</strong>
+            eta <strong>class</strong> atributuen balioak HTML elementu batzuek erabiltzen dituzte beste elementu batzuk identifikatzeko, baita CSS arauek eta JavaScript kodeak ere, dokumentuan elementu espezifikoak sartu eta aldatzeko. Hurrengo kapituluetan adibide praktiko batzuk ikusiko ditugu.</p>
+          <p><strong>Oinarrizkoa: </strong> atributu horiei esleitutako balioak arbitrarioak dira. Nahi duen edozein balio eman diezaieke, baldin eta espazio zuririk ez badu (class atributuak espazio asko erabiltzen ditu elementu berari mota asko esleitzeko). Era berean, zure webgunea
+            nabigatzaile guztiekin bateragarria izateko, letrak eta zenbakiak bakarrik erabili beharko zenituzke, beti letra batekin hasi eta karaktere bereziak saihestu.</p>
+        </div>
+      </article>
+</body>
+</html>

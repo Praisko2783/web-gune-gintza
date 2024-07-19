@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+    <article class="ikasgaia" id="html-egitura-elementua">
+        <div class="azpitituluak">
+            <h3><strong>Atributu globalak</strong></h3>
+        </div>
+        <div class="banaketaTxikia"></div>
+      <h5>HTMLk formulario-elementuetarako soilik diren hainbat atributu global eskaintzen ditu.</h5>
+      <ul class="zerrendaArruntak">
+        <li><p><strong>disabled </strong>— Hau elementu desaktibatzen duen atributu boolearra da. Atributua bertan dagoenean, erabiltzaileak ezin du baliorik sartu edo elementuarekin elkarreragin.</p></li>
+        <li><p><strong>readonly </strong>— Atributu honek adierazten du elementuaren balioa ezin dela aldatu.</p></li>
+        <li><p><strong>placeholder </strong>— Atributu honek testu bat erakusten du elementuaren hondoan, erabiltzaileari sartu behar duen balioa adierazten diona.</p></li>
+        <li><p><strong>autocomplete </strong>— Atributu horrek bere burua osatzeko funtzioa aktibatzen edo desaktibatzen du. Balio erabilgarriak on eta off dira.</p></li>
+        <li><p><strong>Novalidate </strong>— Atributu boolearra da &lt;form&gt;&lt;/form&gt; elementuarentzat, formularioa ez litzatekeela balidatu behar adierazten duena.</p></li>
+        <li><p><strong>formnovalidate </strong>— Atributua boolearra da submit eta image motako &lt;button&gt;&lt;/button&gt; eta &lt;input&gt; elementuentzat, eta adierazten du formularioa ez dela baliozkotu behar.</p></li>
+        <li><p><strong>required </strong>— Atributua boolearra da, eta erabiltzaileak elementuan balio bat hautatu edo txertatu behar duela adierazten dio nabigatzaileari, formularioa balidatzeko.</p></li>
+        <li><p><strong>multiple </strong>— Atributu boolear bat da, nabigatzaileari adierazten diona balio ugari txerta daitezkeela eremuan (email eta file motako < input> elementuei aplikatzen zaie).</p></li>
+        <li><p><strong>autofocus </strong>— Ezaugarri boolear honek elementuari fokua mugitzeko eskatzen dio nabigatzaileari, dokumentua kargatu bezain laster.</p></li>
+        <li><p><strong>pattern — </strong>Atributu honek nabigatzaileak eremuan txertatutako balioa baliozkotzeko erabili behar duen esamolde erregular bat definitzen du.</p></li>
+        <li><p><strong>form </strong>— Atributu honek formulario batekin lotzen du elementua. Elementu bat formulario batekin konektatzeko erabiltzen da, elementua &lt;form&gt;&lt;/form&gt; etiketen artean definitzen ez denean. Atributu honi esleitutako balioak &lt;form&gt;&lt;/form&gt; elementuaren id atributuari esleitutako berbera izan behar du.</p></li>
+        <li><p><strong>spellcheck </strong>— Atributu honek eremuan sartutako balioaren ortografia eta gramatika egiaztatzeko eskatzen dio nabigatzaileari. Eskuragarri dauden balioak true (egiazkoa) eta false (faltsua) dira.</p></li>
+      </ul>
+      <p><strong>disabled</strong> eta <strong>readonly</strong>  atributuek antzeko helburua dute, erabiltzaileari elementuarekin elkarreragiten ez uztea, baina hainbat egoeratan aplikatzen dira. <strong>disabled</strong> atributua, normalean, erabiltzaileari elementua beste baldintza batzuetan eskuragarri egon daitekeela erakutsi nahi diogunean inplementatzen da, adibidez, kontrola erabiltzailearen herrialdean aplikagarria ez denean. Bestalde, <strong>readonly</strong> atributua balio posible bakarra dagoenean eta erabiltzaileak aldatzea nahi ez dugunean ezartzen da.</p>
+      <p>Adibidez, formulario honetan, erabiltzaileak ezin du adina sartu.</p>
+      <div class="banaketaTxikia"></div>
+      <pre>
+      <code>
+      &lt;!DOCTYPE html&gt;
+      &lt;html lang="es"&gt;
+      &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;Formularioak&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;section&gt;
+          &lt;form name="formulario" method="get" action"prozesatu.php"&gt;
+          &lt;p&gt;&lt;label&gt; Izena &lt;input type="text" name="izena"&gt;&lt;/label&gt;&lt;/p&gt;
+            /*====>*/&lt;p&gt;&lt;label&gt; Adina &lt;input type="text" name="adina" disabled&gt;&lt;/label&gt;&lt;/p&gt;/*<====*/
+          &lt;p&gt; &lt;input type="submit" value="Igorri"&gt;&lt;/p&gt;
+          &lt;/form&gt;
+        &lt;/section&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+      </code>
+      </pre>
+      <div class="banaketaTxikia"></div>
+      <p><strong>disabled</strong> eta <strong>readonly</strong> atributuak dituzten elementuak kolore argiagoetan agertzen dira, erabiltzaileari kontrol normalak ez direla ohartarazteko.</p>
+      <p>Elementu baten itxurari eragiten dion beste ezaugarri bat <strong>placeholder</strong> da. Sarrera-eremuetan erabiltzen da, erabiltzaileari balio zuzena sartzen lagunduko dion pista bat (hitz edo esaldi bat) eskaintzeko. Hurrengo adibideak bilaketa eremu batean txertatzen du laguntza hau.</p> 
+      <div class="banaketaTxikia"></div>
+      <pre>
+      <code>
+      &lt;!DOCTYPE html&gt;
+      &lt;html lang="es"&gt;
+      &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;Formularioak&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;section&gt;
+          &lt;form name="formulario" method="get" action"prozesatu.php"&gt;
+          /*====>*/&lt;p&gt;&lt;label&gt; Bilatu &lt;input type="search" name="bilatu"&gt;&lt;/label&gt;&lt;/p&gt;/*<====*/
+          &lt;p&gt; &lt;input type="submit" value="Bilatu"&gt;&lt;/p&gt;
+          &lt;/form&gt;
+        &lt;/section&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+      </code>
+      </pre>
+      <div class="banaketaTxikia"></div>
+      <p>Atributu horren balioa eremu barruko nabigatzaileek erakusten dute, erabiltzaileak balio bat txertatu arte.</p>
+      
+      <div class="irudiKutxa">
+        <img src="../../irudiak/HTML/form-18-search.png" alt="'search' motako atributua" width="60%" srcset="">
+        <figcaption>HTML-atribu(1): 'search' motako atributua.</figcaption>
+      </div>
+      
+      <p>Formularioen ezaugarrietako bat da sartutako datuak baliozkotzeko gaitasuna dutela. Berez, formularioek baliozkotu egiten dituzte datuak, baldin eta <strong>novalidate</strong> atributua ez bada aitortzen. Ezaugarri boolear hori &lt;form&gt;&lt;/form&gt; elementuetarako espezifikoa da. Formularioa bidaltzen denean, baliozkotu gabe bidaltzen da. Atributu horren presentziak etengabe eragiten dio formularioari, baina batzuetan baliozkotze-prozesua egoera jakin batzuetan bakarrik eskatzen da.</p> <p>Adibidez, sartutako informazioa grabatu egin behar denean, erabiltzaileak aurrerago lanean jarraitu ahal izateko. Horrelako kasuetan, <strong>formnovalidate</strong> atributua ezar dezakegu. Atributu hori formularioa bidaltzeko botoiak sortzen dituzten elementuetarako dago eskuragarri. Datuak atributu hori duen botoi batekin bidaltzen direnean, formularioa ez da balidatzen.</p>
+      <div class="banaketaTxikia"></div>
+      <pre>
+      <code>
+      &lt;!DOCTYPE html&gt;
+      &lt;html lang="es"&gt;
+      &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;Formularioak&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;section&gt;
+          &lt;form name="formulario" method="get" action"prozesatu.php"&gt;
+          &lt;p&gt;&lt;label&gt; Posta elektronikoa &lt;input type="email" 
+          name="posta"&gt;&lt;/label&gt;&lt;/p&gt;
+          &lt;p&gt; &lt;input type="submit" value="Igorri"&gt;&lt;/p&gt;
+          /*====>*/&lt;p&gt; &lt;input type="submit" value="Grabatu" formnovalidate;&lt;/p&gt;/*<====*/
+          &lt;/form&gt;
+        &lt;/section&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+      </code>
+      </pre>
+      <div class="banaketaTxikia"></div>
+      <p>Goiko adibidean, <em>'Igorri'</em> botoia medio formularioa egoera normaletan baliozkotuko da, baina bigarren botoi bat sartuko dugu <strong>formnovalidate</strong> atributuarekin, formularioa balidazio-prozesutik pasatu gabe bidali ahal izateko. <em>'Igorri'</em> botoiak erabiltzaileak posta-kontu baliodun bat sartzea eskatzen du, baina <em>'Grabatu'</em> botoiak ez du baldintza hori barne hartzen.</p>
+      <p>Posta elektroniko mota erabiltzen dugunean posta-kontu bat jasotzeko, aurreko adibidean bezala, nabigatzaileak kontrolatzen du sartutako balioa posta-kontua den, baina eremua baliozkotu egiten du hutsik dagoenean. Horren arrazoia da eremua ez dela nahitaezkoa. HTMLk <strong>required</strong> atributua eskaintzen du baldintza hori aldatzeko.</p>
+      <p><strong>required</strong> atributua sartzen denean, eremua baliozkoa izango da soilik erabiltzaileak balio bat sartzen badu eta balio horrek bere tipoaren baldintzak betetzen baditu, adibidean <strong>(type="email")</strong>.</p> 
+      <p>Hurrengo adibidean atributu hori ezartzen da erabiltzailea mezu elektroniko bat sartzera behartzeko.</p>
+      <div class="banaketaTxikia"></div>
+      <pre>
+      <code>
+      &lt;!DOCTYPE html&gt;
+      &lt;html lang="es"&gt;
+      &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;Formularioak&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;section&gt;
+          &lt;form name="formulario" method="get" action"prozesatu.php"&gt;
+          /*====>*/&lt;p&gt;&lt;label&gt; Posta elektronikoa &lt;input type="email" name="posta" required&gt;&lt;/label&gt;&lt;/p&gt;/*<====*/
+          &lt;p&gt; &lt;input type="submit" value="Igorri"&gt;&lt;/p&gt;
+          &lt;p&gt; &lt;input type="submit" value="Grabatu" formnovalidate;&lt;/p&gt;
+          &lt;/form&gt;
+        &lt;/section&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+      </code>
+      </pre>
+      <div class="banaketaTxikia"></div>
+      <div class="garrantzi-oinarrizko">
+        <p><strong>Egin ezazu zuk zeuk: </strong>sortu HTML fitxategi bat goiko kodearekin. Ireki dokumentua zure nabigatzailean eta sakatu bidali botoia. Errore-mezu bat jaso beharko zenuke posta-eremuan, balio bat txertatu behar duzula adieraziz. Sakatu Grabatu botoia. Botoi horrek <strong>formnovalidate</strong> atributua barne hartzen duenez, errorea jada ez da erakusten eta formularioa bidaltzen da.</p>
+      </div>
+      <div class="banaketaTxikia"></div>
+      <p>Balidatzeko erabiltzen den beste atributu bat <strong>pattern</strong> da. Sarrera-eremu mota batzuek karaktere espezifikoen kateak baliozkotzen dituzte, baina ezin dute ezer egin balioa estandarra ez denean, posta-kodeen kasuan bezala. Ez dago balio mota horretarako aurrez zehaztutako eremu-motarik. <strong>pattern</strong> atributuak iragazki pertsonalizatua sortzeko aukera ematen digu,  erabiliz</p>
+      <p><strong>Esamolde erregularrak</strong> komunztadura-eredu bat definitzen duten karaktere batzuez osatutako testuak dira. Adibidez, 0-9 karaktereek 0 eta 9 arteko zenbakiak bakarrik onartzen direla zehazten dute. Mota horretako adierazpenak erabiliz, iragazki pertsonalizatu bat sor dezakegu, behar dugun edozein balio baliozkotzeko. Formulario honetan bost digituko zenbakiak onartzen dituen sarrera-eremu bat dago.</p>
+      <div class="banaketaTxikia"></div>
+      <pre>
+      <code>
+      &lt;!DOCTYPE html&gt;
+      &lt;html lang="es"&gt;
+      &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;Formularioak&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;section&gt;
+          &lt;form name="formulario" method="get" action"prozesatu.php"&gt;
+          /*====>*/&lt;p&gt;&lt;label&gt; Posta-kodea &lt;input pattern = "[0-9] {5}" name = "pk" title = "Sartu zure posta-kodea (0tik-9ra, bost zenbaki)"&gt;&lt;/label&gt;&lt;/p&gt;/*<====*/
+          &lt;p&gt; &lt;input type="submit" value="Igorri"&gt;&lt;/p&gt;
+          &lt;/form&gt;
+        &lt;/section&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+      </code>
+      </pre>
+      <div class="banaketaTxikia"></div>
+      <h5>Goian &lt;input&gt; elementuak [0-9] {5} balioa duen <strong>pattern</strong> atributua barne hartzen du.</h5>
+      <p>Adierazpen erregular horrek zehazten du balioak zehazki bost karaktere izan behar dituela eta karaktere horiek 0 eta 9 arteko zenbakiak izan behar dutela. Ondorioz, bost digituko zenbakiak baino ezin ditugu txertatu; beste edozein karaktere edo tamainak errore bat itzuliko du.
+      Sarrera-mota horiek <strong>title</strong> atributua ere izan dezakete, erabiltzaileari espero den balioa zein den azaltzeko. Mezu horrek nabigatzaileak erakusten duen errore-mezu estandarra osatzen du, beheko irudiak erakusten duen bezala.</p>
+      
+      <div class="irudiKutxa">
+        <img src="../../irudiak/HTML/form-19-pattern.png" alt="Sarrerak baliozkotzen" width="60%" srcset="">
+        <figcaption>HTML-atribu(2): sarrerak baliozkotzen.</figcaption>
+      </div>
+      
+      <div class="garrantzi-oinarrizko">
+        <p><strong>GARRANTZITSUA:</strong> liburu honen helburua ez da esamolde erregularrekin nola lan egin irakastea. Informazio gehiago nahi izanez gero, bisitatu gure webgunea eta jarraitu kapitulu honetako estekak.</p>
+      </div>
+      <p><strong>email</strong> eta <strong>file</strong> sarrera-motek aldi berean balio bakar bat sartzeko aukera ematen diote erabiltzaileari. Balio bat baino gehiago sartu nahi baditugu, <strong>multiple</strong> atributua erantzi behar dugu. Atributu horrekin, erabiltzaileak nahi dituen balio guztiak sar ditzake koma bidez bereizita. Hurrengo adibidean, posta-helbide ugari onartzen dituen sarrera-eremu bat dago.</p>
+      <pre>
+      <code>
+      &lt;!DOCTYPE html&gt;
+      &lt;html lang="es"&gt;
+      &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;Formularioak&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;section&gt;
+          &lt;form name="formulario" method="get" action"prozesatu.php"&gt;
+          /*====>*/&lt;p&gt;&lt;label&gt; Posta kodea &lt;input type = "email" name = "posta" multiple&gt;&lt;/label&gt;&lt;/p&gt;/*<====*/
+          &lt;p&gt; &lt;input type="submit" value="Igorri"&gt;&lt;/p&gt;
+          &lt;/form&gt;
+        &lt;/section&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+      </code>
+      </pre>
+      <p>Balidazio-atributuez gain, badira erabiltzaileari zer balio sartu erabakitzen lagun diezaioketen beste atributu batzuk ere. Adibidez, <strong>autokonplete</strong> atributuak tresna bat aktibatzen du, erabiltzaileari aurrez txertatutako balioen arabera zer sartu iradokitzen diona. Atributu horretarako balio erabilgarriak <strong>on</strong> eta <strong>off</strong> dira (tresna aktibatu eta desaktibatu). Atributu hori &lt;form&gt;&lt;/form&gt; elementuan ere ezar daiteke, Formularioko elementu guztiei eragin diezaien.
+      Hurrengo formularioak bilaketa baterako iradokizunak desaktibatzen ditu.</p>
+      <pre>
+      <code>
+      &lt;!DOCTYPE html&gt;
+      &lt;html lang="es"&gt;
+      &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;Formularioak&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;section&gt;
+          &lt;form name="formulario" method="get" action"prozesatu.php"&gt;
+          /*====>*/&lt;p&gt;&lt;label&gt; Bilatu &lt;input type="search" name="bilatu" autocomplete="off"&gt;&lt;/label&gt;&lt;/p&gt;/*<====*/
+          &lt;p&gt; &lt;input type="submit" value="Bilatu"&gt;&lt;/p&gt;
+          &lt;/form&gt;
+        &lt;/section&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+      </code>
+      </pre>
+      <div class="banaketaTxikia"></div>
+      <div class="garrantzi-oinarrizko">
+        <p><strong>Egin ezazu zuk zeuk: </strong>sortu HTML fitxategi bat goiko kodearekin. Ireki dokumentua zure nabigatzailean. Sartu balio bat eta sakatu <strong>Bilatu</strong> botoia. Errepikatu prozesua. Nabigatzaileak ez luke sartu beharreko baliorik iradoki behar. Orain <strong>autocomplete</strong> atributua <strong>on</strong> atributuaz ordezkatu eta prozesua errepikatu. Aukera horretan, balio bat sartzen duzun bakoitzean, nabigatzaileak karaktere berberekin hasten diren aldez aurretik txertatutako balioen zerrenda bat erakutsiko dizu.</p>
+      </div>
+      <div class="banaketaTxikia"></div>
+      <p>Erabiltzaileari zer txertatu erabakitzen lagun diezaiokeen beste atributu bat <strong>autofocus</strong> da. Kasu horretan, atributuak elementuan jartzen du fokua (kurtsorea) dokumentua kargatzen denean, eta erabiltzaileari iradokitzen dio zer balio txertatu lehenengo. Hurrengo adibideak erabiltzailearen izena eta adina txertatzeko bi sarrera-eremu biltzen ditu, baina adinerako eremuak <strong>autofocus</strong> atributua barne hartzen du, eta, beraz, nabigatzaileak kurtsorea eremu horretan kokatzea lehenetsiko du.</p>
+      <div class="banaketaTxikia"></div>
+      <pre>
+      <code>
+      &lt;!DOCTYPE html&gt;
+      &lt;html lang="es"&gt;
+      &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;Formularioak&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;section&gt;
+          &lt;form name="formulario" method="get" action"prozesatu.php"&gt;
+          &lt;p&gt;&lt;label&gt; Izena &lt;input type="text" name="izena"&gt;&lt;/label&gt;&lt;/p&gt;
+          /*====>*/&lt;p&gt;&lt;label&gt; Adina &lt;input type="text" name="adina" autofocus&gt;&lt;/label&gt;&lt;/p&gt;/*<====*/
+          &lt;p&gt; &lt;input type="submit" value="Igorri"&gt;&lt;/p&gt;
+          &lt;/form&gt;
+        &lt;/section&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+      </code>
+      </pre>
+      <div class="banaketaTxikia"></div>
+      <p>Nabigatzaileek automatikoki aktiba dezaketen beste tresna bat <strong>ortografia-kontrola</strong> da. Tresna hau erabilgarria izan arren eta erabiltzaileek ia beti eskura izatea espero duten arren, egoera batzuetan desegokia izan daiteke. Tresna lehenetsita aktibatzen da, baina <strong>spellcheck</strong> atributua sar dezakegu balioarekin desaktibatzeko huts egitea, hurrengo adibidean egiten dugun bezala.</p>
+      <div class="banaketaTxikia"></div>
+      <pre>
+      <code>
+      &lt;!DOCTYPE html&gt;
+      &lt;html lang="es"&gt;
+      &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;Formularioak&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;section&gt;
+          &lt;form name="formulario" method="get" action"prozesatu.php"&gt;
+          &lt;p&gt;&lt;label&gt; Izena &lt;input type="text" name="izena"&gt;&lt;/label&gt;&lt;/p&gt;
+          &lt;p&gt;&lt;label&gt; Adina &lt;input type="text" name="adina" autofocus&gt;&lt;/label&gt;&lt;/p&gt;
+          /*====>*/&lt;p&gt;&lt;label&gt; Zure iritzia: &lt;textarea name="iritzia" cols="50" rows="6" spellcheck="false"&gt;&lt;/textarea&gt;&lt;/label&gt;&lt;/p&gt;/*<====*/
+          &lt;p&gt; &lt;input type="submit" value="Igorri"&gt;&lt;/p&gt;
+          &lt;/form&gt;
+        &lt;/section&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+      </code>
+      </pre>
+      <div class="banaketaTxikia"></div>
+      <p>Azkenik, bada beste atributu erabilgarri bat, formularioaren zati gisa <strong>&lt;form&gt;&lt;/form&gt;</strong> etiketen artean sartu ez diren elementuak deklaratzeko ezar dezakeguna. Adibidez, nabigazio-eremuan sarrera-eremu bat badugu, baina elementua dokumentuaren erdialdean zehaztutako formularioarekin bidaltzea nahi badugu, elementu hori formularioarekin konekta dezakegu <strong>form</strong> atributua erabiliz (atributu horren balioak bat etorri behar du <strong>&lt;form&gt;&lt;/form&gt;</strong> elementuari esleitutako <strong>id</strong> atributuaren balioarekin).</p>
+      <div class="banaketaTxikia"></div>
+      <pre>
+        <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="es"&gt;
+        &lt;head&gt;
+          &lt;meta charset="utf-8"&gt;
+          &lt;title&gt;Formularioak&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;nav&gt;
+        /*====>*/&lt;p&gt;&lt;input type="search" name="bilatu" form="formularioa"&gt;&lt;/p&gt;/*<====*/
+        &lt;/nav&gt;
+          &lt;section&gt;
+            &lt;form name="formulario" /*====>*/id="formularioa"/*<====*/ method="get" action"prozesatu.php"&gt;
+            &lt;p&gt;&lt;label&gt; Izena &lt;input type="text" name="izena"&gt;&lt;/label&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;label&gt; Adina &lt;input type="text" name="adina" autofocus&gt;&lt;/label&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;label&gt; Zure iritzia: &lt;textarea name="iritzia" cols="50" rows="6" spellcheck="false"&gt;&lt;/textarea&gt;&lt;/label&gt;&lt;/p&gt;
+            &lt;p&gt; &lt;input type="submit" value="Igorri"&gt;&lt;/p&gt;
+            &lt;/form&gt;
+          &lt;/section&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+        </code>
+      </pre>
+      <div class="banaketaTxikia"></div>
+      <div class="garrantzi-oinarrizko">
+        <p><strong>GARRANTZITSUA: </strong>formularioak oso erabilgarriak dira web garapenean, eta webgune eta aplikazio moderno gehienetan behar dira. Kapitulu honetako adibideak helburu didaktikoekin sortu dira, eta ahalik eta gehien sinplifikatu dira erabilgarri dauden elementu eta kontrolak probatu ahal izateko. Hurrengo kapituluetan, egoera praktikoagoetan formularioak nola ezarri eta <strong>CSS</strong> eta <strong>JavaScript</strong> bidez nola hedatu aztertuko dugu.</p>
+      </div>
+      <div class="banaketaTxikia"></div>
+      </article>
+  <!-- FORMULARIOEN ELEMENTUEI  BURUZKO LEHENENGO BIDEOA hasi ---------------------  -->
+  <section class="ikasgaia" id="html-taulatributu-bideoa">
+    <article>
+      <h4 class="bideontziBurua">Formularioko elementuen atributuak<br><i class="fa fa-television"></i></h4>
+      <div class="bideontzia">
+        <iframe width="100%" height="350" src="https://www.youtube.com/embed/7_eInlArV_U?si=KRu5X6Bnk_fyp4Nz"
+          title="YouTube video player" "></iframe>
+      </div>
+      <figcaption>HTML-formularioak: Formularioko elementuen atributuak.</figcaption>
+    </article>
+  </section>
+<!-- FORMULARIOEN ELEMENTUEI  BURUZKO LEHENENGO BIDEOA buka ---------------------  -->
+
+</body>
+</html>

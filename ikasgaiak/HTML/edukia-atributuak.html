@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+    <article class="ikasgaia" id="html-egitura-elementua">
+        <div class="azpitituluak">
+          <h3><strong>Atributu globalak</strong></h3>
+        </div>
+            <div class="banaketaTxikia"></div>
+            <p>Gaur egungo nabigatzaile gehienek automatikoki itzultzen dute dokumentuaren edukia erabiltzailearena ez den beste hizkuntza batean idatzi dela hautematen dutenean, baina kasu batzuetan orriak aldatu behar ez diren esaldi edo paragrafo osoak izan ditzake, hala nola pertsonen izenak edo filmen izenburuak.</p>
+            <p>Itzulpen-prozesua kontrolatzeko, HTMLk translate izeneko atributu globala eskaintzen du. Atributu horrek bi balio har ditzake: <strong>yes (bai)</strong> eta <strong>no (ez)</strong>. Lehenetsitako balioa <strong>yes</strong> da.</p>
+            <p>Hurrengo adibidean, &lt;span&gt;&lt;/span&gt; elementu bat erabiltzen dugu itzuli beharko ez litzatekeen testuaren zatia zehazteko.</p>
+<pre>
+<code>
+  &lt;p&gt;Nire ustez film onena da &lt;span translate="no"&gt; Two Roads&lt;/span&gt;&lt;/p&gt;
+</code>
+</pre>
+            <p>&lt;span&gt;&lt;/span&gt; elementua testua aurkezteko diseinatu zen, baina &lt;p&gt;&lt;/p&gt; elementuak ez bezala, ez dio estilorik esleitzen edukiari; beraz, testua lerro berean aurkezten da, berezko letra-motarekin eta berezko tamainarekin. Beheko irudiak nabigatzailearen leihoan ikusten dena erakusten du, itzuli ondoren. Baina filmaren izenburua ez itzultzeko esan diogunez, hura itzuli gabe agertzen da.</p>
+            <div class="irudiKutxa">
+              <img src="../../irudiak/HTML/itzulpen-atributua.png" width="600" alt="&lt;span&gt;&lt;/span&gt; elementua">
+              <figcaption>HTML-taulak(4): &lt;span&gt;&lt;/span&gt; elementua.</figcaption>
+            </div>
+            <div class="garrantzi-oinarrizko">
+              <p><strong>Egin ezazu zuk zeuk: </strong>sartu goiko kodea zure dokumentuaren atal nagusian eta ireki dokumentua zure nabigatzailean. Google Chrome bezalako nabigatzaileek dokumentua testuinguru-menu batean itzultzeko aukera eskaintzen dute saguaren eskuineko botoiarekin klik egiten dugunean. Itzulpena automatikoki egiten ez bada, Aukeratu aukera hau testua itzultzeko. Testua itzuli ondoren, irudian
+                agertzen denaren antzeko zerbait ikusi beharko zenuke. </p>
+            </div>
+            <p>HTML elementu bati gehitu diezaiokegun beste atributu erabilgarri bat <strong>contenteditable</strong> da. Atributu boolearra da, eta bertan egonez gero, erabiltzaileak elementuaren edukia edita dezake. Erabiltzaileak atributu hori duen elementu batean klik egiten badu, edukia alda dezake. Hurrengo adibideak &lt;span&gt;&lt;/span&gt; elementua ezartzen du berriro, erabiltzaileek film baten izena editatu ahal izateko.
+            </p>
+<pre>
+<code>
+  &lt;p&gt;Nire filmik gustukoena &lt;span contenteditable &gt; Casablanca&lt;/span&gt; da.&lt;/p&gt;
+</code>
+</pre>
+            <div class="irudiKutxa">
+              <img src="../../irudiak/HTML/editable-atributua.png" width="600" alt="Lehenengo taula">
+              <figcaption>HTML-taulak(5): &lt;span&gt;&lt;/span&gt; elementua <strong>contenteditable</strong> atributuaz.</figcaption>
+            </div>
+            <div class="garrantzi-oinarrizko">
+              <p><strong>Egin ezazu zuk zeuk: </strong>ordeztu lehengo paragrafoa paragrafo berriarekin eta ireki dokumentua zure nabigatzailean. Egin klik filmaren izenean aldaketak egiteko.</p>
+              <p><strong>GARRANTZITSUA: </strong> erabiltzaileak sartutako aldaketak bere ordenagailuan bakarrik daude eskuragarri. Aldaketak zerbitzarian biltegiratzea nahi badugu, informazio hori Ajax erabiliz JavaScript programa batekin igo behar ditugu.</p>
+            </div>
+          </article>
+
+</body>
+</html>

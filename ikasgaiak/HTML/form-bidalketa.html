@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+    <article class="ikasgaia" id="html-egitura-elementua">
+        <div class="azpitituluak">
+          <h3><strong>Formularioa bidaltzen</strong></h3>
+        </div>
+            <p>Formulario bat bidaltzean, bertan sartutako datuak zerbitzarira bidaltzen dira, elementu bakoitzaren izena/balioa sintaxia erabiliz. Bertan, elementuaren <strong>name</strong> atributuari esleitutako balioa da, eta erabiltzaileak sartzen duen balioa. Adibidez, "Roberto" testua sarrera-eremu batean "minombre" izenarekin txertatzen badugu, zerbitzarira bidaltzen den <strong>izen/balio</strong> parea <strong>nireIzena/Jokin</strong> izango da.</p>
+            <p>Nabigatzaileek bi metodo erabiltzen dituzte informazio hori bidaltzeko: <strong>GET</strong> eta <strong>POST</strong>. Metodoa &lt;form&gt;&lt;/form&gt; elementuaren <strong>method</strong> atributuari <strong>GET</strong> edo <strong>POST</strong> balioak esleituz adierazten da, aurreko adibideetan egin dugun bezala, nahiz eta erabili beharreko metodoa formularioak kudeatutako informazio motaren araberakoa izan. 1. kapituluan aipatu dugun bezala, nabigatzaileak zerbitzariarekin komunikatzen dira HTTP izeneko protokoloa erabiliz. </p>
+            <p>Nabigatzaileak dokumentu batean sartu nahi duenean, HTTP eskaera bat bidaliko du zerbitzarira. HTTP eskaera bat zerbitzariari zein den esaten dion mezu bat da nabigatzaileak sartu nahi duen baliabidea eta horrekin egin nahi duena (dokumentua deskargatu, informazioa prozesatu, etab.). Mezua honako hauek osatzen dute: baliabidearen URLa, eskaerarekin lotutako datuak, hala nola data eta hizkuntza, eta informazio gehigarria duen gorputz bat. formulario batek sortutako izen/balio pareak zerbitzarira bidaltzen dira HTTP eskaera hauen barruan. Metodoa <strong>GET</strong> gisa deklaratu bada, <strong>izen/balio</strong> pareak URLaren amaieran gehitzen dira, baina metodoa <strong>POST</strong> gisa deklaratu bada, balioak eskaeraren gorputzean sartzen dira.</p>
+            <p>Horrek esan nahi du <strong>GET</strong> metodoarekin bidalitako informazioa ikusgai dagoela erabiltzailearentzat (erabiltzaileak izen/balio pare guztiekin ikus dezake URLa nabigatzailearen nabigazio-barran), baina <strong>POST</strong> metodoarekin bidalitako informazioa eskaeraren barruan ezkutatzen da. Ondorioz, informazioa sentikorra edo pribatua bada, <strong>POST</strong> metodoa erabili behar dugu, baina informazioa sentikorra ez bada, erabiltzaileak txertatutako bilaketa-balio gisa, <strong>GET</strong> metodoa erabil dezakegu.</p>
+            <p>Era berean, kontuan hartu behar dugu POST metodoa informazio-kopuru mugagabea bidaltzeko erabil daitekeela, baina <strong>GET</strong> metodoak URLek aurkeztutako mugetara egokitu behar du. URL baten luzera mugatua delako gertatzen da hori. Formularioan sartutako informazioa oso zabala bada, galdu egin daiteke.</p>
+            <p>>Hurrengo adibideak sarrera-eremu bakarra duen formulario bat aurkezten du, prozesu horrek nola funtzionatzen duen irudikatzeko. <strong>&lt;input&gt;</strong> elementua "bal" izenarekin identifikatzen da, eta informazioa bidaltzeko erabilitako metodoa <strong>GET</strong> gisa deklaratzen da; horrek esan nahi du erabiltzaileak txertatutako balioa URLari gehituko zaiola.</p>
+            <div class="banaketaTxikia"></div>
+<pre>
+  <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Formularioak&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;section&gt;
+      &lt;form name="formulario" method="get" action"prozesatu.php"&gt;
+      &lt;p&gt;&lt;input type="text" name="bal"&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;input type="submit" value="Igorri"&gt;&lt;/p&gt;
+      &lt;/form&gt;
+    &lt;/section&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+  </code>
+</pre>
+<div class="banaketaTxikia"></div>
+<p>Goiko adibidean, procesar.php izeneko fitxategi bat informazioa prozesatzeaz arduratzen da. Erabiltzaileak Bidali botoia sakatzen duenean, nabigatzaileak HTTP eskaera bat sortzen du, fitxategi honetara apuntatzen duen URLa barne. Formularioaren metodoa <strong>GET</strong> gisa deklaratu delako, sarrera-eremuaren izena eta sartutako balioa erabiltzaileak URLari gehitzen dizkio, jarraian erakusten den bezala. </p>
+
+<p>Informazioa <strong>GET</strong> metodoarekin bidaltzen denean, <strong>izen/balio</strong> pareak URLaren amaieran gehitzen dira, '=' karaktereaz berdinduta, eta pareko lehen elementuaren aurretik '?' karakterea ipinita. <strong>pare/balio</strong> bikote gehiago badago, gainerakoak & karaktere bidez bereizita eransten zaizkio URLari, 
+  
+  <div class="irudiKutxa">
+    <img src="../../irudiak/HTML/form-9-navBarra.png" alt="GET metodoaz bidaltzean datuak goiko barran" width="100%" srcset="">
+    <figcaption>HTML-form(16): GET metodoaz bidaltzean datuak goiko barran.</figcaption>
+  </div>
+  <div class="garrantzi-oinarrizko">
+    <p style="text-align: center;"><strong>http://127.0.0.1:5500/zerenda.html</strong>?izena=Maurizio&gorria=gorria&berdea=berdea&morea=morea</p>
+
+  </div>
+  
+  <p>Hizki lodiz nabarmendutakoa domeinua da. Handik aurrerako <strong>GET</strong> metodoak URLari eransten diona, <strong>-?-</strong> galdera ikurraz bereizita. Lehen <strong>izen/balio</strong> parea: izena=Maurizio; gero dator <strong>-&-</strong> anpersan karakterea pareak bereizteko; ondoren bigarren parea: gorria=gorria; segidan -&- karaktere bereiztailea; gero hirugarren parea: berdea=berdea... Horrela azken parea arte.  </p>
+  <p>Beste aldean, zerbitzariak eskaera hau jaso, URLa irakurri, balioak atera eta kodea exekutatzen du <em>prozesatu.php</em> fitxategian. Kode horren bitartez jasotako informazioa prozesatu eta erantzun bat ematen du. Jarduera hau egiteko modua erabiltzen dugun programazio-lengoaiaren eta lortu nahi dugunaren araberakoa da. Adibidez, balioak irakurtzeko <strong>GET</strong> metodoarekin bidalita, PHPk <strong>$_GET</strong> izeneko zerrenda batean eskaintzen ditu. Balioa lortzeko behar den sintaxiak bere izena hartzen du kortxeteen artean.</p>
+  <div class="banaketaTxikia"></div>
+<pre><code>
+  &lt;? php
+    <h6>print ('Balioa da:'. $_GET ['izena']);</h6>
+  ?&gt;
+</code></pre>
+<div class="banaketaTxikia"></div>
+<p>
+  Goiko adibideak erakusten du nola prozesatu balioak PHPrekin. &lt;? php eta ?&gt; etiketek zerbitzariari adierazten diote PHP kodea dela eta bere horretan exekutatu behar dela. Kodea luzea izan daiteke edo jarraibide bakarrez osatua egon daiteke, behar dugunaren arabera.
+</p>
+<p>
+  Gure adibideak jarraibide bakarra du informazioa nola prozesatzen den argitzeko. <strong>print ()</strong> izeneko jarraibide horrek parentesi artean hartzen ditu balioak, eta nabigatzaileari itzuliko zaion fitxategi batean sartzen ditu, erantzun gisa. Kasu horretan, eskaeraren bidez jasotako balioa "Balioa da:" testuari gehituko diogu. Eremuan, 'izena' izeneko eremuan, Maurizio idatzi eta bidali dugunez, zerbitzariak fitxategi bat sortzen du <em>"Balioa da: Maurizio" </em> testuarekin, eta nabigatzailera bidaltzen du berriro.
+</p>
+<div class="banaketaTxikia"></div>
+<div class="garrantzi-oinarrizko">
+  <p><strong>Oinarrizkoa: </strong>gure adibideko PHP kodeak <strong>$_GET</strong> izena erabiltzen du nabigatzailetik jasotako informazioa atzitzeko, formularioaren metodoa <strong>GET</strong> gisa deklaratu delako, baina metodoa <strong>POST</strong>era aldatzen badugu, <strong>$_POST</strong> izena erabili behar dugu.</p>
+</div>
+<div class="banaketaTxikia"></div>
+<p>Zerbitzariak PHP kode baten bidez sortzen duen fitxategia HTML fitxategi bat da. Helburu didaktikoak direla eta, ez dugu HTML elementurik sartu adibidean, baina beti sortu beharko genuke erantzuteko balio duen HTML dokumentu bat. Dokumentu bat PHPn definitzeko hainbat modu daude. Sinpleena HTML dokumentua sortzea da, lehen egin dugun bezala, baina PHP fitxategi baten barruan, eta emaitza erakutsi nahi dugun PHP kodea sartzea. Adibidez, hurrengo adibideak PHP kodea txertatzen du <strong>&lt;p&gt;&lt;/p&gt;</strong> elementu baten barruan.</p>
+<p>Zerbitzariak dokumentu honekin <strong>prozesatu.php</strong> fitxategia irekitzen duenean, PHP kodea exekutatzen du, emaitza <strong>&lt;p&gt;&lt;/p&gt;</strong> etiketen barruan txertatzen du, eta fitxategia zerbitzariari itzultzen dio. Emaitza <em>Balioa da: Maurizio"</em> testuarekin dokumentu estatiko bat sortu izan bagenu bezalakoa da, baina testua modu dinamikoan sortzen da zerbitzarian, formulariotik jasotako balioekin.</p>
+<div class="banaketaTxikia"></div>
+<div class="garrantzi-oinarrizko">
+  <p><strong>Egin ezazu zuk zeuk: </strong>adibide hau probatzeko, PHP kodea exekutatu dezakeen zerbitzari batera igo behar dituzu fitxategiak. Ezaugarri horiek dituen ostatu-konturik ez baduzu, zerbitzari bat instalatu dezakezu zure ordenagailuan MAMP bezalako paketeekin, 1. kapituluan sartuta (zerbitzari bat nola erabili ez badakizu, ez kezkatu, prozedura hori ez da beharrezkoa liburu honetako adibide gehienak egiteko). Sortu HTML fitxategi berri bat adibideko kodearekin, eta <em>prozesatu.php</em> izeneko fitxategi bat bi adibideetako kodearekin. Igo fitxategiak zerbitzarira eta ireki dokumentua zure nabigatzailean. Sartu balio bat sarrera-eremuan eta sakatu Bidali botoia. Nabigatzaileak orrialde berri bat erakutsi beharko luke, "Balioa da:" karaktere-katearekin hasten den testua eta formularioan txertatu duen balioarekin amaitzen dena.</p>
+  <p><strong>GARRANTZITSUA: </strong>informazioa nola prozesatzen den eta nabigatzaileak formularioan sartutako datuak zerbitzariari nola transmititzen dizkion erakusten duen adibide bat baino ez da. Antzeko beste adibide batzuk aztertuko ditugu hurrengo kapituluetan, baina liburu honen helburua ez da PHPn edo zerbitzaria programatzeko beste lengoaia batean nola programatu irakastea. PHPri buruz gehiago ikasteko, zoaz gure webgunera eta bisitatu Loturak eta Bideoak atalak.</p>
+</div>
+<div class="banaketaTxikia"></div>
+<div class="irudiKutxa">
+  <img src="../../irudiak/HTML/form-1-html.png" alt="Datuak 'prozesatu.php' fitxategian gorde" width="100%" srcset="">
+  <figcaption>HTML-form(17): Datuak 'prozesatu.php' fitxategira bidaliko ditugu.</figcaption>
+</div>
+<div class="banaketaTxikia"></div>
+<div class="irudiKutxa">
+  <img src="../../irudiak/HTML/form-1-php.png" alt="'prozesatu.php' fitxategian gordetako datuak pantailara" width="100%" srcset="">
+  <figcaption>HTML-form(18): 'prozesatu.php' fitxategian gordetako datuak pantailara ekarri.</figcaption>
+</div>
+</article>
+<div class="banaketaTxikia"></div>
+  <!-- FORMULARIOEN BIDALKETARI BURUZKO BIDEOA hasi ---------------------  -->
+  <section class="ikasgaia" id="html-taulatributu-bideoa">
+    <article>
+      <h4 class="bideontziBurua">Formularioko datuen bidalketa<br><i class="fa fa-television"></i></h4>
+      <div class="bideontzia">
+        <iframe width="100%" height="350" src="https://www.youtube.com/embed/7_eInlArV_U?si=KRu5X6Bnk_fyp4Nz"
+          title="YouTube video player" "></iframe>
+      </div>
+      <figcaption>HTML-formularioak: Formularioko datuen bidalketa.</figcaption>
+    </article>
+  </section>
+<!-- EDUKIA HTML SAILEKO Taulak eta atributu globalak atalaren BIDEOA buka ---------------------  -->
+
+</body>
+</html>

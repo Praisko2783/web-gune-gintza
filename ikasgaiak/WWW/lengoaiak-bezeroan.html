@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  
+  <body>
+      <article class="ikasgaia" id="html-egitura-elementua">
+          <div class="azpitituluak">
+            <h3><strong>Bezeroaren aldeko lengoaiak</strong></h3>
+          </div>    
+        <h3><strong>HTML -HyperText Markup Language-</strong></h3>
+        <p><strong>HTML <em>(HyperText Markup Language)</em></strong> parentesi angeluarrez inguratutako izenekin definitutako etiketa
+          multzo batez osatutako lengoaia da. Parentesi angeluarrek etiketa mugatzen dute eta izenak adierazten duen eduki mota definitzen. <em>(&lt;html&gt;)</em> etiketak adierazten du edukia HTML kodea dela. Etiketa batzuk banaka deklaratzen dira <em>(&lt;br&gt; adibidez)</em>, etiketa bakarreko elementuak dira.</p>
+        <p>Beste batzuk irekiera- eta itxiera-etiketez. Itxierakoak izenaren aurrean alderantzizko barra bat darama. Hauei irekiera- eta itxiera-etiketadun elementu esaten zaie.</p>
+        <p>Banakako eta irekitze-etiketek atributuak izan ditzakete edukiei buruzko informazio gehigarria emateko <em>(&lt;html lang=”es”&gt; ... &lt;/html&gt; adibidez)</em>.</p>
+        <p>Etiketa bakarreko elementuak haien edukia aldatzeko zein kanpoko baliabideak sartzeko erabiltzen dira; irekiera- eta itxiera-etiketak dituzten elementuak, berriz, dokumentuaren edukia mugatzeko, beheko irudiak erakusten duen bezala.</p>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/WWW/html-lang.png" alt="html lang lengoaia adierazteko html-ri" width="100%">
+          <figcaption>Lengoaiak(1): <strong>lang</strong> atributua lengoaiaren berri emateko html-ri</figcaption>
+        </div>
+        <p>Hainbat elementu konbinatu behar dira dokumentu bat definitzeko. Elementuak goitik beherako sekuentzian zerrendatzen dira, eta beste elementu batzuk izan ditzakete barruan.</p>
+        <p>Adibidez, goiko irudian agertzen den elementuak adierazten du bere edukia HTML kode gisa interpretatu behar dela.</p>
+        <p>Beraz, dokumentu horren edukia deskribatzen duten gainerako elementuak etiketen artean adierazi behar dira eta.</p>
+        <p>Era berean, elementuaren barruko elementuek beste elementu batzuk izan ditzakete.</p>
+        <p>Hurrengo adibideak HTML dokumentu erraz bat erakusten du, oinarrizko egitura bat definitzeko eta pantailan <strong>Kaixo guztioi</strong>! mezua erakusteko behar diren elementu guztiak biltzen dituena.</p>
+<pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+&lt;title&gt;Nire lehen HTML dokumentua&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+<b>&lt;p&gt;Kaixo guztioi!&lt;/p&gt;</b>
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>            
+        <p>Horra hor kode erraz bat egitura konplexukoa. Lehenengo lerroan, dokumentua HTML5 motakoa dela adierazten duen etiketa bakarreko elementu bat dago <em>(&lt;!DOCTYPE html&gt;)</em>.</p>
+        <p>Ondoren, irekitze-etiketa bat <em>(&lt;html lang="eus"&gt; )</em>bere atributuarekin, orriaren hizkuntza zein den adierazten duena. Honako honetan euskara.</p>
+        <p>Segidan bi elementu datoz bakoitza bere irekiera- eta itxiera-etiketekin. Burua &lt;head&gt;&lt;/head&gt; eta gorputza &lt;body&gt;&lt;/body&gt;.</p>
+        <p>Elementu horiek, aldi berean, elementu gehiago dituzte barnean, beren edukiekin <em>&lt;title&gt;Nire lehen HTML dokumentua&lt;/title&gt;</em> buruan, eta &lt;p&gt;Kaixo guztioi!&lt;/p&gt; gorputzean.</p>
+        <div class="garrantzi-oinarrizko">
+          <p><strong>Oinarrizkoa:</strong> oro har, elementu oro bihur daiteke edukiontzi elementu batzuk barnean hartuz edo edukiontzi barneko elementu. Soilik egiturazkoak diren elementuak, hala nola, &lt;html&gt;, &lt;head&gt; eta &lt;body&gt; daukate leku espezifikoa HTML dokumentu batean, gainerakoak malguak dira nahierara koka daitezke.</p>
+        </div>
+        <div class="garrantzi-oinarrizko">
+          <p><strong>Oinarrizkoa: </strong>atributuak irekiera-etiketaren (edo banakako etiketen) barruan deklaratzen dira beti, eta izena berdin balioa egitura bat izan dezakete (&lt;html lang=”eus”&gt;&lt;/html&gt;).</p>
+        </div>
+      </article>
+      <!-- Lehenengo kapitulua HTML ------------------buka ---------------------  -->
+      <div class="banaketaTxikia"></div>
+      <!-- Bigarren kapitulua CSS --------------------hasi ---------------------  -->
+      <article>
+          <h3><strong>CSS Cascading Style Sheets</strong></h3>
+        <p>HTML elementuen estiloak definitzeko erabiltzen den lengoaia da, hala nola tamaina, kolorea, hondoa, ertza, etab. Nabigatzaile guztiek elementu gehienei estilo lehenetsiak esleitzen dizkieten arren, estilo horiek, oro har, gure webguneetarako nahi dugunetik urrun daude.</p>
+        <p>Estilo pertsonalizatuak adierazteko, CSSk propietateak eta balioak erabiltzen ditu. Eraikuntza honi deklarazioa deitzen zaio eta bere sintaxiak bi puntu ditu propietatearen izenaren ondoren, eta puntu bat eta koma bat amaieran linea ixteko.</p>
+        <div>
+          <div class="irudiKutxa">
+            <img src="../../irudiak/WWW/css-kolorea.png" alt="css nola idazten den. Propietatea+balioa" width="100%">
+            <figcaption>Lengoaia(2): CSS nola idazten den. Propietatea + balioa</figcaption>
+
+          </div>
+        </div>
+        <p>Deklarazio horretan koloreari <strong>#FF0000</strong> balioa esleitzen zaio. Propietate hori gero HTML elementu bati aplikatzen bazaio, elementu horren edukia gorriz agertuko da, <strong>#FF0000</strong> balioak kolore gorria adierazten baitu.</p>
+        <p>CSS propietateak <strong>giltzak</strong> erabiliz taldeka daitezke. Propietate bat edo gehiago dituen talde bati <strong>erregela</strong> deitzen zaio eta erregela identifikatzen duenari <strong>hautatzaile</strong>.</p>
+<pre>
+<code>
+body {
+width: 100%; 
+margin: 0px; 
+background-color: #FF0000;
+} 
+</code>
+</pre>
+        <p><strong>body</strong> hautatzaileari <strong>erregela</strong> hori aplikatuta honelako itxura hartuko du gure orriak:</p>
+        <ul class="www-atalbe">
+          <li><strong>width:100%;</strong> Pantailaren zabalera osoa izango du.</li>
+          <li><strong>margin:0px;</strong> ez goian, ez behean, ez ezkerrean, ez eskuinean ez du izango marjinik.</li>
+          <li><strong>background-color:#FF0000;</strong> den dena gorria izango da.</li>
+        </ul>
+        <div class="garrantzi-oinarrizko">
+          <p><strong>Oinarrizkoa: </strong>HTML elementuei CSS estiloak aplikatzeko hainbat teknika daude. CSS propietateak aztertuko ditugu, eta HTML dokumentu batean nola sartu 3. eta 4. kapituluetan.</p>
+        </div>
+      </article>
+      <!-- Bigarren kapitulua CSS ------------------buka ---------------------  -->
+      <div class="banaketaTxikia"></div>
+      <!-- Hirugarren kapitulua JavaScript --------------------hasi ---------------------  -->
+      <article>
+          <h3><strong>JavaScript</strong></h3>
+          <div class="banaketaTxikia"></div>
+        <h5>HTML eta CSS ez bezala, JavaScript <u>programazio-lengoaia</u> bat da.</h5>
+        <p>Bidezkoak izateko, lengoaia horiek guztiak programazio-lengoaiatzat har daitezke, baina praktikan zenbait desberdintasun daude nabigatzaileari jarraibideak emateko moduan.</p>
+        <p>HTML nabigatzaileak informazioa antolatzeko interpretatzen duen adierazle-multzo bat bezala da; CSS nabigatzaileari dokumentua pantailan aurkezteko prestatzen laguntzen dioten estiloen zerrendatzat har daiteke (nahiz eta azken zehaztapenak lengoaia dinamikoagoa bihurtu zuen), baina <strong>JavaScript</strong> programazio-lengoaia bat da, <strong>C++ edo Java</strong> bezalako programazio profesionaleko beste edozein lengoaiarekin aldera daitekeena. </p>
+        <p>JavaScriptek besteek ez bezala, ekintza pertsonalizatuak egin ditzazke, hala nola, balioak biltegiratua, algoritmo konplexuak kalkulatu, dokumentuko elementuekin elkarreragin, eta horien edukia dinamikoki prozesatu.</p>
+        <p>HTML eta CSS bezala, JavaScript ere nabigatzaileetan sartzen da eta, beraz, gure dokumentu guztietan dago eskuragarri. Dokumentu baten barruan JavaScript kodea deklaratzeko, HTMLk &lt;script&gt; &lt;/script&gt; elementua eskaintzen du. </p>
+<pre>
+<code>
+&lt;script&gt;
+function koloreaAldatu() {
+document.body.style.backgroundColor = "#0000FF";
+}
+document.addEventListener("click", koloreaAldatu);
+&lt;/script&gt;
+</code>
+</pre>
+        <p>Kode horrek &lt;body&gt;&lt;/body&gt; elementuaren atzealdeko kolorea urdinera aldatzen du erabiltzaileak dokumentuan klik egiten duenean.</p>
+        <div class="garrantzi-oinarrizko">
+          <p><strong>Oinarrizkoa: </strong>&lt;/script&gt; elementuari esker JavaScript kodea kanpoko fitxategietatik ere kargatu dezakegu.</p>
+        </div>
+      </article>
+      <!-- Hirugarren kapitulua JavaScript -----------------------buka ---------------------  -->
+      <div class="banaketaTxikia"></div>
+      <!-- Zerbitzariaren aldeko lengoaiak ---------------------hasi ---------------------  -->
+      <article id="www-zerbitzari">
+        <div class="azpitituluak">
+          <h3><strong>Zerbitzariaren aldeko lengoaiak</strong></h3>
+        </div>
+        <p>HTML, CSS eta JavaScripten programatutako kodeak erabiltzailearen ordenagailuan (bezeroa) exekutatzen ditu nabigatzaileak. Horrek esan nahi du, webguneko fitxategiak zerbitzarira igo ondoren, ezin direla aldatu ordenagailu pertsonal batean deskargatu eta haien kodeak nabigatzaileak exekutatzen dituen arte. Horrek webgune erabilgarri eta interaktiboak sortzea ahalbidetzen badu ere, une batzuetan informazioa zerbitzarian prozesatu behar dugu erabiltzaileari bidali aurretik. </p>
+        <p>Informazio horrek sortutako edukiari eduki dinamikoa esaten zaio, eta zerbitzarian exekutatutako eta helburu horrekin bereziki diseinatutako lengoaietan programatutako kodeek sortu izan dira (zerbitzariaren aldeko lengoaiak). </p>
+        <p>Nabigatzaileak kode mota hori duen fitxategi bat eskatzen duenean, zerbitzariak exekutatu egiten du, eta, ondoren, emaitza bidaltzen dio erabiltzaileari erantzun gisa. Kode horiek edukia eta dokumentuak denbora errealean sortzeko ez ezik, nabigatzaileak bidalitako informazioa prozesatzeko, erabiltzailearen datuak zerbitzarian gordetzeko, kontuak kontrolatzeko eta abarretarako ere erabiltzen dira. </p>
+        <p>Hainbat lengoaia daude zerbitzarietan kode exekutagarria sortzeko. Ezagunenak PHP, Ruby eta Python dira. Hurrengo adibidea PHPn idatzitako kode baten lagina da.</p>
+<pre>
+<code>
+&lt;?php
+$nombre = $_GET['minombre'];
+print('Su nombre es: '.$nombre);
+?&gt;
+</code>
+</pre>
+        <p>Kodeak nabigatzaileak bidalitako balio bat jasotzen du, memorian biltegiratzen du eta mezu bat sortzen du berarekin. Kode hori exekutatzen denean, azken mezuarekin dokumentu berri bat sortzen da, fitxategia bezeroari bidaltzen zaio berriro, eta, azkenik, nabigatzaileak edukia pantailan erakusten du.</p>
+        <div class="garrantzi-oinarrizko">
+          <p><strong>GARRANTZITSUA: </strong>zerbitzari-lengoaiek beren teknologia erabiltzen dute, baina HTML5-ekin lan egiten dute erabiltzaileen kontuen erregistro bat eramateko, zerbitzarian informazioa gordetzeko, datu-baseak erabiltzeko, etab.</p>
+        </div>
+      </article>
+    </section>
+    <!-- Zerbitzariaren aldeko lengoaiak  ---------------------buka   ---------------------  -->
+<div class="banaketaTxikia"></div>
+
+<!-- EGITURA HTML SAILEKO AZTERKETA hasi ---------------------  -->
+<article class="ikasgaia" id="html-egitura-elementua">
+  <div class="azpitituluak">
+    <h3 class="azterMartxa" onclick="hasiLengoaiLantegia();">Webgunetako lengoiaiez galdetegi txikia<br><i class="fa fa-pagelines">&nbsp;&nbsp;EKIN</i></h3>
+    <h5 style="text-align: center;;"><em>Erantzun eta lau segundo izango dituzu iradokizuna irakurtzeko. (Sei galdera guztira)</em></h5>
+  </div> 
+        <div class="lengoaiGaldetegia">
+          <div class="lengoaiGaldera" id="galde"></div>
+          <div class="lengoaiAukerak" id="auke"></div>
+          <p class="lengoaiEmaitza" id="emaitza"></p>
+        </div>
+    </article>
+    <div class="banaketa"></div>
+    <hr>
+</body>
+<!-- Kanpoko fitxategiak erabili ahal izateko estekak (JavaScript-ak orria bukaeran idatzi ohi dira, sistemak 
+HTML eta CSS guztia irakurri ostean irakur ditzan) -------------- -->
+<script src="../../js/vendor/galdetegia.js"></script>
+<script src="../../js/vendor/galdetegiaForm.js"></script>
+<script src="../../js/vendor/kudeaketa.js"></script>
+<script src="../../js/vendor/kudeaketaForm.js"></script>
+<script src="../../js/vendor/kudeatuHTML.js"></script>
+
+<script src="../../js/vendor/lengoaiaSkripta.js"></script>
+</html>

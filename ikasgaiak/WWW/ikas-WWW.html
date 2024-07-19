@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Web garapena</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../css/estiloa.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onload="hasi();">
+
+  <!-- Goiburukoa: gunearen titulua, azpititulua eta menua irekitzeko esteka  HASI -->
+  <header>
+      <a href="../index.html"><img src="../WWW/irudiak/praiskologoGardena.png" alt="Praiskopediaren logoa" class="praisikonoa"></a>
+    <h1>web-gune-gintza</h1>
+    <span onclick="w3_open()"><i class="fa fa-arrow-circle-o-left"></i>&nbsp;Ireki menua</span>
+  </header>
+  <!-- Goiburukoa: gunearen titulua, azpititulua eta menua irekitzeko esteka  BUKA -->
+  <!-- Menua irekitzeko agindutakoan agertuko den menu bertikala  HASI -->
+  <nav class="nabimenua" id="mySidebar">
+    <div class="menuBtnItxi" onclick="w3_close()">
+      <i class="fa fa-arrow-circle-o-up"></i> Itxi menua
+    </div>
+    <a href="gidaGlosarioa.html" class="gidaBtn" style="color:grey;">Glosarioa</a>
+    <a href="gidaOsagarriak.html" class="gidaBtn" style="color:grey;">Material osagarria</a>
+    <a href="gidaDida.html" class="gidaBtn" style="color:green;"><u>Gida Didaktikoa</u></a>
+    <a href="ikas-internet.html" style="color:grey;">Internet </a>
+    <a href="ikas-WWW.html" style="color:green;"><u>Web garapena</u></a>
+    <a href="ikas-HTML.html" style="color:green;"><u>HTML</u></a>
+    <a href="ikas-CSS.html" style="color:grey;">CSS </a>
+    <a href="ikas-css-webDiseinua.html" style="color:grey;">Web diseinua</a>
+    <a href="ikas-css-diseinuMoldagarria.html" style="color:grey;">Diseinu moldagarria</a>
+    <a href="ikas-js.html" style="color:grey;">JavaScript</a>
+    <a href="ikas-js-API-formularioak.html" style="color:grey;">API (Formularioak)</a>
+    <a href="ikas-js-API-medioak.html" style="color:grey;">API(Ikusentzunezkoak)</a>
+    <a href="ikas-js-API-stream.html" style="color:grey;">API(Stream)</a>
+    <a href="ikas-js-API-fullscreen.html" style="color:grey;">API(Fullscreen)</a>
+    <a href="ikas-js-API-canvas.html" style="color:grey;">API(Canvas)</a>
+    <a href="ikas-js-API-webGL.html" style="color:grey;">API(WebGL)</a>
+    <a href="ikas-js-API-pointerLock.html" style="color:grey;">API(Pointer Lock)</a>
+    <a href="ikas-js-API-webStorage.html" style="color:grey;">API(Web Storage)</a>
+    <a href="ikas-js-API-IndexedDB.html" style="color:grey;">API(IndesedDB)</a>
+    <a href="ikas-js-API-file.html" style="color:grey;">API(File)</a>
+    <a href="ikas-js-API-dragdrop.html" style="color:grey;">API(Drag and Drop)</a>
+    <a href="ikas-js-API-geolocation.html" style="color:grey;">API(Geolocation)</a>
+    <a href="ikas-js-API-history.html" style="color:grey;">API(History)</a>
+    <a href="ikas-js-API-pageVsibility.html" style="color:grey;">API(Page Visibility)</a>
+    <a href="ikas-js-API-ajaxLevel2.html" style="color:grey;">API(AJAX Level2)</a>
+    <a href="ikas-js-API-webMessaging.html" style="color:grey;">API(Web Messaging)</a>
+    <a href="ikas-js-API-webSocket.html" style="color:grey;">API(WebSocket)</a>
+    <a href="ikas-js-API-webRTC.html" style="color:grey;">API(WebRTC)</a>
+    <a href="ikas-js-API-webAudio.html" style="color:grey;">API(Web Audio)</a>
+    <a href="ikas-js-API-webWorkers.html" style="color:grey;">API(Web Workers)</a>
+  </nav>
+  <!-- Menua irekitzeko agindutakoan agertuko den menu bertikala  BUKA -->
+  <body>
+    <main>
+      <!-- HEMEN HASTEN DA EDUKIAREN ATAL NAGUSIA <main>   Atalburua sailarekin--- -->
+      <!-- WEBGUNEAK SAILA HASI -----  WEBGUNEAK SAILA HASI------  WEBGUNEAK SAILA HASI----------  -->
+      <section class="ikasgai-burua">
+        <div class="ikasgaiBurua">
+          <h2><strong>World Wide Web (WWW)</strong></h2>
+          <div class="saioAtalak">
+            <a class="botoia" href="#www-webguneak"><i class="fa fa-male w3-xlarge"></i>&nbsp;&nbsp;Webguneak</a>
+            <a class="botoia" href="#www-lengoaiak"><i class="fa fa-male w3-xlarge"></i></i>&nbsp;&nbsp;Lengoaiak</a>
+            <a class="botoia" href="#www-lanabesak"><i class="fa fa-male w3-xlarge"></i></i>&nbsp;&nbsp;Lanabesak</a>
+          </div>
+        </div>
+      </section>
+<!-- Atalaren --------- GIDA DIDAKTIKOA  GIDA DIDAKTIKOA GIDA DIDAKTIKOA -akordiona-  ------ HASI ------  -->
+      <section class="gidakordiona" id="html-gidadida">
+        <article>
+          <button class="accordion gidontziburua">
+              <h4>Ikasgaiaren gida didaktikoa &nbsp;&nbsp;<i class="fa fa-arrow-circle-o-right"></i></h4>
+          </button>
+      <div class="akordeoiontzia">
+        <div id="gida-HTML" class="garrantzi-oinarrizko">
+          <p>Ikasgaia oso-osorik webguneei eskainia dago. Webgune bat Interneten HTTP protokoloaren bitartez eskuragarri dagoen fitxategi eta web orrien bilduma bat da. Orri sorta horrek gai bat garatzea, zerbitzu batzuk ematea edota orriaren inguruko informazioa eskaintzea ditu helburu.</p>
+
+            <p>Publikoak diren webgune guztiek <strong>World Wide Web</strong> izeneko informazio sarea osatzen dute.</p>
+            <p>Webgune batean sartzeko ezinbestekoa da URLa eta normalean zerbitzari fisiko berean kokatuta egoten da.</p>
+            <p>Webgune batzuek harpidetza eskatzen dute, gune horietako eduki batzuetara edo guztietara iristeko. </p>
+          
+          <h5>Saioan hiru atal bereizi dira:</h5>
+          
+          <ul class="saioAzpiatalak">
+            <li><p><strong>Webguneak: </strong> ebgune bat pertsona, enpresa edota bestelako erakundeetako lana izan daiteke, tipikoki gai edo asmo partikularrei eskainita dago. Edozein webgunek izan dezake beste webguneekin lotzen dituen estekak. Ez dira nahasi behar webgunea eta web-orria. Web-orria HTML artxiboa besterik ez da. Helbide bat idaztean, <em>praiskopedia.eus</em> esate baterako, beti webgune bati egiten diogu erreferentzia.</p></li>
+            <li><p><strong>Lengoaiak: </strong> bezeroaren aldea <em>(frontend)</em> diseinatzeko hiru lengoaia ikasiko ditugu, <strong>HTML</strong> edukiari egitura eta antolaketa emateko, <strong>CSS</strong> eduki horren itxura eta kokapena zehazteko eta  <strong>JavaScript</strong> webgune interaktibo eta dinamikoak sortzeko. Bestalde zerbitzariaren aldea <em>(backend)</em> kudeatzeko <strong>PHP</strong> erabili ohi da. HTMLan sar daiteke inolako arazorik gabe eta, kode irekikoa denez, gehien erabiltzen den lengoaia da.</p></li>
+            <li><p><strong>Lanabesak: </strong> Gure konputagailua eta bertan instalatutako nabigatzaileez gain, hiru lanabes erabiliko ditugu nagusiki gure jardunean. Kodea idazteko <strong>Visual Studio Code</strong>, bertsioak kudeatzeko <strong>GitHub</strong> eta gure proiektuak frogatzeko <strong>XAMPP</strong></p></li>
+          </ul>
+          <h5>Gauzak horrela atal hau amaitzean ikaslea gai izango da:</h5>
+          <ul class="saioAzpiatalak">
+            <li><p>Edukiak web aplikazio baten logikan integratzeko eta zehaztapenetara egokitutako datuak atzituko dituzten osagaiak garatzeko.</p></li>
+            <li><p>Web aplikazioetan interfazeak garatzeko estilo-eskuliburuaren arabera, markatzeko lengoaiak eta web-estandarrak erabilita.</p></li>
+            <li><p>Web aplikazioetan integratuko diren multimedia-osagaiak erabiltzeko ezarritako zehaztapenak medio.</p></li>
+            <li><p>Web aplikazio baten interfazean multimedia-osagaiak integratzeko.</p></li>
+        </div>
+      </div>
+        </article>
+       </section>
+<!-- Atalaren --------- GIDA DIDAKTIKOA  GIDA DIDAKTIKOA GIDA DIDAKTIKOA -akordiona-  ------ BUKA ------  -->
+<div class="banaketa"></div>
+<!-- WEBGUNEA SAILA (fitxategiak,domeinuak,iperestekak,URLak...) ----------------- hasi ------------  -->
+      <section class="www-ikasgaia">
+        <article id="artikuluBurua">
+          <h2 id="www-webguneak"><strong>1.1 Webgunea &nbsp;&nbsp;&nbsp;</strong></h2>
+          <h5><u>Azpiatalak</u></h5>
+          <ul class="saioAzpiatalak">
+            <li>Fitxategiak, domeinuak, hiperestekak, URLak</li>
+            <li><a class="azpiatala" href="#www-gune-bideoa">Bideoa <i class="fa fa-television"></i></a></li> 
+            <li><a class="azpiatala" href="#www-gune-azterketa">Azterketa <i class="fa fa-pagelines"></i></a></li>
+          </ul>
+          <div class="azpitituluak">
+            <h3><strong>Fitxategiak, domeinuak, hiperestekak, URLak</strong></h3>
+          </div>
+          <p>Erabiltzaile batek webgune batera sartzea erabakitzen duenean, nabigatzaileari webgunearen helbidea
+            jakinarazten
+            dio. Nabigatzaileak zerbitzariari zuzentzen dio agindua eta hark informazioaren biltegian bilatzen du
+            eskatutakoa.
+            Behar dituen fitxategiak deskargatu eta edukia prozesatu ondoren erabiltzailearen pantailan erakusten du
+            eskatutakoa.</p>
+          <p>Webguneak sarbide publikokoak direnez eta Internet sare globala denez, fitxategi horiek beti egon ohi dira
+            eskuragarri. Horregatik, webguneak ez dira ordenagailu pertsonaletan gordetzen, baizik eta ordenagailu
+            espezializatuetan. </p>
+          <p>Webgune bateko fitxategiak eta informazioa <strong>Datu basea</strong> izeneko biltegi batean gordetzen
+            dira.
+            Tartean <strong>Zerbitzari</strong> izeneko ordenagailuak daude jasotako eskariari erantzuteko datuak
+            kudeatzeaz
+            arduratzen direnak. Hori eginda <strong>Bezeroa</strong> deitzen den erabiltzailearen ordenagailuari
+            bidaltzen
+            dio
+            erantzuna HTML dokumentu batean.</p>
+          <div class="irudiKutxa">
+            <img src="../../irudiak/WWW/Aurkezpen.gif" alt="Bezero zerbitzari web egitura" width="100%" srcset="">
+            <figcaption>Webgunea(1): Bezero-zerbitzari web egitura</figcaption>
+          </div>
+          <p>Zerbitzariak ordenagailu pertsonalen oso antzekoak dira, baina etengabe daude sarera konektatuta eta
+            erabiltzaileen eskaerei erantzutea ahalbidetzen dieten programak exekutatzen dituzte, noiz jasotzen diren
+            edo
+            nondik datozen kontuan hartu gabe. </p>
+          <p>Zerbitzarientzako programarik ezagunenak dira Apache, Linux sistemetarako, eta IIS (Internet Information
+            Server),
+            Microsoftek Windows sistemetarako sortua. Horiek arduratzen dira bezeroaren eta zerbitzariaren arteko
+            konexioa
+            ezartzeaz, erabiltzaileen sarbidea kontrolatzeaz, fitxategiak administratzeaz eta bezeroek eskatutako
+            dokumentuak
+            eta baliabideak bideratzeaz.</p>
+          </div>
+        </article>
+        <!-- Sailaren aurkezpena buka ---------------------  -->
+<div class="banaketa"></div>
+        <!-- Lehen kapitulua 'fitxategiak hasi ------------  -->
+        <article>
+          <div class="azpitituluak">
+            <h3><strong>Fitxategiak</strong></h3>
+          </div>
+          <p>Webguneak dokumentu ugariz osatuta daude, eta nabigatzaileak dokumentu horiek deskargatzen ditu erabiltzaileak eskatzen dituenean. Webgune bat osatzen duten dokumentuak orri deitzen dira, eta orri berriak irekitzeko prozesuari nabigatzea (erabiltzaileak webgunearen orrialdeetan nabigatzen du).</p>
+          <p>Webgune bat garatzeko, fitxategi bat sortu behar dugu sartu nahi dugun orri bakoitzeko. Fitxategi horiekin batera, irudiak dituzten fitxategiak eta orri hauen barruan erakutsi nahi dugun beste edozein baliabide ere sartu behar ditugu (irudiak eta beste batzuk).</p>
+            <div class="irudiKutxa" style="float:left">
+              <img src="../../irudiak/WWW/artxiboak.png" alt="Bezero zerbitzari web egitura" width="100%" srcset="">
+              <figcaption>Webgunea(2): Webguneko fitxategiak</figcaption>
+            </div>
+          <p>Horra hor webgune bateko direktorioak eta fitxategiak, zerbitzarira igotzen direnean.</p>
+          <p>Bertan irudiak eta css izeneko bi direktorio eta <em>index.html</em> eta .html luzapeneko hainbat fitxategi daude.</p>
+          <p>Direktorioak web orrietan erakutsi nahi ditugun irudiak eta beste baliabide batzuk gordetzeko sortu ziren, hala nola CSS eta JavaScript kodeak dituzten fitxategiak.</p>
+          <p>Bestalde, adibide honetako fitxategiek gune honetan sartu nahi ditugun hiru web orri irudikatzen dituzte.</p>
+          <p>index.html fitxategiak orri nagusiari dagokion kodea eta informazioa biltzen ditu (erabiltzaileak gure webgunera lehen aldiz sartzen denean ikusten duen orria).</p>
+          <p>Erabiltzaile bat gure webgunera lehen aldiz sartzen denean, nabigatzaileak index.html fitxategia deskargatzen du eta haren edukia erakusten du leihoan. </p>
+          <p>Erabiltzaileak gure webguneak eskainitako albisteak ikusteko ekintza bat egiten badu, esaterako <em>ajax.html</em> fitxategia eskatzen badu, nabigatzaileak fitxategia deskargatzen du zerbitzaritik, prozesatu eta <em>index.html</em> fitxategiaren edukia fitxategi berri honen edukiarekin ordezten du.</p>
+          <p>Erabiltzaileak beste web orri batera sartu nahi duen bakoitzean, nabigatzaileak dagokion fitxategia deskargatu behar du zerbitzaritik, prozesatu eta edukia pantailan erakutsi.</p>
+          <p>Webgune bateko fitxategiak eta ordenagailu pertsonal batean aurki ditzakegunak berdinak dira. Guztiek dute garatzaileak hautatutako izen bat eta edukia programatzeko erabilitako lengoaia islatzen duen luzapen bat (gure adibidean, fitxategiek <strong>.html</strong> luzapena dute, HTMLn programatu zirelako). </p>
+          <p>Fitxategi horiei nahi dugun edozein izen eman diezaiekegu, baldin eta hasierako orrialdea ez bada. Apache bezalako zerbitzariak fitxategi lehenetsiak izendatzen dituzte erabiltzaileak egiten ez badu. Sarrien erabiltzen den izena index da. Erabiltzaile bat zerbitzarian sartzen bada ireki nahi duen fitxategiaren izena zehaztu gabe, zerbitzariak index izena duen fitxategi bat bilatuko du eta bezeroari bidaliko dio bueltan. Horregatik, <strong><em>index.html</em></strong> fitxategia gure webgunearen sarrera-puntua da, eta beti sartu behar dugu. </p>
+          </div>
+          <div class="garrantzi-oinarrizko">
+            <p><strong>GARRANTZITSUA:</strong> zerbitzariak malguak dira gure fitxategien izenari dagokionez, baina arau batzuk bete beharko genituzke. Ez erabili tarterik eta hitzak bereiztekotan, erabili beheko gidoia tartean (_). ?, %, #,/ bezalako karaktere bereziak saihestu, eta azenturik eta zenbakirik gabeko letra xeheak bakarrik erabili.</p>
+          </div>
+          <div  class="garrantzi-oinarrizko">
+            <p><strong>Oinarrizkoa:</strong> 'index' izen ohikoena bada ere, ez da fitxategiari lehenetsita esleitu diezaiokegun bakarra. Adibidez, gure dokumentuak HTMLn programatu beharrean <strong>PHP</strong> bezalako zerbitzari-lengoaia batean programatzen baditugu, index fitxategiari index.php izena esleitu behar diogu. Adibidez, Apachek <strong>index</strong> izena eta <strong>.html</strong> luzapena dituen fitxategi bat bilatzen du lehenik, baina aurkitzen ez badu, <strong>index</strong> izena eta <strong>.php</strong> luzapena dituen fitxategi bat bilatzen du.</p>
+          </div>
+        </article>
+        <!-- Lehen kapitulua 'fitxategiak buka ----------  -->
+        <div class="banaketa"></div>
+        <!-- Bigaren kapitulua 'domeinuak' hasi ---------  -->
+        <article id="www-domeinuak">
+            <div class="azpitituluak">
+              <h3><strong>Domeinuak eta URLak</strong></h3>
+            </div>
+          <p>Webguneak dokumentu ugariz osatuta daude, eta nabigatzaileak dokumentu horiek deskargatzen ditu erabiltzaileak eskatzen dituenean. Webgune bat osatzen duten dokumentuak orri deitzen dira, eta orri berriak irekitzeko prozesuari nabigatzea (erabiltzaileak webgunearen orrialdeetan nabigatzen du).</p>
+          <p>Webgune bat garatzeko, fitxategi bat sortu behar dugu sartu nahi dugun orri bakoitzeko. Fitxategi horiekin batera, irudiak dituzten fitxategiak eta orri hauen barruan erakutsi nahi dugun beste edozein baliabide ere sartu behar ditugu (irudiak eta beste batzuk).</p>
+          <p>Zerbitzariak <strong>IP (Internet Protocol)</strong> izeneko balio batekin identifikatzen dira. IP hau bakarra da ordenagailu bakoitzarentzat eta, beraz, ordenagailu bat sare baten barruan kokatzeko aukera ematen duen helbide gisa lan egiten du. Nabigatzaileak zerbitzari batera sartu behar duenean erabiltzaileak eskatutako dokumentua deskargatzeko, lehenik zerbitzaria bilatzen du IP helbide honen bidez, eta gero dokumentua bidaltzeko eskatzen dio.</p>
+          <p>IP helbideak 0 eta 255 arteko zenbaki osoek osatzen dituzte, puntu batez bereizita, edo zenbakiek eta letrek, bi puntuz bereizita, bertsioaren arabera (IPv4 edo IPv6). Adibidez, <em>216.58.198.10</em>0 helbidea Googleren webgunea ostatatuta dagoen zerbitzariari dagokio. </p>
+          <p>Balio horiek gogoratzeko zailak dira. Horregatik, Internetek zerbitzari bakoitza izen jakin batekin identifikatzen duen sistema bat erabiltzen du. Izen pertsonalizatu hauek, domeinu deituak, edonork gogora ditzakeen identifikatzaile errazak dira, google edo yahoo bezala, aipatzen duten webgunearen helburua zehazten duen luzapen batekin, <strong>.com</strong> (komertziala) edo <strong>.org</strong> (erakundea) bezala.</p>
+          <p>Erabiltzaileak www.google.com domeinuarekin webgunera sartzeko eskatzen dionean nabigatzaileari, lehenik eta behin <strong>DNS</strong> izeneko zerbitzari batean sartzen da nabigatzailea. </p>
+          <p>Zerbitzari horrek domeinu-zerrenda bat du, IP helbideekin. www.google.com domeinuari lotutako <em>216.58.198.100</em> IPa aurkitzen duenean, nabigatzaileari itzultzen dio, eta, ondoren, nabigatzailea IP horren bidez sartzen da Googlen webgunera.</p>
+          <p>Webguneetako IP helbideak beren domeinuekin lotuta daudenez, ez dugu zerbitzari baten helbidea gogoratu behar bertara sartzeko, domeinua gogoratu besterik ez dugu egin behar. Helbideari <strong>URL</strong> deitzen diogu eta hiru zati ditu:</p>
+          <div class="irudiKutxa">
+            <img src="../../irudiak/WWW/url-a.png" alt="Web helbidea (URL)" width="100%" srcset="">
+            <figcaption>Webgunea(3): Web helbidea (URL)</figcaption>
+          </div>
+          <ul class="zerrendaArruntak">
+            <li>Lehen zatia <strong><em>(https://)</em></strong> komunikazio-protokoloa irudikatzen duen karaktere-katea da.</li>
+            <li>Bigarrena <strong><em>(praiskopedia.eus)</em></strong> webgunearen domeinua da.</li>
+            <li>Azken osagaia <strong><em>(teknologia/webgunegintza.html)</em></strong> deskargatu nahi dugun baliabidearen izena da.</li>
+          </ul>
+          <p>URLak, gure adibidean, nabigatzaileari eskatzen dio <em>HTTP protokoloa</em> erabil dezala <em>teknologia</em>
+            izeneko direktorioaren barruan dagoen <em>webgunegintza.html</em> fitxategia hartzeko eta ekartzeko. </p>
+          <p>Fitxategi hori <em>praiskopedia.eus</em> domeinuarekin identifikatutako zerbitzarian dago.</p>
+          <p>URLak dokumentu bakoitza webgunean kokatzeko erabiltzen dira eta, beraz, beharrezkoak dira webgunean nabigatzeko.</p>
+          <div class="garrantzi-oinarrizko">
+            <p><strong>GARRANTZITSUA:</strong> zure webgunerako domeinua lortu ondoren, azpidomeinuak sor ditzakezu, zuzenean sartzeko direktorioan nabigatzailean URL hau idatzita: <em>https://direktorioa/domeinua</em>.</p>
+          </div>
+          <div class="garrantzi-oinarrizko">
+            <p><strong>Oinarrizkoa:</strong> ordenagailuek hainbat protokolo erabiltzen dituzte elkarren artean komunikatzeko eta baliabideak eta datuak transferitzeko. <strong>HTTP (HyperText Transfer Protocol)</strong> web dokumentuetara sartzeko erabiltzen den komunikazio-protokoloa da. Praktikan ez da beharrezkoa idaztea, nabigatzaileek automatikoki egiten dutelako. Protokolo horren beste bertsio bat dago eskuragarri, <strong>HTTPS</strong> izenekoa. <strong>S</strong> letrak adierazten du konexioa enkriptatu egiten dela TLS edo SSL bezalako enkriptazio-protokoloen bidez. Informazio sentikorra erabiltzen duten webguneetan erabiltzea gomendatzen da.</p>
+          </div>
+        </article>
+        <!-- Bigarren kapitulua 'domeinuak' buka -------  -->
+        <div class="banaketa"></div>
+        <!-- Hirugarren kapitulua 'hiperestekak' hasi -----  -->
+        <article id="www-hiperestekak">
+          <div class="azpitituluak">
+            <h3><strong>Hiperestekak</strong></h3>
+          </div>
+          <p>Webguneak dokumentu ugariz osatuta daude, eta nabigatzaileak dokumentu horiek deskargatzen ditu erabiltzaileak eskatzen dituenean. Webgune bat osatzen duten dokumentuak orri deitzen dira, eta orri berriak irekitzeko prozesuari nabigatzea (erabiltzaileak webgunearen orrialdeetan nabigatzen du).</p>
+          <p>Webgune bat garatzeko, fitxategi bat sortu behar dugu sartu nahi dugun orri bakoitzeko. Fitxategi horiekin batera, irudiak dituzten fitxategiak eta orri hauen barruan erakutsi nahi dugun beste edozein baliabide ere sartu behar ditugu (irudiak eta beste batzuk).</p>
+          <p>Teorian, webgune bateko dokumentu guztietara sar gaitezke nabigatzailearen nabigazio-barran URLa idatzita. Metodo hau erabiliz webguneko fitxategi guztietara sartzea posible den arren, ez da praktikoa.</p>
+          <p>Lehenik eta behin, erabiltzaileek ez dituzte garatzaileak fitxategi bakoitzerako aukeratu zituen izenak ezagutzen eta, beraz, asma ditzaketen izenetara edo lehenetsita itzultzen duen orri nagusira mugatuko dira.
+          </p>
+          <p>Bigarrenik, webguneak dozenaka edo milaka webgunez osatuta egon daitezke (zenbait gunek milioika dituzte) eta dokumentu gehienak aurkitzea ezinezkoa litzateke.</p>
+          <p>Soluzioak estekak dira hiperestekak ere deituak. Webgune bateko orrialdeen barruko dokumentuen erreferentziak dira. Esteka horiek sartuta, orrialde batek beste orrialde batzuen erreferentziak izan ditzake. </p>
+          <p>Erabiltzaileak saguarekin esteka batean klik egiten badu, nabigatzaileak erreferentzia horri jarraitzen dio eta erreferentziaren URLak adierazitako dokumentua pantailan deskargatzen eta erakusten da. Orrialdeen arteko konexio horiek direla eta, erabiltzaileek webgunean nabigatu ahal izango dute eta beren dokumentu guztietara sartu, beren esteketan klik eginez.</p>
+          <div class="garrantzi-oinarrizko">
+            <p><strong>Oinarrizkoa:</strong> estekak dira fitxategi multzo bat webgune bihurtzen dutenak. Webgune bat sortzeko, orri bakoitzari dagozkion dokumentuak programatu behar dituzu, eta horietan sartu erabiltzaileak horietako bakoitzera sartzeko jarrai dezakeen ibilbide bat ezartzen duten estekak. Kapituluan gure dokumentuetan estekak nola txertatu aztertuko dugu.</p>
+          </div>
+        </article>
+        <!-- Hirugarren kapitulua 'hiperestekak' buka ----  -->
+        <hr>
+        <!-- Larugarren kapitulua 'url-ak' hasi ----------  -->
+        <article id="www-urlak">
+          <div class="azpitituluak">
+            <h3><strong>URL absolutuak eta erlatiboak</strong></h3>
+          </div>
+          <div class="irudiKutxa">
+            <img src="../../irudiak/WWW/artxiboak2.png" alt="Web helbidea (URL)" height="400px">
+            <figcaption>Webgunea(4): Fitxategiak karpetatan</figcaption>
+          </div>
+          <p>Hiperestekak nabigatzaileak prozesatzen ditu dokumentuetara sartzeko erabili aurretik. Horregatik, URL absolutuekin edo erlatiboekin defini daitezke.</p>
+          <p>URL absolutuak dira baliabidera sartzeko behar den informazio guztia dutenak: </p>
+            <h5 style="text-align:center;">(https://praiskopedia.eus/irudiak/artxiboak.png)</h5>
+            aldiz, URL erlatiboak nabigatzaileak deia egiten duen URLari gehitu behar dion ibilbide-zatia bakarrik deklaratzen dutenak dira. Adibidez 'api1.html' dokumentura 'artxiboak.png' irudia ekartzeko ibilbidea: <br>
+            <h5 style="text-align:center;">(irudiak/artxiboak.png)</h5>
+          <p> Esan bezala, 'irudiak' direktorioaren barruko irudi bat nahi izanez gero 'api1.html' fitxategian ipintzeko, <em>(https://praiskopedia.eus/irudiak/artxiboak.png)</em> URL absolutua erabil dezakegu, baina baita <em>(irudiak/artxiboak.png)</em> gisako URL erlatiboa ere.</p>
+          <p>Halakoetan nabigatzailea arduratzen da ibilbide horri tokiko URLa gehitzeaz eta irudia deskargatzeaz.</p>
+          <p>URL erlatiboek beheranzko ibilbideaz gain, hierarkiaren gorako bidea ere zehaztu dezakete.</p>
+          <p>Adibidez, <strong><em>(css)</em> </strong>direktorio barruko fitxategi batetik <strong><em>(irudiak)</em></strong> direktorioaren barruan daukagun irudi bat eskuratzeko URL erlatibo bat erabil dezakegu, ibilbidearen hasieran bi puntu eta marra inklinatua jarriz <strong>(../)</strong> ibilbideak gorantz egin dezan: </p>
+            <h5 style="text-align:center;">(../../irudiak/artxiboa.png)</h5>.
+          <p>Bi puntuek <strong>(..)</strong> nabigatzaileari adierazten diote sartu nahi dugun dokumentua eskaria eingo duen direktorioaren gaineko <strong>(aita)</strong> direktorio batean dagoela.</p>
+        </article>
+        <!-- Larugarren kapitulua 'url-ak' buka ---------------------  -->
+        <div class="banaketa"></div>
+      </section>
+<!--   WEBGUNEAK SAILEKO BIDEOA hasi...............  -->
+        <section class="lantegia" id="www-gune-bideoa">
+          <article>
+            <h4 class="bideontziBurua"> Webguneak &nbsp;&nbsp;<i class="fa fa-television"></i></h4>
+            <div>
+              <div class="irudiKutxa">
+                <img src="../../irudiak/bideoirudia.png" width="80%"  alt="Hemen doa bideoa" srcset="">
+                <figcaption>Webgunea(5): Hemen doa Webguneak ataleko bideoa</figcaption>
+              </div>
+            </div>
+          </article>
+        </section>
+<!--   WEBGUNEAK SAILEKO BIDEOA buka...............  -->
+<div class="banaketa"></div>
+<!-- WEBGUNEAK SAILEKO AZTERKETA hasi  ------------------- -->
+<section class="lantegia" id="www-gune-azterketa">
+  <h3 class="azterrontziBurua">Webguneak&nbsp;&nbsp;<i class="fa fa-pagelines"></i></h3>
+  <ul class="zerrendaArruntak">
+    <li>Hautatu erantzun zuzena.</li>
+    <li>Sakatu <strong>'Erakutsi emaitzak'</strong> </li>
+    <li>Irakurri iradokizunak eta azalpenak.</li>
+  </ul>
+<article class="grid-container">
+      <form name="bagatzi">
+        <fieldset>
+          <legend id="atzibatena"></legend>
+          <INPUT type="radio" id="radiobat1" name="atzibat" value="1"><label class="labela" id="atzibatbaga"></label><br />
+          <INPUT type="radio" id="radiobat2" name="atzibat" value="2"><label class="labela" id="atzibatbiga"></label><br />
+          <INPUT type="radio" id="radiobat3" name="atzibat" value="3"><label class="labela" id="atzibathiga"></label><br />
+        </fieldset>
+        <fieldset class="eranLekua"><label id="eranBagatzi"></label></fieldset>
+      </form>
+      <form name="bigatzi">
+        <fieldset>
+          <legend id="atzibiarena"></legend>
+          <INPUT type="radio" id="radiobi1" name="atzibi" value="1"><label class="labela"
+            id="atzibibaga"></label><br />
+          <INPUT type="radio" id="radiobi2" name="atzibi" value="2"><label class="labela"
+            id="atzibibiga"></label><br />
+          <INPUT type="radio" id="radiobi3" name="atzibi" value="3"><label class="labela"
+            id="atzibihiga"></label><br />
+        </fieldset>
+        <fieldset class="eranLekua"><label id="eranBigatzi"></label></fieldset>
+      </form>
+      <form name="higatzi">
+        <fieldset>
+          <legend id="atziruarena"></legend>
+          <INPUT type="radio" id="radiohiru1" name="atziru" value="1"><label class="labela"
+            id="atzihirubaga"></label><br />
+          <INPUT type="radio" id="radiohiru2" name="atziru" value="2"><label class="labela"
+            id="atzihirubiga"></label><br />
+          <INPUT type="radio" id="radiohiru3" name="atziru" value="3"><label class="labela"
+            id="atzihiruhiga"></label><br />
+        </fieldset>
+        <fieldset class="eranLekua"><label id="eranHigatzi"></label></fieldset>
+      </form>
+      <form name="lagatzi">
+        <fieldset>
+          <legend id="atzilauarena"></legend>
+          <INPUT type="radio" id="radiolau1" name="atzilau" value="1"><label class="labela"
+            id="atzilaubaga"></label><br />
+          <INPUT type="radio" id="radiolau2" name="atzilau" value="2"><label class="labela"
+            id="atzilaubiga"></label><br />
+          <INPUT type="radio" id="radiolau3" name="atzilau" value="3"><label class="labela"
+            id="atzilauhiga"></label><br />
+        </fieldset>
+        <fieldset class="eranLekua"><label id="eranLagatzi"></label></fieldset>
+      </form>
+      <form name="bogatzi">
+        <fieldset>
+          <legend id="atzibostarena"></legend>
+          <INPUT type="radio" id="radiobos1" name="atzibost" value="1"><label class="labela"
+            id="atzibostbaga"></label><br />
+          <INPUT type="radio" id="radiobos2" name="atzibost" value="2"><label class="labela"
+            id="atzibostbiga"></label><br />
+          <INPUT type="radio" id="radiobos3" name="atzibost" value="3"><label class="labela"
+            id="atzibosthiga"></label><br />
+        </fieldset>
+        <fieldset class="eranLekua"><label id="eranBogatzi"></label></fieldset>
+      </form>
+      <form name="segatzi">
+        <fieldset>
+          <legend id="atziseiarena"></legend>
+          <INPUT type="radio" id="radiosei1" name="atzisei" value="1"><label class="labela"
+            id="atziseibaga"></label><br />
+          <INPUT type="radio" id="radiosei2" name="atzisei" value="2"><label class="labela"
+            id="atziseibiga"></label><br />
+          <INPUT type="radio" id="radiosei3" name="atzisei" value="3"><label class="labela"
+            id="atziseihiga"></label><br />
+        </fieldset>
+        <fieldset class="eranLekua"><label id="eranSegatzi"></label></fieldset>
+      </form>
+</article>
+    <div class="azterrontziOina">
+      <button id="atziados">
+        <p>Erakutsi emaitzak</p>
+      </button>
+    </div>
+</section>
+<!-- WEBGUNEAK SAILEKO AZTERKETA buka  ------------------- -->
+<!-- WEBGUNEAK SAILA (fitxategiak,domeinuak,iperestekak,URLak...) -------------------buka .....------...  -->
+        <div class="banaketa"></div>
+<!-- LENGOAIAK SAILA (bezeroaren eta zerbitzariaren aldekoak...)  ----------------  hasi -------  -->
+        <section class="ikasgaia">
+          <article id="www-lengoaiak">
+            <h2><strong>1.2 Lengoaiak</strong></h2>
+            <h5><u>Azpiatalak</u></h5>
+            <ul class="saioAzpiatalak">
+              <li><a class="azpiatala" href="#www-bezero">Bezeroaren aldekoak</a></li>
+              <li><a class="azpiatala" href="#www-zerbitzari">Zerbitzariaren aldekoak</a></li>
+              <li><a class="azpiatala" href="#www-lengoaia-bideoa">Bideoa <i class="fa fa-television"></i></a></li>
+              <li><a class="azpiatala" href="#www-lengoaia-azterketa">Azterketa <i class="fa fa-pagelines"></i></a></li>
+            </ul>
+            <p>Sarreran aipatu dugun bezala, <strong>HTML5</strong>ak hiru ezaugarri ditu <strong><em>(egitura, estiloa eta funtzionaltasuna)</em></strong>, eta, beraz, hiru lengoaia independente integratzen ditu: <strong>HTML</strong>, <strong>CSS</strong>, eta <strong>JavaScript</strong>.</p>
+            <p>Lengoaia hauek nabigatzaileek dokumentuak prozesatzeko eta erabiltzaileari erakusteko interpreta ditzaketen jarraibideez osatuta daude. Gure dokumentuak sortzeko, hizkuntza horietan jasotako jarraibide guztiak ikasi behar ditugu, eta horiek nola antolatu jakin.
+            </p>
+          </article>
+          <!-- Lehenengo kapitulua HTML ------------------------hasi ---------------------  -->
+          <article id="www-bezero">
+            <div class="azpitituluak">
+              <h3><strong>Bezeroaren aldeko lengoaiak</strong></h3>
+            </div>
+            <h3><strong>HTML -HyperText Markup Language-</strong></h3>
+            <p><strong>HTML <em>(HyperText Markup Language)</em></strong> parentesi angeluarrez inguratutako izenekin definitutako etiketa
+              multzo batez osatutako lengoaia da. Parentesi angeluarrek etiketa mugatzen dute eta izenak adierazten duen eduki mota definitzen. <em>(&lt;html&gt;)</em> etiketak adierazten du edukia HTML kodea dela. Etiketa batzuk banaka deklaratzen dira <em>(&lt;br&gt; adibidez)</em>, etiketa bakarreko elementuak dira.</p>
+            <p>Beste batzuk irekiera- eta itxiera-etiketez. Itxierakoak izenaren aurrean alderantzizko barra bat darama. Hauei irekiera- eta itxiera-etiketadun elementu esaten zaie.</p>
+            <p>Banakako eta irekitze-etiketek atributuak izan ditzakete edukiei buruzko informazio gehigarria emateko <em>(&lt;html lang=”es”&gt; ... &lt;/html&gt; adibidez)</em>.</p>
+            <p>Etiketa bakarreko elementuak haien edukia aldatzeko zein kanpoko baliabideak sartzeko erabiltzen dira; irekiera- eta itxiera-etiketak dituzten elementuak, berriz, dokumentuaren edukia mugatzeko, beheko irudiak erakusten duen bezala.</p>
+            <div class="irudiKutxa">
+              <img src="../../irudiak/WWW/html-lang.png" alt="html lang lengoaia adierazteko html-ri" width="100%">
+              <figcaption>Lengoaiak(1): <strong>lang</strong> atributua lengoaiaren berri emateko html-ri</figcaption>
+            </div>
+            <p>Hainbat elementu konbinatu behar dira dokumentu bat definitzeko. Elementuak goitik beherako sekuentzian zerrendatzen dira, eta beste elementu batzuk izan ditzakete barruan.</p>
+            <p>Adibidez, goiko irudian agertzen den elementuak adierazten du bere edukia HTML kode gisa interpretatu behar dela.</p>
+            <p>Beraz, dokumentu horren edukia deskribatzen duten gainerako elementuak etiketen artean adierazi behar dira eta.</p>
+            <p>Era berean, elementuaren barruko elementuek beste elementu batzuk izan ditzakete.</p>
+            <p>Hurrengo adibideak HTML dokumentu erraz bat erakusten du, oinarrizko egitura bat definitzeko eta pantailan <strong>Kaixo guztioi</strong>! mezua erakusteko behar diren elementu guztiak biltzen dituena.</p>
+<pre>
+  <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Nire lehen HTML dokumentua&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    <b>&lt;p&gt;Kaixo guztioi!&lt;/p&gt;</b>
+  &lt;/body&gt;
+&lt;/html&gt;
+  </code>
+</pre>            
+            <p>Horra hor kode erraz bat egitura konplexukoa. Lehenengo lerroan, dokumentua HTML5 motakoa dela adierazten duen etiketa bakarreko elementu bat dago <em>(&lt;!DOCTYPE html&gt;)</em>.</p>
+            <p>Ondoren, irekitze-etiketa bat <em>(&lt;html lang="eus"&gt; )</em>bere atributuarekin, orriaren hizkuntza zein den adierazten duena. Honako honetan euskara.</p>
+            <p>Segidan bi elementu datoz bakoitza bere irekiera- eta itxiera-etiketekin. Burua &lt;head&gt;&lt;/head&gt; eta gorputza &lt;body&gt;&lt;/body&gt;.</p>
+            <p>Elementu horiek, aldi berean, elementu gehiago dituzte barnean, beren edukiekin <em>&lt;title&gt;Nire lehen HTML dokumentua&lt;/title&gt;</em> buruan, eta &lt;p&gt;Kaixo guztioi!&lt;/p&gt; gorputzean.</p>
+            <div class="garrantzi-oinarrizko">
+              <p><strong>Oinarrizkoa:</strong> oro har, elementu oro bihur daiteke edukiontzi elementu batzuk barnean hartuz edo edukiontzi barneko elementu. Soilik egiturazkoak diren elementuak, hala nola, &lt;html&gt;, &lt;head&gt; eta &lt;body&gt; daukate leku espezifikoa HTML dokumentu batean, gainerakoak malguak dira nahierara koka daitezke.</p>
+            </div>
+            <div class="garrantzi-oinarrizko">
+              <p><strong>Oinarrizkoa: </strong>atributuak irekiera-etiketaren (edo banakako etiketen) barruan deklaratzen dira beti, eta izena berdin balioa egitura bat izan dezakete (&lt;html lang=”eus”&gt;&lt;/html&gt;).</p>
+            </div>
+          </article>
+          <!-- Lehenengo kapitulua HTML ------------------buka ---------------------  -->
+          <div class="banaketa"></div>
+          <!-- Bigarren kapitulua CSS --------------------hasi ---------------------  -->
+          <article>
+              <h3><strong>CSS Cascading Style Sheets</strong></h3>
+            <p>HTML elementuen estiloak definitzeko erabiltzen den lengoaia da, hala nola tamaina, kolorea, hondoa, ertza, etab. Nabigatzaile guztiek elementu gehienei estilo lehenetsiak esleitzen dizkieten arren, estilo horiek, oro har, gure webguneetarako nahi dugunetik urrun daude.</p>
+            <p>Estilo pertsonalizatuak adierazteko, CSSk propietateak eta balioak erabiltzen ditu. Eraikuntza honi deklarazioa deitzen zaio eta bere sintaxiak bi puntu ditu propietatearen izenaren ondoren, eta puntu bat eta koma bat amaieran linea ixteko.</p>
+            <div>
+              <div class="irudiKutxa">
+                <img src="../../irudiak/WWW/css-kolorea.png" alt="css nola idazten den. Propietatea+balioa" width="100%">
+                <figcaption>Lengoaia(2): CSS nola idazten den. Propietatea + balioa</figcaption>
+
+              </div>
+            </div>
+            <p>Deklarazio horretan koloreari <strong>#FF0000</strong> balioa esleitzen zaio. Propietate hori gero HTML elementu bati aplikatzen bazaio, elementu horren edukia gorriz agertuko da, <strong>#FF0000</strong> balioak kolore gorria adierazten baitu.</p>
+            <p>CSS propietateak <strong>giltzak</strong> erabiliz taldeka daitezke. Propietate bat edo gehiago dituen talde bati <strong>erregela</strong> deitzen zaio eta erregela identifikatzen duenari <strong>hautatzaile</strong>.</p>
+<pre>
+  <code>
+body {
+  width: 100%; 
+  margin: 0px; 
+  background-color: #FF0000;
+} 
+  </code>
+</pre>
+            <p><strong>body</strong> hautatzaileari <strong>erregela</strong> hori aplikatuta honelako itxura hartuko du gure orriak:</p>
+            <ul class="www-atalbe">
+              <li><strong>width:100%;</strong> Pantailaren zabalera osoa izango du.</li>
+              <li><strong>margin:0px;</strong> ez goian, ez behean, ez ezkerrean, ez eskuinean ez du izango marjinik.</li>
+              <li><strong>background-color:#FF0000;</strong> den dena gorria izango da.</li>
+            </ul>
+            <div class="garrantzi-oinarrizko">
+              <p><strong>Oinarrizkoa: </strong>HTML elementuei CSS estiloak aplikatzeko hainbat teknika daude. CSS propietateak aztertuko ditugu, eta HTML dokumentu batean nola sartu 3. eta 4. kapituluetan.</p>
+            </div>
+          </article>
+          <!-- Bigarren kapitulua CSS ------------------buka ---------------------  -->
+          <div class="banaketa"></div>
+          <!-- Hirugarren kapitulua JavaScript --------------------hasi ---------------------  -->
+          <article>
+              <h3><strong>JavaScript</strong></h3>
+            <h4>HTML eta CSS ez bezala, JavaScript <strong>programazio-lengoaia</strong> bat da.</h4>
+            <p>Bidezkoak izateko, lengoaia horiek guztiak programazio-lengoaiatzat har daitezke, baina praktikan zenbait desberdintasun daude nabigatzaileari jarraibideak emateko moduan.</p>
+            <p>HTML nabigatzaileak informazioa antolatzeko interpretatzen duen adierazle-multzo bat bezala da; CSS nabigatzaileari dokumentua pantailan aurkezteko prestatzen laguntzen dioten estiloen zerrendatzat har daiteke (nahiz eta azken zehaztapenak lengoaia dinamikoagoa bihurtu zuen), baina <strong>JavaScript</strong> programazio-lengoaia bat da, <strong>C++ edo Java</strong> bezalako programazio profesionaleko beste edozein lengoaiarekin aldera daitekeena. </p>
+            <p>JavaScriptek besteek ez bezala, ekintza pertsonalizatuak egin ditzazke, hala nola, balioak biltegiratua, algoritmo konplexuak kalkulatu, dokumentuko elementuekin elkarreragin, eta horien edukia dinamikoki prozesatu.</p>
+            <p>HTML eta CSS bezala, JavaScript ere nabigatzaileetan sartzen da eta, beraz, gure dokumentu guztietan dago eskuragarri. Dokumentu baten barruan JavaScript kodea deklaratzeko, HTMLk &lt;script&gt; &lt;/script&gt; elementua eskaintzen du. </p>
+  <pre>
+<code>
+&lt;script&gt;
+  function koloreaAldatu() {
+    document.body.style.backgroundColor = "#0000FF";
+  }
+    document.addEventListener("click", koloreaAldatu);
+&lt;/script&gt;
+</code>
+</pre>
+            <p>Kode horrek &lt;body&gt;&lt;/body&gt; elementuaren atzealdeko kolorea urdinera aldatzen du erabiltzaileak dokumentuan klik egiten duenean.</p>
+            <div class="garrantzi-oinarrizko">
+              <p><strong>Oinarrizkoa: </strong>&lt;/script&gt; elementuari esker JavaScript kodea kanpoko fitxategietatik ere kargatu dezakegu.</p>
+            </div>
+          </article>
+          <!-- Hirugarren kapitulua JavaScript -----------------------buka ---------------------  -->
+          <div class="banaketa"></div>
+          <!-- Zerbitzariaren aldeko lengoaiak ---------------------hasi ---------------------  -->
+          <article id="www-zerbitzari">
+            <div class="azpitituluak">
+              <h3><strong>Zerbitzariaren aldeko lengoaiak</strong></h3>
+            </div>
+            <p>HTML, CSS eta JavaScripten programatutako kodeak erabiltzailearen ordenagailuan (bezeroa) exekutatzen ditu nabigatzaileak. Horrek esan nahi du, webguneko fitxategiak zerbitzarira igo ondoren, ezin direla aldatu ordenagailu pertsonal batean deskargatu eta haien kodeak nabigatzaileak exekutatzen dituen arte. Horrek webgune erabilgarri eta interaktiboak sortzea ahalbidetzen badu ere, une batzuetan informazioa zerbitzarian prozesatu behar dugu erabiltzaileari bidali aurretik. </p>
+            <p>Informazio horrek sortutako edukiari eduki dinamikoa esaten zaio, eta zerbitzarian exekutatutako eta helburu horrekin bereziki diseinatutako lengoaietan programatutako kodeek sortu izan dira (zerbitzariaren aldeko lengoaiak). </p>
+            <p>Nabigatzaileak kode mota hori duen fitxategi bat eskatzen duenean, zerbitzariak exekutatu egiten du, eta, ondoren, emaitza bidaltzen dio erabiltzaileari erantzun gisa. Kode horiek edukia eta dokumentuak denbora errealean sortzeko ez ezik, nabigatzaileak bidalitako informazioa prozesatzeko, erabiltzailearen datuak zerbitzarian gordetzeko, kontuak kontrolatzeko eta abarretarako ere erabiltzen dira. </p>
+            <p>Hainbat lengoaia daude zerbitzarietan kode exekutagarria sortzeko. Ezagunenak PHP, Ruby eta Python dira. Hurrengo adibidea PHPn idatzitako kode baten lagina da.</p>
+  <pre>
+<code>
+&lt;?php
+  $nombre = $_GET['minombre'];
+  print('Su nombre es: '.$nombre);
+?&gt;
+</code>
+</pre>
+            <p>Kodeak nabigatzaileak bidalitako balio bat jasotzen du, memorian biltegiratzen du eta mezu bat sortzen du berarekin. Kode hori exekutatzen denean, azken mezuarekin dokumentu berri bat sortzen da, fitxategia bezeroari bidaltzen zaio berriro, eta, azkenik, nabigatzaileak edukia pantailan erakusten du.</p>
+            <div class="garrantzi-oinarrizko">
+              <p><strong>GARRANTZITSUA: </strong>zerbitzari-lengoaiek beren teknologia erabiltzen dute, baina HTML5-ekin lan egiten dute erabiltzaileen kontuen erregistro bat eramateko, zerbitzarian informazioa gordetzeko, datu-baseak erabiltzeko, etab.</p>
+            </div>
+          </article>
+        </section>
+        <!-- Zerbitzariaren aldeko lengoaiak  ---------------------buka   ---------------------  -->
+<div class="banaketa"></div>
+<!-- LENGOAIAK SAILEKO BIDEOA hasi ---------------------  -->
+        <section class="lantegia" id="www-lengoaia-bideoa">
+          <article>
+            <h4 class="bideontziBurua"> Lengoaiak &nbsp;&nbsp;<i class="fa fa-television"></i></h4>
+            <div>
+              <div class="irudiKutxa">
+                <img src="../../irudiak/bideoirudia.png" width="80%"  alt="Hemen doa bideoa" srcset="">
+                <figcaption>Lengoaia(3): Lengoaiei buruzko bideoa</figcaption>
+              </div>
+            </div>
+          </article>
+        </section>
+<!-- LENGOAIAK SAILEKO BIDEOA buka ---------------------  -->
+<div class="banaketa"></div>
+<!-- LENGOAIAK SAILEKO AZTERKETRA hasi ---------------------  -->
+        <section class="lantegia" id="www-lengoaia-azterketa">
+          <article>
+            <h4 class="lantegi-txikia" onclick="hasiLengoaiLantegia();">Lengoaiak. Azterketa&nbsp;&nbsp;<i class="fa fa-pagelines"></i></h4>
+            <ul class="zerrendaArruntak">
+              <li>1.- </strong> Sakatu 'Azterketa'.</li>
+              <li><strong>2.- </strong> Hautatu erantzun zuzena.</li>
+              <li><strong>3.- </strong> Irakurri emaitza eta itxaron.</li>
+              <li><strong>4.- </strong> Sei galdera dira guztira.</li>
+            </ul>
+              <h5>
+                <div class="lengoaiGaldetegia">
+                  <div class="lengoaiGaldera" id="question"></div>
+                  <div class="lengoaiAukerak" id="options"></div>
+                  <p class="lengoaiEmaitza" id="result"></p>
+                </div>
+          </article>
+        </section>
+<!-- LENGOAIAK SAILA (bezeroaren eta zerbitzariaren aldekoak...)  ----------------  buka -------  -->
+<div class="banaketa"></div>
+<!-- LANABESAK SAILA (Domeinu-ostatu, zerbitzari lokala, kode editorea, bertsioak...)  hasi ---------------------  -->
+        <section id="lanabesena">
+          <article id="www-lanabesak">
+            <h2><strong>1.3 Lanabesak </strong></h2>
+              <h5><u>Azpiatalak</u></h5>
+              <ul class="saioAzpiatalak">
+                <li><a class="azpiatala" href="#www-domeinu-ostatu">Domeinu, ostatu, FTP: <i class="fa fa-television"></i>, <i class="fa fa-pagelines"></i></a></li>
+                <li><a class="azpiatala" href="#www-zerbitzariak">Zerbitzari lokala <i class="fa fa-television"></i></a></li>
+                <li><a class="azpiatala" href="#www-editoreak">Kode editorea <i class="fa fa-television"></i></a></li>
+                <li><a class="azpiatala" href="#www-bertsioKontrola">Bertsioen kontrola <i class="fa fa-television"></i></a></li>
+                <li><a class="azpiatala" href="#www-lanabesazterketa">Azterketa <i class="fa fa-pagelines"></i></a></li>
+              </ul>
+            </div>
+          </article>
+          <p>Webgune bat sortzeko hainbat urrats eman behar ditugu. Dokumentuak HTMLn programatu behar ditugu, fitxategiak CSS estiloekin eta kodeekin sortu behar ditugu JavaScript-en, gunea erabiltzaileei ikusgai egingo dien zerbitzaria konfiguratu behar dugu eta fitxategi guztiak gure ordenagailutik zerbitzarira transferitu behar ditugu.</p>
+          <p>Zorionez, tresna asko daude erabilgarri zeregin horietan laguntzeko. Tresna hauek oso erabilerrazak dira eta gehienak doan eskaintzen dira.</p>
+
+<!-- Lehenengo atala 'domeinu-ostatu' ------------------  hasi ---------------------  -->
+          <article id="www-domeinu-ostatu">
+            <div class="azpitituluak">
+              <h3><strong>Web domeinua/Web ostatua/FTP &nbsp;&nbsp;</strong><a href="#www-domeinu-ostatu-bideoa"><i class="fa fa-television"> &nbsp;, &nbsp;</i></a><a href="#www-domeinu-ostatu-azterketa"><i class="fa fa-pagelines"></i></a></h3>
+            </div>
+            <h3><strong>Web domeinua</strong></h3>
+            <p>Gure webgunea jendaurrean aurkezteko prest dagoenean, nabigazio-barran erabiltzaileek idatziko duten <strong>domeinua</strong> erregistratu behar dugu bertara sartzeko. Haren izena nahi duguna izan daiteke, eta hainbat aukera ditugu hedapena definitzeko, helburu komertzialak dituzten hedapenetatik (.com edo .biz., adibidez) irabazi asmorik ez dutenetara edo pertsonaletara (.org, .net edo .info, adibidez), edota webgunearen kokapena zehazteko balio gehigarria duten eskualdeko hedapenak, hala nola .co.uk Erresuma Batuko webguneetarako edo .eu Europar Batasunarekin lotutako webguneetarako.</p>
+            <p>Gure webgunerako domeinu bat erosteko, erregistratzaile batekin kontu bat ireki behar dugu. Domeinu gehienek urteko muga-zerga bat ordaindu behar dute, baina prozesua nahiko erraza da, gure domeinuari emango diogun izena eta hedadura erabakitakoan, bilaketa bat egin, aukeratu dugun izena ez dela erabiltzen ari eta eskuragarri dagoela ziurtatzeko, eta, gero, eskaera egin.</p>
+            <p>Domeinua erregistratuta dagoenean, sistemak domeinuarekin lotu nahi ditugun zerbitzarien izenak <em>(nameservers)</em> eskatzen dizkigu. Izen horiek domeinu eta aurrizki batez osatutako testu-kateak dira, normalean NS1 eta NS2, gure webgunearen kokapena zehazten dutenak (zerbitzari edo nameservers izenak gure webgunea gordetzen den zerbitzariak ematen ditu). Oraindik izen horiek ez baditugu, konpainiak eskaintzen dituenak erabil ditzakegu eta aurrerago aldatu.</p>
+            <div class="garrantzi-oinarrizko">
+              <p><strong>GARRANTZITSUA: </strong>zure domeinua erregistratzen duen konpainiak zerbitzari izenak esleitzen ditu lehenetsita, eta haiek behin-behineko gordeleku gisa erabiltzen dituzte (aparkaleku ere esaten zaio). Hasiera batean, izen horiek esleitu eta aurrerago alda ditzakezu zure zerbitzaria prest dagoenean. Konpainia batzuek domeinuaren erregistroa eskaintzen dute zerbitzarien alokairuarekin batera, eta, erabiltzen baditugu.</p>
+            </div>
+            <div class="banaketa"></div>
+<!-- -------------- 'ostatua' -----------------------  hasi ---------------------  -->
+            <h3><strong>Web ostatua</strong></h3>
+            <p>Zerbitzari bat konfiguratzeak eta mantentzeak garatzaile guztiek ez dituzten ezagutzak eskatzen ditu. Hori dela eta, web ostatua <em>(web hosting)</em> izeneko zerbitzua eskaintzen duten konpainiak daude. Zerbitzu horri esker, edozein pertsonak konfiguratutako zerbitzari bat alokatu dezake, webgune bat edo asko gordetzeko prest dagoena. </p>
+            <p>Web ostatu-mota bat baino gehiago daude eskuragarri, hala nola, hainbat webgunek zerbitzari beretik <em>(ostatu partekatua)</em> jardutea ahalbidetzen dutenak, webgune bakar baterako zerbitzari oso bat gordetzen duten zerbitzu profesionalagoak <em>(ostatu dedikatua)</em>, edo zerbitzari askotan <em>(hodeiko ostatua)</em> webgune zabal bat banatzen dutenak, tarteko hainbat aukera barne.
+            </p>
+            <p>Web ostatu-kontu bat edukitzearen abantaila nagusia da denek eskaintzen dutela kontrol-panel bat gure webgunea sortzeko eta konfiguratzeko aukerekin. Honako hauek dira zerbitzu horietako gehienetan aurkituko ditugun aukerarik ohikoenak.</p>
+            <ul class="zerrendaArruntak">
+              <li><strong>File Manager</strong> web-tresna bat da, gure webguneko fitxategiak administratzeko. Tresna honen bidez, nabigatzailetik igo, jaitsi, editatu edo ezabatu ditzakegu fitxategiak zerbitzarian.</li>
+              <li><strong>FTP Accounts</strong>-ek zerbitzariarekin FTP <em>(File Transfer Protocol)</em> bidez konektatzeko erabiltzen ditugun kontuak administratzeko aukera ematen digun zerbitzua da.</li>
+              <li><strong>MySQL Databases</strong> gure webgunerako datu-baseak sortzeko aukera ematen digun zerbitzu bat da.</li>
+              <li><strong>phpMyAdmin</strong> PHPn programatutako aplikazio bat da, gure datu-baseak administratzeko.</li>
+              <li><strong>Email Accounts</strong> gure webgunearen domeinuarekin posta elektronikoko kontuak sortzeko aukera ematen digun zerbitzua da (adibidez, info@midominio.com).</li>
+            </ul>
+            <h4>Merkatuko kontrol panelik ezagunena <strong>cPanel</strong> da.</h4>
+            <div class="irudiKutxa">
+              <img src="../../irudiak/WWW/cpanela.png" alt="cpanel baten irudia, axartarena" width="80%" srcset="">
+              <figcaption>Ostatua(1): 'CPanel' baten irudia, axartarena</figcaption>
+
+            </div>
+            <p>Ostatu-kontu bat ireki ondoren, konpainiak mezu elektroniko bat bidaltzen digu kontrol-panelera sartzeko eta zerbitzaria konfiguratzeko behar dugun informazioarekin. Konpainiaren sistemak, oro har, behar ditugun narrizko kontu guztiak sortzen ditu, FTP kontu bat barne, fitxategiak igotzeko.</p>
+            <div class="garrantzi-oinarrizko">
+              <p><strong>Oinarrizkoa: </strong>ordainpeko ostatu-kontuez gain, praktikatzeko erabil dezakegun doako ostatua dago, baina zerbitzu horiek propaganda barne hartzen dute edo webgune profesionalak garatzea eragozten duten murrizketak ezartzen dituzte.Beti gomendatzen da hilean 5 dolar inguruko kostua izan dezakeen ostatu partekatuko kontu batekin hastea, ostatu profesionaleko zerbitzu batek nola lan egiten duen ikasteko eta eskaintzen dituen aukera guztiak aztertzeko. Hainbat konpainiak ostatu-mota hori sartzen dute beren zerbitzuetan. </p>
+            </div>
+            <div class="banaketa"></div>
+<!-- ----------------------- 'FTP programak'  ------------------------- hasi ------------- -->
+              <h3><strong>FTP programak</strong></h3>
+            <p>Aipatu berri dugun bezala, ostatu-kontuek nabigatzailetik webguneko fitxategiak administratzeko zerbitzua eskaintzen dute. Web orri honetara kontrol-paneletik sar gaitezke, zerbitzarian fitxategiak igo, jaitsi eta editatzeko.</p>
+            <p>Tresna erabilgarria da, baina soilik praktikoa aldaketa txikiak egin behar ditugunean edo fitxategi gutxi batzuk igo behar ditugunean.</p>
+            <p>Tresnak nabigatzaileetan integratuta dagoen sistema bat aprobetxatzen du, eta FTP <em>(File Transfer Protocol)</em> izeneko protokolo batekin lan egiten du fitxategiak ordenagailu batetik bestera transferitzeko sare batean.</p>
+            <p>Nabigatzaileek sistema hau erabiltzen dute erabiltzaileei fitxategiak deskargatzeko aukera emateko behar dutelako, baina helburu nagusia webguneak pantailan deskargatzea eta erakustea denez, esperientzia txarra eskaintzen dute fitxategi horiek manipulatzeko orduan. Horregatik, garatzaile profesionalek ez dute nabigatzailea erabiltzen, FTP protokoloa erabiliz bezero baten eta zerbitzari baten artean fitxategiak transferitzeko berariaz diseinatutako programak baizik.</p>
+            <p>Merkatuak hainbat FTP programak eskaintzen ditu, ordainpeko eta doako bertsioak barne. Doako programarik ezagunenak Filezilla du izena eta www.filezilla-project.org helbidean dago eskuragarri. Programa honek hainbat panel eskaintzen ditu konexioari eta parte hartzen duten ordenagailuei buruzko informazioarekin, bi panel barne, bata bestearen ondoan, panel batetik bestera arrastaka eramate hutsarekin ordenagailuen artean transferitu ditzakegun artxibo lokal eta urrunen zerrendarekin.</p>
+            <p>Ostatu-kontu bat irekitzen dugunean, sistemak automatikoki sortzen du FTP kontu bat gure webgunerako, protokolo hau erabiliz zerbitzariarekin bat egin dezakegu (sistemak kontu hori konfiguratzen ez badu, guk geuk egin dezakegu, kontrol-paneleko FTP Accounts aukeratik).</p>
+            <p>Konexioa egiteko behar ditugun balioak hauek dira:</p>
+            <ul class="zerrendaArruntak">
+              <li>Ostalaria (host) (IP edo domeinua),</li>
+              <li>Erabiltzailearen izena</li>
+              <li>Gakoa edo pasahitza</li>
+              <li>Zerbitzariarekin FTP bidez konektatzeko ostalariak esleitutako ataka</li>
+            </ul>
+            <p>Filezillak informazio hori txertatzeko bi modu eskaintzen ditu:</p>
+            <ul class="zerrendaArruntak">
+              <li>Barra bat goiko aldean konexio azkar bat egiteko</li>
+              <li>Botoi bat maiz erabiltzen diren hainbat konexio gordetzeko</li>
+            </ul>
+            <div class="irudiKutxa">
+              <img src="../../irudiak/WWW/filezilla.png" alt="filezilaren irudia, fitxategiekin" width="80%" srcset="">
+              <figcaption>Ostatua(2): 'filezilaren' irudia, fitxategiekin</figcaption>
+
+            </div>
+            <p>Biltegiratzeko edo aurretiazko konexioetara sartzeko botoia sakatuz gero (1. zenbakia), Filezillak leiho bat irekiko du, eta, bertan, eskuragarri dauden konexioen zerrenda administratu eta konfigurazio-aukera gehigarriak zehaztu ahal izango ditugu.</p>
+            <p>Leihoak konexio bat sortu, berrizendatu eta ezabatzeko botoiak (New Site, Rename, Delete), erabili nahi dugun protokoloa aukeratu ahal izateko eremuak (FTP konexio normal baterako eta SFTP konexio seguru baterako), fitxategiak transferitzeko erabilitako enkriptazio modua eta eskatutako kontu mota (<em>Anonymous</em> konexio anonimoetarako edo <em>Normala</em> erabiltzailea eta gakoa behar duten konexioetarako).</p>
+            <p>Programak konfigurazio aurreratuago baterako panel gehigarriak ere baditu, irudiak erakusten duen bezala.</p>
+            <p>Egoera normal batean, konexioa ezartzeko, ostatua txertatu behar dugu (gure webguneko IPa edo domeinua), kontu mota hautatu Normal gisa, erabiltzaile-izena eta pasahitza sartu, eta gainerako balioak lehenetsita utzi.</p>
+            <p>Ordenagailuak konektatzen direnean, Filezillak fitxategien zerrenda erakusten du pantailan. Ezkerrean fitxategiak gure ordenagailuan hautatutako direktorioan daude (gure disko gogorrean nahi dugun edozein direktorio hauta dezakegu), eta eskuinean gure ostatu-kontuaren erroko direktorioan dauden fitxategiak eta direktorioak daude, irudiak erakusten duen bezala.</p>
+            <p>Ostatu-kontu bat sortzen denean, sistemak hainbat direktorio eta fitxategi ditu, zerbitzuak eskatutako informazioa gordetzeko <em>(emailak biltegiratzea, erabiltzaileen jardueraren jarraipena egitea, etab.)</em>.</p>
+            <p>Gure webguneko fitxategiak gordetzeko direktorioa public_html da. Direktorio hau irekitzen denean, gure fitxategiak igotzen has gaitezke ezkerreko paneletik eskuineko panelera arrastatuz (ikus goiko irudia).</p>
+          </article>
+<div class="banaketa"></div>
+<!-- LANABESAK (Domeinua, Ostatua, FTP programak) -- BIDEOA  --------------- HASI ---------------------  -->
+ <section class="lantegia" id="www-domeinu-ostatu-bideoa">
+  <article>
+    <h4 class="bideontziBurua"> Domeinu, ostatu, FTP &nbsp;&nbsp;<i class="fa fa-television"></i></h4>
+    <div>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/bideoirudia.png" width="80%"  alt="Hemen doa bideoa" srcset="">
+        <figcaption>Ostatua(3): web-ostalaritzari buruzko bideoa</figcaption>
+
+      </div>
+    </div>
+  </article>
+</section>
+<div class="banaketa"></div>
+<!-- LANABESAK (Domeinua, Ostatua, FTP programak)----- AZTERKETRA --------------hasi ---------------------  -->
+<section class="lantegia" id="www-domeinu-ostatu-azterketa">
+  <article>
+    <a href="../azterketak/2K-lanabesAzterketa.html" target="lanabesAzterrontzia">
+      <h4 onclick="myFunction('domeinuostatuAzterTokia')" class="lantegi-txikia">Domeinu/ostatu/FTP. Azterketa&nbsp;&nbsp;<i class="fa fa-pagelines"></i>&nbsp;<i class="fa fa-arrow-circle-o-down"></i></h4>
+    </a>
+    <div id="domeinuostatuAzterTokia" class="azterrontzia">
+      <div class="aztertuWebgarapena">
+        <iframe class="azterketa" name="lanabesAzterrontzia" style="width:100%; height: 1000px;" src=""
+          frameborder="0"></iframe>
+      </div>
+    </div>
+  </article>
+  </section>
+  <div class="banaketa"></div>
+<!-- LANABESAK (Domeinua, Ostatua, FTP programak) -------------------------- buka ---------------------  -->
+
+<!-- LANABESAK  -ZERBITZARI LOKALA- (nabigatzailea)------------------- hasi ---------------------  -->
+          <article id="www-zerbitzariak">
+            <div class="azpitituluak">
+              <h3><strong>Zerbitzari lokala &nbsp;&nbsp; <a href="#www-xampp-bideoa"><i class="fa fa-television"></i></a></strong></h3>
+            </div>
+            
+            <h4>HTML dokumentu bat irekitzeko nabigatzailea izatea nahikoa da. </h4>
+            <p>Oro har, <strong>frontend</strong> lengoaia bakarrik duen web-orri bat sortzen badugu, adibidez, HTML, CSS eta Javascript soilik erabiliz eraikitako web-orri bat, nabigatzailea bera gai izaten da behar bezala interpretatzeko, eta, beraz, ez dugu zerbitzari gehigarririk izan behar sisteman.</p>
+            <p>Egin dezagun froga bat</p>
+            <div>
+              <p><strong>Lan tresnak prestatu:</strong>
+                <ul class="zerrendaArruntak">
+                  <li>Sortu webgintza izeneko karpeta bat idazmahaian bertan, eta haren barruan <em>index.html</em> fitxategi bat.
+                    <div class="irudiKutxa">
+                      <img src="../../irudiak/WWW/fitxategia.jpg" alt="cpanel baten irudia, axartarena" width="100%" srcset="">
+                      <figcaption>Zerbitzaria(1): Proiektuaren karpeta eta lehen fitxategia (index.html)</figcaption>
+                    </div>
+                  </li>
+                  <li>Orain <strong>webgintza</strong> karpeta bat eta haren barruan <em>index.html</em> fitxategi bat izango dituzu. <em>index.html</em> fitxategiak zure nabigatzailearen ikonoa du orain. 
+                    <div class="irudiKutxa">
+                      <img src="../../irudiak/WWW/karpeta-index.png" alt="cpanel baten irudia, axartarena" width="100%" srcset="">
+                      <figcaption>Zerbitzaria(2): Proiektuaren karpeta eta lehen fitxategia prest</figcaption>
+                    </div>
+                  </li>
+                  <li>Egin klik eskuineko botoiaz fitxategi berriaren gainean eta irekitzeko hautatu: <em>Ireki honekin/Ohar-bloka</em>
+                    <div class="irudiKutxa">
+                      <img src="../../irudiak/WWW/karpeta-index.png" alt="cpanel baten irudia, axartarena" width="100%" srcset="">
+                      <figcaption>Zerbitzaria(3): Lehen fitxategia ireki</figcaption>
+                    </div>
+                  </li>
+                  <li>Idatzi bertan nabigatzaileari eman nahi dizkiogun aginduak:
+  <pre>
+<code>
+&lt;!DOCTYPE html&gt;
+  &lt;html lang="es"&gt;
+    &lt;head&gt;
+      <b>&lt;title&gt;Lehen Agurra&lt;/title&gt;</b>
+    &lt;/head&gt;
+    &lt;body&gt;
+      <b>&lt;p&gt;KAIXO GUZTIOI! ONGI AL ZAUDETE?&lt;/p&gt;</b>
+    &lt;/body&gt;
+  &lt;/html&gt;
+</code>
+</pre>
+                  </li>
+                  <li>Gorde aldaketak fitxategian eta itxi. Jo <strong>webgintza</strong> karpetara, ireki eta egin ezker klik bikoitza <em>index.html</em> fitxategiaren gainean. Nabigatzailea irekiko da eta beheko irudi hori ikusiko duzu agurrarekin:
+                    <div class="irudiKutxa">
+                      <img src="../../irudiak/WWW/agurrarena.png" alt="cpanel baten irudia, axartarena" width="100%" srcset="">
+                      <figcaption>Zerbitzaria(4): Idatzitako kodearen emaitza</figcaption>
+                    </div>
+                  </li>
+                </ul>
+              </p>
+            </div>
+            <div class="garrantzi-oinarrizko">
+              <p> <strong>GARRANTZITSUA: </strong>Nabigatzailearen fitxan, goiko aldean, erlaitzean, 'Lehen Agurra' ipintzen du, &lt;title&gt;eta &lt;/title&gt; etiketekin guk agindu bezala, eta gorputzean 'KAIXO GUZTIOI! ONGI AL ZAUDETE? jartzen du paragrafo etiketen artean &lt;p&gt; eta &lt;/p&gt;etiketen artean, 'KAIXO GUZTIOI! ONGI AL ZAUDETE?', komatxo artean jarriz agindu diogun bezala.<br>
+                  Eta hori guztia gure nabigatzailean dago, web-orri arrunt bat bezala. Proba dezakezue beste nabigatzaileren batekin, emaitza berdintsua lortuko duzue.</p>
+            </div>
+            <div class="garrantzi-oinarrizko">
+              <p><strong>Oinarrizkoa:</strong> nabigatzailean fitxategi bat irekitzeko bi modu:
+                <ul class="zerrendaArruntak">
+                  <li><p>Saguaren eskuin botoiaz klik fitxategiaren gainean eta <em>Ireki honekin/[nabigatzailea]hautatu</em></p></li>
+                  <li><p>Fitxategian klik bikoitza egin saguaren ezker botoiaz eta sistema arduratzen da nabigatzailea irekitzeaz eta dokumentua kargatzeaz.</p></li>
+                </ul>
+              </p>
+            </div>
+            <p>Horratx gure lehen web-orria!. Animo! hurrengo ataletan gehiago.</p>
+            <p>Hala ere, <strong>backend</strong> lengoaiak erabili behar baditugu, adibidez, PHP, beharrezkoak diren zerbitzariak instalatu behar ditugu gure ordenagailuan (edo zerbitzarian), horiek lengoaia interpretatzeko gai izan daitezen eta azken emaitza nabigatzailearen bidez ikusteko aukera izan dezagun. Nabigatzaileak, zerbitzari hori gabe, ez luke interpretatuko nabigatzailea.</p>
+            <div class="garrantzi-oinarrizko">
+              <p><strong>GARRANTZITSUA: </strong> Tokiko web zerbitzari gisa ezagutzen da erreferentziazko ekipoari berari sare lokal batean gordetako web zerbitzari hori. Horrela, tokiko web zerbitzaria sare lokal bat osatzen duten ekipoetako edozeinetan instalatu daiteke. Instalazioa software baten bidez egiten da, eta software horrek aukera ematen du web orrian probatzeko eta nabigatzeko.</p>
+              <p>Tokiko zerbitzariak hainbat abantaila eskaintzen ditu, eta interesgarria da horiek ezagutzea.</p>
+              <p>
+                <ul class="zerrendaArruntak">
+                  <li><p>Lehenik eta behin, aukera ematen du webgunean mota guztietako probak egiteko, hondatzeko beldurrik gabe, eta hori onura handia da erabiltzaileei esperientziarik onena emateko</p></li>
+                  <li><p>Bigarrenik, ez da beharrezkoa domeinu bat kontratatzea 127.0.0.1 baita, eta disko gogorrak hosting funtzioak betetzen ditu.</p></li>
+                  <li><p>Eta, hirugarrenik, aurreko puntuekin zuzenean lotuta, Interneteko webguneaz gain, tokiko zerbitzarian ere eduki daiteke biltegiratuta, euskarri gisa.</p></li>
+                </ul>
+              </p>
+              <p>Beraz, gaur egun enpresek asko erabiltzen duten baliabidea da. Izan ere, modu azkar eta errazean zuzendu ditzakete akats horiek guztiak, baita egoki iritzitako aldaketak egin ere, webgune korporatiboan, urruneko behin betiko zerbitzarira igotzeko prest daudela erabat ziur egon arte.
+              </p>
+            </div>
+<!-- LANABESAK  -ZERBITZARI LOKALA- (nabigatzailea)------------------- buka ---------------------  -->
+<div class="banaketa"></div>
+<!-- LANABESAK  -ZERBITZARI LOKALA- (XAMPP)------------------- hasi ---------------------  -->
+            <h3><strong>XAMPP</strong></h3>
+            <p>Aurrerago ikusiko dugun bezala, JavaScript kode batzuk zerbitzari batetik deskargatzen direnean bakarrik lan egiten dute, eta zerbitzari teknologiak PHP bezala zerbitzari batean ostatatzea eskatzen dute funtzionatzeko. </p>
+            <h4><strong>Zer da Localhost?</strong></h4>
+            <p>Termino sinpleetan, funtsean pentsa dezakezu localhost ordenagailua bezala». Gogoan izan "ordenagailu hau" programari aplikatzen zaiola, eta ez fisikoki erabiltzen ari den ordenagailuari.</p>
+            <p>Maila teknikoagoan, localhost normalean IP 127.0.0.1 helbidean ebazten da, hau da, loopback helbidean. Bere garrantzia dela eta, "localhost" terminoa domeinu-izen erreserbatua da. Horrek esan nahi du, nahasketak saihesteko, ezinezkoa dela domeinu-izen bat «localhost» duena domeinu-izenaren lehen edo bigarren mailan erregistratzea.</p>
+            <p>Dokumentu mota horiekin lan egiteko, bi aukera daude: </p>
+              <ol class="zerrendaArruntak">
+                <li>Web-ostatuko kontu bat eskuratu eta probak egiteko erabili</li>
+                <li>Gure ordenagailuan zerbitzari bat instalatu</li>
+              </ol>
+            <p>Garatzaile askok bigarren aukera baiatuta <strong>«proba lokaleko ingurunea»</strong> izeneko zerbait sortzen dute webguneak eraikitzeko. Funtsean, ingurune horrek zuzeneko webgune bat imitatzen du, baina guztiz independentea da erabiltzailearen ordenagailuan.</p>
+            <p>Gunea <strong>localhost</strong>en bakarrik existitzen denez, erraza da garatzaileentzat probak egitea ingurune horretan, benetako webgune batean zerbait apurtzeko beldurrik gabe. Gunea osaturik eta baliozkotuta dagoenean, garatzaileek beren <strong>localhost</strong> inguruneko webgunea benetako zerbitzari-ingurune batera mugi dezakete eta argitaratzeko.</p>
+            <p>Hona hemen hainbat zerbitzari lokal:</p>
+            <div class="irudiKutxa">
+              <img src="../../irudiak/WWW/zerbitzari-lokalak.png" alt="Zerbitzari lokalak" width="100%" srcset="">
+              <figcaption>Zerbitzaria(5): Hainbat zerbitzari lokal</figcaption>
+            </div>
+            <h5>Ikastaro honetan XAMPP erabiliko dugu, batik bat sistema eragile guztietan instala daitekeelako.</h5>
+            <h4><strong>Zer da XAMPP?</strong></h4>
+            <p>XAMPP Apacheren banaketa bat da, hainbat software libre barne hartzen dituena.</p>
+            <ul class="zerrendaArruntak">
+              <li><strong>X</strong>-k Linux, Windows eta Mac OS X sistema eragileak irudikatzen ditu.</li>
+              <li><strong>A</strong>-k Apache web zerbitzariari egiten dio erreferentzia. Zerbitzari hori kode irekikoa da, eta Apache Software Foundationek software libre gisa eskaintzen duen aplikazio orokorra da.</li>
+              <li><strong>M</strong>-k MySQL eta MariaDB datu-baseak irudikatzen ditu. Eurak dira munduko datu-baseak kudeatzeko sistema ezagunenak. Web zerbitzuetarako datuak biltegiratzeko balio du. MariaDB, MySQL proiektuaren adar bat da (fork).</li>
+              <li><strong>P</strong>-k zerbitzariaren aldean programatzeko PHP lengoaia irudikatzen du. Web orriak eta aplikazio dinamikoak sortzeko aukera ematen du. Plataformatik independentea da.</li>
+              <li><strong>P</strong>-k sistemaren administrazioan, web-garapenean eta sare-programazioan erabiltzen den Pearl programazio-lengoaiari egiten dio erreferentzia. Web dinamikoak programatzeko ere balio du.</li>
+            </ul>
+            <h4><strong>XAMPPen aplikazio-eremuak</strong></h4>
+            <p>XAMPP zerbitzaria azkar eta erraz instala daiteke Linux, Windows eta Mac OS X sistema eragileetan, nork bere frogak egiteko sistema gisa, fitxategi exekutagarri bakar batekin. XAMPPen Software-paketeak edozein web-zerbitzaritan erabiltzen diren osagai berberak ditu, eta, horrela, garatzaileek proiektuak bee konputagailuan bertan testatu eta sistema errealetara erraz transferitu ditzakete. Dena dela, XAMPP ez da gomendatzen zerbitzari publiko gisa, zenbait muga baitauzka segurtasunari dagokionez.</p>
+            <h3>XAMPP nola instalatu pausoz pauso</h3>
+            <p>Guk XAMPP paketearen instalazioa Windowsen egingo dugu. Linux edo Mac OS X sistema eragileetan nahi izanez gero, instalazio-prozesua antzekoa da.</p>
+            <ul class="zerrendaArruntak">
+              <li><p><strong>1. urratsa: Deskargatu aplikazioa</strong></p> 
+                <p>PHP 5.5, 5.6 edo 7 duten bertsioak doan deskarga daitezke Apache Friends proiektuaren orrialdetik: https://www.apachefriends.org/es/download_success.html</p></li>
+              <li><p><strong>2. urratsa: .exe fitxategia exekutatu</strong></p>
+                <p>Paketea deskargatu ondoren, .exe fitxategia exekutatu dezakezu bertan klik bikoitza eginez.</p></li>
+              <li><p><strong>3. urratsa: birusen aurkako programa desaktibatu</strong></p>
+                <p>Birusen aurkako programa desaktibatzea gomendatzen da, osagai guztiak instalatuta egon arte, instalazio-prozesua oztopatu baitezake.</p>
+                <div class="irudiKutxa">
+                  <img src="../../irudiak/WWW/xampp-1-1.jpg" alt="XAMPP birusen aurkako segurtasuna kendu" width="50%" srcset="">
+                  <figcaption>Zerbitzaria(6): birusen aurkako segurtasuna kendu</figcaption>
+                </div></li>
+              <li><p><strong>4. urratsa: UAC desaktibatu</strong></p> 
+                <p>Erabiltzaile-kontuen kontrolak (User Account Control, UAC) instalazioan eragin dezake, C:\disko unitateko idazketa-eskubideak mugatzen baititu.</p>
+                <div class="irudiKutxa">
+                  <img src="../../irudiak/WWW/xampp-1-2.jpg" alt="XAMPP .exe eerabiltzaile kontuen kontrola desaktibatu" width="50%" srcset="">
+                  <figcaption>Zerbitzaria(7): '.exe' erabiltzaile kontuen kontrola desaktibatu</figcaption>
+                </div>
+              </li>
+              <li><p><strong>5. urratsa: instalazio-laguntzailea martxan jarri</strong></p>
+                <p>Urrats horiek gainditu ondoren, XAMPP instalatzeko laguntzailearen hasierako pantaila agertuko da. Instalazioaren konfigurazioak doitzeko, egin klik Next frekuentzian.</p>
+                <div class="irudiKutxa">
+                  <img src="../../irudiak/WWW/xampp-1-3.jpg" alt="XAMPP instalazio-laguntzailea martxan jarri" width="50%" srcset="">
+                  <figcaption>Zerbitzaria(8): Instalazio laguntzailea martxan jarri</figcaption>
+                </div>
+              </li>
+              <li><p><strong>6. urratsa: softwarearen osagaiak hautatu</strong></p>
+                <p>XAMPPren software-paketearen osagai isolatuak instalaziotik kanpo utz daitezke, «Select components, Components, Reguls» errubrikan. Proba lokaleko zerbitzari baterako konfigurazio estandarra gomendatzen da, eta horrekin instalatzen dira eskuragarri dauden osagai guztiak. Konfirmatu hautaketa Next etiketa sakatuz. "Select Components" elkarrizketa-koadroan, instalatuko diren osagaiak hauta edo deshauta daitezke.</p>
+                <div class="irudiKutxa">
+                  <img src="../../irudiak/WWW/xampp-1-4.jpg" alt="XAMPP softwarearen osagaiak hautatu" width="50%" srcset="">
+                  <figcaption>Zerbitzaria(9): Softwarearen osagaiak hautatu</figcaption>
+                </div>
+              </li>
+              <li><p><strong>7. urratsa: Instalaziorako direktorioa hautatu</strong></p>
+                <p>Urrats honetan paketea instalatuko den direktorioa aukeratzen da. Konfigurazio estandarra aukeratu bada, XAMPP izena duen karpeta bat sortuko da C:\delakoan.</p>
+                <div class="irudiKutxa">
+                <img src="../../irudiak/WWW/xampp-1-5.jpg" alt="XAMPP softwarearen instalaziorako direktorioa hautatu" width="50%" srcset="">
+                <figcaption>Zerbitzaria(10): Softwarearen instalazio-direktorioahautatu</figcaption>
+              </div>
+              </li>
+              <li><p><strong>8. urratsa: Instalazio-prozesua hasi</strong></p>
+                <p>Laguntzaileak hautatutako osagaiak atera eta aukeratutako direktorioan gordeko ditu, minutu batzuk iraun dezakeen prozesu batean. Instalazioaren aurrerabidea karga-barra berde gisa erakusten da. Ondoren, hautatutako software-elementuak deskonprimatzeko eta aurredoikuntzetan zehaztutako direktorioan instalatzeko instalazio-prozesua hasiko da.</p> 
+                <div class="irudiKutxa">
+                  <img src="../../irudiak/WWW/xampp-1-6.jpg" alt="XAMPPen Instalazio-prozesua hasi" width="50%" srcset="">
+                  <figcaption>Zerbitzaria(11): Instalazio prozesua hasi</figcaption>
+                </div>
+              </li>
+              <li><p><strong>9. urratsa: Firewall konfiguratu</strong></p>
+                <p>Instalazio-prozesuan zehar, ohikoa da laguntzaileak Firewall-en blokeoaren berri ematea. Elkarrizketa-leihoan, Apache zerbitzaria sare pribatu batean edo lan-sare batean komunikatzeko laukitxoak markatu ditzakezu.
+                <p>Gogoratu ez dela gomendatzen sare publiko batean erabiltzea.</p>
+                <div class="irudiKutxa">
+                  <img src="../../irudiak/WWW/xampp-1-7.jpg" alt="XAMPP firewall konfiguratu" width="50%" srcset="">
+                  <figcaption>Zerbitzaria(12): Gure 'Firewal' konfiguratu</figcaption>
+                </div>
+                </li>
+                <li><p><strong>10. urratsa: Instalazioa itxi</strong></p>
+                  <p>Osagai guztiak atera eta instalatu ondoren, morroia itxi dezakezu Finish) teklarekin. Kontrol-panelera berehala sartzeko, egin nahi dugun galdetzen duen laukia markatu besterik ez dugu egin behar.</p>
+                  <div class="irudiKutxa">
+                    <img src="../../irudiak/WWW/xampp-1-8.jpg" alt="XAMPPen Instalazioa itxi" width="50%" srcset="">
+                    <figcaption>Zerbitzaria(13): Instalazioa bukatu eta itxi</figcaption>
+                  </div></li>
+            </ul>
+            <h4><strong>XAMPPen kontrol-panela</strong></h4>
+            <p>Kontrol-panelaren erabiltzaile-interfaze garbian ekintza guztiak protokolatzen dira eta moduluak banaka aktibatu edo desaktibatu daitezke klik soil batekin. Gainera, hainbat erabilera daude, hala nola:
+              <div class="irudiKutxa">
+                <img src="../../irudiak/WWW/xampp-1-9-1.jpg" alt="XAMPPen kontrol-panela" width="50%" srcset="">
+                <figcaption>Zerbitzaria(14): XAMPPen kontrol panela</figcaption>
+              </div>
+            </p>
+            <ul class="zerrendaArruntak">
+              <li><p><strong>Config: </strong>XAMPP eta beste osagai isolatu batzuk konfiguratzeko.</p></li>
+              <li><p><strong>Netstat:</strong> tokiko ordenagailuan funtzionatzen ari diren prozesu guztiak erakusten ditu</p></li>
+              <li><p><strong>Shell:</strong> UNIX komandoen leiho bat jaurtitzen du</p></li>
+              <li><p><strong>Explorer: </strong>ireki XAMPP karpeta Windowsen arakatzailean</p></li>
+              <li><p><strong>Zerbitzuak:</strong> martxan dauden zerbitzu guztiak erakusten ditu</p></li>
+              <li><p><strong>Help:</strong> erabiltzaileen foroetarako estekak ditu</p></li>
+              <li><p><strong>Quit:</strong> kontrol-paneletik irteteko erabiltzen da</p></li>
+            </ul>
+            <p>Kontrol-panelean, erabiltzaileak bereizita has edo buka ditzake moduluak.</p>
+            <h4><strong>Nola jarri martxan moduluak</strong></h4>
+            <div class="irudiKutxa">
+              <img src="../../irudiak/WWW/xampp-1-9-2.jpg" alt="XAMPPen moduluak martxan jarri" width="50%" srcset="">
+              <figcaption>Zerbitzaria(14): XAMPPen moduluak martxan jarri</figcaption>
+            </div>
+            <p>Goiko aldean, XAMPP moduluak banaka hasi edo eten daitezke, Start, Stop eta Actions komandoen bidez. Aktibatu diren moduluak berdez markatuta agertzen dira.</p>
+            <p>Akats batengatik horietako bat hasterik ez badago, gorriz markatuta agertuko da. Beheko aldean protokoloan jasotako errore-jakinarazpenek errorearen kausak aurkitzen laguntzen dute.</p>
+            <h4><strong>Doitu XAMPP</strong></h4>
+            <p>Apacheren erabileran maiz gertatzen diren akatsen kausa bat blokeatutako ataka bat da. XAMPP konfigurazio estandarrak 80 portu nagusia eta SSL 443 portua esleitzen dizkio web zerbitzariari, baina beste programa batzuek blokeatzen dituzte. Aurreko irudian Skype berehalako mezularitza programarekin gatazka bat agertzen da. Programa hori 80 eta 443 portuak erabiltzen ari da, eta, beraz, zerbitzaria ezin da hasi. Hiru irtenbide posible daude:</p>
+            <ul class="zerrendaArruntak">
+              <li>a. Aldatu portua Skypen: horretarako, Skype irekitzen da, eta, bertan, Tresna elektronikoak > Aukerak > Aurreratua> Konexio informatikoa laukitxoa desmarkatzen da. Lauki horretan, Erabili 80 eta 443 atakak sarrerako konexio elektrikoetarako.</li>
+              <li>b. Aldatu ateen konfigurazioak Apache-n: egin klik Apache moduluaren konfigurazioan (Config) eta ireki PD.CONF eta PD-SSL.CONF. fitxategiak. Pd.conf-en 80. portua erabili nahi duzun portuarekin aldatzen da, eta gauza bera egiten da pd-ssl.conf-en, 443 portuarekin. Gorde artxiboak. Eskuinaldean dagoen Config «Doitu portuak» teklan, egindako aldaketak konf fitxategietan sartu ahal izateko.</li>
+              <li>c. Skype amaitu: Skyperekin gatazkarik ez izateko metodorik errazena da itxi eta berriro hastea, Apache zerbitzaria martxan dagoenean</li>
+            </ul>
+              <p>Errore-jakinarazpenak gorriz agertzen dira Kontrol Panelean, gatazka konpontzeko argibideekin</p>
+              <div class="irudiKutxa">
+                <img src="../../irudiak/WWW/xampp-1-9-3.jpg" alt="XAMPPen Errore-jakinarazpenak gorriz" width="50%" srcset="">
+                <figcaption>Zerbitzaria(14): XAMPPen Errore-jakinarazpenak gorriz</figcaption>
+              </div>
+              <h4><strong>Moduluak nola administratu</strong></h4>
+              <p>Modulu bakoitzerako "Admin" funtzio bat dago.</p>
+              <ul class="zerrendaArruntak">
+                <li>Apache zerbitzariaren "Admin" tekla sakatzean, zerbitzariaren web-helbidera sartuko zara, ekipoaren nabigatzaile estandarraren bidez. XAMPPren host lokaleko orri nagusira bideratuko zaituzte, hau da, makina lokalaren domeinura. Dashboardak informazio erabilgarria duten webguneetarako esteka ugari ditu, baita open source BitNami proiekturako ere. Proiektu horrek doako hainbat aplikazio eskaintzen ditu XAMPPrentzat, hala nola WordPress edo beste CMS batzuk. Orri nagusi honetan sartzeko, sartu localhost/dashboard/helbidea.
+                <div class="irudiKutxa">
+                  <img src="../../irudiak/WWW/xampp-1-10.jpg" alt="XAMPPen admin hasierako azaleko orria" width="50%" srcset="">
+                  <figcaption>Zerbitzaria(15): XAMPPen admin hasierako azaleko orria</figcaption>
+                </div>
+              </li>
+                <li>Datu-baseko "Admin" tekla sakatuz gero, phpMyAdmin irekiko da. Bertan, XAMPPrekin probatu nahi den web proiektuaren datu-baseak administratu daitezke. MySQL datu-baserako administrazio-interfazera ere sar gaitezke localhost/phpmyadmin/helbidean. Datu-baseak phpMyAdmin-en kudeatzen dira, Datu-basea moduluko Admin Admin botoian eskuragarri.
+                  <div class="irudiKutxa">
+                    <img src="../../irudiak/WWW/xampp-1-11.jpg" alt="XAMPPen datu basea kudeatzeko `PHPMyAdmin'" width="50%" srcset="">
+                    <figcaption>Zerbitzaria(16): XAMPPen datu basea kudeatzeko `PHPMyAdmin'</figcaption>
+                  </div>
+                </li>
+              </ul>
+              <h4><strong>XAMPP zerbitzariaren instalazioa egiaztatu</strong></h4>
+              <p><strong>Htdocs karpeta</strong></p>
+              <p>Instalazioaren jarraibideak hitzez hitz bete badituzu, zure zerbitzari lokala Xampp helbide honetan egongo da: C:\Xampp instalatuta egongo da.</p>
+              <ul class="zerrendaArruntak">
+                <li>Sartu hemen: Tokiko diskoa (C:) > Xampp.</li>
+                <li>Bilatu <strong>htdocs</strong> karpeta.</li>
+                <li>Ireki <strong>htdocs</strong> karpeta. Bertan gordeko ditugu gure garapen guztiak. Izan ere, berau dugu zerbitzari lokalaren <strong>erroko karpeta</strong>.</li>
+                <li>Kokatu <strong>htdocs</strong> karpetaren barruan, gorago sortu dugun eta idazmahaian gorde dugun <strong>webgintza</strong> karpeta <em>index.html</em> fitxategiarekin.</li>
+                <li>Orain ireki nabigatzailea eta <strong>helbide-barra</strong>n idatzi <em>localhost/webgintza</em> sartu eta lehen ikusi dugun irudi berbera agertu beharko luke pantailan. Oraingoan helbide-barran <em>localhost/webgintza</em> agertzen zaigu, zerbitzaritik bidalitako informazioa denaren seinale. Aurreko adibidean egin dugunarekin alderatzen baduzu, hura idazmahaitik (desktop) jasotakoa dela ikusiko duzu.
+                  <div class="irudiKutxa">
+                    <img src="../../irudiak/WWW/agurrarena-xampp.png" alt="XAMPPen moduluak martxan jarri" width="100%" srcset="">
+                    <figcaption>Zerbitzaria(17): XAMPPekin lehen froga</figcaption>
+                  </div></li>
+              </ul>
+          </article>
+<div class="banaketa"></div>
+<!-- LANABESAK  -ZERBITZARI LOKALA- (XAMPP)   BIDEOA------------ hasi ---------------------  -->
+ <section class="lantegia" id="www-xampp-bideoa">
+  <article>
+    <h4 class="bideontziBurua"> XAMPP &nbsp;&nbsp;<i class="fa fa-television"></i></h4>
+    <div>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/bideoirudia.png" width="80%"  alt="Hemen doa bideoa" srcset="">
+      </div>
+    </div>
+  </article>
+</section>
+<!-- LANABESAK  -ZERBITZARI LOKALA- (XAMPP)  ------------------- BUKA ---------------------  -->
+<div class="banaketa"></div>
+<!-- LANABESAK  -KODE EDITOREA- (VSCode)------------------- hasi ---------------------  -->
+          <article id="www-editoreak">
+            <div class="azpitituluak">
+              <h3><strong>Kode-editorea</strong>&nbsp;&nbsp;<a href="#vscode-bideoa"><i class="fa fa-television"></i></a></h3>
+            </div>
+            <p>Kode-editorea funtsezko tresna da softwarea edo programazioa garatzen duen edonorentzat. Programa baten iturburu-kodea idazteko, editatzeko eta antolatzeko aukera ematen duen programa da, sintaxia eta kodea idaztea eta ulertzea errazten duten beste funtzionalitate batzuk nabarmenduta.</p>
+            <p>Hainbat kode-editore mota daude, testu-editore soiletatik hasi eta garapen-ingurune integratuetaraino <strong>Integrated Developmen Environmen</strong> (<strong>IDE</strong>, ingelesezko sigletan). Kode editoreen adibide ezagunak dira <strong>Visual Studio Code</strong>, <strong>Sublime Text</strong> eta <strong>Atom</strong>.</p>
+            <p>Kode-editorea iturburu-kodea hainbat programazio-lengoaiatan idazteko erabiltzen da, hala nola <strong>Java, Python, HTML, CSS, JavaScript,</strong> beste askoren artean. Kodea idazteko eta editatzeko aukera emateaz gain, hainbat ezaugarri ere eskaintzen ditu, hala nola kodearen autoosaketa, kodean nabigatzea, erroreak araztea eta bertsioak kontrolatzeko tresnekin integratzea.</p>
+            <div class="garrantzi-oinarrizko">
+              <p><strong>Laburbilduz </strong>kode-editorea funtsezko tresna da programatzaileentzat, programen iturburu-kodea eraginkortasunez eta modu produktiboan idazteko, editatzeko eta antolatzeko aukera ematen baitie. Gai honi buruz gehiago ikasi nahi baduzu, iturri fidagarriak kontsultatzea gomendatzen dizut, hala nola programazioan espezializatutako guneen kode-editoreen eta lineako tutorialen dokumentazio ofiziala.</p>
+              <p><strong>GARRANTZITSUA: </strong>Badira web-garatzaileon lana erraztu dezaketen kode-editoreak. Editore horiek kolore desberdinak erabiliz hitzak nabarmentzen dituzte kodearen zati bakoitza identifikatzen laguntzeko, proiektuaren fitxategiak zerrendatzen dituzte alboko panel batean, fitxategi askorekin batera lan egin ahal izateko, luzapenak eskaintzen dituzte euren ahalmenak handitzeko eta horrelako hamaika aukera ematen digute. Makina bat editore daude, doakoak eta ordaintzekoak. Horra hor horietako batzuk.
+              <ul class="zerrendaArruntak">
+                <li><p><strong>Visual Studio Code</strong></p></li>
+                <li><p>Atom</p></li>
+                <li><p>Brackets</p></li>
+                <li><p>Sublime Text</li>
+                <li><p>Notepad++</p></li>
+                <li><p>CoffeeCup HTML Editor</p></li>
+                <li><p>TextMate</p></li>
+              </ul>
+            </p>
+              <h5><strong>Guk Visual Studio Code erabiliko dugu</strong>.</h5>
+            </div>
+          <!-- Lehen kapitulua 'testu editorea' buka ---------------------  -->
+          <h3><strong>Visual Studio Code</strong></h3>
+          <p>Visual Studio Code, VSCode izenez ere ezagutzen duguna, kode-editore bat da, doakoa, kode irekikoa eta plataforma anitzekoa. Garatzaileen artean erruz zabaldu da tresna arin eta praktikoa delako. VSCode gai da imajina dezakegun edozein programazio-hizkuntzatara egokitzeko.</p>
+          <h5>Ikus dezagun zertan lagun gaitzakeen VSCodek.</h5>
+          <ul class="zerrendaArruntak">
+            <li>Iturburu-kodea editatzen eta garatzen, karaktere joko zuzenekin, sintaxia nabarmenduz edota kode zatiak bere kabuz osatuz</li>
+            <li>Proiektuen lan-karpetak eta fitxategiak kudeatzen, tresna erabilerrazak eskainiz.</li>
+            <li>Bertsioak kontrolatzen, Git-ekin integratuta eta haren tresnak eskura jarriz VSCode-tik irten gabe.</li>
+            <li>Lengoaia asko eskaintzen, garatzaile komunitateari esker editoretik irten gabe instala ditzakegunak.</li>
+            <li>Live Share-rekin lan egiten, lankideekin editatuz eta araztuz, ikaskideekin txateatuz, terminalak eta zerbitzariak partekatuz, iruzkinak ikusiz...</li>
+            <li>Bezeroaren aldea garatzen, VS Code egokitua dagoelako erabili ohi diren HTML, CSS eta Javascript bezalako lengoaietara.</li>
+            <li>Zerbitzariaren aldea garatzen, hamaika lengoaiarekin jarduteko aukera eskaintzen baitu: PHP, Python, Go, Java, NodeJS, Ruby eta beste askorekin.</li>
+            <li>Aplikazioak eta script-ak arazten, Markdown dokumentuak idazten eta editatzen, Zereginak eta lan-fluxuak automatizatzen... </li>
+          </ul>
+          <h5><strong>Visual Studio Code aplikazioa instalatzea</strong></h5><br>
+          <p><strong>Visual Studio Code lortu</strong></p>
+          <p>Visual Studio Code deskargatzeko jo haren webgune ofizialera: https://code.visualstudio.com/ . 
+            Azken bertsio egonkorra deskarga daiteke (ezkerrean dagoen botoi urdin handiaren bidez) edo deskargen orrira sar daiteke (goian eskuinaldean dagoen botoi urdin txikienaren bidez):</p>
+            <div class="irudiKutxa">
+              <img src="../../irudiak/WWW/vscode-1.jpg" alt="VSCoderen webgune ofiziala" width="80%" srcset="">
+              <figcaption>Editorea(1): VSCode-ren webgune ofiziala</figcaption>
+            </div>          
+            <p>Deskargen orrialdetik hainbat sistema eragiletarako bertsioak deskarga daitezke (32/64 bits, Windows/GNU/Linux/Mac). Windowsen, gainera, System installer bertsioak daude eskuragarri, Programa-fitxategien karpetan instalatzen direnak, eta User installer bertsioak, erabiltzaile-karpetan instalatzen direnak. 2018ko udatik, Microsoftek User installer bertsioa gomendatzen du.
+            Windows deskarga lotura: Visual Studio Code (64 bits, gomendatua)</p>
+            <div class="irudiKutxa">
+              <img src="../../irudiak/WWW/vscode-2.jpg" alt="VSCode-ren deskargen pantaila" width="80%" srcset="">
+              <figcaption>Editorea(2): VSCode-ren deskargen pantaila</figcaption>
+            </div> 
+            <div class="garrantzi-oinarrizko">
+              <p><strong>Oharra: </strong>Erabilitako irudiak Visual Studio Code 1.82 (User installer) enpresarenak dira, 64 bitekoak. Ondorengo bertsioak desberdinak izan daitezke.</p>
+            </div> 
+            <p>Egin klik bikoitza Visual Studio Code instalatzailearen gainean instalazio-laguntzailea martxan jartzeko eta aukera instalaziorako hizkuntza.</p>
+            <div class="irudiKutxa">
+              <img src="../../irudiak/WWW/vscode-2-1.jpg" alt="VSCode-ren instalatzailea exekutatu" width="80%" srcset="">
+              <figcaption>Editorea(3): Instalatzailea exekutatu eta hizkuntza hautatu</figcaption>
+            </div>         
+            <ol class="zerrendaArruntak">
+              <li>Lehenengo pantailak instalazioarekin jarraitzeko Visual Studio Code lizentzia onartzea eskatzen du:
+                <div class="irudiKutxa">
+                  <img src="../../irudiak/WWW/vscode-3.jpg" alt="Lizentziak onartzeko leihatila" width="50%" srcset="">
+                  <figcaption>Editorea(4): VSCode-ren Lizentziak onartzeko leihatila</figcaption>
+                </div>  
+              </li>
+              <li>Bigarren pantailak non instalatu hautatzeko aukera ematen du (User installer bertsioa denez, instalazio-direktorioa erabiltzailearen karpetan dago, ez programa-fitxategietan):
+                <div class="irudiKutxa">
+                  <img src="../../irudiak/WWW/vscode-4.jpg" alt="VSCode non instalatu erabaki" width="50%" srcset="">
+                  <figcaption>Editorea(5): VSCode non instalatu erabaki</figcaption>
+                </div>  
+              </li>
+              <li>Hirugarren pantailak hasierako menuko karpetaren izena aukeratzeko aukera ematen du:
+                <div class="irudiKutxa">
+                  <img src="../../irudiak/WWW/vscode-5.jpg" alt="VSCode-ren erroko karpeta izendatu" width="50%" srcset="">
+                  <figcaption>Editorea(6): VSCode-ren erroko karpeta izendatu</figcaption>
+                </div>  
+              </li>
+              <li>Laugarren pantailak aukera ematen du instalazioaren ondoren ataza gehigarri batzuk aukeratzeko. Pertsonalki, "Gehitu ekintza..." laukitxoak markatzea gomendatzen dut:
+                <div class="irudiKutxa">
+                  <img src="../../irudiak/WWW/vscode-6.jpg" alt="VSCode-ren ataza gehigarriak" width="50%" srcset="">
+                  <figcaption>Editorea(7): VSCode-ren ataza gehigarriak</figcaption>
+                </div>  
+              </li>
+              <li>Azkenik, aurreko pantailetan aukeratutako aukerak agertuko dira. Instalazioa hasteko, sakatu Instalatu.
+                <div class="irudiKutxa">
+                  <img src="../../irudiak/WWW/vscode-7.jpg" alt="VSCode-ren instalazio laburpena" width="50%" srcset="">
+                  <figcaption>Editorea(8): VSCode-ren instalazio laburpena</figcaption>
+                </div>  
+              </li>
+              <li>Ondoren, Visual Studio Code instalatuko da.
+                <div class="irudiKutxa">
+                  <img src="../../irudiak/WWW/vscode-8.jpg" alt="VSCode instalatzen" width="50%" srcset="">
+                  <figcaption>Editorea(9): VSCode instalatzen</figcaption>
+                </div>
+              </li>
+              <li>Instalazioa osatu ondoren, amaierako pantaila agertuko da. Visual Studio Code duen Git erabili behar baduzu, desmarkatu "Exekutatu Visual Studio Code" laukitxoa, egin klik Amaitu botoian.
+                <div class="irudiKutxa">
+                  <img src="../../irudiak/WWW/vscode-9.jpg" alt="VSCode instalatuta exekutatzeko prest" width="50%" srcset="">
+                  <figcaption>Editorea(10): VSCode instalatuta exekutatzeko prest</figcaption>
+                </div>
+              </li>
+            </ol>
+            <h4><strong>Lehen exekutatzea</strong></h4>
+            <p>Instalazioaren ondoren Visual Studio Code irekitzen den lehen aldian, programari ongietorria emateko orrialde bat erakusten da:</p>
+            <div class="irudiKutxa">
+              <img src="../../irudiak/WWW/vscode-10aurkez.jpg" alt="VSCoderen hasierako pantaila" width="80%" srcset="">
+              <figcaption>Editorea(11): VSCoderen hasierako pantaila</figcaption>
+            </div>
+            <h4><strong>Visual Studio Code eguneratzea</strong></h4>
+            <p>Visual Studio Code automatikoki eguneratzen da bertsio berri bat argitaratzen den bakoitzean. Visual Studio Code-k ohar bat erakusten du eguneratzea deskargatu denean eta eguneratzea berehala aplika dezakegu, hurrengo pantaila-harrapaketetan erakusten den bezala. Nolanahi ere, eguneraketa aplikatzea eskatu edo ez, Visual Studio Code ixten badugu, eguneraketa berriro irekitzean aplikatuko da.</p>
+            <ol class="zerrendaArruntak">
+              <li>Eguneratze bat dagoenean, Visual Studio Code sistemak zenbaki bat erakusten du beheko ezkerreko gurpil horzdunaren ikonoan. Egin klik gurpilaren gainean eta aukeratu <strong> "Restart to Update" (Berrabiarazi eguneratzeko) </strong>aukera:
+              <div class="irudiKutxa">
+                <img src="../../irudiak/WWW/vscode-11egunera.jpg" alt="VSCoderen eguneratzeko pantaila" width="80%" srcset="">
+                <figcaption>Editorea(12): VSCoderen eguneratzeko pantaila</figcaption>
+              </div>
+            </li>
+              <li>Visual Studio Codek eguneraketa instalatuko du:
+                <div class="irudiKutxa">
+                  <img src="../../irudiak/WWW/vscode-12egunera.jpg" alt="VSCoderen eguneratzen" width="50%" srcset="">
+                  <figcaption>Editorea(13): VSCoderen eguneratzen</figcaption>
+                </div>
+              </li>
+              <li>Berrabiaraztean, erlaitz berri batean agertuko dira instalatutako bertsioaren notak, eta gurpil horzdunaren ikonoak ez du zenbakia erakutsiko:
+                <div class="irudiKutxa">
+                  <img src="../../irudiak/WWW/vscode-13berrabia.jpg" alt="VSCoderen agurreko pantaila" width="80%" srcset="">
+                  <figcaption>Editorea(14): VSCoderen agurreko pantaila</figcaption>
+                </div>
+              </li>
+            </ol>
+          </article>
+        </section>
+<div class="banaketa"></div>
+<!-- LANABESAK  -KODE EDITOREA- (VSCode)  BIDEOA------------------- hasi ---------------------  -->
+ <section class="lantegia" id="vscode-bideoa">
+  <article>
+    <h4 class="bideontziBurua"> Visual Studio Code (VSCode) &nbsp;&nbsp;<i class="fa fa-television"></i></h4>
+    <div>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/bideoirudia.png" width="80%"  alt="Hemen doa bideoa" srcset="">
+        <figcaption>Editorea(15): VSCoderi buruzko bideoa</figcaption>
+      </div>
+    </div>
+  </article>
+</section>
+<!-- LANABESAK  -KODE EDITOREA- (VSCode)  ------------------- BUKA ---------------------  -->
+<div class="banaketa"></div>
+<!-- LANABESAK  -BERTSIOEN KONTROLA- (GitHub)  ------------------- hasi ---------------------  -->
+          <article id="www-bertsioKontrola">
+            <div class="azpitituluak">
+              <h3><strong>Bertsioen kontrola</strong>&nbsp;&nbsp;<a href="#github-bideoa"><i class="fa fa-television"></i></a></h3>
+            </div>
+            <h4><strong>Zer da bertsioen kontrola?</strong></h4>
+                  <p>Bertsioak kontrolatzeko sistema batek kode nagusiaren osotasuna bermatzen du edozein aldaketa mota egin behar denean. Programatzaile batek proiektu bat sortuta badu eta edozein zatitan aldatu behar badu, aplikazioak behar bezala funtzionatzeari uzteko arriskua du.</p>
+                  <p>Milaka edo milioika kode lerro dituen software batean arazoa aurkitzea benetako buruko mina izan daiteke. Bertsioak kontrolatuta, fitxategi baten kodean egindako aldaketa guztiak bistara daitezke.</p>
+                  <p>Garatzaile batek kodearen zati bat aldatu behar duenean, ez du kodearen jatorrizko masterraren biltegian egiten, baizik eta adarkatze bat sortzen du. Bidebanatzean aldaketak amaitzen dituenean eta dena zuzen dagoela egiaztatzen denean, proiektu nagusiarekin bat egin daiteke. Hori guztia erregistratuta geratzen da bertsioen kontrolean, eta proiektua bat egitean kodearen beste zati batekin gatazka sortzen bada, atzera egin daiteke.</p>
+                  <p>Orain arte, bertsioak kontrolatzeko sistema da munduko software-garatzaile guztiek gehien erabiltzen dutena, ez dago proiektuak kudeatzeko modu hoberik</p>
+                  <p>Gomendatzen dugunak GIT du izena. Doako paketea da, ordenagailu pertsonaletarako eta Apple ordenagailuetarako eskuragarri dagoena.</p>
+                  
+                  <h3><strong>GIT</strong></h3>
+                  <h4><strong>Zer da Git?</strong></h4> 
+                  <p>Git Linus Torvaldsek (Linuxena) garatutako bertsioak kontrolatzeko sistema bat da, eta bere ezaugarri nagusia sistema banatu bat dela da. Bertsioen kontrol zentralizatuarekiko aldea da gordailura sarbidea duen edonork kodearen zatien banaketak eta fusioak egin ahal izango dituela, iturburu-kode nagusi bat aldatu beharrean. Proiektuak ere hainbat adarretan bana daitezke, proiektuaren kudeaketa globala askoz argiagoa izan dadin proiektuaren kolaboratzaile guztientzat.
+                  <p>Adibidez, garatzaile bat webgunearen diseinu berri bat lantzen ari daiteke, eta beste batek menu batean dagoen bug bat kudeatzen du. Biek dakite bestea zer egiten ari den une oro, eta menuaren bug-a ebatzi ondoren soilik fusionatu ahal izango da diseinu berria proiektu nagusira.</p>
+                  <p>Bertsioen kudeatzaile on orok bezala, Git atzera itzul daiteke proiektu baten zati guztiak fusionatzean, proiektu horrek arazo bat badu. Ikusiko duzunez, GitHub eta Git ia berdinak dira, baina online eta erabiltzaile-interfaze askoz sinpleago batekin, Git, komando kontsola bakarra erabiltzen baitu.</p> 
+                  <p>GitHub mota guztietako garatzaileek gehien erabiltzen duten plataformetako bat bihurtu da, kodea kudeatu, eguneratzeak egin eta beste programatzaile batzuekin lankidetzan aritu nahi baitute. Programatzailea ez izan arren, Microsoftek 2018an GitHub erosi zuen diru kopuru handi baten truke, eta albistea komunikabide askotan agertu zen. Hemen azalduko dizugu zer den GitHub eta zertarako balio duen zehazki. Baliteke garatzaile eskarmentuduna ez izan arren, erabilgarritasuna aurkitzea.</p>
+                    
+                  <h3><strong>GitHub</strong></h3>
+                  <h4><strong>Zer da GitHub?</strong></h4>
+                  <p>GitHub bertsioak kontrolatzeko plataforma bat da, eta online sartzen da bertara; hau da, ez duzu zure ordenagailuan instalatzen, baizik eta Internetetik sartzen da. GitHub-i esker, edozein garatzailek bere proiektua biltegira igo eta proiektuan egindako aldaketa guztien ibilbide-orria izan dezake.</p>
+                  <p>Gainera, kolaboratiboa da. GitHubetik hainbat garatzailek proiektu bera kudeatu eta lagundu dezakete, une bakoitzean aldaketak nork egiten dituen eta proiektuaren zein zatitan egin dituen ikusiz.</p>
+                  <p>GitHub kode irekiko bertsioak kontrolatzeko munduan gehien erabiltzen den sistema da. 90 milioi garatzailek baino gehiagok erabiltzen dute kodea kudeatzeko eta beste garatzaile batzuekin elkarlanean aritzeko. GitHub doan da, nahiz eta enpresei eta erakundeei zuzendutako ordainketa-planak dituen, baina jarraitu aurretik, kontzeptu batzuk argituko ditugu, hala nola zer den bertsioen kontrola eta zer den Git.</p>
+                  
+                  <h4><strong>Nola funtzionatzen du GitHub-ek?</strong></h4>  
+                  <p>Ezer baino lehen, jakin behar duzu edonork eman dezakeela alta GitHuben. Horretarako aski da GitHub-en gune ofizialera jotzea, zure posta elektronikoaren helbidea sartzea, <strong><em>'Sing up for GitHub'</em></strong> dioen botoian klik egitea eta irekiko den pantailatxoan pasahitz bat idaztea.</p>
+                  <p>Alta emanda izatea derrigorrezkoa da GitHub-en gordailu bat eratzeko eta bertara fitxategiren bat igotzeko. Hona hemen esteka bat GitHub-en gunera jotzeko eta alta emateko: <strong><a href="https://github.com" target="_blank">GitHub</a></strong>.</p></p>
+                  <div class="irudiKutxa">
+                    <img src="../../irudiak/WWW/github-1.jpg" alt="Alta nola eman GitHub-en" width="100%" srcset="">
+                    <figcaption>GitHub(1): Alta GitHub-en.</figcaption>
+                  </div>
+                  <p>Hori bai, GitHuben dagoen aplikazioren bat deskargatu nahi baduzu, ez duzu kontu bat sortu beharrik ere, sarbidea publikoa baita, garatzaileak hala konfiguratu badu. Proiektu bat bilatu, egin diren aldaketa guztiak ikusi eta deskarga dezakezu, osorik edo zati bat, zure ordenagailuan aldatzeko edo erabiltzeko.</p> 
+                  <p>Garatzaile batzuek GitHub-era igotzen dituzte beren proiektuak, erabiltzaileek deskarga dezaten, WordPress-eko plugin-gordailu bat bezala, baina edozein motatako softwarearekin.</p>  
+                  
+                  <h4><strong>Nola deskargatu proiektu bat GitHuben</strong></h4>  
+                  <p>Ikus dezagun nola deskargatzen den proiektu bat GitHub-etik, adibide gisa. Egin behar dugun lehenengo gauza GitHub-en orri nagusira sartzea da.</p> 
+                  <p>Pantailaren goiko aldean, eskuinean bilatzaile bat ikusiko duzu <strong><em>Search or jump to...</em></strong> ) Hori, oro har, ez duzu erabiliko, garatzaileak zuzeneko URLa emango baitizu, baina probatzen ari garenez, horrela egingo dugu. 
+                  <p>Bilatzailearen gainea klik egin eta leihatila bat irekiko da bilatu nahi duzun proiektuaren izena jatzeko. Nire proiektuetako bat bilatuko dut: erlatiboa. </p>
+                  <div class="irudiKutxa">
+                    <img src="../../irudiak/WWW/github-2.jpg" alt="Gordailu bila GitHub-en)" width="100%" srcset="">
+                    <figcaption>GitHub(2): Gordailu bila GitHub-en</figcaption>
+                  </div>
+                  <p>GitHub-ek berehala aurkituko du gordailua.</p>
+                  <div class="irudiKutxa">
+                    <img src="../../irudiak/WWW/github-3.jpg" alt="Gordailua eskura GitHub-en" width="100%" srcset="">
+                    <figcaption>GitHub(3): Gordailua eskura GitHub-en</figcaption>
+                  </div>
+                  <p>Egin ezazu froga beste izen bat jarriz bilatzailean <em>'Helo World'</em>  esaterako. 40 mila baino gehiago agertuko zaizkizu. Horietako bat aukeratu eta proiektu horrek dituen fitxategi guztiak agertuko zaizkizu. 
+                  <p>Gure kasuan gure proiektua aukeratuko dugu: <strong>erlatiboa</strong>. Eta proiektuaren fitxategi eta karpeta guztiak aterako dira. Euren gainean klik eginda ireki egin ditzakezu eta kodea ikusi.</p>                 
+                  <p>Sartu horietako edozeinetan, eta proiektuaren fitxategiak ikusiko dituzu. Gure kasuan, fitxategi bakarra aurkituko dugu, eta klik eginez gero, pantailan ikusiko duzu kodea. Kode hori kopiatu egin dezakezu nahi baduzu eta kontu bat baduzu eta jabeak horretarako aukera ematen badu, baita bidebanatze bat sortu ere (branch) editatzeko eta gero aldaketak masterrera bidaltzeko, onartuz gero.</p>
+                  <div class="irudiKutxa">
+                    <img src="../../irudiak/WWW/github-4.jpg" alt="Gordailuko fitxategi eta karpetak GitHub-en" width="100%" srcset="">
+                    <figcaption>GitHub(4): Gordailuko fitxategi eta karpetak GitHub-en</figcaption>
+                  </div>
+                  <p>Proiektua tokian-tokian aldatzeko edo erabiltzeko deskargatu nahi baduzu, Code botoian sartu eta Download ZIPerako aukera bat ikusiko duzu. Horrek proiektuaren fitxategi guztiak deskargatuko ditu fitxategi konprimatu batean.</p>
+                  <div class="irudiKutxa">
+                    <img src="../../irudiak/WWW/github-5.jpg" alt="Gordailuaren deskarga GitHub-etik" width="100%" srcset="">
+                    <figcaption>GitHub(5): Gordailuaren deskarga GitHub-etik</figcaption>
+                  </div>
+                  <p>Hau oso oinarrizko adibidea da, baina GitHub egitura ez da asko aldatzen beste proiektu serioagoak. Adibidez, deskargatzeko aplikazio bat bada, instalatzailearekin esteka bat aurki dezakezu.</p>
+                  <p>Proiektuan lagundu duten erabiltzaileak eta erabili diren programazio-lengoaiak ere aurki ditzakezu. Ikusiko duzunez, dena oso irekia eta gardena da GitHuben, baina errepositorio pribatuak ere sor daitezke, beharrezkoa bada.</p>
+                  
+                  <h4><strong>Nola sortu gordailu bat GitHuben?</strong></h4>
+                  <p>Zure gordailua sortu nahi baduzu, plataforman alta eman behar duzu. Egiaztatu behar duzun posta-kontu bat eskatuko dizute <em>(ikus goragoko irudia -GitHub(1): Alta GitHub-en.-)</em>. Doako kontuarekin behar dituzun gordailu guztiak sortu ahal izango dituzu, publikoak zein pribatuak izan, baina muga batzuk izango dituzu, hala nola 500 MBko espazioa zure biltegiak gordetzeko.</p>
+                  <div class="irudiKutxa">
+                    <img src="../../irudiak/WWW/github-6.jpg" alt="Gordailu bat nola sortu GitHub-en" width="100%" srcset="">
+                    <figcaption>GitHub(6): Gordailu bat nola sortu GitHub-en</figcaption>
+                  </div>
+                  <p>Gordailu bat sortzeko, pantaila nagusian hori egin dezakezula ikusiko duzu, eta publikoa edo pribatua izatea nahi duzun aukeratu. Sortu nahi duzun biltegiaren izena jarri besterik ez duzu egin behar. </p>
+                  <div class="irudiKutxa">
+                    <img src="../../irudiak/WWW/github-7.jpg" alt="Gordailua sortzeko bete beharrekoak GitHub-en" width="100%" srcset="">
+                    <figcaption>GitHub(7): Gordailua sortzeko bete beharrekoak GitHub-en</figcaption>
+                  </div>
+                  <p>Eta kito, sortu duzu GitHub gordailua, bere izenarekin (webgunegintza), deskribapenarekin (Webguneak nola egiten...) eta publikoa dela esan diozu. 
+                  <p>Orain, dituzun fitxategiak igo ditzakezu, edo inportatu, beste plataforma batean baduzu. SSH bidez ere konekta dezakezu, nahi baduzu. Hemendik aurrera, erabiltzaileak gehitu ditzakezu proiektuan, banaketak sortu, egiten diren aldaketen eskaerei erantzun eta GitHub-ek ematen dizun guztia.</p>
+                  <div class="irudiKutxa">
+                    <img src="../../irudiak/WWW/github-8.jpg" alt="Gordailura fitxategiak igotzeko modua GitHub-en" width="100%" srcset="">
+                    <figcaption>GitHub(8): Gordailura fitxategiak igotzeko modua GitHub-en</figcaption>
+                  </div>
+
+                  <h4><strong>Ondorioak</strong></h4>
+                  <p>GitHub ondo dabil. Git bertsioak kontrolatzeko sistema bat da, eta egungo garatzaileek behar dituzten behar guztiak edo gehienak jasotzen ditu online.</p>
+                  <p>Garatzailea ez bazara, ez du zentzu handirik gordailu bat sortzeak, baina erabiltzaile batzuek erabilgarritasun pertsonalak ematen dizkiote, hala nola WordPress-en egiten dituzten aldaketak kontrolatzea edo dokumentuak idaztea eta aldaketen kontrola izatea. Nolanahi ere, GitHub plataforma segurua da, aukera onak ditu eta milioika programatzaileren beharrak asetzen dituen doako plana du.</p>
+          </article>
+        </section>
+<div class="banaketa"></div>
+<!-- LANABESAK  -BERTSIOEN KONTROLA- (GitHub)  BIDEOA ------------------- hasi ---------------------  -->
+ <section class="lantegia" id="github-bideoa">
+  <article>
+    <h4 class="bideontziBurua"> GitHub &nbsp;&nbsp;<i class="fa fa-television"></i></h4>
+    <div id="githubbideoa">
+      <div class="irudiKutxa">
+        <img src="../../irudiak/bideoirudia.png" width="80%"  alt="Hemen doa bideoa" srcset="">
+      </div>
+    </div>
+  </article>
+</section>
+<div class="banaketa"></div>
+<!-- LANABESAK  -BERTSIOEN KONTROLA- (GitHub)  AZTERKETA ------------------- hasi ---------------------  -->
+
+<!-- WEBGUNEAK SAILEKO AZTERKETA hasi  ------------------- -->
+<section class="lantegia" id="www-lanabesazterketa">
+  <h3 class="azterrontziBurua">LANABESAK&nbsp;&nbsp;<i class="fa fa-pagelines"></i></h3>
+  <p class="lantegi-txikikoa" onclick="hasi();"><strong>HASI</strong></p>
+  <ul class="zerrendaArruntak">
+    <li><strong>1.- </strong> Sakatu 'HASI' galderak ikusteko.</li>
+    <li><strong>2.- </strong> Hautatu erantzun zuzena.</li>
+    <li><strong>3.- </strong> Sakatu 'EMAITZAK IKUSTEKO BOTOIA'.</li>
+    <li><strong>4.- </strong> Irakurri arretaz iradokizunak eta azalpenak.</li>
+  </ul>
+<article class="grid-container">
+      <form name="bagatzi">
+        <fieldset>
+          <legend id="atzibatena"></legend>
+          <INPUT type="radio" id="radiobat1" name="atzibat" value="1"><label class="labela"
+            id="atzibatbaga"></label><br />
+          <INPUT type="radio" id="radiobat2" name="atzibat" value="2"><label class="labela"
+            id="atzibatbiga"></label><br />
+          <INPUT type="radio" id="radiobat3" name="atzibat" value="3"><label class="labela"
+            id="atzibathiga"></label><br />
+        </fieldset>
+        <fieldset class="eranLekua"><label id="eranBagatzi"></label></fieldset>
+      </form>
+      <form name="bigatzi">
+        <fieldset>
+          <legend id="atzibiarena"></legend>
+          <INPUT type="radio" id="radiobi1" name="atzibi" value="1"><label class="labela"
+            id="atzibibaga"></label><br />
+          <INPUT type="radio" id="radiobi2" name="atzibi" value="2"><label class="labela"
+            id="atzibibiga"></label><br />
+          <INPUT type="radio" id="radiobi3" name="atzibi" value="3"><label class="labela"
+            id="atzibihiga"></label><br />
+        </fieldset>
+        <fieldset class="eranLekua"><label id="eranBigatzi"></label></fieldset>
+      </form>
+      <form name="higatzi">
+        <fieldset>
+          <legend id="atziruarena"></legend>
+          <INPUT type="radio" id="radiohiru1" name="atziru" value="1"><label class="labela"
+            id="atzihirubaga"></label><br />
+          <INPUT type="radio" id="radiohiru2" name="atziru" value="2"><label class="labela"
+            id="atzihirubiga"></label><br />
+          <INPUT type="radio" id="radiohiru3" name="atziru" value="3"><label class="labela"
+            id="atzihiruhiga"></label><br />
+        </fieldset>
+        <fieldset class="eranLekua"><label id="eranHigatzi"></label></fieldset>
+      </form>
+      <form name="lagatzi">
+        <fieldset>
+          <legend id="atzilauarena"></legend>
+          <INPUT type="radio" id="radiolau1" name="atzilau" value="1"><label class="labela"
+            id="atzilaubaga"></label><br />
+          <INPUT type="radio" id="radiolau2" name="atzilau" value="2"><label class="labela"
+            id="atzilaubiga"></label><br />
+          <INPUT type="radio" id="radiolau3" name="atzilau" value="3"><label class="labela"
+            id="atzilauhiga"></label><br />
+        </fieldset>
+        <fieldset class="eranLekua"><label id="eranLagatzi"></label></fieldset>
+      </form>
+      <form name="bogatzi">
+        <fieldset>
+          <legend id="atzibostarena"></legend>
+          <INPUT type="radio" id="radiobos1" name="atzibost" value="1"><label class="labela"
+            id="atzibostbaga"></label><br />
+          <INPUT type="radio" id="radiobos2" name="atzibost" value="2"><label class="labela"
+            id="atzibostbiga"></label><br />
+          <INPUT type="radio" id="radiobos3" name="atzibost" value="3"><label class="labela"
+            id="atzibosthiga"></label><br />
+        </fieldset>
+        <fieldset class="eranLekua"><label id="eranBogatzi"></label></fieldset>
+      </form>
+      <form name="segatzi">
+        <fieldset>
+          <legend id="atziseiarena"></legend>
+          <INPUT type="radio" id="radiosei1" name="atzisei" value="1"><label class="labela"
+            id="atziseibaga"></label><br />
+          <INPUT type="radio" id="radiosei2" name="atzisei" value="2"><label class="labela"
+            id="atziseibiga"></label><br />
+          <INPUT type="radio" id="radiosei3" name="atzisei" value="3"><label class="labela"
+            id="atziseihiga"></label><br />
+        </fieldset>
+        <fieldset class="eranLekua"><label id="eranSegatzi"></label></fieldset>
+      </form>
+</article>
+    <div class="azterrontziOina">
+      <button id="atziados">
+        <p>Emaitzak ikusteko botoia</p>
+      </button>
+    </div>
+</section>
+<!-- WEBGUNEAK SAILEKO AZTERKETA buka  ------------------- -->
+<!-- LANABESAK  ATALA ------------------- BUKA ---------------------  -->
+<!-- HEMEN BUKATZEN DA INFORMAZIOAREN ATAL NAGUSIA -->
+</main>
+
+    <!-- GORA IGOTZEKO BOTOI GORRIA BAHEAN ESKUINEAN hasi -------------- -->
+    <span class="ir-arriba icon-arrow-up2"></span>
+    <!-- End page content -->
+    <button class="toTop" id="toTop">
+      <svg viewBox="0 0 24 24">
+        <path d="m4 16 8-8 8 8"></path>
+      </svg>
+    </button>
+    <!-- GORA IGOTZEKO BOTOI GORRIA BAHEAN ESKUINEAN buka -------------- -->
+
+    <!-- Orriaren oina -----'FOOTER'------HASI   -->
+    <footer>
+      <span onclick="w3_open()"><i class="fa fa-arrow-circle-o-left"></i>&nbsp;Ireki menua</span>
+      <h3>OINEAN OINETAKOA</h3>
+      <a href="https://praiskopedia.eus" target="_blank">&copy; Praiskopedia</a>
+    </footer>
+    <!-- Orriaren oina -----'FOOTER'------BUKA   -->
+
+  </body>
+
+</html>
+<!-- HEMEN BUKATZEN DA 'web-ikas' orrialdearen HTMLa -->
+
+<!-- HEMEN DOA menua eta gorako botoia maneiatzeko JavaScript-a <script> eta </script> etiketen artean ----------- HASI -->
+<script>
+  // Menua irekitzeko eta ixteko kodea
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+  //Gorako botoia agerrarazteko, ezkutatzeko eta klikatuz orriaren goialdera igotzeko kodea
+  const toTop = (() => {
+    let button = document.getElementById("toTop");
+    window.onscroll = () => {
+      button.classList[
+        (document.documentElement.scrollTop > 200) ? "add" : "remove"
+      ]("is-visible")
+    }
+    button.onclick = () => {
+      window.scrollTo({
+        top: 0, behavior: "smooth"
+      })
+    }
+  })();
+</script>
+<!-- Menua eta gorako botoia maneiatzeko JavaScript-a, <script> eta </script> etiketen artean doana, ----------- BUKA -->
+
+<!-- Kanpoko fitxategiak erabili ahal izateko estekak (JavaScript-ak orria bukaeran idatzi ohi dira, sistemak 
+HTML eta CSS guztia irakurri ostean irakur ditzan) -------------- -->
+<script src="../../js/vendor/galdetegia.js"></script>
+<script src="../../js/vendor/galdetegiaForm.js"></script>
+<script src="../../js/vendor/kudeaketa.js"></script>
+<script src="../../js/vendor/kudeaketaForm.js"></script>
+<script src="../../js/vendor/kudeatuHTML.js"></script>
+
+<script src="../../js/vendor/lengoaiaSkripta.js"></script>

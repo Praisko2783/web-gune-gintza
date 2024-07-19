@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+    <article class="ikasgaia" id="html-egitura-elementua">
+        <div class="azpitituluak">
+          <h3><strong>Domeinuak, hiperestekak eta URLak</strong></h3>
+        </div>
+    <div class="banaketaTxikia"></div>
+      <p>Webguneak dokumentu ugariz osatuta daude, eta nabigatzaileak dokumentu horiek deskargatzen ditu erabiltzaileak eskatzen dituenean. Webgune bat osatzen duten dokumentuak orri deitzen dira, eta orri berriak irekitzeko prozesuari nabigatzea (erabiltzaileak webgunearen orrialdeetan nabigatzen du).</p>
+      <p>Webgune bat garatzeko, fitxategi bat sortu behar dugu sartu nahi dugun orri bakoitzeko. Fitxategi horiekin batera, irudiak dituzten fitxategiak eta orri hauen barruan erakutsi nahi dugun beste edozein baliabide ere sartu behar ditugu (irudiak eta beste batzuk).</p>
+      <p>Zerbitzariak <strong>IP (Internet Protocol)</strong> izeneko balio batekin identifikatzen dira. IP hau bakarra da ordenagailu bakoitzarentzat eta, beraz, ordenagailu bat sare baten barruan kokatzeko aukera ematen duen helbide gisa lan egiten du. Nabigatzaileak zerbitzari batera sartu behar duenean erabiltzaileak eskatutako dokumentua deskargatzeko, lehenik zerbitzaria bilatzen du IP helbide honen bidez, eta gero dokumentua bidaltzeko eskatzen dio.</p>
+      <p>IP helbideak 0 eta 255 arteko zenbaki osoek osatzen dituzte, puntu batez bereizita, edo zenbakiek eta letrek, bi puntuz bereizita, bertsioaren arabera (IPv4 edo IPv6). Adibidez, <em>216.58.198.10</em>0 helbidea Googleren webgunea ostatatuta dagoen zerbitzariari dagokio. </p>
+      <p>Balio horiek gogoratzeko zailak dira. Horregatik, Internetek zerbitzari bakoitza izen jakin batekin identifikatzen duen sistema bat erabiltzen du. Izen pertsonalizatu hauek, domeinu deituak, edonork gogora ditzakeen identifikatzaile errazak dira, google edo yahoo bezala, aipatzen duten webgunearen helburua zehazten duen luzapen batekin, <strong>.com</strong> (komertziala) edo <strong>.org</strong> (erakundea) bezala.</p>
+      <p>Erabiltzaileak www.google.com domeinuarekin webgunera sartzeko eskatzen dionean nabigatzaileari, lehenik eta behin <strong>DNS</strong> izeneko zerbitzari batean sartzen da nabigatzailea. </p>
+      <p>Zerbitzari horrek domeinu-zerrenda bat du, IP helbideekin. www.google.com domeinuari lotutako <em>216.58.198.100</em> IPa aurkitzen duenean, nabigatzaileari itzultzen dio, eta, ondoren, nabigatzailea IP horren bidez sartzen da Googlen webgunera.</p>
+      <p>Webguneetako IP helbideak beren domeinuekin lotuta daudenez, ez dugu zerbitzari baten helbidea gogoratu behar bertara sartzeko, domeinua gogoratu besterik ez dugu egin behar. Helbideari <strong>URL</strong> deitzen diogu eta hiru zati ditu:</p>
+      <div class="banaketaTxikia"></div>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/WWW/url-a.png" alt="Web helbidea (URL)" width="100%" srcset="">
+        <figcaption>Webgunea(3): Web helbidea (URL)</figcaption>
+      </div>
+      <div class="banaketaTxikia"></div>
+      <ul class="zerrendaArruntak">
+        <li>Lehen zatia <strong><em>(https://)</em></strong> komunikazio-protokoloa irudikatzen duen karaktere-katea da.</li>
+        <li>Bigarrena <strong><em>(praiskopedia.eus)</em></strong> webgunearen domeinua da.</li>
+        <li>Azken osagaia <strong><em>(teknologia/webgunegintza.html)</em></strong> deskargatu nahi dugun baliabidearen izena da.</li>
+      </ul>
+      <p>URLak, gure adibidean, nabigatzaileari eskatzen dio <em>HTTP protokoloa</em> erabil dezala <em>teknologia</em>
+        izeneko direktorioaren barruan dagoen <em>webgunegintza.html</em> fitxategia hartzeko eta ekartzeko. </p>
+      <p>Fitxategi hori <em>praiskopedia.eus</em> domeinuarekin identifikatutako zerbitzarian dago.</p>
+      <p>URLak dokumentu bakoitza webgunean kokatzeko erabiltzen dira eta, beraz, beharrezkoak dira webgunean nabigatzeko.</p>
+      <div class="banaketaTxikia"></div>
+      <div class="garrantzi-oinarrizko">
+        <p><strong>GARRANTZITSUA:</strong> zure webgunerako domeinua lortu ondoren, azpidomeinuak sor ditzakezu, zuzenean sartzeko direktorioan nabigatzailean URL hau idatzita: <em>https://direktorioa/domeinua</em>.</p>
+      </div>
+      <div class="banaketaTxikia"></div>
+      <div class="garrantzi-oinarrizko">
+        <p><strong>Oinarrizkoa:</strong> ordenagailuek hainbat protokolo erabiltzen dituzte elkarren artean komunikatzeko eta baliabideak eta datuak transferitzeko. <strong>HTTP (HyperText Transfer Protocol)</strong> web dokumentuetara sartzeko erabiltzen den komunikazio-protokoloa da. Praktikan ez da beharrezkoa idaztea, nabigatzaileek automatikoki egiten dutelako. Protokolo horren beste bertsio bat dago eskuragarri, <strong>HTTPS</strong> izenekoa. <strong>S</strong> letrak adierazten du konexioa enkriptatu egiten dela TLS edo SSL bezalako enkriptazio-protokoloen bidez. Informazio sentikorra erabiltzen duten webguneetan erabiltzea gomendatzen da.</p>
+      </div>
+    </article>
+    <!-- Bigarren kapitulua 'domeinuak' buka -------  -->
+    <div class="banaketaTxikia"></div>
+    <!-- Hirugarren kapitulua 'hiperestekak' hasi -----  -->
+    <article class="ikasgaia" id="www-hiperestekak">
+      <div class="azpitituluak">
+        <h3><strong>Hiperestekak</strong></h3>
+      </div>
+      <p>Webguneak dokumentu ugariz osatuta daude, eta nabigatzaileak dokumentu horiek deskargatzen ditu erabiltzaileak eskatzen dituenean. Webgune bat osatzen duten dokumentuak orri deitzen dira, eta orri berriak irekitzeko prozesuari nabigatzea (erabiltzaileak webgunearen orrialdeetan nabigatzen du).</p>
+      <p>Webgune bat garatzeko, fitxategi bat sortu behar dugu sartu nahi dugun orri bakoitzeko. Fitxategi horiekin batera, irudiak dituzten fitxategiak eta orri hauen barruan erakutsi nahi dugun beste edozein baliabide ere sartu behar ditugu (irudiak eta beste batzuk).</p>
+      <p>Teorian, webgune bateko dokumentu guztietara sar gaitezke nabigatzailearen nabigazio-barran URLa idatzita. Metodo hau erabiliz webguneko fitxategi guztietara sartzea posible den arren, ez da praktikoa.</p>
+      <p>Lehenik eta behin, erabiltzaileek ez dituzte garatzaileak fitxategi bakoitzerako aukeratu zituen izenak ezagutzen eta, beraz, asma ditzaketen izenetara edo lehenetsita itzultzen duen orri nagusira mugatuko dira.
+      </p>
+      <p>Bigarrenik, webguneak dozenaka edo milaka webgunez osatuta egon daitezke (zenbait gunek milioika dituzte) eta dokumentu gehienak aurkitzea ezinezkoa litzateke.</p>
+      <p>Soluzioak estekak dira hiperestekak ere deituak. Webgune bateko orrialdeen barruko dokumentuen erreferentziak dira. Esteka horiek sartuta, orrialde batek beste orrialde batzuen erreferentziak izan ditzake. </p>
+      <p>Erabiltzaileak saguarekin esteka batean klik egiten badu, nabigatzaileak erreferentzia horri jarraitzen dio eta erreferentziaren URLak adierazitako dokumentua pantailan deskargatzen eta erakusten da. Orrialdeen arteko konexio horiek direla eta, erabiltzaileek webgunean nabigatu ahal izango dute eta beren dokumentu guztietara sartu, beren esteketan klik eginez.</p>
+      <div class="garrantzi-oinarrizko">
+        <p><strong>Oinarrizkoa:</strong> estekak dira fitxategi multzo bat webgune bihurtzen dutenak. Webgune bat sortzeko, orri bakoitzari dagozkion dokumentuak programatu behar dituzu, eta horietan sartu erabiltzaileak horietako bakoitzera sartzeko jarrai dezakeen ibilbide bat ezartzen duten estekak. Kapituluan gure dokumentuetan estekak nola txertatu aztertuko dugu.</p>
+      </div>
+    </article>
+    <!-- Larugarren kapitulua 'url-ak' hasi ----------  -->
+    <article class="ikasgaia" id="www-urlak">
+    <div class="azpitituluak">
+      <h3><strong>URL absolutuak eta erlatiboak</strong></h3>
+    </div>
+    <div class="irudiKutxa">
+      <img src="../../irudiak/WWW/artxiboak2.png" alt="Web helbidea (URL)" height="400px">
+      <figcaption>Webgunea(4): Fitxategiak karpetatan</figcaption>
+    </div>
+    <p>Hiperestekak nabigatzaileak prozesatzen ditu dokumentuetara sartzeko erabili aurretik. Horregatik, URL absolutuekin edo erlatiboekin defini daitezke.</p>
+    <p>URL absolutuak dira baliabidera sartzeko behar den informazio guztia dutenak: </p>
+      <h5 style="text-align:center;">(https://praiskopedia.eus/irudiak/artxiboak.png)</h5>
+      aldiz, URL erlatiboak nabigatzaileak deia egiten duen URLari gehitu behar dion ibilbide-zatia bakarrik deklaratzen dutenak dira. Adibidez 'api1.html' dokumentura 'artxiboak.png' irudia ekartzeko ibilbidea: <br>
+      <h5 style="text-align:center;">(irudiak/artxiboak.png)</h5>
+    <p> Esan bezala, 'irudiak' direktorioaren barruko irudi bat nahi izanez gero 'api1.html' fitxategian ipintzeko, <em>(https://praiskopedia.eus/irudiak/artxiboak.png)</em> URL absolutua erabil dezakegu, baina baita <em>(irudiak/artxiboak.png)</em> gisako URL erlatiboa ere.</p>
+    <p>Halakoetan nabigatzailea arduratzen da ibilbide horri tokiko URLa gehitzeaz eta irudia deskargatzeaz.</p>
+    <p>URL erlatiboek beheranzko ibilbideaz gain, hierarkiaren gorako bidea ere zehaztu dezakete.</p>
+    <p>Adibidez, <strong><em>(css)</em> </strong>direktorio barruko fitxategi batetik <strong><em>(irudiak)</em></strong> direktorioaren barruan daukagun irudi bat eskuratzeko URL erlatibo bat erabil dezakegu, ibilbidearen hasieran bi puntu eta marra inklinatua jarriz <strong>(../)</strong> ibilbideak gorantz egin dezan: </p>
+      <h5 style="text-align:center;">(../../irudiak/artxiboa.png)</h5>.
+    <p>Bi puntuek <strong>(..)</strong> nabigatzaileari adierazten diote sartu nahi dugun dokumentua eskaria eingo duen direktorioaren gaineko <strong>(aita)</strong> direktorio batean dagoela.</p>
+  </article>
+</body>
+</html>
