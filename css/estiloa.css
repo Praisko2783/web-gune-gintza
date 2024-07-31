@@ -107,6 +107,9 @@ h6{
   font-size: 14px;
   color:rgb(2, 2, 130);
 }
+.oro-moduluak h6{
+  font-size: 1em;
+}
 p{
   font-family: system-ui, sans-serif;
   font-weight: 400;
@@ -212,6 +215,9 @@ figcaption{
   margin-bottom: 1rem;
   padding:1rem;
 }
+.ikasgaia article .azpitituluak{
+  padding:.5rem;
+}
 .ikasgaiBurua{
   text-align: center;
 }
@@ -227,6 +233,9 @@ figcaption{
 .saioAzpiatalak{
   padding-left: 60px;
   padding-bottom: 30px;
+}
+.saioAzpiatalak li{
+  margin-top: .6rem;
 }
 .azpiatala:hover{
   font-size: 1.4em;
@@ -653,6 +662,9 @@ lengoaiaBotoia:hover {
   }
   
 @media (max-width: 1200px) {
+  .ikasgaia article .azpitituluak{
+    width: 100%;
+  }
   .ikasgai-leihoa{
     width:85%;
   }
@@ -695,6 +707,9 @@ lengoaiaBotoia:hover {
   }
   .praisikonoa:hover{
     width: 175px;
+  }
+  .goiburua{
+    grid-template-columns: auto;
   }
 }
 @media (max-width: 720px) {
