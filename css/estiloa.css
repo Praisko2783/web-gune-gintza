@@ -20,15 +20,17 @@ body{
 .banaketaTxikia{
   padding:1rem;
 }
-/*goiburua orri guztietan berdina */
 header{
   text-align: center;
   background: #ccc;
   display: block;
+  height: 175px;
 }
+/*goiburua orri guztietan berdina 
+
 header h1{
 font-family: monospace;
-font-size: 50px;
+font-size: 30px;
 font-weight: 600;
 color:rgb(2, 2, 130);
 }
@@ -39,23 +41,32 @@ header span{
 }
 header span:hover{
   color:#176802;
-}
+}*/
 .goiburua{
-  display: grid;
+  float:right;
+  /*display: grid;
   grid-template-columns: auto auto;
-  gap: 10px;
+  gap: 10px;*/
 }
-.goiburua .menua-btn{
-  align-content: center;
+/*.goiburua .menua-btn{
+  align-content: right;
 }
+*/
 .goiburua .titulu-nagusia{
-  align-content: center;
+  align-content: left;
+}
+.goiburua .titulu-nagusia h1{
+  font-size: 2em;
 }
 .goiburua .titulu-nagusia h1:hover{
-  font-size: 3.2em;
+  color:#176802;
 }
 .goiburua .prais-ikonoa{
+  margin-top:1em;
+}
+.goiburua .prais-ikonoa img{
   align-content: center;
+  width: 100px;
 }
 /*Goiburua ------------------- HONAINO */
 
@@ -107,9 +118,6 @@ h6{
   font-size: 14px;
   color:rgb(2, 2, 130);
 }
-.oro-moduluak h6{
-  font-size: 1em;
-}
 p{
   font-family: system-ui, sans-serif;
   font-weight: 400;
@@ -143,6 +151,7 @@ p{
 /*Botoiak...................*/
 .botoia{
   background-color: #2196F3;
+  width: 100%;
   padding:10px;
   color: #f1f1f1;
   border-radius: 5px;
@@ -160,7 +169,7 @@ p{
   text-align: left;
 }
 .botoikutxa a{
-  margin-top:1.2rem;
+  margin-top:.2rem;
 }
 .botoikutxa a:hover{
   color:#176802;
@@ -177,13 +186,26 @@ p{
 }
 .irudiKutxaEsk{
   float: right;
-  padding: 0px 20px 0px 0px;
+  padding: 0px 20px 40px 0px;
 }
 figcaption{
   color:#110392;
   font-style: italic;
   font-size: 1em;
+  text-align: center;
 }
+.irudiTestuKaxa{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+}
+.irudiTestua{
+text-align: left;
+}
+irudiKaxa{
+text-align: center;
+}
+
 /*Azalpenak emateko koadro grisak letra urdinskarekin (h6).......*/
 .garrantzi-oinarrizko{
   padding: 1rem;
@@ -199,7 +221,8 @@ figcaption{
   color:#110392;
 }
 .garrantzi-oinarrizko a:hover{
-  font-size: 1.2em;
+  color:#085e02;
+  font-weight: 700;
 }
 /*Zerrenden kontuak.......................*/
 .zerrendaArruntak{
@@ -214,9 +237,6 @@ figcaption{
   margin-top:1rem;
   margin-bottom: 1rem;
   padding:1rem;
-}
-.ikasgaia article .azpitituluak{
-  padding:.5rem;
 }
 .ikasgaiBurua{
   text-align: center;
@@ -233,9 +253,6 @@ figcaption{
 .saioAzpiatalak{
   padding-left: 60px;
   padding-bottom: 30px;
-}
-.saioAzpiatalak li{
-  margin-top: .6rem;
 }
 .azpiatala:hover{
   font-size: 1.4em;
@@ -319,19 +336,7 @@ margin-top: 1rem;
 .gida:hover{
   box-shadow: 0 4px 10px 0 rgba(97, 178, 250, 0.2), 0 4px 50px 0 rgba(1, 141, 247, 0.19);
 }
-.gida-egiteke{
-  text-align: center;
-  background-color: rgba(8, 8, 9, 0.3);
-  box-shadow:1px 1px 1px 4px rgba(50, 50, 250, 0.2);
-  padding: 20px;
-  height: 300px;
-}
-.gida-egiteke i{
-  color: rgba(8, 8, 9, 0.3);
-}
-.gida-egiteke h3{
-  color: rgba(8, 8, 9, 0.3);
-}
+
 /*--------------Ikasgaien GRID-ari dagozkion erregelak--*/
 .gidagaia{
   display:grid;
@@ -437,13 +442,12 @@ footer a:hover{
   
 
   /*Bideo eta Azterketa (Lantegia) eremuaren ezaugarriak HASI --------------*/
-  /*Bideoaren kokapenaren ezaugarriak komentatuta bideontziko zatiak bideoa ekartzrakoan erabiltzeko--------------*/
+  /*Bideoaren kokapenaren ezaugarriak--------------*/
   .bideontzia {
-    /*position: relative;*/
+    position: relative;
     overflow: hidden;
     width: 100%;
     text-align: center;
-    /*padding-top: 56.25%;*/
   }
   .bideontziBurua {
     width: 90%;
@@ -455,13 +459,16 @@ footer a:hover{
   .bideontzia iframe {
     position: absolute;
     padding: 5px;
-    top: 5;
+    top: 2;
     left: 0;
     bottom: 0;
     right: 0;
     width: 90%;
     height: 100%;
     margin: 0 auto;
+  }
+  .bideoGidoia{
+    padding:1.5rem;
   }
   ::-webkit-scrollbar {
     display: none;
@@ -485,45 +492,59 @@ footer a:hover{
     background: #ccc;
   }
 /*Ikasgaietako gida didaktikoaren akordiona-------*/
-.saioAtalak-hiru{
+.saioAtalak-lau{
   display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 1.5rem;
+  grid-template-columns: auto auto auto auto;
+  gap: 1rem;
+  position: absolute;
+  top: 6rem;
+  left: 5px;
+  width: 30%;
+  height: 4em;
 }
 .saioAtalak-bi{
   display: grid;
-  grid-template-columns: auto auto;
-  gap: 1.5rem;
+  grid-template-columns: auto auto auto auto auto auto;
+  gap: .5rem;
+  position: absolute;
+  top: 8em;
+  left: 5px;
+  width: 80%;
+  height: 4em;
 }
 .gidontziburua{
   width: 100%;
-  padding: .8rem;
+  padding: .5rem 3.5rem;
   text-align: center;
   background-color: #043797;
   color:#fff; 
   cursor: pointer;
 }
 .gidontziburua h5{
-  color:#fff; 
+  color:#fff;
+  font-size: large; 
 }
 .gidontziburua:hover{
   background-color: #026716;
 }
 .akordeoiontzia {
-  padding: 0rem;
+  padding: 0;
+  margin:0;
   display: none;
   overflow: hidden;
 }
-.gidontziburua:hover{
-  padding-bottom: 15px;
-  color:#fff;  
+.akordeoiontzia .garrantzi-oinarrizko{
+ text-align: left;
+}
+.akordeoiontzia ul{
+  list-style: none;
 }
 .gidakordiona  h4{
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 .gidakordiona  h6{
-  font-size: 1.15em;
-  margin-bottom: 1rem;;
+  font-size: 1em;
+  margin-bottom: .5rem;
 }
 
 /*Ikasgaietako gida didaktikoaren akordiona------- KITTO*/ 
@@ -662,8 +683,14 @@ lengoaiaBotoia:hover {
   }
   
 @media (max-width: 1200px) {
-  .ikasgaia article .azpitituluak{
-    width: 100%;
+  .saioAtalak-lau{
+    display: grid;
+    top: 1.5em;
+    grid-template-columns: auto;
+    gap: .5rem;
+  }
+  header{
+    height: 250px;
   }
   .ikasgai-leihoa{
     width:85%;
@@ -690,6 +717,9 @@ lengoaiaBotoia:hover {
     display:grid;
     grid-template-columns: repeat(1, 1fr);
   }
+  .gidagaia img{
+    width: 30%;
+  }
   .galdetegia{
     background: #ccc;
     border-radius: 20px;
@@ -708,11 +738,30 @@ lengoaiaBotoia:hover {
   .praisikonoa:hover{
     width: 175px;
   }
-  .goiburua{
-    grid-template-columns: auto;
-  }
 }
 @media (max-width: 720px) {
+  .saioAtalak-lau{
+    display: grid;
+    top: 1.5em;
+    grid-template-columns: auto;
+    gap: .5rem;
+  }
+    .goiburua .titulu-nagusia h1{
+      font-size: 1em;
+    }
+    .goiburua .prais-ikonoa img{
+      align-content: center;
+      width: 80px;
+    }
+    .saioAtalak-bi{
+      display: grid;
+      grid-template-columns: auto;
+      gap: .5rem;
+      top: 8em;
+      left: 5px;
+      width: 16em;
+      height: 8em;
+    }
   pre{
     width: 100%;
   }
