@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="eus">
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/estiloa.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+  <!--  HTML SAILEKO EGITURA ATALAREN BIDEOA ----------------- hasi ---------------------  -->
+  <article class="ikasgaia">
+    <div class="azpitituluak">
+      <h3><strong>Web-orrien edukia</strong><br>&nbsp;&nbsp;<i class="fa fa-television"></i></h3>
+    </div>
+    <article>
+      <h4 class="bideontziBurua">Testuak<br><i class="fa fa-television"></i></h4>
+      <div class="bideontzia">
+        <img src="../../irudiak/WWW/bideoEreduIrudia.png" width="80%" title="Bideo eredua, gutxigorabehera honelako egitura izango dute."></video>
+      </div>
+      <figcaption style="text-align: center;">Web-orrietan edukia: bideoa.</figcaption>
+      </div>
+    </article>
+  </article>
+  <article class="bideoGidoia">
+    <div class="azpiatalak">
+      <h3>Hemendik behera bideoan azalduko denaren laburpena.</h3>
+      <div class="banaketaTxikia"></div>
+      <h4>Oinarrizko egitura</h4>
+      <p>html dokumentu oro nodo berezi eta espezifiko batekin hasten da gaur egun. Nodo hori dokumentuaren hasieran jartzen da, egiten ari garen dokumentuaren html lengoaiaren bertsioa zehazteko.</p>
+        <h4><! DOCTYPE html></h4>
+      <p>Adierazpen hori garrantzitsua da nabigatzaileari esateko nola interpretatu eta renderizatu behar duen orriaren html kodea.</p>
+      <p>Egia esan, gaur egun nabigatzaile gehienek lehenetsita erabiltzen dute, jartzen ez baduzu ere, baina oraindik nabigatzaileren batek egiten du, beraz, beti jartzea gomendatzen dizut.</p>
+      <p>Ondoren, < html> </html> etiketa jarri beharko genuke. html etiketa raiz elementua da, eta haren barruan jarriko dugu gure eduki guztia.
+        Edukia bitan banatzen da. Alde batetik <strong>head</strong> edo burua daukagu eta bestetik <strong>body</strong> edo gorputza.</p>
+        <p>
+<pre>
+  <code>
+     &lt;! DOCTYPE html &gt;
+        &lt; html &gt;
+        &lt; head &gt;
+        
+        &lt; /head &gt;
+        &lt; body &gt;
+        
+        &lt; /body &gt;
+        &lt; /html &gt;
+  </code>
+</pre>
+<div class="banaketaTxikia"></div>
+       <cite>(Irudia:  exekutatu kodea eta nabigatzeilean ez da ezer ikusten)</cite>
+        <div class="banaketaTxikia"></div>
+        <p><strong>Head</strong> gure webgunearen burua da. Bertan metadatuak jarriko ditu. Buruan jarritako ezer ez da errenderizatuko. Bere zeregina gure orrialdeari barne-informazioa ematea da.</p>
+        <p><strong>Body</strong> gure webgunearen gorputza da. Gorputzaren barruan ipiniko dugu gure orrian errenderizatu nahi duguna, hau da, pantailan ikustea nahi duguna. Beraz, < body > eta < /body > artean gure html kode osoa idatziko dugu.</p>
+        <div class="banaketaTxikia"></div>
+        <h4>Head</h4> 
+        <h5>meta=”charset UTF-8”</h5>   
+        <p>Metadatu garrantzitsua da charset utf 8, nabigatzaileari zer kodifikazio erabili behar duen adierazten baitio. utf-8k tildeak eta abar kontuan hartzen ditu. Idaz dezagun Oñati.</p>
+        <pre>
+          <code>
+            &lt; ! DOCTYPE html &gt;
+            &lt; html &gt;
+            &lt; head &gt;
+              &lt; meta=”charset UTF-8” /&gt;
+            &lt; /head &gt;
+            &lt; body &gt;
+              Oñati
+            &lt;/ body &gt;
+            &lt;/ html &gt;
+        </code>
+      </pre>
+      <div class="banaketaTxikia"></div>
+        <cite>(Irudia: exekutatu kodea eta nabigatzailean Oñati ongi)</cite>     
+        <div class="banaketaTxikia"></div>
+         <p>Utf-8 ez badugu erabiltzen tildea duten karaktereak, gaizki ikusiko dira.  Ikus dezagun:</p>
+         <div class="banaketaTxikia"></div>
+        <cite>(Irudia: utf-8 meta kenduta exekutatu kodea eta  nabigatzailean Oñati gaizki)</cite>
+        <div class="banaketaTxikia"></div>
+        <h5>meta name = "viewport" content = "width = device-width, initial-scale = 1.0"</h5>
+         <p>Metadatu horrekin, web-orria hainbat pantaila-tamainatara egokitzeko esaten ari gatzaizkio nabigatzaileari. Metadatu hori gabe, webgunea mugikorrean kargatzean haren zatitxo bat baino ez da ikusten. viewport metadatoaren bitartez, gure orrialdearen zabalera mugikorraren zabalera izango dela ziurtatuko dugu. </p>
+         <pre>
+          <code>
+            &lt;! DOCTYPE html &gt;
+            &lt; html &gt;
+            &lt; head &gt;
+              &lt; meta=”charset UTF-8” /&gt;
+              &lt; meta name = "viewport" content = "width = device-width, initial-scale = 1.0" /&gt;
+            &lt;/ head &gt;
+            &lt; body &gt;
+              Oñati
+            &lt;/ body &gt;
+            &lt;/ html &gt;
+          </code>
+         </pre>
+         <div class="banaketaTxikia"></div>
+        <cite>(Irudia: exekutatu kodea eta mugikor bertikala, mugikor horizontala, ordenagailu-pantaila erakutsi)</cite>
+        <div class="banaketaTxikia"></div>
+        <h5>title etiketa</h5>
+        <p>title da gure dokumentuak izango duen izenburua eta nabigatzailearen erlaitzean agertuko da. <cite>HTML ikastaroa</cite> jarriko dugu. </p>
+        <div class="banaketaTxikia"></div>
+        <pre>
+          <code>
+            &lt;! DOCTYPE html &gt;
+            &lt; html&gt;
+            &lt; head &gt;
+                &lt; meta=”charset UTF-8” /&gt;
+                &lt; meta name = "viewport" content = "width = device-width, initial-scale = 1.0" /&gt;
+                &lt; title &gt;HTML ikastaroa&lt;/ title &gt;
+            &lt;/ head &gt;
+            &lt; body &gt;
+              Oñati
+            &lt;/ body &gt;
+            &lt;/ html &gt;
+          </code>
+        </pre>
+        <div class="banaketaTxikia"></div>
+        <cite>(Irudia: exekutatu kodea eta erlaitzean orriaren izenburua seinalatu)</cite>
+        <div class="banaketaTxikia"></div>
+        <p>Begira zer agertzen den erlaitzean. Arakatzailearekin irekitzen badugu, hemen daukagu. Izenburu honek egundoko garrantzia dauka. Izan ere, bilatzaileek horri begiratzen baitiote. Title hutsik utziz gero, oso irudi txarra ematen baitu. </p>
+        <div class="banaketaTxikia"></div>
+        <h5>Favicon</h5>
+        <p>Kontuan hartu beharreko beste metadatu garrantzitsu bat favicon da.</p>
+        <p>Favicon-a link motako bat da, eta linka jartzen zaio, eta ez metadatua, azken batean baliabide bati lotzen ari zaiolako. Zer ikono erabili behar duzun esango dizugu. Irudi bat izango da .jpg; adibidez, href atributuan irudiaren helbidea jarriko dugu, gorde egingo dugu, eta orrialdea itxi behar badugu, izenburuaren ezkerraldeko erlaitzean gure ikonoa agertzen dela ikusiko dugu.</p>
+        <div class="banaketaTxikia"></div>
+        <pre>
+          <code>
+            &lt;! DOCTYPE html&gt;
+              &lt; html&gt;
+              &lt; head&gt;
+                  &lt; meta=”charset UTF-8”/&gt;
+                  &lt; meta name = "viewport" content = "width = device-width, initial-scale = 1.0" /&gt;
+                  &lt; title&gt;HTML ikastaroa&lt;/title&gt;
+                  &lt; link rel="icon" href="favicon.ico irudira bidea" type="image/x-icon"&gt;
+              &lt;/ head&gt;
+              &lt;body&gt;
+                Oñati
+              &lt;/ body&gt;
+              &lt;/ html&gt;
+          </code>
+        </pre>
+        <div class="banaketaTxikia"></div>
+        <cite>(Irudia: exekutatu kodea eta erlaitzean orriaren izenburuaren ondoan iruditxoa seinalatu)</cite>
+        <div class="banaketaTxikia"></div>
+        <h5>meta name="description" content="Beste txoko bat euskararentzat Gure hizkuntzaren zabaltzearen laguntzeko beste ahalegin bat da Praiskopedia"</h5>
+        <p>Gure orrialdearen deskribapena garrantzitsua da hainbat arrazoirengatik:</p>
+        <p>Gure edukia deskribatzen duelako, eta deskribapenhori da, hain zuzen ere googlen bilaketa bat egiten duzunean agertzen dena.</p>
+        <p>Hemen aurkitzen duzuen deskribapena etiketa honetan jartzen duzuena da. Beraz, oso garrantzitsua da deskribapena jartzea.</p>
+        <h5>Open Graph</h5>
+        <p>Open Graph <strong>og</strong> etiketa multzo bat da, bere garaian Facebookek sortu zuena, ondo ikusten den eduki bat partekatzen duzuenerako. Gaur egun orrialde batzuetan aurkitzen dugun etiketa da. Praiskopedia wordpress orrian honako hau agertzen da:</p>
+        <div class="banaketaTxikia"></div>
+        <blockquote><meta property="og:description" content="Beste txoko bat euskararentzat Gure hizkuntzaren zabaltzearen laguntzeko beste saio bat, da Praiskopedia,.." ></blockquote>
+        <div class="banaketaTxikia"></div>        
+        <cite>(Irudia: praiskopedia.eus web-orriaren iturburuan erakutsi)</cite>
+         <p>Eta hona hemen bilatzaileak erakusten didana. Hau partekatzen duzunean irudi hau izango duzu Izenburu honekin deskribapen hau eta hau da Etiketa hauei guztiei esker.</p>
+         <div class="banaketaTxikia"></div>
+        <cite>(Irudia: bilatzailean praiskopedia eskatu eta erakusten duena)</cite>
+        <div class="banaketaTxikia"></div>
+        <h5>SEO</h5>
+        <p>SEO (Search Engine Optimization) marketin-estrategia bat da, webguneak optimizatzeko balio duena. Metodo honek prozesu natural eta organikoa eskaintzen du. Horretarako, ez da inolako iragarki-kanpainarik ordaindu behar. Hala ere, horrek ez du esan nahi kostu ekonomikorik edo denborazkorik ez duenik.</p>
+        <div class="banaketaTxikia"></div>
+        <h5><link rel="alternate" type="application/rss+xml" title="Praiskopedia &raquo; Jarioa" href="https://praiskopedia.eus/feed/" /></h5>
+        <p>Horrekin, gure orrialdearen alternatiba izango litzatekeen kanpoko baliabide bat lotzen ari gara, baina horrek ez du esan nahi beste orri bat jarriko dugunik, ez; gure orriak hainbat hizkuntzatan alternatibak dituela esan nahi dugu. Beraz, kontuan izan hau nahiko interesgarria dela, bestela eduki bikoiztua daukazuela antzeman baitezakezu.</p>
+        <div class="banaketaTxikia"></div>
+        <cite>(Irudia: bilatzailean praiskopedia.eus  eskatu eta erakusten duena)</cite>
+        <div class="banaketaTxikia"></div>
+        <h5>link rel="canonical" href="https://praiskopedia.eus/"</h5>
+        <p>Horren bidez, gure guneko orri nagusia zein den adierazten ari gara. Eta hori galdetuko diozue zuen buruari? Izan ere, praiskopedian sartzeko googleri www.praiskopedia.eus idatziz gero, webgunea ireki irekitzen da baina ikusiko duzue birbideratu egin dela eta www-ak kendu dizkiola. Hori zuzena izango litzateke, baina batzuetan interesatzen zaizu orrialde batzuk eduki bikoiztutzat ez hartzea, eta Benetako orria zein den edo nola tratatu behar duen esan behar diozue.</p>
+        <div class="banaketaTxikia"></div>
+        <cite>(Irudia:  praiskopedia.eus  iturburuan canonical erakutsi)</cite>
+        <div class="banaketaTxikia"></div>
+        <h5>Style etiketa</h5>
+        <p>Estiloak, oro har, aparteko dokumentu batean idaztea da modurik onena. Bada orriaren buruan idazten duenik, baita html-arekin nahasirik ere. Funtzionat funtzionatzen dute baina luzera begira oso modu eskas da estiloak antolatzeko. Esandakoa estiloak aparteko dokumentuan, lotura hau erabiliz:</p>
+        <div class="banaketaTxikia"></div> 
+        <h5><link rel='stylesheet' href='estiloak.css'></h5>
+        <p>Estiloen gaia CSS ikastaroan ikusiko dugu. Halere adibidetxo bat erakutsiko dizuet estiloen magia ikus dezazuen.
+        Gorputza gorritu egingo dugu.</p>
+        <pre>
+          <code>
+            &lt;! DOCTYPE html &gt;
+              &lt; html &gt;
+              &lt; head&gt;
+                    &lt; meta=”charset UTF-8” /&gt;
+                    &lt; meta name = "viewport" content = "width = device-width, initial-scale = 1.0" /&gt;
+                    &lt; title &gt;HTML ikastaroa&lt;/ title &gt;
+                    &lt; meta property="og:description" content="Beste txoko bat euskararentzat..." /&gt;
+                    &lt; link rel="canonical" href="https://praiskopedia.eus/"/&gt;
+                    &lt; link rel="icon" href="favicon.ico irudira bidea" type="image/x-icon"&gt;
+                    &lt; style &gt;
+                      body{
+                        background:red;
+                        }
+                    &lt;/ style &gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                Oñati
+              &lt;/body&gt;
+        &lt;/html&gt;
+          </code>
+        </pre>
+        <div class="banaketaTxikia"></div>
+        <cite>(Irudia:  kodea idatzi eta exekutatu, body gorria, Oñati beltza)</cite>
+        <p>Eta pum! Body gorria.</p> 
+        <p>Ez didazue esango ez dela magikoa!</p>     
+        <p>Baina esandakoa, magia ikusteko ongi dago adibidea baina ez da oso gomendagarria, CSS eta HTML nahastea. Askoz erosoago eta luzera etekin handiagoa ematen du estiloak artxibo ezberdinetan idaztea.</p>
+        <p>Horretarako daukagu goian aipatu lotura: < link rel='stylesheet' href='estiloak.css' > </p>
+        <p>Horrela, gure estiloak estiloak.css izeneko eta .css luzapena duen beste artxibo batean idatziko genituzke. Baina hori guztia CSS atalean ikusiko dugu.</p>     
+        Ikus dezakezuenez, metadatu asko daude nabigatzaileentzat, zehazki. Badira web orri jakin baterako, sare sozial baterako, nabigatzaile baterako... balioko dutenak ere.</p>
+        Ikusi ditugunekin webgune ezin ederrago eta funtzionalagoa egin dezakegu. Beraz aurrera. Hauxe daukagu oraingoz gure webgunearen buruan:
+        <div class="banaketaTxikia"></div>
+        <pre>
+          <code>
+            &lt;! DOCTYPE html &gt;
+              &lt; html &gt;
+              &lt; head&gt;
+                    &lt; meta=”charset UTF-8” /&gt;
+                    &lt; meta name = "viewport" content = "width = device-width, initial-scale = 1.0" /&gt;
+                    &lt; title &gt;HTML ikastaroa&lt;/ title &gt;
+                    &lt; meta property="og:description" content="Beste txoko bat euskararentzat..." /&gt;
+                    &lt; link rel="canonical" href="https://praiskopedia.eus/"/&gt;
+                    &lt; link rel="icon" href="favicon.ico irudira bidea" type="image/x-icon"&gt;
+                    &lt; style &gt;
+                      body{
+                        background:red;
+                        }
+                    &lt;/ style &gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                Oñati
+              &lt;/body&gt;
+        &lt;/html&gt;
+          </code>
+        </pre>
+        <div class="banaketaTxikia"></div>
+        <p>Tildeak behar bezala erakusteko agindua, pantaila tamaina ezberdinetara egokitzeko agindua, web-orriaren izen burua bilatzailea jakinaren gainean jartzeko, gure gunearen laburpena nabigatzaileek ipini dezaten aurkitutako guneak erakusterakoan, gure webgune nagusiaren izena zein den esan diogu, gure ezaugarria ikono txiki gisara goiko pestañan agertzeko esan diogu eta gure estiloak izango dituen dokumentuaren helbidea eta esteka. Horrezaz gain css magikoarekin gorputza oso-osorik gorritu egin dugu.</p>
+        <p>Gaztiak, hauxe izan da web-orrien buruaz esan behar nizuena. Asko ikasi eta ongi izan. Adio. </p>
+    </div>
+  </article>
+</body>
+</html>
