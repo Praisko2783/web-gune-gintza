@@ -72,7 +72,7 @@ header span:hover{
 
 /*gorputzeko erregela orokorrak*/
 main{
-  width: 60%;
+  width: 50%;
   display: block;
   transition: margin-left .4s;
   margin: 0 auto;
