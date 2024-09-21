@@ -11,26 +11,55 @@
     <section class="gidakordiona" id="html-gidadida">
         <article class="ikasgaia">
             <div class="azpitituluak">
-                <h2><strong>Atalaren gida didaktikoa (CSS) <span style="color:red"><em>(EGITEKE, EGITEKE)</em></span></strong></h2>
+                <h2><strong>Atalaren gida didaktikoa (CSS)</strong></h2>
             </div>
-              
+             <div class="banaketaTxikia"></div>
         <div id="gida-HTML" >
-          <p>Ikasgaia oso-osorik webgune gehienak osatzen duten elementuen berri ematea du ehlburu nagusi. HTMLk dokumentuaren barruko espazioa definitzen du. Bertan kokatzen dira, eduki estatikoa eta dinamikoa, eta bera da aplikazio guztietarako oinarrizko plataforma. Webgune edo web aplikazio bat sortzeko, lehenik eta behin, hura osatzen duten orrialdeetako bakoitzaren egitura zehazten duen HTML kodea idatzi behar dugu.</p> 
-          <p>Gure dokumentuen edukia HTML kode gisa behar bezala interpretatzen dela ziurtatzeko, fitxategiaren hasieran erantsi behar dugu adierazpena. Adierazpen hori HTML etiketen antzekoa da, eta dokumentu bakoitzaren hasieran eskatzen da, nabigatzaileari web-orria nola sortu behar duen erabakitzen laguntzeko. HTML5ekin programatutako dokumentuen kasuan, deklarazioak html atributua barne hartu behar du: &lt;!DOCTYPE html&gt;.</p>
+          <p>Estilo Orriei <strong>(CSS, Cascading Style Sheets)</strong> buruzko oinarrizko jakintzagaiak ikusiko ditugu CSSri eskaitako lehen saio honetan. Saioan zehar CSSren oinarriak azaltzen dira modu teoriko eta praktikoan. Gainera, lengoaia hori modu egokian nola erabili ikasiko dugu mantentzeko eta optimizatzeko errazak izango diren webguneak sortzeko.
+            <ul class="zerrendaArruntak">
+                <li>CSSren erabileraren arrazoiak. Zergatik sortu zen eta nola erabili behar den.</li>
+                <li>CSSren sintsaxia. CSS lerroan, orriburuan eta aparteko fitxategian.</li>
+                <li>Hautatzailea, propietatea eta balioa zer diren eta nola erabili behar diren.</li>
+                <li>Klaseak (.) eta id-ak (#)</li>
+                <li>Sasiklaseak eta sasielementuak</li>
+            </ul>
+            </p> 
+            <div class="banaketaTxikia"></div>
+                <h4>CSSren erabilera zuzenak hainbat abantaila erantziko dio gure webguneari:</h4>
+                    <ul class="zerrendaArruntak">
+                    <li>Lehenik eta behin, errazagoa da webgune bat mantentzea eta eguneratzea. Izan ere, kode lerro baten aldaketak webgune osoari eragiten dio. Horrela, garapen- eta mantentze-kostuak murrizten dira.</li>
+                    <li>CSSk web orri bat pertsonalizatzeko aukera emango dizu, edukia formatutik bereizita. Garatzeko nahiko azkarra da eta zure lekua azkarrago deskargatuko da.
+                    </li>
+                    <li>Era berean, ikus daiteke lengoaia informatiko hori erabiliz koherentzia handiagoa dagoela webgune baten diseinuan. Izan ere, estiloa modu koherentean aplikatzen da.</li>
+                    <li>Azkenik, CSSk zure webgunearen kokapena errazten du bilaketa-motorretan.</li>
+                </ul>
+                <div class="banaketaTxikia"></div>
+            <h5>Saioan hiru atal bereizi dira:</h5>
+            <div class="banaketaTxikia"></div>
+            <ul class="saioAzpiatalak">
+                <li><p><strong>Estiloak: </strong> Estiloak atxitzen ikasiko dugu, urjauzi orriaren kontzeptua zertan den eta adibide batzuk medio zer-nola gauzatzen den pantailan.<br>
+                    Bideoa: Idatziz emandakoa modu praktikoan erakutsiko da ikusentzunezko batean.<br>
+                    Azterketa: Irakatsitakoa indartzeko azterketatxoa egingo da, ikusitakoaren gainean.
+                </p></li>
+                <li><p><strong>Erreferentziak: </strong> Izenak, Atributuak eta Seudoklaseak nola erabili behar diren eta zertarako ikasiko dugu.<br>
+                    Bideoa: Idatziz emandakoa modu praktikoan erakutsiko da ikusentzunezko batean.<br>
+                    Azterketa: Irakatsitakoa indartzeko azterketatxoa egingo da, ikusitakoaren gainean.</p></li>
+                </p></li>
+                <li><p><strong>Propietateak: </strong>  Testua / Kolorea / Tamaina / Atzealdea izango dira lehen azpiatalean landuko diren ikasgaiak.
+                    Ertzak / Itzalak / Gradienteak / Iragazkiak bigarren azpiatalean landuko ditugu.
+                    Eraldaketak / Trantsizioak / Animazioak hirugarrenean.
+                    Azpiatal horietako bakoitzak bere ikus-entzunezkoa izango du idatziz emandakoa modu praktikoan ikusteko.<br>
+                    Atala amaitzeko azterketatxoa egingo dugu ikasitakoa eguneratzeko.<br>
+                    </p></li>
+            </ul>
           
-          <h5>Saioan hiru atal bereizi dira:</h5>
-          
-          <ul class="saioAzpiatalak">
-            <li><p><strong>Egitura: </strong>HTML elementuek zuhaitz moduko egitura bat osatzen dute, elementua sustraitzat hartuta. Egitura horrek antolamendu-maila ugari ditu, eta elementu batzuk dokumentuaren atal orokorrak definitzeaz arduratzen dira, eta beste batzuk atal txikiak edo edukia irudikatzeaz. Egituraren bizkarrezurra definitzeko eta nabigatzaileak orria pantailan erakusteko hainbat 'elementu' eskaintzen ditu.</p></li>
-            <li><p><strong>Edukia: </strong>Gure webgunearen oinarrizko egitura amaituta, edukia landu behar dugu. Orain arte aztertutako HTML elementuek diseinuaren atal bakoitza identifikatzen eta helburu bat esleitzen laguntzen digute, baina web-orri batean benetan axola duena atal horien barruan dagoena da. Informazio hori hainbat elementu bisualez osatuta dagoenez (izenburuak, testuak, irudiak eta bideoak, besteak beste), HTMLk hura irudikatzeko hainbat elementu definitzen ditu.</p></li>
-            <li><p><strong>Formularioak: </strong>Hauek goikoak bezala edukia dira webguneetan, baina hainbestekoa denez euren garrantzia atal bereizian erakutsi ohi dira. Formularioak dokumentu batean sar ditzakegun tresnak dira, erabiltzaileek informazioa txertatu, erabakiak hartu, datuak komunikatu eta aplikazio baten portaera aldatzeko aukera izan dezaten. Formularioen helburu nagusia da erabiltzaileak informazioa hautatu edo txertatu ahal izatea eta zerbitzarira bidaltzea, prozesatzeko. </p></li>
-          </ul>
           <h5>Gauzak horrela atal hau amaitzean ikaslea gai izango da:</h5>
           <ul class="saioAzpiatalak">
-            <li><p>Edukiak web aplikazio baten logikan integratzeko eta zehaztapenetara egokitutako datuak atzituko dituzten osagaiak garatzeko.</p></li>
-            <li><p>Web aplikazioetan interfazeak garatzeko estilo-eskuliburuaren arabera, markatzeko lengoaiak eta web-estandarrak erabilita.</p></li>
-            <li><p>Web aplikazioetan integratuko diren multimedia-osagaiak erabiltzeko ezarritako zehaztapenak medio.</p></li>
-            <li><p>Web aplikazio baten interfazean multimedia-osagaiak integratzeko.</p></li>
+            <li><p>Edukien erakusteak duen garrantziaz jabetzeko dela erakargarritasun aldetik, dela webgunearen eraginkortasunaren aldetik.</p></li>
+            <li><p>CSSren sintaxian erabiltzen diren terminoak bereizteko eta haien zeregina ezagutzeko.</p></li>
+            <li><p>CSS erabiltzerakoan praktika eta ekimen egokiak erabiltzeko unean unean</p></li>
+            <li><p>Web aplikazio baten interfazean multimedia-osagaiak modu koherenteak integratzeko.</p></li>
+          </ul>
         </div>
 
         </article>
