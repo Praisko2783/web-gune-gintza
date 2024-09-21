@@ -83,13 +83,14 @@ section article{
   margin-bottom: 8px !important;
 }
 pre{
-  width: 70%;
+  width: 50%;
   margin:0 auto;
   border:1px darkblue dashed;
   text-align: left;
   overflow-x: scroll;
   overflow-y: scroll;
   height: 20em;
+  padding:10px;
 }
 h2{
   font-family: monospace;
