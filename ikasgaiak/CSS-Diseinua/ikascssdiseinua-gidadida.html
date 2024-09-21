@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="eus">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Atalaren --------- GIDA DIDAKTIKOA  GIDA DIDAKTIKOA GIDA DIDAKTIKOA -akordiona-  ------ HASI ------  -->
+    <section class="gidakordiona" id="html-gidadida">
+        <article class="ikasgaia">
+            <div class="azpitituluak">
+                <h2><strong>Atalaren gida didaktikoa: Web Diseinua (CSS)</strong></h2>
+            </div>
+             <div class="banaketaTxikia"></div>
+        <div id="gida-HTML" >
+            <p>CSSri eskainitako bigarren saio honetan <strong>Flexbox</strong> eta <strong>Grid</strong> moduluak erabiliko ditugu, zure proiektuetan pantailako elementuen posizionamendua modu sinpleagoan estilizatzeko. Modulu osoak dira, eta ez propietate bakarra; propietate multzo oso bat eskatzen dute.</p>
+            <div class="banaketaTxikia"></div>
+            <h3>Flexbox</h3>
+            <div class="banaketaTxikia"></div>
+            <p>Edukiontzi batean espazioa diseinatzeko, lerrokatzeko eta elementuen artean banatzeko modu eraginkorragoa ematea du helburu, baita haren tamaina ezezaguna eta/edo dinamikoa denean ere.</p>
+            <p>Diseinu malguaren atzean dagoen ideia nagusia edukiontziari bere elementuen zabalera/altuera (eta ordena) aldatzeko gaitasuna ematea da, erabilgarri dagoen espazioa hobeto betetzeko (pantaila-tamaina guztietara egokitzea). Edukiontzi malgu batek erabilgarri dagoen espazio librea betetzeko elementuak zabal ditzake, edo murriztu egin ditzake, gainezka ez egiteko.</p>
+            <div class="banaketaTxikia"></div>
+            <ul class="zerrendaArruntak">
+                <li>CSS propietate hauek erabiliko dituzu <strong>"item"</strong>  bat edo batzuk <strong>"edukiontzia"</strong> elementu baten barruan zentratzeko, horrela.
+                    <pre>
+                        <code>
+                            .edukiontzia {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                }
+                        </code>
+                    </pre>
+                </li>
+                <div class="banaketaTxikia"></div>
+                <li>"edukiontzia" elementuaren noranzkoa aldatuko duzu, honako propietate hauekin.
+                    <pre>
+                        <code>
+                            .edukiontzia {
+                                display: flex;
+                                flex-direction: column;
+                            }
+                        </code>
+                    </pre>
+                </li>
+                <div class="banaketaTxikia"></div>
+                <li>"edukiontzia" elementuaren barruko <strong> "item" </strong> elementuak tamainan doitzea nahi baduzu, hura handitzen edo koxkatzen denean, honako propietate hauek dituzu.
+                <pre>
+                    <code>
+                        .item {
+                            display: flex;
+                            flex-grow: 1;
+                            flex-shrink: 1;
+                            flex-basis: auto;
+                        
+                            /* Modu laburrean gauza bera */
+                            flex: 1 1 auto;
+                        }
+                    </code>
+                </pre></li>
+                <div class="banaketaTxikia"></div>
+                <li>Normalean <strong>padding</strong> eta <strong>margin</strong> erabili ohi ditugu elementuen artean tarteak ipintzeko, baina horien erabilerak tarte espezifiko bat zehazten du alde guztietan edo baten batean.
+                <pre>
+                    <code>
+                        .edukiontzia {
+                            display: flex;
+                            <strong>gap: 25px;</strong>
+                          
+                            /* Zutabea eta lerroa zehaztuz */
+                            <strong>row-gap: 25px;</strong>
+                            <strong>column-gap: 75px;</strong>
+                            
+                            /* Modu laburrean gauza bera */
+                            <strong>gap: 25px 75px;</strong> 
+                        }
+                    </code>
+                </pre></li>
+                <div class="banaketaTxikia"></div>
+            </ul>
+            </p> 
+                <div class="banaketaTxikia"></div>
+                <h3>Grid</h3>
+                <div class="banaketaTxikia"></div>
+                <p>Diseinu sistema bidimentsionala da, <strong>"laukietan</strong> " oinarritua, hau da, zutabeekin eta errenkadekin erabiltzen da. Laukiko elementuen jatorri-ordenak ez du axola, eta, beraz, oso erraza da <strong>Media Query</strong>-ekin berrantolatzea.</p>
+                    <ul class="zerrendaArruntak">
+                        <div class="banaketaTxikia"></div>
+                    <li><strong>Grid</strong>-ekin oso erraza da, honako propietate hauek erabiliko dituzu "item" bat edo batzuk "edukiontzia" elementu baten barruan zentratzeko.
+                        <pre>
+                            <code>
+                                .edukiontzia {
+                                    display: grid;
+                                    place-items: center;
+                                }
+                            </code>
+                        </pre>
+                    </li>
+                    <div class="banaketaTxikia"></div>
+                    <li>Gridek laukia 2 dimentsiotan aldatzeko aukera eskaintzen dizu. Kasu honetan, zutabeak, ardatz bertikala, zure gustura doitzea bilatzen baduzu, honako propietate hauek dituzu.
+                        <pre>
+                            <code>
+                                .edukiontzia {
+                                    display: grid;
+                                    grid-template-columns: 100px 2fr 1fr;
+                                }
+                            </code>
+                        </pre>
+                    </li>
+                    <div class="banaketaTxikia"></div>
+                    <li>Ardatz horizontalaren dimentsioa lantzea falta zaigu, errenkadak. Horretarako, honako propietate hauek dituzu.
+                        <pre>
+                            <code>
+                                .edukiontzia {
+                                    display: grid;
+                                    grid-template-rows: 1fr 2fr;
+                                }
+                            </code>
+                        </pre>
+                    </li>
+                    <div class="banaketaTxikia"></div>
+                    <li>Ez duzu hain lauki aspergarria egin behar, dinamismo pixka bat emango diozu. Banakako gelaxka bakoitzean balioak ezar ditzakezu, baita gelaxkak beste batzuekin gainjarrita ere; hori propietateekin lor dezakezu:
+                        <pre>
+                            <code>
+                                .edukiontzia {
+                                    display: grid;
+                                }
+                                
+                                .first {
+                                    grid-column-start: 1;
+                                    grid-column-end: 3;
+                                    grid-row-start: 1;
+                                    grid-row-end: 3;
+                                  
+                                    /* Laburki esanda lorpen bera */
+                                    grid-column: 1 / 3;
+                                    grid-row: 1 / 3;
+                                }
+                                
+                                .last {
+                                    grid-column-start: 1;
+                                    grid-column-end: 4;
+                                    grid-row-start: 4;
+                                    grid-row-end: 4;
+                                  
+                                    /* Laburki esanda lorpen bera */
+                                    grid-column: 1 / 4;
+                                    grid-row: 4 / 4;
+                                }
+                            </code>
+                        </pre>
+                        <p>Kasu horretan, ilarak eta zutabeak modu banatuan errepikatzea bilatuko duzu, eta, horregatik, propietate horiek erabiliko dituzu.</p>
+                        <div class="banaketaTxikia"></div>
+                        <pre>
+                            <code>
+                                .edukiontzia {
+                                    display: grid;
+                                    grid-template-columns: repeat(3, 1fr);
+                                    grid-template-rows: repeat(4, 1fr);
+                                }
+                            </code>
+                        </pre>
+                    </li>
+                </ul>
+                <div class="banaketaTxikia"></div>
+            <h3>Diseinu moldagarria</h3>
+            <div class="banaketaTxikia"></div>
+            <p>Diseinu moldagarria web-diseinuaren ikuspegi bat da, webgunearen edukia hainbat gailuren pantaila- eta leiho-tamaina desberdinetara egokitzen duena.</p>
+            <p>Adibidez, zure edukia mahaigaineko pantailetako zutabe desberdinetan bereizita egon liteke, diseinu hori egokitzeko bezain zabalak direlako.</p>
+            <p>Edukia hainbat zutabetan banatzen baduzu gailu mugikor batean, zaila izango da erabiltzaileek irakurtzea eta harekin elkarreragitea.</p>
+            <p>Diseinu moldagarria aukera ematen du zure edukitik eta diseinutik bereizitako diseinu ugari eskaintzeko gailu desberdinei, pantailaren tamainaren arabera.</p>
+            <div class="banaketaTxikia"></div>
+            <h4>Pantaila-tamainak</h4>
+            <ul class="zerrendaArruntak">
+                <li>Mugikorra: 360 x 640</li>
+                <li>Mugikorra: 375 x 667</li>
+                <li>Mugikorra: 360 x 720</li>
+                <li>iPhone X: 375 x 812</li>
+                <li>Pixel 2:411 x 731</li>
+                <li>Tableta: 768 x 1024</li>
+                <li>Ordenagailu eramangarri bat: 1366 x 768</li>
+                <li>Ordenagailu eramangarri bat edo bereizmen handiko idazmahai bat: 1920 x 1080</li>
+                <div class="banaketaTxikia"></div>
+            <p>Mugikorrerako lehen mailako diseinu-ikuspegia aukeratzen baduzu, oinarri gisa zutabe bakarra eta iturri-tamaina txikiagoak dituena, ez da beharrezkoa haustura-puntu mugikorrak sartzea – modelo espezifikoetarako diseinua optimizatu nahi ez baduzu behintzat.</p>
+
+        </article>
+       </section>
+<!-- Atalaren --------- GIDA DIDAKTIKOA  GIDA DIDAKTIKOA GIDA DIDAKTIKOA -akordiona-  ------ BUKA ------  -->
+</body>
+</html>
