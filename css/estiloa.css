@@ -689,6 +689,14 @@ lengoaiaBotoia:hover {
     grid-template-columns: auto;
     gap: .5rem;
   }
+  .saioAtalak-bi{
+    display: grid;
+    top: 3.5em;
+    grid-template-columns: auto;
+    gap: 1.5rem;
+    text-align: left;
+
+  }
   header{
     height: 250px;
   }
@@ -740,27 +748,12 @@ lengoaiaBotoia:hover {
   }
 }
 @media (max-width: 720px) {
-  .saioAtalak-lau{
-    display: grid;
-    top: 1.5em;
-    grid-template-columns: auto;
-    gap: .5rem;
-  }
     .goiburua .titulu-nagusia h1{
       font-size: 1em;
     }
     .goiburua .prais-ikonoa img{
       align-content: center;
       width: 80px;
-    }
-    .saioAtalak-bi{
-      display: grid;
-      grid-template-columns: auto;
-      gap: .5rem;
-      top: 8em;
-      left: 5px;
-      width: 16em;
-      height: 8em;
     }
   pre{
     width: 100%;
