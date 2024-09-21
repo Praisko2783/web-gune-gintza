@@ -1,69 +1,192 @@
 <!DOCTYPE html>
-<html lang="eus">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/estiloa.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-    <!-- Atalaren --------- GIDA DIDAKTIKOA  GIDA DIDAKTIKOA GIDA DIDAKTIKOA -akordiona-  ------ HASI ------  -->
-    <section class="gidakordiona" id="html-gidadida">
-        <article class="ikasgaia">
-            <div class="azpitituluak">
-                <h2><strong>Atalaren gida didaktikoa (CSS)</strong></h2>
-            </div>
-             <div class="banaketaTxikia"></div>
-        <div id="gida-HTML" >
-          <p>Estilo Orriei <strong>(CSS, Cascading Style Sheets)</strong> buruzko oinarrizko jakintzagaiak ikusiko ditugu CSSri eskaitako lehen saio honetan. Saioan zehar CSSren oinarriak azaltzen dira modu teoriko eta praktikoan. Gainera, lengoaia hori modu egokian nola erabili ikasiko dugu mantentzeko eta optimizatzeko errazak izango diren webguneak sortzeko.
-            <ul class="zerrendaArruntak">
-                <li>CSSren erabileraren arrazoiak. Zergatik sortu zen eta nola erabili behar den.</li>
-                <li>CSSren sintsaxia. CSS lerroan, orriburuan eta aparteko fitxategian.</li>
-                <li>Hautatzailea, propietatea eta balioa zer diren eta nola erabili behar diren.</li>
-                <li>Klaseak (.) eta id-ak (#)</li>
-                <li>Sasiklaseak eta sasielementuak</li>
-            </ul>
-            </p> 
-            <div class="banaketaTxikia"></div>
-                <h4>CSSren erabilera zuzenak hainbat abantaila erantziko dio gure webguneari:</h4>
-                    <ul class="zerrendaArruntak">
-                    <li>Lehenik eta behin, errazagoa da webgune bat mantentzea eta eguneratzea. Izan ere, kode lerro baten aldaketak webgune osoari eragiten dio. Horrela, garapen- eta mantentze-kostuak murrizten dira.</li>
-                    <li>CSSk web orri bat pertsonalizatzeko aukera emango dizu, edukia formatutik bereizita. Garatzeko nahiko azkarra da eta zure lekua azkarrago deskargatuko da.
-                    </li>
-                    <li>Era berean, ikus daiteke lengoaia informatiko hori erabiliz koherentzia handiagoa dagoela webgune baten diseinuan. Izan ere, estiloa modu koherentean aplikatzen da.</li>
-                    <li>Azkenik, CSSk zure webgunearen kokapena errazten du bilaketa-motorretan.</li>
-                </ul>
-                <div class="banaketaTxikia"></div>
-            <h5>Saioan hiru atal bereizi dira:</h5>
-            <div class="banaketaTxikia"></div>
-            <ul class="saioAzpiatalak">
-                <li><p><strong>Estiloak: </strong> Estiloak atxitzen ikasiko dugu, urjauzi orriaren kontzeptua zertan den eta adibide batzuk medio zer-nola gauzatzen den pantailan.<br>
-                    Bideoa: Idatziz emandakoa modu praktikoan erakutsiko da ikusentzunezko batean.<br>
-                    Azterketa: Irakatsitakoa indartzeko azterketatxoa egingo da, ikusitakoaren gainean.
-                </p></li>
-                <li><p><strong>Erreferentziak: </strong> Izenak, Atributuak eta Seudoklaseak nola erabili behar diren eta zertarako ikasiko dugu.<br>
-                    Bideoa: Idatziz emandakoa modu praktikoan erakutsiko da ikusentzunezko batean.<br>
-                    Azterketa: Irakatsitakoa indartzeko azterketatxoa egingo da, ikusitakoaren gainean.</p></li>
-                </p></li>
-                <li><p><strong>Propietateak: </strong>  Testua / Kolorea / Tamaina / Atzealdea izango dira lehen azpiatalean landuko diren ikasgaiak.
-                    Ertzak / Itzalak / Gradienteak / Iragazkiak bigarren azpiatalean landuko ditugu.
-                    Eraldaketak / Trantsizioak / Animazioak hirugarrenean.
-                    Azpiatal horietako bakoitzak bere ikus-entzunezkoa izango du idatziz emandakoa modu praktikoan ikusteko.<br>
-                    Atala amaitzeko azterketatxoa egingo dugu ikasitakoa eguneratzeko.<br>
-                    </p></li>
-            </ul>
-          
-          <h5>Gauzak horrela atal hau amaitzean ikaslea gai izango da:</h5>
-          <ul class="saioAzpiatalak">
-            <li><p>Edukien erakusteak duen garrantziaz jabetzeko dela erakargarritasun aldetik, dela webgunearen eraginkortasunaren aldetik.</p></li>
-            <li><p>CSSren sintaxian erabiltzen diren terminoak bereizteko eta haien zeregina ezagutzeko.</p></li>
-            <li><p>CSS erabiltzerakoan praktika eta ekimen egokiak erabiltzeko unean unean</p></li>
-            <li><p>Web aplikazio baten interfazean multimedia-osagaiak modu koherenteak integratzeko.</p></li>
-          </ul>
-        </div>
+<html lang="en">
 
-        </article>
-       </section>
-<!-- Atalaren --------- GIDA DIDAKTIKOA  GIDA DIDAKTIKOA GIDA DIDAKTIKOA -akordiona-  ------ BUKA ------  -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/estiloa.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>CSS oinarriak ikasgaia</title>
+</head>
+
+<body>
+  <!-- Goiburukoa: gunearen titulua eta praiskopediaren ikonoa   HASI -->
+  <header>
+    <div class="goiburua">
+      <div class="prais-ikonoa">
+        <a href="../../index.html"><img src="../../irudiak/AZALA/praiskologoGardena.png" alt="Praiskopediaren logoa"
+            class="praisikonoa"></a>
+      </div>
+      <div class="titulu-nagusia">
+        <h1><a href="../../index.html">web-gune-gintza</a></h1>
+      </div>
+
+    </div>
+  </header>
+  <!-- Goiburukoa: gunearen titulua eta praiskopediaren ikonoa   BUKA -->
+  <!-- Goiburukoa: ikasgaiaren titulua  HASI -->
+  <h2 style="text-align: center;"><strong>Cascade Style Sheets (CSS)</strong></h2>
+  <!-- Goiburukoa: ikasgaiaren titulua  BUKA -->
+  <!-- Ikasgaiaren atalen aurkibidea -HTML ikasgaiarena- -->
+  <div class="ikasgaia">
+    <!-- Ezkerreko zutabea AURKIBIDEA EZKERREKOA -akordiona-  ------ HASI ------  -->
+    <div class="saioAtalak-lau">
+      <div class="akordiona">
+        <button class="accordion gidontziburua">
+          <h5>Estiloak <br> <i class="fa fa-arrow-circle-o-down"></i>&nbsp;<i class="fa fa-arrow-circle-o-up"></i></h5>
+        </button>
+        <div class="akordeoiontzia">
+          <div id="egitura-HTML" class="garrantzi-oinarrizko">
+            <a href="estiloak-estiloarena.html" target="egitura"><i class="fa fa-book"></i>
+              <ul>
+                <li>Estiloak</li>
+              </ul>
+            </a><br>
+            <a href="estiloak-urjauziarena.html" target="egitura"><i class="fa fa-book"></i>
+              <ul>
+                <li>Urjauzia</li>
+              </ul>
+            </a><br>
+            <a href="estiloak-bideoa.html" target="egitura"><i class="fa fa-television"></i>
+              <ul>
+                <li>Bideoa</li>
+              </ul>
+            </a><br>
+            <a href="estiloak-azterketa.html" target="egitura"><i class="fa fa-pagelines"></i>
+              <ul>
+                <li>Azterketa</li>
+              </ul>
+            </a><br>
+          </div>
+        </div>
+      </div>
+      <!-- Erdialdeko zutabea AURKIBIDEA ERDIALDEKOA -akordiona-  ------ HASI ------  -->
+      <div class="akordiona">
+        <button class="accordion gidontziburua">
+          <h5>Erreferentziak<br> <i class="fa fa-arrow-circle-o-down"></i>&nbsp;<i class="fa fa-arrow-circle-o-up"></i>
+          </h5>
+        </button>
+        <div class="akordeoiontzia">
+          <div id="egitura-HTML" class="garrantzi-oinarrizko">
+            <a href="erreferentziak-izena.html" target="egitura"><i class="fa fa-book"></i>
+              <ul>
+                <li>Izenak</li>
+              </ul>
+            </a><br>
+            <a href="erreferentziak-atributuak.html" target="egitura"><i class="fa fa-book"></i>
+              <ul>
+                <li>Atributuak</li>
+              </ul>
+            </a><br>
+            <a href="erreferentziak-sasiklaseak.html" target="egitura"><i class="fa fa-book"></i>
+              <ul>
+                <li>Sasiklaseak</li>
+              </ul>
+            </a><br>
+            <a href="erreferentziak-bideoa.html" target="egitura"><i class="fa fa-television"></i>
+              <ul>
+                <li>Bideoa</li>
+              </ul>
+            </a><br>
+            <a href="erreferentziak-azterketa.html" target="egitura"><i class="fa fa-pagelines"></i>
+              <ul>
+                <li>Azterketa</li>
+              </ul>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Eskuineko zutabea AURKIBIDEA ESKUINEKOA -akordiona-  ------ HASI ------  -->
+      <div class="akordiona">
+        <button class="accordion gidontziburua">
+          <h5>Propietateak<br><i class="fa fa-arrow-circle-o-down"></i>&nbsp;<i class="fa fa-arrow-circle-o-up"></i>
+          </h5>
+        </button>
+        <div class="akordeoiontzia">
+          <div id="egitura-HTML" class="garrantzi-oinarrizko">
+            <a href="propietateak-testuak.html" target="egitura"><i class="fa fa-book"></i>
+                <ul>
+                  <li>Testua. Kolorea. Tamaina. Hondoa</li>
+                </ul></a><br>
+            <a href="propietateak-ertzak.html" target="egitura"><i class="fa fa-book"></i>
+                <ul>
+                  <li>Ertzak. Itzalak. Gradienteak. Iragazkiak</li>
+                </ul></a><br>
+            <a href="propietateak-eraldaketak.html" target="egitura"><i class="fa fa-book"></i>
+              <ul>
+                <li>Eraldaketak. Trantsizioak. Animazioak</li>
+              </ul>
+            </a><br>
+            <a href="propietateak-bideoa.html" target="egitura"><i class="fa fa-television"></i>
+              <ul>
+                <li>Bideoa</li>
+              </ul>
+            </a><br>
+            <a href="propietateak-azterketa.html" target="egitura"><i class="fa fa-pagelines"></i>
+              <ul>
+                <li>Azterketa</li>
+              </ul>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- AURKIBIDEA ZUTABEAK -akordiona-  ------ BUKA ------  -->
+  <!-- IFRAME-a ------------------  ------ HASI ------  -->
+  <div class="ikasgai-leihoa">
+    <iframe src="ikascss-gidadida.html" name="egitura" width="100%" height="1500"></iframe>
+  </div>
+  <!-- IFRAME-A --------------------------BUKA -------------- -->
+
+  <!-- GORA IGOTZEKO BOTOI GORRIA BEHEAN ESKUINEAN hasi -------------- -->
+  <span class="ir-arriba icon-arrow-up2"></span>
+  <!-- End page content -->
+  <button class="toTop" id="toTop">
+    <svg viewBox="0 0 24 24">
+      <path d="m4 16 8-8 8 8"></path>
+    </svg>
+  </button>
+  <!-- GORA IGOTZEKO BOTOI GORRIA BAHEAN ESKUINEAN buka -------------- -->
+  <!-- Orriaren oina -----'FOOTER'------HASI   -->
+  <footer>
+    <h3>OINEAN OINETAKOA</h3>
+    <a href="https://praiskopedia.eus" target="_blank">&copy; Praiskopedia</a>
+  </footer>
+  <!-- Orriaren oina -----'FOOTER'------BUKA   -->
 </body>
+
 </html>
+<!-- HEMEN BUKATZEN DA 'web-ikas' orrialdearen HTMLa -->
+
+<!-- HEMEN DOA menua eta gorako botoia maneiatzeko JavaScript-a <script> eta </script> etiketen artean ----------- HASI -->
+<script>
+  //Gorako botoia agerrarazteko, ezkutatzeko eta klikatuz orriaren goialdera igotzeko kodea
+  const toTop = (() => {
+    let button = document.getElementById("toTop");
+    window.onscroll = () => {
+      button.classList[
+        (document.documentElement.scrollTop > 200) ? "add" : "remove"
+      ]("is-visible")
+    }
+    button.onclick = () => {
+      window.scrollTo({
+        top: 0, behavior: "smooth"
+      })
+    }
+  })();
+</script>
+<!-- Gorako botoia maneiatzeko JavaScript-a, <script> eta </script> etiketen artean doana, ----------- BUKA -->
+
+<!-- Kanpoko fitxategiak erabili ahal izateko estekak (JavaScript-ak orria bukaeran idatzi ohi dira, sistemak 
+HTML eta CSS guztia irakurri ostean irakur ditzan) -------------- -->
+<script src="../../js/vendor/galdetegia.js"></script>
+<script src="../../js/vendor/galdetegiaForm.js"></script>
+<script src="../../js/vendor/kudeaketa.js"></script>
+<script src="../../js/vendor/kudeaketaForm.js"></script>
+<script src="../../js/vendor/kudeatuAkordionak.js"></script>
+<script src="../../js/vendor/kudeatuAzterketakHTML.js"></script>
+<script src="../../js/vendor/lengoaiaSkripta.js"></script>
