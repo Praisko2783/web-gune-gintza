@@ -72,7 +72,7 @@ header span:hover{
 
 /*gorputzeko erregela orokorrak*/
 main{
-  width: 50%;
+  width: 60%;
   display: block;
   transition: margin-left .4s;
   margin: 0 auto;
@@ -83,14 +83,13 @@ section article{
   margin-bottom: 8px !important;
 }
 pre{
-  width: 50%;
+  width: 70%;
   margin:0 auto;
   border:1px darkblue dashed;
   text-align: left;
   overflow-x: scroll;
   overflow-y: scroll;
   height: 20em;
-  padding:10px;
 }
 h2{
   font-family: monospace;
@@ -265,6 +264,51 @@ margin-top: 1rem;
 /*'section' atalaren goiburua*/
 
 /*ireki-itxi egiten duen menu hegalaria ------------HASI---- */
+
+.saioAtalak-lau{
+  position: absolute;
+  top: 8rem;
+  left: 5px;
+  width: 50%;
+}
+
+.saioAtalak-lau #header {
+  margin:auto;
+  width:500px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.saioAtalak-lau ul, ol {
+  list-style:none;
+}
+.saioAtalak-lau .nav > li {
+  float:left;
+}
+.saioAtalak-lau .nav li a {
+  background-color:#030c88;
+  color:#fff;
+  text-decoration:none;
+  padding:10px 18px;
+  display:block;
+}
+.saioAtalak-lau .nav li a:hover {
+  background-color:#0470b7;
+}
+.saioAtalak-lau .nav li ul {
+  display:none;
+  position:absolute;
+  min-width:140px;
+}
+.saioAtalak-lau .nav li:hover > ul {
+  display:block;
+}
+.saioAtalak-lau .nav li ul li {
+  position:relative;
+}
+.saioAtalak-lau .nav li ul li ul {
+  right:-140px;
+  top:0px;
+}
+
 .nabimenua{
   display:none;
   z-index:1;
@@ -493,16 +537,6 @@ footer a:hover{
     background: #ccc;
   }
 /*Ikasgaietako gida didaktikoaren akordiona-------*/
-.saioAtalak-lau{
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  gap: 1rem;
-  position: absolute;
-  top: 6rem;
-  left: 5px;
-  width: 30%;
-  height: 4em;
-}
 .saioAtalak-bi{
   display: grid;
   grid-template-columns: auto auto auto auto auto auto;
@@ -684,12 +718,7 @@ lengoaiaBotoia:hover {
   }
   
 @media (max-width: 1200px) {
-  .saioAtalak-lau{
-    display: grid;
-    top: 1.5em;
-    grid-template-columns: auto;
-    gap: .5rem;
-  }
+
   .saioAtalak-bi{
     display: grid;
     top: 3.5em;
@@ -699,7 +728,7 @@ lengoaiaBotoia:hover {
 
   }
   header{
-    height: 250px;
+    height: 225px;
   }
   .ikasgai-leihoa{
     width:85%;
