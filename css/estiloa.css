@@ -94,13 +94,14 @@ pre{
 h2{
   font-family: monospace;
   font-size: 34px;
-  padding-top: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   color:rgb(2, 2, 130);
 }
 h3{
   font-family: monospace;
   font-size: 30px;
-  padding-top: 25px;
+  padding-top: 28px;
   color:rgb(2, 2, 130);
 }
 h4{
@@ -115,7 +116,7 @@ h5{
 }
 h6{
   text-indent: 1em;
-  font-size: 14px;
+  font-size: 18px;
   color:rgb(2, 2, 130);
 }
 p{
@@ -124,7 +125,7 @@ p{
   text-indent: 1em;
   margin-bottom:10px;
   text-align: justify;
-  font-size: 16px;
+  font-size: 18px;
 }
 /*Goi goiko ikonoari dagzokionak.......*/
 .praisikon{
@@ -228,25 +229,36 @@ text-align: center;
 .zerrendaArruntak{
   padding-left: 5rem;
 }
+.zerrendaArruntak li{
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 .zerrendaArruntak li p{
   text-indent: 0px;
 }
 /*Ikasgaien 'section' atalak*/
 /*'section' atalaren goiburua*/
-.ikasgaia{
-  margin-top:1rem;
-  margin-bottom: 1rem;
-  padding:1rem;
-}
+
 .ikasgaiBurua{
   text-align: center;
 }
 .ikasgaiBurua h2{
-  margin-bottom: .6rem;
-  font-size: 50px;
+  font-size: 70px;
 }
 .ikasgaiBurua .saioAtalak{
   text-align: center;
+}
+.ikasgai-leihoa{
+  width:75%;
+  margin: 0 auto;
+  /*background: rgba(50, 50, 250, 0.2);*/
+  box-shadow:1px 1px 8px 8px rgba(50, 50, 250, 0.2);
+  padding: .3rem;
+}
+.ikasgai-leihoa iframe{
+  padding: 1rem;
+  border: none;
 }
 
 /*'section' ataleko artikuluaren burua*/
@@ -269,12 +281,12 @@ margin-top: 1rem;
   position: absolute;
   top: 8rem;
   left: 5px;
-  width: 50%;
+  width: 40%;
 }
 
 .saioAtalak-lau #header {
   margin:auto;
-  width:500px;
+  width:600px;
   font-family:Arial, Helvetica, sans-serif;
 }
 .saioAtalak-lau ul, ol {
@@ -518,13 +530,7 @@ footer a:hover{
   ::-webkit-scrollbar {
     display: none;
 }
-.ikasgai-leihoa{
-  width:75%;
-  margin: 0 auto;
-  background: rgba(50, 50, 250, 0.2);
-  box-shadow:1px 1px 8px 8px rgba(50, 50, 250, 0.2);
-  padding: .3rem;
-}
+
   /*---------------Azterketak. Botoia, bai bideoarena, bai azterketarena*/
   .azterMartxa{
     cursor: pointer;
