@@ -24,7 +24,7 @@ header{
   text-align: center;
   background: #ccc;
   display: block;
-  height: 175px;
+  height: 200px;
 }
 /*goiburua orri guztietan berdina 
 
@@ -43,7 +43,7 @@ header span:hover{
   color:#176802;
 }*/
 .goiburua{
-  float:right;
+  text-align: center;
   /*display: grid;
   grid-template-columns: auto auto;
   gap: 10px;*/
@@ -62,11 +62,11 @@ header span:hover{
   color:#176802;
 }
 .goiburua .prais-ikonoa{
-  margin-top:1em;
+  margin-top:0;
 }
 .goiburua .prais-ikonoa img{
   align-content: center;
-  width: 100px;
+  width: 200px;
 }
 /*Goiburua ------------------- HONAINO */
 
@@ -86,7 +86,6 @@ pre{
   width: 70%;
   margin:0 auto;
   border:1px darkblue dashed;
-  text-align: left;
   overflow-x: scroll;
   overflow-y: scroll;
   height: 20em;
@@ -239,7 +238,9 @@ text-align: center;
 }
 /*Ikasgaien 'section' atalak*/
 /*'section' atalaren goiburua*/
-
+.ikasgaia{
+  padding: 1rem;
+}
 .ikasgaiBurua{
   text-align: center;
 }
@@ -250,16 +251,20 @@ text-align: center;
   text-align: center;
 }
 .ikasgai-leihoa{
-  width:75%;
+  width:100%;
   margin: 0 auto;
   /*background: rgba(50, 50, 250, 0.2);*/
   box-shadow:1px 1px 8px 8px rgba(50, 50, 250, 0.2);
-  padding: .3rem;
+  padding: 1rem;
 }
 .ikasgai-leihoa iframe{
-  padding: 1rem;
   border: none;
 }
+.ikasgai-leihoa iframe::-webkit-scrollbar {
+  display: none;
+  border: none;
+}
+
 
 /*'section' ataleko artikuluaren burua*/
 .saioAzpiatalak{
@@ -278,15 +283,13 @@ margin-top: 1rem;
 /*ireki-itxi egiten duen menu hegalaria ------------HASI---- */
 
 .saioAtalak-lau{
-  position: absolute;
-  top: 8rem;
-  left: 5px;
-  width: 40%;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .saioAtalak-lau #header {
-  margin:auto;
-  width:600px;
+  margin:0 auto;
   font-family:Arial, Helvetica, sans-serif;
 }
 .saioAtalak-lau ul, ol {
@@ -527,9 +530,6 @@ footer a:hover{
   .bideoGidoia{
     padding:1.5rem;
   }
-  ::-webkit-scrollbar {
-    display: none;
-}
 
   /*---------------Azterketak. Botoia, bai bideoarena, bai azterketarena*/
   .azterMartxa{
@@ -791,9 +791,6 @@ lengoaiaBotoia:hover {
       align-content: center;
       width: 80px;
     }
-  pre{
-    width: 100%;
-  }
   .ikasgai-leihoa{
     width:100%;
   }
