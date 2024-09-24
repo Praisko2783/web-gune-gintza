@@ -729,7 +729,7 @@ lengoaiaBotoia:hover {
     text-align: left;
   }
   header{
-    height: 225px;
+    height: 200px;
   }
    header h1{
     font-size: 55px;
@@ -766,22 +766,22 @@ lengoaiaBotoia:hover {
     margin-right: 10px;
   }
   .praisikon{
-    width: 150px;
+    width: 200px;
   }
   .praisikonoa{
-    width: 150px;
+    width: 200px;
   }
   .praisikonoa:hover{
-    width: 175px;
+    width: 205px;
   }
 }
 @media (max-width: 720px) {
     .goiburua .titulu-nagusia h1{
       font-size: 1em;
     }
-    .goiburua .prais-ikonoa img{
+    .goiburua .prais-ikonoa{
       align-content: center;
-      width: 80px;
+      width: 150px;
     }
   .ikasgai-leihoa{
     width:100%;
