@@ -67,6 +67,8 @@ header span:hover{
 .goiburua .prais-ikonoa img{
   align-content: center;
   width: 200px;
+ height:200px;
+	
 }
 /*Goiburua ------------------- HONAINO */
 
@@ -126,16 +128,7 @@ p{
   text-align: justify;
   font-size: 18px;
 }
-/*Goi goiko ikonoari dagzokionak.......*/
-.praisikon{
-  width: 8rem;
-}
-.praisikonoa{
-  width: 8rem;
-}
-.praisikonoa:hover{
-  width: 7rem;
-}
+
 /*Azpitituluei dagozkienak.......*/
 .azpitituluak{
   width: 100%;
