@@ -760,9 +760,11 @@ lengoaiaBotoia:hover {
   }
   .praisikon{
     width: 150px;
+	  height: 150px;
   }
   .praisikonoa{
     width: 150px;
+	  height: 150px;
   }
   .praisikonoa:hover{
     border:solid 2px #336699;
@@ -775,6 +777,7 @@ lengoaiaBotoia:hover {
     .goiburua .prais-ikonoa img{
       align-content: center;
       width: 150px;
+	    height: 150px;
     }
   .ikasgai-leihoa{
     width:100%;
