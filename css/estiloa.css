@@ -729,7 +729,7 @@ lengoaiaBotoia:hover {
     text-align: left;
   }
   header{
-    height: 200px;
+    height: 150px;
   }
    header h1{
     font-size: 55px;
@@ -776,6 +776,9 @@ lengoaiaBotoia:hover {
   }
 }
 @media (max-width: 720px) {
+	header{
+		height:100px;
+	}
     .goiburua .titulu-nagusia h1{
       font-size: 1em;
     }
