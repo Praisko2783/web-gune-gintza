@@ -754,7 +754,7 @@ lengoaiaBotoia:hover {
     grid-template-columns: repeat(1, 1fr);
   }
   .gidagaia img{
-    width: 30%;
+    width: 100%;
   }
   .galdetegia{
     background: #ccc;
