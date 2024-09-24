@@ -769,10 +769,10 @@ lengoaiaBotoia:hover {
     width: 150px;
   }
   .praisikonoa{
-    width: 150px;
+    width: 200px;
   }
   .praisikonoa:hover{
-    width: 175px;
+    border:solid 2px #336699;
   }
 }
 @media (max-width: 720px) {
@@ -781,7 +781,7 @@ lengoaiaBotoia:hover {
     }
     .goiburua .prais-ikonoa img{
       align-content: center;
-      width: 80px;
+      width: 200px;
     }
   .ikasgai-leihoa{
     width:100%;
