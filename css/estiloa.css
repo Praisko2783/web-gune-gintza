@@ -729,7 +729,7 @@ lengoaiaBotoia:hover {
     text-align: left;
   }
   header{
-    height: 150px;
+    height: 225px;
   }
    header h1{
     font-size: 55px;
@@ -766,28 +766,28 @@ lengoaiaBotoia:hover {
     margin-right: 10px;
   }
   .praisikon{
-    width: 200px;
+    width: 150px;
   }
   .praisikonoa{
     width: 150px;
   }
   .praisikonoa:hover{
-    width: 155px;
+    width: 175px;
   }
 }
 @media (max-width: 720px) {
     .goiburua .titulu-nagusia h1{
       font-size: 1em;
     }
-    .goiburua .prais-ikonoa{
+    .goiburua .prais-ikonoa img{
       align-content: center;
-      width: 150px;
+      width: 80px;
     }
   .ikasgai-leihoa{
     width:100%;
   }
   img{
-    width: 30%;
+    width: 100%;
   }
   .saioAtalak{
     display: grid;
@@ -800,7 +800,7 @@ lengoaiaBotoia:hover {
     background-color: #2196F3;
   }
   .praisikonoa{
-    width: 150px;
+    width: 5rem;
   }
   header h1{
     font-size: 35px;
@@ -850,13 +850,13 @@ lengoaiaBotoia:hover {
     position: fixed; right: 10rem; bottom: 10rem; z-index: 9999;
   }
   .praisikon{
-    width: 150px;
+    width: 100px;
   }
   .praisikonoa{
-    width: 150px;
+    width: 100px;
   }
   .praisikonoa:hover{
-    width: 155px;
+    width: 100px;
   }
 }
 
