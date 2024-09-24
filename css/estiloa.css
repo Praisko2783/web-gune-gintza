@@ -259,12 +259,8 @@ text-align: center;
 }
 .ikasgai-leihoa iframe{
   border: none;
+  width:100%;
 }
-.ikasgai-leihoa iframe::-webkit-scrollbar {
-  display: none;
-  border: none;
-}
-
 
 /*'section' ataleko artikuluaren burua*/
 .saioAzpiatalak{
@@ -731,15 +727,11 @@ lengoaiaBotoia:hover {
     grid-template-columns: auto;
     gap: 1.5rem;
     text-align: left;
-
   }
   header{
     height: 225px;
   }
-  .ikasgai-leihoa{
-    width:85%;
-  }
-  header h1{
+   header h1{
     font-size: 55px;
     font-weight: 600;
     }
