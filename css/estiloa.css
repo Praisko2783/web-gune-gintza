@@ -729,7 +729,7 @@ lengoaiaBotoia:hover {
     text-align: left;
   }
   header{
-    height: 100px;
+    height: 150px;
   }
    header h1{
     font-size: 55px;
@@ -769,7 +769,7 @@ lengoaiaBotoia:hover {
     width: 150px;
   }
   .praisikonoa{
-    width: 200px;
+    width: 150px;
   }
   .praisikonoa:hover{
     border:solid 2px #336699;
@@ -781,7 +781,7 @@ lengoaiaBotoia:hover {
     }
     .goiburua .prais-ikonoa img{
       align-content: center;
-      width: 200px;
+      width: 150px;
     }
   .ikasgai-leihoa{
     width:100%;
@@ -850,13 +850,13 @@ lengoaiaBotoia:hover {
     position: fixed; right: 10rem; bottom: 10rem; z-index: 9999;
   }
   .praisikon{
-    width: 100px;
+    width: 150px;
   }
   .praisikonoa{
-    width: 100px;
+    width: 150px;
   }
   .praisikonoa:hover{
-    width: 100px;
+    border:solid 1px #336699;
   }
 }
 
