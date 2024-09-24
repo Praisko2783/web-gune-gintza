@@ -729,7 +729,7 @@ lengoaiaBotoia:hover {
     text-align: left;
   }
   header{
-    height: 200px;
+    height: 150px;
   }
    header h1{
     font-size: 55px;
@@ -769,10 +769,10 @@ lengoaiaBotoia:hover {
     width: 200px;
   }
   .praisikonoa{
-    width: 200px;
+    width: 150px;
   }
   .praisikonoa:hover{
-    width: 205px;
+    width: 155px;
   }
 }
 @media (max-width: 720px) {
@@ -787,7 +787,7 @@ lengoaiaBotoia:hover {
     width:100%;
   }
   img{
-    width: 100%;
+    width: 30%;
   }
   .saioAtalak{
     display: grid;
@@ -800,7 +800,7 @@ lengoaiaBotoia:hover {
     background-color: #2196F3;
   }
   .praisikonoa{
-    width: 5rem;
+    width: 150px;
   }
   header h1{
     font-size: 35px;
@@ -850,13 +850,13 @@ lengoaiaBotoia:hover {
     position: fixed; right: 10rem; bottom: 10rem; z-index: 9999;
   }
   .praisikon{
-    width: 100px;
+    width: 150px;
   }
   .praisikonoa{
-    width: 100px;
+    width: 150px;
   }
   .praisikonoa:hover{
-    width: 100px;
+    width: 155px;
   }
 }
 
