@@ -67,8 +67,6 @@ header span:hover{
 .goiburua .prais-ikonoa img{
   align-content: center;
   width: 200px;
- height:200px;
-	
 }
 /*Goiburua ------------------- HONAINO */
 
@@ -128,7 +126,16 @@ p{
   text-align: justify;
   font-size: 18px;
 }
-
+/*Goi goiko ikonoari dagzokionak.......*/
+.praisikon{
+  width: 8rem;
+}
+.praisikonoa{
+  width: 8rem;
+}
+.praisikonoa:hover{
+  width: 7rem;
+}
 /*Azpitituluei dagozkienak.......*/
 .azpitituluak{
   width: 100%;
@@ -722,7 +729,7 @@ lengoaiaBotoia:hover {
     text-align: left;
   }
   header{
-    height: 150px;
+    height: 225px;
   }
    header h1{
     font-size: 55px;
@@ -747,7 +754,7 @@ lengoaiaBotoia:hover {
     grid-template-columns: repeat(1, 1fr);
   }
   .gidagaia img{
-    width: 100%;
+    width: 30%;
   }
   .galdetegia{
     background: #ccc;
@@ -760,14 +767,12 @@ lengoaiaBotoia:hover {
   }
   .praisikon{
     width: 150px;
-	  height: 150px;
   }
   .praisikonoa{
     width: 150px;
-	  height: 150px;
   }
   .praisikonoa:hover{
-    border:solid 2px #336699;
+    width: 175px;
   }
 }
 @media (max-width: 720px) {
@@ -776,8 +781,7 @@ lengoaiaBotoia:hover {
     }
     .goiburua .prais-ikonoa img{
       align-content: center;
-      width: 150px;
-	    height: 150px;
+      width: 80px;
     }
   .ikasgai-leihoa{
     width:100%;
@@ -846,13 +850,13 @@ lengoaiaBotoia:hover {
     position: fixed; right: 10rem; bottom: 10rem; z-index: 9999;
   }
   .praisikon{
-    width: 150px;
+    width: 100px;
   }
   .praisikonoa{
-    width: 150px;
+    width: 100px;
   }
   .praisikonoa:hover{
-    border:solid 1px #336699;
+    width: 100px;
   }
 }
 
