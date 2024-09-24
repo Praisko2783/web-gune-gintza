@@ -5,18 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/estiloa.css">
     <link rel="stylesheet" href="../../css/bikoteEstiloa.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <header>
+    <div class="azterburua">
     <h1>Eraman adierazpenak bakoitza bere kutxara</h1>
     <div class="counter">
         Saiakera hutsalak: <span id="failed-attempts">0</span>
         <p id="emaitzarena"></p>
-        <p id="azalpenarena"></p>
     </div>
-</header>
+</div>
     <section>
         <div class="container">
                 <!-- Columnas para soltar las expresiones -->
@@ -51,9 +49,13 @@
                 <div class="expression" draggable="true" data-type="css">color: red;</div>
                 <div class="expression" draggable="true" data-type="js">console.log('test');</div>
             </div>
+            <p id="azalpenarena"></p>
         </div>
+        
     </section>
+
 </body>
+  
 <!-- Kanpoko fitxategiak erabili ahal izateko estekak (JavaScript-ak orria bukaeran idatzi ohi dira, sistemak 
 HTML eta CSS guztia irakurri ostean irakur ditzan) -------------- -->
 <script src="../../js/vendor/bikoteKudeake.js"></script>
