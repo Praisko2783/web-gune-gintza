@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Webgunegintza</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../css/estiloa.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="oro-helburuak">
+    <div class="banaketaTxikia"></div>
+    <!-- HELBURUAK ..............     -->
+    <h3 id="oro-helburuak">Heziketa-zikloaren helburu orokorrak:</h3>
+    <div class="banaketaTxikia"></div>
+    <ul type="circle" class="zerrendaArruntak">
+      <li>Markatzeko lengoaiak eta web-estandarrak erabiltzea, web-aplikazioetan interfazeak garatzeko.</li>
+      <li>Lengoaiak, objektuak eta tresnak erabiltzea, eta garatzeko zehaztapenak interpretatzea.</li>
+      <li>Lengoaiak, objektuak eta tresnak hautatzea, eta datu-baseetarako sarbideen zehaztapenak interpretatzea.</li>
+      <li>Talde-laneko testuinguruetan lidergo, motibazio, gainbegiratze eta komunikazioko teknikak garatzea taldekideen
+        arteko komunikazioa errazteko.</li>
+      <li>Garatutako software-osagaiak egiaztatzea, zehaztapenak aztertuta, proba-plana osatzeko.</li>
+      <li>Moduluak instalatzea, eta horien egitura eta funtzionaltasuna aztertzea, aplikazio-zerbitzariak kudeatzeko.
+      </li>
+      <li>Tresna espezifikoak erabiltzea, ezarritako estandarrak betez, prozesuen dokumentazioari eustea.</li>
+      <li>Segurtasun-beharrak identifikatzea eta aurrez ezarritako plana egiaztatzea, lotutako teknikak eta prozedurak
+        aplikatzeko.</li>
+      <li>Interfaze baten elkarreragina, irisgarritasuna eta erabilgarritasuna ebaluatzea, aplikazioaren interfazean
+        multimedia-osagaiak integratzeko.</li>
+      <li>Irisgarritasun unibertsalari eta guztiontzako diseinuari erantzuteko beharrezkoak diren lanbide-ekintzak
+        identifikatzea eta proposatzea.</li>
+    </ol>
+  </div>
+
+  <!-- HTML saila ----- ikasgaien aurkibidea ---------------------  BUKA-->
+</body>
+
+</html>
+
+<!-- HEMEN DOA menua eta gorako botoia maneiatzeko JavaScript-a <script> eta </script> etiketen artean ----------- HASI -->
+<script>
+  // Menua irekitzeko eta ixteko kodea
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+  //Gorako botoia agerrarazteko, ezkutatzeko eta klikatuz orriaren goialdera igotzeko kodea
+  const toTop = (() => {
+    let button = document.getElementById("toTop");
+    window.onscroll = () => {
+      button.classList[
+        (document.documentElement.scrollTop > 200) ? "add" : "remove"
+      ]("is-visible")
+    }
+    button.onclick = () => {
+      window.scrollTo({
+        top: 0, behavior: "smooth"
+      })
+    }
+  })();
+</script>

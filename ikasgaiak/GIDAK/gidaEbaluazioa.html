@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Webgunegintza</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../css/estiloa.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="oro-ebaluazioa">
+    <div class="banaketaTxikia"></div>
+    <h3 id="oro-ebaluazioa"><em>Ebaluazio-irizpideak</em></h3>
+    <div class="banaketaTxikia"></div>
+    <ul type="circle" class="zerrendaArruntak">
+      <li>Garatu beharreko web aplikazioen interfazerako estilo-gida eta diseinua interpretatu ditu, diseinu-ekipoaren
+        jarraibideak kontuan izanda.</li>
+      <li>Web aplikazioen interfazea osorik edo partzialki osatzen duten markatzeko lengoaietan sententzia-blokeak
+        editatu eta probatu ditu, estiloak kanpo-orrietatik administratuz.</li>
+      <li>Informazioa bezeroaren aldean aurkezpen-formatu egokietara bihurtzeko eta egokitzeko transformazio-orriak
+        erabili ditu.</li>
+      <li>Web aplikazio baten interfazerako multimedia-materialak prestatzen eta integratzen parte hartu du,
+        diseinu-ekipoaren jarraibideei jarraituz.</li>
+      <li>Ekitaldiak maneiatzean eta elementu interaktiboak eta animazioak integratzean oinarritutako web aplikazio
+        interaktiboak garatzen lagundu du.</li>
+      <li>Web aplikazioen erabilerraztasuna eta erabilgarritasuna egiaztatu ditu, eta eskatutako mailak betetzeko
+        beharrezko aldaketak eta neurriak egiten lagundu du.</li>
+      <li>Web-aplikazioen zerbitzari-zatia diseinatzeko eta garatzeko arduradunekin lankidetza estuan aritu da,
+        irizpideak bateratuz eta aplikazioaren bi aldeetako garapena koordinatuz.</li>
+      <li>Aplikazioaren erabiltzaileari laguntzeko protokoloetan erabilitako dokumentazioa eta gainerako osagaiak
+        definitzen eta lantzen parte hartu du.</li>
+      </ol>
+  </div>
+</body>
+
+</html>
+<!-- HEMEN DOA menua eta gorako botoia maneiatzeko JavaScript-a <script> eta </script> etiketen artean ----------- HASI -->
+<script>
+  // Menua irekitzeko eta ixteko kodea
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+  //Gorako botoia agerrarazteko, ezkutatzeko eta klikatuz orriaren goialdera igotzeko kodea
+  const toTop = (() => {
+    let button = document.getElementById("toTop");
+    window.onscroll = () => {
+      button.classList[
+        (document.documentElement.scrollTop > 200) ? "add" : "remove"
+      ]("is-visible")
+    }
+    button.onclick = () => {
+      window.scrollTo({
+        top: 0, behavior: "smooth"
+      })
+    }
+  })();
+</script>

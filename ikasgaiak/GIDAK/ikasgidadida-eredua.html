@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Webgunegintza</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../css/estiloa.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <!-- Goiburukoa: 1200pxeko pantailetan irudia txikiagotu egingo da, 200px tik 100px etara-->
+
+  <header>
+    <div class="goiburua">
+      <div class="prais-ikonoa">
+        <a href="../../index.html"><img src="../../irudiak/AZALA/praiskologoHondoZuri.png" alt="Praiskopediaren logoa"
+            class="praisikonoa"></a>
+      </div>
+    </div>
+  </header>
+
+
+  <!--Menu barra froga  .......... -->
+ 
+  <!-- Menu barra ezker-eskuin   ..... HASI -->
+  <div class="banaketaTxikia"></div>
+  <div class="banaketaTxikia"></div>
+  <div class="banaketaTxikia"></div>
+  
+  <div class="saioAtalak-lau">
+    <div id="header">
+      <ul class="nav">
+        <li><a href="ikasgidadida-eredua.html">Gida didaktikoak&nbsp;&nbsp;<i class="fa fa-arrow-circle-o-right"></i></a></li>
+        <li><a href="ikaswww-eredua.html">Web garapena&nbsp;&nbsp;<i class="fa fa-arrow-circle-o-right"></i></a></li>
+        <li><a href="ikashtml-eredua.html">HTML &nbsp;&nbsp;<i class="fa fa-arrow-circle-o-right"></i></a></li>
+        <li><a href="ikascss-eredua.html">CSS Oinarrizkoa &nbsp;&nbsp;<i class="fa fa-arrow-circle-o-right"></i></a></li>
+        <li><a href="ikascssdiseinua-eredua.html">CSS Diseinua &nbsp;&nbsp;<i class="fa fa-arrow-circle-o-right"></i></a></li>
+        <li><a href="ikasjavascript-eredua.html">JavaScript&nbsp;&nbsp;<i class="fa fa-arrow-circle-o-right"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- menu barra ezker-eskuin .......BUKA -->
+  
+  <div class="banaketaTxikia"></div>
+    <h2 style="text-align: center;">Gida didaktikoak</h2>
+    <!-- Menu-barra goiti-beheiti HASI -->
+    <main class="sarenagusia">
+      <aside class="albozutabea">
+        <ul class="acorh">
+          <li id="opcion2"><a href="#opcion2">Web Aplikazioen Garapena</a>
+            <ul>
+              <li><a href="gidaGaitasunak.html" target="egitura"><i class="fa fa-book"></i>&nbsp;&nbsp;Gaitasun orokorrak</a></li>
+              <li><a href="gidaHelburuak.html" target="egitura"><i class="fa fa-book"></i>&nbsp;&nbsp;Helburu orokorrak</a></li>
+              <li><a href="gidaEbaluazioa.html" target="egitura"><i class="fa fa-book"></i>&nbsp;&nbsp;Ebaluazioa</a></li>
+              <li><a href="gidaModuluak.html" target="egitura"><i class="fa fa-book"></i>&nbsp;&nbsp;Lanbide-moduluak</a></li>
+            </ul>
+          </li>
+          <li id="opcion3"><a href="#opcion3">Web garapena bezeroan</a>
+            <ul>
+              <li><a href="gidabezero-ebaluazioa.html" target="egitura">Ikasgaiak eta ebaluazioa</a></li>
+              <li><a href="gidabezero-edukiak.html" target="egitura">Edukiak</a></li>
+            </ul>
+          </li>
+          <li id="opcion4"><a href="#opcion4">Web-gune-gintza gida</a>
+            <ul>
+              <li><a href="gidaproiektua-pdf.html" target="egitura">Proiektuaren gida</a></li>
+            </ul>
+          </li>
+          <li><div class="banaketaTxikia" style="background-color: transparent; color:transparent;">--</div></li>
+          <li id="opcion5"><a href="#opcion5">Material lagungarriak</a>
+            <ul>
+              <li><a href="gidaglosarioa.html" target="egitura">GLOSARIOA</a></li>
+              <li><a href="gidaosagarriak.html" target="egitura">LIBURUTEGIA</a></li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+      <!-- Menu-barra goti-beheiti   BUKA ....-->
+      <section class="edukiontzia">
+        <!-- IFRAME-a ------------------  ------ HASI ------  -->
+        <div class="eduki-leihoa">
+          <iframe src="gidaDidaAurkezpena.html" name="egitura" width="100%" height="1200"></iframe>
+        </div>
+        <!-- IFRAME-A --------------------------BUKA -------------- -->
+      </section>
+    </main>
+    <!-- GORA IGOTZEKO BOTOI GORRIA BAHEAN ESKUINEAN hasi -------------- -->
+    <span class="ir-arriba icon-arrow-up2"></span>
+    <!-- End page content -->
+    <button class="toTop" id="toTop">
+      <svg viewBox="0 0 24 24">
+        <path d="m4 16 8-8 8 8"></path>
+      </svg>
+    </button>
+    <!-- GORA IGOTZEKO BOTOI GORRIA BAHEAN ESKUINEAN buka -------------- -->
+    <!-- Orriaren oina -----'FOOTER'------HASI   -->
+    <footer>
+      <span onclick="w3_open()"><i class="fa fa-arrow-circle-o-left"></i>&nbsp;Ireki menua</span>
+      <h3>OINEAN OINETAKOA</h3>
+      <a href="https://praiskopedia.eus" target="_blank">&copy; Praiskopedia</a>
+    </footer>
+    <!-- Orriaren oina -----'FOOTER'------BUKA   -->
+
+</body>
+
+</html>
+<!-- HEMEN DOA menua eta gorako botoia maneiatzeko JavaScript-a <script> eta </script> etiketen artean ----------- HASI -->
+<script>
+  // Menua irekitzeko eta ixteko kodea
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+  //Gorako botoia agerrarazteko, ezkutatzeko eta klikatuz orriaren goialdera igotzeko kodea
+  const toTop = (() => {
+    let button = document.getElementById("toTop");
+    window.onscroll = () => {
+      button.classList[
+        (document.documentElement.scrollTop > 200) ? "add" : "remove"
+      ]("is-visible")
+    }
+    button.onclick = () => {
+      window.scrollTo({
+        top: 0, behavior: "smooth"
+      })
+    }
+  })();
+</script>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estiloa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>WWW ikasgaia</title>
+</head>
+<body>
+  <!-- Goiburukoa: gunearen titulua eta praiskopediaren ikonoa   HASI -->
+  <header>
+    <div class="goiburua">
+      <div class="prais-ikonoa">
+            <a href="../index.html"><img src="../irudiak/AZALA/praiskologoGardena.png" alt="Praiskopediaren logoa" class="praisikonoa"></a>
+        </div>
+    </div>     
+  </header>
+  <main>
+    <section class="ikasgaia">
+      <div class="ikasgaiBurua">
+        <h2><strong>Material osagarriak</strong></h2>
+      </div>
+      <article id="artikuluBurua">
+        <h2><strong>Egin asmo dudana</strong></h2>
+        <div class="banaketaTxikia"></div>
+        <p style="font-size: 2em;">Orrialde honetan webgintza ikasten eta garatzen lagundu didaten webgune, liburu eta ikusentzunezkoen berri emango dut. Baita material horietara jotzeko estekak ere bai.</p>
+
+      <article id="artikuluBurua">
+        <h2><strong>Adibidez</strong></h2>
+        <h5><u>HTML</u></h5>
+        <ul class="saioAzpiatalak">
+          <li><p style="font-size: 1.3em;"><a class="azpiatala" href="https://devcode.la/cursos/html-css/" target="_blanc"><strong>HTML eta CSS IKASTAROA (gaztelaniaz)</strong></a>
+            IkastaroA doakoa da eta bertan ikasiko duzu  Webguneak maketatzen HTML5ekin eta estiloak ezartzen CSSrekin. Ez duzu aurretiazko ezagutzarik behar; izan ere, hutsetik hasten da eta zenbait adibide praktiko txertatzen ditu, eta ikastaroa amaitzean, benetako proiektu bat garatuko duzu, ikasitako guztia aplikatzeko.</p>
+          </li>
+        </ul>
+        <div class="banaketaTxikia"></div>
+        <p style="font-size:1.3em; color:green;text-align: center;">Erabiltzaleak terminoan klik egitean, webgunea deskargatuko da, beste pestaña batean.</p>
+      </article>
+    </section>
+  </main>
+    <!-- HEMEN BUKATZEN DA 'javaScript' atalaren mamia -->
+
+  
+   <!-- GORA IGOTZEKO BOTOI GORRIA BAHEAN ESKUINEAN hasi -------------- -->
+   <span class="ir-arriba icon-arrow-up2"></span>
+   <!-- End page content -->
+   <button class="toTop" id="toTop">
+     <svg viewBox="0 0 24 24">
+       <path d="m4 16 8-8 8 8"></path>
+     </svg>
+   </button>
+   <!-- GORA IGOTZEKO BOTOI GORRIA BAHEAN ESKUINEAN buka -------------- -->
+
+   <!-- Orriaren oina -----'FOOTER'------HASI   -->
+   <footer>
+     <span onclick="w3_open()"><i class="fa fa-arrow-circle-o-left"></i>&nbsp;Ireki menua</span>
+     <h3>OINEAN OINETAKOA</h3>
+     <a href="https://praiskopedia.eus" target="_blank">&copy; Praiskopedia</a>
+   </footer>
+   <!-- Orriaren oina -----'FOOTER'------BUKA   -->
+
+ </body>
+
+</html>
+<!-- HEMEN BUKATZEN DA 'web-ikas' orrialdearen HTMLa -->
+
+<!-- HEMEN DOA menua eta gorako botoia maneiatzeko JavaScript-a <script> eta </script> etiketen artean ----------- HASI -->
+<script>
+ // Menua irekitzeko eta ixteko kodea
+ function w3_open() {
+   document.getElementById("mySidebar").style.display = "block";
+ }
+ function w3_close() {
+   document.getElementById("mySidebar").style.display = "none";
+ }
+ //Gorako botoia agerrarazteko, ezkutatzeko eta klikatuz orriaren goialdera igotzeko kodea
+ const toTop = (() => {
+   let button = document.getElementById("toTop");
+   window.onscroll = () => {
+     button.classList[
+       (document.documentElement.scrollTop > 200) ? "add" : "remove"
+     ]("is-visible")
+   }
+   button.onclick = () => {
+     window.scrollTo({
+       top: 0, behavior: "smooth"
+     })
+   }
+ })();
+</script>
+<!-- Menua eta gorako botoia maneiatzeko JavaScript-a, <script> eta </script> etiketen artean doana, ----------- BUKA -->
+
+<!-- Kanpoko fitxategiak erabili ahal izateko estekak (JavaScript-ak orria bukaeran idatzi ohi dira, sistemak 
+HTML eta CSS guztia irakurri ostean irakur ditzan) -------------- -->
+<script src="../js/vendor/galdetegia.js"></script>
+<script src="../js/vendor/kudeaketa.js"></script>
+<script src="../js/vendor/lengoaiaSkripta.js"></script>

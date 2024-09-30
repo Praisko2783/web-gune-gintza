@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Webgunegintza</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../css/estiloa.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="oro-gaitasunak">
+    <h3 id="oro-gaitasunak">Gaitasun orokorrak</h3>
+    <p><strong>Web Aplikazioen Garapena</strong>, Goi-mailako Lanbide Heziketako titulazio bat da. Titulazio horren
+      helburu nagusia web aplikazioak garatzea, ezartzea eta mantentzea da, erabilitako metodoa edozein delarik baina
+      teknologia espezifikoak erabiliz, datuak modu seguruan atzitzea bermatuz eta ezarritako estandarretan exijitutako
+      erabilerraztasuneko, usagarritasuneko eta kalitateko irizpideak betez.</p>
+    <h4>Gaitasun profesionalak, pertsonalak eta sozialak</h4>
+    <div class="banaketaTxikia"></div>
+    <h5>Titulazio honen jabea gai izango da:</h5>
+    <ul class="zerrendaArruntak">
+      <li>Informatika-sistemak konfiguratzeko eta ustiatzeko, eta, horretarako, sistemaren konfigurazio logikoa
+        doitzeko, ezarritako irizpideen eta erabilera-beharren arabera.</li>
+      <li>Sistema, zerbitzu eta aplikazioetako segurtasunarekin lotzen diren teknikak eta prozedurak aplikatzeko,
+        segurtasun-plana beteta.</li>
+      <li>Aplikazio-zerbitzariak kudeatzeko, horien konfigurazioa kasuen arabera egokituta, eta, hala, web aplikazioen
+        garapena eta hedapena ahalbidetzeko.</li>
+      <li>Datu-baseak kudeatzeko, eta, horretarako, horien diseinu logikoa interpretatzeko eta datuen osotasuna,
+        konsistentzia, segurtasuna eta eskuragarritasuna egiaztatzeko.</li>
+      <li>Datu-baseetarako sarbidea duten web aplikazioak garatzeko, zehaztapenetara egokitutako lengoaiak,
+        atzipen-objektuak eta mapaketa-tresnak erabilita.</li>
+      <li>Edukiak web aplikazio baten logikan integratzeko eta zehaztapenetara egokitutako datuak atzituko dituzten
+        osagaiak garatzeko.</li>
+      <li>Web aplikazioetan interfazeak garatzeko estilo-eskuliburuaren arabera, markatzeko lengoaiak eta
+        web-estandarrak erabilita.</li>
+      <li>Web aplikazioetan integratuko diren multimedia-osagaiak garatzeko, eta, horretarako, tresna espezifikoak
+        erabiltzeko eta ezarritako zehaztapenak betetzeko.</li>
+      <li>Web aplikazio baten interfazean multimedia-osagaiak integratzeko, eta aplikazioaren interaktibitatea,
+        erabilerraztasuna eta usagarritasuna analizatzeko.</li>
+      <li>Web zerbitzariaren ingurunean software osagaiak garatzeko eta integratzeko, tresna eta lengoaia espezifikoak
+        erabilita, eta, hala, aplikazioaren zehaztapenak betetzeko.</li>
+      <li>Zerbitzuak garatzeko eta haien funtzioak beste web aplikazio batzuetan integratzeko, funtzionaltasuna
+        ziurtatuta.</li>
+      <li>Web aplikazioetan zerbitzu eta eduki banatuak integratzeko, eta haien funtzionaltasuna ziurtatzeko.</li>
+    </ul>
+    <p>Irakaskuntza hauek laneko arriskuen prebentzioko oinarrizko jarduerak gauzatzeko beharrezko ezagupenak hartzen
+      dituzte barnean.</p>
+  </div>
+  <div>
+    <div class="banaketaTxikia"></div>
+    <h4>Lanbide-kualifikazio osoak:</h4>
+    <div class="banaketaTxikia"></div>
+    <p><strong>a) Web teknologiak dituzten aplikazioak garatzea.</strong></p>
+    <ul class="zerrendaArruntak">
+      <h5>Konpetentzia-atalak:</h5>
+      <li>Bezero-ingurunean software-elementuak garatzea.</li>
+      <li>Zerbitzari-ingurunean software-elementuak garatzea.</li>
+      <li>Web aplikazioak Internet, intranet eta estranet inguruneetan inplementatu, egiaztatu eta dokumentatzea.</li>
+    </ul>
+    <h4>Osatu gabeko lanbide-kualifikazioak:</h4>
+    <p><strong>a) Kudeaketa-aplikazioen lengoaia egituratuetako programazioa.tzia-atalak:</strong></p>
+    <ul class="zerrendaArruntak">
+      <h5>Konpetentzia-atalak:</h5>
+      <li>Datu-base erlazionalak programatzea.</li>
+    </ul>
+    <p><strong>b) Objektuei eta datu-base erlazionalei orientatutako lengoaiekin programatzea</strong></p>
+    <ul class="zerrendaArruntak">
+      <h5>Konpetentzia-atalak:</h5>
+      <li>Informatika-sistemak konfiguratzea eta ustiatzea.</li>
+      <li>Datu-base erlazionalak programatzea.</li>
+    </ul>
+  </div>
+</body>
+
+</html>
+<!-- HEMEN DOA menua eta gorako botoia maneiatzeko JavaScript-a <script> eta </script> etiketen artean ----------- HASI -->
+<script>
+  // Menua irekitzeko eta ixteko kodea
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+  //Gorako botoia agerrarazteko, ezkutatzeko eta klikatuz orriaren goialdera igotzeko kodea
+  const toTop = (() => {
+    let button = document.getElementById("toTop");
+    window.onscroll = () => {
+      button.classList[
+        (document.documentElement.scrollTop > 200) ? "add" : "remove"
+      ]("is-visible")
+    }
+    button.onclick = () => {
+      window.scrollTo({
+        top: 0, behavior: "smooth"
+      })
+    }
+  })();
+</script>

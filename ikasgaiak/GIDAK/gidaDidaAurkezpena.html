@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Webgunegintza</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../css/estiloa.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Menu-barra goiti-beheiti ........... BUKA.... -->
+    <div class="oro-gaitasunak">
+      <h3 id="oro-gaitasunak">Web garatzaileen egitekoak</h3>
+      <p>Web garatzaileak webguneak eta aplikazioak eraiki, kudeatu eta mantentzen ditu, eta askotan proiektuaren
+        analisiaz, aplikazioaren logikaz, edukien arkitekturaz, eguneratzeez eta segurtasunaz ere arduratzen da.</p>
+      <p>Bere zeregin adierazgarriena da oinarritzen diren programazio-kodea idaztea, bai web aplikazioaren gunearen
+        funtzionaltasunak (hau da, web aplikazioarekin elkarreraginean egin ditzakegun gauzak: produktuak erostea,
+        edukiak argitaratzea, mezuak bidaltzea, etab.), bai itxura, hau da, gure gailuetan ikusten dugun interfazea.</p>
+      <p>Interfaze grafikoa eta funtzionalitateak asko aldatzen dira webgune edo web aplikazio baten funtzioaren
+        arabera. Onlineko dendekin, albiste-guneekin, bideojokoen guneekin, enpresen intranetarekin, sare sozialekin,
+        streaming plataformekin, enpresako softwarearekin eta blogekin ditugun erabilera eta interakzioetan baino ez
+        dugu pentsatu behar. </p>
+      <ul class="zerrendaArruntak">
+        <li>Front-end garatzaileak erabiltzailearen interfazea garatzeaz eta testatzeaz arduratzen dira nagusiki, hau
+          da, «bezeroaren aldetik» ikusten duguna. </li>
+        <li>Back-end garatzaileak, aldiz, «zerbitzariaren aldetik» lan egiten dute, hau da, gunean «bastidoreen artean»
+          gertatzen den guztiaz arduratzen dira: gunea funtzionarazten duen aplikazioaren logikatik, datu-baseen
+          kudeaketara. </li>
+        <li>Full-stack developerek bi fronteetan dituzte gaitasunak, eta front-end eta back-end garapenaz arduratzen
+          dira.</li>
+      </ul>
+      <p>Iturburu-kodea idazteaz gain, web-garatzaile baten funtzioek honako hauek izan ditzakete:</p>
+      <ul class="zerrendaArruntak">
+        <li>Proiekturako beharrezkoak diren funtzionaltasunak eta eskakizunak zehatz-mehatz aztertzea</li>
+        <li>Edukien arkitektura diseinatzea</li>
+        <li>Webgunearen/app-aren funtzionamendua testatzea, bug-ak aurkitzea eta akatsak zuzentzea</li>
+        <li>Arazo teknikoak ebaztea, bai jaurti aurretik, bai erabili bitartean identifikatzen direnak.</li>
+        <li>Erabiltzaile-interfazea UX terminoetan optimizatzea (user experience edo erabiltzaile-esperientzia)</li>
+        <li>Datu-baseak optimizatzea eta datuak mantentzeaz arduratzea</li>
+        <li>Edukiak kudeatzeko sistemak inplementatzea</li>
+        <li>Webgunearen segurtasuna eta egonkortasuna bermatzea</li>
+        <li>Edukiak txertatzea eta elementu grafikoak, bideokoak eta audiokoak integratzea></li>
+        <li>Hirugarrenen produktuak integratzea, hala nola analisi-tresnak edo CRM softwarea</li>
+        <li>Softwarea eguneratuta edukitzea; bezeroak eskatutako edo erabiltzaileen beharren bilakaerak beharrezkotzat
+          jotzen dituen funtzionalitate berriak inplementatzea, testatzea eta abiaraztea</li>
+        <li>Etengabe prestatzeko denbora aurkitzea, programazio-lengoaia berriak, berrikuntza digitalak eta sektoreko
+          joerak aztertuz </li>
+      </ul>
+      <div class="banaketa"></div>
+
+  <!-- HTML saila ----- ikasgaien aurkibidea ---------------------  BUKA-->
+  <!-- GORA IGOTZEKO BOTOI GORRIA BAHEAN ESKUINEAN hasi -------------- -->
+  <span class="ir-arriba icon-arrow-up2"></span>
+  <!-- End page content -->
+  <button class="toTop" id="toTop">
+    <svg viewBox="0 0 24 24">
+      <path d="m4 16 8-8 8 8"></path>
+    </svg>
+  </button>
+  <!-- GORA IGOTZEKO BOTOI GORRIA BAHEAN ESKUINEAN buka -------------- -->
+</body>
+
+</html>
+<script>
+  // Menua irekitzeko eta ixteko kodea
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+  //Gorako botoia agerrarazteko, ezkutatzeko eta klikatuz orriaren goialdera igotzeko kodea
+  const toTop = (() => {
+    let button = document.getElementById("toTop");
+    window.onscroll = () => {
+      button.classList[
+        (document.documentElement.scrollTop > 200) ? "add" : "remove"
+      ]("is-visible")
+    }
+    button.onclick = () => {
+      window.scrollTo({
+        top: 0, behavior: "smooth"
+      })
+    }
+  })();
+</script>
