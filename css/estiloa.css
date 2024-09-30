@@ -6,60 +6,17 @@
 body{
   background-color: #f1f1f1;
   margin: 0 auto;
-  font-family: sans-serif;
-  font-weight: 100;
-  line-height: 1.5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
-.fa:hover{
-  color:#176802;
-}
-.banaketa{
-  padding:6rem;
-}
-.banaketaTxikia{
-  padding:1rem;
-}
+/*pantaila burua......   HASI*/
 header{
   text-align: center;
   background: #ccc;
   display: block;
   height: 200px;
 }
-/*goiburua orri guztietan berdina 
-
-header h1{
-font-family: monospace;
-font-size: 30px;
-font-weight: 600;
-color:rgb(2, 2, 130);
-}
-header span{
-  color:#110392;
-  cursor: pointer;
-  font-size: x-large;
-}
-header span:hover{
-  color:#176802;
-}*/
 .goiburua{
   text-align: center;
-  /*display: grid;
-  grid-template-columns: auto auto;
-  gap: 10px;*/
-}
-/*.goiburua .menua-btn{
-  align-content: right;
-}
-*/
-.goiburua .titulu-nagusia{
-  align-content: left;
-}
-.goiburua .titulu-nagusia h1{
-  font-size: 2em;
-}
-.goiburua .titulu-nagusia h1:hover{
-  color:#176802;
 }
 .goiburua .prais-ikonoa{
   margin-top:0;
@@ -68,222 +25,28 @@ header span:hover{
   align-content: center;
   width: 200px;
 }
-/*Goiburua ------------------- HONAINO */
-
-/*gorputzeko erregela orokorrak*/
-main{
-  width: 60%;
-  display: block;
-  transition: margin-left .4s;
-  margin: 0 auto;
+@media (max-width: 1200px) {
+  header{
+    height: 100px;
+  }
+  .goiburua .prais-ikonoa img{
+    align-content: center;
+    width: 100px;
+  }
 }
-section article{
-  display: block;
-  margin-top: 16px !important;
-  margin-bottom: 8px !important;
-}
-pre{
-  width: 70%;
-  margin:0 auto;
-  border:1px darkblue dashed;
-  overflow-x: scroll;
-  overflow-y: scroll;
-  height: 20em;
-}
-h2{
-  font-family: monospace;
-  font-size: 34px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  color:rgb(2, 2, 130);
-}
-h3{
-  font-family: monospace;
-  font-size: 30px;
-  padding-top: 28px;
-  color:rgb(2, 2, 130);
-}
-h4{
-  font-family: monospace;
-  font-size: 26px;
-  color:rgb(2, 2, 130);
-}
-h5{
-  font-family: monospace;
-  font-size: 20px;
-  color:rgb(2, 2, 130);
-}
-h6{
-  text-indent: 1em;
-  font-size: 18px;
-  color:rgb(2, 2, 130);
-}
-p{
-  font-family: system-ui, sans-serif;
-  font-weight: 400;
-  text-indent: 1em;
-  margin-bottom:10px;
-  text-align: justify;
-  font-size: 18px;
-}
-/*Goi goiko ikonoari dagzokionak.......*/
-.praisikon{
-  width: 8rem;
-}
-.praisikonoa{
-  width: 8rem;
-}
-.praisikonoa:hover{
-  width: 7rem;
-}
-/*Azpitituluei dagozkienak.......*/
-.azpitituluak{
-  width: 100%;
-  background-color: #ccc;
-  padding-left: 1em;
-  padding-bottom: 1em;
-  vertical-align: middle;
-  margin-bottom: 2em;
-}
-.azpitituluak h3{
-  text-align: center;
-}
-/*Botoiak...................*/
-.botoia{
-  background-color: #2196F3;
-  width: 100%;
-  padding:10px;
-  color: #f1f1f1;
-  border-radius: 5px;
-  margin:50px;
-}
-.botoia:hover{
-  background-color: #110392;
-}
-.botoikutxa{
-  box-shadow: 0 4px 10px 0 rgba(97, 178, 250, 0.2), 0 4px 50px 0 rgba(1, 141, 247, 0.19);
-  padding:.5rem;
-  color: #f1f1f1;
-  border-radius: 5px;
-  margin:.2rem;
-  text-align: left;
-}
-.botoikutxa a{
-  margin-top:.2rem;
-}
-.botoikutxa a:hover{
-  color:#176802;
-  padding: .2rem;
-}
-/*Irudiei dagozokienak.......*/
-.irudiKutxa{
-  padding: 20px;
-  text-align: center;
-}
-.irudiKutxaEzk{
-  float: left;
-  padding: 0px 20px 0px 0px;
-}
-.irudiKutxaEsk{
-  float: right;
-  padding: 0px 20px 40px 0px;
-}
-figcaption{
-  color:#110392;
-  font-style: italic;
-  font-size: 1em;
-  text-align: center;
-}
-.irudiTestuKaxa{
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 10px;
-}
-.irudiTestua{
-text-align: left;
-}
-irudiKaxa{
-text-align: center;
-}
-
-/*Azalpenak emateko koadro grisak letra urdinskarekin (h6).......*/
-.garrantzi-oinarrizko{
-  padding: 1rem;
-  text-align: justify;
-  background: #d5d5d5;
-  margin-top: 1rem;
-  margin-bottom: .5rem;  
-}
-.garrantzi-oinarrizko p{
-  font-size: 1em;
-  font-family: system-ui, sans-serif;
-  font-weight: 400;
-  color:#110392;
-}
-.garrantzi-oinarrizko a:hover{
-  color:#085e02;
-  font-weight: 700;
-}
-/*Zerrenden kontuak.......................*/
-.zerrendaArruntak{
-  padding-left: 5rem;
-}
-.zerrendaArruntak li{
-  font-size: 18px;
+/*Pantaila burua............   BUKA*/
+.banaketaTxikia{
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.zerrendaArruntak li p{
-  text-indent: 0px;
-}
-/*Ikasgaien 'section' atalak*/
-/*'section' atalaren goiburua*/
-.ikasgaia{
-  padding: 1rem;
-}
-.ikasgaiBurua{
-  text-align: center;
-}
-.ikasgaiBurua h2{
-  font-size: 70px;
-}
-.ikasgaiBurua .saioAtalak{
-  text-align: center;
-}
-.ikasgai-leihoa{
-  width:100%;
-  margin: 0 auto;
-  /*background: rgba(50, 50, 250, 0.2);*/
-  box-shadow:1px 1px 8px 8px rgba(50, 50, 250, 0.2);
-  padding: 1rem;
-}
-.ikasgai-leihoa iframe{
-  border: none;
-  width:100%;
-}
-
-/*'section' ataleko artikuluaren burua*/
-.saioAzpiatalak{
-  padding-left: 60px;
-  padding-bottom: 30px;
-}
-.azpiatala:hover{
-  font-size: 1.4em;
-  color: #107a02;
-}
-.azpiatalBurua{
-margin-top: 1rem;
-}
-/*'section' atalaren goiburua*/
-
-/*ireki-itxi egiten duen menu hegalaria ------------HASI---- */
+/*menu barra ezker-eskuin  ....HASI*/
 
 .saioAtalak-lau{
   width: 100%;
   display: flex;
   align-items: center;
+  background-color:#030c88;
 }
-
 .saioAtalak-lau #header {
   margin:0 auto;
   font-family:Arial, Helvetica, sans-serif;
@@ -319,64 +82,69 @@ margin-top: 1rem;
   right:-140px;
   top:0px;
 }
-
-.nabimenua{
-  display:none;
-  z-index:1;
-  min-width: 150px;
-  background-color: rgba(204, 203, 203, 1);
-  color:#110392;
-  height: 100%;
-  width: 200px;
-  position: fixed !important;
-  overflow: auto;
-  top: 0;
-  position: relative;
-  text-align: right;
-  animation: animateleft 0.4s;
-}
-@keyframes ezkerreraEraman {
-  from {
-      left: -300px;
-      opacity: 0
-  }
-  to {
-      left: 0;
-      opacity: 1
-  }
-}
-.nabimenua a{
-    display: inline-block;
-    padding: 6px 12px;
-    vertical-align: middle;
-    color: inherit;
-    cursor: pointer;
-    width: 100%;
-}
-.gidaBtn{
-  border:#110392 solid .5px;
-  border-radius: 5px;
-  margin-bottom:5px;
-}
-.nabimenua a:hover{
-  color: #270388 !important;
-  background-color: #a7a7a7 !important;
-}
-.menuBtnItxi{
-  color: red;
-  cursor: pointer;
-  text-align: right;
-  font-size: large;
+/*menu barra ezker-eskuin ........BUKA*/
+/*Azaleko Eduki nagusia, aurkezpena ''index.html''......HASI   */
+main{
+  width: 80%;
+  margin: 0 auto;
   padding: 10px;
 }
-.menuBtnItxi:hover{
-  background-color: #a7a7a7 !important;
-  color: #270388 !important;
+main .azalburua {
+  text-align: center;
 }
-/*ireki-itxi egiten duen menua --------------------HONAINO */
-
-/* Azaleko orriarentzako erregelak -----------HASI--*/
-/*-------------Gida didaktiko, glosario eta material osagarrien GRID-aren erregelak--*/
+h2{
+  font-size: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color:rgb(2, 2, 130);
+}
+h3{
+  font-size: 30px;
+  padding-top: 28px;
+  color:rgb(2, 2, 130);
+}
+h4{
+  font-size: 26px;
+  color:rgb(2, 2, 130);
+}
+h5{
+  font-size: 20px;
+  color:rgb(2, 2, 130);
+}
+h6{
+  text-indent: 1em;
+  font-size: 18px;
+  color:rgb(2, 2, 130);
+}
+p{
+  font-weight: 400;
+  text-indent: 1em;
+  margin-bottom:10px;
+  text-align: justify;
+  font-size: 18px;
+}
+/*Azalpenak emateko koadro grisak letra urdinskarekin (h6).......*/
+.garrantzi-oinarrizko{
+  padding: 1rem;
+  text-align: justify;
+  background: #edebeb;
+  margin-top: 1rem;
+  margin-bottom: .5rem;  
+}
+/*Zerrenden kontuak.......................*/
+.zerrendaArruntak{
+  padding-left: 5rem;
+}
+.zerrendaArruntak li{
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.zerrendaArruntak li p{
+  text-indent: 0px;
+}
+/*Azaleko Eduki nagusia, aurkezpena ''index.html'' ......BUKA   */
+/*Azaleko gida didaktikoen etiketak GIDA EREMUA....... */
 .gidatala{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
@@ -392,29 +160,6 @@ margin-top: 1rem;
 .gida:hover{
   box-shadow: 0 4px 10px 0 rgba(97, 178, 250, 0.2), 0 4px 50px 0 rgba(1, 141, 247, 0.19);
 }
-
-/*--------------Ikasgaien GRID-ari dagozkion erregelak--*/
-.gidagaia{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:20px;
-  align-items: center;
-}
-.gidagai{
-  text-align: center;
-  box-shadow: 0 2px 5px 0 rgba(43, 114, 1, 0.16), 0 2px 10px 0 rgba(37, 156, 1, 0.12);
-  min-height: 400px;
-  padding: 20px;
-  height: 300px;
-}
-.gidagai:hover{
-  box-shadow: 0 4px 10px 0 rgba(59, 158, 4, 0.2), 0 4px 50px 0 rgba(58, 180, 4, 0.19);
-}
-.gidagai ul{
-  text-align: left;
-  font-size: 1.15em;
-  font-weight: 200;
-}
 .gida i{
   font-size: xx-large;
 }
@@ -426,470 +171,242 @@ margin-top: 1rem;
   font-size: 1.15em;
   font-weight: 200;
 }
-.gidagai p{
+@media (max-width: 1200px) {
+  .gidatala{
+    grid-template-columns: repeat(2, 1fr);
+    gap:10px;
+  }
+}
+@media (max-width: 750px) {
+  .gidatala{
+    grid-template-columns: repeat(1, 1fr);
+    gap:5px;
+  }
+}
+
+/*--------------Ikasgaien GRID-ari dagozkion erregelak--  HASI  */
+.ikasgaienAtala{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:20px;
+  align-items: center;
+}
+.ikasgaia{
+  text-align: center;
+  box-shadow: 0 2px 5px 0 rgba(43, 114, 1, 0.16), 0 2px 10px 0 rgba(37, 156, 1, 0.12);
+  min-height: 400px;
+  padding: 20px;
+  height: 300px;
+}
+.ikasgaia:hover{
+  box-shadow: 0 4px 10px 0 rgba(59, 158, 4, 0.2), 0 4px 50px 0 rgba(58, 180, 4, 0.19);
+}
+.ikasgaia ul{
   text-align: left;
   font-size: 1.15em;
   font-weight: 200;
 }
-.gidagai a{
+.ikasgaia a{
   color:#110392;
 }
-.gidagai h3{
+.ikasgaia h3{
   font-size: 1.4em;
   color:#027908;
 }
-
-/* Azaleko orriaren mamiarentzako erregelak -----------BUKA--*/
-
-/*Oinarentzako erregelak orri guztientzat berdinak ------HASI----------- */
-footer{
-  padding: 25px;
-  background: #ccc;
-  text-align: center;
-}
-
-footer span{
-  color:#110392;
-  cursor: pointer;
-  font-size: x-large;
-}
-footer span:hover{
-  color:#176802;
-}
-footer a{
-  color: #110392;
-}
-footer a:hover{
-  color: #107a02;
-}
-/*Oinarentzako erregelak orri guztientzat berdinak ------BUKA----------- */
-
-/*Orrialdearen goiburura joateko botoiaren ezaugarriak HASI --------------*/ 
-.toTop {
-    border: none;
-    display: flex;
-    cursor: pointer;
-    transition: opacity 0.3s, transform 0.3s;
-    /* posición */
-    position: fixed; right: 1rem; bottom: 10rem; z-index: 9999;
-  }
-  .toTop:not(.is-visible) {
-    pointer-events: none;
-    opacity: 0;
-    transform: translateY(-2rem);
-  }
-  .toTop svg {
-    stroke-width: 3px;
-    stroke: currentColor;
-    fill: none;
-    width: 24px;
-    height: 40px;
-  }
-  /* Personalizar */
-  .toTop {
-    background-color: rgb(20, 4, 112);
-    box-shadow: 0 1px 3px rgba(204, 203, 203, 0.5);
-    border-radius: 0.5rem;
-    padding: 0.75rem;
-    color: #fff;
-  }
-  /*Orrialdearen goiburua joateko botoiaren ezaugarriak BUKA --------------*/
-
-  
-
-  /*Bideo eta Azterketa (Lantegia) eremuaren ezaugarriak HASI --------------*/
-  /*Bideoaren kokapenaren ezaugarriak--------------*/
-  .bideontzia {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    text-align: center;
-  }
-  .bideontziBurua {
-    width: 90%;
-    margin:0 auto;
-    text-align:center; 
-    font-size: 28px;
-    color:#110392; 
-  }
-  .bideontzia iframe {
-    position: absolute;
-    padding: 5px;
-    top: 2;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 90%;
-    height: 100%;
-    margin: 0 auto;
-  }
-  .bideoGidoia{
-    padding:1.5rem;
-  }
-
-  /*---------------Azterketak. Botoia, bai bideoarena, bai azterketarena*/
-  .azterMartxa{
-    cursor: pointer;
-  }
-  .azterMartxa:hover{
-    padding-top: 1rem;
-  }
-  .galderontzia{
-    padding: 0;
-    background: #ccc;
-  }
-/*Ikasgaietako gida didaktikoaren akordiona-------*/
-.saioAtalak-bi{
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
-  gap: .5rem;
-  position: absolute;
-  top: 8em;
-  left: 5px;
-  width: 80%;
-  height: 4em;
-}
-.gidontziburua{
-  width: 100%;
-  padding: .5rem 3.5rem;
-  text-align: center;
-  background-color: #043797;
-  color:#fff; 
-  cursor: pointer;
-}
-.gidontziburua h5{
-  color:#fff;
-  font-size: large; 
-}
-.gidontziburua:hover{
-  background-color: #026716;
-}
-.akordeoiontzia {
-  padding: 0;
-  margin:0;
-  display: none;
-  overflow: hidden;
-}
-.akordeoiontzia .garrantzi-oinarrizko{
- text-align: left;
-}
-.akordeoiontzia ul{
-  list-style: none;
-}
-.gidakordiona  h4{
-  font-size: 1.2em;
-}
-.gidakordiona  h6{
-  font-size: 1em;
-  margin-bottom: .5rem;
-}
-
-/*Ikasgaietako gida didaktikoaren akordiona------- KITTO*/ 
-
-/*Lantegi txikia botoiaren ezaugarriak BUKA --------------*/
-
-.saioAzpiatalak span{
-  text-align: center;
-}
-
-
-/*Ikasgaietako gida didaktikoaren akordiona-------*/
-  /*Webguneak saileko azterketako eremua  HASI*/
- .azterrontziBurua{
-  border-bottom: .5rem #110392 solid;
-  text-align: center;
-  color: #fff;
-}
-.azterrontzia{
-  content: "";
-  display: table;
-  clear: both;
-  padding: 0.01em 16px;
-  display: none
-}
- .grid-container {
-  padding:3rem;
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 10px;
+.ikasgaia p{
   text-align: left;
+  font-size: 1.15em;
+  font-weight: 200;
+}
+@media (max-width: 1200px) {
+  .ikasgaienAtala{
+    grid-template-columns: repeat(2, 1fr);
+    gap:10px;
+  }
+}
+@media (max-width: 750px) {
+  .ikasgaienAtala{
+    grid-template-columns: repeat(1, 1fr);
+    gap:5px;
+  }
+}
+/*---Azaleko-----------Ikasgaien GRID-ari dagozkion erregelak-- BUKA */
+.sarenagusia {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.edukiontzia {
+  width: 75%;
+  padding: 15px;
+  box-shadow: 0 5px 50px 0 rgba(183, 184, 182, 0.16), 0 2px 30px 0 rgba(74, 74, 74, 0.12);
+}
+.edukiontzia .eduki-leihoa iframe {
+  border:0;
+  width: 100%;
+  background: #ededed;
+}
+/*Azalpenak emateko koadro grisak letra urdinskarekin (h6).......*/
+.garrantzi-oinarrizko{
+  padding: 1rem;
+  text-align: justify;
+  background: #d5d5d5;
+  margin-top: 1rem;
+  margin-bottom: .5rem;  
+}
+.garrantzi-oinarrizko p{
   font-size: 1em;
+  font-family: system-ui, sans-serif;
+  font-weight: 400;
+  color:#110392;
 }
-.eranLekua{
-	font-size:.0.2em;
-	background:rgb(233, 232, 232);
-	text-align:left;
-	color:rgb(1, 1, 73);
+.garrantzi-oinarrizko a:hover{
+  color:#085e02;
+  font-weight: 700;
 }
-.azterBotoia{
-  text-align: center;
+/*Zerrenden kontuak.......................*/
+.zerrendaArruntak{
+  padding-left: 5rem;
 }
-form{
-  padding:.5rem;
-  }
-  fieldset{
-    border:.05rem solid #110392;
-  }
-.labela{
-  margin-left:5px;
-  font-size: 14px;
+.zerrendaArruntak li{
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-legend{
-  font-size: 16px;
-  color: #110392;
+.zerrendaArruntak li p{
+  text-indent: 0px;
 }
-.azterrontziOina{
-  text-align:center;
-}
-.azterrontziOina p{
-  font-size: 1.5rem;
-  font-family: monospace;
-}
-.azterrontziOina button{
-  background-color: rgb(4, 185, 13);
-  color:white; 
-  cursor: pointer;
-  border-radius: 10px;
-  padding: 8px 15px;
-  font-size: 1.5em;
-}
-.azterrontziOina button:hover{
-  background-color: rgb(6, 248, 18); 
-}
-  /*Webguneak saileko azterketako eremua  BUKA*/
-
-  /*Lengoaiak saileko lantegiko eremua  HASI*/
-.lengoaiGaldetegia{
-  background: #ccc;
-  text-align: center;
-}
-.lengoaiGaldera{
-  font-size: 1.2em;
-  }
-.lengoaiAukerak{
-  margin:1.3rem;
+/*Ikasgaien 'section' atalak*/
+/*'section' atalaren goiburua*/
+.ikasgaiarena{
   padding: 1rem;
 }
-.lengoaiEmaitza{
-  padding: 1.2rem;
-  font-size: 1.3em;
+.ikasgaiBurua{
   text-align: center;
 }
-lengoaiaBotoia {
-  margin-top: 10px;
-  padding: 10px 20px;
-  margin-right: 10px;
-  background-color: #4CAF50;
-  color: white;
-  border-radius: 15px;
+.ikasgaiBurua h2{
+  font-size: 70px;
+}
+.ikasgaiBurua .saioAtalak{
+  text-align: center;
+}
+.ikasgai-leihoa{
+  width:100%;
+  margin: 0 auto;
+  /*background: rgba(50, 50, 250, 0.2);*/
+  box-shadow:1px 1px 8px 8px rgba(50, 50, 250, 0.2);
+  padding: 1rem;
+}
+.ikasgai-leihoa iframe{
+  border: none;
+  width:100%;
+}
+.edukiontzia .eduki-leihoa iframe {
+  border:0;
+  width: 100%;
+  background: #ededed;
+}
+/*---Ereduko txantiloia----------menu barra bertikala---------- HASI */
+.albozutabea {
+  width: 25%;
+  box-shadow: 0 2px 10px 0 rgba(192, 192, 191, 0.16), 0 2px 5px 0 rgba(211, 210, 210, 0.12);
+  background-color: #d5d5d5;
+}
+ul.acorh,
+ul.acorh * {
+margin: 0px;
+padding: 0;
+border: 0;
+}
+ul.acorh {
+margin: 10px auto;
+padding: 10px;
+list-style: none;
+width: 100%;
+font-size: 18px;
+}
+ul.acorh li {
+list-style: none;
+width: 100%;
+}
+ul.acorh li a {
+display: block;
+padding: 10px 10px 10px 20px;
+background: #0d028b;
+color: #eee;
+border-bottom: 1px solid #0d028b;
+border-top: 1px solid #666;
+text-decoration: none;
+box-sizing: border-box;
+}
+ul.acorh li ul {
+max-height: 0;
+margin: 0;
+padding: 0;
+list-style: none;
+overflow: hidden;
+transition: .3s all ease-in;
+}
+ul.acorh li li a {
+padding: 10px 10px 10px 40px;
+background: #b8d2f0;
+color: #220387;
+font-size: 16px;
+border: 0;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+}
+ul.acorc li li:last-child a {
+border-bottom: 0;
+}
+/*ul.acorh li:target ul {
+  max-height: 300px;
+  transition: .3s all ease-in;
+  }*/
+ul.acorh li:hover ul {
+max-height: 800px;
+transition: .3s all ease-in;
+}
+ul.acorh li a:hover {
+background: #666;
+color: #fff;
+}
+/*---Ereduko tXAntiloia----------menu barra bertikala---------- BUKA */
+/*Orrialdearen goiburura joateko botoiaren ezaugarriak HASI --------------*/ 
+.toTop {
+  border: none;
+  display: flex;
   cursor: pointer;
-  font-size: 16px;
+  transition: opacity 0.3s, transform 0.3s;
+  /* posición */
+  position: fixed; right: 1rem; bottom: 10rem; z-index: 9999;
 }
-lengoaiaBotoia:hover {
-  background-color: #04f510;
+.toTop:not(.is-visible) {
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-2rem);
 }
-  
-  /* Style the side navigation */
-  .sidenav {
-    margin-top: 65px;
-    height: 100%;
-    width: 25%;
-    position: fixed;
-    background-color: #110392;
-    overflow-x: hidden;
-  }
-  
-  /* Side navigation links */
-  .sidenav a{
-    color: white;
-    padding: 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color on hover */
-  .sidenav a:hover {
-    background-color: #a8bcf3;
-    color: black;
-  }
-  
-  /* Style the content */
-  .content {
-    margin-left: 25%;
-    padding-left: 20px;
-  }
-  
-@media (max-width: 1200px) {
-
-  .saioAtalak-bi{
-    display: grid;
-    top: 3.5em;
-    grid-template-columns: auto;
-    gap: 1.5rem;
-    text-align: left;
-  }
-  header{
-    height: 150px;
-  }
-   header h1{
-    font-size: 55px;
-    font-weight: 600;
-    }
-  .izenburua h1{
-    font-size: 40px;
-  }
-  .ikasgaiBurua h2{
-    margin-bottom: 30px;
-    font-size: 35px;
-  }
-  .zerrendaArruntak{
-    padding-left: 2rem;
-  }
-  .gidatala{
-    display:grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .gidagaia{
-    display:grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .gidagaia img{
-    width: 30%;
-  }
-  .galdetegia{
-    background: #ccc;
-    border-radius: 20px;
-    width: 100%;
-  }
-  .artikulua{
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-  .praisikon{
-    width: 150px;
-  }
-  .praisikonoa{
-    width: 150px;
-  }
-  .praisikonoa:hover{
-    width: 175px;
-  }
+.toTop svg {
+  stroke-width: 3px;
+  stroke: currentColor;
+  fill: none;
+  width: 24px;
+  height: 40px;
 }
-@media (max-width: 720px) {
-	header{
-		height:100px;
-	}
-    .goiburua .titulu-nagusia h1{
-      font-size: 1em;
-    }
-    .goiburua .prais-ikonoa img{
-      align-content: center;
-      width: 80px;
-    }
-  .ikasgai-leihoa{
-    width:100%;
-  }
-  img{
-    width: 100%;
-  }
-  .saioAtalak{
-    display: grid;
-    grid-template-columns: auto;
-  }
-  .grid-container {
-    padding: 0;
-    width: 100%;
-    padding: 2px;
-    background-color: #2196F3;
-  }
-  .praisikonoa{
-    width: 5rem;
-  }
-  header h1{
-    font-size: 35px;
-    font-weight: 600;
-    }
-    header span{
-      font-size: large;
-    }
-    main{
-      width: 90%;
-    }
-    footer span{
-      font-size: large;
-    }
-  h2{
-    font-size: 18px;
-  }
-  h3{
-    font-size: 16px;
-  }
-  h4{
-    font-size: 14;
-  }
-  h5{
-    font-size: 14px;
-  }
-  p{
-    font-size: 12px;
-  }
-  .zerrendaArruntak{
-    padding-left: 1.2rem;
-  }
-  .izenburua h1{
-    font-size: 18px;
-  }
-  .ikasgaiBurua h2{
-    margin-bottom: 30px;
-    font-size: 25px;
-  }
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto;
-    gap: 5px;
-  }
-  .toTop {
-    /* posición */
-    position: fixed; right: 10rem; bottom: 10rem; z-index: 9999;
-  }
-  .praisikon{
-    width: 100px;
-  }
-  .praisikonoa{
-    width: 100px;
-  }
-  .praisikonoa:hover{
-    width: 100px;
-  }
+/* Personalizar */
+.toTop {
+  background-color: rgb(20, 4, 112);
+  box-shadow: 0 1px 3px rgba(204, 203, 203, 0.5);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  color: #fff;
+}
+/*Orrialdearen goiburua joateko botoiaren ezaugarriak BUKA --------------*/
+/*Oinean oinetakoa FOOTER*/
+footer{
+  background: #ccc;
+  text-align: center;
 }
 
-@media (max-width: 500px) {
-  img{
-    width: 100%;
-  }
-  main{
-    width: 90%;
-  }
-  h2{
-    font-size: 20px;
-  }
-  h3{
-    font-size: 18px;
-  }
-  h4{
-    font-size: 16;
-  }
-  .izenburua h1{
-    font-size: 18px;
-    text-align: center;
-  }
-  .izenburua h3{
-    display: none;
-  }
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto;
-    gap: 5px;
-  }
-}
 
+/*----------------Menu barra froga  ..........--------------------*/
