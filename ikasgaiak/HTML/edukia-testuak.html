@@ -8,36 +8,46 @@
 </head>
 <body>
     <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
-    <article class="ikasgaia" id="html-egitura-elementua">
-        <div class="azpitituluak">
-          <h3><strong>Testuak</strong></h3>
-        </div>
+    <article>
+        <div><h3><strong>Testuak</strong></h3></div>
+        <div class="banaketaTxikia"></div>
         <p>Dokumentu batek izan dezakeen bitarteko garrantzitsuena testua da.</p>
         <p>HTMLk hainbat elementu definitzen ditu dokumentuan hitz, esaldi edo paragrafo bakoitzaren xedea zehazteko. Hurrengo elementua tituluak irudikatzeko erabiltzen da.</p>
         <div class="banaketaTxikia"></div>
         <h4>&lt;h1&gt;&lt;/h1&gt;</h4>
+        <div class="banaketaTxikia"></div>
         <p>&lt;h1&gt;&lt;/h1&gt;—Elementu honek izenburu bat adierazten du. Izenburua irekitzeko eta ixteko etiketen artean adierazten da. HTMLk azpitituluak irudikatzeko elementu gehigarriak ere baditu, sei mailatakoak (&lt;h1&gt;&lt;/h1&gt;, &lt;h2&gt;&lt;/h2&gt;, &lt;h3&gt;&lt;/h3&gt;, &lt;h4&gt;&lt;/h4&gt;, &lt;h5&gt;&lt;/h5&gt;, &lt;h6&gt;&lt;/h6&gt;). Dokumentuan izenburu edo azpitituluren bat txertatu nahi dugun bakoitzean, etiketen barruan sartu behar dugu.</p>
         <p>Adibidez, aurreko atalean sortu dugun dokumentuak orriaren izenburua du. Izenburu nagusia hori denez, &lt;h1&gt;&lt;/h1&gt; elementuarekin irudikatu beharko litzateke, hurrengo adibideak adierazten duen bezala. </p>
+        <div class="banaketaTxikia"></div>
 <pre>
 <code>
 &lt;header&gt;
-&lt;h1&gt;Hauxe da izenburua.&lt;/h1&gt; 
+&lt;h1&gt;Hauxe da izenburu nagusia.&lt;/h1&gt; 
+&lt;h2&gt;Bigarren mailakoa.&lt;/h2&gt;
+&lt;h3&gt;Hirugarren mailakoa.&lt;/h3&gt;
+&lt;h4&gt;Laugarren mailakoa.&lt;/h4&gt;
+&lt;h5&gt;Bosgarren mailakoa.&lt;/h5&gt;
+&lt;h6&gt;Seigarren mailakoa.&lt;/h6&gt;
 &lt;/header&gt;
 </code>
 </pre>
-        <p>Nabigatzaileek berezko estiloak ematen dizkiete <em>h (header)</em> elementuei, marjinak eta letra-tamaina desberdinak izan ohi dituzte, hierarkiaren arabera; (&lt;h1&gt;&lt;/h1&gt; hierarkia handiena duena da, eta &lt;h6&gt;&lt;/h6&gt; hierarkia txikiena duena). Adibidean testua &lt;h1&gt;&lt;/h1&gt; elementu baten barruan eta berezko estiloekin nola ikusten den erakusten du.</p>
+<div class="banaketaTxikia"></div>
         <div class="irudiKutxa">
-          <img src="../../irudiak/HTML/hatxebat.png" width="50%" alt="H1 kategoriako testua nabigatzailean">
+          <img src="../../irudiak/HTML/headingak.png" width="30%" alt="Headingak (goiburuetako testuak) testu kategoriak nabigatzailean">
           <figcaption>HTML-edukitestua(1): H1 nabigatzailean (Hauxe da izenburua)</figcaption>
         </div>
         <div class="banaketaTxikia"></div>
+        <p>Nabigatzaileek berezko estiloak ematen dizkiete <em>h (header)</em> elementuei, marjinak eta letra-tamaina desberdinak izan ohi dituzte, hierarkiaren arabera; (&lt;h1&gt;&lt;/h1&gt; hierarkia handiena duena da, eta &lt;h6&gt;&lt;/h6&gt; hierarkia txikiena duena). Adibidean testua &lt;h1&gt;&lt;/h1&gt; elementu baten barruan eta berezko estiloekin nola ikusten den erakusten du.</p>
+        <div class="banaketaTxikia"></div>
         <h4>&lt;p&gt;&lt;/p&gt;, &lt;pre&gt;&lt;/pre&gt;, &lt;span&gt;&lt;/span&gt;</h4>
+        <div class="banaketaTxikia"></div>
         <p>Horiek dira HTMLk testuaren gorputza irudikatzeko eskaintzen dituen elementuak. </p>
         <p>&lt;p&gt;&lt;/p&gt;—Elementu honek paragrafo bat adierazten du. Lehenetsita, nabigatzaileek marjina bat esleitzen diote goiko aldean, paragrafo bat bestetik bereizteko.</p>
         <p>&lt;pre&gt;&lt;/pre&gt;—Elementu honek aurrez definitutako formatua duen testu bat irudikatzen du, programazio-kode gisa, edo karaktere bakoitzari esleitutako espazioak eta lerro-jauziak jatorrian adierazi bezala erakustea eskatzen duen poema bat. </p>
         <p>&lt;span&gt;&lt;/span&gt;—Elementu horrek paragrafo bat, esaldi bat edo hitz bat izan dezake. Ez dio testuari estilorik aplikatzen, baina estilo pertsonalizatuak esleitzeko erabiltzen da, hurrengo kapituluetan ikusiko dugun bezala. </p>
         <p>&lt;p&gt;&lt;/p&gt; elementua asko erabiltzen da testuaren gorputza irudikatzeko. Lehenetsita, nabigatzaileek marjinak eta lerro-jauzi bat dituzten estiloak esleitzen dizkiete, paragrafo bat eta bestea bereizteko.</p>
         <p>Ezaugarri horiek direla eta, &lt;p&gt;&lt;/p&gt; elementuak testu-lerroei formatua emateko ere erabil ditzakegu. Horixe egingo diegu gure gure adibideko aipuei.</p>
+        <div class="banaketaTxikia"></div>
 <pre>
 <code>
 &lt;pre&gt;
@@ -49,13 +59,17 @@
 &lt;/pre&gt;
 </code>
 </pre>
+<div class="banaketaTxikia"></div>
         <p>Aipuak &lt;p&gt;&lt;/p&gt; elementuetan kokatu ditugu. Orain, nabigatzaileak aipu edo esteka horietako bakoitza bakoitza bere lerroan erakutsi beharko luke. </p>
+        <div class="banaketaTxikia"></div>
         <div class="irudiKutxa">
           <img src="../../irudiak/HTML/paragrafoa.png" width="50%" alt="&lt;p&gt;&lt;/p&gt; paragrafoak nabigatzailean">
           <figcaption>HTML-edukitestua(2): &lt;p&gt;&lt;/p&gt; paragrafoak nabigatzailean</figcaption>
         </div>
+        <div class="banaketaTxikia"></div>
         <p>Paragrafo batek espazio asko hartzen dituenean, &lt;p&gt;&lt;/p&gt; elementuak automatikoki murrizten du espazio hori karaktere bakar batera, eta gainerakoei ez die jaramonik egiten. Elementuak ere antzeko zerbait egiten du lineako jauziekin.</p>
         <p>Dokumentuan sartutako lerro-jauzi oro ez da kontuan hartuko testua pantailan agertzen denean. Espazio eta lineako jauzi horiek erabiltzaileari erakustea nahi badugu, &lt;p&gt;&lt;/p&gt; elementua erabili beharrean, &lt;pre&gt;&lt;/pre&gt; elementua erabili behar dugu.</p>
+        <div class="banaketaTxikia"></div>
 <pre>
 <code>
 &lt;article&gt;
@@ -68,31 +82,40 @@ Lehen artikulua
 &lt;/article&gt;
 </code>
 </pre>
+<div class="banaketaTxikia"></div>
         <p>Adibideak &lt;article&gt;&lt;/article&gt; elementu bat definitzen du, Samos Epikuroaren aipu bat duena. &lt;pre&gt;&lt;/pre&gt; elementua erabiltzen dugunez, nabigatzaileak aintzat hartzen ditu lerro-jauziak, eta esaldiak idatzi bezala agertzen dira bakoitza bere lerroan.</p>
+        <div class="banaketaTxikia"></div>
         <div class="irudiKutxa">
           <img src="../../irudiak/HTML/lerrokatzea-pre.png" width="50%" alt="&lt;pre&gt;&lt;/pre&gt; elementuaren eragina">
           <figcaption>HTML-edukitestua(3): &lt;pre&gt;&lt;/pre&gt; elementuaren eragina.</figcaption>
         </div>
+        <div class="banaketaTxikia"></div>
         <p>&lt;pre&gt;&lt;/pre&gt; elementua, berez, marjinekin eta jatorrizko testuari esleitutako formatua errespetatzen duen letra-mota batekin konfiguratzen da. Hori dela eta, egokia da programazio-kodea eta aurrez zehaztutako formatua duen edozein testu mota aurkezteko.</p>
         <div class="banaketaTxikia"></div>
+        <div class="banaketaTxikia"></div>
         <h4>&lt;br&gt;, &lt;wbr&gt;</h4>
+        <div class="banaketaTxikia"></div>
         <p>Aurreko adibidean, adibidez, lerrokadaren barruan lerro-jauziak sartzea besterik ez dugu behar, eta, kasu horietan, helburu horrekin berariaz diseinatutako beste elementu batzuk erabil ditzakegu.</p>
-        <p><strong><em>&lt;br&gt;</em></strong> — Elementu hau linea-jauziak txertatzeko erabiltzen da.</p>
+        <p><strong><em>&lt;br&gt;</em></strong> — Elementu hau lerro-jauziak txertatzeko erabiltzen da.</p>
         <p><strong><em>&lt;wbr&gt;</em></strong> — Elementu honek iradokitzen du lerro-jauzi bat egiteko aukera, nabigatzaileari testua non moztu erabakitzen laguntzeko, testua osorik erakusteko nahikoa leku ez dagoenean.</p>
         <p>Elementu horiek testuan txertatzen dira, lerro-jauziak sortzeko.</p>
         <p>Adibidez, aurreko paragrafoa lerro bakar batean idatzi eta esaldi bakoitzaren amaieran &lt;br&gt; elementuak txerta ditzakegu, lerro bereizietan aurkezteko.</p>
+        <div class="banaketaTxikia"></div>
 <pre>
 &lt;article&gt;
 Bigarren artikulua
 &lt;p&gt;Heriotza kimera:&lt;br&gt; ni existitzen naizen bitartean, ez delako heriotza, &lt;br&gt;eta heriotza gertatzen denean, jada ez naiz existitu.&lt;br&gt;Samos-en epikuroa&lt;/p&gt;
 &lt;/article&gt;
 </pre>
+<div class="banaketaTxikia"></div>
         <p>&lt;p&gt;&lt;/p&gt; eta &lt;pre&gt;&lt;/pre&gt; elementuek ez bezala, &lt;br&gt; eta &lt;wbr&gt; elementuek ez diote inolako marjinarik edo letra-motarik esleitzen testuari, eta, beraz, lerroak paragrafo berekoak balira bezala erakusten dira, lehenetsitako letra-motarekin.</p>
+        <div class="banaketaTxikia"></div>
         <div class="garrantzi-oinarrizko">
           <p><strong>Ekin zure kasa: </strong> jo ohar-koadernora eta idatzi testu hau bertan, bigarren artikuluan (). Ez ahaztu &lt;br&gt; elementuak. Idatzitakoan gorde eta ireki zure nabigatzailean. Egin aprobak &lt;br&gt; elementuak lekuz aldatuz lerro jauziak behar bezala egiten dituela ikusteko. </p>
         </div>
         <div class="banaketaTxikia"></div>
         <h4>&lt;em&gt;&lt;/em&gt;, &lt;strong&gt;&lt;/strong&gt;, &lt;i&gt;&lt;/i&gt; &lt;u&gt;&lt;/u&gt;, &lt;b&gt;&lt;/b&gt;</h4>
+        <div class="banaketaTxikia"></div>
         <p>Testu bateko hitz guztiek enfasi bera ez dutenez, HTMLk honako elementu hauek barne hartzen ditu banakako hitzei edo esaldi osoei esanahi berezia adierazteko.</p>
         <p><strong>&lt;em&gt;&lt;/em&gt;</strong> — Elementu hau enfasia adierazteko erabiltzen da. Testua letra etzanez agertuko da lehenetsita.</p>
         <p><strong>&lt;strong&gt;&lt;/strong&gt;</strong> — Elementu hau erabiltzen da garrantzia adierazteko. Testua letra lodiz agertuko da lehenetsita.</p>
@@ -100,6 +123,7 @@ Bigarren artikulua
         <p><strong>&lt;u&gt;&lt;/u&gt;</strong> — Elementu honek artikulatu gabeko testua adierazten du. Lehenetsita dago.</p>
         <p><strong>&lt;b&gt;&lt;/b&gt;</strong> — Elementu hau erabiltzen da garrantzia adierazteko. Egoerarako beste elementurik egokia ez denean bakarrik inplementatu beharko litzateke. Testua letra lodiz agertuko da lehenetsita.</p>
         <p>Elementu horiek izenburuak edo etiketak nabarmentzeko erabil daitezke, edo paragrafo batean hitzak edo esaldiak nabarmentzeko, hurrengo adibideak erakusten duenez.</p>
+        <div class="banaketaTxikia"></div>
 <pre>
 &lt;article&gt;
 Hirugarren artikulua
@@ -107,25 +131,34 @@ Hirugarren artikulua
 gertatzen denean&lt;/em&gt;, jada ez naiz existitu.&lt;br&gt;&lt;strong&gt;Samos-en epikuroa&lt;/strong&gt; &lt;/p&gt;
 &lt;/article&gt;
 </pre>
-        <p>CSSrekin estilo desberdinak zehaztu ezean, elementu horien barruko testua estilo lehenetsiekin erakusten da.</p>
+<div class="banaketaTxikia"></div>
+<p>CSSrekin estilo desberdinak zehaztu ezean, elementu horien barruko testua estilo lehenetsiekin erakusten da.</p>
         <div class="garrantzi-oinarrizko">
           <p><strong>Ekin zure kasa: </strong> jo ohar-koadernora eta idatzi testu hori bertan, hirugarren artikuluan. Ez ahaztu &lt;br&gt; elementuek besteek ez bezala ez daukatela itxiera etiketarik. Idatzitakoan gorde eta ireki zure nabigatzailean. Egiaztatu zure letra lodiak, letra etzanak,
             azpimarratuak... agindu bezala erakusten dituela nabigatzaileak. Aldatu lekuz elementuak aginduak behar bezala betetzen dituela ikusteko.</p>
         </div>
         <div class="banaketaTxikia"></div>
         <h4>&lt;mark&gt;&lt;/mark&gt;, &lt;cite&gt;&lt;/cite&gt;, &lt;time&gt;&lt;/time&gt;</h4>
+        <div class="banaketaTxikia"></div>
         <p>Egiturazko elementuen espezifikotasuna edukia definitzeko erabilitako elementu batzuetan ere agertzen da. Adibidez, HTMLk honako elementu hauek barne hartzen ditu, argi eta garbi zehaztutako helburua duten testuak txertatzeko.</p>
         <ul class="zerrendaArruntak">
           <li><p><strong>&lt;mark&gt;&lt;/mark&gt;</strong>— Elementu honek egungo egoeretan garrantzitsua den testua nabarmentzen du (adibidez, erabiltzaileak bilatzen dituen terminoak).</p></li>
+          <div class="banaketaTxikia"></div>
           <li><p><strong>&lt;cite&gt;&lt;/cite&gt;</strong>— Elementu honek lan baten egilea edo izenburua adierazten du, liburu bat, film bat, etab.</p></li>
+          <div class="banaketaTxikia"></div>
           <li><p><strong>&lt;adress&gt;&lt;/adress&gt;</strong>— Elementu honek harremanetarako informazioa adierazten du. Sarritan ezartzen da orri-oinen barruan, enpresaren helbidea edo webgunea definitzeko.</p></li>
+          <div class="banaketaTxikia"></div>
           <li><p><strong>&lt;small&gt;&lt;/small&gt;</strong>— Elementu honek letra txikia adierazten du, hala nola legezko adierazpenak, deskarguak, etab.</p></li>
+          <div class="banaketaTxikia"></div>
           <li><p><strong>&lt;time&gt;&lt;/time&gt;</strong>— Erabiltzailearentzat irakurtzeko moduko formatuan dagoen data adierazten du elementu honek. Ordenagailu-formatuko balio bat zehazteko datetime atributua eta <strong>pubdate</strong> atributua biltzen ditu; azken horrek adierazten du datetime atributuari esleitutako balioak argitalpen-data adierazten duela.</p></li>
+          <div class="banaketaTxikia"></div>
           <li><p><strong>&lt;code&gt;&lt;/code&gt;</strong>— Programazio-kodea adierazten du elementu honek. &lt;pre&gt;&lt;/pre&gt; elementuarekin batera erabiltzen da jatorrizko formatuan programazio-kodea aurkezteko. </p></li>
+          <div class="banaketaTxikia"></div>
           <li><p><strong>&lt;data&gt;&lt;/data&gt;</strong>— Elementu honek datu generikoak adierazten ditu. <strong>value</strong> atributua sar dezakezu ordenagailu-formatuko balioa zehazteko (adibidez, &lt;data value="32"&gt; Hogeita hamabi &lt;/data&gt;). Elementu horiek informazio espezifikoa adierazten dutenez, normalean beste elementu batzuen edukia osatzeko erabiltzen dira.</p></li>
         </ul>
 
         <p>Adibidez, &lt;time&gt;&lt;/time&gt; elementua erabil dezakegu artikulu bat eta beste elementu batzuk (&lt;mark&gt;&lt;/mark&gt; eta &lt;cite&gt;&lt;/cite&gt;) noiz argitaratu diren adierazteko, testuaren zati batzuei esanahia emateko.</p>
+        <div class="banaketaTxikia"></div>
 <pre>
 <code>
 &lt;article&gt;
@@ -140,11 +173,13 @@ ez naiz gehiago ni existitzen.&lt;/p&gt;
 &lt;/article&gt;
 </code>
 </pre>
+<div class="banaketaTxikia"></div>
         <p>Gure &lt;article&gt; &lt;/article&gt; elementuaren barruan, artikuluaren goiburu gisara &lt;header&gt;&lt;/header&gt; elementu bat sartu dugu.
         <p>&lt;header&gt; &lt;/header&gt; goiburuak barruan &lt;h3&gt;&lt;/h3&gt; etiketa artean izenburua eta &lt;time&gt;&lt;/time&gt; etiketa artean argitalpen-data daramatza. Argitalpen data letra etzanean nahi dugunez &lt;em&gt;&lt;/em&gt; etiketa artean kokatu dugu.</p>
         <p>Testuaren hainbat zati, &lt;mark&gt;&lt;/mark&gt; eta &lt;cite&gt;&lt;/cite&gt; elementuekin nabarmendu dugu.</p>
         <p> &lt;mark&gt;&lt;/mark&gt; elementuak jatorrian garrantzitsutzat jotzen ez ziren baina une horretan garrantzitsu bihurtu diren testu zatiak nabarmentzen ditu, (erabiltzaileak testu horrekin bilaketaren bat egin zuelako adibidez); eta, &lt;cite&gt;&lt;/cite&gt; elementuak, kasu honetan, egilearen izena nabarmentzen du.</p>
         <p>Nabigatzaileek estiloak esleitzen dizkiote testuari. &lt;mark&gt;&lt;/mark&gt; elementuaren hondoa kolore horiz erakusten du eta &lt;cite&gt;&lt;/cite&gt; elementuaren edukia letra etzanez beheko irudiak erakusten duen bezala.</p>
+        <div class="banaketaTxikia"></div>
         <div class="irudiKutxa">
           <img src="../../irudiak/HTML/time-mark-cite.png" width="50%" alt="H1 kategoriako testua nabigatzailean">
           <figcaption>HTML-edukitestua(4): &lt;mark&gt;&lt;/mark&gt;-&lt;time&gt;&lt;/time&gt;-&lt;cite&gt;&lt;/cite&gt; elementuak.</figcaption>
@@ -163,8 +198,10 @@ ez naiz gehiago ni existitzen.&lt;/p&gt;
         </div>
         <div class="banaketaTxikia"></div>
         <h4>&lt;small&gt;&lt;/small&gt; &lt;address&gt;&lt;/address&gt;</h4>
+        <div class="banaketaTxikia"></div>
         <p>Goian aipatutako gainerako elementuak ere beste elementu batzuekin konbinatzen dira, edukiak osatzeko.</p>
         <p>Adibidez, &lt;small&gt;&lt;/small&gt; eta &lt;address&gt;&lt;/address&gt; elementuak &lt;footer&gt;&lt;/footer&gt; elementu baten barruan txertatzen dira normalean, orriari edo atal bati buruzko informazioa nabarmentzeko.</p>
+        <div class="banaketaTxikia"></div>
 <pre>
 <code>
 &lt;footer&gt; 
@@ -175,8 +212,10 @@ ez naiz gehiago ni existitzen.&lt;/p&gt;
 </pre>
         <div class="banaketaTxikia"></div>
         <h4>&lt;code&gt;&lt;/code&gt;</h4>
+        <div class="banaketaTxikia"></div>
         <p>&lt;code&gt;&lt;/code&gt; elementuak beste elementu batzuekin ere lan egiten du edukia aurkezteko, baina lotura berezia du &lt;pre&gt; &lt;/pre&gt; elementuarekin. Biak elkarrekin inplementatzen dira programazio-kodea aurkezteko.</p>
         <p>&lt;code&gt;&lt;/code&gt; etiketak bere edukia programazio-kodea dela adierazten du, eta &lt;pre&gt; &lt;/pre&gt; elementuak eduki hori pantailan erakusten du, dokumentuan hasieran adierazi bezala espazioak eta lerro-jauziak errespetatuz.</p>
+        <div class="banaketaTxikia"></div>
 <pre>
 <code>
 &lt;article&gt; 
@@ -191,23 +230,13 @@ ez naiz gehiago ni existitzen.&lt;/p&gt;
 &lt;/article&gt;
 </code>
 </pre>
+        <div class="banaketaTxikia"></div>
         <p>Horrela, JavaScript sisteman programatutako kodea erakusten duen &lt;article&gt; &lt;/article&gt; elementu bat definitzen dugu. Kode hori &lt;script&gt; &lt;/script&gt; elementu baten barruan ez dagoenez, nabigatzaileak ez du exekutatzen, eta &lt;pre&gt; &lt;/pre&gt; elementu baten barruan dagoenez, dokumentuan adierazitako lerro-jauziak eta espazioak ditu.</p>
+        <div class="banaketaTxikia"></div>
         <div class="garrantzi-oinarrizko">
           <p><strong>Jakiteko:</strong> batzuetan, elementuen izenek eta edukiek ez diote informazio nahikorik ematen garatzaileari kodearen helburua ulertzeko. Egoera horietan, HTMLk iruzkinak idazteko aukera ematen digu.<br>Iruzkinak dokumentuan sartzen diren testuak dira, baina nabigatzaileak ez ditu prozesatzen. Iruzkin bat eransteko, testua &lt;! -- eta --&gt; etiketen artean idatzi behar dugu, &lt;! -n bezala. Iruzkin bat da --&gt;.</p>
         </div>
+        <div class="banaketaTxikia"></div>
       </article>
-    <div class="banaketaTxikia"></div>
-<!-- EDUKIA HTML SAILEKO Testuak atalaren BIDEOA hasi ---------------------  -->
-    <section class="ikasgaia" id="html-taulatributu-bideoa">
-      <article>
-        <h4 class="bideontziBurua">Testuak<br><i class="fa fa-television"></i></h4>
-        <div class="bideontzia">
-          <iframe width="100%" height="350" src="https://www.youtube.com/embed/7_eInlArV_U?si=KRu5X6Bnk_fyp4Nz"
-            title="YouTube video player" "></iframe>
-        </div>
-        <figcaption>HTML-testuak(6): Testuei buruzko bideoa.</figcaption>
-      </article>
-    </section>
-<!-- EDUKIA HTML SAILEKO Taulak eta atributu globalak atalaren BIDEOA buka ---------------------  -->
 </body>
 </html>
