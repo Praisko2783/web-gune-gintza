@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <article class="ikasgaia" id="html-egitura-elementua">
-        <div class="azpitituluak">
+  <article>
+        <div>
           <h3><strong>Atributu globalak</strong></h3>
         </div>
         <div class="banaketaTxikia"></div>
@@ -20,21 +20,22 @@
         <p><strong>class—</strong> Atributu horrek identifikatzaile bera esleitzen dio elementu-talde bati. </p>
         <strong>id—</strong> atributuak balio bakarreko elementu independenteak identifikatzen ditu, eta <strong>class—</strong> atributuaren balioa bikoiztu egin daiteke antzeko ezaugarriak dituzten elementuak lotzeko.
         Adibidez, elkarren artean bereizi behar ditugun &lt;section&gt; motako bi elementu edo gehiago baditugu, <strong>id</strong> atributua erants diezaiokegu bakoitzari bere helburuak adierazten dituzten balioekin.
-<pre>
+        <div class="banaketaTxikia"></div>
+        <pre>
 <code>
 (...)
-&lt;main&gt;
-<b>&lt;section id="albisteak"&gt;</b>
-Artikulu luzeak
-<b>&lt;/section&gt;</b>
-<b>&lt;section id="gertukoalbisteak"&gt;</b>
-Artikulu laburrak
-<b>&lt;/section&gt;</b>
-&lt;aside&gt;
-<u>lehen artikulura esteka</u>
-<u>Bigarren artikulura esteka</u>
-<u>Hirugarren artikulura esteka</u>
-&lt;/aside&gt;
+    &lt;main&gt;
+    <b>&lt;section id="albisteak"&gt;</b>
+        Artikulu luzeak
+    <b>&lt;/section&gt;</b>
+    <b>&lt;section id="gertukoalbisteak"&gt;</b>
+        Artikulu laburrak
+    <b>&lt;/section&gt;</b>
+      &lt;aside&gt;
+          <u>lehen artikulura esteka</u>
+          <u>Bigarren artikulura esteka</u>
+          <u>Hirugarren artikulura esteka</u>
+      &lt;/aside&gt;
 &lt;/main&gt;
 (...)
 </code>
@@ -46,36 +47,38 @@ Artikulu laburrak
 <!-- Hemen doa gorputzaren 'body' aren atala  <div> elementu librea-----------  -->
         <h4>&lt;div&gt;&lt;/div&gt;</h4>
         <p>Hurrengo adibideak <strong>&lt;div&gt;&lt;/div&gt;</strong> elementuak dituen atal baten edukia banatzen du. Guztiek antzeko edukia dutenez, estilo berberak partekatuko dituzte eta, beraz, balio berarekin identifikatu beharko genituzke (denak mota berekoak dira).</p>
-<pre>
+        <div class="banaketaTxikia"></div>
+        <pre>
 <code>
 (...)
-&lt;main&gt;
-&lt;section id="albisteak"&gt;
-Artikulu luzeak
-&lt;/section&gt;
-&lt;section id="gertukoalbisteak"&gt;
-Artikulu laburrak
-&lt;/section&gt;
-&lt;section id="misterioa"&gt;
-Misterio liburuak
-<b>&lt;div class="liburuak"&gt;
-  Libro: IT, Stephen King&lt;/div&gt;</b>
-<b>&lt;div class="liburuak"&gt;
-  Libro: Carrie, Stephen King&lt;/div&gt;</b>
-<b>&lt;div class="liburuak"&gt;
-  Libro: El resplandor, Stephen King&lt;/div&gt;</b>
-<b>&lt;div class="liburuak"&gt;
-  Libro: Misery, Stephen King&lt;/div&gt;</b>
-&lt;/section&gt;
-&lt;aside&gt;
-<u>lehen artikulura esteka</u>
-<u>Bigarren artikulura esteka</u>
-<u>Hirugarren artikulura esteka</u>
-&lt;/aside&gt;
-&lt;/main&gt;
+    &lt;main&gt;
+      &lt;section id="albisteak"&gt;
+          Artikulu luzeak
+      &lt;/section&gt;
+      &lt;section id="gertukoalbisteak"&gt;
+          Artikulu laburrak
+      &lt;/section&gt;
+      &lt;section id="misterioa"&gt;
+          Misterio liburuak
+      <b>&lt;div class="liburuak"&gt;
+          Libro: IT, Stephen King&lt;/div&gt;</b>
+      <b>&lt;div class="liburuak"&gt;
+          Libro: Carrie, Stephen King&lt;/div&gt;</b>
+      <b>&lt;div class="liburuak"&gt;
+          Libro: El resplandor, Stephen King&lt;/div&gt;</b>
+      <b>&lt;div class="liburuak"&gt;
+          Libro: Misery, Stephen King&lt;/div&gt;</b>
+      &lt;/section&gt;
+      &lt;aside&gt;
+        <u>lehen artikulura esteka</u>
+        <u>Bigarren artikulura esteka</u>
+        <u>Hirugarren artikulura esteka</u>
+      &lt;/aside&gt;
+    &lt;/main&gt;
 (...)
 </code>
 </pre>
+<div class="banaketaTxikia"></div>
         <p>Kodean elementu bat dugu &lt;section id="misterioa"&gt; misterio liburuen eduki nagusia irudikatzeko, baina hainbat banaketa sortu ditugu haren barruan &lt;div&gt; elementuekin, edukia antolatzeko.</p>
         <p>Elementu horiek <strong>class</strong> atributuarekin eta <strong>"liburuak"</strong> balioarekin identifikatu direnez, "liburuak" klasea erreferentziatuz elementu berriak sartzen edo aldatzen ditugun bakoitzean, elementu horiek guztiek klase horri erantsitako propietateen eragina jasango dute.</p>
         <div class="banaketaTxikia"></div>
