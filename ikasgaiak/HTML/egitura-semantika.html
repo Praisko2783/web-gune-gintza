@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- HTML semantikoari buruzko atala-->
+  <article>
+    <div>
+      <h3><strong>HTML semantikoa</strong></h3>
+    </div>
+    <div class="banaketaTxikia"></div>
+    <p>HTML semantikoak, marka semantiko gisa ere ezagutzen denak, edukiaren esanahia (edo semantika) transmititzen duten HTML etiketak biltzen ditu.</p>
+    <p>Zure orriei HTML etiketa semantikoak gehitzean, bilatzaileei informazio gehigarria ematen diezu zure orrialdeetako atalen funtzionaltasunari eta garrantziari buruz.</p>
+    <p>(HTML ez-semantikoak ez bezala, HTML semantikoak esanahia zuzenean transmititzen duten etiketak erabiltzen ditu).</p>
+    <div class="banaketaTxikia"></div>
+    <div class="irudiKutxa">
+      <img src="../../irudiak\HTML\htmlSemantiko-bat.png" alt="HTML semantikoa eta ez semantikoa" width="100%">
+    </div>
+    <div class="banaketaTxikia"></div>
+    <h4>Etiketa semantikoak</h4>
+    <div class="banaketaTxikia"></div>
+    <p>HTML etiketa semantikoak barnean hartzen duten edukiaren esanahia definitzen duten etiketak dira.</p>
+    <p>Adibidez, < header>, < article> eta < footer> bezalako etiketak HTML etiketa semantikoak dira. Argi eta garbi adierazten dute edukiaren funtzionaltasuna. < header> goiburua, < article> artikulua eta < footer> orri-oina</footer></p>
+    <p>Aldiz, < div> eta < span> bezalako etiketak HTML elementu ez-semantikoen ohiko adibideak dira. Edukia duten arren, ez dute adierazten zer eduki mota duten, ezta pieza horrek orrian zer funtzio betetzen duen ere.</p>
+    <div class="banaketaTxikia"></div>
+    <h4>HTML semantikoaren garrantzia</h4>
+    <div class="banaketaTxikia"></div>
+    <p>Etiketa semantikoak web bilatzaileek eta garatzaileek irakurtzeko eta ulertzeko errazagoak izateaz gain, ikusmen-urritasunak dituzten irakurleentzat eskuragarriagoak dira eta bilatzaileetan duzun posizionamendua hobetzen dute.</p>
+    <h5>Irisgarritasuna: </h5>
+    <p>Ikusmen arazorik ez duten erabiltzaileentzat, erraza da orrialde bateko atalak identifikatzea. Buruak, orri-oinak eta edukia berehala ikus daitezke.</p>
+    <p>Hala ere, ez da hain erraza pantaila-irakurgailuen mende dauden erabiltzaile itsuentzat edo ikusmen-arazoak dituztenentzat. HTML etiketa semantikoak behar bezala erabiltzeak zure edukia hobeto ulertzeko aukera emango die.</p>
+    <h5>SEO: </h5>
+    <p>etiketa semantikoak garrantzitsuak dira SEOrako, etiketen barruan edukiaren funtzioa adierazten dutelako.</p>
+    <p>Horrela, bilatzaileen arakatzaileek, Googlebotek kasu, hobeto ulertuko dute zure edukia, eta horrek aukera gehiago izango ditu zure gako-hitz objektiboetarako bilaketa-emaitzetan (SERP) posizionatua izateko.</p>
+    <p>Hitz gutxitan esanda, HTML semantikoa behar bezala inplementatuta duten orriek lehiarako abantaila dute SEO arloan, ez dutenen aldean.</p>
+    <div class="banaketaTxikia"></div>
+    <h4>Etiketa semantiko motak</h4>
+    <div class="banaketaTxikia"></div>
+    <h5>Etiketa semantikoak web-orri baten atalak definitzeko erabiltzen dira.</h5>
+    <p>HTML elementu semantiko ohikoenak ikusiko ditugu, erabileraren arabera bi kategoriatan banatuta:</p>
+    <div class="banaketaTxikia"></div>
+    <ul class="zerrendaArruntak">
+      <li>HTML etiketa semantikoak egiturarako</li>
+      <li>HTML etiketa semantikoak testurako</li>
+    </ul>
+    <div class="banaketaTxikia"></div>
+    <h5>HTML etiketa semantikoak egiturarako</h5>
+    <div class="banaketaTxikia"></div>
+    <div class="irudiTestuKaxa">
+      <div class="irudiTestua">
+        <p>HTML etiketa semantiko gehienek orrien diseinua komunikatzen dute.</p>
+        <p>Egiturarako etiketa horiek HTML4a HTML5era eguneratu zenean sartu ziren. Horregatik, HTML5 etiketa semantikoak edo HTML5 elementu semantikoak ere esaten zaie.</p>
+        <p>Hauexek dira:</p>
+        <ul class="zerrendaArruntak">
+          <li><strong>&lt;header&gt;: </strong>sarrera-etiketak orrialde edo atal baten sarrera-edukia definitzen du.</li>
+          <div class="banaketaTxikia"></div>
+          <li><strong>< nav>:</strong>nabigazio-etiketa nabigazio-loturetarako erabiltzen da. < header> etiketaren barruan habia daiteke, baina bigarren mailako nabigazioko < nav> etiketak orriaren beste atal batzuetan ere erabili ohi dira.</li>
+          <div class="banaketaTxikia"></div>
+          <li><strong>< main>: </strong>etiketa honek orrialde baten eduki nagusia (gorputza ere esaten zaio) jasotzen du. Etiketa bakarra egon beharko litzateke < main> orriko.</li>
+          <div class="banaketaTxikia"></div>
+          <li><strong>< article>: </strong>artikulu etiketak definitzen du zein orri edo webgunetan dagoen. Ez du zertan "blogaren sarrera" esan nahi. Pentsa ezazu "janzki bat" bezala: hainbat testuingurutan erabil daitekeen etiketa independente bat.</li>
+          <div class="banaketaTxikia"></div>
+          <li><strong>< section>: </strong>< section> erabiltzea antzeko gaiei buruzko edukiak multzokatzeko modu bat da. Sekzio-etiketak eta artikulu-etiketak desberdinak dira, ez dira nahitaez autonomoak, beste zerbaiten parte baizik.</li>
+          <div class="banaketaTxikia"></div>
+          <li><strong>< aside>: </strong>"aside" elementu batek garrantzi txikiko edukia definitzen du. Alboetako barretarako erabili ohi da, informazio osagarria baina ez funtsezkoa dutenak.</li>
+          <div class="banaketaTxikia"></div>
+          <li><strong>< footer>: </strong>< footer> erabiltzen du orrialde baten behealdean. Etiketak harremanetarako informazioa, egile-eskubideak eta web-ean nabigatzeko aukera ematen du.</li>
+        </ul>
+      </div>
+      <div class="irudiKaxa">
+        <div class="irudiKutxa">
+          <img src="../../irudiak\HTML\htmlSemantiko-bi.png" alt="HTML semantikoa eta ez semantikoa" width="100%" height="800">
+        </div>
+    </div>
+      </div>
+    </div>
+       
+    <h5>HTML etiketa semantikoak testurako</h5>
+    <div class="banaketaTxikia"></div>
+    <p>Testurako HTML etiketa semantikoak HTML etiketak dira, eta (formatuaz gain) testuaren funtzio semantikoa ere transmititzen dute.</p>
+    <p>Hona hemen adibide ohikoenetako batzuk:</p>
+    <ul class="zerrendaArruntak">
+      <li><strong>< h1> (goiburua): </strong>H1 etiketak goiko mailako goiburua markatzen du. Normalean, orrialde bakoitzeko H1 titulu bakarra dago.</li>
+      <div class="banaketaTxikia"></div>
+      <li><strong>< h2>tik < h6>ra (azpitituluak): </strong>hainbat garrantzi-mailatako azpitituluak. Maila bereko hainbat azpititulu egon daitezke orrialde berean.</li>
+      <div class="banaketaTxikia"></div>
+      <li><strong>< p> (paragrafoa): </strong>testu independenteko paragrafo bat.</li>
+      <div class="banaketaTxikia"></div>
+      <li><strong>< a> (aingura): </strong>orrialde batetik bestera hiperesteka bat markatzeko erabiltzen da.</li>
+      <div class="banaketaTxikia"></div>
+      <li><strong>< ol> (zerrenda ordenatua): </strong>ordena jakin batean agertzen diren elementuen zerrenda, binetetatik hasita. < li> etiketek (zerrendako elementua) zerrendako elementu bakarra dute.</li>
+      <div class="banaketaTxikia"></div>
+      <li><strong>< ul> (zerrenda desordenatua): </strong>ordena jakin batean erakutsi beharrik ez duten elementuen zerrenda, zenbaki ordinaletatik hasita. < li> etiketek (zerrendako elementua) zerrendako elementu bakarra dute.</li>
+      <div class="banaketaTxikia"></div>
+      <li><strong>< q>/< blockquote>: </strong>testuaren aipua. Erabili < blockquote> hainbat lerrotako hitzordu luzeetarako, eta < q> hitzordu laburragoetarako, linean.</li>
+      <div class="banaketaTxikia"></div>
+      <li><strong>< em> (nabarmentzeko): </strong>testua modu etzanean nabarmentzeko erabiltzen da.</li>
+      <div class="banaketaTxikia"></div>
+      <li><strong>< strong> (enfasia emateko): </strong>testua letra lodiz nabarmentzeko erabiltzen da.</li>
+      <div class="banaketaTxikia"></div>
+      <li><strong>< code>: </strong>kode-bloke bat adierazten du.</li>
+      <div class="banaketaTxikia"></div>
+      <li><strong>Eta hamaika gehiago, ehun inguru, ikastaroan zehar ikusiko ditugunak.</strong></li>
+    </ul>
+    <div class="banaketaTxikia"></div>
+      <div class="garrantzi-oinarrizko">
+        <p><strong>GARRANTZITSUA:</strong>
+        <p>HTML etiketa semantiko ohikoenetako batzuk baino ez ditugu zerrendatu. Beste asko ere erabil ditzakezu, hala nola < summary>, < time>, < address>, < video>, etab., zure webgunearen edukia errazago ulertzeko. HTML elementu semantiko gehiago aurkitu nahi badituzu, kontsultatu W3Schoolsen HTML etiketa guztien zerrenda.</p>
+      </div>
+      <div class="banaketaTxikia"></div>
+      <h4>HTML semantikoaren jardunbide egokiak</h4>
+      <div class="banaketaTxikia"></div>
+      <p>Azkenik, erabiltzaileek HTML etiketa semantikoak erabiltzean egiten dituzten errore komunetan oinarritutako HTML inplementazio-aholku batzuk ikusiko ditugu.</p>
+      <h5>Ez erabili HTML etiketa semantikoak formatu gisa</h5>
+      <p>Nabigatzaileek estiloak aplikatzen dizkiete etiketa semantiko askori (adibidez, < a> etiketa baten barruko testua urdina izaten da eta azpimarratuta egoten da), baina horrek ez du esan nahi HTML etiketak erabili behar direnik zure testuak formateatzeko.</p>
+      <p>Bestela esanda, etiketa bat urdinez jartzeko eta esteka bat ez duen testu bat azpimarratzeko < a> erabiliko ez zenukeen bezala, ez zenituzke etiketa semantikoak erabili behar helburu estilistiko hutsekin.</p>
+      <p>Hona hemen etiketa semantikoen <strong>erabilera okerra</strong>ren adibide tipiko batzuk:</p>
+      <ul class="zerrendaArruntak">
+        <li>< h1> eta < h6> etiketak erabiltzea, iturriaren tamaina aldatzeko izenburua ez den testu baterako.</li>
+        <div class="banaketaTxikia"></div>
+        <li>< blockquote> erabili aipua ez den testu bat odoletan jartzeko.</li>
+        <div class="banaketaTxikia"></div>
+        <li>Erabili < strong> edo < em> enfasirik behar ez duen testu bati letra lodia edo etzana gehitzeko.</li>
+      </ul>
+      <div class="banaketaTxikia"></div>
+      <h3>Formatu helburuetarako, erabili beti CSS.</h3>
+      <div class="banaketaTxikia"></div>
+      <div class="garrantzi-oinarrizko">
+        <div class="irudiTestuKaxa">
+          <div class="irudiTestua">
+            <h5>Kontuan hartu semantika izenburuak egiteko etiketak sortzean</h5>
+            <p>Ordenatu beti garrantziaren araberako goiburuen elementuak.</p>
+            <p>Adibidez, H2 sarrera bati jarraitzen dioten H3 goiburu guztiek H2aren azpigaiak izan behar dute.</p>
+            <p>Horrela, goiburuen egiturak hierarkia logiko bat sortzen du zure edukiaren gaietan, eta irakurleei zein bilatzaileei laguntzen die testua hobeto ulertzen eta nabigatzen.</p>
+          </div>
+          <div class="irudiKaxa">
+            <div class="irudiKutxa">
+              <img src="../../irudiak\HTML\htmlSemantiko-hiru.png" alt="HTML semantikoa eta ez semantikoa" width="100%" height="200">
+            </div>
+          </div> 
+        </div> 
+      </div>   
+      <div class="banaketaTxikia"></div>
+      <div class="garrantzi-oinarrizko">
+        <p><strong>AHOLKUA:</strong>
+            <p>erabili Semrush webgunearen auditoria tresna zure webguneak izan ditzakeen H1, HTML eta SEO on-page goiburuekin arazoak identifikatzeko.</p>
+            <p>Aholku bera aplikatzen zaie gainerako HTML etiketa semantiko guztiei ere.</p>
+            <p>Horrek honako aholku honetara garamatza:</p>
+            <div class="irudiTestuKaxa">
+              <div class="irudiTestua">
+                <h5>Ez kopiatu zure ikuspegia besterik gabe</h5>
+                <div class="banaketaTxikia"></div>
+                <p>Zure HTML inplementazioak ez du zure diseinu bisualaren kopia hutsa izan behar. Aldiz, orriaren egitura semantikoari jarraitu behar dio.</p>
+                <p>Begiratu adibide honi:</p>
+                <p>Ezkerreko zutabean HTML etiketak sartzea ez da zuzena; izan ere, orriak lau gai desberdin dituela adierazten du, gai bat eta hiru azpigai izan beharrean, eskuinaldean erakusten den bezala.</p>
+                <p>Eskuineko zutabean, aldiz, HTML semantikoa erabiliz behar bezala sortutako orrialde bat ikus dezakezu. Orrialdearen diseinu bisualean lau atal bereizi badira ere, HTML etiketak edukiaren semantikaren arabera daude habiatuta.</p>
+              </div>
+              <div class="irudiKaxa">
+                <div class="irudiKutxa">
+                  <img src="../../irudiak\HTML\htmlSemantiko-lau.png" alt="HTML semantikoa eta ez semantikoa" width="100%" height="300">
+                </div>
+              </div>
+            </div>
+      </div>
+    </section>
+</body>
+</html>
