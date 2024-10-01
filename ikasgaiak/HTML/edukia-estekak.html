@@ -8,40 +8,45 @@
 </head>
 <body>
     <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
-    <article class="ikasgaia" id="html-egitura-elementua">
-        <div class="azpitituluak">
-          <h3><strong>Estekak</strong></h3>
-        </div>
+    <article>
+        <div><h3><strong>Estekak</strong></h3></div>
+        <div class="banaketaTxikia"></div>
         <p>Esteken bidez dokumentuak beste dokumentu batzuekin konektatzea da webgunea ahalbidetzen duena. Lehen aipatu dugun bezala, esteka bat baliabide baten kokapena adierazten duen URL bati lotutako edukia da.</p>
         <p>Erabiltzaileak edukian (testuan edo irudian) klik egiten duenean, nabigatzaileak baliabidea deskargatzen du.</p>
         <p>HTMLk estekak sortzeko &lt;a&gt;&lt;/a&gt; elementua erabiltzen du.</p>
         <div class="banaketaTxikia"></div>
         <h4>&lt;a&gt;&lt;/a&gt;</h4>
+        <div class="banaketaTxikia"></div>
         <p>&lt;a&gt;&lt;/a&gt;— Elementuak lotura bat sortzen du. &lt;a&gt;&lt;/a&gt; hizki hori ingelesezko ainguraren lehen hizkia da <em>anchor</em> hitzarena, alegia. Estekak irudikatzen duen testua edo irudia irekitzeko eta ixteko etiketen artean sartzen da eta <strong>href </strong>atributua medio, estekaren URLa edo helbidea zehazteko.</p>
         <p>Estekak gure dokumentua beste dokumentu batzuekin konektatzeko erabiltzen dira dela webgune berekoekin dela beste webguneetakoekin.</p>
         <p>Adibidez, gure web-orriko menuko aukerak gure zerbitzariko beste dokumentu batzuetara estekatu ditzakegu.</p>
+        <div class="banaketaTxikia"></div>
 <pre>
 <code>
 &lt;nav&gt; 
-&lt;a href="ataria.html"&gt;Ataria &lt;/a&gt; // 
-&lt;a href="produktuak.html"&gt;Produktuak &lt;/a&gt; //
-&lt;a href="albisteak.html"&gt;Albisteak &lt;/a&gt; //
-&lt;a href="harremanak.html"&gt;Harremanak &lt;/a&gt; //
+  &lt;a href="ataria.html"&gt;Ataria &lt;/a&gt; // 
+  &lt;a href="produktuak.html"&gt;Produktuak &lt;/a&gt; //
+  &lt;a href="albisteak.html"&gt;Albisteak &lt;/a&gt; //
+  &lt;a href="harremanak.html"&gt;Harremanak &lt;/a&gt; //
 &lt;/nav&gt;
 </code>
-</pre>
+</pre>            
+        <div class="banaketaTxikia"></div>
         <p>&lt;nav&gt;&lt;/nav&gt; elementuak lau elementu &lt;a&gt;&lt;/a&gt; ditu menuko aukera bakoitzeko. Elementuek <strong>href</strong> atributua dute, erabiltzaileak estekan klik egiten duenean zer dokumentu ireki behar duen nabigatzaileari adierazteko.</p>
         <p>Esteka hauek nabigatzaileek azpimarratuta eta urdin (edo more, erabiltzaileak dagoeneko klik egin badu) erakusten dituzte argi eta garbi gera dadin estekak direla eta saguaren gezia gainean jartzean eskutxo bihurtzen da.</p>
         <p>Erabiltzaileak esteka horietako edozeinetan klik egiten duenean, nabigatzaileak href atributuak adierazitako dokumentua deskargatzen du eta haren edukia pantailan erakusten du.</p>
         <p>Adibidez, 'Harremanak' aukerarako sortutako estekan klik egiten badugu, nabigatzaileak 'harremanak.html' fitxategia deskargatzen du eta pantailan erakusten du bere edukia (adibide honek onartzen du 'harremanak.html' izeneko fitxategi bat sortu dugula).</p>
+        <div class="banaketaTxikia"></div>
         <div class="irudiKutxa">
           <img src="../../irudiak/HTML/harremanak-esteka.png" width="40%" alt="Harremanak orrialdera esteka">
           <figcaption>HTML-edukitestua(5): Harremanak orrialdera esteka.</figcaption>
         </div>
+        <div class="banaketaTxikia"></div>
         <div class="irudiKutxa">
           <img src="../../irudiak/HTML/harremanak-orria.png" width="100%" alt="Harremanak orrialdea">
           <figcaption>HTML-edukitestua(6): Harremanak orrialdea.</figcaption>
         </div>
+        <div class="banaketaTxikia"></div>
         <div class="garrantzi-oinarrizko">
           <p><strong>Egin ezau zuk zeuk.</strong></p>
             <ul class="zerrendaArruntak">
@@ -53,24 +58,29 @@
             </ul>
             <p>Nabigatzaileak contacto.html fitxategia ireki eta pantailan erakutsi beharko luke.</p>
         </div>
+        <div class="banaketaTxikia"></div>
         <p>Menuan estekatutako dokumentuak webgune berekoak dira, eta horregatik erabiltzen ditugu URL erlatiboak kokapena zehazteko, baina gure zerbitzarian biltegiratuta ez dauden dokumentuetarako estekak sortu behar baditugu, URL absolutuak erabili behar ditugu, adibide honetan bezala:</p>
+        <div class="banaketaTxikia"></div>
 <pre>
 <code>
 &lt;footer&gt;
-&lt;address&gtToronto, Kanada&lt;/address&gt;
-&lt;small&gt; & copy; 2016
-&lt;a href="http://www.jdgauchat.com"&gt;
-J.D Gauchat&lt;/a&gt;
-&lt;/small&gt;
+  &lt;address&gtToronto, Kanada&lt;/address&gt;
+  &lt;small&gt; & copy; 2016
+    &lt;a href="http://www.jdgauchat.com"&gt;J.D Gauchat&lt;/a&gt;
+  &lt;/small&gt;
 &lt;/footer&gt;
 </code>
 </pre>
+<div class="banaketaTxikia"></div>
         <p>Goiko kodeak esteka bat eransten dio gure adibideko orri-oinari, <em>www.jdgauchat.com</em> webgunearekin komunikatzen dena. Estekak beste edozein estekak bezala egiten du lan, baina orain nabigatzaileak URL osoa du dokumentura sartzeko (kasu honetan, webguneko index.html fitxategira, <em>www.jdgauchat.com</em> dominioa medio).</p>
         <p>&lt;a&gt;&lt;/a&gt; elementuak <strong>target</strong> atributua izan dezake, dokumentua non eta nola irekiko den zehazteko. Hainbat balio hartu ohi ditu:</p>
-        <p><strong>_self</strong> (dokumentua egungo dokumentuaren kokapen berean irekitzen da, lauki edo leiho berean).</p>
-        <p><strong>_blank</strong> (dokumentua leiho berri batean irekitzen da), </p>
-        <p><strong>_parent</strong> (dokumentua aita laukian irekitzen da)</p>
-        <p><strong>_top</strong> (dokumentua oraingo leihoan irekiko da)</p>
+        <ul class="zerrendaArruntak">
+          <li><strong>_self</strong> (dokumentua egungo dokumentuaren kokapen berean irekitzen da, lauki edo leiho berean).</li>
+          <li><strong>_blank</strong> (dokumentua leiho berri batean irekitzen da).</li>
+          <li><strong>_parent</strong> (dokumentua aita laukian irekitzen da).</li>
+          <li><strong>_top</strong> (dokumentua oraingo leihoan irekiko da).</li>
+        </ul>
+        <div class="banaketaTxikia"></div>
         <div class="garrantzi-oinarrizko">
           <p>Laukiak ez direnez maiz erabiltzen webgune modernoetan, bi balio ohikoenak dira:
             <ul class="zerrendaArruntak">
@@ -79,93 +89,101 @@ J.D Gauchat&lt;/a&gt;
             </ul>
           </p>
         </div>
+        <div class="banaketaTxikia"></div>
 <pre>
 <code>
 &lt;footer&gt;
-&lt;address&gt;Toronto, Katea&lt;/address&gt;
-&lt;small&gt; & copy; 2016
-&lt;a href=="p, www.jdgauchat.com" 
-target="_blank"&gt;J.D Gauchat&lt;/a&gt;
-&lt;/small&gt;
+  &lt;address&gt;Toronto, Katea&lt;/address&gt;
+  &lt;small&gt; & copy; 2016
+    &lt;a href=="p, www.jdgauchat.com" target="_blank"&gt;J.D Gauchat&lt;/a&gt;
+  &lt;/small&gt;
 &lt;/footer&gt;
 </code>
 </pre>
-        <p>Dokumentu bat beste batekin konektatzeaz gain, estekak dokumentu bereko beste elementu batzuetara ere sor daitezke. Hori bereziki erabilgarria da dokumentuak orrialde luze bat sortzen duenean, eta erabiltzaileak mugitu egin behar du eduki osoa ikusi ahal izateko.</p>
+          <div class="banaketaTxikia"></div>
+          <p>Dokumentu bat beste batekin konektatzeaz gain, estekak dokumentu bereko beste elementu batzuetara ere sor daitezke. Hori bereziki erabilgarria da dokumentuak orrialde luze bat sortzen duenean, eta erabiltzaileak mugitu egin behar du eduki osoa ikusi ahal izateko.</p>
         <p>Ezaugarri hori aprobetxatuz, orrialde baten zati desberdinetarako estekak sor ditzakegu. Erabiltzaileak momentuan ikusten ez den zerbait ikusi nahi duenean, esteka horietan klik egin dezake, eta nabigatzaileak orrialdea mugiarazten du estekan apuntatutako elementua pantailan agertzen den arte.</p>
         <p>Lotu nahi dugun elementua <strong>id</strong> atributuarekin identifikatu behar da.</p>
         <p>Elementu baterako esteka bat sortzeko, atributu horri esleitutako balioa sartu behar dugu, aurretik <strong>#</strong>karakterea duela.</p>
+        <div class="banaketaTxikia"></div>
         <div class="garrantzi-oinarrizko">
           <p>Beheko irudian ikus dezakezuen bezala 40. lerroan dagoen eta <strong>href="#www-lengoaiak"</strong> href-a <em>(hyper reference)</em> duen elementuaren gainean klik eginez gero, 432. lerroan dagoen eta <strong>id ="www-lengoaiak"</strong> identifikatzailea duen elementua bilatuko du. Horrela mugi gaitezke orri bateko edo orri askoko liburu baten barruko atalen artean.</p>
         </div>
+        <div class="banaketaTxikia"></div>
         <div class="irudiKutxa">
           <img src="../../irudiak/HTML/barnesteka.png" width="50%" alt="Harremanak orrialdera esteka">
           <figcaption>HTML-edukitestua(7): Estekak (aingurak) orri berean.</figcaption>
         </div>
+        <div class="banaketaTxikia"></div>
         <div class="garrantzi-oinarrizko">
           <p><strong>Egin ezazu zuk zeuk: </strong>idatzi kode hau. Adi hizki lodiz azpimarratutako testuei:</p>
            <p>Gehitu paragrafoak lehen, bigarren, hirugarren eta laugarren artikuluei &lt;p&gt;&lt;/p&gt; elementuekin &lt;article&gt; &lt;/article&gt; elementu bakoitzaren barruan beldurrik gabe (guztiak berdinak izan daitezke; kontua da pantaila testuz gainezkatzea), eduki gehiago edukitzeko. Ireki dokumentua zure nabigatzailean eta, egin klik <strong>'4.- Web garapena'</strong> estekan.</p> 
            <p>Nabigatzaileak orrian behera egin eta <strong>4.- Web garapena</strong> erakutsi beharko luke pantailaren goialdean (ADI! 'Web garapena' artikuluak ez badauka paragraforik, nabigatzaileak ezin izango du erakutsi izenburua pantailaren goiko aldean).</p>
+           <div class="banaketaTxikia"></div>
 
 <pre>
 <code>
 &lt;!DOCTYPE html&gt;
 &lt;html lang="es"&gt;
-&lt;head&gt;
-&lt;title&gt;Webgunegintza&lt;/title&gt;
-&lt;meta charset="utf-8"&gt;
-&lt;meta name="description" content="lehen atalaren web-orria."&gt;
-&lt;meta name="keywords" content="Web garapena, Euskara"&gt;
-&lt;link rel="stylesheet" href="estiloa.css"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;header&gt;
-&lt;h1&gt;Web garapena &lt;h1&gt;
-&lt;/header&gt;
-&lt;nav&gt;   Nabigazioa :  Lehenengo artikulua   Bigarren artikulua   Hirugarren artikulua 
- <strong>&lt;a href="#4.artikulua"&gt; 4.- Web garapena &lt;a&gt;</strong>
-&lt;/nav&gt;
-&lt;main&gt;</b>
-  &lt;section&gt;
-    &lt;article&gt;
-      Lehen artikulua
-    &lt;/article&gt;
-    &lt;article&gt;
-      Bigarren artikulua
-    &lt;/article&gt;
-    &lt;article&gt;
-      Hirugarren artikulua
-    &lt;/article&gt;
-    &lt;article&gt;
-      <strong>&lt;h2 id="4.artikulua"&gt; 4.- Web garapena&lt;/h2&gt;</strong>
-    &lt;/article&gt;
-  &lt;/section&gt;
-&lt;/main&gt;
-&lt;/body&gt;
+  &lt;head&gt;
+    &lt;title&gt;Webgunegintza&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="description" content="lehen atalaren web-orria."&gt;
+    &lt;meta name="keywords" content="Web garapena, Euskara"&gt;
+    &lt;link rel="stylesheet" href="estiloa.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;h1&gt;Web garapena &lt;h1&gt;
+    &lt;/header&gt;
+    &lt;nav&gt;   Nabigazioa :  Lehenengo artikulua   Bigarren artikulua   Hirugarren artikulua 
+      <strong>&lt;a href="#4.artikulua"&gt; 4.- Web garapena &lt;a&gt;</strong>
+    &lt;/nav&gt;
+    &lt;main&gt;</b>
+      &lt;section&gt;
+        &lt;article&gt;
+          Lehen artikulua
+        &lt;/article&gt;
+        &lt;article&gt;
+          Bigarren artikulua
+        &lt;/article&gt;
+        &lt;article&gt;
+          Hirugarren artikulua
+        &lt;/article&gt;
+        &lt;article&gt;
+          <strong>&lt;h2 id="4.artikulua"&gt; 4.- Web garapena&lt;/h2&gt;</strong>
+        &lt;/article&gt;
+      &lt;/section&gt;
+    &lt;/main&gt;
+  &lt;/body&gt;
 &lt;/html&gt;
 </code>
 </pre>
             
         </div>
-
+        <div class="banaketaTxikia"></div>
         <p><strong> &lt;a&gt;&lt;/a&gt;</strong> elementua aplikazioetarako estekak sortzeko ere erabil daiteke. HTMLk <strong>mailto</strong> eta <strong>tel</strong> gako-hitzak erabiltzen ditu posta-kontu bat edo telefono-zenbaki bat zehazteko. Ezaugarri hauetako esteka batean klik egiten denean, sistemak programa bat irekitzen du horrelako eskaerei erantzuteaz arduratzen dena (mezu bat bidaltzea edo dei bat egitea telefono bidez) eta estekan zehaztutako datuak bidaltzen dizkizu. Hurrengo adibideak posta elektroniko bat bidaltzeko <strong>mailto</strong> gako-hitza nola erabili erakusten du.</p>
+        <div class="banaketaTxikia"></div>
 <pre>
 <code>
 &lt;footer&gt;
-&lt;adress&gt;Toronto, Kanada&lt;/adress&gt;
-&lt;small&gt;&copy; 2016 &lt;
-a href="mailto:info@jdgauchat.com"
-&gt;J.D Gauchat&lt;/a&gt;&lt;/small&gt;
+  &lt;adress&gt;Toronto, Kanada&lt;/adress&gt;
+  &lt;small&gt;&copy; 2016 &lt; a href="mailto:info@jdgauchat.com" &gt;J.D Gauchat&lt;/a&gt;
+  &lt;/small&gt;
 &lt;/footer&gt;
 </code>
 </pre>
+<div class="banaketaTxikia"></div>
         <div class="garrantzi-oinarrizko">
           <p><strong>Egin ezazu zuk zeuk: </strong> ordeztu &lt;footer&gt;&lt;/footer&gt; elementua zure artxiboan <em>index.html</em> goiko kodearekin. Ireki dokumentua zure nabigatzailean eta egin klik estekan. Sistemak bere programa ireki beharko luke:
             <em>info@jdgauchat.com</em> posta-kontura mezu bat bidaltzeko. </p>
         </div>
+        <div class="banaketaTxikia"></div>
         <p>&lt;a&gt;&lt;a&gt; elementuak sortutako esteka baten bidez sartzen diren dokumentuak nabigatzaileak deskargatzen ditu eta pantailan erakusten dira, baina batzuetan erabiltzaileek ez dute behar nabigatzaileak dokumentua irekitzea, baizik eta fitxategia disko gogorretan gordetzea, aurrerago
           erabiltzeko.</p>
           <div class="banaketaTxikia"></div>
           <h4>HTMLk bi atributu eskaintzen ditu helburu horretarako:</h4>
+          <div class="banaketaTxikia"></div>
         <ul class="zerrendaArruntak">
           <li><p><strong>download</strong> — Hau atributu boolearra da, eta, sartzen denean, adierazten du fitxategia irakurri beharrean nabigatzaileak deskargatu egin beharko lukeela.</p></li>
           <li><p><strong>ping</strong> — Atributu honek adierazten du erabiltzaileak estekan klik egiten duenean zerbitzarian ireki behar den fitxategiaren ibilbidea.</p> </li>
@@ -174,42 +192,32 @@ a href="mailto:info@jdgauchat.com"
         <p><strong>download</strong> atributua &lt;a&gt;&lt;a&gt; elementu baten barruan dagoenean, <strong><em>href</em></strong> atributuak zehaztutako fitxategia erabiltzailearen disko gogorrean deskargatu eta biltegiratzen da.</p>
         <p>Bestalde, <strong>ping</strong> atributua adierazten duen fitxategia ez da deskargatzen, zerbitzarian exekutatzen da. Fitxategi hau zerbitzarian informazioa gordetzen duen kodea exekutatzeko erabil daiteke, fitxategi nagusia deskargatzen den bakoitzean, edo ekintza hori gertatzen den aldien kontrola eramateko.</p>
         <p>Hurrengo adibidean, bi atributuak ezartzen ditugu, erabiltzaileak PDF artxibo bat deskargatu ahal izan dezan.</p>
+        <div class="banaketaTxikia"></div>
 <pre>
 <code>
 &lt;article&gt;
-&lt;p&gt;Heriotza kimera bat da: ni existitzen 
-naizen bitartean, ez baita heriotzarik; &lt;br&gt;
-eta heriotza dagoenean, ez da ni existitzen. &lt;br&gt;
-Samoseko Epikuroa &lt;/p &gt;
+  &lt;p&gt;Heriotza kimera bat da: ni existitzen 
+  naizen bitartean, ez baita heriotzarik; &lt;br&gt;
+  eta heriotza dagoenean, ez da ni existitzen. &lt;br&gt;
+  Samoseko Epikuroa &lt;/p &gt;
 &lt;/article&gt;
 &lt;footer&gt;
-&lt;a href="http://www.formasterminds.com/content/miarchivo.pdf"
-ping="http://www.formasterminds.com/control.php" download&gt;Klikatu hemen deskarga gauzatzeko&lt;/a&gt;
+  &lt;a href="http://www.formasterminds.com/content/miarchivo.pdf" ping="http://www.formasterminds.com/control.php" download&gt;Klikatu hemen deskarga gauzatzeko&lt;/a&gt;
 &lt;/footer&gt;
 </code>
 </pre>
+<div class="banaketaTxikia"></div>
         <p>Goiko adibidean orri-oin bat gehituko diogu aurreko adibideen artikuluari, PDF fitxategi baterako esteka batekin. </p>
         <p>Normalean, nabigatzaile moderno batek fitxategiaren edukia pantailan erakutsiko luke, baina kasu honetan download atributuak fitxategia deskargatzera eta disko gogorrean gordetzera behartzen du nabigatzailea. Adibide honetan, <strong>ping</strong> atributu bat dago, control.php izeneko fitxategi batera apuntatzen duena. Ondorioz, erabiltzaileak estekan klik egiten duen bakoitzean, PDF fitxategia deskargatzen da eta
           PHP kodea zerbitzarian exekutatzen da.</p>
         <p>Horrek garatzaileari aukera ematen dio ekintza hori gertatzen den aldien jarraipena egiteko (erabiltzaileari buruzko informazioa datu-base batean biltegiratuz, adibidez). </p>
+        <div class="banaketaTxikia"></div>
         <div class="garrantzi-oinarrizko">
-          <p>
-            <strong>Egin ezazu zuk zeuk: </strong>ordezkatu &lt;article&gt;&lt;/article&gt; elementua index.html fitxategian goiko kodearekin eta ireki dokumentua zure nabigatzailean. Estekan klik egiten duzunean, nabigatzaileak PDF fitxategia deskargatu beharko luke. Ezabatu download atributua nabigatzailearen portaera alderatzeko. </p>
+          <p><strong>Egin ezazu zuk zeuk: </strong>ordezkatu &lt;article&gt;&lt;/article&gt; elementua index.html fitxategian goiko kodearekin eta ireki dokumentua zure nabigatzailean. Estekan klik egiten duzunean, nabigatzaileak PDF fitxategia deskargatu beharko luke. Ezabatu download atributua nabigatzailearen portaera alderatzeko.</p>
+          <div class="banaketaTxikia"></div>
             <p><strong>GARRANTZITSUA:</strong> <strong>ping</strong> atributuaren helburua zerbitzarian kodea exekutatzea da. Adibidean PHP kodea duen fitxategi bat erabili dugu, baina gauza bera egin lezake zerbitzarian funtzionatzen duen beste edozein programazio-lengoaiarekin, hala nola Python edo Ruby. <strong>ping</strong> atributuari esleitutako fitxategia programatzeko modua erabiltzen dugun lengoaiaren eta lortu nahi dugunaren araberakoa da. Gaia baina ikasgai honen helburutik haratago doa. PHPri buruzko informazio gehiago lortzeko, bisitatu gure webgunea eta jarraitu kapitulu honetako estekak.</p>
           </p>
         </div>
       </article>
-  <!-- EDUKIA HTML SAILEKO Estekak atalaren BIDEOA hasi ---------------------  -->
-  <section class="ikasgaia" id="html-taulatributu-bideoa">
-    <article>
-      <h4 class="bideontziBurua">Estekak<br><i class="fa fa-television"></i></h4>
-      <div class="bideontzia">
-        <iframe width="100%" height="350" src="https://www.youtube.com/embed/7_eInlArV_U?si=KRu5X6Bnk_fyp4Nz"
-          title="YouTube video player" "></iframe>
-      </div>
-      <figcaption>HTML-estekak: Hiperestekak atalaren bideoa.</figcaption>
-    </article>
-  </section>
-<!-- EDUKIA HTML SAILEKO Taulak eta atributu globalak atalaren BIDEOA buka ---------------------  -->
 </body>
 </html>
