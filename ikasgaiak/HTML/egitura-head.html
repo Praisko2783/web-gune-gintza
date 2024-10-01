@@ -8,30 +8,36 @@
 </head>
 <body>
     <!-- Web gunearean egiturarako bigarren atala 'dokumentuaren burua'-->
-    <article class="ikasgaia" id="html-egitura-burua">
-        <div class="azpitituluak">
-          <h3><strong>Dokumentuaren burua: &lt;head&gt;&lt;/head&gt;</em></strong></h3>
-        </div>
+    <article>
+        <div><h3><strong>Dokumentuaren burua: &lt;head&gt;&lt;/head&gt;</em></strong></h3></div>
+        <div class="banaketaTxikia"></div>
         <p>Buruak web-orria sortzeko behar diren informazio eta baliabide guztiak biltzen ditu. Ikus dezagun.</p>
+        <div class="banaketaTxikia"></div>
         <p><strong>&lt;title&gt;&lt;/title&gt;</strong> —Web-orriaren izena ezartzeko. </p>
+        <div class="banaketaTxikia"></div>
         <p><strong>&lt;base&gt;&lt;/base&gt;</strong> —Nabigatzaileak URL erlatiboen benetako kokapena ezartzeko
           erabiltzen duen URLa definitzen du. Elementuak href atributua izan behar du oinarrizko URLa deklaratzeko. 
           Elementu hori deklaratzen denean, egungo URLaren ordez, nabigatzaileak href atributuari esleitutako URLa erabiltzen du
           URL erlatiboak osatzeko. </p>
+          <div class="banaketaTxikia"></div>
         <p><strong>&lt;meta&gt;</strong> —Dokumentuarekin lotutako metadatuak adierazten ditu, hala nola
           dokumentuaren deskribapena, hitz gakoak, karaktereen kodifikazio mota, etab. Elementuak <strong>name</strong> atributuak
           barne har ditzake metadata mota deskribatzeko, <strong>content</strong> balioa zehazteko, eta <strong>charset</strong> edukia prozesatzerakoan erabili beharreko karaktereen kodifikazio mota adierazteko. </p>
+          <div class="banaketaTxikia"></div>
         <p><strong>&lt;link&gt;</strong> —Dokumentuaren eta kanpoko baliabide baten arteko erlazioa
           zehazten du (normalean CSS fitxategiak kargatzeko erabiltzen da). Baliabidearen kokapena adierazteko href eta erlazio
           mota definitzeko rel atributuak erabili ohiditu. Horiez gain baliabidea lotuta dagoen bitartekoa zehazteko
           batez bestekoa (pantaila, inprimagailua, etab.), eta baliabide-mota eta haren tamaina adierazteko <strong>type</strong> eta <strong>sizes</strong> atributuak ere har ditzake. </p>
+          <div class="banaketaTxikia"></div>
         <p><strong>&lt;style&gt;&lt;/style&gt;</strong>—Dokumentuaren barruan CSS estiloak adierazteko erabiltzen da. </p>
-        <p><strong>&lt;script&gt;&lt;/script&gt;</strong> —JavaScript kodea kargatzeko edo deklaratzeko erabiltzen da.
-        </p>
+        <div class="banaketaTxikia"></div>
+        <p><strong>&lt;script&gt;&lt;/script&gt;</strong> —JavaScript kodea kargatzeko edo deklaratzeko erabiltzen da. </p>
         <div class="banaketaTxikia"></div>
 <!-- web-orriaren izenburua buruaren barruan  <title>----------------- -->
         <h4>&lt;title&gt;&lt;/title&gt;</h4>
-        <strong>&lt;head&gt;&lt;/head&gt;</strong> elementua deklaratzen dugunean, normalean, lehenik eta behin, haren barruan barruan izenburua zehaztu ohi da. Hori <strong>&lt;title&gt;&lt;/title&gt;</strong> etiketez inguratua egin ohi da. Testu hori web-orriko erlaitzean agertzen da, eta horixe da erabiltzaileek gure webgunea pantailaratzen dutenean ikusten dutena.
+        <div class="banaketaTxikia"></div>
+        <p><strong>&lt;head&gt;&lt;/head&gt;</strong> elementua deklaratzen dugunean, normalean, lehenik eta behin, haren barruan barruan izenburua zehaztu ohi da. Hori <strong>&lt;title&gt;&lt;/title&gt;</strong> etiketez inguratua egin ohi da. Testu hori web-orriko erlaitzean agertzen da, eta horixe da erabiltzaileek gure webgunea pantailaratzen dutenean ikusten dutena.</p>
+        <div class="banaketaTxikia"></div>
 <pre>
 <code>
 &lt;!DOCTYPE html&gt;
@@ -45,6 +51,7 @@
 &lt;/html&gt;
 </code>
 </pre>
+<div class="banaketaTxikia"></div>
         <div class="irudiKutxa">
           <img src="../../irudiak/HTML/titleerlaitzean.png" alt="Bezero zerbitzari web egitura" width="50%" srcset="">
           <figcaption>HTML-egitura(1): &lt;title&gt;&lt;/title&gt; elementua</figcaption>
@@ -59,11 +66,13 @@
         <div class="banaketaTxikia"></div>
 <!-- web-orriaren 'meta' atributuak buruaren barruan  <meta>--------- -->
         <h4>&lt;meta&gt;</h4>
+        <div class="banaketaTxikia"></div>
         <p>Izenburuaz gain, dokumentuaren metadatuak ere buruan adierazten dira.</p>
         <p>Metadatuek nabigatzaileek eta bilatzaileek web-orria sortzeko eta sailkatzeko erabiltzen duten orriari
           buruzko informazioa biltzen dute.</p>
         <p>Balioak <strong>&lt;meta&gt;</strong> elementuarekin adierazten dira. Elementu honek hainbat ezaugarri ditu. Ikus dezagun.</p>
         <p>Garrantzitsuenak pantailan testua aurkezteko erabili beharreko karaktere-taula definitzen du, <strong>charset</strong> atributuarekin adierazten dena. </p>
+        <div class="banaketaTxikia"></div>
 <pre>
 <code>
 &lt;!DOCTYPE html&gt;
@@ -78,6 +87,7 @@
 &lt;/html&gt;
 </code>
 </pre>
+<div class="banaketaTxikia"></div>
         <div class="garrantzi-oinarrizko">
           <p><strong>Gogoratu: </strong>adibideak utf-8 gisa definitzen du
           karaktere-multzoa, hizkuntza gehienetan erabiltzen diren karaktere guztiak biltzen dituena, baina beste
@@ -90,24 +100,28 @@
           <strong>content</strong> atributua deskribapen eta gako-hitz gisa esleitu nahi dugun testuarekin
           <em>(gako-hitzak komaz bereizi behar dira)</em>.</p>
         </div>
+        <div class="banaketaTxikia"></div>
 
 <pre>
 <code>
 &lt;!DOCTYPE html&gt;
 &lt;html lang="es"&gt;
-&lt;head&gt;
-&lt;title&gt;Webgunegintza&lt;/title&gt;
-&lt;meta charset="utf-8"&gt;
-<b>&lt;meta name="description" content="Hau ikasmaterialaren lehen atalaren web-orria da."&gt;</b>
-<b>&lt;meta name="keywords" content="HTML, CSS, JavaScript, Euskara"&gt;</b>
-&lt;/head&gt;
-&lt;body&gt;
+  &lt;head&gt;
+      &lt;title&gt;Webgunegintza&lt;/title&gt;
+      &lt;meta charset="utf-8"&gt;
+      <b>&lt;meta name="description" content="Hau ikasmaterialaren lehen atalaren web-orria da."&gt;</b>
+      <b>&lt;meta name="keywords" content="HTML, CSS, JavaScript, Euskara"&gt;</b>
+  &lt;/head&gt;
+  &lt;body&gt;
+
+  &lt;/body&gt;
 &lt;/html&gt;
 </code>
 </pre>
 <div class="banaketaTxikia"></div>
 <!-- web-orriaren buruan barruan kanpo lotura <link>   'ICON' ------------ -->
         <h4>&lt;link&gt;icon</h4>
+        <div class="banaketaTxikia"></div>
         <p>Elementu hori erabiltzen da dokumentuari kanpoko artxiboetatik estiloak, kodeak, irudiak edo ikonoak
           gehitzeko.</p>
         <p>Adibidez, nabigatzaile batzuek ikono bat erakusten dute leihoaren goiko aldean, orrialdearen
@@ -125,14 +139,16 @@
 <code>
 &lt;!DOCTYPE html&gt;
 &lt;html lang="es"&gt;
-&lt;head&gt;
-&lt;title&gt;Webgunegintza&lt;/title&gt;
-&lt;meta charset="utf-8"&gt;
-&lt;meta name="description" content="Hau ikasmaterialaren lehen atalaren web-orria da."&gt;
-&lt;meta name="keywords" content="HTML, CSS, JavaScript, Euskara"&gt;
-<b>&lt;link rel="icon" href="imagenes/favicon.png" type="image/png" sizes="16x16"&gt;</b>
-&lt;/head&gt;
-&lt;body&gt;
+    &lt;head&gt;
+      &lt;title&gt;Webgunegintza&lt;/title&gt;
+      &lt;meta charset="utf-8"&gt;
+      &lt;meta name="description" content="Hau ikasmaterialaren lehen atalaren web-orria da."&gt;
+      &lt;meta name="keywords" content="HTML, CSS, JavaScript, Euskara"&gt;
+      <b>&lt;link rel="icon" href="imagenes/favicon.png" type="image/png" sizes="16x16"&gt;</b>
+    &lt;/head&gt;
+    &lt;body&gt;
+
+    &lt;/body&gt;
 &lt;/html&gt;
 </code>
 </pre>
@@ -166,23 +182,28 @@
           hurrengo
           kapitulu batean aztertuko dugu.
         </p>
+        <div class="banaketaTxikia"></div>
+
 <pre>
 <code>
 &lt;!DOCTYPE html&gt;
 &lt;html lang="es"&gt;
-&lt;head&gt;
-&lt;title&gt;Webgunegintza&lt;/title&gt;
-&lt;meta charset="utf-8"&gt;
-&lt;meta name="description" content="Hau ikasmaterialaren lehen atalaren web-orria da."&gt;
-&lt;meta name="keywords" content="HTML, CSS, JavaScript, Euskara"&gt;
-&lt;link rel="icon" href="imagenes/favicon.png" type="image/png" sizes="16x16"&gt;
-<b>&lt;link rel="stylesheet" href="estiloa.css"&gt;</b>
-&lt;/head&gt;
-&lt;body&gt;
+    &lt;head&gt;
+        &lt;title&gt;Webgunegintza&lt;/title&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;meta name="description" content="Hau ikasmaterialaren lehen atalaren web-orria da."&gt;
+        &lt;meta name="keywords" content="HTML, CSS, JavaScript, Euskara"&gt;
+        &lt;link rel="icon" href="imagenes/favicon.png" type="image/png" sizes="16x16"&gt;
+        <b>&lt;link rel="stylesheet" href="estiloa.css"&gt;</b>
+    &lt;/head&gt;
+    &lt;body&gt;
+
+    &lt;/body&gt;
 &lt;/html&gt;
 </code>
 </pre>
-        <h5>Dokumentuaren burua prest! Jarraian gorputza osatzeari ekingo diogu.</h5>
+<div class="banaketaTxikia"></div>
+        <h5 style="text-align: center;">Dokumentuaren burua prest! Jarraian gorputza osatzeari ekingo diogu.</h5>
       </article>
 </body>
 </html>
