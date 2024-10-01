@@ -8,19 +8,24 @@
 </head>
 <body>
     <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
-    <article class="ikasgaia" id="html-egitura-elementua">
-        <div class="azpitituluak">
+    <article>
+        <div>
           <h3><strong>Zerrendak</strong></h3>
         </div>
         <div class="banaketaTxikia"></div>
             <h4>&lt;ul&gt;&lt;/ul&gt;, &lt;ol&gt;&lt;/ol&gt;,&lt;li&gt;&lt;/li&gt;</h4>
+            <div class="banaketaTxikia"></div>
             <p>Askotan, informazioa itemen zerrenda gisa irudikatu behar da. Adibidez, webgune askok liburuen, filmen edo terminoen eta deskribapenen zerrendak dituzte.</p>
             <div class="banaketaTxikia"></div>
             <h5>Zerrenda horiek sortzeko, HTMLk honako elementu hauek eskaintzen ditu.</h5>
-            <p><strong>&lt;ul&gt;&lt;/ul&gt;</strong> —Elementu honek ordenarik gabeko itemen zerrenda bat sortzen du. Itemak (&lt;ul&gt;&lt;/ul&gt;) multzokatzeko irekiera- eta itxiera-etiketek osatzen dute, eta &lt;li&gt;&lt;/li&gt; elementuarekin batera lan egiten du zerrendako item bakoitza definitzeko.</p>
-            <p><strong>&lt;ol&gt;&lt;/ol&gt;</strong> —Elementu honek itemen zerrenda ordenatu bat sortzen du. Itemak (&lt;ol&gt;&lt;/ol&gt;) multzokatzeko irekiera- eta itxiera-etiketek osatzen dute, eta &lt;li&gt;&lt;/li&gt; elementuarekin batera lan egiten du zerrendako itemak definitzeko. </p>
+            <div class="banaketaTxikia"></div>
+            <ul class="zerrendaArruntak">
+              <li><strong>&lt;ul&gt;&lt;/ul&gt;</strong> —Elementu honek ordenarik gabeko itemen zerrenda bat sortzen du. Itemak (&lt;ul&gt;&lt;/ul&gt;) multzokatzeko irekiera- eta itxiera-etiketek osatzen dute, eta &lt;li&gt;&lt;/li&gt; elementuarekin batera lan egiten du zerrendako item bakoitza definitzeko.</li>
+              <li><strong>&lt;ol&gt;&lt;/ol&gt;</strong> —Elementu honek itemen zerrenda ordenatu bat sortzen du. Itemak (&lt;ol&gt;&lt;/ol&gt;) multzokatzeko irekiera- eta itxiera-etiketek osatzen dute, eta &lt;li&gt;&lt;/li&gt; elementuarekin batera lan egiten du zerrendako itemak definitzeko.</li>
+            </ul>
             <div class="banaketaTxikia"></div>
             <h5>Elementu horrek honako ezaugarri hauek izan ditzake:</h5>
+            <div class="banaketaTxikia"></div>
             <ul class="zerrendaArruntak">
               <li><p><strong>reversed</strong> adierazleen ordena alderantzikatzeko.</p></li>
               <li><p><strong>start</strong> adierazleak zenbatzen hasteko balioa zehazteko.</p></li>
@@ -28,6 +33,7 @@
             </ul>
             <div class="banaketaTxikia"></div>
             <h5><strong>type</strong> atributurako balio erabilgarriak honako hauek dira:</h5>
+            <div class="banaketaTxikia"></div>
             <ul class="zerrendaArruntak">
               <li><p>1 (zenbakiak)</p></li>
               <li><p>a (letra xeheak)</p></li>
@@ -43,6 +49,7 @@
               <li><p><strong>&lt;dd&gt;&lt;/dd&gt;</strong>. Deskribapenak definitzen ditu</li>
             </ul>
             <p>Zerrenda sortzeko erabiltzen dugun elementua edukiaren ezaugarrien araberakoa da. Adibidez, itemen ordena garrantzitsua ez bada, &lt;ul&gt;&lt;/ul&gt; elementua erabil dezakegu. Zerrenda mota horietan, itemak &lt;ul&gt;&lt;/ul&gt; etiketen artean deklaratzen dira &lt;li&gt;&lt;/li&gt; elementuekin.</p>
+            <div class="banaketaTxikia"></div>
 <pre>
 <code>
   &lt;aside&gt;
@@ -55,13 +62,15 @@
   &lt;/aside&gt;
 </code>
 </pre>
-            <div class="irudiKutxa">
+              <div class="banaketaTxikia"></div>
+              <div class="irudiKutxa">
               <img src="../../irudiak/HTML\zerrenda1.png" width="600" alt="&lt;ol&gt;&lt;/ol&gt; elementua, zerrenda desordenatua.">
               <figcaption>HTML-irudizerren(4): &lt;ul&gt;&lt;/ul&gt; elementua, zerrenda desordenatua.</figcaption>
             </div>
+            <div class="banaketaTxikia"></div>
             <p>&lt;ul&gt;&lt;/ul&gt; elementuak kodean adierazi diren ordenan aurkezten ditu itemak, eta ezkerraldeko puntu batekin identifikatzen ditu.</p>
             <p>Item bakoitzaren posizioa adierazi behar badugu, &lt;ol&gt;&lt;/ol&gt; elementuarekin zerrenda sor dezakegu. Elementu horrek itemen zerrenda bat sortzen du kodean adierazi diren ordenan, baina identifikatzeko puntuak erabili beharrean, balio bat esleitzen die. Berez, adierazleak zenbakiekin sortzen dira, baina type atributuarekin alda ditzakegu. Hurrengo adibidean letra larriak erabiltzen ditugu.</p>
-
+            <div class="banaketaTxikia"></div>
 <pre>
 <code>
   &lt;aside&gt;
@@ -74,11 +83,14 @@
   &lt;/aside&gt;
 </code>
 </pre>
+<div class="banaketaTxikia"></div>
             <div class="irudiKutxa">
               <img src="../../irudiak/HTML/zerrenda2.png" width="600" alt="&lt;ol&gt;&lt;/ol&gt; elementua, zerrenda ordenatua">
               <figcaption>HTML-irudizerren(5): &lt;ol&gt;&lt;/ol&gt; elementua, letra larriak eta <br>zerrenda ordenatua.</figcaption>
             </div>
-            <p>Itemak kodean adierazi diren ordenan agertzen badira ere, &lt;ol&gt;&lt;/ol&gt; elementuaren beste atributu batzuk erabil ditzakegu adierazleen ordena aldatzeko. Adibidez, <strong>reversed</strong> atributua gehituta, adierazleak alderantzizko ordenan agertzea lortzen dugu.</p>.
+            <div class="banaketaTxikia"></div>
+            <p>Itemak kodean adierazi diren ordenan agertzen badira ere, &lt;ol&gt;&lt;/ol&gt; elementuaren beste atributu batzuk erabil ditzakegu adierazleen ordena aldatzeko. Adibidez, <strong>reversed</strong> atributua gehituta, adierazleak alderantzizko ordenan agertzea lortzen dugu.</p>
+            <div class="banaketaTxikia"></div>
 <pre>
 <code>
   &lt;aside&gt;
@@ -91,18 +103,20 @@
   &lt;/aside&gt;
 </code>
 </pre>
-            <div class="irudiKutxa">
+              <div class="banaketaTxikia"></div>
+              <div class="irudiKutxa">
               <img src="../../irudiak/HTML/zerrenda3.png" width="600" alt="&lt;ol&gt;&lt;/ol&gt; elementua, zerrenda ordenatua.">
               <figcaption>HTML-irudizerren(6): &lt;ol&gt;&lt;/ol&gt; elementua, letra larriak eta <br>zerrenda ordenatua atzekoz aurrera.</figcaption>
             </div>
-<div class="banaketaTxikia"></div>
+            <div class="banaketaTxikia"></div>
             <h4>&lt;dl&gt;&lt;/dl&gt;, &lt;dt&gt;&lt;/dt&gt;, &lt;dd&gt;&lt;/dd&gt;</h4>
+            <div class="banaketaTxikia"></div>
             <p>&lt;dl&gt;&lt;/dl&gt;, &lt;dt&gt;&lt;/dt&gt;, &lt;dd&gt;&lt;/dd&gt; elementuek &lt;ul&gt;&lt;/ul&gt; elementuaren antzera lan egiten dute, baina haien helburua terminoen eta deskribapenen zerrenda bat erakustea da.</p>
             <ul class="zerrendaArruntak">
               <li>&lt;dt&gt;&lt;/dt&gt; terminoetarako</li>
               <li>&lt;dd&gt;&lt;/dd&gt;deskribapenetarako.</li>
             </ul>
-
+            <div class="banaketaTxikia"></div>
 <pre>
 <code>
   &lt;aside&gt;
@@ -119,24 +133,28 @@
   &lt;/aside&gt;
 </code>
 </pre>
+<div class="banaketaTxikia"></div>
             <div class="irudiKutxa">
               <img src="../../irudiak/HTML/zerrenda4.png" width="600" alt="ATARIKO ZUHAITZAK">
               <figcaption>HTML-irudizerren(7): &lt;dl&gt;&lt;/dl&gt;, &lt;dt&gt;&lt;/dt&gt elementuak.</figcaption>
             </div>
             <div class="banaketaTxikia"></div>
             <h5>Nabigatzaileek estiloak ematen dizkiete mota horretako zerrendei deskribapenen terminoak bereizteko.</h5>
+            <div class="banaketaTxikia"></div>
             <div class="garrantzi-oinarrizko">
               <p><strong>Egin ezazu zuk zeuk:</strong> ordeztu &lt;aside&gt;&lt;/aside&gt; elementua zure <em>index.html</em> artxiboan goiko kodeaz eta probatu nahi duzun adibidearekin, eta dokumentua nabigatzailea. Txertatu <strong>start</strong> atributua &lt;ol&gt;&lt;/ol&gt; elementuan "3"
                 balioarekin. <br>
                 Adierazleak C letratik zenbatzen hasi beharko lirateke.
               </p>
             </div>
+            <div class="banaketaTxikia"></div>
             <p>Hurrengo elementuak helburu desberdinekin diseinatu dira, baina maiz erabiltzen dituzte itemen zerrendak egiteko.</p>
             <ul class="zerrendaArruntak">
               <li><p><strong>&lt;blockquote&gt;&lt;/blockquote&gt; </strong>— Elementu honek aipu bat barne hartzen duen testu-bloke bat irudikatzen du dokumentuan beste testu batetik hartua.</p></li>
               <li><p><strong> &lt;details&gt;&lt;/details&gt;</strong>— Elementu honek tresna bat sortzen du, eta tresna hori hedatu egiten da informazio    gehigarria erakusteko. Ikus daitekeen zatia &lt;summary&gt; elementuarekin definitzen da eta elementu komunak erabil daitezke, hala nola &lt;p&gt; edukia definitzeko.</p></li>
             </ul>
             <p>&lt;blockquote&gt;&lt;/blockquote&gt; elementua &lt;p&gt;&lt;/p&gt; elementuaren antzekoa da, baina alboetan marjinak dituenez, tradizioz balio-zerrendak aurkezteko erabili izan da, hurrengo adibidean ikuis daitekeen bezala. </p>
+            <div class="banaketaTxikia"></div>
 <pre>
   <code>
   &lt;aside>
@@ -147,13 +165,16 @@
   &lt;/aside&gt;
   </code>
 </pre>
+<div class="banaketaTxikia"></div>
             <p>&lt;blockquote&gt;&lt;/blockquote&gt; elementuak sortutako zerrenda beste zerrendak bezala agertzen da baina itemak identifikatzeko zeinurik gabe.</p>
             <div class="irudiKutxa">
               <img src="../../irudiak/HTML/zerrenda5.png" width="400" alt="&lt;blockquote&gt;&lt;/blockquote&gt; elementua.">
               <figcaption>HTML-irudizerren(7): &lt;blockquote&gt;&lt;/blockquote&gt; elementua.</figcaption>
             </div>
+            <div class="banaketaTxikia"></div>
             <p>Webgune modernoetan ohikoak dira informazio gehigarria ematen duten tresnak erabiltzaileak eskatzen duenean. Aukera hori eskaintzeko, HTMLk &lt;details&gt;&lt;/details&gt; eskaintzen du. Elementu horrek &lt;summary&gt;&lt;/summary&gt; elementuak zehaztutako izenburu bat erakusten du, eta eduki hori elementu komunen bidez adieraz daiteke, hala nola &lt;p&gt;&lt;/p&gt; edo &lt;blockquote&gt;&lt;/blockquote&gt;.</p>
             <p>Hori dela eta, &lt;details&gt;&lt;/details&gt; elementua balio-zerrenda bat adierazteko erabil daiteke, adibide honetan egiten dugun bezala.</p>
+            <div class="banaketaTxikia"></div>
 <pre>
 <code>
   &lt;details&gt;
@@ -165,23 +186,12 @@
   &lt;/details&gt;
 </code>
 </pre>
-            <div class="irudiKutxa">
+              <div class="banaketaTxikia"></div>  
+              <div class="irudiKutxa">
               <img src="../../irudiak/HTML/zerrenda6.png" width="600" alt="&lt;sumary&gt;&lt;/sumary&gt; elementua">
               <figcaption>HTML-irudizerren(8): &lt;sumary&gt;&lt;/sumary&gt; elementua.</figcaption>
             </div>
           </article>
           <div class="banaketaTxikia"></div>
-  <!-- EDUKIA HTML SAILEKO Testuak atalaren BIDEOA hasi ---------------------  -->
-  <section class="ikasgaia" id="html-taulatributu-bideoa">
-    <article>
-      <h4 class="bideontziBurua">Zerrendak<br><i class="fa fa-television"></i></h4>
-      <div class="bideontzia">
-        <iframe width="100%" height="350" src="https://www.youtube.com/embed/7_eInlArV_U?si=KRu5X6Bnk_fyp4Nz"
-          title="YouTube video player" "></iframe>
-      </div>
-      <figcaption>HTML-zerrendak: Zerrendei buruzko bideoa.</figcaption>
-    </article>
-  </section>
-<!-- EDUKIA HTML SAILEKO Taulak eta atributu globalak atalaren BIDEOA buka ---------------------  -->
 </body>
 </html>
