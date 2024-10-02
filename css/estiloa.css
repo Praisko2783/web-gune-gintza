@@ -223,16 +223,13 @@ text-align: center;
 .gidatala{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
-  gap:20px;
-  align-items: center;
+  box-shadow:1px 1px 1px 4px rgba(50, 50, 250, 0.2);
 }
 .gida{
   text-align: center;
-  box-shadow:1px 1px 1px 4px rgba(50, 50, 250, 0.2);
-  padding: 20px;
-  height: 300px;
+  padding: 15px;
 }
-.gida:hover{
+.gidatala:hover{
   box-shadow: 0 4px 10px 0 rgba(97, 178, 250, 0.2), 0 4px 50px 0 rgba(1, 141, 247, 0.19);
 }
 .gida i{
@@ -240,9 +237,10 @@ text-align: center;
 }
 .gida h3{
   font-size: 1.4em;
+  padding-top: 0px;
 }
 .gida p{
-  text-align: left;
+  text-align: justify;
   font-size: 1.15em;
   font-weight: 200;
 }
