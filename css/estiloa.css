@@ -39,7 +39,7 @@ header{
   padding-top: 10px;
   padding-bottom: 10px;
 }
-/*menu barra ezker-eskuin  ....HASI*/
+/*menu barra ezker-eskuin  pantaila handia........HASI*/
 
 .saioAtalak-lau{
   width: 100%;
@@ -56,6 +56,7 @@ header{
 }
 .saioAtalak-lau .nav > li {
   float:left;
+  margin-right: 1rem;
 }
 .saioAtalak-lau .nav li a {
   background-color:#030c88;
@@ -72,17 +73,61 @@ header{
   position:absolute;
   min-width:140px;
 }
-.saioAtalak-lau .nav li:hover > ul {
-  display:block;
+.menu-icon, #check{
+  display: none;
 }
-.saioAtalak-lau .nav li ul li {
-  position:relative;
+/*menu barra ezker-eskuin pantaila handia........BUKA*/
+/*menu barra ezker-eskuin pantaila TXIKIA........HASI*/
+@media (max-width:1000px){
+  .checkbtn{
+      display: block;
+  }
+  .menu-icon{
+      display: block;
+      position: fixed;
+      font-size: 18px;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      padding: 5px;
+      background: #0c0393;
+      color: aliceblue;
+  }
+  .nav-menu label .menu-icon{
+    text-align: center;
+    border:#030c88 1px solid;
+  }
+  .nav-menu ul{
+      display: block;
+      position: fixed;
+      top:50px;
+      top:-100%;
+      background: #0c0393;
+      width: 100%;
+      right: 0;
+      text-decoration: none;
+  }
+  .nav-menu ul li{
+      padding: .2rem;
+      display:list-item;
+      justify-content:space-between;
+      margin: 0;
+  }
+  .nav-menu ul li a{
+      text-decoration: none;
+  }
+  #check:checked ~ ul{
+      top: 50px;
+      transition: all .50s;
+  }
+  .saioAtalak-lau{
+    display:block;
+  }
+  .saioAtalak-lau .nav > li {
+    float:none;
+  }
 }
-.saioAtalak-lau .nav li ul li ul {
-  right:-140px;
-  top:0px;
-}
-/*menu barra ezker-eskuin ........BUKA*/
+/*menu barra ezker-eskuin pantaila TXIKIA........BUKA*/
 /*Azaleko Eduki nagusia, aurkezpena ''index.html''......HASI   */
 main{
   width: 80%;
@@ -266,7 +311,7 @@ text-align: center;
   flex-wrap: wrap;
 }
 .edukiontzia {
-  width: 75%;
+  width: 80%;
   padding: 15px;
   box-shadow: 0 5px 50px 0 rgba(183, 184, 182, 0.16), 0 2px 30px 0 rgba(74, 74, 74, 0.12);
 }
@@ -337,66 +382,35 @@ text-align: center;
 }
 /*---Ereduko txantiloia----------menu barra bertikala---------- HASI */
 .albozutabea {
-  width: 25%;
+  width: 20%;
   box-shadow: 0 2px 10px 0 rgba(192, 192, 191, 0.16), 0 2px 5px 0 rgba(211, 210, 210, 0.12);
   background-color: #d5d5d5;
 }
-ul.acorh,
-ul.acorh * {
-margin: 0px;
-padding: 0;
-border: 0;
-}
-ul.acorh {
-margin: 10px auto;
-padding: 10px;
+ul.aurkibidea {
+padding: 5px;
 list-style: none;
 width: 100%;
-font-size: 18px;
+font-size: 15px;
 }
-ul.acorh li {
+ul.aurkibidea h5{
+  margin-top: 5px;
+  margin-bottom: 10px;   
+}
+ul.aurkibidea li {
 list-style: none;
 width: 100%;
 }
-ul.acorh li a {
-display: block;
-padding: 10px 10px 10px 20px;
-background: #0d028b;
-color: #eee;
-border-bottom: 1px solid #0d028b;
-border-top: 1px solid #666;
-text-decoration: none;
-box-sizing: border-box;
+
+ul.aurkibidea li a {
+  display: block;
+  color: #0528b4;
+  text-decoration: none;
+  padding: 5px;
+  background-color: aliceblue;
+  border-bottom: 1px solid black;
+  box-sizing: border-box;
 }
-ul.acorh li ul {
-max-height: 0;
-margin: 0;
-padding: 0;
-list-style: none;
-overflow: hidden;
-transition: .3s all ease-in;
-}
-ul.acorh li li a {
-padding: 10px 10px 10px 40px;
-background: #b8d2f0;
-color: #220387;
-font-size: 16px;
-border: 0;
-border-bottom: 1px solid #ccc;
-box-sizing: border-box;
-}
-ul.acorc li li:last-child a {
-border-bottom: 0;
-}
-/*ul.acorh li:target ul {
-  max-height: 300px;
-  transition: .3s all ease-in;
-  }*/
-ul.acorh li:hover ul {
-max-height: 800px;
-transition: .3s all ease-in;
-}
-ul.acorh li a:hover {
+ul.aurkibidea li a:hover {
 background: #666;
 color: #fff;
 }
@@ -512,7 +526,7 @@ legend{
 
   /*Lengoaiak saileko lantegiko eremua  HASI*/
 .lengoaiGaldetegia{
-  background: #ccc;
+  box-shadow:1px 1px 1px 4px rgba(50, 50, 250, 0.2);
   text-align: center;
 }
 .lengoaiGaldera{
