@@ -1,0 +1,197 @@
+/*menu barra ezker-eskuin  pantaila handia........HASI*/
+
+.saioAtalak-lau{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color:#030c88;
+}
+.saioAtalak-lau #header {
+  margin:0 auto;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.saioAtalak-lau ul, ol {
+  list-style:none;
+}
+.saioAtalak-lau .nav > li {
+  float:left;
+  margin-right: .5rem;
+}
+.saioAtalak-lau .nav li a {
+  background-color:#030c88;
+  color:#fff;
+  text-decoration:none;
+  padding:10px 10px;
+  display:block;
+}
+.saioAtalak-lau .nav li a:hover {
+  background-color:#0470b7;
+}
+.saioAtalak-lau .nav li ul {
+  display:none;
+  position:absolute;
+  min-width:140px;
+}
+.menu-icon, #check{
+  display: none;
+}
+/*menu barra ezker-eskuin pantaila handia........BUKA*/
+/*menu barra ezker-eskuin pantaila TXIKIA........HASI*/
+@media (max-width:1000px){
+  .checkbtn{
+      display: block;
+  }
+  .menu-icon{
+      display: block;
+      position: absolute;
+      right: 0px;
+      padding: 9px;
+      padding-right: 15px;
+      cursor: pointer;
+      background: #0c0393;
+      color: aliceblue;
+  }
+
+  .nav-menu label .menu-icon{
+    text-align: center;
+    border:#030c88 1px solid;
+  }
+  .nav-menu ul{
+      display: block;
+      position: absolute;
+      top:50px;
+      top:-100%;
+      background: #0c0393;
+      width: 50%;
+      right: 0;
+      text-decoration: none;
+  }
+  .nav-menu ul li{
+      padding: .2rem;
+      display:list-item;
+      justify-content:space-between;
+      margin: 0;
+  }
+  .saioAtalak-lau .nav li a{
+    background-color: aliceblue;
+    color: #0528b4;
+}
+  .saioAtalak-lau .nav li a:hover {
+    background: #666;
+    color: #fff;
+  }
+
+  .nav-menu ul li a{
+      text-decoration: none;
+      text-align: right;
+  }
+  #check:checked ~ ul{
+      top: 140px;
+      transition: all .50s;
+  }
+  .saioAtalak-lau{
+    display:block;
+  }
+  .saioAtalak-lau .nav > li {
+    float:none;
+  }
+}
+@media (max-width:500px){
+  .nav-menu ul li a{
+      text-decoration: none;
+      font-size: 12px;
+  }
+}
+/*menu barra ezker-eskuin pantaila TXIKIA........BUKA*/
+/*menu barra bertikala goitik behera Pantaila HANDIA---------- HASI */
+.albozutabea {
+  width: 20%;
+  box-shadow: 0 2px 10px 0 rgba(192, 192, 191, 0.16), 0 2px 5px 0 rgba(211, 210, 210, 0.12);
+  background-color: #d5d5d5;
+}
+ul.aurkibidea {
+padding: 5px;
+list-style: none;
+width: 100%;
+font-size: 15px;
+}
+ul.aurkibidea h5{
+  margin-top: 5px;
+  margin-bottom: 10px;   
+}
+ul.aurkibidea li {
+list-style: none;
+width: 100%;
+}
+
+ul.aurkibidea li a {
+  display: block;
+  text-decoration: none;
+  padding: 5px;
+  background-color: aliceblue;
+  color: #0528b4;
+  border-bottom: 1px solid black;
+  box-sizing: border-box;
+}
+ul.aurkibidea li a:hover {
+background: #666;
+color: #fff;
+}
+.menu-ikonoa, #hautatu{
+  display: none;
+}
+
+@media (max-width:1000px){
+    .hautabtn{
+        display: block;
+    }
+    .menu-ikonoa{
+      display: block;
+      position: fixed;
+      top:100px;
+      left: 0px;
+      padding: 8px 20px;
+      padding-left: 0;
+      padding-right: 50px;
+      cursor: pointer;
+      background: #0c0393;
+      color: aliceblue;
+    }
+    .albozutabea .aurkibidea{
+        display: block;
+        position: absolute;
+        top:-200%;
+        background: #0c0393;
+        color:#fff;
+        width: 50%;
+        left: 0;
+        text-decoration: none;
+    }
+    .albozutabea .aurkibidea ul h5{
+      color:#fff;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .albozutabea ul li{
+        padding: .2rem;
+        display:list-item;
+        justify-content:space-between;
+        margin: 0;
+    }
+    .albozutabea ul li a{
+        text-decoration: none;
+        font-size: 14px;
+    }
+    .edukiontzia{
+        width: 100%;
+    }
+    body{
+        width: 100%;
+    }
+    #hautatu:checked ~ ul{
+        top: 140px;
+        transition: all .25s;
+    }
+}
+
+/*---Ereduko tXAntiloia----------menu barra bertikala---------- BUKA */
