@@ -83,7 +83,7 @@ legend{
   font-size: 1.3em;
   text-align: center;
 }
-lengoaiaBotoia {
+.lengoaiaBotoia {
   margin-top: 10px;
   padding: 10px 20px;
   margin-right: 10px;
@@ -93,7 +93,7 @@ lengoaiaBotoia {
   cursor: pointer;
   font-size: 16px;
 }
-lengoaiaBotoia:hover {
+.lengoaiaBotoia:hover {
   background-color: #04f510;
 }
   
