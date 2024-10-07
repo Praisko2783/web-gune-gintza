@@ -29,7 +29,7 @@
 	text-align:left;
 	color:rgb(1, 1, 73);
 }
-.azterBotoia{
+.azterMartxa{
   text-align: center;
 }
 form{
@@ -80,10 +80,10 @@ legend{
 }
 .lengoaiEmaitza{
   padding: 1.2rem;
-  font-size: 1.3em;
+  font-size: 1.5rem;
   text-align: center;
 }
-.lengoaiaBotoia {
+lengoaiaBotoia {
   margin-top: 10px;
   padding: 10px 20px;
   margin-right: 10px;
@@ -93,7 +93,7 @@ legend{
   cursor: pointer;
   font-size: 16px;
 }
-.lengoaiaBotoia:hover {
+lengoaiaBotoia:hover {
   background-color: #04f510;
 }
   
