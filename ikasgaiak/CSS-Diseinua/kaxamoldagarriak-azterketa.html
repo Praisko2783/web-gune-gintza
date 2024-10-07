@@ -4,40 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/estiloa.css">
-    <link rel="stylesheet" href="../../css/estiloaIkasgaiEredua.css">
     <link rel="stylesheet" href="../../css/estiloAzterketa.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!-- EGITURA HTML SAILEKO AZTERKETA hasi ---------------------  -->
     <article>
-      <div>
+      <div style="text-align: center;">
         <h3 class="azterMartxa">Web-orrietako kaxa moldagarriez galdetegia<br><i class="fa fa-pagelines"></i></h3>
         <a href="#"><h3 id="start-button">HASI AZTERKETA</h3></a>
       </div> 
-      <div class="azpitituluak">
+      <div>
         <h5 style="text-align: center;">1. Egin klik 'HASI AZTERKETA'. 2. Hautatu erantzun zuzena. 3. Irakurri iradokizuna. 4. Galdera automatikoki aldatuko da.</h5>
             <h3 style="text-align: center;">Sei galdera dira guztira</h3>
       </div>       
       <body>
-        <div class="container">
+        <div style="text-align: center;" class="container">
             <div class="titulua">
                 <h2>Munduko hiriburuak</h2>
             </div>
             <div class="header">
-                <div id="timer" class="timer"><span>15</span></div>
+                <div id="timer" class="timer"><span >15</span></div>
+                <div class="banaketaTxikia"></div>
                 <div id="score" class="score">
-                    <div class="correctas">ZUZENAK: <span id="correctas">0</span></div>
-                    <div class="incorrectas">OKERRAK: <span id="incorrectas">0</span></div>
-                    <div class="respuestas">ERANTZUNAK: <span id="respondidas">0</span></div>
+                    <button class="correctas">ZUZENAK:<span id="correctas">0</span></button>
+                    <button class="incorrectas">OKERRAK: <span id="incorrectas">0</span></button>
+                    <button class="respuestas">ERANTZUNAK: <span id="respondidas">0</span></button>
                 </div>
             </div>
             <hr>
             
             <div id="question-container" class="question-container">
-                <h2 id="question"></h2>
+                <h4 id="question"></h4>
                 <div id="answers" class="answers"></div>
-            <textarea class="erantzuntokia" id="feedback" readonly></textarea>
+            <textarea rows="4" cols="50" class="erantzuntokia" id="feedback" readonly></textarea>
         </div>
             
         </div>
@@ -46,14 +46,6 @@
 </body>
 <!-- Kanpoko fitxategiak erabili ahal izateko estekak (JavaScript-ak orria bukaeran idatzi ohi dira, sistemak 
 HTML eta CSS guztia irakurri ostean irakur ditzan) -------------- -->
-<script src="../../js/vendor/galdetegia.js"></script>
-<script src="../../js/vendor/galdetegiaForm.js"></script>
-<script src="../../js/vendor/kudeaketa.js"></script>
-<script src="../../js/vendor/kudeaketaForm.js"></script>
-<script src="../../js/vendor/kudeatuHTML.js"></script>
 <script src="../../js/vendor/hiribukudeake.js"></script>
 <script src="../../js/vendor/hiribugalde.js"></script>
-<script src="../../js/vendor/kudeatuHTML.js"></script>
-
-<script src="../../js/vendor/lengoaiaSkripta.js"></script>
 </html>
