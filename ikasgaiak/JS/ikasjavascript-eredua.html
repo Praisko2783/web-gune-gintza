@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/estiloa.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Javascript ikasgaia</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/estiloa.css">
+  <link rel="stylesheet" href="../../css/estiloMenuak.css">
+  <link rel="stylesheet" href="../../css/estiloEredua.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>JS programazioa</title>
 </head>
+
 <body>
   <!-- Goiburukoa: gunearen titulua eta praiskopediaren ikonoa   HASI -->
   <header>
     <div class="goiburua">
-        <div class="prais-ikonoa">
-          <a href="../../index.html"><img src="../../irudiak/AZALA/praiskologoHondoZuri.png" alt="Praiskopediaren logoa" class="praisikonoa"></a>
+      <div class="prais-ikonoa">
+        <a href="../../index.html"><img src="../../irudiak/AZALA/praiskologoHondoZuri.png" alt="Praiskopediaren logoa"
+            class="praisikonoa"></a>
       </div>
-      </div>     
   </header>
-    <!-- Menu barra ezker-eskuin   ..... HASI -->
-    <section class="saioAtalak-lau">
-      <div class="nav-menu" id="header">
-          <input type="checkbox" id="check">    
-          <label for="check" class="checkbtn">
-              <p class="menu-icon"><i class="fa fa-bars"></i></p>
-          </label>
-          <ul class="nav">
+  <!-- Goiburukoa: gunearen titulua, azpititulua eta menua irekitzeko esteka  BUKA -->
+
+  <!-- Menu barra ezker-eskuin   ..... HASI -->
+  <section class="saioAtalak-lau">
+    <div class="nav-menu" id="header">
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <p class="menu-icon"><i class="fa fa-bars"></i>&nbsp;&nbsp;Ikasgaiak</p>
+      </label>
+      <ul class="nav">
         <li><a href="../GIDAK/ikasgidadida-eredua.html">Gida didaktikoak&nbsp;&nbsp;<i class="fa fa-arrow-circle-o-right"></i></a></li>
         <li><a href="../WWW/ikaswww-eredua.html">Web garapena&nbsp;&nbsp;<i class="fa fa-arrow-circle-o-right"></i></a></li>
         <li><a href="../HTML/ikashtml-eredua.html">HTML &nbsp;&nbsp;<i class="fa fa-arrow-circle-o-right"></i></a></li>
@@ -35,12 +41,17 @@
     </div>
   </section>
   <!-- menu barra ezker-eskuin .......BUKA -->
-    <div class="banaketaTxikia"></div>
-    <h2 style="text-align: center;">JavaScript programazio lengoaia</h2>
-    <!-- Menu-barra goiti-beheiti HASI -->
-    <main class="sarenagusia">
-      <aside class="albozutabea">
-        <ul class="aurkibidea">
+
+  <div class="banaketaTxikia"></div>
+  <h2 style="text-align: center;">JS programazio lengoaia</h2>
+        <!-- Menu-barra goiti-beheiti HASI -->
+  <main class="sarenagusia">
+    <aside class="albozutabea">
+      <input type="checkbox" id="hautatu">    
+      <label for="hautatu" class="hautabtn">
+          <p class="menu-ikonoa"><i class="fa fa-bars"></i>&nbsp;&nbsp;Atalak</p>
+      </label>
+      <ul class="aurkibidea">
               <ul><h5>Oinarrizkoak</h5>
                 <li><a href="ataria-aldagaiak.html" target="egitura"><i class="fa fa-book"></i>&nbsp;&nbsp;Aldagaiak/Karaktereak/boolearrak</a></li>
                 <li><a href="ataria-arrayak.html" target="egitura"><i class="fa fa-book"></i>&nbsp;&nbsp;Arrayak</a></li>
@@ -65,7 +76,7 @@
                 <li><a href="objektua-bideoa.html" target="egitura"><i class="fa fa-television"></i>&nbsp;&nbsp;Bideoa</a></li>
                 <li><a href="objektua-azterketa.html" target="egitura"><i class="fa fa-pagelines"></i>&nbsp;&nbsp;Azterketa</a></li>
               </ul>
-              <ul><h5>Objektu estandarra</h5>
+              <ul><h5>Objektu estandarrak</h5>
                 <li><a href="estandarrak-stringarraydate.html" target="egitura"><i class="fa fa-book"></i>&nbsp;&nbsp;String/Array/Date</a></li>
                 <li><a href="estandarrak-mathwindowdocument.html" target="egitura"><i class="fa fa-book"></i>&nbsp;&nbsp;Math/Window/Document</a></li>
                 <li><a href="estandarrak-element.html" target="egitura"><i class="fa fa-book"></i>&nbsp;&nbsp;Element</a></li>
@@ -79,19 +90,19 @@
                 <li><a href="gertarazketa-salbuespen.html" target="egitura"><i class="fa fa-book"></i>&nbsp;&nbsp;Salbuespenak</a></li>
                 <li><a href="gertarazketa-bideoa.html" target="egitura"><i class="fa fa-television"></i>&nbsp;&nbsp;Bideoa</a></li>
                 <li><a href="gertarazketa-azterketa.html" target="egitura"><i class="fa fa-pagelines"></i>&nbsp;&nbsp;Azterketa</a></li>
-              </ul>   
+              </ul>     
           </ul>
-        </aside>
-      <!-- Menu-barra goti-beheiti   BUKA ....-->
-      <section class="edukiontzia">
-        <!-- IFRAME-a ------------------  ------ HASI ------  -->
-        <div class="eduki-leihoa">
-          <iframe src="ikasjavascript-gidadida.html" name="egitura" width="100%" height="1200"></iframe>
-        </div>
-        <!-- IFRAME-A --------------------------BUKA -------------- -->
-      </section>
-    </main>
+    </aside>
     <div class="banaketaTxikia"></div>
+<!-- AURKIBIDEA ZUTABEAK -akordiona-  ------ BUKA ------  -->
+<section class="edukiontzia">
+  <!-- IFRAME-a ------------------  ------ HASI ------  -->
+  <div class="eduki-leihoa">
+    <iframe src="ikasjavascript-gidadida.html" name="egitura" width="100%" height="1200"></iframe>
+  </div>
+  <!-- IFRAME-A --------------------------BUKA -------------- -->
+</section>
+  </main>
 <!-- GORA IGOTZEKO BOTOI GORRIA BEHEAN ESKUINEAN hasi -------------- -->
     <span class="ir-arriba icon-arrow-up2"></span>
         <!-- End page content -->
@@ -101,12 +112,12 @@
       </svg>
     </button>
 <!-- GORA IGOTZEKO BOTOI GORRIA BAHEAN ESKUINEAN buka -------------- -->
-<!-- Orriaren oina -----'FOOTER'------HASI   -->
-  <footer>
-    <h3>Jose Fran Urteaga Elorza</h3>
-    <h3>&copy; Praiskopedia</h3>
-  </footer>
-  <!-- Orriaren oina -----'FOOTER'------BUKA   -->
+ <!-- Orriaren oina -----'FOOTER'------HASI   -->
+ <footer>
+  <h3>Jose Fran Urteaga</h3>
+  <a href="https://praiskopedia.eus" target="_blank">&copy; Praiskopedia</a>
+</footer>
+<!-- Orriaren oina -----'FOOTER'------BUKA   -->
   </body>
 
 </html>
@@ -130,13 +141,3 @@
   })();
 </script>
 <!-- Gorako botoia maneiatzeko JavaScript-a, <script> eta </script> etiketen artean doana, ----------- BUKA -->
-
-<!-- Kanpoko fitxategiak erabili ahal izateko estekak (JavaScript-ak orria bukaeran idatzi ohi dira, sistemak 
-HTML eta CSS guztia irakurri ostean irakur ditzan) -------------- -->
-<script src="../../js/vendor/galdetegia.js"></script>
-<script src="../../js/vendor/galdetegiaForm.js"></script>
-<script src="../../js/vendor/kudeaketa.js"></script>
-<script src="../../js/vendor/kudeaketaForm.js"></script>
-<script src="../../js/vendor/kudeatuAkordionak.js"></script>
-<script src="../../js/vendor/kudeatuAzterketakHTML.js"></script>
-<script src="../../js/vendor/lengoaiaSkripta.js"></script>
