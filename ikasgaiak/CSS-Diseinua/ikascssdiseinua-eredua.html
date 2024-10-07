@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../css/estiloa.css">
+  <link rel="stylesheet" href="../../css/estiloMenuak.css">
+  <link rel="stylesheet" href="../../css/estiloEredua.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>CSS oinarriak ikasgaia</title>
+  <title>CSS diseinua</title>
 </head>
 
 <body>
@@ -17,16 +19,17 @@
         <a href="../../index.html"><img src="../../irudiak/AZALA/praiskologoHondoZuri.png" alt="Praiskopediaren logoa"
             class="praisikonoa"></a>
       </div>
-    </div>
   </header>
+  <!-- Goiburukoa: gunearen titulua, azpititulua eta menua irekitzeko esteka  BUKA -->
+
   <!-- Menu barra ezker-eskuin   ..... HASI -->
-    <section class="saioAtalak-lau">
-      <div class="nav-menu" id="header">
-          <input type="checkbox" id="check">    
-          <label for="check" class="checkbtn">
-              <p class="menu-icon"><i class="fa fa-bars"></i></p>
-          </label>
-          <ul class="nav">
+  <section class="saioAtalak-lau">
+    <div class="nav-menu" id="header">
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <p class="menu-icon"><i class="fa fa-bars"></i>&nbsp;&nbsp;Ikasgaiak</p>
+      </label>
+      <ul class="nav">
         <li><a href="../GIDAK/ikasgidadida-eredua.html">Gida didaktikoak&nbsp;&nbsp;<i class="fa fa-arrow-circle-o-right"></i></a></li>
         <li><a href="../WWW/ikaswww-eredua.html">Web garapena&nbsp;&nbsp;<i class="fa fa-arrow-circle-o-right"></i></a></li>
         <li><a href="../HTML/ikashtml-eredua.html">HTML &nbsp;&nbsp;<i class="fa fa-arrow-circle-o-right"></i></a></li>
@@ -38,12 +41,17 @@
     </div>
   </section>
   <!-- menu barra ezker-eskuin .......BUKA -->
-   <!-- menu barra goiti-beheiti ......HASI -->
+
   <div class="banaketaTxikia"></div>
-    <h2 style="text-align: center;">CSS diseinu lengoaia</h2>
-    <main class="sarenagusia">
-      <aside class="albozutabea">
-        <ul class="aurkibidea">
+  <h2 style="text-align: center;">CSS diseinu lengoaia</h2>
+        <!-- Menu-barra goiti-beheiti HASI -->
+  <main class="sarenagusia">
+    <aside class="albozutabea">
+      <input type="checkbox" id="hautatu">    
+      <label for="hautatu" class="hautabtn">
+          <p class="menu-ikonoa"><i class="fa fa-bars"></i>&nbsp;&nbsp;Atalak</p>
+      </label>
+      <ul class="aurkibidea">
             <ul><h5>Ohiko kaxak</h5>
               <li><a href="ohikokaxak-display.html" target="egitura"><i class="fa fa-book"></i>&nbsp;&nbsp;<em>Display</em></a></li>
               <li><a href="ohikokaxak-edukihigikorra.html" target="egitura"><i class="fa fa-book"></i>&nbsp;&nbsp;Eduki higikorra</a></li>
@@ -59,26 +67,24 @@
               <li><a href="kaxamoldagarriak-bideoa.html" target="egitura"><i class="fa fa-television"></i>&nbsp;&nbsp;Bideoa</a></li>
               <li><a href="kaxamoldagarriak-azterketa.html" target="egitura"><i class="fa fa-pagelines"></i>&nbsp;&nbsp;Azterketa</a></li>
             </ul>
-            <ul><h5>Web moldagarria</h5>
+            <ul><h5>Web-orri moldagarria</h5>
               <li><a href="webmoldagarria-mediaquery.html" target="egitura"><i class="fa fa-book"></i>&nbsp;&nbsp;Media Queryak</a></li>
               <li><a href="webmoldagarria-higikortasuna.html" target="egitura"><i class="fa fa-book"></i>&nbsp;&nbsp;Higikortasuna (1)</a></li>
               <li><a href="webmoldagarria-testua.html" target="egitura"><i class="fa fa-book"></i>&nbsp;&nbsp;Testua (2)</a>
               <li><a href="webmoldagarria-bideoa.html" target="egitura"><i class="fa fa-television"></i>&nbsp;&nbsp;Bideoa</a></li>
               <li><a href="webmoldagarria-azterketa.html" target="egitura"><i class="fa fa-pagelines"></i>&nbsp;&nbsp;Azterketa</a></li>
-            </ul>
-          </li>         
-        </ul>
-      </aside>
-  <!-- menua goiti behera......... BUKA ------  -->
-  <!-- Edukia edukiontzia iframe ..........HASI ....-->
-      <section class="edukiontzia">
-        <!-- IFRAME-a ------------------  ------ HASI ------  -->
-        <div class="eduki-leihoa">
-          <iframe src="ikascssdiseinua-gidadida.html" name="egitura" width="100%" height="1200"></iframe>
-        </div>
-        <!-- Edukia edukiontzia iframe ..........-BUKA -------------- -->
-      </section>
-    </main>
+            </ul>       
+      </ul>
+    </aside>
+  <!-- AURKIBIDEA ZUTABEAK -akordiona-  ------ BUKA ------  -->
+  <section class="edukiontzia">
+    <!-- IFRAME-a ------------------  ------ HASI ------  -->
+    <div class="eduki-leihoa">
+      <iframe src="ikascssdiseinua-gidadida.html" name="egitura" width="100%" height="1200"></iframe>
+    </div>
+    <!-- IFRAME-A --------------------------BUKA -------------- -->
+  </section>
+  </main>
   <!-- GORA IGOTZEKO BOTOI GORRIA BEHEAN ESKUINEAN hasi -------------- -->
   <span class="ir-arriba icon-arrow-up2"></span>
   <!-- End page content -->
@@ -88,12 +94,13 @@
     </svg>
   </button>
   <!-- GORA IGOTZEKO BOTOI GORRIA BAHEAN ESKUINEAN buka -------------- -->
+
   <!-- Orriaren oina -----'FOOTER'------HASI   -->
   <footer>
-    <h3>Jose Fran Urteaga Elorza</h3>
-    <h3>&copy; Praiskopedia</h3>
+    <h3>Jose Fran Urteaga</h3>
+    <a href="https://praiskopedia.eus" target="_blank">&copy; Praiskopedia</a>
   </footer>
-  <!-- Orriaren oina -----'FOOTER'------BUKA   -->
+<!-- Orriaren oina -----'FOOTER'------BUKA   -->
 </body>
 
 </html>
@@ -116,3 +123,14 @@
     }
   })();
 </script>
+<!-- Gorako botoia maneiatzeko JavaScript-a, <script> eta </script> etiketen artean doana, ----------- BUKA -->
+
+<!-- Kanpoko fitxategiak erabili ahal izateko estekak (JavaScript-ak orria bukaeran idatzi ohi dira, sistemak 
+HTML eta CSS guztia irakurri ostean irakur ditzan) -------------- -->
+<script src="../../js/vendor/galdetegia.js"></script>
+<script src="../../js/vendor/galdetegiaForm.js"></script>
+<script src="../../js/vendor/kudeaketa.js"></script>
+<script src="../../js/vendor/kudeaketaForm.js"></script>
+<script src="../../js/vendor/kudeatuAkordionak.js"></script>
+<script src="../../js/vendor/kudeatuAzterketakHTML.js"></script>
+<script src="../../js/vendor/lengoaiaSkripta.js"></script>
