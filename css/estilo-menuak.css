@@ -1,0 +1,239 @@
+/*menu barra ezker-eskuin  pantaila handia........HASI*/
+.saioAtalak-lau{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color:#030c88;
+}
+.saioAtalak-lau #header {
+  margin:0 auto;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.saioAtalak-lau ul, ol {
+  list-style:none;
+}
+.saioAtalak-lau .nav > li {
+  float:left;
+  margin-right: .5rem;
+}
+.saioAtalak-lau .nav li a {
+  background-color:#030c88;
+  color:#fff;
+  text-decoration:none;
+  padding:10px 10px;
+  display:block;
+}
+.saioAtalak-lau .nav li a:hover {
+  background-color:#0470b7;
+}
+.saioAtalak-lau .nav li ul {
+  display:none;
+  position:absolute;
+  min-width:140px;
+}
+.menu-icon, #check{
+  display: none;
+}
+/*menu barra ezker-eskuin pantaila handia........BUKA*/
+/*menu barra ezker-eskuin pantaila TXIKIA........HASI*/
+@media (max-width:1000px){
+  .checkbtn{
+      display: block;
+  }
+  .menu-icon{
+      display: block;
+      position: absolute;
+      right: 0px;
+      top:0;
+      padding: 9px;
+      padding-right: 15px;
+      cursor: pointer;
+      background: #0c0393;
+      color: aliceblue;
+      width: 50%;
+      border-right: 1px aliceblue solid;
+  }
+  .nav-menu label .menu-icon{
+    text-align: center;
+    border:#030c88 1px solid;
+  }
+  .nav-menu ul{
+      display: block;
+      position: absolute;
+      top:-150%;
+      background: aliceblue;
+      width: 50%;
+      right: 0;
+      text-decoration: none;
+      border-left: #030c88 1px solid;
+  }
+  .nav-menu ul li{
+      display:list-item;
+      justify-content:space-between;
+      margin: 0;
+  }
+  .saioAtalak-lau .nav li a{
+    background-color: aliceblue;
+    color: #0528b4;
+    padding:5px 5px;
+}
+  .saioAtalak-lau .nav li a:hover {
+    background: #666;
+    color: #fff;
+  }
+  .nav-menu ul li a{
+      text-decoration: none;
+      text-align: right;
+  }
+  #check:checked ~ ul{
+      top: 40px;
+      transition: all .50s;
+  }
+  .saioAtalak-lau{
+    display:block;
+  }
+  .saioAtalak-lau .nav > li {
+    float:none;
+  }
+  .saioAtalak-lau .nav li a {
+    font-size: 14px;
+    color:#0528b4;
+  }
+  .saioAtalak-lau .nav li a:hover {
+    font-style: oblique;
+    color:#0528b4;
+    background:#ccc;
+  }
+  .sarenagusia .edukiontzia{
+    width: 100%;
+}
+}
+@media (max-width:500px){
+  .saioAtalak-lau .nav ul li a{
+      text-decoration: none;
+      font-size: 12px;
+  }
+}
+/*menu barra ezker-eskuin pantaila TXIKIA........BUKA*/
+
+/* Menu Barra Bertikala albozutabekoa.....................  */
+.accordion {
+  margin: 0 auto;
+  color: black;
+  border-left: #030c88 1px solid;
+}
+.accordion-body{
+  padding: 10px;
+}
+.accordion-body .container {
+    position: relative;
+    margin: 5px 5px;
+    
+  }
+  .accordion .label {
+    position: relative;
+    width:100%;
+    font-size: 16px;
+    padding:5px;
+    color:  #0528b4;
+    cursor: pointer;
+    border-bottom: #030c88 1px solid;
+  }
+  .accordion .label:hover {
+    background: #ccc;
+    font-style: oblique;
+  }
+/* Positions the plus sign 5px from the right. Centers it using the transform property. */
+
+  /* Hides the content (height: 0), decreases font size, justifies text and adds transition */
+  .accordion .content {
+    position: relative;
+    background: white;
+    height: 0;
+    font-size: 16px;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  .accordion .container .content ul{
+    padding: 15px;
+    list-style: none;
+    width: 100%;
+    font-size: 14px;
+    }
+    .accordion .container .content ul li {
+    list-style: none;
+    width: 100%;
+    }
+    .accordion .container .content ul li a {
+      display: block;
+      text-decoration: none;
+      padding: 5px;
+      color: #0528b4;
+      border-bottom: 1px solid #0528b4;
+      box-sizing: border-box;
+    }
+    .accordion .container .content ul li a:hover {
+    background: #666;
+    color: #fff;
+    }
+
+/* Unhides the content part when active. Sets the height */
+.accordion .container.active .content {
+    height: auto;
+  }
+
+  .menu-ikonoa, #hautatu{
+    display: none;
+  }
+  
+  @media (max-width:1000px){
+      .hautabtn{
+          display: block;
+      }
+      .menu-ikonoa{
+        display: block;
+        position: absolute;
+        left: 0px;
+        top:0px;
+        padding: 9px;
+        padding-right: 15px;
+        cursor: pointer;
+        background: #0c0393;
+        color: aliceblue;
+        width: 50%;
+        border-right: 1px aliceblue solid;
+      }
+      .accordion-body{
+          display: block;
+          position: absolute;
+          top:-200px;
+          background:aliceblue;
+          color: #0c0393;
+          width: 50%;
+          left: 0;
+          text-decoration: none;
+          border-right: #030c88 1px solid;
+      }
+      .accordion-body ul li{
+          display:list-item;
+          justify-content:space-between;
+          margin: 0;
+      }
+      .accordion-body .container .content ul li a{
+          text-decoration: none;
+      }
+      .edukiontzia{
+          width: 100%;
+      }
+      #hautatu:checked ~ .accordion-body{
+          top: 40px;
+          transition: all .25s;
+      }
+  }
+  @media (max-width:500px){
+    .accordion-body ul li a{
+        font-size: 12px;
+    }
+  }
+  
