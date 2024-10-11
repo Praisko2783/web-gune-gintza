@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Webgunegintza</title>
+    <title>Gida proiektuarena</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
+    <link rel="stylesheet" href="../../css/estilo-ikasgaiTxanti.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   
@@ -22,58 +23,7 @@
 <div class="banaketaTxikia"></div>
     
   </main>
-  <!-- HTML saila ----- ikasgaien aurkibidea ---------------------  BUKA-->
-<!-- GORA IGOTZEKO BOTOI GORRIA BAHEAN ESKUINEAN hasi -------------- -->
-<span class="ir-arriba icon-arrow-up2"></span>
-<!-- End page content -->
-<button class="toTop" id="toTop">
-  <svg viewBox="0 0 24 24">
-    <path d="m4 16 8-8 8 8"></path>
-  </svg>
-</button>
-<!-- GORA IGOTZEKO BOTOI GORRIA BAHEAN ESKUINEAN buka -------------- -->
-
-<!-- Orriaren oina -----'FOOTER'------HASI   -->
-<footer>
-  <span onclick="w3_open()"><i class="fa fa-arrow-circle-o-left"></i>&nbsp;Ireki menua</span>
-  <h3>OINEAN OINETAKOA</h3>
-  <a href="https://praiskopedia.eus" target="_blank">&copy; Praiskopedia</a>
-</footer>
-<!-- Orriaren oina -----'FOOTER'------BUKA   -->
 
 </body>
 
 </html>
-<!-- HEMEN BUKATZEN DA 'web-ikas' orrialdearen HTMLa -->
-
-<!-- HEMEN DOA menua eta gorako botoia maneiatzeko JavaScript-a <script> eta </script> etiketen artean ----------- HASI -->
-<script>
-// Menua irekitzeko eta ixteko kodea
-function w3_open() {
-document.getElementById("mySidebar").style.display = "block";
-}
-function w3_close() {
-document.getElementById("mySidebar").style.display = "none";
-}
-//Gorako botoia agerrarazteko, ezkutatzeko eta klikatuz orriaren goialdera igotzeko kodea
-const toTop = (() => {
-let button = document.getElementById("toTop");
-window.onscroll = () => {
-  button.classList[
-    (document.documentElement.scrollTop > 200) ? "add" : "remove"
-  ]("is-visible")
-}
-button.onclick = () => {
-  window.scrollTo({
-    top: 0, behavior: "smooth"
-  })
-}
-})();
-</script>
-<!-- Menua eta gorako botoia maneiatzeko JavaScript-a, <script> eta </script> etiketen artean doana, ----------- BUKA -->
-
-<!-- Kanpoko fitxategiak erabili ahal izateko estekak (JavaScript-ak orria bukaeran idatzi ohi dira, sistemak 
-HTML eta CSS guztia irakurri ostean irakur ditzan) -------------- 
-<script src="../js/vendor/galdetegia.js"></script>
-<script src="../js/vendor/kudeaketa.js"></script>
-<script src="../js/vendor/lengoaiaSkripta.js"></script>-->
