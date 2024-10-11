@@ -1,0 +1,124 @@
+/*pantaila burua......   HASI*/
+header{
+  text-align: center;
+  background: #ccc;
+  display: block;
+  height: 200px;
+}
+.goiburua{
+  text-align: center;
+}
+.goiburua .prais-ikonoa{
+  margin-top:0;
+}
+.goiburua .prais-ikonoa img{
+  align-content: center;
+  width: 200px;
+}
+@media (max-width: 1000px) {
+  header{
+    height: 100px;
+  }
+  .goiburua .prais-ikonoa img{
+    align-content: center;
+    width: 100px;
+  }
+}
+/*Pantaila burua............   BUKA*/
+.banaketaTxikia{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/*---Ikasgaien TXANTILOIaren GRID-ari dagozkion erregelak-- HASI */
+.sarenagusia {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.edukiontzia {
+  width: 80%;
+  padding: 15px;
+  box-shadow: 0 5px 50px 0 rgba(183, 184, 182, 0.16), 0 2px 30px 0 rgba(74, 74, 74, 0.12);
+}
+.edukiontzia .eduki-leihoa iframe {
+  border:0;
+  width: 100%;
+  background: #ededed;
+}
+.albozutabea{
+  width: 20%;
+  background: #ccc;
+}
+
+@media (max-width: 1000px) {
+  main{
+    width: 100%;
+  }
+}
+
+/*Ikasgaien 'section' atalak*/
+/*'section' atalaren goiburua*/
+.ikasgaiarena{
+  padding: 1rem;
+}
+.ikasgaiBurua{
+  text-align: center;
+}
+.ikasgaiBurua h2{
+  font-size: 70px;
+}
+.ikasgaiBurua .saioAtalak{
+  text-align: center;
+}
+.ikasgai-leihoa{
+  width:100%;
+  margin: 0 auto;
+  /*background: rgba(50, 50, 250, 0.2);*/
+  box-shadow:1px 1px 8px 8px rgba(50, 50, 250, 0.2);
+  padding: 1rem;
+}
+.ikasgai-leihoa iframe{
+  border: none;
+  width:100%;
+}
+.edukiontzia .eduki-leihoa iframe {
+  border:0;
+  width: 100%;
+  background: #ededed;
+}
+
+/*Orrialdearen goiburura joateko botoiaren ezaugarriak HASI --------------*/ 
+.toTop {
+  border: none;
+  display: flex;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+  /* posición */
+  position: fixed; right: 1rem; bottom: 10rem; z-index: 9999;
+}
+.toTop:not(.is-visible) {
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-2rem);
+}
+.toTop svg {
+  stroke-width: 3px;
+  stroke: currentColor;
+  fill: none;
+  width: 24px;
+  height: 40px;
+}
+/* Personalizar */
+.toTop {
+  background-color: rgb(20, 4, 112);
+  box-shadow: 0 1px 3px rgba(204, 203, 203, 0.5);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  color: #fff;
+}
+/*Orrialdearen goiburua joateko botoiaren ezaugarriak BUKA --------------*/
+/*Oinean oinetakoa FOOTER*/
+footer{
+  background: #ccc;
+  text-align: center;
+}
