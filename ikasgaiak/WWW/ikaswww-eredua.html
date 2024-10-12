@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="eus">
+  
 <head>
+  <title>CSSdiseinua</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../css/estiloa.css">
-  <link rel="stylesheet" href="../../css/estiloMenuak.css">
-  <link rel="stylesheet" href="../../css/estiloEredua.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../css/estilo-orokorra.css">
+  <link rel="stylesheet" href="../../css/estilo-menuak.css">
+  <link rel="stylesheet" href="../../css/estilo-ikasgaiTxanti.css">  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>web garapena</title>
+</head>
 
 <body>
   <!-- Goiburukoa: gunearen titulua eta praiskopediaren ikonoa   HASI -->
@@ -29,17 +30,12 @@
         <p class="menu-icon"><i class="fa fa-bars"></i>&nbsp;&nbsp;Ikasgaiak</p>
       </label>
       <ul class="nav">
-        <li><a href="../GIDAK/ikasgidadida-eredua.html">Gida didaktikoak&nbsp;&nbsp;<i
-              class="fa fa-arrow-circle-o-right"></i></a></li>
-        <li><a href="../WWW/ikaswww-eredua.html">Web garapena&nbsp;&nbsp;<i class="fa fa-arrow-circle-o-right"></i></a>
-        </li>
+        <li><a href="../GIDAK/ikasgidadida-eredua.html">Gida didaktikoak&nbsp;&nbsp;<i class="fa fa-arrow-circle-o-right"></i></a></li>
+        <li><a href="../WWW/ikaswww-eredua.html">Web garapena&nbsp;&nbsp;<i class="fa fa-arrow-circle-o-right"></i></a></li>
         <li><a href="../HTML/ikashtml-eredua.html">HTML &nbsp;&nbsp;<i class="fa fa-arrow-circle-o-right"></i></a></li>
-        <li><a href="../CSS/ikascss-eredua.html">CSS Oinarrizkoa &nbsp;&nbsp;<i
-              class="fa fa-arrow-circle-o-right"></i></a></li>
-        <li><a href="../CSS-Diseinua/ikascssdiseinua-eredua.html">CSS Diseinua &nbsp;&nbsp;<i
-              class="fa fa-arrow-circle-o-right"></i></a></li>
-        <li><a href="../JS/ikasjavascript-eredua.html">JavaScript&nbsp;&nbsp;<i
-              class="fa fa-arrow-circle-o-right"></i></a>
+        <li><a href="../CSS/ikascss-eredua.html">CSS Oinarrizkoa &nbsp;&nbsp;<i class="fa fa-arrow-circle-o-right"></i></a></li>
+        <li><a href="../CSS-Diseinua/ikascssdiseinua-eredua.html">CSS Diseinua &nbsp;&nbsp;<i class="fa fa-arrow-circle-o-right"></i></a></li>
+        <li><a href="../JS/ikasjavascript-eredua.html">JavaScript&nbsp;&nbsp;<i class="fa fa-arrow-circle-o-right"></i></a>
         </li>
       </ul>
     </div>
@@ -48,15 +44,19 @@
 
   <div class="banaketaTxikia"></div>
   <h2 style="text-align: center;">Web garapena</h2>
-  <!-- Menu-barra goiti-beheiti HASI -->
-  <main class="sarenagusia">
-    <aside class="albozutabea">
-      <input type="checkbox" id="hautatu">
-      <label for="hautatu" class="hautabtn">
+<!-- Menu-barra goiti-beheiti HASI -->
+<main class="sarenagusia">
+  <aside class="albozutabea">
+    <input type="checkbox" id="hautatu">    
+    <label for="hautatu" class="hautabtn">
         <p class="menu-ikonoa"><i class="fa fa-bars"></i>&nbsp;&nbsp;Atalak</p>
-      </label>
-      <ul class="aurkibidea">
-        <ul><h5>Webguneak</h5>
+    </label>
+    <div class="accordion-body">
+      <div class="accordion">
+        <div class="container">
+          <div class="label">Webguneak</div>
+          <div class="content">
+        <ul>
           <li><a href="webguneak-atarikoa.html" target="egitura"><i class="fa fa-book"></i>&nbsp;&nbsp;Atarikoa</a></li>
           <li><a href="webguneak-domeinuak.html" target="egitura"><i class="fa fa-book"></i>&nbsp;&nbsp;Domeinuak</a></li>
           <li><a href="webguneak-fitxategiak.html" target="egitura"><i class="fa fa-book"></i>&nbsp;&nbsp;Fitxategiak</a></li>
@@ -103,32 +103,9 @@
     <a href="https://praiskopedia.eus" target="_blank">&copy; Praiskopedia</a>
   </footer>
   <!-- Orriaren oina -----'FOOTER'------BUKA   -->
+  
+  <!-- Aurkibideko atalen akordiona eta gora egiteko botoia gobernatzeko Javascripta     -->
+  <script src="../../js/vendor/menuAkordiona.js" type="text/javascript"></script>
 </body>
 
 </html>
-<!-- HEMEN BUKATZEN DA 'web-ikas' orrialdearen HTMLa -->
-
-<!-- HEMEN DOA menua eta gorako botoia maneiatzeko JavaScript-a <script> eta </script> etiketen artean ----------- HASI -->
-<script>
-  // Menua irekitzeko eta ixteko kodea
-  function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-  }
-  function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-  }
-  //Gorako botoia agerrarazteko, ezkutatzeko eta klikatuz orriaren goialdera igotzeko kodea
-  const toTop = (() => {
-    let button = document.getElementById("toTop");
-    window.onscroll = () => {
-      button.classList[
-        (document.documentElement.scrollTop > 200) ? "add" : "remove"
-      ]("is-visible")
-    }
-    button.onclick = () => {
-      window.scrollTo({
-        top: 0, behavior: "smooth"
-      })
-    }
-  })();
-</script>
