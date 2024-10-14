@@ -20,11 +20,13 @@
       <p>Bateragarritasun-arrazoiak direla eta, nabigatzaileek berezko estiloak esleitzen dizkiete HTML elementu batzuei. Horregatik, 2.    kapituluan elementu batzuek marjinak zituzten edo lerro-jauziak sortzen zituzten, baina beste batzuk antzera definitzen ziren (letra eta kolore mota bera zuten, adibidez). Estilo horietako batzuk erabilgarriak dira, baina gehienak estilo pertsonalizatuekin ordezkatu edo osatu behar dira.</p>
       <p>CSSn, estilo pertsonalizatuak propietateekin deklaratzen dira. Estilo bat definitzeko, jabetzaren izena eta balioa bi puntuz bereizten dira. Adibidez, hurrengo kodeak letraren tamaina 24 pixeletara aldatzen duen propietate bat adierazten du (propietate batzuek espazio batek bereizitako balio asko izan ditzaketenez, lerroaren amaiera puntu eta koma batekin adierazi behar dugu).</p>
     </article>
+    <div class="banaketaTxikia"></div>
     <pre>
       <code>
         font-size: 24px;
       </code>
     </pre>
+    <div class="banaketaTxikia"></div>
     <p>Goiko propietate hori elementu bati aplikatzen bazaio, elementu horrek duen testua pantailan agertuko da, lehenetsitako letra-motarekin, baina 24 pixeleko tamainarekin.</p>
     <div class="garrantzi-oinarrizko">
       <p><strong>Jakin beharrekoa: </strong>pixelak (px) dira gehien inplementatzen diren neurketa-unitateak, baina aurrerago ikusiko dugu egoera batzuetan, bereziki web diseinu moldagarria duen gure webgunea sortzen dugunean, egokiagoak izan daitezkeela beste unitate batzuk. Hauek dira gehien erabiltzen diren unitateak: 
@@ -55,7 +57,8 @@
       <div class="banaketaTxikia"></div>
       <p>Propietateek eta arauek elementu bati edo gehiagori esleitu nahi dizkiegun estiloak definitzen dituzte, baina estilo horiek ez dira aplikatzen dokumentuan sartu arte. Hiru teknika daude helburu horretarako. Lineako estiloak, estilo txertatuak edo estilo-orriak erabil ditzakegu.</p>
       <p>Lehenak, lineako estiloak, style izeneko atributu globala erabiltzen du estiloak elementuan zuzenean txertatzeko. Atributu hori HTML elementu bakoitzean dago eskuragarri, eta dagokion elementuari aplikatuko zaizkion propietate edo propietate zerrenda bat jaso dezake. Teknika hori erabiliz estiloak esleitu nahi baditugu, aldatu nahi dugun elementuan style atributua adierazi eta CSS propietateak esleitu behar dizkiogu.</p>
-      <pre>
+      <div class="banaketaTxikia"></div>
+    <pre>
         <code>
           &lt;!DOCTYPE html&gt;
           &lt;html lang="es"&gt;
@@ -73,6 +76,7 @@
           &lt;/html&gt;
         </code>
       </pre>
+    <div class="banaketaTxikia"></div>
       <p>Goiko kodean iksu dezakezuenez dokumentuko &lt;p&gt; elementu bat du, style atributuarekin eta font-size: 20px balioarekin. </p>
       <p>Atributu hori irakurtzen duenean, testuari 20 pixeleko tamaina ematen dio &lt;p&gt; elementuaren barruan.</p> 
       <div class="garrantzi-oinarrizko">
@@ -82,7 +86,8 @@
         <p><strong>Lineako estiloak</strong> estiloak probatzeko eta elementuak nola aldatzen dituzten ikusteko modu praktikoa dira, baina ez dira gomendatzen proiektu zabaletarako. Horren arrazoia da &lt;style&gt; atributuak deklaratutako elementuari bakarrik eragiten diola. Beste elementu batzuei estilo bera esleitu nahi badiegu, kodea errepikatu behar dugu elementu bakoitzean, eta horrek dokumentuaren tamaina handitzen du beharrik gabe, eguneratzea eta mantentzea zailduz.</p>
         <p>Adibidez, aurrerago erabakitzen badugu 20 pixelen ordez testuaren tamaina &lt;p&gt; elementu bakoitzean 24 pixelekoa izan behar dela, estilo bakoitza aldatu beharko genuke dokumentu osoaren &lt;p&gt; elementu bakoitzean eta gure webguneko dokumentu guztietan.
         Beste aukera bat CSS arauak dokumentuaren goiburuan txertatzea da, ukituko diren elementuak zehazten dituzten hautatzaileak erabiliz. Horretarako, HTMLk &lt;style&gt; elementua barne hartzen du.</p>
-        <pre>
+        <div class="banaketaTxikia"></div>
+    <pre>
           <code>
             &lt;!DOCTYPE html&gt;
             &lt;html lang="es"&gt;
@@ -105,12 +110,14 @@
             &lt;/html&gt;
           </code>
         </pre>
+    <div class="banaketaTxikia"></div>
         <p>Goiko dokumentuan &lt;style&gt; etiketen artean aitortutako propietateak, lehenxeago ikusi dugun dokumentuan elementuari lotutako atributuari buruz adierazitakoaren funtzio bera betetzen du, baina adibide honetan ez dugu estiloa idatzi behar aldatu nahi dugun &lt;p&gt; elementu bakoitzaren barruan, izan ere orriburuan adierazitako propietatearen balioak dokumentuko &lt;p&gt; elementu guztiei eragiten baitie.</p>
         <p>Dokumentuaren goiburuan estiloak aipatzeak espazioa aurrezten du eta kodea koherenteagoa eta mantentzeko errazagoa izatea eragiten du, baina gure webguneko dokumentu bakoitzean arau berberak kopiatzea eskatzen du. Orri gehienek diseinu bera partekatuko dutenez, arau horietako batzuk bikoiztu egingo dira. </p> 
         <p>Soluzioa estiloak CSS fitxategi batera mugitzea da, eta ondoren &lt;link&gt; elementua erabiltzea, hala eskatzen duten dokumentu bakoitzetik kargatzeko. Fitxategi mota horri <strong>estilo-orria</strong> esaten zaio. Estilo-orri horiek dokumentuaren elementuei esleitu nahi dizkiegun CSS arauen zerrenda duten testu-fitxategiak baino ez dira.</p>
         <p>2. kapituluan ikusi dugun bezala, &lt;link&gt; elementua dokumentutik kanpoko baliabideak txertatzeko erabiltzen da.</p>
         <p>Kargatu nahi dugun baliabide motaren arabera, hainbat atributu eta balio aitortu behar ditugu. CSS estiloko orriak kargatzeko, rel eta href atributuak baino ez ditugu behar. <strong>Rel</strong>  atributuak dokumentuaren eta txertatzen ari garen artxiboaren arteko erlazioa adierazten du, eta, beraz, <strong>stylesheet</strong> balioarekin adierazi behar dugu, nabigatzaileari jakinarazteko baliabidea CSS fitxategi bat dela, orria aurkezteko eskatzen diren estiloekin. Bestalde, href atributuak kargatu beharreko fitxategiaren URLa adierazten du.</p>  
-        <pre>
+        <div class="banaketaTxikia"></div>
+    <pre>
           <code>
           &lt;!DOCTYPE html&gt;
           &lt;html lang="es"&gt;
@@ -129,7 +136,9 @@
           &lt;/html&gt;
           </code>
         </pre>     
+    <div class="banaketaTxikia"></div>
     <p>Goiko dokumentuak CSS estiloak artxibo beretik kargatzen ditu &lt;link rel="stylesheet" href="misestilos.css"&gt; lerroaren bitartez. Artxibo horretan dokumentuari aplikatu nahi dizkiogun CSS arauak adierazi behar ditugu, lehen &lt;style&gt; elementuaren barruan egin dugun bezala. Hurrengoa da <strong>misestilos.css</strong> fitxategian txertatu behar dugun kodea, aurreko adibideetan lortutako efektu bera sortzeko.</p>
+    <div class="banaketaTxikia"></div>
     <pre>
       <code>
         p {
@@ -137,7 +146,7 @@
           }
       </code>
     </pre>
-
+<div class="banaketaTxikia"></div>
     <p>Aparteko fitxategi batean CSS estiloak sartzeko praktika asko erabiltzen dute diseinatzaileek, eta HTML5ekin diseinatutako webguneetarako gomendatzen da, ez bakarrik estilo-orri bakar bat defini dezakegulako eta gero dokumentu guztietan &lt;link&gt; elementuarekin sar dezakegulako, baizik eta estilo guztiak aldi berean ordeztu ditzakegulako fitxategi desberdin bat kargatuz, eta horrek aukera ematen digulako diseinu desberdinak probatzeko eta webgunea gailu erabilgarri guztien pantailetara egokitzeko. Hori hurrengo atal batean ikusiko dugu.</p>
     <div class="garrantzi-oinarrizko">
       <h6><strong>Egin ezazu zuk zeuk</strong></h6>
