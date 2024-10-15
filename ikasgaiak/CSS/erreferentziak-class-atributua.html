@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+    <article>
+      <div>
+        <h3><strong>CLASS atributua</strong></h3>
+      </div>
+      <div class="banaketaTxikia"></div>
+        <p>Estiloak esleitzeko <strong>id</strong> atributua erabili beharrean, gehienetan hobe izaten da <strong>class</strong> atributuarekin egitea. Atributu hori malguagoa da eta hainbat pertsonari esleitu dakizkioke dokumentu beraren barruko elementuak.</p>
+        <pre>
+          <code>
+            .paragrafoa {
+              font-size: 20px;
+              }
+          </code><figcaption><strong>class </strong>atributuaren bidez egiten da erreferentzia</figcaption>
+        </pre>
+        <p>Elementu bat bere class atributua erabiliz erreferentziatzeko, hautagailuak aurretik puntu bat duen atributuaren balioa jaso behar du. Adibidez, goiko erregelak "paragrafoa" balioa duen class atributu bat duten elementu guztiei eragiten die, hurrengo adibidean bezala.</p>
+        <pre>
+          <code>
+              &lt;!DOCTYPE html&gt;
+              &lt;html lang="eus"&gt;
+              &lt;head&gt;
+                  &lt;title&gt;Dokumentuaren izena&lt;/title&gt;
+                  &lt;meta charset="utf-8"&gt;
+                  &lt;link rel="stylesheet" href="nireEstiloak.css"&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                  &lt;main&gt;
+                      &lt;header&gt;
+                            &lt;h1&gt;WEB-GUNE-GINTZA&lt;/h1&gt;
+                            &lt;p&gt;Webguneetako xehetasunak ikasteko&lt;/p&gt;
+                      &lt;/header&gt;
+                      &lt;section&gt;
+                          &lt;p class="paragrafoa"&gt;Lehenengo paragrafoa...&lt;/p&gt;
+                          &lt;p class="paragrafoa"&gt;Bigarren paragrafoa...&lt;/p&gt;
+                          &lt;p&gt;Hirugarren paragrafoa...&lt;/p&gt;
+                          &lt;p&gt;Laugarren paragrafoa...&lt;/p&gt;
+                      &lt;/section&gt;
+                  &lt;/main&gt;
+                  &lt;footer&gt;
+                      &lt;p&gt;&lt;&copy&gt; &nbsp; Praiskopedia&lt;/p&gt;
+                  &lt;/footer&gt;
+              &lt;/body&gt;
+              &lt;/html&gt;
+          </code><figcaption><strong>class</strong> atributuaren bidez <strong>p</strong> elementuak identifikatzen</figcaption>
+        </pre>
+          <p>Goian &lt;section&gt; nagusiaren barruko lehen bi lerroetako &lt;p&gt; elementuek <strong>class</strong> atributua eta "paragrafoa" balioa dauzkate. Dokumentuko hainbat elementuri erregela bera aplika dakiekeenez, 3-18 zerrendako erregelak eragiten die lehen bi elementu horiei. Bestalde, azken bi &lt;p&gt; elementuek  ez dute class atributua barne hartzen eta, beraz, berezko estiloekin erakutsiko dira.</p>
+          <p><strong>class</strong> atributuaren bidez esleitutako erregelei klase deitzen zaie. Elementu berari hainbat mota esleitu dakizkioke. Egin behar dugun gauza bakarra espazio batek bereizitako klaseen izenak adieraztea da (adibidez, class = "texto1 texto2").</p>
+          <p>Motak ere esklusibotzat jo daitezke elementu-mota jakin baterako, elementuaren izena puntuaren aurretik adierazita.</p>
+          <pre>
+            <code>
+              p.paragrafoa {
+            font-size: 20px;
+            }
+            </code><figcaption>Klase bat <strong>p</strong> elementuentzat bakarrik deklaratzen</figcaption>
+          </pre>
+            <p>Goian, <em>paragrafoa</em> izeneko klasea aipatzen duen erregela bat sortu dugu, baina elementuetarako bakarrik &lt;p&gt;. 
+              <p>Arau horrek ez die eragingo class atributuan balio bera duten beste elementu batzuei.</p>
+              <div class="banaketaTxikia"></div>
+              </article>
+</body>
+</html>

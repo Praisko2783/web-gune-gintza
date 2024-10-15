@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+    <article>
+      <div>
+        <h3><strong>ID atributua</strong></h3>
+      </div>
+      <div class="banaketaTxikia"></div>
+      <p>Orain arte ikusitako erregelek hautatzaileak adierazitako elementuei eragiten diete. HTML elementu bat hautatzeko, haren mota kontuan hartu gabe, <strong>id</strong> atributua erabil dezakegu. Atributu hori izen bat da, elementuaren identifikatzaile esklusibo bat, eta, beraz, dokumentuaren barruan elementu jakin bat aurkitzeko erabil dezakegu. <strong>id</strong>  atributua erabiliz elementu bat erreferentziatzeko, hautagailuak atributuaren balioa jaso behar du, aurretik zenbakizko karakterea duela <strong>(#)</strong>.</p>
+        <pre>
+          <code>
+            #paragrafoa {
+              font-size: 20px;
+              }
+          </code><figcaption><strong>#</strong> karakterea medio egiten diogu erreferentzia id atributua duen elementuari.</figcaption>
+        </pre>
+        <p>Goiko erregela ID atributuak eta "mitestua" balioak identifikatutako elementuari bakarrik aplikatzen zaio, hurrengo dokumentuan jasotako <strong>p</strong> elementu gisa.</p>
+        <pre>
+          <code>
+              &lt;!DOCTYPE html&gt;
+              &lt;html lang="eus"&gt;
+              &lt;head&gt;
+                  &lt;title&gt;Dokumentuaren izena&lt;/title&gt;
+                  &lt;meta charset="utf-8"&gt;
+                  &lt;link rel="stylesheet" href="nireEstiloak.css"&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                  &lt;main&gt;
+                      &lt;header&gt;
+                            &lt;h1&gt;WEB-GUNE-GINTZA&lt;/h1&gt;
+                            &lt;p&gt;Webguneetako xehetasunak ikasteko&lt;/p&gt;
+                      &lt;/header&gt;
+                      &lt;section&gt;
+                          &lt;p id="paragrafoa"&gt;Lehenengo paragrafoa...&lt;/p&gt;
+                          &lt;p&gt;Bigarren paragrafoa...&lt;/p&gt;
+                          &lt;p&gt;Hirugarren paragrafoa...&lt;/p&gt;
+                          &lt;p&gt;Laugarren paragrafoa...&lt;/p&gt;
+                      &lt;/section&gt;
+                  &lt;/main&gt;
+                  &lt;footer&gt;
+                      &lt;p&gt;&lt;&copy&gt; &nbsp; Praiskopedia&lt;/p&gt;
+                  &lt;/footer&gt;
+
+              &lt;/body&gt;
+              &lt;/html&gt;
+          </code><figcaption><strong>id</strong> atributuaren bidez <strong>p</strong> elementu bat identifikatzen (Lehenengo pragrafoa)</figcaption>
+        </pre>
+      <p>Prozedura honen abantaila da erreferentzia bat sortzen dugun bakoitzean gure CSS fitxategian 'paragrafoa' identifikatzaile medio, elementu horri baino ez zaio eragiten. Erreferentzia bitarteko hau oro har, egiturazko elementuekin erabiltzen da, hala nola <strong>section</strong> edo <strong>div</strong>. Bere espezifikotasuna dela eta, <strong>id</strong> atributua ere maiz erabiltzen da elementuak JavaScript-etik erreferentziatzeko, hurrengo kapituluetan ikusiko dugun bezala.</p>
+      <div class="banaketaTxikia"></div>
+      </article>
+</body>
+</html>
