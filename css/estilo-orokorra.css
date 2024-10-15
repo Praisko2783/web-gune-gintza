@@ -49,6 +49,9 @@ main{
 main .azalburua {
   text-align: center;
 }
+article{
+  padding:10px;
+}
 h2{
   font-size: 40px;
   margin-top: 15px;
