@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>CSS oinarrizkoa estiloak</title>
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+    <article>
+      <div>
+        <h3>Estiloak nola adierazi</h3>
+      <div class="banaketaTxikia"></div>
+      <p>Propietateek eta arauek elementu bati edo gehiagori esleitu nahi dizkiegun estiloak definitzen dituzte, baina estilo horiek ez dira aplikatzen dokumentuan sartu arte. Hiru teknika daude helburu horretarako. Lineako estiloak, estilo txertatuak edo estilo-orriak erabil ditzakegu.</p>
+      <p>Lehenak, lineako estiloak, style izeneko atributu globala erabiltzen du estiloak elementuan zuzenean txertatzeko. Atributu hori HTML elementu bakoitzean dago eskuragarri, eta dagokion elementuari aplikatuko zaizkion propietate edo propietate zerrenda bat jaso dezake. Teknika hori erabiliz estiloak esleitu nahi baditugu, aldatu nahi dugun elementuan style atributua adierazi eta CSS propietateak esleitu behar dizkiogu.</p>
+      <pre>
+        <code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="es"&gt;
+          &lt;head&gt;
+            &lt;title&gt;Dokumentuaren izena doa hemen&lt;/title&gt;
+            &lt;meta charset="utf-8"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;main&gt;
+              &lt;section&gt;
+                &lt;p style="font-size: 20px;"&gt;Txapela buruan eta ibili munduan&lt;/p&gt;
+              &lt;/section&gt;
+            &lt;/main&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </code>
+      </pre>
+      <p>Goiko kodean iksu dezakezuenez dokumentuko &lt;p&gt; elementu bat du, style atributuarekin eta font-size: 20px balioarekin. </p>
+      <p>Atributu hori irakurtzen duenean, testuari 20 pixeleko tamaina ematen dio &lt;p&gt; elementuaren barruan.</p> 
+      <div class="garrantzi-oinarrizko">
+        <h6><strong>Egin ezazu zuk zeuk</strong></h6>
+        <p>Sortu HTML fitxategi berri bat 3-3 zerrendaren kodearekin eta ireki dokumentua zure nabigatzailean. "Nire testua" testua ikusi beharko nuke font-size jabetzak zehaztutako tamainako letrekin. Saiatu propietatearen balioa aldatzen letra-tamaina desberdinak pantailan nola agertzen diren ikusteko.</p>
+      </div>
+        <p><strong>Lineako estiloak</strong> estiloak probatzeko eta elementuak nola aldatzen dituzten ikusteko modu praktikoa dira, baina ez dira gomendatzen proiektu zabaletarako. Horren arrazoia da &lt;style&gt; atributuak deklaratutako elementuari bakarrik eragiten diola. Beste elementu batzuei estilo bera esleitu nahi badiegu, kodea errepikatu behar dugu elementu bakoitzean, eta horrek dokumentuaren tamaina handitzen du beharrik gabe, eguneratzea eta mantentzea zailduz.</p>
+        <p>Adibidez, aurrerago erabakitzen badugu 20 pixelen ordez testuaren tamaina &lt;p&gt; elementu bakoitzean 24 pixelekoa izan behar dela, estilo bakoitza aldatu beharko genuke dokumentu osoaren &lt;p&gt; elementu bakoitzean eta gure webguneko dokumentu guztietan.
+        Beste aukera bat CSS arauak dokumentuaren goiburuan txertatzea da, ukituko diren elementuak zehazten dituzten hautatzaileak erabiliz. Horretarako, HTMLk &lt;style&gt; elementua barne hartzen du.</p>
+        <pre>
+          <code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="es"&gt;
+            &lt;head&gt;
+              &lt;title&gt;Dokumentuaren izena doa hemen&lt;/title&gt;
+              &lt;meta charset="utf-8"&gt;
+              &lt;style&gt;
+                p {
+                  font-size: 20px;
+                }
+              &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              &lt;main&gt;
+                &lt;section&gt;
+                  &lt;p&gt;Txapela buruan eta ibili munduan&lt;/p&gt;
+                &lt;/section&gt;
+              &lt;/main&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+          </code>
+        </pre>
+        <p>Goiko dokumentuan &lt;style&gt; etiketen artean aitortutako propietateak, lehenxeago ikusi dugun dokumentuan elementuari lotutako atributuari buruz adierazitakoaren funtzio bera betetzen du, baina adibide honetan ez dugu estiloa idatzi behar aldatu nahi dugun &lt;p&gt; elementu bakoitzaren barruan, izan ere orriburuan adierazitako propietatearen balioak dokumentuko &lt;p&gt; elementu guztiei eragiten baitie.</p>
+        <p>Dokumentuaren goiburuan estiloak aipatzeak espazioa aurrezten du eta kodea koherenteagoa eta mantentzeko errazagoa izatea eragiten du, baina gure webguneko dokumentu bakoitzean arau berberak kopiatzea eskatzen du. Orri gehienek diseinu bera partekatuko dutenez, arau horietako batzuk bikoiztu egingo dira. </p> 
+        <p>Soluzioa estiloak CSS fitxategi batera mugitzea da, eta ondoren &lt;link&gt; elementua erabiltzea, hala eskatzen duten dokumentu bakoitzetik kargatzeko. Fitxategi mota horri <strong>estilo-orria</strong> esaten zaio. Estilo-orri horiek dokumentuaren elementuei esleitu nahi dizkiegun CSS arauen zerrenda duten testu-fitxategiak baino ez dira.</p>
+        <p>2. kapituluan ikusi dugun bezala, &lt;link&gt; elementua dokumentutik kanpoko baliabideak txertatzeko erabiltzen da.</p>
+        <p>Kargatu nahi dugun baliabide motaren arabera, hainbat atributu eta balio aitortu behar ditugu. CSS estiloko orriak kargatzeko, rel eta href atributuak baino ez ditugu behar. <strong>Rel</strong>  atributuak dokumentuaren eta txertatzen ari garen artxiboaren arteko erlazioa adierazten du, eta, beraz, <strong>stylesheet</strong> balioarekin adierazi behar dugu, nabigatzaileari jakinarazteko baliabidea CSS fitxategi bat dela, orria aurkezteko eskatzen diren estiloekin. Bestalde, href atributuak kargatu beharreko fitxategiaren URLa adierazten du.</p>  
+        <pre>
+          <code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="es"&gt;
+          &lt;head&gt;
+            &lt;title&gt;Dokumentuaren izena doa hemen&lt;/title&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;link rel="stylesheet" href="misestilos.css"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;main&gt;
+              &lt;section&gt;
+                &lt;p&gt;Txapela buruan eta ibili munduan&lt;/p&gt;
+              &lt;/section&gt;
+            &lt;/main&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;
+          </code>
+        </pre>     
+    <p>Goiko dokumentuak CSS estiloak artxibo beretik kargatzen ditu &lt;link rel="stylesheet" href="misestilos.css"&gt; lerroaren bitartez. Artxibo horretan dokumentuari aplikatu nahi dizkiogun CSS arauak adierazi behar ditugu, lehen &lt;style&gt; elementuaren barruan egin dugun bezala. Hurrengoa da <strong>misestilos.css</strong> fitxategian txertatu behar dugun kodea, aurreko adibideetan lortutako efektu bera sortzeko.</p>
+    <pre>
+      <code>
+        p {
+          font-size: 20px;
+          }
+      </code>
+    </pre>
+
+    <p>Aparteko fitxategi batean CSS estiloak sartzeko praktika asko erabiltzen dute diseinatzaileek, eta HTML5ekin diseinatutako webguneetarako gomendatzen da, ez bakarrik estilo-orri bakar bat defini dezakegulako eta gero dokumentu guztietan &lt;link&gt; elementuarekin sar dezakegulako, baizik eta estilo guztiak aldi berean ordeztu ditzakegulako fitxategi desberdin bat kargatuz, eta horrek aukera ematen digulako diseinu desberdinak probatzeko eta webgunea gailu erabilgarri guztien pantailetara egokitzeko. Hori hurrengo atal batean ikusiko dugu.</p>
+    <div class="garrantzi-oinarrizko">
+      <h6><strong>Egin ezazu zuk zeuk</strong></h6>
+      <p>Sortu HTML fitxategi bat goiko dokumentuko kodearekin. Jarraian sortu fitxategi bat misestilos yzenekoa eta .css luzapenarekin. Azken horretan idatzi paragrafoari tamaina aldatzeko kodea. Ireki dokumentua zure nabigatzailean.</p>
+      <p>Testua, &lt;p&gt; elementuaren barruko testua, 20 pixeleko tamainakoa izan beharko litzateke. Aldatu <strong>font-size</strong>propietatearen balioa CSS fitxategian eta eguneratu orrialdea, dokumentuari estiloa nola aplikatzen zaion ikusteko. ...</p>
+    </div>
+</body>
+</html>
