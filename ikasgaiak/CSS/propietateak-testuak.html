@@ -13,46 +13,172 @@
      </section>
     <article>
       <div>
-        <h3><strong>CSS propietateak (1)</strong></h3>
+        <h3><strong>CSS propietateak (testua)</strong></h3>
       </div>
       <div class="banaketaTxikia"></div>
-      <h4>Testua, kolorea, tamaina eta hondoa kudeatzeko propietateak</h4>
-      <h5>Propietateak CSSren pieza zentrala dira. Elementu bati aplika dakizkiokeen estilo guztiak propietateen bidez definitzen dira. Aurreko adibideetan sartu ditugu batzuk, baina ehunka propietate daude eskuragarri. Azterketa sinplifikatzeko, bi motatan sailka daitezke: 
-        <ul class="zerendaArruntak">
-          <li>Formatu-propietateak: elementuei eta haien edukiari forma emateko. </li>
-          <li>Diseinu-propietateak: pantailan elementuen tamaina eta kokapena zehazteko.</li>
+      <p>Propietateak CSSren pieza zentrala dira. Elementu bati aplika dakizkiokeen estilo guztiak propietateen bidez definitzen dira.</p>
+      <p>Aurreko adibideetan sartu ditugu batzuk, baina ehunka propietate daude eskuragarri. Azterketa sinplifikatzeko, bi motatan sailka daitezke: </p>
+        <ul class="zerrendaArruntak">
+          <li>formatu-propietateak: elementuei eta haien edukiari forma emateko</li>
+          <li>diseinu-propietateak: pantailan elementuen tamaina eta kokapena zehazteko</li>
         </ul>
-        
-      <div class="banaketaTxikia"></div>
-      <h4>Testua</h4>
-      <h6>CSSko erregelen bitartez testuaren hainbat alderdi kontrola daitezke, hala nola pantailan erakusteko erabiltzen den letra mota, lerroen arteko espazioa, lerrokadura, etab. Honako hauek dira testu baten letra mota, tamaina eta estiloa definitzeko dauden propietateak.</h6>
-      <div class="banaketaTxikia"></div>
-      <h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, possimus delectus. Deleniti voluptatum totam in, quisquam amet quas reiciendis cum reprehenderit. Reiciendis quia quibusdam pariatur cupiditate consectetur, sequi magni iste.</h6>
-      <div class="banaketaTxikia"></div>
-      <h4>Kolorea</h4>
-      <h6>CSSn kolore bat adierazteko bi modu daude: 
-        <ul class="zerrendaArrunta">
-          <li>Oinarrizko hiru koloretako (gorria, berdea eta urdina) konbinazio bat erabiliz. </li>
-          <li>Ñabardura, saturazioa eta argitasuna definituz</li>
+      <p>Era berean, formatu-propietateak sortzen duten aldaketa motaren arabera sailka daitezke.</p> 
+      <ul class="zerrendaArruntak">
+        <li>Propietate batzuek testua erakusteko erabiltzen den letra-mota aldatzen dute.</li>
+        <li>Beste batzuek elementuaren inguruan ertz bat sortzen dute.</li>
+        <li>Beste batzuek elementuari hondo-kolore bat esleitzen diote.</li>
+        <li>Eta abar.</li>
+      </ul>
+      <p>Kapitulu honetan formatu-propietateak sartuko ditugu sailkapen horri jarraituz.</p>
+        <h4>Testua</h4>
+        <p>CSS medio testuaren hainbat alderdi kontrola daitezke, hala nola pantailan erakusteko erabiltzen den <strong>letra mota</strong>, <strong>lerroen arteko espazioa</strong>, <strong>lerrokadura</strong>, etab.</p>
+        <p>Honako hauek dira testu baten letra mota, tamaina eta estiloa definitzeko dauden propietateak.</p>
+        <ul class="zerrendaArruntak">
+          <li><strong>font-family — </strong>Propietate horrek testua erakusteko erabiltzen den letra-mota adierazten du. Komaz bereizitako hainbat balio adieraz daitezke, nabigatzaileari hainbat aukera eskaintzeko, baldin eta letra mota batzuk erabiltzailearen ordenagailuan eskuragarri ez badaude. Balio estandarretako batzuk Georgia, <em>"Times New Roman", Arial, Helvetica, "Arial Black", Gadget, Tahoma, Geneva, Helvetica, Verdana, Geneva, Impact eta sans-serif</em>  dira. (hitz batez baino gehiagoz osatutako izenak komatxo bikoitzen artean adierazi behar dira).</li>
+          <li><strong>font-size — </strong>Propietate horrek letraren tamaina zehazten du. Balioa <em>pixeletan (px), ehunekoetan ( %) adieraz daiteke, edo CSSn eskuragarri dagoen edozein unitate erabiliz (em, rem, pt, etab.)</em>. Lehenetsitako balioa normalean 16px. font-weight da. Ezaugarri horrek zehazten du testua letra lodiz agertuko den ala ez. Balio erabilgarriak <em>normala eta bold</em> dira, baina 100, 200, 300, 400, 500, 600, 700, 800 eta 900 balioak ere esleitu ditzakegu letraren lodiera zehazteko (azken horiek letra-mota batzuetarako bakarrik daude eskuragarri).</li>
+          <li><strong>font-style — </strong>Propietate horrek letraren estiloa zehazten du. Balio erabilgarriak <em>normala, italic eta oblique</em> dira.</li>
+          <li><strong>font —</strong>Propietate horrek aukera ematen digu aldi berean balio anitz deklaratzeko. Balioak espazio baten bidez eta ordena zehatz batean bereizi behar dira. Estiloa eta lodiera tamaina baino lehen adierazi behar dira, eta letra-mota amaieran (adibidez, font: bold 24px Arial, sans-serif).</li>
         </ul>
-      Azken kolorea sortzeko, osagai bakoitzari esleitzen dizkiogun mailak hartzen dira kontuan.</h6>
-      <div class="banaketaTxikia"></div>
-      <h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, possimus delectus. Deleniti voluptatum totam in, quisquam amet quas reiciendis cum reprehenderit. Reiciendis quia quibusdam pariatur cupiditate consectetur, sequi magni iste.</h6>
-      <div class="banaketaTxikia"></div>
-      <h4>Tamaina</h4>
-      <h6>Elementu gehienen tamaina edukiontzian dagoen espazioaren arabera zehazten da berez. Elementu baten zabalera % 100 da, eta horrek esan nahi du edukiontzia bezain zabala izango dela, eta edukiagatik zehaztutako altuera izango duela.</h6>
-      <div class="banaketaTxikia"></div>
-      <h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, possimus delectus. Deleniti voluptatum totam in, quisquam amet quas reiciendis cum reprehenderit. Reiciendis quia quibusdam pariatur cupiditate consectetur, sequi magni iste.</h6>
+        <h6>Propietate horiek aldatu nahi dugun testua duen elementu (edo elementu aita) bakoitzari aplikatu behar zaizkio.</h6>
+        <p>Adibidez, hurrengo dokumentuak goiburu bat du izenburu batekin eta atal bat paragrafo batekin. Izenburuari eta testuari letra-mota desberdinak esleitu nahi dizkiegunez, id atributua sartu behar dugu elementu bakoitzean, CSS arauetatik identifikatu ahal izateko.</p>
+        <pre>
+          <code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="es"&gt;
+              &lt;head&gt;
+                  &lt;title&gt;Dokumentuaren izena hemen jarri&lt;/title&gt;
+                  &lt;meta charset="utf-8"&gt;
+                  &lt;link rel="stylesheet" href="nirEstiloak.css"&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                  &lt;header&gt;
+                        &lt;span id="titulua"&gt;Ur-jauzi erako estilo-orriak&lt;/span&gt;
+                  &lt;/header&gt;
+                  &lt;section&gt;
+                      &lt;p id="azalpena"&gt;Ur-jauzi erako estilo-orriak (CSS ere deituak, ingeleseko Cascading Style Sheets) diseinu grafikoko lengoaia bat da HTML etiketa lengoaiaren bitartez eraikitako egiturari definizioa eta itxura emateko.&lt;/p&gt;
+                  &lt;/section&gt;
+                  &lt;footer&gt;
+                      &lt;a href="http://www.jdgauchat.com"&gt;www.jdgauchat.com&lt;/a&gt;
+                  &lt;/footer&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
+          </code><figcaption>Formatu-propietateak probatzen</figcaption>
+        </pre>
+        <p>Arauek nahi ditugun estiloak esleitzeko behar diren propietate guztiak jaso behar dituzte. Adibidez, testuari letra-mota bat eta tamaina berri bat esleitu nahi badizkiogu, font-family eta font-size propietateak sartu behar ditugu.</p>
+        <pre>
+          <code>
+            #titulua {
+              font-family: Verdana, sans-serif; 
+              font-size: 26px;
+            } 
+          </code><figcaption>Letra-mota eta izenburuaren tamaina aldatzeko</figcaption>
+        </pre>
+         <p>Elementuaren hainbat alderdi aldatzeko arau berean hainbat propietate adieraz baditzakegu ere, CSSk font izeneko propietate laburtua eskaintzen du, testuaren ezaugarri guztiak kode-lerro bakar batean definitzea ahalbidetzen diguna. Jabetza horri esleitutako balioak espazio batez bereizita deklaratu behar dira.</p>
+         <p>Adibidez, hurrengo erregelak <em>bold (letra lodia)</em> estiloa, 26 pixeleko tamaina eta Verdana letra-mota esleitzen dizkio izenburuko elementuari.</p>
+         <pre>
+          <code>
+            #titulua {
+              font: bold 26px Verdana, sans-serif; 
+            } 
+          </code><figcaption><strong>font</strong> propietatea letra mota aldatzeko.</figcaption>
+        </pre>
+        <p>Azken arau hau aplikatuz gero gure HTML dokumentiuari <em>font propietateak</em> definitutako balioekin erakusten da izenburua, eta lehenetsitako estiloekin aurkezten da paragrafoa.</p>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/propietateak1.png" alt="" srcset="">
+        </div><figcaption>tituluaren <strong>font</strong> propietateari <strong>bold 26px Verdana, sans-serif;</strong> balioak aplikatuta</figcaption>
+        <div class="garrantzi-oinarrizko">
+          <h6>Egin ezazu zuk zeuk</h6>
+          <p>Sortu HTML fitxategi berri goian ikusi dugun HTML kodearekin.</p>
+          <p>Sortu edo eguneratu nirEstiloa.css fitxategia, tituluarentzat ezarri ditugun <strong>font</strong> erregelak probatzeko. Azken erregela aplikatu ondoren dokumentua nabigatzailean irekiz gero, Goiko irudian agertzen denaren antzeko zerbait ikusi beharko zenuke. Aldatu propietatearen balioak eta ikuskatu aldaketak nabigatzailean.</p>
+        </div>
+        <p>CSS lengoaiaren bitartez letra-mota ez ezik, testuaren beste alderdi batzuk ere alda ditzakegu, hala nola lerrokadura, odolustea, lerroen arteko espazioa eta abar. Honako hauek dira helburu horretarako eskura dauden propietateetako batzuk.</p>
+        <ul class="zerrendaArruntak">
+          <li><strong>text-align —</strong>Propietate honek testua elementu baten barruan lerrokatzen du. Balio erabilgarriak left, right, center eta justify dira.</li>
+          <li><strong>text-align-last —</strong>Ezaugarri honek lerrokada baten azken lerroa lerrokatzen du. Balio erabilgarriak left, right, center eta justify dira.</li>
+          <li><strong>text-indent —</strong>Ezaugarri honek paragrafo baten koskaren tamaina definitzen du (lerroaren hasierako espazio hutsa). Balioa pixeletan (px), ehunekoetan ( %) adieraz daiteke, edo CSSn eskuragarri dagoen edozein unitate erabiliz, hala nola em, rem, pt, etab.</li>
+          <li><strong>letter-spacing —</strong>Propietate honek letren arteko espazioa definitzen du. Balioa pixeletan (px), ehunekoetan ( %) edo CSSn eskuragarri dagoen edozein unitate erabiliz adierazi behar da, hala nola em, rem, pt, etab.</li>
+          <li><strong>word-spacing —</strong>Propietate honek hitzen arteko espazioaren zabalera definitzen du. Balioa pixeletan (px), ehunekoetan ( %) edo CSSn eskuragarri dagoen edozein unitate erabiliz (em, rem, pt, etab.) aitortu daiteke.</li>
+          <li><strong>line-height —</strong>Propietate honek lerroen arteko espazioa definitzen du. Balioa pixeletan (px), ehunekoetan ( %) edo CSSn eskuragarri dagoen edozein unitate erabiliz adieraz daiteke, hala nola em, rem, pt, etab.</li>
+          <li><strong>bertikal-align —</strong>Propietate honek bertikalki lerrokatzen ditu elementuak. Maiz erabiltzen da testua irudiekin lerrokatzeko (propietatea irudiari aplikatzen zaio). Balio erabilgarriak baseline, sub, super, text-top, text-bottom, middle, top eta bottom dira.</li>
+        </ul>
+        <p>Lehenetsita, nabigatzaileek testua ezkerretara lerrokatzen dute, baina <em>text-align</em> propietatearen bitartez lerrokadura alda dezakegu. Hurrengo arauak gure dokumentuko paragrafoa ardazten du.</p>
+        <pre>
+          <code>
+            #titulua {
+              font: bold 26px Verdana, sans-serif;
+            }
+            #azalpena {
+              text-align: center;
+            }
+          </code><figcaption><em>azalpena</em> izenaz identifikatutako testua text-align propietatearekin erdian lerrokatuko da .</figcaption>
+        </pre>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/propietateak2.png" alt="'text-align' propietatea 'center' balioarekin" srcset="">
+        </div><figcaption>'text-align' propietatea 'center' balioarekin aplikatu diogu</figcaption>
+        <p>Gorago ikusi ditugun propietateak aplikatzeko errazak dira. Adibidez, word-spacing propietatearekin definitu dezakegu hitzen arteko espazioaren tamaina.</p>
+        <pre>
+          <code>
+            #titulua {
+              font: bold 26px Verdana, sans-serif;
+              }
+              #azalpena {
+              text-align: center;
+              word-spacing: word-spacing;
+              }
+          </code><figcaption>Hitzen arteko espazioa 'word-spacing' propietatearekin definitu dira</figcaption>
+        </pre>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/propietateak3.png" alt="'text-align' propietatea 'center' balioarekin" srcset="">
+        </div><figcaption>'word-spacing' propietatea 'word-spacing' balioarekin aplikatu diogu</figcaption>
+          <p>CSSk honako propietate hau ere eskaintzen du testua lerro bakarraz apaintzeko.</p>
+          <ul>
+            <li><strong>text-decoration —</strong>Ezaugarri honek testua nabarmentzen du lerro batekin. Balio erabilgarriak <strong>underline, overline, line-through eta none</strong> dira.</li>
+          </ul>
+           <p>Text-decoration propietatea bereziki erabilgarria da estekekin. Lehenetsita, nabigatzaileek azpimarratutako estekak erakusten dituzte. Linea ezabatu nahi badugu, propietate hori none balioarekin deklara dezakegu. Hurrengo adibideak erregela bat eransten dio gure estilo-orriari, dokumentuaren &lt;a&gt; elementuak aldatzeko.</p>
+           <pre>
+            <code>
+              #titulua {
+                font: bold 26px Verdana, sans-serif;
+              }
+              #azalpena {
+                text-align: center;
+              }
+              a {
+                text-decoration: none;
+              }
+            </code><figcaption>Gure dokumentuaren esteken azpìmarra ezabatzeko: <em>text-decoration: none;</em>.</figcaption>
+           </pre>
+           <div class="irudiKutxa">
+            <img src="../../irudiak/CSS/propietateak4.png" alt="'text-align' propietatea 'center' balioarekin" srcset="">
+          </div><figcaption>Dokumentuko esteken azpìmarra ezabatzeko: <em>text-decoration: none;</em>.</figcaption>
+           <p>Orain arte, Verdana letra-mota erabili dugu <em>font: bold 26px Verdana, sans-serif;</em> (eta sans-serif alternatiba, Verdana eskuragarri ez badago). Letra-mota hori iturri seguru gisa ezagutzen den talde baten parte da, ordenagailu gehienetan eskuragarri daudelako eta, beraz, segurtasunez erabil dezakegulako. Webeko iturriekin arazoa da nabigatzaileek ez dituztela webgunearen zerbitzaritik deskargatzen, erabiltzailearen ordenagailutik kargatzen dituztela, eta erabiltzaileek letra mota desberdinak dituztela instalatuta beren sistemetan.</p>
+           <p>Erabiltzaileak ez duen iturri bat erabiltzen badugu, gure webgunearen diseinua desberdina izango da. Iturri seguruak erabiliz, gure webgunea edozein nabigatzailetan edo ordenagailutan berdin ikusiko dela ziurtatzen dugu, baina arazoa da talde honetan sartutako letra motak gutxi direla. Soluzio bat eskaintzeko eta diseinatzaileari erabateko sormena ahalbidetzeko, CSSk <strong> @font-face</strong> araua barne hartzen du.</p>
+           <p><strong>@font-face</strong>araua erreserbatutako erregela bat da, eta diseinatzaileek fitxategi bat sar dezakete web orri bateko testua erakusteko erabili beharreko letra-iturriarekin. Erabiltzen badugu, gure webgunean nahi dugun edozein iturri sar dezakegu, nahi dugun fitxategia emanda.</p>
+           <p><strong>@font-face</strong>arauak gutxienez bi propietate behar ditu iturria deklaratzeko eta fitxategia kargatzeko. font-family jabetzak letra-mota hori erreferentziatzeko erabili nahi dugun izena zehazten du, eta src jabetzak artxiboaren URLa eta iturriaren zehaztapenak adierazten ditu <em>(src jabetzaren sintaxiak <strong>url ()</strong> funtzioa erabiltzea eskatzen du  fitxategiaren URLa adierazteko)</em>.</p>
+           <p>Hurrengo adibidean, 'NireLetraBerria' izena gure iturriari esleitzen zaio, eta <strong>font.ttf</strong> fitxategia kargatu beharreko fitxategi gisa adierazten da.</p>
+           <pre>
+            <code>
+              #titulua {
+                font: bold 26px nireLetraBerria, Verdana, sans-serif;
+              }
+              @font-face {
+                font-family: "nireLetraBerria";
+                src: url ("font.ttf");
+              }
+            </code><figcaption>Tituluarentzat letra mota pertsonalizatua kargatu da</figcaption>
+           </pre>
+          <p>Iturria kargatu ondoren, dokumentuko edozein elementutan erabil dezakegu, bere izenaren bidez (nireLetraBerria).</p>
+          <p>#titulua erregelaren <strong>font</strong> propietatean, zehazten dugu izenburua iturri berriarekin edo Verdana eta sans-serif iturri alternatiboekin erakutsiko da, gure iturria kargatu ez bada.</p>
+          <div class="irudiKutxa">
+            <img src="../../irudiak/CSS/propietateak5.png" alt="'text-align' propietatea 'center' balioarekin" srcset="">
+          </div><figcaption>Dokumentuko tituluari 'nireLetraBerria' erantsita.</em>.</figcaption>
+          <div class="garrantzi-oinarrizko">
+            <h6>Egin ezazu zuk zeuk</h6>
+            <p>deskargatu font.ttf fitxategia webgunetik. Kopiatu fitxategia zure proiektuaren direktorioaren barruan. Eguneratu zure estilo-orria goiko kodearekin eta ireki dokumentua zure nabigatzailean. Iturri gehiago aurki ditzakezu. Egin aprobak letra mota ezberfdinekin.</p>
+            <h6>Jakin beharrekoa</h6>
+            <p><em>funtzio</em> bat zeregin espezifiko bat egin eta emaitza itzultzen duen kode zati bat da. <em>url ()</em> funtzioak, adibidez, adierazitako fitxategia parentesi artean kargatu eta edukia itzultzeko zeregina du. CSSk hainbat funtzio ditu bere propietateen balioak sortzeko. Funtzio horietako batzuk ikusiko ditugu aurrerago, eta funtzioei buruz gehiago ikasiko dugu JavaScript programazio lengoaiari eskainitako atalean.</p>
+          </div>
       </article>
-      <div class="banaketaTxikia"></div>
-      <h4>Hondoa</h4>
-      <h6>Elementuek hondo bat izan dezakete, elementuaren edukiaren atzean eta edukiak eta betelanak hartzen duten eremuan zehar erakusten dena. Hondoa kolorez eta irudiz osatuta egon daitekeenez, CSSk hainbat propietate definitzen ditu hori sortzeko.</h6>
-      <div class="banaketaTxikia"></div>
-      <h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, possimus delectus. Deleniti voluptatum totam in, quisquam amet quas reiciendis cum reprehenderit. Reiciendis quia quibusdam pariatur cupiditate consectetur, sequi magni iste.</h6>
-      </article>
-
-
-      
 
 </body>
 </html>
