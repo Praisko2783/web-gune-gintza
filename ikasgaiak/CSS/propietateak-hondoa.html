@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+     <section>
+      
+     </section>
+    <article>
+      <div>
+        <h3><strong>CSS propietateak (hondoa)</strong></h3>
+      </div>
+      <div class="banaketaTxikia"></div>
+      <p>Elementuek hondo bat izan dezakete, elementuaren edukiaren atzean eta edukiak eta betelanak hartzen duten eremuan zehar erakusten dena. Fondoa kolorez eta irudiz osatuta egon daitekeenez, CSSk hainbat propietate definitzen ditu hori sortzeko.</p>
+      <ul class="zerrendaArruntak">
+        <li><strong>background-color —</strong>Propietate horrek kolore bat ematen dio elementu baten hondoari.</li>
+        <li><strong>background-image —</strong>Propietate horrek irudi bat edo gehiago esleitzen dizkio elementu baten hondoari. Artxiboaren URLa <strong>url ()</strong> funtzioarekin deklaratzen da (adibidez, <em>url ("adreiluak.jpg")</em>). Irudi bat baino gehiago behar izanez gero, balioak koma batez bereizi behar dira.</li>
+        <li><strong>background-position —</strong>Propietate horrek hondoko irudi baten hasierako posizioa adierazten du. Balioak ehunekotan, pixeletan edo <strong>center, left, right, top eta bottom</strong>  gako-hitzen konbinazio bat erabiliz zehaztu daitezke.</li>
+        <li><strong>background-size —</strong>Propietate horrek hondoko irudiaren tamaina adierazten du. Balioak ehunekotan, pixeletan edo <strong>cover</strong> eta <strong>contain</strong> gako-hitzak erabiliz zehaztu daitezke. <strong>cover</strong> hitz giltzarriak irudia zabaltzen du, haren zabalerak edo altuerak elementuaren eremua estaltzen duten arte; <strong>contain</strong> gako-hitzak aldiz, irudia estalti egiten du, eta elementuaren eremu osoa okupatu.</li>
+        <li><strong>background-repeat —</strong>Propietate horrek zehazten du nola banatzen den hondoko irudia lau gako-hitz erabiliz: <strong>repeat, repeat-x, repeat-y eta no repeat</strong>. 
+          <ul class="zerrendaArruntak">
+            <li><strong>Repeat</strong>gako-hitzak ardatz bertikalean eta horizontalean errepikatzen du irudia</li>
+            <li><strong>repeat-x</strong>gako-hitzak ardatz horizontalean errepikatzen du irudia</li>
+            <li><strong>repeat-y</strong>gako-hitzak ardatz bertikalean errepikatzen du irudia</li>
+            <li><strong>norepeat</strong>hondoko irudia behin bakarrik erakusten du</li>
+          </ul>
+        </li>
+        <li><strong>background-origin —</strong>Propietate horrek zehazten du hondoko irudia elementuaren eremuaren ertza, betelana edo edukia kontuan hartuta kokatuko den. Balio erabilgarriak <strong>border-box, padding-box eta content-box</strong> dira.</li>
+        <li><strong>background-clip —</strong>Prpietate horrek hondoak estali beharreko eremua aitortzen du <strong>border-box, padding-box eta content-box</strong> balioak erabiliz. 
+          <ul class="zerrendaArruntak">
+            <li><strong>border-box</strong>balioak elementuaren kaxaren ertzeko irudia mozten du</li>
+            <li><strong>padding-box</strong>balioak kaxaren betegarrian irudia mozten du</li>
+            <li><strong>content-box</strong>baliak kaxaren edukiaren inguruko irudia mozten du</li>
+          </ul>
+        </li>
+        <li><strong>background-attachment —</strong>Propietate honek zehazten du irudia estatikoa den edo gainerako elementuekin desplazatzen den, bi balio erabiliz: <strong>scroll (lehenetsita) eta fixed</strong>. 
+          <ul class="zerrendaArruntak">
+            <li><strong>scroll</strong>balioak irudia orriarekin mugiarazten du</li>
+            <li><strong>fixed</strong>balioak hondoko irudia jatorrizko lekuan finkatzen du</li>
+          </ul>
+        </li>
+        <lio><strong>background —</strong>Propietate honek aukera ematen digu funtsaren ezaugarri guztiak aldi berean aitortzeko.</lio>
+      </ul>
+         <p>Funtsik ohikoenak koloreekin sortzen dira. Hurrengo arauak background-color propietatea ezartzen du, gure dokumentuaren goiburuari hondo gris bat gehitzeko.</p>
+         <pre>
+          <code>
+            header {
+              margin: 30px;
+              padding: 15px;
+              text-align: center;
+              background-color: #CCCCCC;
+              }
+            #titulua {
+              font: bold 26px Verdana, sans-serif;
+              }
+          </code><figcaption>Atzealdea koloreztatu dugu</figcaption>
+         </pre>
+         <p>Alboetan 30 pixeleko marjinak definitzen ditugunez, goiburua nabigatzailearen leihoan zentratuta geratzen da, baina < header> elementuaren barruko testua ezkerrean lerrokatuta dago oraindik (lerrokadura lehenetsia). 3-47 zerrendaren adibidean, funtsa aldatzeaz gain, izenburua zentratzeko text-align jabetza ere sartzen dugu.</p>
+         <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/propietateak15.png" alt="Kolore-hondoa" srcset="">
+         </div><figcaption>Goiburuaren atzealdeari kolorea eman zaio</figcaption>
+         <p>Koloreez gain, hondoko irudiak ere erabil ditzakegu. Kasu honetan, hondoa background-image jabetzarekin deklaratu behar dugu eta irudiaren URLa url funtzioarekin () deklaratu, hurrengo adibidean egiten dugun bezala.</p>
+         <pre>
+          <code>
+            header {
+              margin: 30px;
+              padding: 15px;
+              text-align: center;
+              background-image: url ("adreiluPareta.png");
+              }
+            #titulua {
+              font: bold 26px Verdana, sans-serif;
+              }
+          </code>
+         </pre>
+         <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/propietateak16.png" alt="Kolore-hondoa" srcset="">
+         </div><figcaption>Tituluaren atzealdeari irudia jarri zaio</figcaption>
+         <p>Irudiekin arazoa da ez direla beti elementuak sortutako kaxaren tamaina berekoak. Horregatik, nabigatzaileek behin eta berriz errepikatzen dute irudia, eremu osoa estali arte.</p>
+         <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/propietateak17.png" alt="Kolore-hondoa errepikatu horizontalean" width="100%">
+         </div><figcaption>Goiburuaren atzealdeko irudia errepikatu egiten da horizontalean</figcaption>
+         <div class="garrantzi-oinarrizko">
+          <h6>Egin ezazu zuk zeuk</h6>
+          <p>Ordezkatu CSS artxiboko arauak 3-48 Zerrendako arauekin. Deskargatu adreiluen irudia.jpg gure webgunetik. Kopiatu irudia zure irudia dagoen direktorio berean dokumentua. Ireki dokumentua zure nabigatzailean. 3-22 irudian agertzen denaren antzeko zerbait ikusi beharko nuke.</p>
+         </div>
+         <p>Lehenetsitako portaera aldatu nahi badugu, eskura ditugun hondoko gainerako propietateak erabil ditzakegu. Adibidez, berroinezko balioa esleitzen badiogu -eta background-repeat jabetzari, nabigatzaileak ardatz bertikalean soilik errepikatuko du irudia.</p>
+         <pre>
+          <code>
+            header {
+              margin: 30px;
+              padding: 15px;
+              text-align: center;
+              background-image: url ("adreiluPareta.png");
+              background-repeat: repeat-y;
+            }
+            #izenburua {
+              font: bold 26px Verdana, sans-serif;
+            }
+          </code><figcaption>Fondoa konfiguratzen</figcaption>
+         </pre>
+         <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/propietateak18.png" alt="Kolore-hondoa errepikatu bertikalean" srcset="" width="100%">
+         </div><figcaption>Goiburuaren atzealdeko irudia bertikalean errepikatzeko eskatu dugu. Irudiak altuera nahiko duenez, ez da ikusten errepikapena eta eskuinean tarte bat hutsik uzten du.</figcaption>
+         <p>Gure diseinuak hainbat balio eskatzen dituenean funtsa konfiguratzeko, denak batera adieraz ditzakegu background propietatearekin. Jabetza horrek aukera ematen digu funtsaren hainbat alderdi kode-lerro bakar batean deklaratzeko.</p>
+         <pre>
+          <code>
+            header {
+              margin: 30px;
+              padding: 15px;
+              text-align: center;
+              background: #CCCCCC url ("ladrillosclaros.jpg") repeat-y;
+            }
+            #izenburua {
+              font: bold 26px Verdana, sans-serif;
+            }
+          </code><figcaption>Goiburuaren atzealdeko irudia bertikalean errepikatuta eskuinean hutsik geratu den zatia koloreztatu egingo da..</figcaption>
+         </pre>
+         <p>Goiko erregelak lehen erabiltzen ditugun balio berberak zehazten ditu, baina orain atzeko irudi bat eta kolore bat konbinatzen ditu. Emaitza 3-24 irudian ageri da.</p>
+         <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/propietateak19.png" alt="Kolore-hondoa errepikatu bertikalean eta leku librea koloreztatu" srcset="" width="100%">
+         </div><figcaption>Goiburuaren atzealdeko irudia bertikalean errepikatuta eta beste kolore batekin konbinatuta, eskuineko tartea koloreak betetzen du.</figcaption>
+         <div class="banaketaTxikia"></div>
+         <div class="banaketaTxikia"></div>
+      </article>
+</body>
+</html>
