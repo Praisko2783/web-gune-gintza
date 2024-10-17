@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+     <section>
+      
+     </section>
+    <article>
+      <div>
+        <h3><strong>CSS propietateak (kolorea)</strong></h3>
+      </div>
+      <div class="banaketaTxikia"></div>
+      <p>CSSn kolore bat adierazteko bi modu daude: oinarrizko hiru koloretako konbinazio bat erabil dezakegu (gorria, berdea eta urdina), edo ñabardura, saturazioa eta argitasuna definitu. Azken kolorea sortzeko, osagai bakoitzari esleitzen dizkiogun mailak hartzen dira kontuan. Kolorea definitzeko erabiltzen dugun sistema motaren arabera, mailak adierazi beharko ditugu zenbaki hexadezimalak (00etik FFra), zenbaki hamartarrak (0tik 255era) edo ehunekoak erabiliz.</p>
+      <p>Adibidez, gorriaren, berdearen eta urdinaren mailen konbinazio bat erabiltzea erabakitzen badugu, mailak zenbaki hexadezitalekin adieraz ditzakegu. Kasu honetan, kolorearen balioak sekuentzian adierazten dira, aurretik zenbakizko karakterea dutela, hala nola # 996633 (99 gorriaren maila da, 66 berdearen maila eta 33 urdinaren maila). Koloreak beste balio mota batzuekin definitzeko, CSSk honako funtzio hauek eskaintzen ditu.</p>
+      <ul class="zerrendaArruntak">
+        <li><strong>rgb (gorria, berdea, urdina) —</strong>Funtzio honek kolore bat definitzen du atributuek zehaztutako balioen bidez (0tik 255era). Lehenengo balioak gorriaren maila adierazten du, bigarrenak berdearen maila eta azkenak urdinaren maila (adibidez, rgb (153, 102, 51)).</li>
+        <li><strong>rgba (gorria, berdea, urdina, alfa) —</strong>Funtzio hau rgb funtzioaren antzekoa da (), baina osagai gehigarri bat dauka opakutasuna definitzeko (alfa). Balioa 0 eta 1 artekoa izan daiteke, 0 erabat gardena eta 1 guztiz opakua.</li>
+        <li><strong>hsl (ñabardura, saturazioa, argitasuna) —</strong>Funtzio honek kolore bat definitzen du atributuek zehaztutako balioetatik abiatuta. Balioak zenbaki hamartarretan eta ehunekoetan adierazten dira.</li>
+        <li><strong>hsla (ñabardura, saturazioa, argitasuna, alfa) —</strong>Funtzio hau hsl funtzioaren antzekoa da (), baina osagai gehigarri bat dauka opakutasuna definitzeko (alfa). Balioa 0 eta 1 artekoa izan daiteke, 0 erabat gardena eta 1 guztiz opakua.</li>
+      </ul>
+      <p>Aurrerago ikusiko dugunez, koloreak definitzen dituzten balioak behar dituzten propietateak bat baino gehiago dira, baina honako hau da gehien erabiltzen dena:</p>
+        <h6><strong>color —</strong> Propietate honek elementuaren edukiaren kolorea adierazten du.</h6>
+        <p>Beheko erregelak gris argi bat ematen dio gure dokumentuaren izenburuari, zenbaki hexadezimenak erabiliz.</p>
+        <pre>
+          <code>
+            #titulua {
+              font: bold 26px Verdana, sans-serif;
+              kolorea: #CCCCCC;
+              }
+          </code><figcaption>Tituluari kolore bat esleitu zaio</figcaption>
+        </pre>
+         <p>Gorriaren, berdearen eta urdinaren mailak berdinak direnean, kasu honetan bezala, azken kolorea gris-eskala baten barruan dago, beltzetik (# 000000) zurira (#FFFFFF).</p>
+         <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/propietateak6.png" alt="Kolore pertsonalizatuko izenburua" srcset="">
+         </div>
+         <p>Funtzio bat duen kolore bat adieraztea nahiko antzekoa da: balioa ordeztu besterik ez dugu egin behar erabili nahi dugun funtzioagatik. Adibidez, gris-kolorea rgb funtzioarekin () eta balio hamartarrekin.</p>
+         <pre>
+          <code>
+            #titulua {
+              font: bold 26px Verdana, sans-serif;
+              kolorea: rgb (204, 204, 204);
+              }
+          </code><figcaption><strong>rgb ()</strong> funtzioa duen kolore bat esleitu zaio tituluari</figcaption>
+         </pre>
+         <p>Hsl funtzioa () kolore bat sortzeko eskuragarri dagoen beste funtzio bat besterik ez da, baina intuitiboagoa da rgb () baino. Diseinatzaile batzuei errazagoa egiten zaie kolore taldeak hsl erabiliz sortzea (). Funtzio honek eskatzen dituen balioek <strong>ñabardura, saturazioa eta argitasuna</strong> definitzen dituzte.</p>
+         <ul class="zerrendaArruntak">
+          <li>Ñabardura alegiazko gurpil batetik ateratako kolorea da, 0tik 360ra gradutan adierazia: 0 eta 360 inguru gorriak daude, 120 inguru berdeak, eta 240 inguru urdinak.</li>
+          <li>Saturazioa ehunekotan adierazten da, % 0tik (grisen eskala) % 100era (kolore guztiak edo erabat saturatuta)</li>
+          <li>Argitasuna ere portzentajezko balioa da, % 0tik (erabat beltza) % 100era (erabat zuria); % 50eko balioak batez besteko argitasuna adierazten du.</li>
+         </ul>
+         <p>Adibidez, hurrengo erregelan, saturazioa % 0 gisa definitzen da gris-eskalaren barruan kolore bat sortzeko, eta argitasuna % 80an zehazten da gris argi bat lortzeko.</p>
+         <pre>
+          <code>
+            #izenburua {
+              font: bold 26px Verdana, sans-serif;
+              kolorea: hsl ( % 0, % 0, % 80);
+              }
+          </code><figcaption><strong>hsl ()</strong> funtzioarekin kolore bat esleitu</figcaption>
+         </pre>
+         <div class="garrantzi-oinarrizko">
+          <h6><strong>GARRANTZITSUA</strong></h6>
+          <p>CSSk <em>opacity</em> izeneko propietate bat definitzen du elementu baten opakutasuna adierazteko. Ezaugarri horrek badu arazo bat: elementu baten opakutasun-balioa seme-alabek heredatzen dute. Arazo hori <strong>rgba ()</strong> eta <strong>hsla ()</strong> funtzioekin konpontzen da. Funtzio horiekin opakutasun-balio bat eman diezaiokegu elementu baten funtsari, jarraian ikusiko dugun bezala, haren edukiari eragin gabe.</p>
+         </div>
+         <div class="garrantzi-oinarrizko">
+          <h6><strong>Oinarrizkoa</strong></h6>
+          <p>Ez da praktikoa gure webgunerako kolore egokiak aurkitzea zenbakiak eta balioak konbinatuz. Zeregin hori errazteko, ordenagailu pertsonalek hainbat tresna bisual dituzte, kolore bat aukeratu eta haren balioa lortzeko. Gainera, merkatuan eskuragarri dauden argazki-editore eta programa grafiko gehienek paleta bat erakusten duen tresna bat dute, eta hortik kolore bat aukeratu eta dagokion balio hexadezial edo hamartarra lor dezakegu. Kolore egokiak aurkitzeko, tresna horiek edo Webean eskuragarri dagoen edozein erabil dezakezu, hala nola <em>www.colorhexa.com edo htmlcolorcodes.com</em>.</p>
+         </div>
+    </article>
+
+</body>
+</html>

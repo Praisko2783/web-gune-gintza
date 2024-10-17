@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+     <section>
+      
+     </section>
+    <article>
+      <div>
+        <h3><strong>CSS propietateak (tamaina)</strong></h3>
+      </div>
+      <div class="banaketaTxikia"></div>
+      <p>Lehenetsita, elementu gehienen tamaina edukiontzian dagoen espazioaren arabera zehazten da.</p>
+      <p>Elementu baten zabalera <strong> % 100</strong> da. Horrek esan nahi du edukiontzia bezain zabala izango dela. Altuera, ordea, elementuaren barruko edukiak zehazten du. 
+        <p>Hori dela eta, gure dokumentuaren &lt;p&gt; elementua nabigatzailearen leihoaren alboetara zabaltzen zen, eta ez zen paragrafoaren lerroak edukitzeko behar baino altuagoa.</p>
+      <p>CSSk ezaugarri hauek definitzen ditu tamaina pertsonalizatua deklaratzeko:</p>
+      <ul class="zerrendaArruntak">
+        <li><strong>width —</strong>Propietate horrek elementu baten zabalera adierazten du. Balioa pixeletan, ehunekoetan edo auto-gako hitzarekin zehaztu daiteke (lehenetsita). Balioa ehunekotan zehazten denean, zabalera nabigatzailearen arabera kalkulatzen da edukiontziaren zabaleratik abiatuta, eta auto-balioarekin deklaratzen denean, elementua zabaldu egiten da edukiontziaren barruan dagoen espazio horizontal guztia hartu arte.</li>
+        <li><strong>height —</strong>Propietate horrek elementu baten altuera adierazten du. Balioa pixeletan, ehunekoetan edo auto-gako hitzarekin zehaztu daiteke (lehenetsita). Balioa ehunekotan zehazten denean, nabigatzaileak altuera kalkulatzen du edukiontziaren altueratik abiatuta, eta auto-balioarekin adierazten denean, elementuak bere edukiontziaren altuera hartzen du. Nabigatzaileek kutxa bat sortzen dute pantailan hartzen duen eremua zehazten duen elementu bakoitzaren inguruan.</li>
+      </ul>
+      <p>Tamaina pertsonalizatua deklaratzen dugunean, kaxa aldatu egiten da eta elementuaren edukia egokitu eremu berriaren barruan sartzeko, irudiak erakusten duen bezala.</p>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS/propietateak8.png" width="100%"  alt="Norberak egokitutako kaxak.">
+      </div>
+      <figcaption>Norberak egokitutako kaxak.</figcaption>
+      <p>Adibidez, 200 pixeleko zabalera aitortzen badugu gure dokumentuko &lt;p&gt; elementurako, testuaren lerroak ez dira hain luzeak izango, baina lerro berriak erantsiko dira paragrafo osoa erakusteko.</p>
+      <pre>
+        <code>
+          #titulua {
+            font: bold 26px Verdana, sans-serif;
+          } 
+          #azalpena {
+            width: 200px;
+          }
+        </code><figcaption>Zabalera egokitu zaio azalpenari</figcaption>
+      </pre>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS/propietateak9.png" alt="Tamaina egokitutako edukia.">
+      </div>
+      <figcaption>Tamaina egokitutako edukia.</figcaption>
+        <p>Zabalera egokitzeko ikusi dugun erregelak &lt;p&gt; elementuaren zabalera adierazten du, baina altuera edukiaren arabera zehazten da oraindik, eta horrek esan nahi du elementu horrek sortutako kutxa altuagoa izango dela paragrafo osoa edukitzeko, irudiak erakusten duen bezala.</p>
+        <p>Orain, elementuaren altuera ere murriztu nahi badugu, <strong>height</strong> propietatea erabil dezakegu. Hurrengo erregelak gure dokumentuko &lt;p&gt; elementuaren altuera 100 pixelera murrizten du.</p>
+<pre>
+  <code>
+    #titulua {
+      font: bold 26px Verdana, sans-serif;
+    } 
+    #azalpena {
+      width: 200px; 
+      height: 100px;
+    }
+  </code><figcaption>Altuera pertsonalizatua esleitu zaio (100px)</figcaption>
+</pre>        
+        <p>Tamaina zehatza duten elementuekin arazoa da batzuetan edukia ezin dela bere osotasunean erakutsi. Lehenetsita, nabigatzaileek kutxaren eremutik kanpo erakusten dute gainerako edukia. Ondorioz, tamaina pertsonalizatua duen kutxa baten edukiaren zati bat azpian dagoen elementuaren edukiaren gainean koka daiteke, hurrengo irudian ikus daitekeen bezala.</p>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/propietateak10.png" alt="Edukiak gainezka egiten du.">
+        </div>
+        <figcaption>Edukiak gainezka egiten du.</figcaption>
+        <p>Gure adibidean, &lt;p&gt; elementuak zehaztutako kaxatik kanpo dagoen testuak &lt;footer&gt; elementuari dagokion espazioa hartzen du, eta, beraz, bi elementuen edukia gainjarrita dago. CSSk honako propietate hauek ditu arazo hau konpontzeko:</p>
+        <ul class="zerrendaArruntak">
+          <li><strong>overflow —</strong>Propietate honek elementua gainditzen duen edukia nola erakutsiko den zehazten du. Balio erabilgarriak honako hauek dira: 
+            <ul class="zerrendaArruntak">
+              <li><strong>ikusgai</strong> (lehenetsita)</li>
+              <li><strong>hidden</strong> (kutxaren barruan sartzen ez den edukia ezkutatzeko)</li>
+              <li><strong>scroll</strong> (edukia mugitzeko alboko barrak erakusteko)</li>
+              <li><strong>auto</strong> (nabigatzaileari edukiarekin zer egin erabakitzen uzteko)</li>
+            </ul>
+          <li><strong>overflow-x —</strong>Propietate honek elementua horizontalki gainditzen duen edukia nola erakutsiko den zehazten du. <strongOverflow></strong> jabetzaren balio berak onartzen ditu.</li>
+          <li><strong>overflow-y —</strong>Propietate honek elementua bertikalki gainditzen duen edukia nola erakutsiko den zehazten du. <strong>Overflow</strong> jabetzaren balio berak onartzen ditu.</li>
+          <li><strong>overflow-wrap —</strong>Propietate honek adierazten du hitz bat puntu arbitrario batean banatu beharko litzatekeen lerroan erakusteko nahikoa leku ez dagoenean. Balio erabilgarriak bi dira:
+            <ul class="zerrendaArruntak">
+              <li><strong>normal</strong>(lerroa naturalki zatitzeko)</li>
+              <li><strong>break-word</strong>(hitzak puntu arbitrarioetan zatituko dira, testu-lerroa erabilgarri dagoen espazioan egokitzeko)</li>
+            </ul>
+          </li>
+        </ul>
+        <p>Propietate horiekin zehaztu dezakegu nola erakutsiko den edukia nahikoa leku ez dagoenean. Adibidez, elementua gainditzen duen testua ezkutatu dezakegu, <strong>overflow</strong> propietateari <strong>hidden</strong> balioa esleituz.</p>
+        <pre>
+          <code>
+            #titulo {
+              font: bold 26px Verdana, sans-serif;
+            } 
+            #azalpena {
+              width: 200px; 
+              height: 100px; 
+              overflow: hidden;
+            }
+          </code><figcaption>Elementua gainditzen duen edukia ezkutatu egiten da</figcaption>
+        </pre>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/propietateak11.png" alt="Gainezka egiten duen edukia ezkutatuta.">
+        </div>
+        <figcaption>Gainezka egiten duen edukia ezkutatuta.</figcaption>
+        <p>Erabiltzaileak ezkutatu den testua ikusi ahal izatea nahi badugu, <strong>scroll</strong> balioa esleitu eta nabigatzailea alboko barrak erakustera behartu dezakegu, edukia lekuz aldatzeko.</p>
+        <pre>
+          <code>
+            #titulua {
+              font: bold 26px Verdana, sans-serif;
+            } 
+            #azalpena {
+              width: 200px; 
+              height: 100px; 
+              overflow: scroll;
+            }
+          </code><figcaption>Edukia gora eta behera mugitzeko barra</figcaption>
+        </pre>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/propietateak12.png" alt="Desplazamendu-barrak.">
+        </div>
+        <figcaption>Desplazamendu-barrak.</figcaption>
+        <p>Elementuaren tamaina ez  da kaxaren zabalerak eta altuerak bakarrik zehazten, baita betelanak eta ertzek ere. CSSk aukera ematen digu kutxaren inguruko espazioa izendatzeko, elementua eta inguruko beste elementu batzuk bereizteko (marjina), eta, horrez gain, kutxaren mugen eta edukiaren (betegarria) arteko tartea sartzeko.</p>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/propietateak13.png" width="100%" alt="Marginak, betegarriak eta ertzak.">
+        </div>
+        <figcaption>Marginak, betegarriak eta ertzak.</figcaption>
+        <p>CSSk elementu baterako marjinak eta betegarriak definitzeko honako propietate hauek ditu.</p>
+        <ul class="zerrendaArruntak">
+          <li><strongmargin —></strong>Propietate horrek elementu baten marjina adierazten du. Marjina kutxaren inguruan dagoen espazioa da. Goiko, eskuineko, beheko eta ezkerreko marjinak adierazten dituzten lau balio jaso ditzake, ordena horretan eta espazio batez bereizita <em>(adibidez, margin: 10px 30px 10px 30px;)</em>. Hala ere, balio bat, bi edo hiru bakarrik deklaratzen badira, besteek balio berberak hartzen dituzte <em>(adibidez, <strong>margin: 10px 30px;</strong> erregelak 10 pixeleko margina eransten du goiko eta beheko aldeetan eta 30 pixelekoa ezkerreko eta eskuineko aldeetan)</em>. Balioak bereiz adieraz daitezke <strong>margin-top, margin-right, margin-bottom eta margin-left</strong> propietate elkartuak erabiliz <em>(adibidez, margin-left: 10px;)</em>. Propietateak, halaber, <em>auto</em> balioa ere onartzen du, nabigatzailea marjina kalkulatzera behartzeko <em>(elementu bat edukiontzian zentratzeko erabili ohi da</em>).</li>
+          <li><strong>padding —</strong>Propietate horrek elementu baten betegarria adierazten du. Betegarria elementuaren edukiaren eta kaxaren mugen arteko tartea da. Balioak <strong>margin</strong> propietaterako egiten dugun modu berean deklaratzen dira. <strong>padding</strong>en kasuan <strong>margin</strong>en kasuan bezala, propietateekin modu independentean ere deklara daitezke: <strong>padding-top, padding-right, padding-bottom eta padding-left</strong>  <em>(adibidez, padding-top: 10px;)</em>.</li>
+        </ul>
+        <p>Beheko erregelak marjinak eta betegarria gehitzen ditu gure dokumentuaren goiburuan. Balio bakarra esleitzen dugunez, balio bera erabiltzen da elementuaren marjina eta betegarri guztiak definitzeko (goikoa, eskuinekoa, behekoa eta ezkerrekoa, ordena horretan).</p>
+        <pre>
+          <code>
+            header {
+              margin: 30px;
+              padding: 15px;
+              }
+              #izenburua {
+              font: bold 26px Verdana, sans-serif;
+              }
+          </code><figcaption>Ertzak eta betegarria gehitu zaizkio <strong>header</strong> elementuari, alegia <em>titulua</em> identifikatzailea duen <em>&lt;h1&gt;</em>a  barne hartzen duen elementuari.</figcaption>
+        </pre>
+        <p>Elementu baten tamaina eta ertzak gehitu egiten dira okupatzen duen azalera kalkulatzeko. Gauza bera gertatzen da betegarriarekin eta ertzarekin (ertzak aurrerago aztertuko ditugu).</p>
+        <p>Elementu baten azken tamaina formula honen bidez kalkulatzen da: tamaina + marjinak + betegarria + ertzak. Adibidez, alde bakoitzean 200 pixeleko zabalera eta 10 pixeleko marjina duen elementu bat badugu, elementuak hartzen duen eremuaren zabalera 220 pixelekoa izango da. </p>
+        <p>Guztira 20 pixeleko marjina gehitzen zaio elementuaren 200 pixeleko zabalerari eta altuerari, eta azken balioa pantailan irudikatzen da.</p>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/propietateak14.png" width="100%"  alt="Ertz eta betegarri pertsonalizatuak dituen goiburua.">
+        </div>
+        <figcaption>Ertz eta betegarri pertsonalizatuak dituen goiburua.</figcaption>
+        <div class="garrantzi-oinarrizko">
+          <h6>Egin ezazu zuk zeuk</h6>
+          <p>Ordeztu arauak zure CSS fitxategian (nirEstiloak.css) goiburuari dagokion <em>header</em>a goian ikusi dugun erregelako kodearekin eta ireki dokumentua zure nabigatzailean. Beheko irudian adierazten denaren antzeko zerbait ikusi beharko litzateke. Aldatu <strong>margin</strong> propìetatearen balioa marjinei nola eragiten dien ikusteko.</p>
+        </div>
+        <div class="garrantzi-oinarrizko">
+          <h6>GARRANTZITSUA</h6>
+          <p>kapitulu honetan aurrerago ikusiko dugun bezala, elementuak bi mota nagusitan sailkatzen dira: </p>
+            <ul class="zerrendaArruntak" style="color:darkblue;">
+              <li><strong>Block (blokea)</strong>. Block elementuek tamaina pertsonalizatua izan dezakete, baina Inline elementuek edukiek zehaztutako espazioa baino ezin dute okupatu. </li>
+              <li><strong>Inline (linean)</strong> Goiburuaren izenburua definitzeko erabiltzen dugun &lt;span&gt; elementua Inline elementutzat jotzen da lehenetsita, eta, beraz, ezin ditu tamaina eta marjina pertsonalizatuak izan.</li>
+            </ul>
+            <p>Horregatik, gure adibidean &lt;header&gt; elementuari esleitzen dizkiogu marjinak eta betegarria, eta ez &lt;span&gt; elementuari. <em>(egiturazko elementuak Block elementu gisa definitzen dira)</em>.</p>
+        </div>
+   
+    </article>
+
+</body>
+</html>
