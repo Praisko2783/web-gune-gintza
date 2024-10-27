@@ -5,26 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/estilo-orokorra.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Erreferentziak sasiklaseak</title>
 </head>
 <body>
     <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
     <article>
-      <div>
-        <h3><strong>Beste atributu batzuk eta sasiklaseak</strong></h3>
+      <div class="azpitituluak">
+        <h3><strong>Sasiklaseak</strong></h3>
       </div>
       <div class="banaketaTxikia"></div>
-      <h4>Beste atributu batzuk</h4>
-      <h5>Orain arte ikusitako erreferentzia-metodoek askotariko egoerak estaltzen dituzten arren, batzuetan ez dira gai izaten aldatu nahi dugun elementu zehatza aurkitzeko. ID eta class atributuak nahikoak ez diren egoera horietarako, CSSk elementu bat behar dugun beste edozein atributu erabiliz erreferentziatzeko aukera ematen digu.</h5>
-      <h5>Hautagailu-mota hori definitzeko lehenengo elmentuaren izena jarriko dugu eta, ondoren, kortxete artean atributuaren izena. (p[izena] {...}</h5>
-      <div class="banaketaTxikia"></div>
-      <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati deleniti ex at et nobis quam repellendus, ducimus rerum fuga tempora, voluptas quasi laboriosam minima eligendi reiciendis iste accusantium corrupti autem!</h6>
-      <div class="banaketaTxikia"></div>
-      <h4>Sasiklaseak</h4>
-      <h5>Sasiklaseak CSS tresna bereziak dira, eta HTML elementuak erreferentziatzeko aukera ematen digute, haien ezaugarrien bidez, hala nola kodean dituzten posizioen edo egungo baldintzen bidez. Hurrengo hauek dira gehien erabiltzen direnak.</h5>
-      <div class="banaketaTxikia"></div>
-      <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati deleniti ex at et nobis quam repellendus, ducimus rerum fuga tempora, voluptas quasi laboriosam minima eligendi reiciendis iste accusantium corrupti autem!</h6>
-      </article>
+        <p>Sasiklaseak CSS tresna bereziak dira, eta HTML elementuak erreferentziatzeko aukera ematen digute, haien ezaugarrien bidez, hala nola kodean dituzten posizioen edo egungo baldintzen bidez. Hurrengoak dira gehien erabiltzen direnak.</p>
+        <ul class="zerrendaArruntak">
+          <li><strong>:nth-child (balioa) —</strong>Sasiklase honek elementu anaien zerrenda bateko elementu bat hautatzen du, parentesi arteko balioak zehaztutako posizioan dagoena.</li>
+          <li><strong>:first-child —</strong>Sasiklase honek elementu anaien zerrenda bateko lehen elementua hautatzen du.</li>
+          <li><strong>:last-child —</strong>Seudoclase honek elementu anaien zerrenda bateko azken elementua hautatzen du.</li>
+          <li><strong>:only-child —</strong> Seudoclase honek elementu bat aukeratzen du beste elementu baten seme bakarra denean.</li>
+          <li><strong>:first-of-type —</strong>Sasiklase honek mota bereko elementuen zerrenda bateko lehen elementua hautatzen du.</li>
+          <li><strong>:not (selector) —</strong>Pseudoclase honek parentesi arteko hautagailuarekin bat ez datozen elementuak hautatzen ditu.</li>
+        </ul>
+        <p>Hautatzaile horiekin hautaketa dinamikoagoa egin dezakegu. Hurrengo adibideetan, dokumentu erraz bat erabiliz batzuk aplikatuko ditugu.</p>
+        <pre>
+          <code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="es"&gt;
+          &lt;head&gt;
+            &lt;title&gt;Este texto es el título del documento&lt;/title&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;link rel="stylesheet" href="misestilos.css"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;main&gt;
+              &lt;section&gt;
+              &lt;p class="eneParagrafoa1"&gt;Ur-jauzi erako estilo-orriak (CSS ere deituak, ingeleseko Cascading Style Sheets) diseinu grafikoko lengoaia da.&lt;/p&gt;
+              &lt;p class="eneParagrafoa2"&gt;HTML (Hipertestua markatzeko lengoaia edo HyperText Markup Language) web-orrien egitura sortzeko markaketa-lengoaia da&lt;/p&gt;
+              &lt;p class="eneParagrafoa3"&gt;JavaScript (edo JS) goi-mailako programazio-lengoaia bat da, Web-orri interaktiboak sortzeko aproposa.&lt;/p&gt;
+              &lt;p class="eneParagrafoa4"&gt;PHP (PHP: Hypertext Preprocessor), datu baseekin elkarreraginez, webgune dinamikoak sortzeko lengoaia da.&lt;/p&gt;
+              &lt;/section&gt;
+            &lt;/main&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;
+          </code><figcaption>Kode horretan &lt;section&gt; atal nagusiak lau elementu &lt;p&gt; ditu.</figcaption>
+        </pre>
+        <p>HTML egitura hori kontuan hartuta, &lt;p&gt; elkarren segidan daudenez anaiak direla esan dezakegu eta, beraz, barne hartzen dituen &lt;section&gt; elementuaren seme-alabak. Seudoklaseak erabiliz, antolaketa hau aprobetxa dezakegu eta elementuak erreferentziatu, bere atributuei edo balioei buruz zenbat ezagutzen dugun kontuan hartu gabe. Adibidez, <strong>:nth-child()</strong> sasiklasearekin dokumentuan dauden bigarren &lt;p&gt; elementu guztiak alda ditzakegu.</p>
+          <pre>
+            <code>
+              p :nth-child(2) {
+                font-size: 20px;
+                }
+            </code><figcaption>Sasiklasea inplementatzen <strong>:nth-child()</strong></figcaption>
+          </pre>
+          <div class="garrantzi-oinarrizko">
+            <h6><strong>Oinarrizkoa</strong></h6>
+            <p>Lehen aipatu ditugun hautatzaileetako edozeini gehitu dakizkioke seudoklasak. Goiko erregelan &lt;p&gt; elementuak aipatu ditugu 'p' izena erabiliz, baina erregela hori <em>.eneParagrafoa:nth-child(2)</em> hautatzaileaz ere idatz zitekeen, horretarako &lt;p&gt; elementu guztiek izen bereko <em>class</em> atributua izan behar dute. Adibidez, klase izenari zenbakia kendu eta <em>.eneParagrafoa:nth-child(2)</em> hautazailea erabiliz gero, izen bereko klasea daukaten &lt;p&gt; elementuetatik begarrenari eragingo dio.</p>
+            <h6><strong>Garrantzitsua</strong></h6>
+            <p>Ez utzi tarterik erregela hau idazterakoan, idatzi osoa segidan tarterik gabe: <strong>p:nth-child()</strong>. Hautatzailearen eta bi puntuen artean berdin dio tartea utzi edo ez.</p>
+          </div>
+          <p>Sasiklaseak adierazten duena honelako zerbait da: <strong>:nth-child() " x. posizioan dagoen haurra"</strong>. Horregatik, parentesi arteko zenbakia seme-alabaren posizio-zenbakiari edo indizeari dagokio. Erreferentzia mota hori erabiliz, aurkibide-zenbakia aldatuz, nahi dugun edozein seme-alaba aukera dezakegu hari eragiteko.</p>
+          <p>Adibidez, hurrengo arauak gure dokumentuko azken &lt;p&gt; elementuari bakarrik eragingo dio, laugarrenari alegia.</p> 
+          <pre>
+            <code>
+              p :nth-child(4) {
+                font-size: 20px;
+                }
+            </code><figcaption>Posizio-zenbakia aldatuz, beste elementu bati eragiteko. (4.enari)</figcaption>
+          </pre>
+          <p>Elementu bakoitzari estiloak esleitu dakizkioke, horietako bakoitzarentzat antzeko erregela bat sortuz.</p>
+          <pre>
+            <code>
+              p :nth-child(1) {
+                background-color: # 999999;
+              }
+              p :nth-child(2) {
+                background-color: #CCCCCC;
+              }
+              p :nth-child(3) {
+                background-color: #336699;
+              }
+              p :nth-child(4) {
+                background-color: #228822;
+              }
+            </code><figcaption>Sasiklase zerrenda bat sortuz <strong>:nth-child()</strong></figcaption>
+          </pre>
+          <p>3-27 zerrendan, seudoclase: nth-child () eta backgroundcolor propietatea erabili ditugu hondoko kolorearen arabera argi bereizten diren aukeren zerrenda bat sortzeko.
+            <ul class="zerrendaArruntak">
+              <li><strong>#999999</strong>balioak kolore gris ilun bat definitzen du</li>
+              <li><strong>#CCCCC</strong>balioak kolore gris argi bat  definitzen du</li>
+              <li><strong>#336699</strong>balioak kolore urdinxka defineitzen du</li>
+              <li><strong>#228822</strong>balioak kolore berdexka defineitzen du</li>
+            </ul> 
+            <p>Beraz, lehenengo elementuak hondo gris iluna izango du, bigarrenak gris argia, hirugarrenak urdinxka eta laugarrenak berdexka.</p> 
+            <div class="irudiKutxa">
+              <img src="../../irudiak/CSS/erreferentziak5.png" alt=" ':nth-child()' sasiklasearen aplikazioa paragrafo bakoitzaren atzealdeari kolor bana jartzeko" srcset="">
+            </div>
+            <p>Aukera gehiago gehitu litezke zerrendara, HTML kodean &lt;p&gt; elementu berriak eta arau berriak erantsiz, <strong>:nth-child()</strong> sasiklasearekin. Hala ere, teknika horrek kodea alferrik zabaltzera behartuko gintuzke, eta ezinezkoa izango litzateke eduki dinamikoa duten webguneetan aplikatzea. Beste aukera bat da <strong>odd</strong> eta <strong>even</strong> gako-hitzek ematen dutena.</p>
+            <pre>
+              <code>
+                p :nth-child(odd) {
+                  background-kolorea: # 999999;
+                  }
+                p :nth-child(even) {
+                  background-kolorea: #CCCCCC;
+                  }
+              </code><figcaption><strong>odd</strong> eta <strong>even</strong> gako-hitzak inplementatzen</figcaption>
+            </pre>
+            <p><strong>odd</strong> gako-hitzak <strong>:nth-child()</strong> sasiklasean jarrita elementu baten seme-alabak diren eta indize bakoitia duten &lt;p&gt; elementuei eragiten die.</p>
+            <p><strong>even</strong> gako-hitzak <strong>:nth-child()</strong> sasiklasean jarrita elementu baten seme-alabak diren eta indize bikoitia duten &lt;p&gt; elementuei eragiten die.</p>
+            <p>Gako-hitz horiek erabiliz, bi arau baino ez ditugu behar zerrenda osoari eragiteko. Dokumentuari zenbat eta aukera edo errenkada gehiago gehitu, orduan eta gutxiago gehitu beharko zaizkio beste erregela batzuk CSS artxiboari. Estiloak automatikoki esleituko zaizkio elementu bakoitzari, bere posizioaren arabera.</p>
+            <p>Sasiklase horretaz gain, badira beste batzuk erlazionatuta daudenak, eta hierarkiaren barruan elementu espezifikoak aurkitzen ere lagun diezagukete, hala nola:</p>
+            <ul class="zerrendaArruntak">
+              <li><strong>:first-child</strong> lehenengo seme elementua bakarrik aipatzen du</li>
+              <li><strong>:last-child</strong> bakarrik azken seme elementua aipatzen du</li>
+              <li><strong>:only-child</strong> elementu bati eragiten dio seme elementu bakarra denean</li>
+            </ul>
+            <p>Sasiklase horiek ez dute gako-hitzik edo parametro gehigarririk behar, eta adibide honek erakusten duen moduan inplementatzen dira.</p>
+            <pre>
+              <code>
+                p :last-child {
+              font-size: 20px;
+              }
+              </code><figcaption><strong>:last-child</strong> elementu zerrendako azkenari 20 pixeleko tamaina ezartzeko</figcaption>
+            </pre>
+            <p>Beste sasiklase garrantzitsu bat: <strong>:not()</strong> da. Sasiklase horrekin hautagailu batekin bat ez datozen elementuak hauta ditzakegu. Adibidez, beheko erregela horrek 0 pixeleko marjina esleitzen die &lt;p&gt; izeneko elementuei salbu beste guztiei.</p>
+            <pre>
+              <code>
+                :not(p) {
+                  margin: 0px;
+                  }
+              </code><figcaption>Elementu guztiei estiloak aplikatuz <em>(kasu honetan 0 pixeleko margina)</em>, salbu eta &lt;p&gt; izeneko elementuei.</figcaption>
+            </pre>
+            <p>Elementuaren izenaren ordez, beste edozein hautagailu erabil dezakegu. Hurrengo kodean, &lt;section&gt; elementuaren barruko elementu guztiei eragingo zaie, <strong>class</strong> atributua "eneParagrafoa2" balioarekin daukatenei izan ezik.</p>
+            <pre>
+              <code>
+                section :not(eneParagrafoa2) {
+                margin: 0px;
+                }
+              </code><figcaption>Salbuespen bat definituz <strong>class</strong> atributuaren bidez</figcaption>
+            </pre>
+            <p>Azken erregela hori gure HTML kodeari aplikatzen diogunean, nabigatzaileak <strong>eneParagrafoa2</strong> klasea duen elementuari lehenetsitako estiloak esleitzen dizkio, eta 0 pixeleko marjina esleitzen die gainerakoei (<strong>eneParagrafoa2</strong> klasea duen elementua erregelaren eraginik izango ez duena da).</p>
+            <p>Irudian ikus daiteke emaitza. Lehenengo, hirugarren eta laugarren elementuak tarterik gabe aurkezten dira, baina bigarren elementuak goiko eta beheko marjinak ditu lehenetsita.</p>
+            <div class="irudiKutxa">
+              <img src="../../irudiak/CSS/erreferentziak6.png" alt=" ':nth-child()' sasiklasearen aplikazioa paragrafo bakoitzaren atzealdeari kolor bana jartzeko" srcset="">
+            </div>
+
+       
+    </article>
 
 </body>
 </html>
