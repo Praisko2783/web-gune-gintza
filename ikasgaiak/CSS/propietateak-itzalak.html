@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+     <section>
+      
+    <article>
+      <div>
+        <h3><strong>CSS propietateak (itzalak)</strong></h3>
+      </div>
+      <div class="banaketaTxikia"></div>
+      <p>Elementu bati aplika diezaiokegun beste efektu interesgarri bat itzalak dira. CSSk propietate hauek ditu elementu baten kaxari itzalak eransteko, baita testu gisako forma irregularrei eransteko ere.</p>
+      <ul class="zerrendaArruntak">
+        <li><strong>box-shadow —</strong>Propietate honek itzal bat sortzen du elementuaren kutxatik. Sei balio onartzen ditu gehienez. Itzalaren desplazamendu horizontala eta bertikala, lausotze-erradioa, hedapen-balioa eta itzalaren kolorea adieraz ditzakegu, baita inset balioa ere, itzala kutxaren barruan proiektatu beharko dela adierazteko.</li>
+        <li><strong>text-shadow —</strong>Propietate honek itzal bat sortzen du testu batetik. Lau balio onartzen ditu gehienez. Desplazamendu horizontala eta bertikala, lausotze-erradioa eta itzalaren kolorea adieraz ditzakegu.</li>
+      </ul>
+      <p>Box-shadow propietateak gutxienez hiru balio behar ditu itzalaren kolorea eta desplazamendua zehaztu ahal izateko. Desplazamendua positiboa edo negatiboa izan daiteke. Balioek itzaletik elementura dagoen distantzia horizontala eta bertikala adierazten dute: balio negatiboek itzala ezkerraldean eta elementuaren gainean kokatzen dute, eta positiboek, berriz, itzal bat sortzen dute elementuaren eskuinaldean eta azpian. 0 balioak itzala elementuaren atzean kokatzen du eta bere inguruan lausotzeko efektu bat sortzeko aukera eskaintzen du. Hurrengo adibideak oinarrizko itzal bat eransten dio gure dokumentuaren goiburuari.</p>
+      <pre>
+        <code>
+          header {
+          margin: 30px;
+          padding: 15px;
+          text-align: center;
+          border: 1px solid;
+          box-shadow: rgb (150,150,150) 10px 10px;
+          }
+          #titulua {
+          font: bold 26px Verdana, sans-serif;
+          }
+        </code><figcaption>Goiburuari itzal bat gehitu diogu</figcaption>
+      </pre>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS/itzala1.png" alt="" srcset="">
+        <figcaption>Oinarrizko itzala</figcaption>
+      </div>
+         <p>Oraingoz lortu dugun itzala sendoa da, gradienterik eta gardentasunik gabea, baina oraindik ez du benetako itzalaren antzik. Itxura hobetzeko, difuminatze-distantzia bat gehitu dezakegu.</p>
+         <pre>
+          <code>
+            header {
+            margin: 30px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid;
+            box-shadow: rgb (150,150,150) 10px 10px 30px;
+            }
+            #titulua {
+            font: bold 26px Verdana, sans-serif;
+            }
+          </code><figcaption><strong>box-shadow</strong> propietateari itzala lausotzeko balioak eman dizkiogu</figcaption>
+         </pre>
+         <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/itzala2.png" alt="" srcset="">
+          <figcaption>Oinarrizko itzala lausotua</figcaption>
+        </div>
+        <p>Propietatearen amaieran pixeletan beste balio bat gehituz gero, itzala zabal dezakegu. Efektu horrek apur bat aldatzen du itzalaren itxura, eta okupatzen duen eremua zabaldu egiten du.</p>
+        <pre>
+          <code>
+          header {
+            margin: 30px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid;
+            box-shadow: rgb (150,150,150) 20px 20px 30px 20px;
+            }
+            #titulua {
+            font: bold 26px Verdana, sans-serif;
+            }
+          </code><figcaption>Oinarrizko itzal lausotua hedatu egin dugu</figcaption>
+        </pre>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/itzala3.png" alt="" srcset="">
+          <figcaption>Oinarrizko itzal lausotu hedatuta</figcaption>
+        </div>
+        <p><strong>Box-shadow</strong> propietatearentzat eskuragarri dagoen azken balioa ez da zenbaki bat, <strong>inset</strong> gako-hitza baizik. Balio horrek kanpoko itzala barne-itzal bihurtzen du, eta horrek sakontasun-efektua ematen dio elementuari.</p>
+        <pre>
+          <code>
+            header {
+            margin: 30px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid;
+            box-shadow: rgb (150,150,150) 10px 10px 20px inset;
+            }
+            #titulua {
+            font: bold 26px Verdana, sans-serif;
+            }
+          </code><figcaption>Barne-itzala sortzen <strong>inset</strong> balioarekin</figcaption>
+        </pre>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/itzala4.png" alt="" srcset="">
+          <figcaption>Barne-itzala erantsi diogu goiburuari</figcaption>
+        </div>
+        <div class="garrantzi-oinarrizko">
+          <h6><strong>GARRANTZITSUA</strong></h6>
+          <p>itzalek ez dute elementua zabaltzen eta ez dute haren tamaina handitzen; beraz, elementuaren inguruan itzala ikusteko nahikoa leku dagoela ziurtatu beharko du.
+          </p>
+        </div>
+        <p><strong>box-shadow</strong> propietatea elementu-kaxetarako berariaz diseinatu da. Efektu hori &lt;span&gt; elementu bati aplikatzen saiatzen bagara, adibidez, itzala elementuaren inguruko kutxari esleituko zaio, ez haren edukiari. CSSk aparteko propietate bat definitzen du text-shadow izeneko testu baten itzala sortzeko.</p>
+         <pre>
+          <code>
+            header {
+            margin: 30px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid;
+            }
+            #titulua {
+            font: bold 26px Verdana, sans-serif;
+            text-shadow: rgb (215, 215, 215) 5px 5px 8px;
+            }
+          </code><figcaption>Izenburuari itzal bat gehitu diogu</figcaption>
+         </pre>
+        <p><strong>Text-shadow</strong> propietatearen balioak <strong>box-shadow</strong> prpietateari esleitutakoen antzekoak dira. Itzalaren kolorea, itzaletik elementura dagoen distantzia horizontala eta bertikala eta lausotze-erradioa zehaztu ditzakegu. Goiko kodean, itzal bat sortzen da goiburuko izenburuarentzat, 3 pixeleko distantziarekin eta lausotze-erradioarekin.</p>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/itzala5.png" alt="" srcset="">
+          <figcaption>Testuari itzala jarri diogu</figcaption>
+        </div>
+      </article>
+     </section>
+
+      
+
+</body>
+</html>
