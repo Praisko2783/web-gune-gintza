@@ -9,207 +9,118 @@
 <body>
     <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
      <section>
+      
     <article>
       <div>
-        <h3><strong>CSS propietateak (ertzak)</strong></h3>
+        <h3><strong>CSS propietateak (itzalak)</strong></h3>
       </div>
       <div class="banaketaTxikia"></div>
-      <p>Elementuek ertz bat izan dezakete elementuaren kaxaren mugetan. Lehenespenez, nabigatzaileek ez dute ertzik erakusten, baina honako propietate hauek erabil ditzakegu hori definitzeko.</p>
+      <p>Elementu bati aplika diezaiokegun beste efektu interesgarri bat itzalak dira. CSSk propietate hauek ditu elementu baten kaxari itzalak eransteko, baita testu gisako forma irregularrei eransteko ere.</p>
       <ul class="zerrendaArruntak">
-        <li><strong>border-width —</strong>Propietate horrek ertzaren zabalera definitzen du. Ertzaren alde bakoitzaren zabalera zehazteko espazio batek bereizitako lau balio onartzen ditu (goikoa, eskuinekoa, behekoa eta ezkerrekoa orden horri jarraikiz). Halaber, alde bakoitzerako zabalera modu independentean adieraz dezakegu <strong>border-top-width</strong>, <strong>border-bottom-width</strong>, <strong>border-left-width</strong> eta <strong>border-right-width</strong> propietateekin.</li>
-        <li><strong>border-style —</strong>Propietate horrek ertzaren estiloa definitzen du. Ertzaren alde bakoitzeko estiloak zehazteko espazio batek bereizitako lau balio onartzen ditu (goikoa, eskuinekoa, behekoa eta ezkerrekoa, ordena horretan). Balio erabilgarriak <strong>none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset</strong> dira. Lehenetsitako balioa <strong>none</strong> da, eta horrek esan nahi du ertza ez dela agertuko balio bat esleitu ezean propietateari. Estiloak modu independentean ere adieraz ditzakegu, <strong>border-top-style</strong>, <strong>border-bottom-style</strong>, <strong>border-left-style</strong> eta <strong>border-right-style</strong> propietateekin.</li>
-        <li><strong>border-kolorea —</strong>Propietate horrek ertzaren kolorea definitzen du. Ertzaren alde bakoitzaren kolorea zehazteko espazio batek bereizitako lau balio onartzen ditu (goikoa, eskuinekoa, behekoa eta ezkerrekoa, ordena horretan). Koloreak modu independentean ere adieraz ditzakegu, ezaugarri hauekin: <strong>border-top-color</strong>, <strong>border-bottom-color</strong>, <strong>border-left-color</strong> eta <strong>border-right-color</strong>.</li>
-        <li><strong>border —</strong>Propietate honek ertzaren atributu guztiak aldi berean deklaratzeko aukera ematen digu. Border-top, border-bottom, borderleft eta border-right propietateak ere erabil ditzakegu ertz bakoitzaren balioak modu independentean definitzeko.</li>
+        <li><strong>box-shadow —</strong>Propietate honek itzal bat sortzen du elementuaren kutxatik. Sei balio onartzen ditu gehienez. Itzalaren desplazamendu horizontala eta bertikala, lausotze-erradioa, hedapen-balioa eta itzalaren kolorea adieraz ditzakegu, baita inset balioa ere, itzala kutxaren barruan proiektatu beharko dela adierazteko.</li>
+        <li><strong>text-shadow —</strong>Propietate honek itzal bat sortzen du testu batetik. Lau balio onartzen ditu gehienez. Desplazamendu horizontala eta bertikala, lausotze-erradioa eta itzalaren kolorea adieraz ditzakegu.</li>
       </ul>
-      <p>Elementu bati ertz bat esleitzeko, estiloa <strong>border-style</strong> propietatearekin definitu behar dugu. Estiloa definitu ondoren, nabigatzaileak lehenetsitako balioak erabiltzen ditu ertza sortzeko. Nabigatzaileari balio horiek zehazten utzi nahi ez badiogu, gainerako propietateak erabil ditzakegu ertzaren atributu guztiak konfiguratzeko. Beheko kodeak 2 pixeleko zabalerako ertz solido bat esleitzen dio gure dokumentuaren goiburuari.</p>
-      <pre>
-        <code>
-          header {
-            margin: 30px;
-            padding: 15 px;
-            text-align: center;
-            border-style: solid;
-            border-width: 6px;
-            }
-        #titulua {
-            font: bold 26px Verdana, sans-serif;
-            }
-        </code><figcaption>Ertz bat elementu bati gehitzeko kodea</figcaption>
-      </pre>
-      <div class="irudiKutxa">
-        <img src="../../irudiak/CSS/propietateak20.png" alt="Ertz solidoa ezarri diogu">
-      </div><figcaption>Goiburua 6 pixeleko ertz solidoaz</figcaption>
-      <p>Background jabetzarekin egin dugun bezala, balio guztiak batera deklara ditzakegu border propietatearentzat. Hurrengo adibideak 10 pixeleko ertz eten urdinxka sortzen du.</p>
+      <p>Box-shadow propietateak gutxienez hiru balio behar ditu itzalaren kolorea eta desplazamendua zehaztu ahal izateko. Desplazamendua positiboa edo negatiboa izan daiteke. Balioek itzaletik elementura dagoen distantzia horizontala eta bertikala adierazten dute: balio negatiboek itzala ezkerraldean eta elementuaren gainean kokatzen dute, eta positiboek, berriz, itzal bat sortzen dute elementuaren eskuinaldean eta azpian. 0 balioak itzala elementuaren atzean kokatzen du eta bere inguruan lausotzeko efektu bat sortzeko aukera eskaintzen du. Hurrengo adibideak oinarrizko itzal bat eransten dio gure dokumentuaren goiburuari.</p>
       <pre>
         <code>
           header {
           margin: 30px;
-          padding: 15 px;
+          padding: 15px;
           text-align: center;
-          border: 10px dashed #336699;
+          border: 1px solid;
+          box-shadow: rgb (150,150,150) 10px 10px;
           }
           #titulua {
           font: bold 26px Verdana, sans-serif;
           }
-        </code><figcaption>Ertza definitzen border propietatean balioak ilaran jarrita</figcaption>
+        </code><figcaption>Goiburuari itzal bat gehitu diogu</figcaption>
       </pre>
       <div class="irudiKutxa">
-        <img src="../../irudiak/CSS/propietateak21.png" alt="Ertz solidoa ezarri diogu">
-      </div><figcaption>Goiburua 6 pixeleko ertz solidoaz</figcaption>
-      <p>Propietate horiek dituen ertz agregatua elementuaren kaxaren inguruan marrazten da, eta horrek esan nahi du izkina zuzenak dituen laukizuzen bat deskribatuko duela.</p>
-      <p>Gure diseinuak ertz biribilduak behar baditu, propietate hau gehi dezakegu.</p> 
-      <ul class="zerrendaArruntak">
-        <li><strong>border-radius —</strong>Propietate horrek definitzen du nabigatzaileak ertz biribilduak marrazteko erabiliko duen zirkulu birtualaren erradioa. Gehienez ere lau balio onartzen ditu izkina bakoitzaren erradioak zehazteko (goiko ezkerra, goiko eskuina, beheko eskuina eta beheko ezkerra, ordena horretan). Border-top-leftradius, border-top-right-radius, border-bottom-right-radius eta borderbottom-left-radius propietateak ere erabil ditzakegu izkina bakoitzaren erradioa modu independentean definitzeko.</li>
-      </ul>
-      <p>Beheko kodeak 6 pixeleko lodiera solidoa eta 20 pixeleko erradioko angelu biribilduak dituen ertza sortzen du goiburuarentzat.</p>
-      <pre>
-        <code>
-          header {
-          margin: 30px;
-          padding: 15 px;
-          text-align: center;
-          border: 6px solid;
-          border-radius: 20px;
-          }
-          #titulua {
-          font: bold 26px Verdana, sans-serif;
-          }
-        </code><figcaption>Angelu biribilduak dituen ertza sortzeko kodea</figcaption>
-      </pre>
-      <div class="irudiKutxa">
-        <img src="../../irudiak/CSS/propietateak22.png" alt="Ertz solidoa ezarri diogu">
-      </div><figcaption>Angelu biribilduko ertza sortzen</figcaption>
-      <p>Angelu guztiak berdinak badira, balio bakarra adieraz dezakegu propietate horretarako, aurreko adibidean egin dugun bezala. Hala ere, <strong>margin</strong> eta <strong>padding</strong> propietateekin bezala, angelu desberdinak izatea nahi badugu, horietako bakoitzerako balio desberdinak zehaztu behar ditugu.</p>
-      <pre>
-        <code>
-          header {
-            margin: 30px;
-            padding: 15 px;
-            text-align: center;
-            border: 2px solid;
-            border-radius: 20px 10px 30px 50px;
-            }
-          #titulua {
-            font: bold 26px Verdana, sans-serif;
-            }
-        </code><figcaption>Angelu bakoitzerako balio ezberdinak adieraziz</figcaption>
-      </pre>
-      <p>Beheko irudian ikus dezakezuen bezala <strong>border-radius</strong> propietateari esleitutako balioek lau kokapen desberdin adierazten dituzte. Balioak erloju-orratzen norabidean adierazten dira beti, goiko ezkerreko angelutik hasita. Ordena hau da: goiko ezkerreko muturra, goiko eskuineko muturra, beheko eskuineko muturra eta beheko ezkerreko muturra.</p>
-      <div class="irudiKutxa">
-        <img src="../../irudiak/CSS/propietateak23.png" alt="Ertz solidoa ezarri diogu">
-      </div><figcaption>Balio desberdineko angeluak dituen ertza sortzen</figcaption>
-      <div class="garrantzi-oinarrizko">
-        <h6><strong>Oinarrizkoa</strong></h6>
-        <p><strong>margin</strong> eta <strong>padding</strong> propietateek bezala, <strong>border-radius</strong> propietateak ere bi balio bakarrik onar ditzake. Lehenengo balioak lehenengo eta hirugarren angeluei (goiko ezkerrekoari eta beheko eskuinekoari) eta bigarren balioak bigarren eta laugarren angeluei (goiko eskuinekoari eta beheko ezkerrekoari) eragiten die.</p>
+        <img src="../../irudiak/CSS/itzala1.png" alt="" srcset="">
+        <figcaption>Oinarrizko itzala</figcaption>
       </div>
-      <p>Angeluen forma ere alda dezakegu, balioak barra zeihar batez bereizita gehituz. Ezkerreko balioek erradio horizontala adierazten dute, eta eskuinekoak, berriz, erradio bertikala. Balio horien konbinazioak elipse bat sortzen du.</p>
-      <pre>
-        <code>
-          header {
-          margin: 30px;
-          padding: 15 px;
-          text-align: center;
-          border: 2px solid;
-          border-radius: 50px/30px;
-          }
-          #titulua {
-          font: bold 26px Verdana, sans-serif;
-          }
-        </code><figcaption>Angelu mutur eliptikoak sortzen</figcaption>
-      </pre>
-      <div class="irudiKutxa">
-        <img src="../../irudiak/CSS/propietateak24.png" alt="Ertz solidoa ezarri diogu">
-      </div><figcaption>Angelu mutur eliptikoak sortzen</figcaption>
-      <div class="garrantzi-oinarrizko">
-        <h6><strong>Egin ezazu zeuk</strong></h6>
-          <p>Kopiatu zure CSS fitxategian probatu nahi dituzun estiloak eta ireki dokumentua zure nabigatzailean. Aldatu propietate bakoitzaren balioak nola lan egiten duten ulertzeko.</p>
-      </div>
-      <p>Sortu berri ditugun ertzak elementuaren kaxaren mugetan marrazten dira, baina elementua muga horietatik urrun marrazten den bigarren ertz batekin ere ingura dezakegu elementua. Ertz mota horien helburua elementua nabarmentzea da. Nabigatzaile batzuek testua demarkatzeko erabiltzen dute, baina gehienek bigarren ertz bat marrazten dute kutxaren mugetatik kanpo. CSSk propietate hauek eskaintzen ditu bigarren ertz hori sortzeko.</p>
-      <ul class="zerrendaArruntak">
-        <li><strong>outline-width —</strong>Propietate horrek ertzaren zabalera definitzen du. Onartzen ditu balioak CSSn erabilgarri dagoen edozein unitatetan <strong>(px, %, em, etab.)</strong> eta baita <strong>thin</strong>, <strong>medium</strong> eta <strong>thick</strong> gako-hitzak ere.</li>
-        <li><strong>outline-style —</strong>Propietate horrek ertzaren estiloa definitzen du. Balio erabilgarriak <strong>none, auto, dotted, dashed, solid, double, groove, ridge, inset eta outset</strong> dira.</li>
-        <li><strong>outline-color —</strong>Propietate horrek ertzaren kolorea definitzen du.</li>
-        <li><strong>outline-offset —</strong>Propietate horrek desplazamendua definitzen du (kutxaren mugetatik bigarren ertza zein distantziatara marraztuko den). Onartzen ditu balioak CSSn erabilgarri dagoen edozein unitatetan <strong>(px, %, em, etab.)</strong>.</li>
-        <li><strong>outline —</strong>Propietate horrek ertzaren zabalera, estiloa eta kolorea aldi berean zehazteko aukera ematen digu (desplazamendua <strong>outline-offset</strong> propietatearekin definitu behar da oraindik).</li>
-      </ul>
-      <p>Desplazamenduaren balio lehenetsia 0 da; beraz, bigarren ertza kaxaren ertzaren ondoren marraztuko da. Bi ertzak bereizi nahi baditugu, <strong>outline-offset</strong> propietatea definitu behar dugu.
-        <pre>
+         <p>Oraingoz lortu dugun itzala sendoa da, gradienterik eta gardentasunik gabea, baina oraindik ez du benetako itzalaren antzik. Itxura hobetzeko, difuminatze-distantzia bat gehitu dezakegu.</p>
+         <pre>
           <code>
             header {
             margin: 30px;
-            padding: 15 px;
+            padding: 15px;
             text-align: center;
-            border: 1px solid # 999999;
-            outline: 2px dashed # 000000;
-            outline-offset: 15px;
+            border: 1px solid;
+            box-shadow: rgb (150,150,150) 10px 10px 30px;
             }
             #titulua {
             font: bold 26px Verdana, sans-serif;
             }
-          </code><figcaption>Goiburuari bigarren ertz bat gehitzen zaio</figcaption>
+          </code><figcaption><strong>box-shadow</strong> propietateari itzala lausotzeko balioak eman dizkiogu</figcaption>
+         </pre>
+         <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/itzala2.png" alt="" srcset="">
+          <figcaption>Oinarrizko itzala lausotua</figcaption>
+        </div>
+        <p>Propietatearen amaieran pixeletan beste balio bat gehituz gero, itzala zabal dezakegu. Efektu horrek apur bat aldatzen du itzalaren itxura, eta okupatzen duen eremua zabaldu egiten du.</p>
+        <pre>
+          <code>
+          header {
+            margin: 30px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid;
+            box-shadow: rgb (150,150,150) 20px 20px 30px 20px;
+            }
+            #titulua {
+            font: bold 26px Verdana, sans-serif;
+            }
+          </code><figcaption>Oinarrizko itzal lausotua hedatu egin dugu</figcaption>
         </pre>
-        <p>Goiko kodean, 2 pixeleko bigarren ertz bat gehituko dugu, 15 pixeleko desplazamenduarekin, gure dokumentuaren goiburuko kutxari esleitutako jatorrizko estiloetara.</p>
         <div class="irudiKutxa">
-          <img src="../../irudiak/CSS/propietateak25.png" alt="Ertz solidoa ezarri diogu">
-        </div><figcaption>Bigarren ertza, lehenaren 15 pixelera</figcaption>
+          <img src="../../irudiak/CSS/itzala3.png" alt="" srcset="">
+          <figcaption>Oinarrizko itzal lausotu hedatuta</figcaption>
+        </div>
+        <p><strong>Box-shadow</strong> propietatearentzat eskuragarri dagoen azken balioa ez da zenbaki bat, <strong>inset</strong> gako-hitza baizik. Balio horrek kanpoko itzala barne-itzal bihurtzen du, eta horrek sakontasun-efektua ematen dio elementuari.</p>
+        <pre>
+          <code>
+            header {
+            margin: 30px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid;
+            box-shadow: rgb (150,150,150) 10px 10px 20px inset;
+            }
+            #titulua {
+            font: bold 26px Verdana, sans-serif;
+            }
+          </code><figcaption>Barne-itzala sortzen <strong>inset</strong> balioarekin</figcaption>
+        </pre>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/itzala4.png" alt="" srcset="">
+          <figcaption>Barne-itzala erantsi diogu goiburuari</figcaption>
+        </div>
         <div class="garrantzi-oinarrizko">
-        <p><strong>border</strong> eta <strong>outline</strong> propietateek lortutako efektuak lerro soiletara eta konfigurazio-aukera gutxi batzuetara mugatzen dira, baina CSSk ertz pertsonalizatuak definitzeko aukera ematen digu, muga horiek gainditzeko irudiak erabiliz. Honako propietate hauek biltzen dira helburu horrekin. </p>
-        <ul class="zerrendaArruntak">
-          <li><strong>border-image-source —</strong>Propietate horrek zehazten du ertza sortzeko erabiliko den irudia. Fitxategiaren URLa URL () funtzioarekin deklaratzen da (adibidez, URL ("adreiluak.jpg")).</li>
-          <li><strong>border-image-width —</strong>Propietate honek ertzaren zabalera definitzen du. Onartzen ditu balioak CSSn erabilgarri dagoen edozein unitatetan (px, %, em, etab.).</li>
-          <li><strong>border-image-repeat —</strong>Propietate horrek definitzen du nola erabiltzen den irudia ertza sortzeko. Balio erabilgarriak repeat, round, stretch eta space dira.</li>
-          <li><strong>border-image-slice —</strong>Propietate horrek definitzen du nola moztuko den irudia ertzaren izkinak irudikatzeko. Lau balio esleitu behar ditugu erabiliko diren irudiaren lau zatiak zehazteko (balio bakarra adierazten bada, alde guztietarako erabiltzen da). Balioa zenbaki oso gisa edo ehunekotan zehaztu daiteke.</li>
-          <li><strong>border-image-outset —</strong>Propietate honek ertzaren desplazamendua definitzen du (elementuaren kutxatik dagoen distantzia). Onartzen ditu balioak CSSn erabilgarri dagoen edozein unitatetan (px, %, em, etab.).</li>
-          <li><strong>border-image —</strong>Propietate honek ertzaren atributu guztiak aldi berean zehazteko aukera ematen digu.</li>
-        </ul>
-           <p>Propietate horiek irudi bat erabiltzen dute patroi gisa. Emandako balioen arabera, irudia pastel bat bezala mozten da beharrezko piezak lortzeko, eta gero pieza horiek elementuaren inguruan egokitzen dira ertza eraikitzeko.</p>
-           <div class="irudiKutxa">
-            <img src="../../irudiak/CSS/propietateak26.png" width="100%" alt="Ertz solidoa ezarri diogu">
-          </div><figcaption>Ertza irudiez osatua</figcaption>
-           <p>Helburu hori lortzeko, hiru ezaugarri adierazi behar ditugu: irudiaren fitxategiaren kokapena <strong>(url eta parentesiaren artean ez utzi tarterik)</strong>, patroitik atera nahi ditugun piezen tamaina eta pieza horiek elementuaren inguruan nola banatuko diren zehazten duten gako-hitzak.</p>
-           <pre>
-            <code>
-              header {
-              margin: 30px;
-              padding: 15 px;
-              text-align: center;
-              border: 29px solid;
-              border-image-source: url("irudiak/CSS/adreiluParetaTxikia.png");
-              border-image-slice: 10;
-              border-image-repeat: stretch;
-              }
-              #titulua {
-              font: bold 26px Verdana, sans-serif;
-              }
-            </code><figcaption>Ertz pertsonalizatua sortuz goiburuko kaxarako</figcaption>
-           </pre>
-           <div class="irudiKutxa">
-            <img src="../../irudiak/CSS/propietateak27.png" alt="Ertza irudi landuaz">
-          </div><figcaption>Ertza irudiez osatua</figcaption>
-          <p>Goian, 29 pixeleko ertza sortuko dugu goiburuko kaxarako, eta gero adreiluen irudia kargatuko dugu <em>url(irudiak/CSS/adreiluParetaTxikia.png)</em>, ertza eraikitzeko. <strong>border-image-slice</strong> propietateari esleitutako <em>10</em> balioak piezen tamaina adierazten du, eta <em>stretch</em> balioa, <strong>border-image-repeat</strong> propietateari esleitua, pieza horiek kutxaren inguruan banatzeko eskura dagoen metodoetako bat da. Azken atributu horretarako hiru balio daude eskuragarri. </p>
-          <ul class="zerrendaArruntak">
-            <li><strong>repeat -</strong>elementuaren aldea estaltzeko behar beste aldiz errepikatzen ditu iruditik hartutako piezak. Kasu horretan, piezaren tamaina zaindu egiten da, eta irudia moztu, baldin eta ez badago nahikoa leku pieza kokatzeko.</li>
-            <li><strong>round</strong>kaxaren aldearen luzera kalkulatzen du eta, ondoren, piezak luzatzen ditu, bat ere mozten ez dela ziurtatzeko.</li>
-            <li><strong>stretch</strong>pieza bat luzatzen du alde osoa estali arte. Goiko irudian erabili dugu metodo hori.</li>
-          </ul> 
-          <p>Beti bezala, balio guztiak aldi berean adieraz ditzakegu propietate bakar bat erabiliz.</p>
-          <pre>
-            <code>
-              header {
-              margin: 30px;
-              padding: 15 px;
-              text-align: center;
-              border: 29px solid;
-              border-image: URL("irudiak/CSS/adreiluParetaTxikia.png") 10 stretch;
-              }
-              #izenburua {
-              font: bold 26px Verdana, sans-serif;
-              }
-            </code><figcaption><strong>border-image</strong> propietatea erabiliz hiru balioa ilaran jar daitezke</figcaption>
-          </pre>
-          <div class="irudiKutxa">
-            <img src="../../irudiak/CSS/propietateak28.png" alt="Ertz solidoa ezarri diogu">
-          </div><figcaption><strong>border-image</strong> propietateaz ertza irudiez osatua</figcaption>
+          <h6><strong>GARRANTZITSUA</strong></h6>
+          <p>itzalek ez dute elementua zabaltzen eta ez dute haren tamaina handitzen; beraz, elementuaren inguruan itzala ikusteko nahikoa leku dagoela ziurtatu beharko du.
+          </p>
+        </div>
+        <p><strong>box-shadow</strong> propietatea elementu-kaxetarako berariaz diseinatu da. Efektu hori &lt;span&gt; elementu bati aplikatzen saiatzen bagara, adibidez, itzala elementuaren inguruko kutxari esleituko zaio, ez haren edukiari. CSSk aparteko propietate bat definitzen du text-shadow izeneko testu baten itzala sortzeko.</p>
+         <pre>
+          <code>
+            header {
+            margin: 30px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid;
+            }
+            #titulua {
+            font: bold 26px Verdana, sans-serif;
+            text-shadow: rgb (215, 215, 215) 5px 5px 8px;
+            }
+          </code><figcaption>Izenburuari itzal bat gehitu diogu</figcaption>
+         </pre>
+        <p><strong>Text-shadow</strong> propietatearen balioak <strong>box-shadow</strong> prpietateari esleitutakoen antzekoak dira. Itzalaren kolorea, itzaletik elementura dagoen distantzia horizontala eta bertikala eta lausotze-erradioa zehaztu ditzakegu. Goiko kodean, itzal bat sortzen da goiburuko izenburuarentzat, 3 pixeleko distantziarekin eta lausotze-erradioarekin.</p>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/itzala5.png" alt="" srcset="">
+          <figcaption>Testuari itzala jarri diogu</figcaption>
+        </div>
       </article>
      </section>
 </body>
