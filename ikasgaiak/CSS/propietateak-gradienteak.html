@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+     <section>
+    <article>
+      <div>
+        <h3><strong>CSS propietateak (gradienteak)</strong></h3>
+      </div>
+      <div class="banaketaTxikia"></div>
+      <p>Gradiente bat kolore batzuen bidez eratzen da. Kolore horiek etengabe aldatzen dira, kolore batetik besterako trantsizio leun batekin. 
+        <p>Gradienteak irudi gisa sortzen dira eta elementuaren atzealdean gehitzen dira background-image edo background propietateekin.</p>
+        <p>Gradientekin irudia sortzeko, CSSk funtzio hauek eskaintzen ditu:</p>
+      <ul class="zerrendaArruntak">
+        <li><strong>linear-gradient (posizioa, angelua, koloreak) —</strong>Funtzio horrek gradiente lineal bat sortzen du. <strong>posizioa</strong> atributuak gradientea hasteko eta top, bottom, left eta right balioekin deklaratzeko aldea edo izkina zehazten du; <strong>angelua</strong> atributuak gradientearen norabidea definitzen du, eta <strong>deg (graduak), grad (gradianak), rad (radianak) edo turn (espirak)</strong> unitateetan adieraz daiteke, eta <strong>koloreak</strong> atributua gradientea osatzen duten koloreen zerrenda da eta komaz bereizita idazten dira. <strong>koloreak</strong> atributurako balioek bigarren balio bat izan dezakete, ehunekotan, kolorea amaitzen den posizioa adierazteko eta espazio batek bereizita idazten dira.</li>
+        <li><strong>radial-gradient (posizioa, forma, koloreak, luzapena) —</strong>Funtzio horrek gradiente erradial bat sortzen du. <strong>posizioa</strong> atributuak gradientearen jatorria adierazten du, eta pixeletan adieraz daiteke, ehunekotan, edo center, top, bottom, left eta right balioen konbinazioaren bidez; <strong>forma</strong> atributuak gradientearen forma zehazten du, eta zirkle eta ellipse balioekin deklaratzen da; <strong>koloreak</strong> atributua gradientean parte hartzen duten koloreen zerrenda da, koma bidez bereizita idazten dira; eta hedadura-atributuak zehazten du gradienteak closest-side, closest-corner, farthest-side eta farthest-corner balioekin lortuko duen forma. <strong>koloreak</strong>-atributurako balioek bigarren balio bat izan dezakete, ehunekotan, kolorea amaitzen den posizioa adierazteko, espazio batek bereizita idazten dira.</li>
+      </ul>
+      <p>Gradienteak hondoko irudi gisa deklaratzen dira; beraz, elementu bati aplika dakizkioke background-image edo background propietateen bidez, hurrengo adibidean egiten dugun bezala.</p>
+      <pre>
+        <code>
+          header {
+          margin: 30px;
+          padding: 15 px;
+          text-align: center;
+          border: 1px solid;
+          background: -webkit-linear-gradient (top, #FFFFFF, # 66666);
+          }
+          #titulua {
+          font: bold 26px Verdana, sans-serif;
+          }
+        </code><figcaption>Gradiente lineal bat gehituz goiburuari</figcaption>
+      </pre>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS/gradientea1.png" alt="" srcset="">
+        <figcaption>Gradiente lineala</figcaption>
+      </div>
+         <div class="garrantzi-oinarrizko">
+          <h6><strong>GARRANTZITSUA</strong></h6>
+          <p>CSS propietate eta funtzio batzuk esperimentaltzat jotzen dira oraindik. Horregatik, erabilitako web motorra irudikatzen duen aurrizki batekin deklaratu behar dira.
+            Adibidez,  <strong>linear-gradient(</strong>) funtzioa Google Chrome-n funtzionatzea nahi badugu, <strong>-webkit-linear-gradient()</strong> idatzi behar dugu. Zure webgunean funtzio hori erabili nahi baduzu, lehenetsita dagoen nabigatzaile bakoitzerako <strong>background</strong> propietatea errepikatu beharko duzu, dagokion aurrizkiarekin. Nabigatzaile ezagunenen aurrizkiak hauek dira: </p>
+            <ul class="zerrendaArruntak">
+              <li><strong>-moz-</strong> Mozilla Firefoxentzat</li>
+              <li><strong>-webkit-</strong>Safari eta Google Chromerentzat</li>
+              <li><strong>-o-</strong>Operarentzat</li>
+              <li><strong>-ms-</strong>Internet Explorerrentzat eta Edgerentzat</li>
+            </ul>
+         </div>
+        <p>Aurreko adibidean, <strong>top</strong> balioa erabili dugu gradientearen hasierako posizioa zehazteko, baina bi balio ere konbina ditzakegu elementuaren izkina batetik gradientea hasteko, hurrengo adibidean bezala.</p>
+        <pre>
+          <code>
+        header {
+          margin: 30px;
+          padding: 15 px;
+          text-align: center;
+          border: 1px solid;
+          background: -webkit-linear-gradient(top right, #FFFFFF, #666666);
+          }
+          #titulua {
+          font: bold 26px Verdana, sans-serif;
+          }
+          </code><figcaption>Hasierako posizioa ezarriz</figcaption>
+        </pre>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/gradientea2.png" alt="" srcset="">
+          <figcaption>Hasiera desberdina gradiente lineal baterako</figcaption>
+        </div>
+        <p>Gradiente linealekin lan egiten dugunean, angelua gradutan jarrita konfigura dezakegu norabidea.</p>
+        <pre>
+          <code>
+            header {
+              margin: 30px;
+              padding: 15 px;
+              text-align: center;
+              border: 1px solid;
+              background: -webkit-linear-gradient(30deg, #FFFFFF, #866666);
+              }
+              #titulua {
+              font: bold 26px Verdana, sans-serif;
+              }
+          </code><figcaption>30 graduko helbidea duen gradientea</figcaption>
+        </pre>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/gradientea3.png" alt="" srcset="">
+          <figcaption>Gradiente lineala, gradutan ezarritako norabidearekin</figcaption>
+        </div>
+        <p>Aurreko gradienteak bi kolorerekin bakarrik sortu dira, baina balio gehiago gehitu ditzakegu kolore anitzeko gradientea sortzeko.</p>
+        <pre>
+          <code>
+          header {
+          margin: 30px;
+          padding: 15 px;
+          text-align: center;
+          border: 1px solid;
+          background:-webkit-linear-gradient(top, #000000, #FFFFFF, #999999);
+          }
+          #titulua {
+          font: bold 26px Verdana, sans-serif;
+          }
+          </code><figcaption>Kolore anitzeko gradiente bat sortuz</figcaption>
+        </pre>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/gradientea4.png" alt="" srcset="">
+          <figcaption>Kolore anitzeko gradiente lineala</figcaption>
+        </div>
+        <p>Kolore baten ordez balio gardena erabiltzen badugu, gradientea zeharrargitsua izan daiteke eta, horrela, hondoarekin nahas daiteke (efektu hori aurretik aztertutako <strong>rgba()</strong> funtzioarekin ere lor daiteke). Hurrengo adibidean, atzealdeko irudi bat esleituko diogu elementuari, orriaren hondoa aldatzeko eta gradiente zeharrargi bat lortzen dugula egiaztatzeko.</p>
+        <pre>
+          <code>
+         body {
+          background: URL("adreilu-argiak.jpg");
+          }
+          header {
+          margin: 30px;
+          padding: 15 px;
+          text-align: center;
+          border: 1px solid;
+          background:-webkit-linear-gradient(top, transparent, #666666);
+          }
+          #titulua {
+          font: bold 26px Verdana, sans-serif;
+          }
+          </code><figcaption>Gradiente zeharrargi bat sortzen</figcaption>
+        </pre>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/gradientea5.png" alt="" srcset="">
+          <figcaption>Gradiente zeharrargia</figcaption>
+        </div>
+        <p>Koloreak definitzen dituzten parametroek kolore bakoitzaren hasiera eta amaiera puntua ere zehaztu dezakete, portzentajezko balio gehigarri bat barne.</p>
+        <pre>
+          <code>
+          header {
+          margin: 30px;
+          padding: 15 px;
+          text-align: center;
+          border: 1px solid;
+          background:-webkit-linear-gradient(top, #FFFFFF 50%, #666666 90%);
+          }
+          #titulua {
+          font: bold 26px Verdana, sans-serif;
+          }
+          </code><figcaption>Kolore bakoitzaren hasierako eta amaierako puntuak konfiguratuz</figcaption>
+        </pre>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/gradientea6.png" alt="" srcset="">
+          <figcaption>Gradiente lineala, hasierako eta amaierako balioekin</figcaption>
+        </div>
+        <p>Gradiente linealez gain, gradiente erradialak ere sor ditzakegu. Gradiente erradialetarako sintaxia eta aztertu berri ditugun gradiente linealak ez dira oso desberdinak. Desberdintasun bakarra da  <strong>erradial-gradient()</strong> funtzioa erabili behar dugula  <strong>linear-gradient()</strong> funtzioa erabili beharrean, eta parametro bat sartu behar dugula, gradientearen forma zehazten duena  <strong>circle</strong> edo <strong>ellipse</strong> balioekin.</p>
+        <pre>
+          <code>
+          header {
+          margin: 30px;
+          padding: 15 px;
+          text-align: center;
+          border: 1px solid;
+          background:-webkit-radial-gradient(center, ellipse, #FFFFFF, #000000);
+          }
+          #titulua {
+          font: bold 26px Verdana, sans-serif;
+          }
+          </code><figcaption>Gradiente erradial bat sortzen</figcaption>
+        </pre>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/gradientea7.png" alt="" srcset="">
+          <figcaption>Gradiente erradiala</figcaption>
+        </div>
+        <p>Formagatik izan ezik (zirkulua edo elipsea), funtzio honen gainerakoak <strong></strong> bezala lan egiten du. Gradientearen posizioa pertsonalizatu egin daiteke, eta kolore bat baino gehiago erabil ditzakegu, bigarren balio batekin, kolore bakoitzaren mugak zehazteko.</p>
+        <pre>
+          <code>
+          header {
+          margin: 30px;
+          padding: 15 px;
+          text-align: center;
+          border: 1px solid;
+          background:-webkit-radial-gradient(30px 50px, ellipse, #FFFFFF 50% , #666666  70%, #999999  90%);
+          #titulua {
+          font: bold 26px Verdana, sans-serif;
+          }
+          </code><figcaption>gradiente erradiala hasierako eta amaierako puntuekin</figcaption>
+        </pre>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/gradientea8.png" alt="" srcset="">
+          <figcaption>Gradiente erradiala hasierako eta amaierako puntuekin</figcaption>
+        </div>
+      </article>
+     </section>
+</body>
+</html>
