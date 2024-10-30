@@ -9,39 +9,223 @@
 <body>
     <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
      <section>
-      
-     </section>
+
     <article>
       <div>
-        <h3><strong>CSS propietateak (3)</strong></h3>
+        <h3><strong>CSS propietateak (eraldaketak)</strong></h3>
       </div>
       <div class="banaketaTxikia"></div>
-      <h4>Eraldaketak, trantsizioak eta animazioak kudeatzeko propietateak</h4>
-      <h5>Propietateak CSSren pieza zentrala dira. Elementu bati aplika dakizkiokeen estilo guztiak propietateen bidez definitzen dira. Aurreko adibideetan sartu ditugu batzuk, baina ehunka propietate daude eskuragarri. Azterketa sinplifikatzeko, bi motatan sailka daitezke: 
-        <ul class="zerendaArruntak">
-          <li>Formatu-propietateak: elementuei eta haien edukiari forma emateko. </li>
-          <li>Diseinu-propietateak: pantailan elementuen tamaina eta kokapena zehazteko.</li>
-        </ul>
-        
-      <div class="banaketaTxikia"></div>
-      <h4>Eraldaketak</h4>
-      <h6>HTML elementuak sortu ondoren, horiek geldirik egoten dira, baina haien posizioa, tamaina eta itxura alda ditzakegu transform propietatearen bidez. Propietate horrek oinarrizko lau transformazio egiten dizkio elementu bati: eskalatzea, biratzea, inklinazioa eta translazioa. Honako hauek dira helburu horretarako definitutako funtzioak.</h6>
-      <div class="banaketaTxikia"></div>
-      <h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, possimus delectus. Deleniti voluptatum totam in, quisquam amet quas reiciendis cum reprehenderit. Reiciendis quia quibusdam pariatur cupiditate consectetur, sequi magni iste.</h6>
-      <div class="banaketaTxikia"></div>
-      <h4>Trantsizioak</h4>
-      <h6>Seudoklasearekin <strong>(hover)</strong> eraldaketa dinamikoak egin ditzakegu. Hala ere, benetako animazioak prozesuaren bi urratsen arteko trantsizioa eskatzen du. Horretarako, CSSk hainbat propietate eskaintzen ditu.</h6>
-      <div class="banaketaTxikia"></div>
-      <h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, possimus delectus. Deleniti voluptatum totam in, quisquam amet quas reiciendis cum reprehenderit. Reiciendis quia quibusdam pariatur cupiditate consectetur, sequi magni iste.</h6>
-      <div class="banaketaTxikia"></div>
-      <h4>Animazioak</h4>
-      <h6><strong>Transition</strong> propietateak oinarrizko animazio bat sortzen du, baina prozesuan bi egoera baino ez dira sartzen: propietateen egungo balioek zehaztutako hasierako egoera eta balio berriek zehaztutako azken egoera. Benetako animazio bat sortzeko, bi egoera baino gehiago aitortu behar ditugu, film baten fotogramak bezala. CSSk honako propietate hauek ditu animazio konplexuagoak osatzeko.</h6>
-      <div class="banaketaTxikia"></div>
-      <h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, possimus delectus. Deleniti voluptatum totam in, quisquam amet quas reiciendis cum reprehenderit. Reiciendis quia quibusdam pariatur cupiditate consectetur, sequi magni iste.</h6>
-      </article>
-      </article>
+      <p>HTML elementuak sortu ondoren, horiek geldirik egoten dira, baina haien posizioa, tamaina eta itxura alda ditzakegu transform propietatearen bidez. Propietate horrek oinarrizko lau transformazio egiten dizkio elementu bati: eskalatzea, biratzea, inklinazioa eta translazioa. Honako hauek dira helburu horretarako definitutako funtzioak.</p>
+      <ul class="zerrendaArruntak">
+        <li><strong>scale(x, y) —</strong>Funtzio honek elementuaren eskala aldatzen du. Lotura duten beste bi funtzio daude, <strong>scaleX()</strong> eta <strong>scaleY()</strong> izenekoak, balio horizontalak eta bertikalak bereizita zehazteko.</li>
+        <li><strong>rotate(angelua) —</strong>Funtzio honek elementua hausten du. Atributuak errotazio-mailak adierazten ditu, eta deg (graduak), grad (gradianak), rad (erradianak) edo turn(espirak) gisa adieraz daiteke.</li>
+        <li><strong>skew(angelua) —</strong>Funtzio honek elementua inklinatzen du. Atributuak desplazamendu-mailak adierazten ditu. Funtzioak bi balio izan ditzake angelu horizontala eta bertikala irudikatzeko. Balioak deg (graduak), grad (gradianak), rad (erradianak) edo turn (espirak) gisa adieraz daitezke.</li>
+        <li><strong> translate(x, y) —</strong>Funtzio honek <strong>x</strong> eta <strong>y</strong>  atributuek zehaztutako kokapenera lekualdatzen du elementua.</li>
+        <li><strong></strong></li>
+      </ul>
+      <p><strong>Scale ()</strong>funtzioak bi parametro jasotzen ditu: x balioa eskala horizontalerako eta y balioa eskala bertikalerako. Balio bakarra aitortzen bada, balio hori bera bi parametroetarako erabiltzen da.</p>
+      <pre>
+        <code>
+        header {
+        margin: 30px;
+        padding: 15px;
+        text-align: center;
+        border: 1px solid;
+        transform: scale(2);
+        }
+        #izenburua {
+        font: bold 26px Verdana, sans-serif;
+        }
+        </code><figcaption>Goiburua eskalatzen</figcaption>
+      </pre>
+        <p>Goiko adibidean, goiburua eraldatuko dugu, haren tamaina bikoizten duen eskala batekin. Eskalari zenbaki osoak eta hamartarrak eman dakizkioke, eta eskala hori matrize baten bidez kalkulatzen da. 0 eta 1 arteko balioek elementuaren tamaina murrizten dute, 1 balioak jatorrizko proportzioak gordetzen ditu, eta 1 aldeko balioek elementuaren dimentsioak modu linealean handitzen dituzte.</p>
+        <p>Funtzio horri balio negatiboak esleitzen dizkiogunean, efektu interesgarria sortzen da.</p>
+        <pre>
+          <code>
+        header {
+        margin: 30px;
+        padding: 15px;
+        text-align: center;
+        border: 1px solid;
+        transform: scale(1, -1);
+        }
+        #izenburua {
+        font: bold 26px Verdana, sans-serif;
+        }
+          </code><figcaption><strong>scale()</strong> funtzioarekin ispilu-irudi bat sortzen </figcaption>
+        </pre>
+        <p>Goian ikus dezakezuen bezala goiburuko eskala aldatzeko bi parametro adierazi dira. Bi balioek jatorrizko proportzioak gordetzen dituzte, baina bigarren balioa negatiboa da eta, beraz, elementua ardatz bertikalean inbertitzen du, alderantzizko irudia sortuz.</p>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS/eraldaketa1.png" alt="" srcset="">
+          <figcaption><strong>Scale()</strong> funtzioan balio negatiboa aplikatuz lortzen den ispilu efektua</figcaption>
+        </div>
+        <p>Elementua eskalatzeaz gain, txandakatu ere egin dezakegu <strong>rotate()</strong> funtzioarekin. Kasu horretan, balio negatiboek elementuaren norabidea aldatzen dute. Hurrengo adibideak, erloju-orratzen noranzkoan, 30 gradu biratzen du goiburua.</p>
+        <pre>
+          <code>
+        header {
+        margin: 30px;
+        padding: 15px;
+        text-align: center;
+        border: 1px solid;
+        transform: rotate(30deg);
+        }
+        #titulo {
+        font: bold 26px Verdana, sans-serif;
+        }
+          </code><figcaption>Goiburua biratu egiten du 30 gradu.</figcaption>
+        </pre>
+     <p><strong>transform</strong> propietateak beste funtzio bat eskaitzne du <strong>skew()</strong> izenekoa. Funtzio horrek elementuaren simetria aldatzen du gradutan eta dimentsio batean edo bietan.</p>
+     <pre>
+      <code>
+        header {
+        margin: 30px;
+        padding: 15px;
+        text-align: center;
+        border: 1px solid;
+        transform: skew(20deg);
+        }
+        #izenburua {
+        font: bold 26px Verdana, sans-serif;
+        }
+      </code><figcaption>Goiburua okertzen du kode horrek</figcaption>
+     </pre>
+     <p>Funtzio horrek bi balio jasotzen ditu, baina beste funtzio batzuetan ez bezala, parametro bakoitzak dimentsio bati bakarrik eragiten dio (parametroak independenteak dira). Goiko kodean, lehen parametroa bakarrik deklaratzen da, eta, beraz, dimentsio horizontala bakarrik aldatzen da. Nahi izanez gero, <strong>skewX()</strong> eta <strong>skewY()</strong> funtzio gehigarriak erabil ditzakegu efektu bera lortzeko.</p>
+     <div class="irudiKutxa">
+      <img src="../../irudiak/CSS/eraldaketa2.png" alt="" srcset="">
+      <figcaption><strong>skew()</strong> funtzioarekin horizontalean inklinatu dugu goiburua</figcaption>
+    </div>
+    <p>Gailu baten pantaila pixelezko errenkadetan eta zutabeetan banatzen da (pantailaren ikus-unitate minimoa). Pixel bakoitzaren kokapena identifikatzeko, ordenagailuek koordenatu-sistema bat erabiltzen dute. Bertan, pixelezko errenkadak eta zutabeak laukiaren goiko ezkerreko izkinatik beheko eskuineko izkinara zenbatzen dira, 0 baliotik hasita (balioak ezkerretik eskuinera eta goitik behera handitzen dira). Adibidez, pantailaren goiko ezkerreko izkinako lehen pixela 0,0 posizioan dago (0 zutabea, 0 ilara), eta pantailaren ezkerraldeko 30 pixel eta goiko aldeko 10 pixel dituen pixel bat 30,10 posizioan egongo da.</p>
+    <div class="irudiKutxa">
+      <img src="../../irudiak/CSS/eraldaketa3.png" alt="" width="100%">
+      <figcaption>Koordenatu-sistema</figcaption>
+    </div>
+    <p>0,0 posizioko puntuari jatorria deitzen zaio, eta zutabe eta errenkaden lerroei ardatz deitzen zaie, x eta y (x zutabeetarako eta y ilaretarako), goiko irudiak erakusten duen bezala.</p>
+    <p><strong>transform</strong> propietatea erabiliz, elementu baten posizioa alda dezakegu lauki honetan. Kasu honetan propietateari esleitu behar diogun funtzioa <strong>translate()</strong> da.</p>
+    <pre>
+      <code>
+        header {
+        margin: 30px;
+        padding: 15px;
+        text-align: center;
+        border: 1px solid;
+        transform: translate(100px);
+        }
+        #izenburua {
+        font: bold 26px Verdana, sans-serif;
+        }
+      </code><figcaption>Goiburua eskuinerantz mugitu dugu</figcaption>
+    </pre>
+    <p><strong>translate()</strong> funtzioak koordenatu-sistema erabiltzen du elementuaren posizioa ezartzeko, eta egungo posizioa erabiltzen du erreferentzia gisa.</p>
+    <p>Elementuaren goiko ezkerreko izkina 0,0 posizioan dagoela jotzen da; beraz, balio negatiboek elementua ezkerrerantz edo jatorrizko posizioaren gainetik mugitzen dute, eta balio positiboek eskuinera eta behera mugitzen dute.</p>
+    <p>Berriki ikusi dugun kodearen bitartez goiburua eskuinera mugituko dugu, jatorrizko posiziotik 100 pixelera. Funtzio honetan bi balio adieraz daitezke elementua horizontalki eta bertikalki mugitzeko. <strong>translateX()</strong> eta <strong>translateY()</strong> funtzioak ere erabil ditzakegu balioak modu independentean adierazteko.</p>
+    <p>Batzuetan, erabilgarria izan daiteke elementu berari hainbat eraldaketa aldi berean aplikatzea.</p>
+    <p>Eraldaketak eta <strong>transform</strong> propietatea konbinatzeko, espazio batek bereizitako funtzioak deklaratu behar ditugu.</p>
+    <pre>
+      <code>
+        header {
+        margin: 30px;
+        padding: 15px;
+        text-align: center;
+        border: 1px solid;
+        transform: translateY(100px) rotate(45deg) scaleX(0.3);
+        }
+        #izenburua {
+        font: bold 26px Verdana, sans-serif;
+        }
+      </code><figcaption>Elementua propietate bakarrarekin mugitu, eskalatu eta biratu dugu</figcaption>
+    </pre>
+    <div class="garrantzi-oinarrizko">
+      <h6><strong>GARRANTZITSUA</strong></h6>
+      <p>Funtzio asko konbinatzen ditugunean, kontuan hartu behar dugu konbinazio-ordena garrantzitsua dela. Horren arrazoia da funtzio batzuek elementuaren jatorria eta erdigunea aldatzen dutela, eta, beraz, gainerako funtzioek lantzen dituzten parametroak aldatzen dira.</p>
+    </div>
+    <p>HTML elementuen gainean bi dimentsiotako transformazioak sor ditzakegun bezala, hiru dimentsiotan ere egin dezakegu. Eraldaketa mota horiek sakonera adierazten duen eta z letrarekin identifikatzen den hirugarren ardatz bat kontuan hartuta egiten dira. Honako hauek dira helburu horretarako eskuragarri dauden funtzioak.</p>
+    <ul class="zerrendaArruntak">
+      <li><strong>scale3d(x, y, z) —</strong>Funtzio horrek eskala berri bat esleitzen dio elementuari 3D espazio batean. Zenbaki hamartarretan hiru balio onartzen ditu,<strong>x, y eta z</strong> ardatzetan eskala ezartzeko. 2D transformazioekin bezala, 1 balioak jatorrizko eskala gordetzen du.</li>
+      <li><strong>rotate3d(x, y, z, angelu) —</strong>Funtzio honek elementua angelu batean eta ardatz zehatz baten gainean hausten du. Ardatzetarako balioak zenbaki hamartarretan zehaztu behar dira, eta angelua deg (graduak), grad (gradianak), rad (erradianak) edo turn (espirak)m oduan adieraz daiteke. Ardatzei esleitutako balioek errotazio-bektore bat zehazten dute, eta, beraz, balioak ez dira garrantzitsuak, baina bai ardatzen arteko erlazioa. Adibidez, <strong>rotate3d(5, 2, 6, 30deg)</strong> eta <strong>rotate3d(50, 20, 60, 30deg)</strong> blioek efektu berdina sortuko dute, emaitzaren bektorea berdina delako.</li>
+      <li><strong>translate3d(x, y, z) —</strong>Funtzio honek elementua 3D espazioan posizio berri batera mugitzen du. Pixeletan hiru balio onartzen ditu x, y eta z ardatzetarako.</li>
+      <li><strong>perspective (balioa) —</strong>Funtzio honek sakontasun-efektu bat gehitzen dio eszenari, ikuslearengandik hurbil dagoen elementuaren aldearen tamaina handituz.
+    </li>
+    </ul>
 
+    <p><strong>3D eraldaketa</strong> batzuk zuzenean aplika dakizkioke elementuari, 2D eraldaketekin egin dugun bezala, baina beste batzuek lehenik perspektiba adieraztea eskatzen dute. Adibidez, elementua ardatzean biratzen badugu eta, elementuaren alde bat aurrerantz mugituko da eta bestea atzerantz, baina alde bakoitzaren tamainak berdin jarraituko du eta, horregatik, erabiltzaileak ez du eraldaketa ikusiko. Efektu errealista lortzeko, <strong>perspektiba()</strong> funtzioa erabili behar dugu. </p>
+    <pre>
+      <code>
+        header {
+          margin: 30px;
+          padding: 15px;
+          text-align: center;
+          border: 1px solid;
+          transform: perspective(500px) rotate3d(0, 1, 0, 45deg);
+          }
+          #titulo {
+          font: bold 26px Verdana, sans-serif;
+          }
+      </code>
+    </pre>
+    <p>Goiko erregelak lehenik perspektibaren balioa esleitzen du eta, ondoren, ardatzaren 45 graduko elementua hausten du eta (ardatz bat hautatzeko, gainerako ardatzak 0 balioarekin adierazi behar ditugu). Nabigatzaileak elementua hausten du eta, eraldaketarako perspektiba definitzen dugunez, elementuaren alde bat zabaltzen du eta bestea murrizten du perspektiba inpresioa sortzeko.
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS/eraldaketa4.png" alt="">
+        <figcaption>Goiburua 3D efektuarekin eta perspektibarekin</figcaption>
+      </div>
+      <p>CSSk efektu errealistagoa lortzeko erabil ditzakegun propietate batzuk ere baditu.</p>
+      <ul class="zerrendaArruntak">
+        <li><strong>perspective —</strong> Ezaugarri horrek <strong>perspective()</strong> funtzioaren antzera lan egiten du , baina aita elementuan jarduten du. Propietateak edukiontzi bat sortzen du, barruko elementuei perspektiba efektua aplikatzen diena.</li>
+        <li><strong>perspective-origin —</strong>Ezaugarri horrek x eta y ikuslearen koordenatuak aldatzen ditu. Onartzen dituen balioak hauek dira ehunekoak, pixelak, edo center, left, right, top eta bottom gako-hitzak. Lehenetsitako balioak % 50 dira.</li>
+        <li><strong>backface-visibility —</strong>Propietate horrek zehazten du elementuaren atzealdea ikusgai egongo den ala ez. Bi balio onartzen ditu: ikusgai edo hidden, lehenetsita dagoen ageriko balioarekin.</li>
+      </ul>
+      <p>Gure adibidean dokumentuaren goiburua gorputzaren alaba zuzena denez, propietate horiek < body> elementuari esleitu behar dizkiogu. Hurrengo adibideak gorputzaren perspektiba definitzen du eta, ondoren, goiburua transform propietatearekin hausten du, lehen egin dugun bezala.</p>
+      <pre>
+        <code>
+          body {
+            perspective: 500px;
+            perspective-origin: 50% 90%;
+            }
+            header {
+            margin: 30px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid;
+            transform: rotate3d(0, 1, 0, 135deg);
+            }
+            #titulua {
+            font: bold 26px Verdana, sans-serif;
+            }
+        </code><figcaption>Ikuslearentzat jatorri desberdina deklaratu dugu</figcaption>
+      </pre>
+      <p>Perspektiba aita elementuari aplikatzearen emaitza <strong>perspective()</strong> funtzioa zuzenean aldatu nahi dugun elementuan erabiliko bagenu bezala da, baina <strong>perspective-origin</strong> propietatea modu horretan adieraziz gero, ikuslearen koordenatuak alda ditzakegu.</p>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS/eraldaketa5.png" alt="">
+        <figcaption>3D efektua perspective propietatea erabiliz</figcaption>
+      </div>
+      <div class="garrantzi-oinarrizko">
+        <h6><strong>Egin ezazu zuk zeuk</strong></h6>
+          <p>Ordeztu zure CSS artxiboko arauak 3-80 zerrendako arauekin eta ireki dokumentua zure nabigatzailean. Gehitu <strong>backface-visibility</strong> propietatea <strong>hidden</strong>balioarekin goiburuari, alderantziz dagoenean ikusezin bihurtzeko.</p>
+      </div>
+      <p>Orain arte aztertu ditugun funtzio guztiek dokumentuan dauden elementuak aldatzen dituzte, baina behin webgunea erakusten denean, berdin jarraitzen du. Hala ere, eraldaketak eta seudoklasak konbinatu ditzakegu gure dokumentua aplikazio dinamiko bihurtzeko. Kasu honetan ezar dezakegun seudoklaseari "hover" deitzen zaio. Seudoklasek, lehen ikusi dugun bezala, efektu bereziak gehitzen dizkiete arauei. Kasu honetan, seudoclase: hover araua sagua erreferentzia elementuaren gainean dagoenean bakarrik aplikatzen da.</p>
+      <pre>
+        <code>
+          header {
+            margin: 30px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid;
+            }
+            header:hover {
+            transform: rotate(5deg);
+            }
+            #izenburua {
+            font: bold 26px Verdana, sans-serif;
+            }
+        </code><figcaption>Xaguaren aginduei adi</figcaption>
+      </pre>
+       <p>Goiko kodean goiburuko jatorrizko araua bera da, baina orain <strong>header</strong> hautagailuarekin identifikatutako arau berri bat gehitu da: <strong>hover</strong>, sagua elementuaren eremuan dagoenean transformazio-efektu bat aplikatzeko hari. Ondorioz, erabiltzaileak sagua buruaren gainean mugitzen duen bakoitzean, <strong>transform</strong> propietateak 5 gradu mugitzen du elementua, eta sagua elementuaren kaxatik kanpo badago, elementua berriz ere jatorrizko posiziora jotzen du. Kode horrek oinarrizko animazio erabilgarria lortzen du CSS propietateak bakarrik erabiliz.</p>
+       <div class="garrantzi-oinarrizko">
+        <h6><strong>Egin ezazu zuk zeuk</strong></h6>
+          <p>Ordeztu zure CSS artxiboko erregelak goian idatyzitako arauekin eta ireki dokumentua zure nabigatzailean. Pasa sagua goiburuaren gainetik eta ikusi efektua. Aldatu <strong>transform: rotate(5deg);</strong> sententziaren balioa eta ikusi efektua.</p>
+      </div>
+    </article>
+          
+  </section>
 
-     
 </body>
 </html>
