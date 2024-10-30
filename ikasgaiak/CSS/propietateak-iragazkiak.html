@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+     <section>
+      <article>
+        <h3><strong>CSS propietateak (iragazkiak)</strong></h3>
+    <p>Iragazkiek efektuak gehitzen dizkiote elementu bati eta haren edukiari. CSSk elementu bati iragazki bat esleitzeko filter propietatea eta hura sortzeko hurrengo funtzioak biltzen ditu.</p>
+    <ul class="zerrendaArruntak">
+      <li><strong>blur(balioa) —</strong>Funtzio honek lausotu egiten du. Pixeletan 1px-tik 10px-ra bitarteko balioak onartzen ditu.</li>
+      <li><strong>grayscale(balioa) —</strong>Funtzio honek grisen eskala bihurtzen ditu irudiaren koloreak. 0.1 eta 1 arteko zenbaki hamartarrak onartzen ditu.</li>
+      <li><strong>drop-shadow(x y tamaina kolorea) —</strong>Funtzio honek itzal bat sortzen du. <strong>x</strong> eta <strong>y</strong> atributuek itzalaren eta irudiaren arteko distantzia zehazten dute, <strong>tamaina</strong> atributuak itzalaren tamaina zehazten du, eta <strong>kolorea</strong> atributuak haren kolorea adierazten du.</li>
+      <li><strong>sepia(balioa) —</strong>Funtzio honek tonu sepia (okrea) ematen die irudiaren koloreei. 0.1 eta 1 arteko zenbaki hamartarrak onartzen ditu.</li>
+      <li><strong>brightness(balioa) —</strong>Funtzio honek irudiaren distira aldatzen du. 0.1 eta 10 arteko zenbaki hamartarrak onartzen ditu.</li>
+      <li><strong>contrast(balioa) —</strong>Funtzio honek irudiaren kontrastea aldatzen du. 0.1 eta 10 arteko zenbaki hamartarrak onartzen ditu.</li>
+      <li><strong>hue-rotate(balioa) —</strong>Funtzio honek errotazio bat aplikatzen die irudiaren koloreei. Onartzen du 1deg eta 360deg bitarteko balio bat gradutan.</li>
+      <li><strong>invert(balioa) —</strong>Funtzio honek irudiaren koloreak alderantzikatu eta negatibo bat sortzen du. 0.1 eta 1 arteko zenbaki hamartarrak onartzen ditu.</li>
+      <li><strong>saturate(balioa) — </strong>Funtzio honek irudiaren koloreak asetu egiten ditu. 0.1 eta 10 arteko zenbaki hamartarrak onartzen ditu.</li>
+      <li><strong>opacity(balioa) —</strong>Funtzio honek irudiaren opakutasuna aldatzen du. 0 eta 1 arteko zenbaki hamartarrak onartzen ditu (0 erabat gardena da eta 1 guztiz opakua).</li>
+    </ul>
+    <pre>
+      <code>
+        header {
+        margin: 30px;
+        padding: 15px;
+        text-align: center;
+        background:-webkit-linear-gradient(top, #ea0505, #57ee05, #85d4ec);
+        /*filter: blur(5px);*/
+        #titulua {
+        font: bold 26px Verdana, sans-serif;
+        color:rgb(250, 250, 250);
+      </code><figcaption>Iragazkia baliogabetua daukat <strong>/*filter: blur(5px);*/</strong></figcaption>
+    </pre>
+      <div class="irudiKutxa">
+      <img src="../../irudiak/CSS/iragazkia0.png" alt="" srcset="">
+      <figcaption>Iragazkirik gabe horrela ikusten da.</figcaption>
+    </div>
+    <p>Iragazki horiek, irudiei ez ezik, dokumentuko beste elementu batzuei ere aplika dakizkieke. Hurrengo adibideak lausotze-efektua aplikatzen dio gure dokumentuaren goiburuari.</p>
+    <pre>
+      <code>
+        header {
+        margin: 30px;
+        padding: 15px;
+        text-align: center;
+        background:-webkit-linear-gradient(top, #ea0505, #57ee05, #85d4ec);
+        filter: blur(5px);
+        #titulua {
+        font: bold 26px Verdana, sans-serif;
+        color:rgb(250, 250, 250);
+      </code><figcaption>Goiburuari iragazki bat aplikatu diogu</figcaption>
+    </pre>
+    <div class="irudiKutxa">
+      <img src="../../irudiak/CSS/iragazkia1.png" alt="" srcset="">
+      <figcaption>Goiburua lausotu egin dugu</figcaption>
+    </div>
+    <div class="garrantzi-oinarrizko">
+      <h6><strong>Egin ezazu zuk zeuk</strong></h6>
+      <p>Idatzi zure .css artxiboan goiko arauak eta ireki dokumentua zure nabigatzailean eta ikusi efektua. Jarraian frogatu atal honetan ikasitako funtzioak <strong>blur()</strong> funtzioa beste edozein funtzio erabilgarrirekin zer-nolako efektuak lor daitezkeen ikusteko.</p></p>
+    </div>
+    <div class="irudiTestuKaxa">
+      <div class="irudiKutxa irudiTestua">
+      <img src="../../irudiak/CSS/iragazkia2.png" alt="" srcset="">
+      <figcaption><strong>filter:hue-rotate(120deg);</strong> ipini diot. Aldatu balioa eta ikusi efektua.</figcaption>
+    </div>
+    <div class="irudiKutxa irudiKaxa">
+      <img src="../../irudiak/CSS/iragazkia3.png" alt="" srcset="">
+      <figcaption><strong>filter:opacity(0.4);</strong> ipini diot. Aldatu balioa eta ikusi efektua.</figcaption>
+    </div>
+    </div>
+    <div class="irudiTestuKaxa">
+      <div class="irudiKutxa irudiTestua">
+      <img src="../../irudiak/CSS/iragazkia4.png" alt="" srcset="">
+      <figcaption><strong>filter: drop-shadow(8px 8px 18px #336699);</strong> ipini diot. Aldatu balioak eta ikusi efektua.</figcaption>
+    </div>
+    <div class="irudiKutxa irudiKaxa">
+      <img src="../../irudiak/CSS/iragazkia5.png" alt="" srcset="">
+      <figcaption><strong>filter: grayscale(0.8);</strong> ipini diot. Aldatu balioa eta ikusi efektua.</figcaption>
+    </div>
+    </div>
+    
+      </article>
+     </section>
+</body>
+</html>
