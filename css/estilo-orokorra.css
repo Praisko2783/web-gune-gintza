@@ -107,6 +107,7 @@ p{
 .irudiKutxa{
   padding: 20px;
   text-align: center;
+  width: 100%;
 }
 .irudiKutxaEzk{
   float: left;
@@ -133,6 +134,7 @@ text-align: left;
 .irudiKaxa{
 text-align: center;
 }
+
 /*Azalpenak emateko koadro grisak letra urdinskarekin (h6).......*/
 .garrantzi-oinarrizko{
   padding: 1rem;
@@ -146,7 +148,7 @@ text-align: center;
 /*Kode atalak pre-code   ......... */
 pre{
   width: 80%;
-  margin: 25px auto;
+  margin:45px auto;
   padding: 10px;
   border-style: inset;
   overflow-x: scroll;
@@ -181,6 +183,10 @@ pre{
   .gidatala{
     grid-template-columns: repeat(1, 1fr);
     gap:5px;
+  }
+  .irudiTestuKaxa{
+    display: inline-block;
+    text-align: center;
   }
 }
 /*--------------Ikasgaien GRID-ari dagozkion erregelak--  HASI  */
@@ -249,14 +255,6 @@ pre{
   color:#085e02;
   font-weight: 700;
 }
-/*Zerrenden kontuak.......................
-.zerrendaArruntak{
-  padding-left: 3rem;
-}
-.zerrendaArruntak li{
-  font-size: 16px;
-}
-*/
 /*Ikasgaien 'section' atalak*/
 /*'section' atalaren goiburua*/
 .ikasgaiarena{
