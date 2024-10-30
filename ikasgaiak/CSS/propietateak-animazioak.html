@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+     <section>
+    <article>
+      <div>
+        <h3><strong>CSS propietateak (animazioak)</strong></h3>
+      </div>
+      <div class="banaketaTxikia"></div>
+      <p><strong>transition</strong> propietateak oinarrizko animazio bat sortzen du, baina prozesuan bi egoera baino ez dira sartzen: propietateen egungo balioek zehaztutako hasierako egoera eta balio berriek zehaztutako azken egoera. Benetako animazio bat sortzeko, bi egoera baino gehiago aitortu behar ditugu, film baten fotogramak bezala. CSSk honako propietate hauek ditu animazio konplexuagoak osatzeko.</p>
+      <ul class="zerrendaArruntak">
+        <li><strong>animation-name —</strong>Propietate honek animazioaren urratsak identifikatzeko erabiltzen den izena zehazten du. Hainbat animazio aldi berean konfiguratzeko erabil daiteke, izenak komaz bereizita adieraziz.</li>
+        <li><strong>animation-duration —</strong>Propietate honek animazioaren ziklo bakoitzaren iraupena zehazten du. Balioa segundotan zehaztu behar da (adibidez, 1s = segundo bat).</li>
+        <li><strong>animation-timing-function —</strong>Propietate honek zehazten du nola egingo den animazio-prozesua <strong>ease, linear, ease-in, ease-out eta ease-in-out</strong> balioekin deklaratutako Bézier kurba baten bidez.</li>
+        <li><strong>animation-delay —</strong>Propietate honek zehazten du nabigatzaileak zenbat denbora itxarongo duen animazioa hasi aurretik.</li>
+        <li><strong>animation-iteration-count —</strong>Propietate honek adierazten du zenbat aldiz exekutatuko den animazioa. Zenbaki oso bat edo balio infinitua onartzen du, eta, horren ondorioz, animazioa denbora mugagabez exekutatzen da. Lehenetsitako balioa 1 da.</li>
+        <li><strong>animation-direction —</strong>Propietate honek animazioaren zuzendaritza adierazten du. Lau balio onartzen ditu: <strong>normal (lehenetsita)</strong>, lehenestea, txandakatzea eta txandakatzea. Birgertatzearen balioak animazioaren norabidea alderantzikatzen du, eta urratsak adierazi diren kontrako norabidean erakusten ditu. Txandakako balioak animazioaren zikloak nahasten ditu, indize bakoitia norabide normalean dutenak eta gainerakoa norabide alderantzikatuan dutenak erreproduzituz. Azkenik, txandakako balioak –reverse– txandakatzen den gauza bera egiten du, baina alderantzizko zentzuan.</li>
+        <li><strong>animation-fill-mode —</strong>Propietate honek definitzen du nola eragiten dien animazioak elementuaren estiloei. <strong>none (lehenetsita)</strong>, forwards, backwards eta both balioak onartzen ditu. Forwards balioak animazioaren azken urratsean aplikatutako propietateek definitutako estiloekin mantentzen du elementua; backwards balioak, berriz, lehen urratseko estiloak aplikatzen ditu animazioa definitu bezain laster (exekutatu aurretik). Azkenik, <strong>both</strong> balioak bi efektuak sortzen ditu.</li>
+        <li><strong>animation —</strong> Propietate honek animazioaren balio guztiak aldi berean definitzea ahalbidetzen digu.</li>
+      </ul>
+         <p>Propietate horiek animazioa konfiguratzen dute, baina <strong>urratsak@keyframes</strong> arauaren bidez adierazten dira. Arau hori animazioa konfiguratzeko erabilitako izenarekin identifikatu behar da, eta urrats bakoitzean aldatu nahi ditugun propietateen zerrenda jaso behar du. Animazioaren urrats bakoitzaren posizioa ehunekotan zehazten da. % 0ko balioa lehenengo fotogramari edo animazioaren hasierari dagokio, eta % 100 amaierari..</p>
+         <pre>
+          <code>
+          header {
+            margin: 30px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid;
+            animation: eneanimazioa 1s ease-in-out 0s infinite normal none;
+            }
+            @keyframes eneanimazioa {
+            0% {
+            background: #FFFFFF;
+            }
+            50% {
+            background: #FF0000;
+            }
+            100% {
+            background: #FFFFFF;
+            }
+            }
+            #titulua {
+            font: bold 26px Verdana, sans-serif;
+            }
+         </code><figcaption>Animazio konplexua sortzen</figcaption>
+        </pre>
+         <p>Goikoko erregelek burualdeko hondoaren koloreak gorritik zurira aldatzen dituen animazio bat sortzen dute. Animation propietatearen bidez definitu da animazioa, segundo bateko iraupenarekin, eta balio infinituarekin behin eta berriz exekutatzeko konfiguratu da. Propietateak animazio izena ere ematen dio animazioari, ondoren <strong>@keyframes</strong> arauarekin konfiguratu ahal izateko.</p>
+         <p>Urrats bakoitzean, elementuari nola eragingo dion adierazten dute propietateek. Kasu honetan, hiru urrats aitortzen ditugu, 
+          <ul class="zerrendaArruntak">
+            <li>bat % 0an</li>
+            <li>beste bat % 50ean</li>
+            <li>hirugarren bat % 100ean</li>
+          </ul>
+          <p>Animazioa hasten denean, nabigatzaileak % 0an definitutako estiloak esleitzen dizkio elementuari, eta, ondoren, propietateen balioak pixkanaka aldatzen ditu, % 50ean definitutako balioetara iritsi arte. Prozesua balio horretatik jabetzari azken urratsean esleitutako azken balioraino (% 100) errepikatzen da.</p>
+          <p>Adibide honetan, animazioaren hasierako egoera % 0an eta amaierako egoera % 100ean definitzen dugu, baina animazioa beste edozein puntutan ere has dezakegu eta behar ditugun pauso guztiak eman ditzakegu, hurrengo adibidean bezala.</p>
+          <pre>
+            <code>
+              header {
+                margin: 30px;
+                padding: 15px;
+                text-align: center;
+                border: 1px solid;
+                animation: eneanimazioa 1s ease-in-out 0s infinite normal none;
+                }
+                @keyframes eneanimazioa {
+                20% {
+                background: #FFFFFF;
+                }
+                35% {
+                transform: scale(0.5);
+                background: #FFFF00;
+                }
+                50% {
+                transform: scale(1.5);
+                background: #FF0000;
+                }
+                65% {
+                transform: scale(0.5);
+                background: #FFFF00;
+                }
+                80% {
+                background: #FFFFFF;
+                }
+                }
+                #titulua {
+                font: bold 26px Verdana, sans-serif;
+                }
+            </code><figcaption>Gure animaziorako urrats gehiago deklaratzen</figcaption>
+          </pre>
+          <p>Goiko kodean, animazioa % 20an hasi eta % 80an amaitzen da, eta guztira bost urrats hartzen ditu. Animazioaren urrats bakoitzak bi propietate aldatzen ditu, elementuaren tamaina handitu eta hondoaren kolorea aldatzen dutenak, lehen urratsa eta azkena izan ezik, horiek kolorea aldatzen baitute errebote-efektua lortzeko.</p>
+
+          <div class="garrantzi-oinarrizko">
+            <h6><strong>Egin ezazu zuk zeuk</strong></h6>
+            <p>Idatzi zure .css artxiboan goiko arauak eta ireki dokumentua zure nabigatzailean eta ikusi efektua. Jarraian frogatu atal honetan ikasitako funtzioak blur() funtzioa beste edozein funtzio erabilgarrirekin zer-nolako efektuak lor daitezkeen ikusteko.</p>
+          </div>
+    </article>
+     </section>   
+
+</body>
+</html>

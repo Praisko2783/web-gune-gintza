@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+     <section>
+    <article>
+      <div>
+        <h3><strong>CSS propietateak (trantsizioak)</strong></h3>
+      </div>
+      <div class="banaketaTxikia"></div>
+      <p><strong>hover</strong>hover sasiklasearekin eraldaketa dinamikoak egin ditzakegu. Hala ere, benetako animazioak prozesuaren bi urratsen arteko trantsizioa eskatzen du. Horretarako, CSSk honako propietate hauek eskaintzen ditu.</p>
+      <ul class="zerrendaArruntak">
+        <li><strong>transition-property —</strong>Propietate honek trantsizioan parte hartzen duten propietateak zehazten ditu. Propietateen izenez gain, all balioa esleitu dezakegu propietate guztiek trantsizioan parte hartuko dutela adierazteko.</li>
+        <li><strong>transition-duration —</strong>Propietate honek trantsizioaren iraupena segundotan zehazten du.</li>
+        <li><strong>transition-timing-function —</strong>Propietate honek trantsiziorako balioak kalkulatzeko erabiltzen den funtzioa zehazten du. Honako balio hauek daude eskuragarri: <strong>ease, ease-in, easeout, ease-in-out, linear, step-start eta step-end</strong> .</li>
+        <li><strong>transition-delay —</strong>Propietate honek zehazten du nabigatzaileak zenbat denbora itxarongo duen animazioa hasi aurretik.</li>
+        <li><strong>transition —</strong>Propietate honek trantsizioaren balio guztiak aldi berean deklaratzeko aukera ematen digu.</li>
+      </ul>
+      <p>Propietate horiek inplementatuz, nabigatzaileari adierazten diogu animazioaren urrats guztiak sortu behar dituela eta elementuaren egungo egoeraren eta propietateek zehaztutakoaren arteko trantsizioa sortu behar duela. Hurrengo arauek aurreko adibidean sartutako eraldaketa animatzeko propietate transition inplementatzen dute.</p>
+      <pre>
+        <code>
+        header {
+        margin: 30px;
+        padding: 15px;
+        text-align: center;
+        border: 1px solid;
+        transition: transform 1s ease-in-out 0s;
+        }
+        header: hover {
+        transform: rotate (5deg);
+        }
+        #izenburua {
+        font: bold 26px Verdana, sans-serif;
+        }
+        </code><figcaption><strong>transition</strong> propietatearekin animazio bat sortzen</figcaption>
+      </pre>
+      <p>Transition propietateak lau parametro ere jaso ditzake, espazio batez bereizita. </p>
+      <ul class="zerrendaArrunta">
+        <li><srtong>Lehen balioa (gure adibidean transform propietatea</srtong>trantsizioa sortzeko kontuan hartuko den propietatea da.</li>
+        <li><srtong>Bigarren parametroa (1s = segundo bat)</srtong> animazioaren iraupena zehazteko erabiltzen da </li><div class=""></div>        
+        <li><srtong>Hirugarren parametroa (Bézier kurba)</srtong> trantsizioa nola egingo den zehazten duen balio bat da.</li>
+        <li>
+          <strong>Laugaren parametroa (0s = zero segundoa)</strong> animazioak hasteko zenbat segundo behar dituen zehazten du.</li>
+      </ul>
+      <p>Trantsizioak propietate bat baino gehiagoren balioak kontuan hartu behar baditu, koma bidez bereizitako propietateen izenak adierazi behar ditugu. Animazioa sortzeko aldatzen diren propietate guztiak kontuan hartu behar direnean, <strong>all</strong> balioa erabil dezakegu horren ordez.</p>
+      <div class="garrantzi-oinarrizko">
+        <h6><strong>Egin ezazu zuk zeuk</strong></h6>
+        <p>Ordeztu zure CSS artxiboko erregelak goiko kodeko erregelekin eta ireki dokumentua zure nabigatzailean eta mugitu saguaren punteroa buruaren gainean animazioari ekiteko.</p>
+      </div>
+
+      </article>
+     </section>
+</body>
+</html>
