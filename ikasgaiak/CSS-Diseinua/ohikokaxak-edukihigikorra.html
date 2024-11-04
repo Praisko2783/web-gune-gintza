@@ -3,31 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Eduki higikorra</title>
 </head>
 <body>
     <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
-    <article class="ikasgaia" id="html-egitura-elementua">
-      <div class="azpitituluak">
-        <h3><strong>Ohiko kaxetan, eduki higikorrak</strong></h3>
+    <article>
+      <div>
+        <h3><strong>Ohiko kaxen eredua</strong></h3>
       </div>
       <div class="banaketaTxikia"></div>
-      <h4>Higikortasuna</h4>
-      <h5>Aipatu dugun bezala, Block elementuak elkarren gainean jartzen dira, eta Inline elementuak ezkerretik eskuinera kokatzen dira lerro berean. Kutxa tradizionalaren ereduak ezartzen duenez, elementuek leihoaren alde banatan flotatu dezakete, eta lerro berean partekatu dezakete espazioa beste elementu batzuekin, edozein motatakoak direla ere. Adibidez, diseinuan zutabeak irudikatzen dituzten bi Block elementu baditugu, zutabe bat ezkerrean eta bestea eskuinean koka ditzakegu, elementuak nahi dugun aldera flotaraziz. Honako hauek dira CSSk helburu horretarako eskaintzen dituen propietateak.</h5>
-      <div class="banaketaTxikia"></div>
-      <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos dolorem ea earum dolor molestiae similique aliquid illo magnam, iure facere repellendus veritatis laboriosam quae reprehenderit inventore accusamus sit nam suscipit.</h6>
-      <div class="banaketaTxikia"></div>
-      <h4>Eduki higikorra</h4>
-      <h5><strong><em>float eta clear</em></strong>  propietateak, jatorrian, edukia elementu baten inguruan flotatzeko erabili ziren. Adibidez, testu bat irudi baten ondoan erakustea nahi badugu, irudia ezkerrerantz edo eskuinerantz flotarazi dezakegu, eta testuak irudiarekin partekatuko du lerro berean dagoen espazioa.</h5>
-      <div class="banaketaTxikia"></div>
-      <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos dolorem ea earum dolor molestiae similique aliquid illo magnam, iure facere repellendus veritatis laboriosam quae reprehenderit inventore accusamus sit nam suscipit.</h6>
-      <div class="banaketaTxikia"></div>
-      <h4>Elementu higikorrak</h4>
-      <h5>Edukiontzi malgu baten barruko elementu bat malgu bihurtzeko, halakotzat jo behar dugu. Honako hauek dira elementu malguak konfiguratzeko dauden propietateak.</h5>
-      <div class="banaketaTxikia"></div>
-      <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos dolorem ea earum dolor molestiae similique aliquid illo magnam, iure facere repellendus veritatis laboriosam quae reprehenderit inventore accusamus sit nam suscipit.</h6>
-      </article>
+      <p>Ohiko kaxen ereduari jarraikiz, <strong>block</strong> elementuak bata bestearen azpian jartzen dira eta <strong>inline</strong> elementuak ezkerretik eskuinera kokatzen dira lerro berean. ohiko kaxen ereduak ezartzen duenez, elementuek leihoaren alde banatan har dezakete lekua, eta lerro berean partekatu espazioa beste elementu batzuekin, edozein motatakoak direla ere.</p>
+      <p>Demagun gure diseinuan zutabeak irudikatzen dituzten bi <strong>block</strong> elementu ditugula, zutabe bat ezkerrean eta bestea eskuinean, elementuak nahi dugun aldera higiaraziz. Honako hauek dira CSSk zeregin horretarako eskaintzen dituen propietateak.</p>
+      <ul class="zerrendaArruntak">
+        <li><strong>float —</strong>Propietate honek aukera ematen dio elementu bati alde batera edo bestera flotatzeko eta erabilgarri dagoen espazioa okupatzeko, baita linea beste elementu batekin partekatu behar duenean ere. Balio erabilgarriak none (flotatzen ez duen elementua), left (ezkerrerantz flotatzen duen elementua) eta right (eskuinerantz flotatzen duen elementua) dira. </li>
+        <li><strong>clear —</strong>Propietate honek dokumentuaren fluxu normala berrezartzen du eta ez die uzten elementuei ez ezkerretara ez eskuinera desplazatzen. Balio erabilgarriak <strong>none, left, right</strong> eta <strong>both (biak)</strong> dira.</li>
+      </ul>
+      <p><strong>float</strong> propietatearen ondorioz, elementua alde batera edo bestera higitzen da erabilgarri dagoen espazioan. Propietate hori aplikatzen denean, elementuek ez diote dokumentuaren fluxu normalari jarraitzen, erabilgarri dagoen espazioaren ezkerrera edo eskuinera mugitzen dira, <strong>float</strong> propietatearen balioari erantzunez eta <strong>clear</strong> propietatearekin kontrakoa zehaztu ezean.
+      </p> 
+      <h4><strong>Eduki flotatzailea</strong></h4>
+      <p><strong>float</strong> eta <strong>clear</strong> propietateak, jatorrian, edukia elementu baten inguruan flotarazteko erabili ziren. Adibidez, testu bat irudi baten ondoan erakustea nahi badugu, irudia ezkerrerantz edo eskuinerantz flotaraz dezakegu, eta testuak irudiarekin partekatuko du lerro berean eskuragarri dagoen espazioa.</p>
+      <pre>
+        <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="es"&gt;
+          &lt;head&gt;
+            &lt;title&gt;Hemen doa dokumentauren izenburuao&lt;/title&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="description" content="Hau HTML5 dokumentua da"&gt;
+            &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+            &lt;link rel="stylesheet" href="enestiloak.css"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;section&gt;
+              &lt;img src="eneirudia.jpg" width="120"&gt;
+              &lt;p&gt;HTMLk, HyperText Markup Language ingelesezko siglak (hipertestu-marken lengoaia), web-orriak egiteko markatze-lengoaiari egiten dio erreferentzia. Web lengoaiarik garrantzitsuena da, eta berebiziko garrantzia du World Wide Web (WWW) sortu, garatu eta hedatzean.&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;footer&gt;
+              &lt;p&gt;Wikipediak argitaratua&lt;/p&gt;
+            &lt;/footer&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+        </code><figcaption><strong>float</strong> propietatea probatzen</figcaption>
+      </pre>
+         <p>Goiko dokumentuak irudi bat eta paragrafo bat ditu. Dokumentu hau irekitzen badugu lehenetsitako estiloak erabiliz, &lt;p&gt; elementua &lt;img&gt; elementuaren azpian agertuko da. </p>
+         <div class="irudiKutxa">
+          <img src="../../irudiak/CSS-DISEINU/ohikokaxak3.png" alt="Irudia eta paragrafoa, berezko estiloekin">
+          <figcaption>Irudia eta paragrafoa, berezko estiloekin</figcaption>
+         </div> 
+          <p>Testua irudiaren ondoan erakutsi nahi badugu, &lt;img&gt; elementua ezkerrerantz edo eskuinerantz flotatzea eragin dezakegu. </p>
+          <pre>
+            <code>
+              section img {
+                float: left;
+                margin: 0px 10px;
+                }
+            </code><figcaption>Irudia ezkerrean kokatzeko</figcaption>
+          </pre>
+          <p>Elementu batek alde batera flotatzen duenean, beste elementuek bere inguruan kokatzen dira, espazio erabilgarria okupatuz.</p>
+         <div class="irudiKutxa">
+          <img src="../../irudiak/CSS-DISEINU/ohikokaxak4.png" alt="Irudiak ezkerrerantz flotatzen du">
+          <figcaption>Irudiak ezkerrerantz flotatzen du</figcaption>
+         </div>  
+         <p><strong>left</strong> balioaren ordez <strong>float</strong> propietateari <strong>right</strong>  balioa esleitzen badiogu, irudiak eskuinerantz flotatuko du eta testuak ezkerreko aldean dagoen espazioa hartuko du. </p> 
+         <pre>
+          <code>
+            section img {
+              float: right;
+              margin: 0px 10px;
+              }
+          </code><figcaption>Irudia eskuinean kokatzeko</figcaption>
+        </pre>
+         <div class="irudiKutxa">
+          <img src="../../irudiak/CSS-DISEINU/ohikokaxak5.png" alt="Irudiak eskuinerantz flotatzen du">
+          <figcaption>Irudiak eskuinerantz flotatzen du</figcaption>
+         </div> 
+         <div class="garrantzi-oinarrizko">
+          <h6><strong>Egin ezazu zuk zeuk</strong></h6>
+          <p>Sortu HTML fitxategi berri bat goian daukazun dokumentuarekin eta CSS fitxategi bat izen bera eta 4-3 Zerrenda erregela dituena. Gogoratu miimagen.jpg irudia direktorio berean sartzea (irudia gure webgunean dago eskuragarri). Ireki dokumentua zure nabigatzailean. 4-4 irudiak erakusten duenaren antzeko zerbait ikusi beharko nuke. Esleitu right balioa float jabetzari eta eguneratu dokumentua zure nabigatzailean. Irudia eskuinerantz mugitu beharko litzateke, 4-5 irudiak erakusten duen bezala.</p>
+         </div>
+         <p>Nabigatzaileek ezin dute edukiontzi baten tamaina kalkulatu elementu flotatzaileen tamainatik abiatuta; beraz, float jabetzak eragindako elementua lerro bereko gainerako elementuak baino altuagoa bada, edukiontzia gainezkatuko du. Esate baterako, hurrengo irudiak azaltzen du zer gertatzen den &lt;img&gt; elementuaren <strong>width</strong>  atributua gure adibidean ezabatzen badugu eta nabigatzaileari uzten badiogu irudia jatorrizko tamainan erakusten (adibide honetan, hondo gris bat esleitzen diogu &lt;section&gt; elementuari, okupatzen duen eremua identifikatu ahal izateko).</p>
+         <pre>
+          <code>
+          (...)
+              &lt;section&gt;
+                &lt;img src="eneirudia.jpg" width="-----"&gt;
+                &lt;p&gt;HTMLk, HyperText Markup Language ingelesezko siglak (hipertestu-marken lengoaia), web-orriak egiteko markatze-lengoaiari egiten dio erreferentzia. Web lengoaiarik garrantzitsuena da, eta berebiziko garrantzia du World Wide Web (WWW) sortu, garatu eta hedatzean.&lt;/p&gt;
+              &lt;/section&gt;
+          (...)
+          </code><figcaption><strong>float</strong> propietatea probatzen</figcaption>
+         </pre>
+         <div class="irudiKutxa">
+          <img src="../../irudiak/CSS-DISEINU/ohikokaxak6.png" alt="">
+          <figcaption>Irudia bere edukiontzia baino altuagoa da</figcaption>
+         </div>
+         <p>Nabigatzaileak testuaren tamainaren arabera kalkulatzen du edukiontziaren tamaina, eta, beraz, irudia edukiontziaren mugetatik kanpo dago. Irudiak ezkerrerantz egiten duenez eta &lt;section&gt; elementutik kanpora hedatzen denez, hurrengo elementuaren edukiak flotatzen jarraitzen du irudiak utzitako espazioa okupatu arte, eta, horrela, 4-6 irudian erakutsitako emaitza lortzen dugu (&lt;footer&gt; elementua irudiaren eskuineko aldean agertzen da, irudiaren azpian egon beharrean). Edukiontzia ur gaineko elementuei eusteko bezain altua dela ziurtatzeko modu bat <strong>overflow</strong> propietatea esleitzea da, <strong>auto</strong> balioarekin. Horrek edukiontziaren tamaina kalkulatzera behartzen du nabigatzailea, barruan dauden elementu guztiak kontuan hartuta.</p>
+         <pre>
+          <code>
+            section {
+              background-color: #CCCCCC;
+              overflow: auto;
+              }
+              section img {
+              float: left;
+              margin: 0px 10px;
+              }
+          </code><figcaption>Dokumentuaren fluxu normala <strong>overflow</strong> propietatearekin berreskuratuz</figcaption>
+         </pre>
+           <p>Overflow propietateak ez dio edukiontziko edukiari uzten edukiontziaren tamaina luzatuz edo desplazamendu-barrak sartuz eduki guztia ikusi ahal izateko, edukiontziaren tamaina ezin bada aldatu. </p>
+           <div class="irudiKutxa">
+            <img src="../../irudiak/CSS-DISEINU/ohikokaxak7.png" alt="">
+            <figcaption>Irudiak ez du jada zure edukiontzian gainezka egiten</figcaption>
+           </div>
+        <div class="garrantzi-oinarrizko">
+          <h6><strong>Egin ezazu zuk zeuk</strong></h6>
+          <p>Ezabatu &lt;img&gt; elementuaren <strong>width</strong> atributua HTML dokumentuan. Ordeztu arauak CSS artxiboan goian ikusi dugun kodearekin. Ireki dokumentua zure nabigatzailean. Goiko irudian daukazunaren antzeko zerbait ikusi beharko zenuke.</p>
+        </div>
+      <p>Dokumentuaren fluxua normalizatzeko beste aukera bat da edukiontziaren barruan elementu flotatzailearen jarraian dagoen elementuaren <strong>clear</strong>propietatea deklaratzea. Elementu flotatzaile baten ondoren beti ez dugunez elementu anaiarik, elementuek flotatzen jarrai ez dezaten, teknika honek dokumentuari elementu gehigarri bat eranstea eskatzen du. Adibidez, &lt;p&gt; elementuaren azpian &lt;div&gt; elementu bat sar dezakegu gure dokumentuko &lt;section&gt; elementuaren barruan, hurrengo elementuek alboetarantz flotatzen jarrai ez dezaten.</p>
+
+      <pre>
+        <code>
+      &lt;DOCTYPE html&gt;
+        &lt;html lang="es"&gt;
+          &lt;head&gt;
+            &lt;title&gt;Hemen doa dokumentuaren izenburua&lt;/title&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="description" content="Hau HTML5 dokumentua da."&gt;
+            &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+            &lt;link rel="stylesheet" href"enestiloak.css"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;section&gt;
+              &lt;img src="eneirudia.jpg"&gt;
+              &lt;p&gt;HTML-k, HyperText Markup Language-ren ingelesezko siglak, hipertexto-marken lengoaiari egiten dio erreferentzia. Web-orriak egiteko markatzeko lengoaiari egiten dio erreferentzia. Web-lengoaiarik garrantzitsuena hartzen da kontuan, eta funtsezko asmakizuna da World Wide Webaren agerpenean, garapenean eta hedapenean.
+              <strong>&lt;div class="clearfloat"&gt;&lt;/div&gt;</strong>
+            &lt;/section&gt;
+          &lt;footer&gt;
+            &lt;p&gt;Wikipediak argitaratuta&lt;/p&gt;
+          &lt;/footer&gt;
+        &lt;/body&gt;
+      &lt;/html&gt;
+        </code><figcaption><strong>clear</strong> propietatea aplikatzeko elementu huts bat gehituz</figcaption>
+      </pre>
+
+        <p>Kasu honetan, <strong>clear</strong> propietatea elementu gehigarriari esleitu behar diogu. Propietateak alde bateko edo bietako fluxua leheneratzeko balioak eskaintzen ditu. Normalean dokumentuaren fluxu normala bi aldeetan berrezarri behar dugunez, <strong>both</strong> izaten da gogokoen dugun balioa.</p>
+        <pre>
+          <code>
+          section {
+            background-color: #CCCCCC;
+            }
+            section img {
+            float: left;
+            margin: 0px 10px;
+            }
+            .clearfloat {
+            clear: both;
+            }
+          </code><figcaption>Dokumentuaren fluxu normala berrezarriz, <strong>clear</strong> propietatearekin</figcaption>
+        </pre>
+
+      <p>Goiko arauekin,&lt;div&gt; elementuak dokumentuaren fluxu normala berrezartzen du, nabigatzaileari edukitik abiatuta edukiontziaren tamaina kalkulatzeko aukera emanez, beheko irudian ikusten dugun emaitza lortzeko.</p> 
+      <div class="garrantzi-oinarrizko">
+        <h6><strong>Egin ezazu zuk zeuk</strong></h6>
+        <p>Eguneratu zure HTML fitxategia goian ikusitako dokumentuko kodea erabiliz eta ordeztu CSS artxiboko erregelak goiko kodearekin. Ireki dokumentua zure nabigatzailean. Azken irudiaren antzeko zerbait ikusi beharko nuke.</p>
+      </div>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/ohikokaxak8.png" alt="">
+        <figcaption>Dokumentuko elementuen fluxu normala berreskuratuta</figcaption>
+       </div>
+
+    </article>
 
 </body>
 </html>
