@@ -50,7 +50,7 @@
       cursor: pointer;
       background: #0c0393;
       color: aliceblue;
-      width: 50%;
+      width: 38%;
       border-right: 1px aliceblue solid;
   }
   .nav-menu label .menu-icon{
@@ -201,7 +201,7 @@
         cursor: pointer;
         background: #0c0393;
         color: aliceblue;
-        width: 50%;
+        width: 38%;
         border-right: 1px aliceblue solid;
       }
       .accordion-body{
