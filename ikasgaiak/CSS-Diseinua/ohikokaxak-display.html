@@ -3,27 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Display propietatea</title>
 </head>
 <body>
     <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
      <section>
       
      </section>
-    <article class="ikasgaia" id="html-egitura-elementua">
-      <div class="azpitituluak">
-        <h3><strong><em>Display</em></strong></h3>
+    <article>
+      <div>
+        <h3><strong><em>Kaxak (display)</em></strong></h3>
       </div>
       <div class="banaketaTxikia"></div>
-      <h4>Display</h4>
-      <h5>Elementu bat Block edo Inline motakoa izatea nabigatzaileak erabakitzen du, baina baldintza hori CSStik aldatu ahal izango dugu ezaugarri honekin. Display — Propietate honek elementua pantailan aurkezteko erabiltzen den kutxa mota definitzen du. Hainbat balio daude jabetza honetarako. Gehien erabiltzen direnak none (elementua ezabatzen du), block (elementua lerro berri batean eta tamaina pertsonalizatuarekin erakusten du), inline (elementua lerro berean erakusten du) eta inlineblock (elementua lerro berean eta tamaina pertsonalizatuarekin erakusten du) dira.</h5>
-      <h5>Egiturazko elementuak block balioarekin konfiguratzen dira lehenetsita, eta edukia irudikatzen duten elementuak, berriz, inline gisa konfiguratu ohi dira. Elementu mota aldatu nahi badugu, display propietatea balio berri batekin esleitu besterik ez dugu egin behar. Horrela, nabigatzaileen bertsio zaharrek ez dituzte HTML5ek gehitutako elementu berriak ezagutzen, eta lehenetsitako Inline elementutzat hartzen dituzte. Elementu horiek nabigatzaile guztietan Block elementu gisa interpretatzen direla ziurtatu nahi badugu, hurrengo araua adieraz dezakegu gure estilo-orrietan.</h5>
-      <h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, possimus delectus. Deleniti voluptatum totam in, quisquam amet quas reiciendis cum reprehenderit. Reiciendis quia quibusdam pariatur cupiditate consectetur, sequi magni iste.</h6>
+      <p>Aurreko kapituluan aipatu dugun bezala, nabigatzaileek kaxa birtual bat sortzen dute elementu bakoitzaren inguruan, okupatzen duten eremua zehazteko. Kaxa horiek pantailan antolatzeko, elementuak oinarrizko bi motatan sailkatzen dira: <strong>Block (blokea)</strong> eta <strong>Inline (lerroan)</strong>.</p>
+      <p>Bi mota horien arteko desberdintasun nagusia da <strong>block</strong> elementuek tamaina pertsonalizatua dutela eta lerro-jauziak sortzen dituztela; <strong>inline</strong> elementuek, berriz, edukiaren araberako tamaina dute, eta ez dute lerro-jauzirik sortzen. Beren ezaugarriak direla eta, <strong>block</strong> elementuak banan-banan jartzen dira lerro desberdinetan, eta <strong>inline</strong> elementuak bata bestearen ondoan jartzen dira lerro berean, espazio nahikorik ez badago behintzat eskuragarri, beheko irudian ikusten dugun bezala.</p>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/ohikokaxak1.png" alt="">
+        <figcaption><strong>block</strong> eta <strong>inline</strong> elementuak</figcaption>
+      </div>
+        <p>Beren ezaugarriak direla eta, <strong>block</strong> elementuak egokiak dira web orri batean zutabeak eta sekzioak sortzeko, eta <strong>inline</strong> elementuak, berriz, egokiak dira edukia irudikatzeko. Horregatik, dokumentu baten egitura definitzen duten elementuak, hala nola &lt;section&gt;, &lt;nav&gt;, &lt;header&gt;, &lt;footer&gt;, edo &lt;div&gt;, <strong>block</strong> elementu bezala deklaratzen dira lehenetsita. Bste batzuk &lt;span&gt;,  &lt;strong&gt; edo  &lt;em&gt; adibidez <strong>inline</strong> elementu gisa deklaratzen dira lehenetsita</p>.
+        <div>
+          <h3><strong><em>Display</em></strong></h3>
+        </div>
+        <p>Elementu bat <strong>block</strong> edo <strong>inline</strong> motakoa izatea nabigatzaileak zehazten du, baina CSStik baldintza hori alda dezakegu <strong>display</strong> propietatearekin.</p>
+        <p><strong>display</strong> propietateak elementua pantailan aurkezteko erabiltzen den kaxa mota definitzen du. Hainbat balio daude propietate horrentzat. Gehien erabiltzen direnak <strong>none </strong>(elementua ezabatzeko), <strong>block </strong>(elementua lerro berri batean eta tamaina pertsonalizatuarekin erakusteko), <strong>inline</strong> (elementua lerro berean erakusteko) eta <strong>inlineblock</strong> (elementua lerro berean eta tamaina pertsonalizatuarekin erakusteko).</p>
+        <p>Egiturazko elementuak <strong>block</strong> balioarekin konfiguratzen dira lehenetsita, eta edukia irudikatzen duten elementuak, berriz, <strong>inline</strong> gisa konfiguratu ohi dira. Elementu mota aldatu nahi badugu, <strong>display</strong> propietatea balio berri batekin esleitu besterik ez dugu egin behar. Horrela, HTML5ek gehitutako elementuak ez dituzten nabigatzaileen bertsio zaharrak behartu egingo ditugu. Elementu horiek nabigatzaile guztietan <strong>block </strong> elementu gisa interpretatzen direla ziurtatu nahi badugu, beheko erregela deklara dezakegu gure estilo-orrietan.</p>
+        <pre>
+          <code>
+            header, section, main, footer, aside, nav, article, figure, figcaption
+            {
+            display: block;
+            }
+          </code><figcaption>HTML5 elementuak <strong>block </strong> elementu gisa definitu ditugu</figcaption>
+        </pre>
+        <p><strong>display</strong> propietateak beste balio batzuk ditu, <strong>block </strong> eta <strong>inline </strong> balioez gain. Adibidez, <strong>none </strong> balioak elementua ezkutatzen du. Balio hori elementu bati esleitzen zaionean, elementua ez balego bezala aurkezten da dokumentua. Erabilgarria da dokumentua dinamikoki JavaScript-etik aldatu nahi dugunean edo web diseinu moldagarria erabiltzen dugunean gure webgunea diseinatzeko, hurrengo kapituluetan ikusiko dugun bezala.</p>
+        <div class="garrantzi-oinarrizko">
+          <h6><strong>Oinarrizkoa</strong></h6>
+          <p>Propietatearen <strong>none </strong> balioak dokumentuaren elementua ezabatzen du. Elementu ikusezin hori agertu nahi badugu, beste CSS propietate bat erabil dezakegu, <strong>visibility </strong> izenekoa. Propietate horrek <strong>visibility </strong> eta <strong>hidden </strong> balioak onartzen ditu. Balioa propietateari esleitzen zaionean, elementua eta edukia sortzen dira (pantailan espazio bat hartzen dute), baina ez zaizkio erabiltzaileari erakusten.</p>
+        </div>
+        <p><strong>display </strong> propietatearentzat beste balio erabilgarri bat <strong>inline-block </strong> da. <strong>block </strong> elementuek bi ezaugarri dituzte:</p>
+        <p>Batetik, lerro-jauzi bat eragiten dute; beraz, hurrengo elementua lerro berri batean agertzen da, eta, bestetik, tamaina pertsonalizatua har dezakete.</p>
+        <p>Horregatik, dagoeneko ikusi ditugun <strong>width </strong> eta <strong>height </strong> propietateek lehen <strong>block </strong> elementuekin bakarrik lan egiten zuten. Propietate horiek &lt;span&gt; bezalako <strong>inline </strong> elementu bati esleitzen badizkiogu, ez da ezer gertatzen. Baina <strong>display </strong> propietateak <strong>inline-block </strong>balioa eskaintzen du tamaina pertsonalizatua har dezakeen <strong>inline </strong> elementu bat definitzeko.</p>
+        <p>>Horri esker <strong>inline-Block </strong>elementuak bata bestearen ondoan jarriko dira ilara berean, baina nahi dugun tamainarekin.</p>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS-DISEINU/ohikokaxak2.png" alt="">
+          <figcaption><strong>inline-block</strong> elementuak</figcaption>
+        </div>
+        <p><strong>inline-block</strong> elementuei esker, nahi dugun tamainako sekzioak sor ditzakegu gure webgunean, eta, behar izanez gero, lerro berean kokatu. Adibidez, bata bestearen ondoan erakutsi beharreko bi <strong>block </strong> elementu baditugu, hala nola 2. kapituluan garatutako dokumentuko &lt;section&gt; eta &lt;aside&gt; elementuak, <strong>inline-block </strong>elementu gisa deklara ditzakegu.</p> 
+        <p>Gure webguneetako zutabe eta atal guztiak diseinatzeko orduan <strong>inline-block </strong>elementuak erabiltzea tentagarria izan daitekeen arren, CSSk propietate hobeak ditu helburu horretarako. Ezaugarri horiek <strong>kaxen eredua</strong> deitzen dugunaren zati bat dira, kaxak pantailan nola erakutsiko diren, betetzen duten espazioa eta eskuragarri dagoen espazioa kontuan hartuta orrian nola antolatzen diren zehazten duten arauen multzo bat.</p>
+        <p>Gaur egun hainbat <strong>kaxa-eredu</strong> daude eskuragarri, kaxa tradizionalaren eredua eta kaxa malguaren eredua estandartzat hartuta. Gure web orriak diseinatzen ikasteko, bi eredu horiek nola funtzionatzen duten ulertu behar dugu.</p>
       </article>
       <div class="banaketaTxikia"></div>
       
       </article>
+      <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div class="garrantzi-oinarri" style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
 
 </body>
 </html>
