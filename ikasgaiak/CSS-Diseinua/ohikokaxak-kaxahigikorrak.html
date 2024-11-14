@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Kaxa higikorrak</title>
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+    <article>
+      <div>
+        <h3><strong>Kaxa higikorrak</strong></h3>
+      </div>
+      <div class="banaketaTxikia"></div>
+          <p><strong>clear</strong> propietateak ez die eragiten elementuaren beste alderdi batzuei, eta ez ditu desplazamendu-barrak gehitzen <strong>overflow</strong> propietateak egiten duen bezala. Beraz, dokumentu baten egitura antolatzeko ohiko kaxen ereduan ezartzen dena da. <strong>float</strong> eta <strong>clear</strong> propietateekin elementuak non erakutsiko diren zehaztasunez kontrola dezakegu eta gure web-orriak diseinatu. 
+            <p>Adibidez, hurrengo dokumentuak &lt;section&gt; elementu bat dauka, lau elementu &lt;div&gt; dituena, alde batera higiarazi behar ditugunak orrialdearen barruan zutabe bihurtzeko, eta amaieran &lt;div&gt; elementu bat, dokumentuaren fluxu normala berreskuratzeko erabiliko duguna.</p>
+            <pre>
+              <code>
+              &lt;doctype html&gt;
+              &lt;html lang="es"&gt;
+              &lt;head&gt;
+                  &lt;title&gt;Testu hau dokumentuaren izenburua&lt;/title&gt;
+                  &lt;meta charset="utf-8"&gt;
+                  &lt;meta name="description" content="Hau HTML5"DOKUMENTU bat da.&gt;
+                  &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+                  &lt;link rel="stylesheet" href"nirestiloa.css"&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                  &lt;section id="kaxanagusia"&gt;
+                      &lt;div id="kaxa-1"&gt;1. kaxa&lt;/div&gt;
+                      &lt;div id="kaxa-2"&gt;2. kaxa&lt;/div&gt;
+                      &lt;div id="kaxa-3"&gt;3. kaxa&lt;/div&gt;
+                      &lt;div id="kaxa-4"&gt;4. kaxa&lt;/div&gt;
+                      &lt;div class="leheneratu"&gt;&lt;/div&gt;
+                  &lt;/sektion&gt;
+              &lt;/body&gt;
+              &lt;/html&gt;
+              </code><figcaption><strong>float</strong> propietatea probatzeko dokumentu bat sortzen</figcaption>
+            </pre>
+          
+          <p>Aurretik beste dokumentu batzuekin gertatu den bezala, dokumentu hau estilo pertsonalizatuak esleitu gabe irekitzen badugu, elementuen edukia goitik behera erakusten da, lehenetsitako dokumentuaren fluxuari jarraituz.</p>
+          <div class="irudiKutxa">
+            <img src="../../irudiak/CSS-DISEINU/kaxahigikor1.png" alt="" srcset="">
+            <figcaption>Dokumentuaren fluxu normala</figcaption>
+          </div>
+          <p>Kaxa horiek bata bestearen ondoan kokatzea nahi dugunez, gure web-orriko zutabeak irudikatuz, tamaina finko bat eman behar diegu eta alde batera edo bestera higiarazi. Tamaina <strong>width</strong> eta <strong>height</strong> propietateen bidez zehazten da, eta higiteko modua <strong>float</strong> propietateak zehazten du, eta azken horri esleitu beharko diogu balioa lortu nahi dugunaren arabera. kaxak ezkerrerantz higitzen baditugu, ezkerretik eskuinera lerrokatuko dira, eta eskuinerantz higiarazten baditugu, gauza bera egingo dute, baina eskuinetik ezkerrera.
+          <p>Esate baterako, ezkerretara higiarazten baditugu, 1. kaxa jarriko da hasieran kaxa nagusiaren ezkerraldean, eta gainerako kaxak haren eskuinaldean jarriko dira, kodean adierazitako ordenan (kaxak ezkerrerantz higitzen dira, edukiontziaren edo aurreko kaxaren mugarekin talka eginez).</p>
+          <pre>
+            <code>
+              #kaxanagusia {
+              width: 600px;
+              border: 1px solid;
+              }
+              #kaxa-1 {
+              float: left;
+              width: 140px;
+              height: 50px;
+              margin: 5px;
+              background-color: #AAAAAA;
+              }
+              #kaxa-2 {
+              float: left;
+              width: 140px;
+              height: 50px;
+              margin: 5px;
+              background-color: #CCCCCC;
+              }
+              #kaxa-3 {
+              float: left;
+              width: 140px;
+              height: 50px;
+              margin: 5px;
+              background-color: #AAAAAA;
+              }
+              #kaxa-4 {
+              float: left;
+              width: 140px;
+              height: 50px;
+              margin: 5px;
+              background-color: #CCCCCC;
+              }
+              .leheneratu {
+              clear: both;
+              }
+            </code><figcaption>Kaxak ezkerretara flotatzen</figcaption>
+          </pre>
+          <p>Goiko adibidean, 600 pixeleko zabalera ematen diogu &lt;section&gt; elementuari, eta 140 pixeleko tamaina kaxa bakoitzari 50 pixeleko. Fluxu normalari jarraituz, kaxa horiek bata bestearen gainean pilatuko lirateke, baina float jabetza left balioarekin esleitzen diegulako, ezkerrerantz flotatzen dute edukiontziaren edo beste kaxa baten mugarekin topo egin arte, eta lerro berean dagoen espazioa betetzen dute.</p>
+          <div class="irudiKutxa">
+            <img src="../../irudiak/CSS-DISEINU/kaxahigikor2.png" alt="" srcset="">
+          </div>
+          <p>Lehen aipatu dugun bezala, elementu baten edukiak flotatzen duenean, elementu aitak ezin du bere altuera kalkulatu edukiaren altueratik. Horregatik, flotatzen duten elementuak ditugun bakoitzean, fluxu normala berreskuratu behar dugu hurrengo elementuan, <strong>clear</strong> propietatearekin.</p>
+          <div class="garrantzi-oinarrizko">
+            <h6><strong>Egin ezazu zuk zeuk</strong></h6>
+            <p>Sortu HTML fitxategi berri bat Goiko koadroko kodearekin eta CSS fitxategi berri bat, nirestiloa.css izenekoa, goiko CSS erregelekin arauekin. Ireki dokumentua zure nabigatzailean. 4-9 irudiaren antzeko zerbait ikusi beharko nuke.</p>
+          </div>
+          <p>Azken adibidean, elementu nagusia kaxa guztiak edukitzeko bezain zabala dela ziurtatzen dugu, eta, beraz, guztiak lerro berean agertzen dira, baina edukiontziak leku nahikorik ez badu, lerro berean kokatu ezin diren elementuak lerro berri batera mugituko dira. Hurrengo erregelak &lt;section&gt; elementuaren tamaina murrizten du 500 pixeletara.</p>
+          <pre>
+            <code>
+              #kaxanagusia {
+              width: 500px;
+              border: 1px solid;
+              }
+            </code><figcaption>Edukiontziaren tamaina murrizteko</figcaption>
+          </pre>
+          <p>Erregela hori gure dokumentuari aplikatu ondoren, azken kaxak ez du nahikoa leku aurkitzen hirugarren kaxaren eskuinaldean, eta, beraz, edukiontziaren ezkerralderantz flotatzen du lerro berri batean.</p>
+          <div class="irudiKutxa">
+            <img src="../../irudiak/CSS-DISEINU/kaxahigikor3.png" alt="Kutxek espazio erabilgarria betetzen dute" srcset="">
+            <figcaption>Kaxek espazio erabilgarria betetzen dute</figcaption>
+          </div>
+          <p>Bestalde, kaxek behar duten baino leku gehiago badugu edukiontzian, gainerako espazioa alboetan dago (ezkerrean edo eskuinean, <strong>float</strong> propietatearen balioaren arabera). Gainerako espazioa kaxen erdian jarri nahi badugu, kaxa batzuk ezkerrerantz eta beste batzuk eskuinerantz higiaraz ditzakegu.
+          <p>Adibidez, hurrengo arauek 120 pixeleko tamaina esleitzen diote kaxa bakoitzari, 80 pixeleko espazio hutsa utziz, baina azken bi kaxak eskuinaldera higitzen direnez, ezkerraldean egon beharrean, espazio librea edukiontziaren erdian kokatzen da, ez alboetan.</p>
+          <pre>
+            <code>
+          #kaxanagusia {
+          width: 600px;
+          border: 1px solid;
+          }
+          #kaxa-1 {
+          float: left;
+          width: 120px;
+          height: 50px;
+          margin: 5px;
+          background-color: #AAAAAA;
+          }
+          #kaxa-2 {
+          float: left;
+          width: 120px;
+          height: 50px;
+          margin: 5px;
+          background-color: #CCCCCC;
+          }
+          #kaxa-3 {
+          float: right;
+          width: 120px;
+          height: 50px;
+          margin: 5px;
+          background-color: #AAAAAA;
+          }
+          #kaxa-4 {
+          float: right;
+          width: 120px;
+          height: 50px;
+          margin: 5px;
+          background-color: #CCCCCC;
+          }
+          .leheneratu {
+          clear: both;
+          }
+            </code><figcaption>kaxa-1 eta kaxa-2 ezkerretara eta kaxa-3 eta kaxa-4 eskuinera higitzen dira.</figcaption>
+          </pre>
+          <p> Horrek esan nahi du 1. kaxa edukiontziaren ezkerraldean kokatuko dela, eta 2. kaxa, berriz, 1. kaxaren eskuinaldean, baina 3. kaxa eta 4. kaxa eskuinaldean. Beraz, edukiontziaren eskuinaldean egongo dira, eta erdian tarte bat utziko dute.
+            <div class="irudiKutxa">
+              <img src="../../irudiak/CSS-DISEINU/kaxahigikor4.png" alt="Kutxen arteko espazio librea" srcset="">
+              <figcaption>Kaxen arteko espazio librea</figcaption>
+            </div>
+          <p>Goiko kodean elementuak deklaratu diren hurrenkera dela eta, kaxa-4 elementua kaxa-3 elementuaren ezkerraldean dago. Nabigatzaileak dokumentuan adierazitako ordenan prozesatzen ditu elementuak; beraz, kaxa-3 elementua prozesatzen denean, eskuinera mugitzen da edukiontziaren eskuineko mugara iritsi arte.</p>
+          <p>Baina kaxa-4 elementua prozesatzen denean, ezin da edukiontziaren eskuinaldera mugitu, kaxa-3 elementuak dagoeneko leku hori betetzen duelako eta, beraz, kaxa-3aren ezkerraldean kokatzen delako.</p>
+          <p>Kaxak ordenan agertzea nahi badugu, dokumentua aldatu behar dugu, eta &lt;div&gt; elementua mugitu, kaxa-4 izenarekin identifikatuta eta kaxa-3 izenarekin identifikatutako &lt;div&gt; elementuaren gainean jarri.</p>
+    </article>
+     <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div class="garrantzi-oinarri" style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
+
+
+</body>
+</html>
