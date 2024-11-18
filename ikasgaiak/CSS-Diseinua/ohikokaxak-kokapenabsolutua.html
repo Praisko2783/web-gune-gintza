@@ -3,21 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Kokapen absolutua</title>
 </head>
 <body>
     <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
-    <article class="ikasgaia" id="html-egitura-elementua">
-      <div class="azpitituluak">
-        <h3><strong>Kokatze absolutua</strong></h3>
+    <article>
+      <div>
+        <h3><strong>Posizio absolutua</strong></h3>
       </div>
       <div class="banaketaTxikia"></div>
-      <h4>Kaxen eta elementuen kokatze absolutua</h4>
-      <h5>Elementu baten posizioa erlatiboa edo absolutua izan daiteke. Posizio erlatibo batekin, kutxak bata bestearen ondoren jartzen dira edukiontziak adierazitako lekuan. Espazioa nahikoa ez bada edo elementuak ez badira flotagarriak, kutxak lerro berri batean jartzen dira. Hori da lehenetsitako posizionamendu modua, baina badago beste modu bat, posizionamendu absolutua. Posizionamendu absolutuak aukera ematen digu elementu bakoitza zein koordenatutan kokatu nahi dugun zehazteko. Honako hauek dira helburu horretarako eskura dauden propietateak.</h5>
-      <div class="banaketaTxikia"></div>
-      <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati deleniti ex at et nobis quam repellendus, ducimus rerum fuga tempora, voluptas quasi laboriosam minima eligendi reiciendis iste accusantium corrupti autem!</h6>
-      </article>
+      <p>Elementu baten posizioa erlatiboa edo absolutua izan daiteke. Posizio erlatibo batekin, kutxak bata bestearen ondoren jartzen dira edukiontziak adierazitako lekuan.</p>
+      <p>Espazioa nahikoa ez bada edo elementuak ez badira flotagarriak, kutxak lerro berri batean jartzen dira. Hori da lehenetsitako posizionamendu modua, baina badago beste modu bat, posizionamendu absolutua.</p>  
+      <p>Posizionamendu absolutuak aukera ematen digu elementu bakoitza zein koordenatutan kokatu nahi dugun zehazteko. Honako hauek dira helburu horretarako eskura dauden propietateak.</p>
+      <ul class="zerrendaArruntak">
+        <li><strong>position —</strong>Propietate honek elementu bat jartzeko erabiltzen den posizionamendu mota definitzen du. Honako hauek dira balio erabilgarriak: , .</li>
+        <ul class="zerrendaArruntak">
+          <li>static (dokumentuaren fluxu normalaren arabera kokatzen da)</li>
+          <li>relative (elementuaren jatorrizko posizioaren arabera kokatzen da)</li>
+          <li>absolute (elementuaren edukiontziari dagokion posizio absolutuarekin kokatzen da)</li>
+          <li>fixed (nabigatzailearen leihoari dagokion posizio absolutuarekin kokatzen da).</li>
+        </ul>
+        <li><strong>top —</strong>Propietate honek elementuaren goiko ertzaren eta edukiontziaren goiko ertzaren arteko distantzia zehazten du.</li>
+        <li><strong>bottom —</strong>Propietate honek elementuaren beheko marjinaren eta edukiontziaren beheko marjinaren arteko distantzia zehazten du.</li>
+        <li><strong>left —</strong>Propietate honek elementuaren ezkerreko marjinaren eta edukiontziaren ezkerreko marjinaren arteko distantzia zehazten du.</li>
+        <li><strong>right —</strong>Propietate honek elementuaren eskuineko marjinaren eta edukiontziaren eskuineko marjinaren arteko distantzia zehazten du.</li>
+      </ul>
+      <p><strong>top, bottom, left, eta right</strong> propietateak bi posizionamendu motetan aplikatzen dira, <strong>erlatiboa</strong> edo <strong>absolutua</strong>, baina modu desberdinetan lan egiten dute. Elementua kokapen erlatiboarekin kokatzen denean, elementua mugitu egiten da diseinua aldatu gabe. Posizioa absolutua bada, elementua diseinutik ezabatzen da, beraz, elementuak lekuz aldatzen dira espazio libre berria okupatzeko.</p>
+      <p>Hurrengo adibideak posizionamendu erlatiboa erabiltzen du gure adibideko lehen kutxa 25 pixel beherantz mugitzeko.</p>
+      <pre>
+        <code>
+          #kaxa-1 {
+            position: relative;
+            top: 25px;
+            float: left;
+            width: 140px;
+            height: 50px;
+            margin: 5px;
+            background-color: #AAAAAA;
+        }
+        </code><figcaption>Elementu baten posizio ertatiboa zehazteko</figcaption>
+      </pre>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/kokatzeAbsolutua1.png" alt="Kaxen posisio erlatiboa" srcset="">
+        <figcaption>Kaxa baten kokatze erlatiboa</figcaption>
+      </div>
+      <div class="garrantzi-oinarrizko">
+        <h6><strong>Egin ezazu zuk zeuk</strong> </h6>
+          <p>ordezka ezazu 1 kaxa-erregela zure CSS estilo-orrian, goiko erregelarekin. Adibide honetan, lehenengo kutxa bakarrik desplazatzen dugu, baina ez ditugu arauak ukitzen gainerako kutxetarako. Gehitu beste propietate batzuk, hala nola left edo right, elementuaren posizioari nola eragiten dioten ikusteko.</p>
+      </div>
+      <p>Beste aukera bat posizio absolutua erabiltzea da. Kasu honetan, elementua diseinutik kentzen da, eta, beraz, gainerako elementuei eragiten die erregelak. Posizionamendu absolutua erabiltzen dugunean, kontuan hartu behar dugu elementua nabigatzailearen leihoarekiko kokatuko dela, elementu aitaren posizioa adierazten ez badugu behintzat. Beraz, aitaren posizioan oinarritutako elementu batentzako posizio absolutu bat zehaztu nahi badugu, aitarentzako jabetza positiboa ere aitortu behar dugu. Hurrengo adibidean, kaxapadre elementuarentzako posizio erlatibo bat eta 1 kaxaren goiko aldetik 25 pixeleko posizio absolutu bat adierazten ditugu. Ondorioz, gainerako kaxak baino posizio baxuagoan kokatuko da.</p>
+      <pre>
+        <code>
+          #kaxaNagusia {
+            position: relative;
+            width: 600px;
+            border: 1px solid;
+            }
+            #kaxa-1 {
+            position: absolute;
+            top: 25px;
+            float: left;
+            width: 140px;
+            height: 50px;
+            margin: 5px;
+            background-color: #AAAAAA;
+            }
+        </code><figcaption>Elementu baten posizio absolutua zehazteko </figcaption>
+      </pre>
+      <p>Posizionamendu absolutuak dokumentuaren diseinuko elementua ezabatzen duenez, gainerako kutxak ezkerrera mugitzen dira 1 kaxak utzitako espazio hutsa okupatzeko.</p>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/kokatzeAbsolutua2.png" alt="" srcset="">
+      </div>
+      <div class="garrantzi-oinarrizko">
+        <h6><strong>Egin ezazu zuk zeuk</strong></h6>
+        <p>Ordeztu #kaxanagusia eta #kaxa-1 erregelak zure CSS estilo-orrian, goiko koadroko erregelekin, eta ireki dokumentua zure nabigatzailean. Goiko Irudiaren antzeko zerbait ikusi beharko nuke.</p>
+      </div>
+       <p>Kodearen elementuen ordenak kutxak lapaginan kokatzeaz gain, gainjartzen direnean zein kutxa egongo den besteen gainetik ere zehazten du. Gure adibidean kaxa-1 kodean lehenengo deklaratu denez, kaxa-2aren gainean marrazten da, baina CSSk honako propietate hau eskaintzen du portaera hori aldatzeko.</p>
+       <ul class="zerrendaArruntak">
+        <li><strong>z-index —</strong>Propietate honek elementuak z ardatzean duen posizioa zehazten duen indizea definitzen du. Indize altuena duen elementua indize txikiena duen elementuaren gainean marraztuko da.</li>
+       </ul>
+       <p>Adibidez, 1. kutxa-elementua 2. kaxa-elementuaren azpian eta kutxa-elementuaren gainean mugi dezakegu, 1. kutxari eta kutxa-apadreari indize negatiboak esleituz.</p>
+       <pre>
+        <code>
+          #kaxaNagusia {
+            position: relative;
+            width: 600px;
+            border: 1px solid;
+            z-index: -2;
+            }
+            #kaxa-1 {
+            position: absolute;
+            top: 25px;
+            z-index: -1;
+            float: left;
+            width: 140px;
+            height: 50px;
+            margin: 5px;
+            background-color: #AAAAAA;
+            }
+        </code><figcaption>z-index zehazteko</figcaption>
+       </pre>
+       <p>Indize negatiboak lehenetsitako indizeak baino baxuagotzat jotzen dira. Goiko kodean ikus dezakezuen bezala, z-index: -1; hau da -1 balioa esleitu diogu kutxa-1 elementuaren z-index propietateari, eta -2 balioa #kaxanagusia elementuaren z-index propietateari. Horrek kaxa-1 mugitzen du kaxa-2ren azpira, baina kaxa-1  kaxanagusiaren gainean mantentzen du, bere z-index propietatearen balioa altuagoa delako.</p>
 
+       <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/kokatzeAbsolutua3.png" alt="z indizea" srcset="">
+        <figcaption>z indizea</figcaption>
+      </div>
+        
+        <p>Posizionamendu erlatiboa eta absolutua erabiltzen dugunean, dokumentuaren diseinua aldatu egiten da, eta, beraz, teknika hori ez da erabiltzen elementuak pantailan antolatzeko, baizik eta efektuak sortzeko, non ezkutuko elementuak erabiltzailearen ekintzei erantzunez agertzen diren, hala nola menu zabalgarriak edo informazio gehigarria ematen duten zerrenda desplazagarriak sortu behar ditugunean. Adibidez, irudi baten izenburua duen kutxa bat erakuts dezakegu erabiltzaileak sagua haren gainean mugitzen duenean.
+        </p>
+        <pre>
+          <code>
+      &lt;!DOCTYPE html&gt;
+      &lt;html lang="es"&gt;
+      &lt;head&gt;
+          &lt;title&gt;Este texto es el título del documento&lt;/title&gt;
+          &lt;meta charset="utf-8"&gt;
+          &lt;meta name="description" content="Este es un documento HTML5"&gt;
+          &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+          &lt;link rel="stylesheet" href="misestilos.css"&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+          &lt;section id="kaxaNagusia"&gt;
+              &lt;img src="nireIrudia.jpg" width="365" height="274"&gt;
+              &lt;div id="edukiontzia"&gt;
+                &lt;div id="goikoEdukiontzia"&gt;&lt;/div&gt;
+                &lt;div id="behekoEdukiontzia"&gt;
+                  &lt;span&gt;&lt;strong&gt;Hauxe da nire mendi taldea&lt;/strong&gt;&lt;/span&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/section&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+          </code><figcaption>Informazio gehigarria duen goitibeherako etiketa bat erakusten du
+          </figcaption>
+        </pre>
+
+        <p>Goiko kodeak irudi bat duen atal bat dauka. &lt;img&gt; Elementuaren azpian 'edukiontzi' izenarekin identifikatutako &lt;div&gt; elementu bat dago, eta elementu horren barruan beste bi elementu ditugu, bata hutsik eta bestea izenburu batekin.</p>
+        <p>Kode honen helburua irudia kutxa batekin estaltzea da. Kutxa horrek, gorantz mugitzen denean, beste kutxa bat erakusten du behealdean, irudiaren izenburuarekin. 4-15 irudian, elementu horiek sortutako egitura ikusten da.</p>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS-DISEINU/kokatzeAbsolutua4.png" alt="" srcset="">
+          <figcaption>Goitibeherako etiketa bat informazio gehigarriarekin aurkezteko egitura</figcaption>
+        </div>
+      <p>Irudia eta edukiontzia kaxanagusia elementuaren barruan daude, baina edukiontzia irudiaren gainean jarri behar da, mugitu ahal izateko, erabiltzaileak sagua irudiaren gainean jartzen duenean izenburuarekin azpiko elementua errebelatzeko. Horregatik, posizio absolutu bat esleitu behar diogu elementu horri.</p>
+      <pre>
+        <code>
+          #kaxaNagusia {
+            position: relative;
+            width: 365px;
+            height: 274px;
+            overflow: hidden;
+            }
+            #edukiontzia {
+              position: absolute;
+              top: 0px;
+              width: 365px;
+              height: 324px;
+              }
+              #goikoEdukiontzia {
+              width: 365px;
+              height: 274px;
+              }
+              #behekoEdukontiza {
+              width: 365px;
+              height: 35px;
+              padding-top: 15px;
+              background-color: rgba(200, 200, 200, 0.8);
+              text-align: center;
+              }
+              #edukiontzia:hover {
+              top: -50px;
+              }
+        </code><figcaption>Kaxen konfigurazioa</figcaption>
+      </pre>
+
+      <p>Adibide honetan erabiltzen dugun irudiak 365 pixeleko tamaina du zabaleran eta 274 pixeleko garaieran; beraz, tamaina hori zehaztu behar dugu kutxazainerako. Edukiontziak, bestalde, altuagoa izan behar du, goiko edukitzailea eta behekoa barne eduki behar dituelako, gorantz mugitzen denean agerian uzten dena. Izenburua duen kaxak 50 pixeleko altuera duenez (35 pixeleko altuera eta 15 pixel betegarri), kutxa edukitzaileari 324 pixeleko altuera esleituko diogu (274 + 50).
+        <p>Irudiaren gainetik edukiontzi bat jartzeko arrazoia erabiltzaileak sagua irudiaren gainean mugitzen duenean erreakzionatu behar dugulako da. CSSk sasiklase bakarra dauka hori egoteko: <strong> :hover </strong>, lehen ikusi dugun bezala (ikus goiko kodeak). Sasiklase horren arazoa da aplikatu den elementua aldatzeko aukera baino ez digula ematen. </p>
+        <p>Irudiarekin erabiliz, irudia bera bakarrik alda genezake, baina edukiontziari aplikatuz gero, haren <strong>top</strong> propietatearen balioa alda dezakegu, gorantz mugitzeko eta <strong>behekoEdukitzailea</strong> agerrarazteko. Kodeko amaierako erregelak egiten du lan hori. Erabiltzaileak sagua irudiaren gainean mugitzen duenean, <strong>#edukiontzia: hover</strong> erregelak -50 pixeleko balioa esleitzen dio <strong>edukitzailea</strong> elementuaren <strong>top</strong> propietateari, elementua eta edukia gorantz mugituz, irudiaren izenburua erakusteko.</p>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS-DISEINU/kokatzeAbsolutua5.png" alt="" srcset="">
+          <figcaption>Etiketa bat jartzeko irudiaren gainean</figcaption>
+        </div>
+        <p>Sagua irudiaren gainean mugitzen den bezain laster <strong>behekoEdukiontzia</strong> elementua agertzen da. <strong>top</strong> propietatearentzat trantsiziorik deklaratzen ez dugulako gertatzen da hori. Balioa 0 px-tik -50 px-ra doa berehala; beraz, ez dugu trantsiziorik ikusten prozesuan. Tarteko urratsak adierazteko eta animazio bat sortzeko, <strong>transition</strong> propietatea  gehitu behar diogu <strong>edukiontiza</strong> elementuari.
+        </p>
+        <pre>
+          <code>
+            #edukiontzia {
+              position: absolute;
+              top: 0px;
+              width: 365px;
+              height: 324px;
+              transition: top 0.5s ease-in-out 0s;
+              }
+          </code>
+        </pre>
+        <div class="garrantzi-oinarrizko">
+          <h6><strong>Egizu zuk zeuk:</strong></h6>
+          <p>Sor ezazu HTML fitxategi berri bat goiko kodearekin eta <strong>nirestiloa.css</strong> izeneko CSS fitxategi bat azken koadroko kodearekin. Barreneko 'frogalekua'n ere egin dezakezu.</p>
+            <p>Deskargatu irudia nireIrudia.jpg gure webgunetik. Ireki dokumentua zure nabigatzailean eta mugitu sagua irudiaren gainean. Irudiaren beheko aldean agertu eta desagertu izenburuarekin ikusi beharko zenuke etiketa (4-16 irudia). Ordeztu zure estilo-orriaren <strong>#edukiontzia</strong> araua beste kodeko erregelarekin. Orain etiketa animatu egin beharko litzateke</p>
+        </div>
+        <h4>'frogalekua'n ikusi nahi izanez gero, adibidea erabili kode hau:</h4>
+        <pre>
+          <code>
+            &lt;!DOCTYPE html&gt;
+      &lt;html lang="es"&gt;
+      &lt;head&gt;
+          &lt;title&gt;Hemen doa izenburua&lt;/title&gt;
+          &lt;meta charset="utf-8"&gt;
+          &lt;meta name="description" content="Dokumentu hau HTML-5 da"&gt;
+          &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+          &lt;style&gt;
+            #kaxaNagusia {
+            position: relative;
+            width: 365px;
+            height: 274px;
+            overflow: hidden;
+            }
+            #edukiontzia {
+              position: absolute;
+              top: 0px;
+              width: 365px;
+              height: 324px;
+              //transition: top 0.5s ease-in-out 0s;
+              }
+              #goikoEdukiontzia {
+              width: 365px;
+              height: 274px;
+              }
+              #behekoEdukiontzia {
+              width: 365px;
+              height: 35px;
+              padding-top: 15px;
+              background-color: rgba(200, 200, 200, 0.8);
+              text-align: center;
+              }
+              #edukiontzia:hover {
+              top: -50px;
+              }
+             &lt;/style&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+ &lt;!-- irudiek helbide hauek daukate: ../irudiak/Frogairudiak/Mendi-bat.jpg   bi,hiru,lau--&gt;
+        &lt;h1&gt;Hauxe izenburua&lt;/h1&gt;
+        &lt;p&gt;Hau, berriz, paragrafoa ikusten den bezala.&lt;/p&gt;
+          &lt;section id="kaxaNagusia"&gt;
+              &lt;img src="../irudiak/Frogairudiak/Mendi-lau.jpg" width="365" height="274"&gt;
+              &lt;div id="edukiontzia"&gt;
+                &lt;div id="goikoEdukiontzia"&gt;&lt;/div&gt;
+                &lt;div id="behekoEdukiontzia"&gt;
+                  &lt;span&gt;&lt;strong&gt;Hauxe da nire mendi taldea&lt;/strong&gt;&lt;/span&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/section&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+&lt;script&gt;
+
+&lt;/script&gt;
+          </code><figcaption>Kopiatu kodea eta eraman 'frogalekua'ra. 'transition' propietatea komentatua dago. Egin froga dagoen dagoenean eta 'transition' propietatea deskomentatuta (ezkerreko bi barra diagonalak kenduta). </figcaption>
+        </pre>
+      </article>
+       <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3> 
+  <div class="garrantzi-oinarrizko" style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
 </body>
 </html>
