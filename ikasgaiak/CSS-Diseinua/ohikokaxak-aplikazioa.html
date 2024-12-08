@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+    <article>
+      <div>
+        <h3><strong><em>Benetako aplikazioa</em></strong></h3>
+      </div>
+      <div class="banaketaTxikia"></div>
+      <h4>Has gaitezen lanean serio</h4>
+      <p>Kutxa-eredu tradizionalaren helburua web-orri baten ikusizko egitura antolatzea da, baina dituen ezaugarriak eta mugak direla eta, dokumentuak aldatu behar dira eredu horrekin lan egiteko.</p>
+      <p>2. kapituluan azaldu dugun bezala, webguneek eredu estandarra jarraitzen dute eta HTML elementuak diseinu hori sortzeko diseinatu dira, baina ezin dituzte agertoki posible guztiak aurreikusi. </p>
+      <p>Elementuek web-orri tradizional baten ikus-eremuak irudikatzeko, beste elementu batzuekin konbinatu behar ditugu. Oso ohikoa da elementuak edukiontzi batean biltzea, nahi ditugun posizioetara mugitu ahal izateko.</p> 
+      <p>Adibidez, gure dokumentuaren goiburua nabigatzailearen leihoa bezain zabala izatea nahi badugu, baina edukia pantailan zentratuta badago, edukia &lt;div&gt; elementu batean bil dezakegu, eta, ondoren, elementu hori orrian zentratu.</p>
+      <p>Hemen daukazu diseinu mota hori erreproduzitu ahal izateko zure <strong>index.html</strong> fitxategian idatzi beharko zenuke kodea.</p> </p>
+      <pre  style="height: 600px;">
+        <code>
+          &lt;!DOCTYPE html&gt;
+            &lt;html lang="es"&gt;
+            &lt;head&gt;
+              &lt;title&gt;Orriaren izena &lt;/title&gt;
+              &lt;meta charset="utf-8"&gt;
+              &lt;meta name="description" content="Hau HTML5 dokumentu bat da"&gt;
+              &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+              &lt;link rel="stylesheet" href="nirestiloa.css"&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              &lt;header id="goiburuko-irudia"&gt;
+                &lt;div&gt;
+                  &lt;h1&gt;Hauxe da izenburua&lt;/h1&gt;
+                &lt;/div&gt;
+              &lt;/header&gt;
+              &lt;nav id="menunagusia"&gt;
+                &lt;div&gt;
+                  &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="index.html"&gt;Nagusia&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="argazkiak.html"&gt;Argazkiak&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="bideoak.html"&gt;Ikus-entzunezkoak&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="harremana.html"&gt;Harremanetarako&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+              &lt;/nav&gt;
+            &lt;main&gt;
+              &lt;div&gt;
+                &lt;section id="artikulu-nagusiak"&gt;
+                  &lt;article&gt;
+                    &lt;h1&gt;Lehen artikuluaren izenburua&lt;/h1&gt;
+                    &lt;time datetime="2016-12-23" pubdate&gt;
+                      &lt;div class="eguna-zenbakia"&gt;23&lt;/div&gt;
+                      &lt;div class="eguna-izena"&gt;Ostirala&lt;/div&gt;
+                    &lt;/time&gt;
+                    &lt;p&gt;Lehen artikuluaren testua&lt;/p&gt;
+                    &lt;figure&gt;
+                      &lt;img src="nireirudia1.jpg"&gt;
+                    &lt;/figure&gt;
+                  &lt;/article&gt;
+                  &lt;article&gt;
+                    &lt;h1&gt;Bigarren artikuluaren izenburua&lt;/h1&gt;
+                    &lt;time datetime="2016-12-7" pubdate&gt;
+                      &lt;div class="eguna-zenbakia"&gt;7&lt;/div&gt;
+                      &lt;div class="eguna-izena"&gt;Miércoles&lt;/div&gt;
+                    &lt;/time&gt;
+                    &lt;p&gt;Bigarren artikuluaren testua&lt;/p&gt;
+                    &lt;figure&gt;
+                      &lt;img src="nireirudia2.jpg"&gt;
+                    &lt;/figure&gt;
+                  &lt;/article&gt;
+                &lt;/section&gt;
+                &lt;aside id="info-erantsia"&gt;
+                  &lt;h1&gt;Norberaren informazioa&lt;/h1&gt;
+                  &lt;p&gt;Lehen artikuluari aipamena&lt;/p&gt;
+                  &lt;p&gt;Bigarren artikuluari aipamena&lt;/p&gt;
+                &lt;/aside&gt;
+                &lt;div class="berreskuratu"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/main&gt;
+            &lt;footer id="oineko-irudia"&gt;
+              &lt;div&gt;
+                &lt;section class="oineko-saila"&gt;
+                  &lt;h1&gt;Webgunea&lt;/h1&gt;
+                  &lt;p&gt;&lt;a href="index.html"&gt;Nagusia&lt;/a&gt;&lt;/p&gt;
+                  &lt;p&gt;&lt;a href="argazkiak.html"&gt;Argazkiak&lt;/a&gt;&lt;/p&gt;
+                  &lt;p&gt;&lt;a href="bideoak.html"&gt;Ikus-entzunezkoak&lt;/a&gt;&lt;/p&gt;
+                &lt;/section&gt;
+                &lt;section class="oineko-saila"&gt;
+                  &lt;h1&gt;Ayuda&lt;/h1&gt;
+                  &lt;p&gt;&lt;a href="harremana.html"&gt;Harremanetarako&lt;/a&gt;&lt;/p&gt;
+                &lt;/section&gt;
+                &lt;section class="oineko-saila"&gt;
+                  &lt;address&gt;Eibar, Gipuzkoa&lt;/address&gt;
+                  &lt;small&gt;&copy; Eskubide babestuak 2016&lt;/small&gt;
+                &lt;/section&gt;
+                &lt;div class="berreskuratu"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/footer&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+        </code><figcaption>Ohiko kaxen eredua adibide gisara emateko dokumentuaren oinarria</figcaption>
+      </pre>
+      <p>Adibide honetan, egiturazko elementu batzuen edukia <strong>&lt;div&gt;</strong> elementu gehigarri batekin bildu dugu. Orain, tamaina eta lerrokadura independenteak esleitu ditzakegu dokumentuaren atal bakoitzerako.</p>
+      <div class="garrantzi-oinarrizko">
+        <h6><strong>Egin ezazu zuk zeuk</strong></h6>
+        <p>Sortu proiektu berri bat (Karpeta bat) Aplikazioa izenarekin. Karpetaren baruan sortu HTML fitxategi bat eta idatzi bertan goiko HTML kodea. Beste alde batetik sortu css fitxategi bat nirestiloa.css izenarekin jarraian aurkeztuko dizkizudan CSS kode guztiak sartzeko. HTML dokumentuan jarri esteka CSS dokumentua eta HTML dokumentuak lotzeko. Ireki dokumentua zure nabigatzailean elementuak lehenetsita nola antolatzen diren ikusteko.</p>
+      </div>
+      <h4 style="text-align: center;">HTML dokumentua prest. CSS estilo-orria garatzeko garaia.</h4>
+      <p>Hasteko, lehenik eta behin kontuan hartu behar dugu zer egingo dugun nabigatzaileak lehenetsitako estiloekin. Kasu gehienetan, estilo horiek ez dira behar ditugunak bezalakoak, eta, gainera, eragin negatiboa izan dezakete gure diseinuan.</p>
+      <p>Adibidez, nabigatzaileek marjinak esleitzen dizkiete gure dokumentuan maiz erabiltzen ditugun elementuei, hala nola &lt;p&gt; elementuari. &lt;body&gt; elementuak ere marjina bat sortzen du bere edukiaren inguruan, eta horrek ezinezko egiten du beste elementu batzuk nabigatzailearen leihoaren mugetaraino zabaltzea. Hori gutxi balitz bezala, elementuak konfiguratzeko modu lehenetsia ez da nabigatzaile batetik bestera aldatzen, batez ere oraindik erabiltzen diren nabigatzaile zaharren edizioak kontuan hartzen ditugunean.</p>
+      <p>Diseinu koherente bat sortu ahal izateko, edozein gailutan irekitzen dela ere, estilo lehenetsi batzuk edo guztiak birsortu behar ditugu. Hori egiteko modu praktiko bat CSS hautagailu unibertsal bat erabiltzea da. Hautagailu bat da,<strong>*</strong> hautatzailearekin irudikatzen dena eta dokumentuko elementu guztiei eragiten diena. Adibidez, hurrengo arauak 0 pixeleko marjinak eta betegarriak adierazten ditu gure dokumentuko elementu guztietarako.</p>
+      <pre>
+        <code>
+          * {
+            margin: 0px;
+            padding: 0px;
+            }
+        </code><figcaption>Nabigatzaileak lehenetsitako marginak eta betegarriak ezabatzeko erregela.</figcaption>
+      </pre>
+      <p>Gure CSS fitxategiaren lehen araua duzu hori. Horrela elementu guztiek 0 pixeleko tartea eta betegarria izatea ziurtatzen duzu. Hemendik aurrera, margina eta betegarrien tamaina nahieran moldatu ahal izango ditugu.</p>
+      <div class="garrantzi-oinarrizko">
+        <h6>Egin ezazu zuk zeuk</h6>
+        <p><strong>nirestiloa.css</strong> estilo-orrian goiko css kodea jarriko dugu goi-goian. Handik behera idatziko ditugu aurrerantzean aurkeztuko ditugun erregela guztiak, bata bestearen azpian ur-jauzi eran.</p>
+      </div>
+      <div class="garrantzi-oinarrizko">
+        <h6>Oinarrizkoa</h6>
+        <p>Goiko arauarekin egin duguna da gure dokumentuaren estiloak berridatzi. Praktika arrunta da, eta, oro har, marjinak eta betegarriak aldatzea baino zerbait gehiago eskatzen du, adibide honetan egin dugun bezala. Aldatu behar ditugun estiloak, gehienetan, proiektu bakoitzerako berdinak direnez, garatzaileek arau horiek dituzten estilo-orriak sortu dituzte, gure dokumentuetan gure estiloekin batera ezar ditzakegunak. Estilo-orri horiei erreseteo-estiloko orriak (Reset Style Sheets) esaten zaie, eta hainbat orri daude eskuragarri. Adibide bat ikusteko, bisitatu meyerweb.com/eric/tools/css/reset /.</p>
+      </div>
+      <p>Erregela sinple horrekin elementu guztiak nabigatzailearen leihoaren ezkerraldean lerrokatuta geratzea lortzen dugu, inguruan marjinarik gabe eta haien arteko distantzia berak bereizita.</p>
+      <pre style="height: 600px;">
+        <code>
+          <div class="irudiKutxa">
+            <img src="../../irudiak/CSS-DISEINU/ohikaxak-aplikazioa1.png" alt="">
+          </div>
+        </code><figcaption>Oinarrizko estilodun dokumentua</figcaption>
+      </pre>
+      <h4>Goiburua</h4>
+      <p>
+        Hurrengo urratsa goiburua diseinatzea da. Kasu honetan, &lt;header&gt; elementua nabigatzailearen leihoaren mugetaraino zabaltzea nahi dugu, edukia zentratuta egotea eta 960 pixeletik gorakoa ez den eremu batean kokatzea (tamaina estandarra da mahaigaineko ordenagailuek dituzten pantaila zabaletarako). Honako hauek dira helburu horretarako behar diren arauak.
+      </p>
+      <pre>
+        <code>
+          #goiburuko-irudia {
+            width: 96%;
+            height: 150px;
+            padding: 0% 2%;
+            background-color: #0F76A0;
+            }
+            #goiburuko-irudia > div {
+            width: 960px;
+            margin: 0px auto;
+            padding-top: 45px;
+            }
+            #goiburuko-irudia h1 {
+            font: bold 54px Arial, sans-serif;
+            color: #FFFFFF;
+            }
+        </code><figcaption>Goiburuari estiloak eransteko</figcaption>
+      </pre>
+      <p>Goiburuak leihoaren zabalera izatea nahi dugunez, tamaina ehunekotan adierazi behar dugu. Elementu baten tamaina ehunekotan adierazten denean, nabigatzaileak pixeletan kalkulatzen du benetako tamaina, edukiontziaren egungo tamainatik abiatuta (kasu honetan, nabigatzailearen leihoa). Gure dokumenturako, goiburuak leihoaren zabalera bera izatea nahi dugu, baina alboetan betegarri bat izatea, edukia ertzetik bereizita egon dadin. Asmo horrekin, % 96ko balioa esleitzen diogu width jabetzari, eta % 2ko betegarria aitortzen dugu alboetan. Leihoak 1.000 pixeleko zabalera badu, adibidez, elementuak 960 pixeleko zabalera izango du eta 20 pixeleko betegarria alboetan.</p>
+      <div class="garrantzi-oinarrizko">
+        <h6><strong>Oinarrizkoa</strong></h6>
+        <p>marjina edo betegarri finko bat esleitu nahi badiozu elementu bati, baina, aldi berean, haren zabalera doitu nahi baduzu espazio erabilgarri guztia har dezan, autobalioa width jabetzari esleitu ahal diozu. Balio horrek elementuaren zabalera kalkulatzeko eskatzen dio nabigatzaileari, edukiontziaren zabaleratik abiatuta, baina marjinen balioak, betegarriak eta elementuaren ertzak kontuan hartuta. Adibidez, leihoak 1.000 pixeleko zabalera badu eta goiburuari 50 pixeleko betegarria esleitzen badiogu alde bakoitzean eta bere zabalerarako autobalioa, nabigatzaileak 900 pixeleko zabalera emango dio.</p>
+      </div>
+      <p>Adibide honetako bigarren arauak &lt;div&gt; elementuei eragiten die, &lt;header&gt; elementuaren ondorengo zuzenak baitira. Goiburuko edukia biltzeko elementu bakarra erabiltzen dugunez, elementu horrek aldatuko du erregela.</p>
+      <p>Propietateek 960 pixeleko zabalera eta 0 pixeleko balioa duten marjina esleitzen dituzte goiko eta beheko zatietarako, eta autobalioa ezkerreko eta eskuineko aldeetarako. Auto-balioak nabigatzaileari eskatzen dio marjina kalkulatzeko, elementuaren tamainaren eta edukiontzian dagoen espazioaren arabera. Horren ondorioz, nabigatzaileak elementua eta, beraz, edukia zentratzen ditu, edukiontziaren zabalera 960 pixeletik gorakoa denean.</p>
+      <p>Azkenik, #cabezeralogo h1 erregela adieraziko dugu, goiburuko elementuaren kolorea eta letra mota aldatzeko. Beheko irudian ageri da emaitza.</p>
+      <pre style="height: 600px;">
+        <code>
+          <div class="irudiKutxa">
+            <img src="../../irudiak/CSS-DISEINU/ohikaxak-aplikazioa2.png" alt="">
+          </div>
+        </code><figcaption>Horrela geratuko da goiburua estiloak erantsi ostean</figcaption>
+      </pre>
+      
+      <div class="garrantzi-oinarrizko">
+        <h6><strong>Oinarrizkoa</strong></h6>
+        <p>960 pixeleko muga ordenagailu pertsonal eta eramangarrien pantaila zabaletarako web orrien tamaina adierazteko erabiltzen den balio estandarra da. Balioa ezartzeko, pertsonek testu luzeak irakurtzeko duten gaitasuna hartu zen kontuan. Testu bat irakurtzeko modukoa izan dadin, lerroko 50-75 karaktere izatea gomendatzen da. Eduki guztia nabigatzailearen leihoaren alboetaraino zabaltzen badugu, gure webgunea ezingo litzateke pantaila zabaletan irakurri. Gailu mugikorrak sartzearekin batera, mugak eta eskakizunak aldatu egin dira. Webguneak jada ez dira diseinu finkoekin garatzen.</p>
+        <p>Kapitulu honetako hurrengo atalean diseinu malguak nola sortu eta gure webguneak gailu mugikorretara nola egokitu aztertuko dugu, 5. kapituluan web-diseinu moldagarria erabiliz. </p> 
+      </div>
+      <h4>Nabigazio-menua (nav)</h4>
+      <p>Goiburua bezala, gure diseinuaren menua leihoaren mugetaraino zabaltzen da, baina aukerak 960 pixeletik beherako espazioan zentratu behar dira.</p>
+      <pre>
+        <code>
+          #menunagusia {
+            width: 96%;
+            height: 50px;
+            padding: 0% 2%;
+            background-color: #9FC8D9;
+            border-top: 1px solid #094660;
+            border-bottom: 1px solid #094660;
+            }
+          #menunagusia > div {
+            width: 960px;
+            margin: 0px auto;
+            }
+        </code><figcaption>Nabigazio menuaren eremuari estiloak eransteko</figcaption>
+      </pre> 
+      <p>Estilo horiek elementua eta haren edukia kokatzen dute, baina menua osatzen duten &lt;ul&gt; eta &lt;li&gt; elementuek oraindik esleituta dituzte itemen zerrenda bertikala sortzen duten estilo lehenetsiak, eta aukerak bata bestearen ondoan jarri behar ditugu. Elementua horizontalki antolatzeko hainbat modu daude, baina alternatibarik onena, kasu honetan, &lt;li&gt; elementuak elementu <strong>inline-block</strong> gisa deklaratzea da. Horrela, lerro berean koka ditzakegu eta tamaina pertsonalizatua eman diezaiekegu.</p>
+      <pre>
+        <code>
+          #menunagusia li {
+            display: inline-block;
+            height: 35px;
+            padding: 15px 10px 0px 10px;
+            margin-right: 5px;
+            }
+          #menunagusia li:hover {
+            background-color: #6FACC6;
+            }
+          #menunagusia a {
+            font: bold 18px Arial, sans-serif;
+            color: #333333;
+            text-decoration: none;
+            }
+        </code><figcaption>Nabigazio menuko elementuei estiloak eransteko</figcaption>
+      </pre>
+      <p>4-24 zerrendako lehen arauak &lt;nav&gt; elementuaren barruko &lt;li&gt; elementuak inline-block elementutzat jotzen ditu, eta 35 pixeleko altuera ematen die, 15 pixeletik gorako betegarria eta 10 pixelekoa alboetan. Adibide honetan, halaber, sasiklasea duen erregela bat dago: sagua aukera baten gainean dagoen bakoitzean 'li' elementuaren hondoko kolorea aldatzeko hover. Azken erregelan, elementuak beste kolore eta letra-mota batekin ere aldatzen dira. Beheko irudian ageri da emaitza.</p>
+      <pre style="height: 600px;">
+        <code>
+          <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/ohikaxak-aplikazioa3.png" alt="">
+      </div>
+        </code><figcaption>Horrela geratuko da nabigazio-menua estiloak erantsi ostean.</figcaption>
+      </pre>
+      <div class="garrantzi-oinarrizko">
+        <h6><strong>Oinarrizkoa</strong></h6>
+        <p>&lt;ul&gt; eta &lt;li&gt; elementuekin sortutako item-zerrenda batek <strong>display</strong> propietatearentzat <strong>list-item</strong> balioa du lehenetsita. Modu horrek itemen zerrenda bertikal bat sortzen du, itemak identifikatzen dituen ezkerreko aldeko grafikoekin. Display propietaterako balio desberdina adierazten duenean, grafiko horiek ezabatu egiten dira. Modua list-item denean adierazleak aldatzeko edo ezabatzeko, CSSk <strong>list-item</strong> propietatea eskaintzen du (hau da, <strong>list-styleimage</strong>, <strong>list-style-position</strong> eta <strong>list-style-type</strong> propietateen balioak definitzen dituen propietate orokorra). CSSk hainbat balio ditu, eta ezaugarri horri esleitu ahal dizkiogu erakutsi beharreko grafiko mota zehazteko. Erabilienak <em>none, square, circle eta decimal</em> dira. Propietateak grafikoaren posizioa adierazteko aukera ere ematen digu (<strong>inside</strong> edo <strong>outside</strong>), baita irudi pertsonalizatua ere (adibidez, <strong>list-style: url ("niregrafikoa.jpg");</strong>).</p>
+      </div>
+      <h4>Eduki nagusia (main)</h4>
+      <p>Jarraian, gure webgunearen atal nagusia diseinatu behar dugu. Atal hau <strong>&lt;main&gt;</strong> elementuarekin identifikatu da eta zutabe bihurtu behar ditugun elementuak ditu. Goibururako eta menurako erabili dugun patroi berari jarraitzeko, elementua leihoaren alboetara zabaldu behar dugu, eta edukia zentratu.</p>
+      <div class="garrantzi-oinarrizko">
+        <h6><strong>Egin ezazu zuk zeuk</strong></h6>
+        <p><strong>Aplikazioa</strong> izendatu dugun proiektuaren erroko karpetaren barruan, <strong>index.html</strong>, <strong>nirestiloa.css</strong> fitxategien ondoak karpeta beri bat sortu <strong>Irudiak</strong> izenarekin. Sartu bertan irudi txiki bat (10x10) pixelekoa <strong>hondoa.png</strong> izenarekin. Irudi txiki-txiki hori errepikatu egingo da ezker eskuin eta goitik behera <strong>&lt;main&gt;</strong> elementuaren eremu guztia bete arte.</p>
+      </div>
+          <pre>
+            <code>
+              main {
+                width: 96%;
+                padding: 2%;
+                background-image: url("hondoa.png");
+                }
+              main > div {
+                width: 960px;
+                margin: 0px auto;
+                }
+            </code><figcaption>Orriko eduki nagusiari estiloak eransteko.</figcaption>
+          </pre>
+          <p>Goiko erregelek atzealdea irudiz esaltzen dute, eremu nagusia eta orrialdearen gainerakoa bereizteko. Goiko eta beheko aldean ere %2ko betegarria erantsiko dugu, eremu nagusiko edukia nabigazio-menutik eta orri-oinetik bereizteko.
+            <div class="garrantzi-oinarrizko">
+              <h6><strong>Oinarrizkoa</strong></h6>
+              <p>Hondoek elementuaren eta haren betelanaren eremua estaltzen dute. Besterik adierazi ezean marginak kanpoaldean daude eta, beraz, <strong>background</strong> propietateak ez die eragiten. Hondoa elementuak okupatutako eremu osoan erakustea nahi baduzu, saihestu egin behar duzu marjinak erabiltzea eta, horren ordez, betelanak esleitzea, goian egin dugun bezala.</p>
+            </div>
+            <h5>Eremu nagusia definituta dagoela, gure webgunearen eduki nagusia aurkezten duten bi zutabeak sortzeko garaia da. (section) eta (aside).</h5>
+            <pre>
+              <code>
+                #artikulu-nagusiak {
+                  float: left;
+                  width: 620px;
+                  padding-top: 30px;
+                  background-color: #FFFFFF;
+                  border-radius: 10px;
+                  }
+                #info-erantsia {
+                  float: right;
+                  width: 280px;
+                  padding: 20px;
+                  background-color: #E7F1F5;
+                  border-radius: 10px;
+                  }
+                #info-erantsia h1 {
+                  font: bold 18px Arial, sans-serif;
+                  color: #333333;
+                  margin-bottom: 15px;
+                  }
+                .berreskuratu {
+                  clear: both;
+                  }
+              </code><figcaption>Eduki nagusiarentzat zutabeak antolatzko.</figcaption>
+            </pre>
+            <p>Kasu honetan, <strong>float</strong> propietatea erabiliko dugu zutabe bakoitza irudikatzen duten elementuak alboetara mugitzeko. &lt;section&gt; elementua ezkerrerantz mugitu da, eta &lt;aside&gt; elementua eskuinerantz, batez beste 20 pixeleko tartea utziz.</p>
+<pre style="height: 600px;">
+  <code>
+    <div class="irudiKutxa">
+      <img src="../../irudiak/CSS-DISEINU/ohikaxak-aplikazioa4.png" alt="">
+    </div>
+  </code>
+</pre>
+<div class="garrantzi-oinarrizko">
+  <h6><strong>Oinarrizkoa</strong></h6>
+  <p>Web-orriko elementuak <strong>float</strong> propietatearekin posizionatzen diren bakoitzean, dokumentuaren fluxu normala hurrengo elementuarekin berreskuratzea gogoratu behar dugu. Helburu horrekin, gure adibidean &lt;aside&gt; elementuaren azpian edukirik ez duen &lt;div&gt; elementu bat gehitu dugu.</p>
+</div>
+<h5>Zutabeak prest daudenez, edukiak diseinatu behar ditugu. (article)</h5>
+<p>Goiko kodeak badu <strong>&lt;aside&gt;</strong> elementuaren edukia konfiguratzen duen erregela bat, baina oraindik <strong>&lt;article&gt;</strong> elementuak lehen zutabean konfiguratu behar ditugu.</p>
+<strong>&lt;article&gt;</strong> elementu bakoitzak <strong>&lt;time&gt;</strong> elementu bat du, artikulua argitaratu den data adierazten duena. Gure diseinurako, data hori artikuluaren ezkerraldeko kutxa batean erakustea erabaki genuen, eta, beraz, elementu horrek <strong>posizio absolutua</strong> izan behar du.
+<pre>
+  <code>
+    article {
+      position: relative;
+      padding: 0px 40px 20px 40px;
+      }
+      article time {
+      display: block;
+      position: absolute;
+      top: -5px;
+      left: -70px;
+      width: 80px;
+      padding: 15px 5px;
+      background-color: #094660;
+      box-shadow: 3px 3px 5px rgba(100, 100, 100, 0.7);
+      border-radius: 5px;
+      }
+      .eguna-zenbakia {
+      font: bold 36px Verdana, sans-serif;
+      color: #FFFFFF;
+      text-align: center;
+      }
+      .eguna-izena {
+      font: 12px Verdana, sans-serif;
+      color: #FFFFFF;
+      text-align: center;
+      }
+  </code><figcaption>&lt;time&gt; elementuari posizio absolutua eta estiloak esleitu dizkiogu.</figcaption>
+</pre>
+<p>&lt;time&gt; elementuari posizio absolutua esleitzeko, aitaren posizioa erlatiboa dela adierazi behar dugu. Hori lortzeko, erlatibe balioa esleitzen diogu jabetza positiboari goiko kodeko lehen erregelan. </p>
+<p>Bigarren erregelak &lt;time&gt; elementuaren posizioa eta tamaina definitzen ditu. &lt;time&gt; elementua &lt;article&gt; elementuaren gainean 5 pixeletara eta haren ezkerraldera 110 pixeletara kokatuko da.
+<pre style="height: 600px;">
+<code>
+  <div class="irudiKutxa" >
+  <img src="../../irudiak/CSS-DISEINU/ohikaxak-aplikazioa5.png" alt="">
+  <figcaption>Posizio absolutua &lt;time&gt; elementuarentzat</figcaption>
+</div>
+</code>
+</pre>
+<p>Gainerako erregelek &lt;article&gt; elementu bakoitzaren barruan eskatzen diren estiloak esleitu behar dituzte.</p>
+<pre>
+  <code>
+    article h1 {
+      margin-bottom: 5px;
+      font: bold 30px Georgia, sans-serif;
+      }
+    article p {
+      font: 18px Georgia, sans-serif;
+      }
+    figure {
+      margin: 10px 0px;
+      }
+    figure img {
+      padding: 5px;
+      border: 1px solid;
+      }
+  </code><figcaption>Artikuluei hainbat estilo esleitu diogu.</figcaption>
+</pre >
+<pre style="height: 600px;">
+  <code>
+  <div class="irudiKutxa">
+  <img src="../../irudiak/CSS-DISEINU/ohikaxak-aplikazioa6.png" alt="">
+  <figcaption>Artikuluak</figcaption>
+</div>
+  </code>
+</pre>
+<h4>Orriaren oina</h4>
+<h5>Azkenik, arau gutxi batzuk gehitu behar dizkiogu gure estilo-orriari, orri-oina konfiguratzeko. (footer).</h5>
+ <p><strong>&lt;footer&gt;</strong> elementua, gainerako egitura-elementuekin egin dugun bezala, leihoaren alboetaraino zabaldu behar da, baina kasu honetan edukia hiru <strong>&lt;section&gt;</strong> elementurekin banatzen da informazioa zutabeetan aurkezteko. Ikus dezagun.</p>
+<p>Zutabe horiek <strong>columns</strong>  propietatearekin sor ditzakegun arren, elementuek gure dokumentuaren sekzioak irudikatzen dituztelako, <strong>float</strong> propietatea egokiagoa da.</p>  
+  <pre>
+    <code>
+      #oineko-irudia {
+        width: 96%;
+        padding: 2%;
+        background-color: #0F76A0;
+        }
+      #oineko-irudia > div {
+        width: 960px;
+        margin: 0px auto;
+        background-color: #9FC8D9;
+        border-radius: 10px;
+        }
+        .oineko-saila {
+        float: left;
+        width: 270px;
+        padding: 25px;
+        }
+        .oineko-saila h1 {
+          font: bold 20px Arial, sans-serif;
+          }
+        .oineko-saila p {
+          margin-top: 5px;
+          }
+        .oineko-saila a {
+          font: bold 16px Arial, sans-serif;
+          color: #666666;
+          text-decoration: none;
+          }
+    </code><figcaption>Orri-oinari estiloak esleitzen</figcaption>
+  </pre>
+  <p>Goiko arauek 276 pixeleko hiru sail zehazten dituzte, denak ezkerrerantz flotatzen, gure diseinurako beharrezkoak diren hiru zutabeak osatzeko.</p>
+  <pre style="height: 400px;">
+    <code>
+      <div class="irudiKutxa"><img src="../../irudiak/CSS-DISEINU/ohikaxak-aplikazioa7.png" alt=""></div>
+      <figcaption>Orri-oineko edukia hiru zutabetan</figcaption>
+    </code>
+  </pre>
+  <p>Kasu horietan, atal guztiak berdinak direnean, tamainak pixeletan adierazi beharrean, hobe da ehunekoetan egitea. Ehunekoaren balioak adierazten du elementuak zenbat espazio hartuko duen edukiontziaren barruan. Adibidez, atalen zabalera orri-oinean adieraz dezakegu, bakoitza % 27.33ko balioarekin, eta betelanarekin % 100 osatu.</p>
+  <pre>
+    <code>
+      .oineko-saila {
+        float: left;
+        width: 27.33%;
+        padding: 3%;
+        }
+    </code><figcaption>Balioak ehunekoetan dituzten atalen tamaina kalkulatzeko</figcaption>
+  </pre>
+  <p>Balioak ehunekotan adierazten direnean, nabigatzaileak kalkulatzen du zenbat pixel esleitu behar zaizkion elementu bakoitzari edukiontzian dagoen espazioaren arabera. Gure dokumentuari goian ikusitako araua aplikatzen badiogu, orri-oina irudikoaren antzekoa izango da, baina atalen tamainak nabigatzaileak kalkulatuko ditu orria aurkeztu aurretik (960 x 27.33/100 = 262).</p>
+  <div class="garrantzi-oinarrizko">
+    <h6><strong>GARRANTZITSUA</strong></h6>
+    <p>Portzentajezko balioak diseinu malguak sortzeko ere erabil daitezke, 5. kapituluan ikusiko dugun bezala, baina badago eredu hobe bat helburu horretarako, kutxa malguaren eredua izenekoa. Kutxa malguaren eredua kapitulu honetako hurrengo atalean aztertuko dugu.</p>
+  </div>
+  <h4>Webgunea garatzen (orri berriak)</h4>
+    <p>Arau horiekin amaitu dugu dokumentuaren diseinua, baina hau gure webguneko orrietako bat baino ez da. Dokumentu honek hasierako orria irudikatzen du, normalean lehenetsitako fitxategian gordetzen dena, index.html bezala, baina oraindik gainerako dokumentuak sortu behar ditugu eskuragarri dagoen orrialde bakoitza irudikatzeko. Zorionez, hau ez da lan zaila. Hasierako orrialderako garatu dugun diseinu bera, oro har, webgune osoan partekatzen da, eduki nagusiaren eremua aldatu besterik ez dugu egin behar, baina gainerakoak, hala nola goiburua, orri-oina eta dokumentuaren egitura, oro har, berdinak dira, estilo-orria barne, normalean dokumentu gehienek partekatzen dutena.</p>
+    <div class="garrantzi-oinarrizko">
+      <h6><strong>Egin ezazu zuk zeuk</strong></h6>
+      <p>Jakina, webguneak web-orri bat baino gehiago izan ohi dute. Zure proiektuan gutxienez <strong>argazkiak.html</strong>, <strong>bideoak.html</strong> eta <strong>harremana.html</strong> <strong>index.html</strong> fitxategiaren ondoan izan beharko zenituzte. Oraindik egin ez badituzu, sortu oraintxe bertan. </p>
+      <p>Egin <strong>index.html</strong> fitxategiaren hiru kopia eta jarri bakoitzari goian aipatutako izen bat.</p>
+      <p>Ordeztu bakoitzaren eremu nagusiko <strong>&lt;section&gt;</strong> eta <strong>&lt;aside&gt;</strong> elementuen edukia orri bakoitzari dagokion edukiarekin.</p>
+      <p>Nahi izanez gero, gehitu arau berriak fitxategi bakoitzeko .css fitxategi berriak sortuz. Estilo guztiak artxibo bakar batean kontzentratzea gomendatzen bada ere, dokumentu bakoitzari bere estilo-orria esleitzea ere egokia da. Ireki <strong>index.html</strong> fitxategia zure nabigatzailean eta egin klik esteketan orrialdeetan zehar nabigatzeko.</p> 
+    </div>
+    <pre style="height: 650px;">
+      <code>
+        <div class="irudiKutxa"><img src="../../irudiak/CSS-DISEINU/ohikaxak-aplikazioa8.png" alt=""></div>
+        <figcaption>Fitxategi eredua</figcaption>
+      </code>
+    </pre>
+
+    <p>Beste eremu batzuk orrialde batean zehaztu behar baditugu edo eremu nagusia atal txikiagoetan banatu behar badugu, kaxak <strong>float</strong> propietatearekin antola ditzakegu, orri-oinaren barruko atalekin egin dugun bezala. Posizionamendu absolutua edo erlatiboa duten arlo batzuk ere diseina ditzakegun arren, modu horiek garrantzirik gabeko edukia kokatzeko gordetzen dira, gure adibideko artikuluen datekin edo ezkutuko edukia erakustea, erabiltzaileak eskaera bat egin ondoren.</p>
+    
+    <h5>Azpimenuak</h5>
+    <p>Adibidez, aukera bakoitzerako azpimenu bat erakusten duen goitibeherako menu bat sor dezakegu. Hurrengo adibideak erakusten du nola erantsi azpimenu bat gure dokumentuko <strong>Argazkiak</strong> aukeran.</p></p> 
+    <pre>
+      <code>
+        &lt;ul id="menuzerrenda"&gt;
+          &lt;li&gt;&lt;a href="index.html"&gt;Nagusia&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="argazkiak.html"&gt;Argazkiak&lt;/a&gt;
+              <strong>&lt;ul&gt;</strong>
+                <strong>&lt;li&gt;&lt;a href="familia.html"&gt;Familia&lt;/a&gt;&lt;/li&gt;</strong>
+                <strong>&lt;li&gt;&lt;a href="oporrak.html"&gt;Oporrak&lt;/a&gt;&lt;/li&gt;</strong>
+              <strong>&lt;/ul&gt;</strong>
+          &lt;/li&gt;
+          &lt;li&gt;&lt;a href="bideoak.html"&gt;Ikus-entzunezkoak&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="harremana.html"&gt;Harremanetarako&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+      </code><figcaption>Azpimenuak esleitzeko</figcaption>
+    </pre>
+    <p>Azpimenuak dituen menu baterako estiloak ez datoz bat aurreko adibidearekin. Azpimenuko aukerak bertikalki zerrendatu behar ditugu horizontalaren ordez, zerrenda menuko barraren azpian jarri behar dugu balio absolutuekin, eta erabiltzaileak sagua aukera nagusiaren gainean mugitzen duenean bakarrik erakutsi behar dugu. Horretarako, goiko kodean <strong>menuzerrenda</strong> identifikatzailea gehitu diogu menu nagusia irudikatzen duen &lt;/ul&gt; elementuari. Orain, elementu hori azpimenuak irudikatzeaz arduratzen diren &lt;/ul&gt; elementuetatik bereiz dezakegu (bakarra gure adibidean). Arau hauek erabiltzen dute identifikatzaile hau menu guztiei eta haien aukerei estiloak esleitzeko.</p>
+    <pre>
+      <code>
+        #menuzerrenda > li {
+          position: relative;
+          display: inline-block;
+          height: 35px;
+          padding: 15px 10px 0px 10px;
+          margin-right: 5px;
+          }
+          #menuzerrenda li > ul {
+          display: none;
+          position: absolute;
+          top: 50px;
+          left: 0px;
+          background-color: #9FC8D9;
+          box-shadow: 3px 3px 5px rgba(100, 100, 100, 0.7);
+          border-radius: 0px 0px 5px 5px;
+          list-style: none;
+          z-index: 1000;
+          }
+          #menuzerrenda li > ul > li {
+          width: 120px;
+          height: 35px;
+          padding-top: 15px;
+          padding-left: 10px;
+          }
+          #menuzerrenda li:hover ul {
+          display: block;
+          }
+          #menuzerrenda a {
+          font: bold 18px Arial, sans-serif;
+          color: #333333;
+          text-decoration: none;
+          }
+          #menunagusia li:hover {
+          background-color: #6FACC6;
+          }
+      </code> <figcaption>Azpimenuei estiloak esleitzeko kodea</figcaption>
+    </pre>
+    <p>Lehenengo bi arauek aukera nagusiak eta azpimenuak konfiguratzen dituzte. Arau horietan, posizio erlatibo bat esleitzen diegu aukera nagusiak adierazten dituzten &lt;li&gt; elementuei, eta, ondoren, posizio absolutu bat zehazten dugu menuaren goiko aldean dauden 50 pixeleko azpimenuetarako. Horrek azpimenuak menuko barraren azpian kokatzen ditu.</p>
+    <p>Azpimenu ikusezinak itzultzeko, display propietatea none balioarekin deklaratzen dugu. Erregela honetan beste propietate batzuk ere sartu behar izan ditugu, <strong>list-style</strong>, aukeren ezkerraldean lehenetsitako grafikoak ezabatzeko, eta <strong>z-index </strong>propietatea, azpimenua beti eremuko gainerako elementuen gainean agertzen dela ziurtatzeko.</p>
+      <p>Lehen egin dugun bezala, saguari erantzuteko, <strong>:hover</strong> seudoklasea ezarri behar dugu, baina kasu hau desberdina da. Erabiltzaileak sagua edozein aukera nagusiren gainean mugitzen duen bakoitzean azpimenua irudikatzen duen &lt;ul&gt; elementua erakutsi behar dugu, baina aukera nagusiak elementuekin adierazten dira &lt;li&gt;. Irtenbidea seudoklasea izendatzea da: hover elementuentzat &lt;li&gt;, baina ul izena gehitzea hautagailuaren amaieran, &lt;ul&gt; elementuaren barruan dauden &lt;li&gt; elementuei estiloak esleitzeko (&lt;li&gt;, seudoklaseak erasanda (#listamenu li: hover ul). Erabiltzaileak menu nagusiko aukera bat adierazten duen &lt;li&gt; elementuaren gainean mugitzen duenean sagua, block balioa &lt;ul&gt; elementuaren <strong>display</strong> propietateari esleitzen zaio, eta azpimenua pantailan agertzen da.</p>
+      <pre style="height: 650px;">
+        <code>
+          <div class="irudiKutxa">
+            <img src="../../irudiak/CSS-DISEINU/ohikaxak-aplikazioa9.png" alt="">
+            <figcaption>Azpimenuak agerian estekaren gainean sagua jartzean</figcaption>
+          </div>
+        </code>
+      </pre>
+      <div class="garrantzi-oinarrizko">
+        <h6><strong>Egin ezazu zuk zeuk</strong></h6>
+        <p>Eguneratu zure dokumentua azken koadroko kodearekin eta zure estilo-orriaren erregelak, azpimenuei estiloa esleitzeko ikusi dugun koadroko kodearekin. Ireki index.html fitxategia zure nabigatzailean eta mugitu sagua Argazkiak aukeraren gainean. Beharko luke, azpimenua agertu beharko litzaizuke irudian bezala.</p>
+      </div>
+      <div class="banaketaTxikia"></div>
+      
+      </article>
+      <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
+
+</body>
+</html>
