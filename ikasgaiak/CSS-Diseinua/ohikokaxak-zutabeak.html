@@ -3,38 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Zutabeak kaxetan</title>
 </head>
 <body>
     <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
-     <section>
-      
-     </section>
-    <article class="ikasgaia" id="html-egitura-elementua">
-      <div class="azpitituluak">
+    <article>
+      <div>
         <h3><strong><em>Zutabeak web diseinuan</em></strong></h3>
       </div>
       <div class="banaketaTxikia"></div>
-      <h4>Zutabeak</h4>
-      <h5>Kutxa pantailan antolatzeko aztertu ditugun propietateez gain, CSSk propietate multzo bat ere badu, zutabeak errazago sortzeko.</h5>
-      <h5>Zutabeak sortzeko propietateak edukiontziari aplikatu behar zaizkio. Hurrengo erregelak kolunn-count propietatea barne hartzen du, <strong>< article></strong> elementuaren edukia bi zutabetan zatitzeko.</h5>
+      <p>Kaxak pantailan antolatzeko aztertu ditugun propietateez gain, CSSk propietate multzo bat ere badu, zutabeak errazago sortzeko.</p>
+      <ul class="zerrendaArruntak">
+        <li><strong>column-count — </strong>Propietate honek zehazten du nabigatzaileak zenbat zutabe sortu behar dituen elementuaren edukia banatzeko.</li>
+        <li><strong>column-width —</strong>Propietate honek zutabeen zabalera adierazten du. Balioa auto gisa (lehenetsita) edo CSS unitateetako edozeinetan, pixel edo portzentaje gisa deklara daiteke.</li>
+        <li><strong>column-span —</strong>Ezaugarri hau kutxaren barruko elementuei aplikatzen zaie, elementua zutabe batean edo zutabe batzuen artean banatuta kokatuko den zehazteko. Balio erabilgarriak all (zutabe guztiak) eta none (lehenetsita) dira.</li>
+        <li><strong>column-fill —</strong>Propietate honek zehazten du edukia nola banatuko den zutabeen artean. Balio erabilgarriak autokoak (zutabeak sekuentzialki osatzen dira) eta balantzekoak dira (edukia zati berdinetan banatzen da zutabe guztien artean).</li>
+        <li><strong>column-gap —</strong>Propietate honek zutabeen arteko espazioaren tamaina definitzen du. Onartu balio bat CSSn eskuragarri dagoen edozein unitatetan, pixeletan eta ehunekoetan, esaterako.</li>
+        <li><strong>columns —</strong>Propietate honek aukera ematen digu columncount eta column-width propietateen balioak aldi berean deklaratzeko.</li>
+      </ul>
+      <p>Edukia zutabetan banatu nahi dugun elementua elementu komuna da, eta edukia lehen egin dugun bezala adierazten da. Nabigatzailea zutabeak sortzeaz eta edukia guk zatitzeaz arduratzen da. Hurrengo adibideak < article> elementu bat du, bi zutabetan aurkeztuko dugun testu luze batekin.</p>
       <pre>
         <code>
-          #albisteZutabeak {
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="es"&gt;
+          &lt;head&gt;
+            &lt;title&gt;Hemen doa dokumnetuaren izena&lt;/title&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="description" content="Hau HTML5 dokumentua da"&gt;
+            &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+            &lt;link rel="stylesheet" href="nirestiloa.css"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;section&gt;
+              &lt;article id="albisteArtikulua"&gt;
+                &lt;span&gt;HTML, HyperText Markup Language siglaren ingelesezko siglak (hipertestu-marken lengoaia), web-orriak egiteko markatzeko lengoaiari egiten dio erreferentzia. Web-orrien bertsio desberdinekin konektatzen duen softwarearen erreferentzia gisa balio duen estandar bat da. Web-orri baten edukia definitzeko oinarrizko egitura eta kode bat (HTML kodea) definitzen ditu, hala nola testua, irudiak, bideoak eta jokoak, besteak beste. World Wide Web Consortium (W3C) edo WWW Partzuergoaren ardurapeko estandarra da, webguneari lotutako teknologia ia guztiak estandarizatzen dituen erakundea, batez ere idazketari eta interpretazioari dagokienez.&lt;/span&gt;
+              &lt;/article&gt;
+            &lt;/section&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </code><figcaption>Artikuluak zutabetan banatzen</figcaption>
+      </pre>
+      <p>Zutabeak sortzeko propietateak edukiontziari aplikatu behar zaizkio. Hurrengo erregelak kolunn-count propietatea barne hartzen du, < article> elementuaren edukia bi zutabetan zatitzeko.</p>
+      <pre>
+        <code>
+          #albisteArtikulua {
             width: 580px;
             padding: 10px;
             border: 1px solid;
             column-count: 2;
             column-gap: 20px;
             }
-        </code>
+        </code><figcaption>Zutabetan zehazten</figcaption>
       </pre>
-      <h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, possimus delectus. Deleniti voluptatum totam in, quisquam amet quas reiciendis cum reprehenderit. Reiciendis quia quibusdam pariatur cupiditate consectetur, sequi magni iste.</h6>
-      </article>
+      <p>Goiko erregelak 580 pixeleko tamaina ematen dio &lt;article&gt; elementuari, eta edukiontziak hartzen duen eremua ertz solido batekin identifikatzen du. Erregelak 10 pixeleko betegarria ere badu, testua ertzetik bereizteko. Gainerako propietateek edukia bi zutabetan banatzen dute, 20 pixeleko tartearekin. Emaitza 4-17 irudian ageri da.</p>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/zutabea1.png" alt="">
+        <figcaption>
+          Edukia bi zutabetan banatua.
+        </figcaption>
+      </div>
+      <ul class="zerrendaArruntak">
+        <li><strong>Column-gap </strong>propietateak definitzen du zutabeen arteko espazioaren tamaina. Bereizketa hori espazio hutsa baino ez da, baina CSSk honako propietate hauek eskaintzen ditu erabiltzaileari zatiketa bistaratzen lagunduko dion lerro bat sortzeko.</li>
+        <li><strong>column-rule-style —</strong>Propietate honek banaketa irudikatzeko erabiltzen den lerroaren estiloa definitzen du. Balio erabilgarriak hidden (lehenetsita), dotted, dashed, solid, double, groove, ridge, inset eta outset dira.</li>
+        <li><strong>column-rule-color —</strong>Propietate honek zatiketa irudikatzeko erabiltzen den lerroaren kolorea zehazten du.</li>
+        <li><strong>column-rule-width —</strong>Propietate honek zatiketa irudikatzeko erabiltzen den linearen zabalera zehazten du.</li>
+        <li><strong>column-rule —</strong>Propietate honek aukera ematen digu linearen balio guztiak aldi berean definitzeko.</li>
+      </ul>
+      <p>Zutabeen erdian lerro bat marrazteko, gutxienez bere estiloa zehaztu behar dugu. Hurrengo adibideak kolunn-rule propietatea inplementatzen du pixel bateko lerro beltz bat sortzeko.</p>
+      <pre>
+        <code>
+        #albisteArtikulua {
+        width: 580px;
+        padding: 10px;
+        border: 1px solid;
+        column-count: 2;
+        column-gap: 20px;
+        column-rule: 1px solid # 000000;
+        }
+      </code><figcaption>Lerro bat gehitu da zutabeak banatzeko.</figcaption>
+      </pre>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/zutabea2.png" alt="">
+        <figcaption>
+          Bi zutabeak lerro bertikalaz banatuta.
+        </figcaption>
+      </div>
+      <div class="garrantzi-oinarrizko">
+        <h6><strong>Egin ezazu zuk zeuk</strong></h6>
+        <p>Sortu HTML fitxategi berri bat goiko koadroko kodearekin. Hori eginda sortu nirestiloa.css izeneko CSS fitxategi bat goiko koadroan zutabeak zehazteko osatu dugun css kodearekin. Ireki dokumentua zure nabigatzailean. Testua bi zutabetan banatuta ikusi beharko zenuke. </p>
+        <p>Orain <strong>#albisteArtikulua</strong> erregela zutabeak banatzeko lerroa egiteko erregelarekin ordeztu eta eguneratu orria zure nabigatzailean. Zutabeak banatzen dituen lerro bat ikusi beharko nuke, goiko irudiak erakusten duen bezala.</p>
+      </div>
       <div class="banaketaTxikia"></div>
-      
       </article>
+<!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
+
 
 </body>
 </html>
