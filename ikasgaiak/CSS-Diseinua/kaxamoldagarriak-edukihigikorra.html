@@ -3,23 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
-    <article class="ikasgaia" id="html-egitura-elementua">
-      <div class="azpitituluak">
-        <h3><strong>Edukiontzi higikorrak</strong></h3>
+    <article>
+      <div>
+        <h3><strong>Kaxa malguak</strong></h3>
       </div>
       <div class="banaketaTxikia"></div>
-      <h4>Kaxa higikorrak</h4>
-      <h5>Kaxa-eredu baten helburu nagusia da mekanismo bat eskaintzea leihoan erabilgarri dagoen espazioa zatitzeko eta web-orri baten diseinuaren zati diren errenkadak eta zutabeak sortzeko. Hala ere, ohiko kaxa-ereduak eskaintzen dituen tresnek ez dute helburu hori betetzen. Kaxak nola banatu eta horien tamainak zehaztea, adibidez, ezin da modu eraginkorrean lortu eredu horrekin.</h5>
-      <h5>Kaxa malguaren ereduak modu dotorean konpontzen ditu ohiko kaxa-ereduaren arazoak. Eredu honek ohiko kaxa-ereduak erabiltzen dituen tresnak baliatzen ditu, hala nola posizionamendu absolutua eta zutabeak, baina elementuak flotarazi beharrean kaxa edukiontzi malguak erabiliz antolatzen ditu. Edukiontzi malgua kaxa malgu bihurtzen duen elementua da. Eredu berri horretan, kaxa-multzo bakoitzak beste kaxa baten barruan egon behar du, eta kaxa horrek konfiguratuko ditu bere ezaugarriak, hurrengo adibideak erakusten duen bezala.</h5>
-      <div class="banaketaTxikia"></div>
-      <h6>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi explicabo nihil, amet minus iure neque praesentium commodi similique, aspernatur temporibus repellendus iste, at atque possimus vitae! Sequi possimus provident eos?</h6>
+      <h4>Edukiontzi malguak</h4>
+      <p>Kutxa-eredu baten helburu nagusia mekanismo bat eskaintzea da, leihoan dagoen espazioa zatitzeko eta web-orri baten diseinuaren zati diren errenkadak eta zutabeak sortzeko. Hala ere, kutxa-eredu tradizionalak eskaintzen dituen tresnek ez dute helburu hori betetzen. Kutxak nola banatu eta horien tamainak zehaztea, adibidez, ezin da modu eraginkorrean lortu eredu horrekin.</p>
+      <p>Diseinu-patroi komunak ezartzeko zailtasunak, hala nola, zutabeak zabaltzea erabilgarri dagoen espazioa okupatzeko, kaxa baten edukia ardatz bertikalean zentratzea edo zutabe bat orrialde baten goialdetik behealdera zabaltzea, edukiaren tamaina gorabehera, beste aukera batzuk bilatzera behartu du industria. Hainbat kutxa-eredu garatu dira, baina batek ere ez du kutxa malguaren ereduak baino arreta handiagoa jaso.</p>
+      <div class="garantzi-oinarrizko">
+        <h6><strong>GARRANTZITSUA</strong></h6>
+        <p>Nahiz eta kutxa-eredu malguak bere abantailak dituen kutxa-eredu tradizionalarekiko, oraindik egoera esperimentalean dago eta nabigatzaile batzuek ezin dituzte bere propietateak prozesatu. Horregatik, kapitulu honetan kutxa tradizionalaren eredua ere sartu dugu. Zure webguneetan aplikatu beharreko eredua aukeratu aurretik, kontuan hartu behar dituzu muga horiek. HTML5ek sartutako edozein tresna erabil dezakezun jakiteko, bisitatu <em>www.caniuse.com</em>.</p> 
+        </h6>
+      </div>
+      <h4>Edukiontzi malgua</h4>
+      <p>Kutxa-eredu malguak modu dotorean konpontzen ditu kutxa-eredu tradizionalaren arazoak. Eredu honek kutxa tradizionalaren ereduak erabiltzen dituen tresnak aprobetxatzen ditu, hala nola posizionamendu absolutua eta zutabeak, baina elementuak flotarazi beharrean kutxak edukiontzi malguak erabiliz antolatzen ditu. Edukiontzi malgua edukia kaxa malgu bihurtzen duen elementu bat da. Eredu berri honetan, kutxa-multzo bakoitzak beste kutxa baten barruan egon behar du, eta kutxa horrek bere
+        ezaugarriak, hurrengo adibideak erakusten duen bezala.</p>
+        <pre>
+          <code>
+  &lt;!DOCTYPE html&gt;
+    &lt;html lang="es"&gt;
+      &lt;head&gt;
+        &lt;title&gt;Hmen doa orriaren izenburua&lt;/title&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;meta name="description" content="Hau HTML5 dokumentua da"&gt;
+        &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+        &lt;link rel="stylesheet" href="nirestiloa.css"&gt;
+      &lt;/head&gt;
+    &lt;body&gt;
+      &lt;section id="kaxaNagusia"&gt;
+          &lt;div id="kaxa-1"&gt;Kaxa 1&lt;/div&gt;
+          &lt;div id="kaxa-2"&gt;Kaxa 2&lt;/div&gt;
+          &lt;div id="kaxa-3"&gt;Kaxa 3&lt;/div&gt;
+          &lt;div id="kaxa-4"&gt;Kaxa 4&lt;/div&gt;
+      &lt;/section&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+          </code><figcaption>Edukiontzi malguan kaxak antolatzeko</figcaption>
+        </pre>
+        <p>Goiko dokumentuak, aurreko adibideetan bezala, beste elementu batzuen edukiontzi gisa jarduten duen elementu bat du. &lt;section&gt; CSStik elementuak nola konfiguratzen diren, horixe da aldea. Kaxak elementuaren barruan malgu bihurtzeko (tamainak aldatu egiten dira, dagoen espazioaren arabera), elementu hori edukiontzi malgu bihurtu behar dugu. &lt;section&gt; Horretarako, CSSk <strong>display</strong> propietaterako <strong>flex</strong> eta <strong>inline-flex</strong> balioak eskaintzen ditu. <strong>flex</strong> balioak <strong>block</strong> elementu malgua definitzen du, eta <strong>inline-flex</strong> balioak <strong>inline</strong> elementu malgua.</p>
+        <pre>
+          <code>
+            #kaxaNagusia {
+              display: flex;
+              }
+          </code><figcaption><strong>kaxaNagusia</strong> elementua eduki malgu bihurtzeko</figcaption>
+        </pre>
+        <div class="garrantzi-oinarrizko">
+          <h6><strong>Egizu zu zeuk</strong></h6>
+          <p>Sor ezazu HTML fitxategi berri bat Goiko HTML kodearekin, lotu nirestiloa.css fitxategiarekin eta, azken horretan idatzi goiko erregela. Ireki dokumentua zure nabigatzailean. <strong>kaxanagusia</strong> elementuaren barruan bata bestearen ondoan, &lt;section&gt; elementuaren barruan ikusi beharko zenituzke, lerrokatuta eta CSS erregelarik jantzi gabe, biluzik. </section></p>
+        </div>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS-DISEINU/ka" alt="kaxanagusiari -flex- propietatea erantsita eta kaxei CSS erregelarik ezarri gabe">
+          <figcaption>Kaxa nagusiari -flex- propietatea erantsita</figcaption>
+        </div>
 
       </article>
+      <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
+
 
 </body>
 </html>
