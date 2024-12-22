@@ -3,23 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
-    <article class="ikasgaia" id="html-egitura-elementua">
-      <div class="azpitituluak">
-        <h3><strong>Elementu higikorrak</strong></h3>
+    <article>
+      <div>
+        <h3><strong>Elementu malguak</strong></h3>
       </div>
       <div class="banaketaTxikia"></div>
-      <h4>Eduki higikorra</h4>
-      <h5>Edukiontzi malgu baten barruko elementu bat malgu bihurtzeko, halakotzat jo behar dugu. Honako hauek dira elementu malguak konfiguratzeko propietate erabilgarriak.</h5>
-      <h5>Kaxa malguak zabaldu edo uzkurtu egiten dira, aitaren kaxaren barruko espazio librea okupatzeko. Espazioaren banaketa gainerako kutxen propietateen araberakoa da. Kutxa guztiak malgu gisa konfiguratzen badira, bakoitzaren tamaina aita kutxaren tamainaren eta <strong>flex</strong> jabetzaren balioaren araberakoa izango da.</h5>
-      <div class="banaketaTxikia"></div>
-      <h6>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi explicabo nihil, amet minus iure neque praesentium commodi similique, aspernatur temporibus repellendus iste, at atque possimus vitae! Sequi possimus provident eos?</h6>
+      <p>Edukiontzi malgu baten barruko elementu bat malgu bihurtzeko, halakotzat jo behar dugu. Honako hauek dira elementu malguak konfiguratzeko dauden propietateak.
+        flex-grow — Propietate honek adierazten du elementua zein proportziotan zabalduko edo uzkurtuko den. Proportzioa zehazteko, kutxako gainerako elementuei (elementu anaiei) esleitutako balioak hartzen dira kontuan.</p>
+        <ul class="zerrendaArruntak">
+          <li><strong>flex-shrink — </strong>Propietate honek adierazten du elementua zein proportziotan murriztuko den. Proportzioa zehazteko, kutxako gainerako elementuei (elementu anaiei) esleitutako balioak hartzen dira kontuan.</li>
+          <li><strong>flex-basis — </strong>Propietate honek elementuaren hasierako tamaina adierazten du.</li>
+          <li><strong>flex — </strong>Propietate honek aukera ematen digu <strong>flex-grow</strong>, <strong>flex-shrink</strong> eta <strong>flex-basis</strong> propietateen balioak aldi berean konfiguratzeko.</li>
+        </ul>
+        <p>Kaxa malguak zabaldu edo uzkurtu egiten dira, aitaren kaxaren barruko espazio librea okupatzeko. Espazioaren banaketa gainerako kutxen propietateen araberakoa da. Kutxa guztiak malgu gisa konfiguratzen badira, bakoitzaren tamaina aita kutxaren tamainaren eta <strong>flex</strong> propietatearen balioaren araberakoa izango da.</p>
+        <pre>
+          <code>
+            #kaxanagusia {
+              display: flex;
+              width: 600px;
+              }
+              #kaxanagusia > div {
+              height: 145px;
+              margin: 5px;
+              background-color: #CCCCCC;
+              }
+              #kaxa-1 {
+              flex: 1;
+              }
+              #kaxa-2 {
+              flex: 1;
+              }
+              #kaxa-3 {
+              flex: 1;
+              }
+              #kaxa-4 {
+              flex: 1;
+              }
+          </code><figcaption>Kaxak <strong>flex</strong> propietatearen bitartez kutxa malgu bihurtzeko</figcaption>
+        </pre>
+        <p>Goiko adibidean, <strong>flex</strong> propietatearen <strong>flex-grow</strong> balioa baino ez dugu aitortzen, kutxak nola hedatuko diren zehazteko. Kutxa bakoitzaren tamaina kalkulatzeko, <em>kaxanagusia</em>ren tamainaren balioa <strong>flex</strong> propietatearen balioarekin biderkatzen da, kutxaren <strong>flex-grow</strong>ren balio guztien batura eginez. Adibidez, <strong>kutxa-1</strong> elementurako formula (600 x 1/4 = 150) da. 600 balioa kaxanagusia-ren tamaina da, Kutxa 1 elementuari esleitutako <strong>flex-grow</strong> balioa da, eta Kutxa bakoitzari esleitutako <strong>flex</strong> propietatearen balioen batura da. Gure adibideko kutxa guztiek balio bera dutenez <strong>flex</strong> propietatean, kutxa bakoitzaren tamaina 150 pixelekoa izango da, marjinak kenduta (5 pixeleko marjina esleitu diogu &lt;div&gt; elementuari).</p>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS-DISEINU/kaxamalguak1.png" alt="-flex- propietateaz tamaina berdineko espazioak.">
+          <figcaption><strong>flex</strong> propietatearentzat balio berberek tamaina berdineko espazioak eratzen dituzte.</figcaption>
+        </div>
+        <div class="garrantzi-oinarrizko">
+          <h6><strong>Egin ezazu zuk zeuk</strong></h6>
+          <p>ordeztu arauak zure CSS artxiboan 4-35 Zerrendako kodearekin eta ireki 4-33 Zerrendako dokumentua zure nabigatzailean. 4-27 Irudiaren antzeko zerbait ikusi beharko nuke. Propietate horren potentziala agerikoa da elementu bakoitzari balio desberdinak esleitzen dizkiogunean.</p>
+        </div>
+        <pre>
+          <code>
+            #kaxanagusia {
+              display: flex;
+              width: 600px;
+              }
+              #kaxanagusia > div {
+              height: 145px;
+              margin: 5px;
+              background-color: #CCCCCC;
+              }
+              #kaxa-1 {
+              flex: 2;
+              }
+              #kaxa-2 {
+              flex: 1;
+              }
+              #kaxa-3 {
+              flex: 1;
+              }
+              #kaxa-4 {
+              flex: 1;
+              }
+          </code><figcaption>Banaketa desberdina sortzeko</figcaption>
+        </pre>
+        <p>Goiko kodean, 2. balioa 1. kaxa-elementuaren <strong>flex</strong> propietateari esleitzen diogu. Orain, kutxa horren tamaina kalkulatzeko formula (600 x 2/5 = 240) da. kaxanagusia-ren tamaina aldatzen ez dugunez, formularen lehen balioa berdina da, baina bigarren balioa 2 da (1. kaxako <strong>flex</strong> propietatearen balio berria), eta balioen batura <strong>flex</strong> propietate guztietatik 5 da (2. kaxarako eta beste hiru kaxetako bakoitzerako). Gainerako kaxentzat formula bera erabiliz, tamaina hauek lor ditzakegu: (600 x 1/5 = 120).</p>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS-DISEINU/kaxamalguak2.png" alt="-flex- propietateaz tamaina ezberdineako espazioak">
+          <figcaption>Banaketa desberdina sortzeko</figcaption>
+        </div>
+        <p>Emaitzak alderatuta, espazioa nola banatzen den ikus dezakegu. Erabilgarri dagoen espazioa zatitan banatzen da, kutxa bakoitzaren <strong>flex</strong> propietatearen balioen baturaren arabera (gure adibidean, guztira, 5). Gero, zatiak kutxen artean banatzen dira. Kaxa-1 elementuak bi zati jasotzen ditu, <strong>flex</strong> propietatearen balioa 2 delako, eta gainerako elementuek zati bakarra jasotzen dute, <strong>flex</strong> propietateen balioa 1 delako.
+        <p>Abantaila ez da bakarrik elementuak malgu bihurtzen direla, baizik eta elementu berri bat gehitzen dugun bakoitzean, ez dugula haren tamaina kalkulatu behar; kutxa guztien tamainak automatikoki birkalkulatzen dira. Ezaugarri horiek interesgarriak dira, baina badira beste agertoki batzuk ere. Adibidez, kutxetako bat zurruna denean eta tamaina esplizitua duenean, beste kutxak malgutu egiten dira, gainerako espazioa partekatzeko.</p>
+        <p>Tamaina esplizitua duen kutxa bat eduki dezakegun bezala, bi edo gehiago izan ditzakegu. Printzipioa bera da, baina geratzen den espazioa kutxa malguetan banatzen da.
+        Balizko egoera batean, elementu baten tamaina aitortu beharko genuke, baina malgu mantendu. Konfigurazio hori lortzeko, flex (flex-shrink eta flex-basis) propietaterako erabilgarri dauden gainerako parametroak erabili behar ditugu.</p>
+        <pre>
+          <code>
+            #kaxanagusia {
+              display: flex;
+              width: 600px;
+              }
+              #kaxanagusia > div {
+              height: 145px;
+              margin: 5px;
+              background-color: #CCCCCC;
+              }
+              #kaxa-1 {
+              width: 300px;
+              }
+              #kaxa-2 {
+              flex: 1;
+              }
+              #kaxa-3 {
+              flex: 1;
+              }
+              #kaxa-4 {
+              flex: 1;
+              }
+          </code><figcaption>Kaxa malguak eta finkoak konbinatzeko</figcaption>
+        </pre>
+        <p>Goiko adibideko lehen kaxak 300 pixeleko tamaina du, eta, beraz, 300 pixeleko espazioa banatu behar da gainerako kaxen artean (600 - 300 = 300). Nabigatzaileak kutxa malgu bakoitzaren tamaina kalkulatzen du, lehen erabili dugun formula berarekin: 300 x 1/3 = 100</p>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS-DISEINU/kaxamalguak3.png" alt="-flex- propietateaz kaxa malguak eta finkoak konbinatzeko">
+          <figcaption>Kaxa malguak eta finkoak konbinatzeko</figcaption>
+        </div>
+        <p>Oraingoan, hiru parametro aitortu dira kutxa bakoitzaren <strong>flex</strong> propietatearentzat. Kutxa guztien lehen parametroa (flex-grow) 1. balioarekin definitu da, eta hedapen-proportzio bera aitortu da. <strong>flex-shrink</strong> eta <strong>flex-basi</strong>s parametroetarako balio erantsien arabera zehazten da diferentzia. <strong>flex-shrink</strong> parametroak <strong>flex-grow</strong> gisa lan egiten du, baina kutxak zer proportziotan murriztuko diren zehazten du, erabilgarri dagoen espazioan sartzeko. Gure adibidean, parametro honen balioa 1 da kutxa-1 elementuarentzat, eta 5 gainerako kutxentzat; horrek leku gehiago esleituko dio kutxa-1 elementuari. <strong>flex-basis</strong> parametroak, bestalde, hasierako balioa ezartzen dio elementuari. Beraz, <strong>flex-basis</strong> parametroaren balioa elementu malgu bat zenbat zabalduko edo murriztuko den kalkulatzeko hartzen da kontuan. Balio hori 0 denean edo deklaratzen ez denean, aintzat hartutako balioa elementuaren edukiaren tamaina da.</p>
+        <div class="garrantzi-oinarrizko">
+          <h6><strong>Egin ezazu zuk zeuk</strong></h6>
+          <p>Ordezkatu zure CSS artxiboaren arauak 4-38 zerrendaren kodearekin. Adibide honetan, ez dugu kajapadre elementuaren tamaina adierazten, beraz, nabigatzailearen leihoa zabaltzen denean, elementu aita ere hedatzen da eta barruko kaxa guztiak proportzio berean handitzen dira. Aitzitik, leihoaren tamaina murrizten denean, kaxa-1 elementua proportzio desberdin batean murrizten da flex-shrink parametrorako zehaztutako balioaren ondorioz (1, 5 izan beharrean).</p>
+        </div>
+        <div class="garrantzi-oinarrizko">
+          <h6><strong>GARRANTZITSUA</strong></h6>
+          <p><strong>flex-grow</strong> edo <strong>flex-shrink</strong> parametroei esleitutako 0 balioak ez du ahalbidetzen elementua zabaltzea edo murriztea, hurrenez hurren. Malgutasuna adierazteko, parametro horien balioak 1en berdinak edo handiagoak izan behar dira. Auto balioa <strong>flex-basis</strong> parametroari ere esleitu diezaiokegu, nabigatzaileari eskatzeko <strong>width</strong> propietatearen balioa erabil dezala erreferentzia gisa.</p>
+        </div>
+        <pre>
+          <code>
+            #kaxanagusia {
+              display: flex;
+              width: 600px;
+              }
+              #kaxanagusia > div {
+              height: 145px;
+              margin: 5px;
+              background-color: #CCCCCC;
+              }
+              #kaxa-1 {
+              width: 150px;
+              flex: 1 1 auto;
+              }
+              #kaxa-2 {
+              width: 100px;
+              flex: 1 1 auto;
+              }
+              #kaxa-3 {
+              width: 100px;
+              flex: 1 1 auto;
+              }
+              #kaxa-4 {
+              width: 250px;
+              flex: 1 1 auto;
+              }
 
+          </code><figcaption>Kaxa malguei gogoko tamaina emateko</figcaption>
+        </pre>
+        <p>Goiko kodean, kutxa bakoitzak zabalera gogokoena du (width), baina kutxa guztiak posizionatuta geratu ondoren, 100 pixeleko espazio libre bat dago. Espazio gehigarri hori kutxa malguetan banatuko da. Kutxa bakoitzari esleitutako espazio-zatia kalkulatzeko, lehengo formula bera erabiliko dugu: 100 × 1/4 = 25. Horrek esan nahi du 25 pixel gehiago gehitzen zaizkiola kutxa bakoitzaren tamaina gustukoenari (marjinak kenduta).</p>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS-DISEINU/kaxamalguak4.png" alt="-flex- propietateaz tamaina ezberdineako espazioak">
+          <figcaption>Kutxen artean banatzeko espazio librea</figcaption>
+        </div>
+          <p><strong>flex-basis</strong> propietateak aukera ematen digu hasierako tamaina bat zehazteko, erabilgarri dagoen espazioa kutxen artean banatzerakoan <nav></nav>abigatzaileari eragiteko, baina kutxak balio horretatik haratago hedatzen edo murrizten dira oraindik. CSSk honako propietate hauek eskaintzen ditu kutxa baten tamainari mugak jartzeko.</p>
+          <ul class="zerrendaArruntak">
+            <li><strong>max-width —</strong>Propietate honek elementurako baimendutako gehieneko zabalera zehazten du. Onartu balioak CSSn eskuragarri dauden edozein unitatetan, pixeletan edo ehunekoetan, esaterako.</li>
+            <li><strong>min-width —</strong>Propietate honek elementurako baimendutako gutxieneko zabalera zehazten du. Onartu balioak CSSn eskuragarri dauden edozein unitatetan, pixeletan edo ehunekoetan, esaterako.</li>
+            <li><strong>max-height —</strong>Propietate honek elementurako baimendutako gehienezko altuera zehazten du. Onartu balioak CSSn eskuragarri dauden edozein unitatetan, pixeletan edo ehunekoetan, esaterako.</li>
+            <li><strong>min-height —</strong>Propietate honek elementurako baimendutako gutxieneko altuera zehazten du. Onartu balioak CSSn eskuragarri dauden edozein unitatetan, pixeletan edo ehunekoetan, esaterako.</li>
+          </ul>
+        
+           <p>Hurrengo adibideak malgutzat jotzen ditu kutxa guztiak, baina gehienez 50 pixeleko zabalera ematen dio kaxa-1 elementuari. Erabilgarri dagoen espazioa alde batera utzita, 1. kaxak ez ditu inoiz 50 pixelak gaindituko.</p>
+           <pre>
+            <code>
+              #kaxanagusia {
+                display: flex;
+                }
+                #kaxanagusia > div {
+                height: 145px;
+                margin: 5px;
+                background-color: #CCCCCC;
+                }
+                #kaxa-1 {
+                max-width: 50px;
+                flex: 1;
+                }
+                #kaxa-2 {
+                flex: 1;
+                }
+                #kaxa-3 {
+                flex: 1;
+                }
+                #kaxa-4 {
+                flex: 1;
+                }
+            </code><figcaption>Gehienezko tamaina bat aitortzeko kaxa-1 elementuari</figcaption>
+           </pre>
+           
+           <div class="irudiKutxa">
+            <img src="../../irudiak/CSS-DISEINU/kaxamalguak5.png" alt="-flex- propietateaz gehienezko tamaina bat aitortzeko kaxertako bati">
+            <figcaption>Gehieneko tamaina aitortzeko elementuei</figcaption>
+          </div>
       </article>
+      <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
+
 
 </body>
 </html>
