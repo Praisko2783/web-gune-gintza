@@ -1,24 +1,463 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>CSS kaxa moldagarriak</title>
 </head>
 <body>
     <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
-    <article class="ikasgaia" id="html-egitura-elementua">
-      <div class="azpitituluak">
-        <h3><strong>Eduki higikorren antolaketa</strong></h3>
+    <article>
+      <div>
+        <h3><strong>Eduki malguak nola antolatu</strong></h3>
       </div>
       <div class="banaketaTxikia"></div>
-      <h4>Antolaketa</h4>
-      <h5>Edukiontzi malgu baten barruko elementuak horizontalki lerro berean agertzen dira, baina ez dira orientazio estandarrarekin antolatzen. Edukiontzi malgu batek ardatzak erabiltzen ditu edukiaren orientazioa deskribatzeko. Zehaztapenak orientazioarekiko independenteak diren bi ardatz adierazten ditu: ardatz nagusia eta zeharkako ardatza. Ardatz nagusia edukia duena da (normalean orientazio horizontalaren baliokidea da), eta zeharkako ardatza ardatz nagusiarekiko perpendikularra da (normalean orientazio bertikalaren baliokidea). Orientazioa aldatzen bada, ardatzak edukiarekin batera mugitzen dira.</h5>
-      <div class="banaketaTxikia"></div>
-      <h6>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi explicabo nihil, amet minus iure neque praesentium commodi similique, aspernatur temporibus repellendus iste, at atque possimus vitae! Sequi possimus provident eos?</h6>
+      <p>Lehenetsita, edukiontzi malgu baten barruko elementuak horizontalki lerro berean agertzen dira, baina ez dira orientazio estandarrarekin antolatzen. Edukiontzi malgu batek ardatzak erabiltzen ditu edukiaren orientazioa deskribatzeko. Zehaztapenak orientazioarekiko independenteak diren bi ardatz adierazten ditu: ardatz nagusia eta zeharkako ardatza. Ardatz nagusia edukia duena da (normalean orientazio horizontalaren baliokidea da), eta zeharkako ardatza ardatz nagusiarekiko perpendikularra da (normalean orientazio bertikalaren baliokidea). Orientazioa aldatzen bada, ardatzak edukiarekin batera desplazatzen dira</p>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/kaxamalguantolatu1.png" alt="Edukiontzi malguen ardatzak"  width="100%">
+        <figcaption>Edukiontzi malguen ardatzak</figcaption>
+      </div>
+      <p>Eredu honetarako definitutako propietateek ardatz horiekin lan egiten dute eta elementuak muturretatik antolatzen dituzte: main-start, main-end, cross-start eta cross-end. Mutur horien arteko erlazioa ezkerreko eta eskuineko muturren arteko erlazioaren antzekoa da, edo eredu konbentzionaletan norabide horizontala eta bertikala deskribatzeko erabilitako goiko eta beheko muturren arteko erlazioaren antzekoa, baina eredu horretan harreman hori alderantzikatu egiten da orientazioa aldatzen denean. Alde horietako bat, main-start gisa, Propietate baten deskribapenean aipatzen denean, gogoratu behar dugu ezkerreko edo goiko muturra izan daitekeela, edukiontziaren egungo orientazioaren arabera (4-32 irudiko ezkerreko diagraman, adibidez, main-start muturra edukiontziaren ezkerraldea erreferentziatzen ari da, eta eskuineko diagraman, berriz, goiko muturra). Eredu horrekin nola lan egiten duen ulertzen dugunean, kutxen antolaketa alda dezakegu. CSSk honako propietate hauek eskaintzen ditu helburu horrekin.</p>
+      <ul class="zerrendaArruntak">
+        <li><strong>flex-direction — </strong>Propietate honek kutxen ordena eta orientazioa definitzen ditu edukiontzi malgu batean. Balio erabilgarriak row, row-reverse, column eta columnreverse dira, lehenetsitako row balioarekin.</li>
+        <li><strong>order — </strong>Propietate honek kutxen ordena zehazten du. Kutxa bakoitzaren kokapena zehazten duten zenbaki osoak onartzen ditu.</li>
+        <li><strong>justify-content —</strong>Propietate horrek zehazten du nola banatuko den espazio librea. Hauek dira balio erabilgarriak: flex-start, flex-end, center, space-between, eta space-around.</li>
+        <li><strong>align-items — </strong>Ezaugarri honek kutxak ardatz transbertsalean lerrokatzen ditu. Balio erabilgarriak flex-start, flex-end, center, baseline eta stretch dira.</li>
+        <li><strong>align-self —</strong>Ezaugarri honek kutxa bat lerrokatzen du ardatz transbertsalean. Alignitem gisa lan egiten du, baina kutxei banaka eragiten die. Balio erabilgarriak auto, flexstart, flex-end, center, baseline eta stretch dira.</li>
+        <li><strong>flex-wrap — </strong>Ezaugarri horrek zehazten du kutxa-lerro ugari sortzeko aukera dagoen. Balio erabilgarriak nowrap, wrap eta wrap-reverse dira.</li>
+        <li><strong>align-content —</strong> Ezaugarri honek kutxa-lerroak ardatz bertikalean lerrokatzen ditu. Hauek dira balio erabilgarriak: flex-start, flex-end, center, space-between, space-around eta stretch.</li>
+      </ul>
+      <p>Kutxen helbidea konfiguratu behar badugu, flex-direction propietatea erabil dezakegu. Propietate hori edukiontziari esleitzen zaio, edukiari eman nahi diogun ordenari dagokion balioarekin. Row balioak kaxen orientazioa testuaren orientazioaren arabera adierazten du (normalean horizontala) eta kutxak mainstartetik main-endera ordenatzen ditu (normalean ezkerretik eskuinera). Row-reverse balioak row-ren orientazio bera adierazten du, baina elementuen ordena alderantzikatu egiten du main-end-etik mainstart-era (eskuinean ezkerrera). Column balioak orientazioa adierazten du testu-blokeak (normalean bertikala) aurkezteko orientazioaren arabera, eta kutxak main-startetik main-endera ordenatzen ditu (normalean goiko muturretik behekora). Eta, azkenik, zutabe-reverse balioak zutabearen orientazio bera adierazten du, baina elementuen ordena alderantzikatu egiten du main-endetik main-startera (normalean beheko muturretik goiko muturrera). Hurrengo adibideak kutxa-lerro baten ordena naturala aldatzen du.</p>
+      <pre>
+        <code>
+          #kaxanagusia {
+            display: flex;
+            flex-direction: row-reverse;
+            }
+            #kaxanagusia > div {
+            height: 145px;
+            margin: 5px;
+            background-color: #CCCCCC;
+            }
+            #kaxa-1 {
+            flex: 1;
+            }
+            #kaxa-2 {
+            flex: 1;
+            }
+            #kaxa-3 {
+            flex: 1;
+            }
+            #kaxa-4 {
+            flex: 1;
+            }
+        </code><figcaption>Kaxen noranzkoa atzekoz aurrera jazteko</figcaption>
+      </pre>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/kaxamalguantolatu2.png" alt="Kutxak alderantzizko ordenan erakusteko">
+        <figcaption>Kutxak alderantzizko ordenan erakusteko</figcaption>
+      </div>
+      <div class="garrantzi-oinarrizko">
+        <h6><stroang>Oinarrizkoena</stroang></h6>
+        <p>CSSk <strong>writing-mode</strong> izeneko propietate bat eskaintzen du, testu-lerroen orientazioa zehazten duena (horizontala edo bertikala), eta horregatik kutxa malguaren ereduaren propietateen emaitza beti testuarentzat aldez aurretik ezarritako orientazioaren araberakoa da. Propietate honi buruzko informazio gehiago lortzeko, bisitatu gure webgunea eta jarraitu kapitulu honetako estekak.</p>
+      </div>
+      <p>Kutxen ordena ere pertsonalizatu daiteke. <strong>order</strong> propietateak kutxa bakoitzaren kokapena adierazteko aukera ematen digu.</p>
+      <pre>
+        <code>
+          #kaxanagusia {
+            display: flex;
+            }
+            #kaxanagusia > div {
+            height: 145px;
+            margin: 5px;
+            background-color: #CCCCCC;
+            }
+            #kaxa-1 {
+            flex: 1;
+            order: 2;
+            }
+            #kaxa-2 {
+            flex: 1;
+            order: 4;
+            }
+            #kaxa-3 {
+            flex: 1;
+            order: 3;
+            }
+            #kaxa-4 {
+            flex: 1;
+            order: 1;
+            }
+        </code><figcaption>Kaxa bakoitzaren kokapena zehazteko</figcaption>
+      </pre>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/kaxamalguantolatu3.png" alt="">
+        <figcaption><strong>order</strong> propietatearen bitartez kokapen berria emateko kaxa bakoitzari</figcaption>
+      </div>
+      <p>Kutxa malguaren ereduaren ezaugarri garrantzitsu bat espazio librea banatzeko gaitasuna da. Kutxek edukiontzian espazio osoa hartzen ez dutenean, espazio librea uzten dute, eta diseinuaren nonbait jarri behar da. Adibidez, hurrengo arauek 600 pixeleko tamaina edukiontzi malgurako eta 100 pixeleko zabalera kutxa bakoitzerako, 200 pixeleko espazio librea utziz (marjinak kenduta).</p>
+      <pre>
+        <code>
+          #kaxanagusia {
+            display: flex;
+            width: 600px;
+            border: 1px solid;
+            }
+            #kaxanagusia > div {
+            height: 145px;
+            margin: 5px;
+            background-color: #CCCCCC;
+            }
+            #kaxa-1 {
+            width: 100px;
+            }
+            #kaxa-2 {
+            width: 100px;
+            }
+            #kaxa-3 {
+            width: 100px;
+            }
+            #kaxa-4 {
+            width: 100px;
+            }
+        </code><figcaption>Edukiontzi malgu batean espazio librea banatzeko</figcaption>
+      </pre>
+      <p>Goiko kodea medio erttz bat gehitzen zaio edukiontziari, espazio gehigarria identifikatu ahal izateko. Lehenetsita, kutxak main-startetik main-endera ordenatzen dira (normalean ezkerretik eskuinera), amaieran espazio libre bat utziz.</p>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/kaxamalguantolatu4.png" alt="">
+        <figcaption>Kutxak eta espazio librea edukiontzi malgu baten barruan</figcaption>
+      </div>
+      <p>Portaera hori <strong>justify-content</strong> propietaterekin alda daiteke. Propietate horri esleitutako balio lehenetsia <strong>flex-start</strong> da, eta kutxak irudian agertzen den moduan ordenatzen ditu. Hala ere, beste balio bat esleitu dezakegu kutxak eta espazio librea banatzeko modua pertsonalizatzeko. Adibidez, <strong>flex-end</strong> balioak espazioa edukiontziaren hasieran mugitzen du, eta kutxak amaierarantz.</p></p>
+        
+      <pre>
+        <code>
+          #kaxanagusia {
+            display: flex;
+            width: 600px;
+            border: 1px solid;
+            justify-content: flex-end;
+            }
+            #kaxanagusia > div {
+            height: 145px;
+            margin: 5px;
+            background-color: #CCCCCC;
+            }
+            #kaxa-1 {
+            width: 100px;
+            }
+            #kaxa-2 {
+            width: 100px;
+            }
+            #kaxa-3 {
+            width: 100px;
+            }
+            #kaxa-4 {
+            width: 100px;
+            }
+        </code><figcaption><strong>justify-content</strong> propietatearen bitartez hutsik dagoen lekua banatu egiten dugu.</figcaption>
+      </pre>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/kaxamalguantolatu5.png" alt="">
+        <figcaption><strong>Justify-content:flex-end</strong> erregela medio banatutako espazio hutsa.</figcaption>
+      </div>
+      <p>Ondorengo irudiek propietate honetarako erabilgarri dauden gainerako balioen eragina erakusten dute.</p>
 
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/kaxamalguantolatu6.png" alt="">
+        <figcaption>Espazio hutsa, <strong>justify-content:center</strong> erregela medio banatua</figcaption>
+      </div>
+
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/kaxamalguantolatu7.png" alt="">
+        <figcaption>Espazio hutsa, <strong>justify-content:space-between</strong> erregela medio banatua</figcaption>
+      </div>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/kaxamalguantolatu8.png" alt="">
+        <figcaption>Espazio hutsa, <strong>justify-content:space-around</strong> erregela medio banatua</figcaption>
+      </div>
+      <p>Espazioa banatzen lagun diezagukeen beste ezaugarri bat <strong>align-item </strong>da. Propietate horrek <strong>justify-content</strong> gisa lan egiten du, baina kutxak ardatz transbertsalean lerrokatzen ditu. Ezaugarri horri esker, propietatea egokia da lerrokadura bertikala egiteko.</p>
+      <pre>
+        <code>
+          #kaxanagusia {
+            display: flex;
+            width: 600px;
+            height: 200px;
+            border: 1px solid;
+            align-items: center;
+            }
+            #kaxanagusia > div {
+            height: 145px;
+            margin: 5px;
+            background-color: #CCCCCC;
+            }
+            #kaxa-1 {
+            flex: 1;
+            }
+            #kaxa-2 {
+            flex: 1;
+            }
+            #kaxa-3 {
+            flex: 1;
+            }
+            #kaxa-4 {
+            flex: 1;
+            }
+        </code><figcaption>Espazio bertikala banatzeko</figcaption>
+      </pre>
+      <p>Goiko kodean, edukiontziaren altuera zehaztu dugu, 55 pixeleko espazio librea utziz. <strong>align-items</strong> propietateri <strong>center</strong> balioa esleitzen diogunez, espazio hori goiko eta beheko muturrerantz banatzen da, hurrengo irudiak erakusten duen bezala.</p>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/kaxamalguantolatu9.png" alt="">
+        <figcaption><strong>align-items: center</strong> erregela elementuak bertikalean lerrokatzeko</figcaption>
+      </div>
+      <p><strong>align-items</strong> propietateari eslei dakizkion balioak hauexek dira: <strong>flex-start</strong>, <strong>flex-end</strong>, <strong>center</strong>, <strong>baseline</strong> eta <strong>stretch</strong>. Azken balioak kutxak goiko muturretik behekora luzatzen ditu, erabilgarri dagoen espaziora egokitzeko. Ezaugarri hori hain da garrantzitsua, ezen stretch balioa lehenetsi egiten baita edukiontzi malgu guztietarako. Hau da <strong>stretch</strong> balioak lortzen duen ondorioa: kutxen altuera adierazten ez den bakoitzean, kutxek automatikoki hartzen dute beren aita elementuen tamaina.</p>
+      <pre>
+        <code>
+          #kaxanagusia {
+            display: flex;
+            width: 600px;
+            height: 200px;
+            border: 1px solid;
+            align-items: stretch;
+            }
+            #kaxanagusia > div {
+            margin: 5px;
+            background-color: #CCCCCC;
+            }
+            #kaxa-1 {
+            flex: 1;
+            }
+            #kaxa-2 {
+            flex: 1;
+            }
+            #kaxa-3 {
+            flex: 1;
+            }
+            #kaxa-4 {
+            flex: 1;
+            }
+        </code><figcaption>Kutxak luzatuz erabilgarri dagoen espazio bertikala okupatzeko</figcaption>
+      </pre>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/kaxamalguantolatu10.png" alt="">
+        <figcaption>Kutxak luzatzen <strong>align-item: stretch</strong> erregelarekin.</figcaption>
+      </div>
+      <p>Ezaugarri hori oso erabilgarria da gure diseinuak eduki desberdineko zutabeak dituenean. Edukiak altuera zehazten uzten badu, zutabe bat bestea baino laburragoa izango da. <strong>stretch</strong> balioa <strong>align-items</strong> propietateari esleituz, zutabe laburrenak luzatu egingo dira luzeenekin bat etortzeko.</p>
+      <p>Ezaugarri horrek <strong>flex-start</strong> balioa ere eskaintzen du kutxak lerroaren hasieran lerrokatzeko, eta hori edukiontziaren orientazioak zehazten du (normalean, ezkerreko edo goiko muturra).</p>
+      <pre>
+        <code>
+          #kaxanagusia {
+            display: flex;
+            width: 600px;
+            height: 200px;
+            border: 1px solid;
+            align-items: flex-start;
+            }
+            #kaxanagusia > div {
+            height: 145px;
+            margin: 5px;
+            background-color: #CCCCCC;
+            }
+            #kaxa-1 {
+            flex: 1;
+            }
+            #kaxa-2 {
+            flex: 1;
+            }
+            #kaxa-3 {
+            flex: 1;
+            }
+            #kaxa-4 {
+            flex: 1;
+            }
+        </code><figcaption>Kaxak goiko muturrerantz lerrokatzeko</figcaption>
+      </pre>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/kaxamalguantolatu11.png" alt="">
+        <figcaption><strong>align-item: flex-start</strong> erregelarekin lerrokatzeko kutxak</figcaption>
+      </div>
+      <p><strong>flex-end</strong> balioak edukiontziaren amaierarantz lerrokatzen ditu kutxak (eskuin-muturra edo behe-muturra normalean).</p>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/kaxamalguantolatu12.png" alt="">
+        <figcaption><strong>align-item: flex-end</strong> erregelarekin lerrokatzeko kutxak</figcaption>
+      </div>
+      <p>Azkenik, oinarrizko balioak kutxak lerrokatzen ditu edukiaren lehen lerroaren oinarrizko lerroaren arabera. Hurrengo adibideak kutxa-2 elementuaren edukia ez den letra-mota bat esleitzen du, balio horrek sortutako eragina erakusteko.</p>
+      <pre>
+        <code>
+          #kaxanagusia {
+            display: flex;
+            width: 600px;
+            height: 200px;
+            border: 1px solid;
+            align-items: baseline;
+            }
+            #kaxanagusia > div {
+            height: 145px;
+            margin: 5px;
+            background-color: #CCCCCC;
+            }
+            #kaxa-1 {
+            flex: 1;
+            }
+            #kaxa-2 {
+            flex: 1;
+            font-size: 36px;
+            }
+            #kaxa-3 {
+            flex: 1;
+            }
+            #kaxa-4 {
+            flex: 1;
+            }
+        </code><figcaption>Oinarriko lerroari jarraikiz lerrokatzeko kaxak</figcaption>
+      </pre>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/kaxamalguantolatu13.png" alt="align-items: baseline erregelarekin lerrokatzeko kutxak">
+        <figcaption><strong>align-items: baseline</strong> erregelarekin lerrokatzeko kutxak</figcaption>
+      </div>
+      <p>Batzuetan erabilgarria izan daiteke kutxak modu independentean lerrokatzea, edukiontziak ezarritako lerrokadura kontuan hartu gabe. Hori lortzeko, aldatu nahi dugun kutxari <strong>align-self</strong> propietatea eslei diezaiokegu.</p>
+      <pre>
+        <code>
+          #kaxanagusia {
+            display: flex;
+            width: 600px;
+            height: 200px;
+            border: 1px solid;
+            align-items: flex-end;
+            }
+            #kaxanagusia > div {
+            height: 145px;
+            margin: 5px;
+            background-color: #CCCCCC;
+            }
+            #kaxa-1 {
+            flex: 1;
+            }
+            #kaxa-2 {
+            flex: 1;
+            align-self: center;
+            }
+            #kaxa-3 {
+            flex: 1;
+            }
+            #kaxa-4 {
+            flex: 1;
+            }
+        </code><figcaption><strong>kaxa-2</strong> elementuaren noranzkoa aldatzeko</figcaption>
+      </pre>
+
+      <p>Goiko arauek edukiontziaren beheko muturrerantz lerrokatzen dituzte elementuak, <strong>kaxa-2</strong> izan ezik, zeina erdirantz lerrokatzen baita <strong>align-self</strong> propietateagatik.</p>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/kaxamalguantolatu14.png" alt="">
+        <figcaption><strong>align-self</strong> propietatearen bitartez lerrokatutako kutxa.</figcaption>
+      </div>
+      <p>Edukiontzi malgu batek lerro batean edo gehiagotan antola ditzake kutxak. <strong>flex-wrap</strong> propietateak baldintza hau adierazten du hiru balio erabiliz: nowrap, wrap eta wrap-reverse.</p>
+      <p><strong>nowrap</strong> balioak edukiontzi malgua lerro bakarreko edukiontzi gisa definitzen du (lerroak ez dira multzokatzen), <strong>wrap</strong> balioak edukiontzia lerro anitzeko edukiontzi gisa definitzen du eta cross-start muturretik cross-end muturrera ordenatzen ditu; <strong>wrap-reverse</strong> balioak, berriz, lerro ugari sortzen ditu alderantzizko ordenan.</p>
+      <pre>
+        <code>
+          #kaxanagusia {
+            display: flex;
+            width: 600px;
+            border: 1px solid;
+            justify-content: center;
+            flex-wrap: wrap;
+            }
+            #kaxanagusia > div {
+            height: 40px;
+            margin: 5px;
+            background-color: #CCCCCC;
+            }
+            #kaxa-1 {
+            width: 100px;
+            }
+            #kaxa-2 {
+              width: 100px;
+              }
+              #kaxa-3 {
+              width: 100px;
+              }
+              #kaxa-4 {
+              flex: 1 1 400px;
+              }
+        </code><figcaption><strong>flex-wrap</strong> propietatea bi kutxa lerro sortzeko.</figcaption>
+      </pre>
+      <p>Goian lehenengo hiru kutxek 100 pixeleko tamaina dute, 600 pixeleko zabalerako edukiontzi baten barruan lerro bakar batean kokatzeko adinakoa, baina azken kutxa malgua da, 400 pixeleko (flex-basis) tamainakoa hasieran, eta, beraz, edukiontzian ez dago nahikoa leku kutxa guztiak lerro bakar batean kokatzeko. Nabigatzaileak bi aukera ditu: kutxa malguaren tamaina murriztu dezake erabilgarri dagoen espazioan kokatzeko edo lerro berri bat sortu. Flexwrap propietatea wrap balioarekin deklaratu denez, lerro berri bat sortzen da, 4-46 irudian bezala.</p>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/kaxamalguantolatu15.png" alt="">
+        <figcaption>Hainbat linea edukiontzi malgu batean</figcaption>
+      </div>
+      <p>Kaxa-4 elementua malgutzat jo da <strong>flex</strong> propietategatik, eta, beraz, ez da soilik lerro berri batean kokatzen, baizik eta espazio erabilgarri guztia okupatu arte hedatzen da (flex-basis parametroak adierazitako 400 pixeleko balioa iradokitako zabalera baino ez da, ez tamaina-adierazpen bat). Azken kutxak uzten duen espazio librea aprobetxatuz, lehenengo hiru kutxak <strong>justify-content</strong> propietaterekin lerrokatuta geratzen dira.</p>
+      <p>Lineen ordena wrap-reverse balioarekin alderantzikatu daiteke, jarraian azaltzen den moduan.</p>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/kaxamalguantolatu16.png" alt="">
+        <figcaption><strong>flex-wrap: wrap-reverse</strong> lerroen antolamendu berria</figcaption>
+      </div>
+      <p>Lerro anitzeko edukiontziak ditugunean, baliteke lerrokatu behar izatea. CSSk kutxa-lineak edukiontzi malgu batean lerrokatzeko align-content propietatea eskaintzen du.</p>
+      <pre>
+        <code>
+          #kaxanagusia {
+            display: flex;
+            width: 600px;
+            height: 200px;
+            border: 1px solid;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            }
+            #kaxanagusia > div {
+            height: 50px;
+            margin: 5px;
+            background-color: #CCCCCC;
+            }
+            #kaxa-1 {
+            flex: 1 1 100px;
+            }
+            #kaxa-2 {
+            flex: 1 1 100px;
+            }
+            #kaxa-3 {
+            flex: 1 1 100px;
+            }
+            #kaxa-4 {
+            flex: 1 1 400px;
+            }
+        </code><figcaption><strong>align-content</strong> propietatea lerro bat baino gehiago lerrokatzeko.</figcaption>
+      </pre>
+      <p><strong>align-content</strong> propietateak sei balio izan ditzake: flex-start, flex-end, center, space-between, space-around eta stretch. Stretch balioa lehenetsi egiten da eta lerroak hedatzen ditu erabilgarri dagoen espazioa betetzeko, elementuentzako tamaina finko bat deklaratu ez bada behintzat.</p>
+      <p>Goiko adibidean, kutxa guztiak malgutzat jotzen dira, 50 pixeleko zabalera eta garaiera dute hasieran, eta kaxapadre elementua <strong>flex-wrap</strong> propietatea duten linea anitzeko edukiontzi gisa definitzen da. Horrek bi lerroko edukiontzi malgua sortzen du, aurreko adibidearen antzekoa, baina esperimentatzeko espazio bertikal nahikoa duena.</p>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/kaxamalguantolatu17.png" alt="">
+        <figcaption><strong>align-content: flex-start</strong> erregela ilarak lerrokatzeko</figcaption>
+      </div>
+        <p>Ondorengo irudiek align-content propietaterako erabilgarri dauden gainerako balioek eragindako eragina erakusten dute.</p>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS-DISEINU/kaxamalguantolatu18.png" alt="">
+          <figcaption><strong>align-content: flex-end</strong> erregela ilarak lerrokatzeko</figcaption>
+        </div>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS-DISEINU/kaxamalguantolatu19.png" alt="">
+          <figcaption><strong>align-content: center </strong> erregela ilarak lerrokatzeko</figcaption>
+        </div>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS-DISEINU/kaxamalguantolatu20.png" alt="">
+          <figcaption><strong>align-content: space-between</strong> erregela ilarak lerrokatzeko</figcaption>
+        </div>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS-DISEINU/kaxamalguantolatu21.png" alt="">
+          <figcaption><strong>align-content: space-around</strong> erregela ilarak lerrokatzeko</figcaption>
+        </div>
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS-DISEINU/kaxamalguantolatu22.png" alt="">
+          <figcaption><strong>align-content: stretch</strong> erregela ilarak lerrokatzeko</figcaption>
+        </div>
       </article>
+      <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
 
 </body>
 </html>
