@@ -155,6 +155,18 @@ pre{
   overflow-y: scroll;
   height: 20em;
 }
+@media (max-width: 1200px) {
+  pre{
+    width:90%;
+    padding:6px;
+  }
+}
+@media (max-width: 650px) {
+  pre{
+    width:100%;
+    padding:6px;
+  }
+}
 
 /*Azaleko Eduki nagusia, aurkezpena ''index.html'' ......BUKA   */
 /*Azaleko gida didaktikoen etiketak GIDA EREMUA....... */
