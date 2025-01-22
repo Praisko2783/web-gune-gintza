@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>CSS kutxa moldagarriak</title>
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+    <article>
+      <div>
+        <h3><strong><em>Benetako aplikazioa</em></strong></h3>
+      </div>
+      <div class="banaketaTxikia"></div>
+      <p>Ez dago alde handirik kutxa tradizionalaren ereduarekin diseinatutako dokumentu baten eta kutxa malguaren eredua ezartzeko erabili behar dugunaren artean. Adibidez, 4-20 zerrendako dokumentutik abiatuta kutxa malguaren eredua duen web orri bat diseinatzeko, dokumentuaren fluxu normala berreskuratzeko ditugun elementuak ezabatu besterik ez dugu egin behar. &lt;div&gt; Dokumentuaren gainerako zatiak berdin dirau.</p>
+      <pre  style="height: 600px;">
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Webgunegintza&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;link rel="stylesheet" href="css/w3.css"&gt;
+    &lt;link rel="stylesheet" href="css/estilo-orokorra.css"&gt;
+    &lt;link rel="stylesheet" href="css/estilo-ikasgaiTxanti.css"&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+  &lt;/head&gt;
+
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;div&gt;
+      &lt;h1&gt;Hauxe da izenburua&lt;/h1&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+  &lt;nav&gt;
+    &lt;div&gt;
+      &lt;ul id="menuzerrenda"&gt;
+        &lt;li&gt;&lt;a href="index.html"&gt;Orri nagusia&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="fotos.html"&gt;Argazkiak&lt;/a&gt;
+          &lt;ul&gt;
+            &lt;li&gt;&lt;a href="familia.html"&gt;Familia&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="vacaciones.html"&gt;Oporrak&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="videos.html"&gt;Ikus-entzunezkoak&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="contacto.html"&gt;Harremanetarako&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+  &lt;main&gt;
+
+      &lt;section&gt;
+        &lt;article&gt;
+          &lt;h1&gt;Lehen artikuluaren izenburua&lt;/h1&gt;
+          &lt;time datetime="2016-12-23" pubdate&gt;
+            &lt;div class="eguna-zenbakia"&gt;23&lt;/div&gt;
+            &lt;div class="eguna-izena"&gt;Ostirala&lt;/div&gt;
+          &lt;/time&gt;
+          &lt;p&gt;Lehen artikuluaren edukia&lt;/p&gt;
+          &lt;figure&gt;
+            &lt;img src="irudiak/AZALA/ika-ajax.jpg" width="125px"&gt;
+          &lt;/figure&gt;
+        &lt;/article&gt;
+        &lt;article&gt;
+          &lt;h1&gt;Bigarren artikuluaren izenburua&lt;/h1&gt;
+          &lt;time datetime="2016-12-7" pubdate&gt;
+            &lt;div class="eguna-zenbakia"&gt;7&lt;/div&gt;
+            &lt;div class="eguna-izena"&gt;Azteazkena&lt;/div&gt;
+          &lt;/time&gt;
+          &lt;p&gt;Bigarren artikuluaren edukia&lt;/p&gt;
+          &lt;figure&gt;
+            &lt;img src="irudiak/AZALA/ika-git.jpg" width="125px"&gt;
+          &lt;/figure&gt;
+        &lt;/article&gt;
+      &lt;/section&gt;
+      &lt;aside&gt;
+        &lt;h1&gt;Jakingarriak&lt;/h1&gt;
+        &lt;p&gt;Lehen artikuluari aipamena&lt;/p&gt;
+        &lt;p&gt;Bigarren artikuluari aipamena&lt;/p&gt;
+      &lt;/aside&gt;
+
+      &lt;div class="berreskuratu"&gt;&lt;/div&gt;
+
+  &lt;/main&gt;
+  &lt;footer id="oineko-irudia"&gt;
+    &lt;div&gt;
+      &lt;section class="oineko-saila"&gt;
+        &lt;h1&gt;Webgunea&lt;/h1&gt;
+        &lt;p&gt;&lt;a href="index.html"&gt;Nagusia&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;a href="fotos.html"&gt;Argazkiak&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;a href="videos.html"&gt;Ikus-entzunezkoak&lt;/a&gt;&lt;/p&gt;
+      &lt;/section&gt;
+      &lt;section class="oineko-saila"&gt;
+        &lt;h1&gt;Laguntza&lt;/h1&gt;
+        &lt;p&gt;&lt;a href="contacto.html"&gt;Harremanetarako&lt;/a&gt;&lt;/p&gt;
+      &lt;/section&gt;
+      &lt;section class="oineko-saila"&gt;
+        &lt;address&gt;Eibar, Gipuzkoa&lt;/address&gt;
+        &lt;small&gt;&copy; Eskubide babestuak 2016&lt;/small&gt;
+      &lt;/section&gt;
+      &lt;div class="berreskuratu"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+        </code><figcaption><figcaption><strong>OHIKO KUTXEN EREDUA</strong> prest kutxa malgu bilaklatzeko. Aldaketa bakarrak: &lt;header&gt;, &lt;nav&gt;, &lt;section&gt; eta &lt;main&gt; elementuei id-a kendu diet. &lt;header&gt; </figcaption>
+      </pre>
+      <p>Egitura-elementuen antolaketa bera denez, dokumentuari aplikatu behar dizkiogun CSS arauak ere antzekoak dira. Egiturazko elementuak edukiontzi malgu bihurtu besterik ez dugu egin behar, eta diseinuak hala eskatzen duenean haien edukia malgu bihurtu. Adibidez, hurrengo arauek &lt;header&gt; elementuaren <strong>display</strong> propietateari <strong>flex</strong> modua esleitzen diote, eta elementu horren barruko &lt;div&gt; elementua malgu gisa deklaratzen dute, goiburua eta haren edukia zabaldu egin daitezen, leihoan dagoen espazio osoa okupatu arte.  
+      </p>
+      <pre>
+        <code>
+* {
+  margin: 0 auto;
+  padding: 0
+}
+
+header {
+  width: 100%;
+  height: 150px;
+  padding: 0% 2%;
+  background-color: #0F76A0;
+  margin: 0px auto;
+}
+
+header h1 {
+  font: bold 54px Arial, sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+}
+        </code><figcaption>Goiburua edukiontzi malgu bihurtzeko</figcaption>
+      </pre>
+      <p>Goiburuko edukia pantailan zentratuta geratzea nahi dugunez, <strong>center</strong> balioa  <strong>justify-content</strong> propietateari. &lt;div&gt; elementua malgutzat jo da, eta horrek esan nahi du espazio erabilgarriaren arabera hedatu edo murriztuko dela, baina, lehen azaldu dugun bezala, orria pantaila zabaleko gailuetan aurkezten denean, ziurtatu behar dugu ez dela zabalegia eta deserosoa erabiltzailearentzat. Hori <strong>max-width</strong> propietatearekin konpontzen da. Propietate horri esker, &lt;div&gt; elementua ez da 960 pixel baino gehiago hedatuko.</p>
+      <p>Prozedura bera aplikatu behar zaio gure menuari, baina &lt;nav&gt; elementuaren barruko gainerako elementuek aurretik ezarritako propietate eta balio berak erabiltzen dituzte. </p>
+      <pre>
+        <code>
+nav {
+  width: 100%;
+  height: 50px;
+  padding: 0% 2%;
+  background-color: #9FC8D9;
+  border-top: 1px solid #094660;
+  border-bottom: 1px solid #094660;
+  width: 100%;
+  margin: 0px auto;
+}
+
+nav li {
+  display: inline-block;
+  height: 35px;
+  padding: 15px 10px 0px 10px;
+  margin-right: 5px;
+}
+nav ul{
+  flex:1;
+}
+
+nav li:hover {
+  background-color: #6FACC6;
+}
+
+nav a {
+  font: bold 22px Arial, sans-serif;
+  color: #333333;
+  text-decoration: none;
+}
+
+nav>li {
+  position: relative;
+  display: inline-block;
+  height: 35px;
+  padding: 15px 10px 0px 10px;
+  margin-right: 5px;
+}
+
+#menuzerrenda li>ul {
+  display: none;
+  position: absolute;
+  width: 20%;
+  top: 200px;
+  left: 300px;
+  background-color: #9FC8D9;
+  box-shadow: 3px 3px 5px rgba(100, 100, 100, 0.7);
+  border-radius: 0px 0px 5px 5px;
+  z-index: 1000;
+}
+
+#menuzerrenda li>ul>li {
+  width: 85%;
+  height: 25px;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+#menuzerrenda li:hover ul {
+  display: list-item;
+}
+
+#menuzerrenda a {
+  font: bold 18px Arial, sans-serif;
+  color: #333333;
+  text-decoration: none;
+}
+
+nav li:hover {
+  background-color: #6FACC6;
+}
+        </code><figcaption>Menua edukiontzi malgu bihurtzeko</figcaption>
+      </pre>
+
+      <p>Eduki nagusirako arauak ere berberak dira, baina oraingoan bi edukiontzi malgu ditugu: bata, edukia orrian zentratzeko ardura duen &lt;main&gt; elementua, eta bestea, &lt;section&gt; eta &lt;aside&gt; elementuek sortutako bi zutabeak konfiguratzeko ardura duen &lt;div&gt; elementua. Horregatik, &lt;div&gt; elementuari eragiten dion erregelak bi propietate hauek behar ditu: <strong>display</strong>, elementua edukiontzi malgu gisa deklaratzeko, eta <strong>flex</strong>, edukiontzia bera elementu malgu gisa deklaratzeko. 
+      </p>
+      <pre>
+        <code>
+main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  padding: 2%;
+}
+
+section {
+  float: left;
+  width: 60%;
+  padding: 10px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+
+aside {
+  float: right;
+  width: 35%;
+  padding: 10px;
+  background-color: #E7F1F5;
+  border-radius: 10px;
+}
+
+aside h1 {
+  font: bold 18px Arial, sans-serif;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.berreskuratu {
+  clear: both;
+}
+        </code><figcaption>Zutabeak edukiontzi malgu bihurtzeko</figcaption>
+      </pre>
+
+      <p>&lt;aside&gt; elementua zabalera finko batekin deklaratu da, eta horrek esan nahi du ezkerreko zutabea bakarrik, &lt;section&gt; elementuak irudikatzen duena, hedatu edo murriztu egingo dela, erabilgarri dagoen gainerako espazioa okupatzeko. &lt;section&gt; elementuaren edukirako propietateak (ezkerreko zutabea) kutxa tradizionalaren eredurako definitu ditugunen berdinak dira. <section>
+      </p>
+      <pre>
+        <code>
+article {
+  position: relative;
+  padding: 0px 40px 20px 40px;
+}
+
+article time {
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -70px;
+  width: 80px;
+  padding: 15px 5px;
+  background-color: #094660;
+  box-shadow: 3px 3px 5px rgba(100, 100, 100, 0.7);
+  border-radius: 5px;
+}
+
+.eguna-zenbakia {
+  font: bold 36px Verdana, sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.eguna-izena {
+  font: 12px Verdana, sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+article h1 {
+  margin-bottom: 5px;
+  font: bold 30px Georgia, sans-serif;
+}
+
+article p {
+  font: 18px Georgia, sans-serif;
+}
+
+figure {
+  margin: 10px 0px;
+}
+
+figure img {
+  padding: 5px;
+  border: 1px solid;
+}
+        </code>
+      </pre>
+      <p>Orri-oinak eduki nagusiaren antzeko erronka du. &lt;footer&gt; elementua kutxa malgu bihurtu behar dugu, eta barruan sortutako hiru zutabeak malgutzat jo behar ditugu informazioa aurkezteko.
+      </p>
+      <pre>
+        <code>
+#oineko-irudia {
+  width: 96%;
+  padding: 2%;
+  background-color: #0F76A0;
+}
+
+#oineko-irudia>div {
+  width: 960px;
+  margin: 0px auto;
+  background-color: #9FC8D9;
+  border-radius: 10px;
+}
+
+.oineko-saila {
+  float: left;
+  width: 270px;
+  padding: 25px;
+}
+
+.oineko-saila h1 {
+  font: bold 20px Arial, sans-serif;
+}
+
+.oineko-saila p {
+  margin-top: 5px;
+}
+
+.oineko-saila a {
+  font: bold 16px Arial, sans-serif;
+  color: #666666;
+  text-decoration: none;
+}
+        </code>+<figcaption>Orri-oina edikiontzi malgu bihurtzeko</figcaption>
+      </pre>
+      <div class="garrantzi-oinarrizko">
+        <h6>Egin ezazu zeuk:</h6>
+        <p>Sortu HTML fitxategi berri bat eta bertan goian  <strong>OHIKO KUTXEN EREDUA</strong> izenarekin  kodea itsatsi. Ondoren <strong>nirestiloa.css</strong> izeneko fitxategian orri honetako koadroetan dauzkazun kode zatiak bata bestearen azpian itsatsi. Gogoratu <strong>nireirudia.jpg</strong> fitxategia direktorio berean sartzea. Ireki dokumentua zure nabigatzailean. Kutxa tradizionalaren ereduarekin aurretik sortutako orri bera ikusi beharko zenuke. Baina oraingoan orriko atalak malguak direnez (leihoaren tamaina handitu edo murriztu ahala artikuluen tamainak aldatu egingo dira) eta &lt;aside&gt; elementuak sortutako zutabea eremu nagusiaren azpian jarriko da. <aside>
+        </p>
+      </div>
+      <pre style="height: 600px; padding:0;">
+        <code>
+          <div class="irudiKutxa">
+            <img src="../../irudiak/CSS-DISEINU/kaxamalguaplikazioa.png" width=100% alt="">
+          </div>
+        </code><figcaption><strong>flex</strong> propietatea erabiliz, pantaila estutzean eskuineko zutabea ezkerrekoaren azpian jartzen da.</figcaption>
+      </pre>
+      </article>
+      <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
+
+</body>
+</html>
