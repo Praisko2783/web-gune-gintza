@@ -3,36 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Media Query</title>
 </head>
 <body>
     <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
-     <section>
-      
-     </section>
-    <article class="ikasgaia" id="html-egitura-elementua">
-      <div class="azpitituluak">
-        <h3><strong>Media Query, Etenguneak, Bistaratze-eremua</strong></h3>
+    <article>
+      <div>
+        <h3><strong><em>Media Query</em>-ak, Etenguneak, Bistaratze-eremua</strong></h3>
       </div>
       <div class="banaketaTxikia"></div>
-      <h4>Media Query</h4>
-      <div class="banaketaTxikia"></div>
-      <h5>Media Query bat CSSn erreserbatutako arau bat da, garatzaileei dokumentua erakusten den ingurunea detektatzeko aukera emateko asmoz txertatu zena. Adibidez, Media Queries erabiliz, dokumentua monitore batean erakusten den edo inprimagailu batera bidaltzen den zehaztu dezakegu, eta kasu bakoitzerako estilo egokiak esleitu. Horretarako, Media Querie-ek gako-hitz hauek eskaintzen dituzte.</h5>
-      <div class="banaketaTxikia"></div>
-      <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis omnis aliquam voluptatem libero modi sequi deleniti distinctio deserunt, architecto facilis. Quidem hic magnam tempora aut laudantium. Provident iste architecto facere!</h6>
-      <div class="banaketaTxikia"></div>
-      <h4>Etenguneak</h4>
-      <div class="banaketaTxikia"></div>
-      <h5>Media Query bat deklaratzen dugu, bistaratze-eremuaren zabalera 480 pixelekoa edo txikiagoa den detektatzen duena eta baldintza betez gero propietateak aplikatzen dituena. Hau praktika arrunta da. Egun hauetan merkatuan dauden gailuek tamaina desberdinetako pantaila ugari dituzte. Width gako-hitza gailu espezifiko bat detektatzeko erabiltzen badugu, ezagutzen ez ditugun edo merkatuan sartu berri diren gailu batzuk ez dira detektatuko eta gure webgunea modu desegokian erakutsiko dute</h5>
-      <div class="banaketaTxikia"></div>
-      <h6>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At optio minus assumenda explicabo dignissimos ullam nulla alias quasi maxime non nemo nam, ut debitis deserunt tenetur veritatis ipsum maiores laboriosam.</h6>
-      <div class="banaketaTxikia"></div>
-      <h4>Bistaratze-eremua</h4>
-      <div class="banaketaTxikia"></div>
-      <h5>Bistaratze-eremua <strong>(viewport ingelesez)</strong> gure web orriak erakusten diren nabigatzailearen leihoaren zatia da. Leihoaren eta bistaratze-eremuaren arteko erlazioa dela eta, biek tamaina bera izan beharko lukete gailu mugikorretan, baina hori ez da kasu guztietan betetzen.</h5>
-      <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt ut esse harum illo facilis corrupti illum, nisi dolores unde tempore hic debitis ab repellat autem! Doloribus sint vitae accusamus?</h6>
-      <div class="banaketaTxikia"></div>
+      <p>2007. urtean iPhonea merkatuan sartzeak mundua betiko aldatu zuen. Ordura arte, pantaila txikiak zituzten mugikorrak baino ez genituen, webguneak deskargatzeko eta erakusteko gaitasun nahikorik ez zutenak. Webean nabigatu nahi bagenuen, ordenagailu pertsonal batean egin behar genuen. Garatzaileek erraz kontrolatzen zuten egoera hori.</p>
+      <p>Erabiltzaileek pantaila mota bakarra zuten, eta pantaila horrek behar zuten guztia sartzeko adinako tamaina zuen. Orduko ebazpenik ezagunenek 1024 pixel horizontal biltzen zituzten gutxienez, eta horrek aukera ematen zien garatzaileei beren webguneak tamaina estandarrarekin diseinatzeko (aurreko kapituluan aurkeztu genuena bezala). Baina iPhone merkatuan agertu zenean, horrelako diseinu finkoa duten webguneak ezin ziren hain pantaila txikian irakurri. </p>
+      <p>Lehenengo irtenbidea bi webgune bereizi garatzea izan zen, bata ordenagailuentzat eta bestea iPhoneentzat, baina gailu berriak merkatuan sartzeak, hala nola iPad-a 2010ean, berriro behartu zituen garatzaileak alternatiba hobeak bilatzera. Elementuei malgutasuna ematea izan zen inplementatutako irtenbideetako bat, baina ez zen nahikoa izan. Hainbat zutabe dituzten webguneak ez ziren ondo erakusten pantaila txikietan. Azken soluzioak elementu malguak izan behar zituen, diseinua gailu bakoitzera egokitzeko aukeraz gain. Horrela sortu zen gaur egun web diseinu moldagarri gisa ezagutzen duguna, edo ingelesezko responsive web design izenez ezagutzen duguna.</p>
+      <p>Web diseinu moldagarria diseinu malguak eta Media Queries (bitartekoak kontsultatzea) izeneko CSSz hornitutako tresna bat konbinatzen dituen teknika bat da, pantailaren tamaina detektatzeko eta diseinua egoera bakoitzera egokitzeko behar diren aldaketak egiteko aukera ematen diguna.</p>
+      <h3><strong><em>Media Query</em>-ak</strong></h3>
+      <p>Media Query bat CSSn erreserbatutako arau bat da, eta garatzaileei dokumentua erakusten den bitartekoa detektatzeko aukera emateko txertatu zen.
+        <p>Adibidez, Media Queries erabiliz, dokumentua monitore batean erakusten den edo inprimagailu batera bidaltzen den zehaztu dezakegu, eta kasu bakoitzerako estilo egokiak esleitu. Horretarako, Media Queries-ek gako-hitz hauek eskaintzen dituzte.</p>
+        <ul class="zerrendaArruntak">
+          <li><strong>all — </strong>Propietateak bitarteko guztietan aplikatzeko erabiltzen da.</li>
+          <li><strong>print — </strong>Propietateak web-orria inprimagailu batera bidaltzen denean aplikatzen dira.</li>
+          <li><strong>screen — </strong>Propietateak web-orria koloretako pantaila batean agertzeko aplikatzen dira.</li>
+          <li><strong>speech — </strong>Web-orria ahots-sintetizadore baten bidez prozesatzen denean aplikatzen dira propietateak.</li>
+        </ul>
+        <p>Weba diseinatzeko Media Querie-ak erabilgarriak izatea eragiten duena da ingurunearen tamaina ere antzeman dezaketela. Media Queriesekin bistaratze eremuaren tamaina antzeman dezakegu (gure webguneak erakusten dituen nabigatzailearen leihoaren zatia), eta gailu bakoitzerako CSS arau desberdinak definitu. Ezaugarri horiek detektatzeko hainbat gako-hitz erabil ditzakegu. Honako hauek dira web diseinu moldagarria duen webgune bat garatzeko gehien erabiltzen direnak.</p>
+        <ul class="zerrendaArruntak">
+          <li><strong>width — </strong>Gako-hitz horrek propietateak aplikatzen diren zabalera zehazten du.</li>
+          <li><strong>height — </strong>Gako-hitz horrek zehazten du propietateak zein altueratan aplikatzen diren.</li>
+          <li><strong>min-width — </strong>Gako-hitz horrek propietateak aplikatzeko gutxieneko zabalera zehazten du.</li>
+          <li><strong>max-width — </strong>Gako-hitz horrek propietateak aplikatzeko gehieneko zabalera zehazten du.</li>
+          <li><strong>aspect-ratio — </strong>Gako-hitz horrek zehazten du propietateak zer proportziotan aplikatzen diren.</li>
+          <li><strong>orientation — </strong>Gako-hitz horrek zehazten du propietateak zer orientaziotan aplikatzen diren. Eskuragarri dauden balioak portrait (bertikala) eta landscape (horizontala) dira.</li>
+          <li><strong>resolution — </strong>Hitz gako horrek zehazten du propietateak aplikatzen diren pixelen dentsitatea. Hazbeteko (dpi), zentimetroko (dpcm) edo pixeletako (dppx) proportzioko puntuetan balioak onartzen ditu. Adibidez, erretina motako pantaila bat 2 eskalan detektatzeko, 2dppx balioa erabil dezakegu.</li>
+          <li><strong></strong></li>
+        </ul>
+        <p>Gako-hitz horiek erabiliz, orrialdea erakutsiko den ingurunearen eta bistaratze-arloaren zenbait alderdi antzeman ditzakegu, eta propietateak aldatu, diseinua egungo baldintzetara egokitzeko. Adibidez, Media Query width gakoarekin eta 768px balioarekin definitzen badugu, propietateak soilik aplikatuko dira orrialdea portrait moduan (orientazio bertikala) iPad estandar batean erakusten denean.</p>
+        <p>Media Query bat definitzeko, hitz gakoak eta behar ditugun balioak bakarrik adieraz ditzakegu. Ezaugarri bat deskribatzen duten gako-hitzak, hala nola bistaratze-eremuaren zabalera, parentesi artean adierazi behar dira. Gako-hitz bat baino gehiago sartuz gero, and (y) eta or (o) eragile logikoekin lotu ditzakegu. Adibidez, Media Query all and (max-width: 480px) propietateak esleitzen dizkio dokumentuari bitarteko guztietan, baina soilik bistaratze eremuak 480 pixeleko zabalera edo txikiagoa duenean.</p>
+        <p>Bi modu daude Media Queries adierazteko: </p>
+         <p><strong>dokumentutik bertatik</strong> &lt;link&gt; elementuaren batez besteko atributua erabiliz.</p>
+         <p><strong>estilo orritik</strong>@media erregela erabiliz</p>
+         <p>&lt;link&gt;</p> elementua erabiltzen dugunean, CSS fitxategia hauta dezakegu, konfigurazio espezifiko baterako kargatu nahi dugun estilo orriarekin. Adibidez, hurrengo dokumentuak bi CSS fitxategi kargatzen ditu, bata egoera eta bitarteko guztietan aplikatuko ditugun estilo orokorrak dituena, eta bestea pantaila txikiko gailu batean orrialdea aurkezteko behar diren estiloekin (480 pixel zabal edo gutxiago).</p>
+         <pre style="height:600px">
+          <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Orriaren izena hemen&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="description" content="HTML5 dokumentu bat da hau"&gt;
+    &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+    <strong>&lt;link rel="stylesheet" href="denamoldagarri.css"&gt;</strong>
+    <strong>&lt;link rel="stylesheet" media="(max-width: 480px)" href="sakelakoakmoldagarri.css"&gt;</strong>
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;section&gt;
+      &lt;div&gt;
+        &lt;article&gt;
+          &lt;h1&gt;Lehenengo artikuluaren izenburua&lt;/h1&gt;
+          &lt;img src="lehenIrudia.jpg"&gt;
+        &lt;/article&gt;
+        &lt;article&gt;
+          &lt;h1&gt;Bigarren artikuluaren izenburua&lt;/h1&gt;
+          &lt;img src="bigarrenIrudia.jpg"&gt;
+        &lt;/article&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;aside&gt;
+      &lt;div&gt;
+        &lt;h1&gt;Alboko informazioa&lt;/h1&gt;
+        &lt;p&gt;Lehenengo artikuluari aipamena&lt;/p&gt;
+        &lt;p&gt;Bigarren artikuluari aipamena&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/aside&gt;
+    &lt;div class="berreskuratu"&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+          </code><figcaption>Estiloan 'media query' ekin kargatzeko</figcaption>
+         </pre>
+         <p>Nabigatzaileak dokumentu hori irakurtzen duenean, lehenik eta behin, <strong>denamoldagarri.css</strong> fitxategia kargatzen du, eta, gero, bistaratze-eremuaren zabalera 480 pixelekoa edo txikiagoa bada, fitxategia <strong>sakelakoakmoldagarri.css</strong> kargatzen du eta estiloak aplikatzen dizkio dokumentuari.</p>
+         <p>(<strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets) 'estilo orriak kaskadan'  izenaren inizialak <strong>CSS</strong> dira, eta horrek esan nahi du propietateak ur-jauzian prozesatzen direla eta, beraz, propietate berriek aurrekoak ordezten dituztela. Bistaratze eremu jakin baterako elementu bat aldatu behar dugunean, aldatu nahi ditugun propietateak adierazi besterik ez dugu egin behar, baina aurretik definitutako gainerako propietateen balioak berdinak dira. </p>
+         <p>Adibidez, dokumentuaren gorputzari atzealdearen kolore bat eslei diezaiokegu <strong>denamoldagarri.css</strong> fitxategian, eta, gero, <strong>sakelakoakmoldagarri.css</strong> fitxategian alda dezakegu, baina balio berri hori dokumentua pantaila txiki batean aurkezten denean bakarrik aplikatuko da. Honako hau da fitxategian ezarriko dugun erregela <strong>denamoldagarri.css</strong>.</p>
+         <pre>
+          <code>
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #990000;
+  }
+          </code><figcaption>Estiloak lehenetsita definituz (denamoldagarri.css)</figcaption>
+         </pre>
+         <p><strong>sakelakoakmoldagarri.css</strong> fitxategian definitutako estiloek aldatu nahi ditugun propietateen balioak bakarrik aldatu behar dituzte (kasu honetan <strong>background-color</strong> propietatea), baina gainerako balioak <strong>denamoldagarri.css</strong> fitxategian adierazi bezala mantenduko, haiek baitira lehenetsitakoak dira.</p>
+          <pre>
+            <code>
+body {
+  background-color: #3333FF;
+  }
+            </code><figcaption>Estiloak definituz sakelakoentzat (sakelakoakmoldagarri.css)</figcaption>
+          </pre>
+          <div class="garrantzi-oinarrizko">
+            <h6>Egin ezazu zuk zeuk:</h6>
+            <p>Sortu HTML fitxategi berri bat goiko dokumentuko kodearekin. Aldi berean sortu CSS fitxategi bat, denamoldagarri.css izenekoa, goiko koadroko CSS-arekin (margin: 0px; padding: 0px; background-color: #990000;); eta beste bat, sakelakoakmoldagarri.css izenekoa, beste koadroko CSS-arekin (background-color: #3333FF;).
+              <p>Ireki dokumentua zure nabigatzailean. Orrialdea ikusi beharko zenuke hondo gorri batekin. Arrastatu leihoaren alde bat zabaleraren tamaina murrizteko.</p>
+            <p>Bistaratzeko eremuaren zabalera 480 pixelekoa edo txikiagoa denean, atzealdearen kolorea urdinera aldatzen ikusi behar duzu.</p>
+            <p>&lt;link&gt; elementuarekin eta batez besteko atributuarekin estilo orri desberdinak karga ditzakegu egoera bakoitzerako, baina propietate gutxi batzuk bakarrik aldatzen direnean, guztiak estilo orri berean sar ditzakegu eta Media Queries definitu <strong>@media</strong> erregelarekin, hurrengo adibideak erakusten duen bezala.</p>
+          </div>
+          <pre>
+            <code>
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #990000;
+  }
+
+  @media (max-width: 480px) {
+    body {
+      background-color: #3333FF;
+    }
+  }
+            </code><figcaption>Media Query-ak @media erregelarekin deklaratzeko modua (denamoldagarri.css)</figcaption>
+          </pre>
+
+          <p>Media Query-a @media erregelarekin deklaratzen da, eta, ondoren, ingurunearen ezaugarriak eta giltzen arteko propietateak definitzen dituzten gako-hitzak eta balioak. Nabigatzaileak estilo-orri hori irakurtzen duenean, &lt;body&gt; elementuari body erregelaren propietateak esleitzen dizkio, eta, ondoren, bistaratze-eremuaren zabalera 480 pixelekoa edo txikiagoa bada, &lt;body&gt; elementuaren hondoko kolorea #3333FF (urdina) bihurtzen da.
+            
+            <div class="garrantzi-oinarrizko">
+              <h6>Egin ezazu zuk zeuk:</h6>
+            
+             <p>Ordeztu arauak zure fitxategian, denamoldagarri.css, goiko azken kodearekin, eta ezabatu HTML dokumentuko bigarren &lt;link&gt; elementua (adibide honetan, zure estilo guztietarako CSS fitxategi bat baino ez duzu behar). Ireki dokumentua zure nabigatzailean eta murriztu leihoaren tamaina CSSk Media Queryk zehaztutako araua nola aplikatzen duen ikusteko, bistaratze-eremuaren zabalera 480 pixelekoa edo gutxiagokoa denean.</p>
+            </div>
+
+            <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
+
+          <h3>Eten-puntuak</h3>
+          <p>Aurreko adibidean, Media Query bat aitortzen dugu, bistaratze-eremuaren zabalera 480 pixelekoa edo txikiagoa den detektatzen duena, eta baldintza betez gero, propietateak aplikatzen dituena.</p>
+          <p>Hau praktika arrunta da. Egun hauetan merkatuan eskuragarri dauden gailuek tamaina desberdinetako pantaila ugari dituzte. Width gako-hitza erabiltzen badugu gailu espezifiko bat detektatzeko, ezagutzen ez ditugun edo merkatuan sartu berri diren gailu batzuk ez dira detektatuko eta gure webgunea modu desegokian erakutsiko dute.</p>
+          <p>Adibidez, Media Query width: 768px delakoak tamaina estandarreko iPadak bakarrik detektatzen ditu portrait moduan (bertikala), orientazio espezifiko horretako gailu horiek bakarrik dutelako tamaina hori. <strong>Landscape</strong> (horizontala) moduko tableta batek, edo bereizmen desberdina duen batek, edo 768 pixeleko pantaila txikiagoa edo handiagoa duen beste edozein gailuk, ez dute propietate horien eraginik izango, nahiz eta tamaina pixel bat edo bi bakarrik aldatu. Erroreak saihesteko, ez dugu tamaina espezifikorik hautatu behar. Horren ordez, diseinua nabarmen aldatzeko gehieneko edo gutxieneko puntuak ezarri behar ditugu, eta kutxa eredua erabili behar dugu ementuen tamaina erabilgarri dagoen espaziora egokitzeko, pantailaren zabalera puntu horien artean dagoenean. Horiek gehieneko eta gutxieneko puntuak <strong>max-width</strong> eta <strong>min-width</strong> gako-hitzekin zehazten dira, eta <strong>eten-puntuak</strong> (breakpoints ingelesez) esaten zaie.</p>
+          <p>Eten-puntuetan, web orri baten diseinuak aldaketa esanguratsuak eskatzen ditu pantailaren tamainara egokitu ahal izateko. Puntu horietan, elementuen malgutasuna ez da nahikoa kutxak erabilgarri dagoen espaziora egokitzeko, eta elementuak leku batetik bestera mugitu behar ditugu, edo diseinutik kanpo utzi, gure webgunea irakurgarria izaten jarrai dezan. Ez dago estandarrik ezarrita puntu horiek zehazteko; dena gure diseinuaren araberakoa da.</p>
+          <p>Adibidez, erabaki genezake bistaratze-eremuaren zabalera 480 pixelekoa edo txikiagoa denean zutabe bakarra erabili behar dugula informazioa aurkezteko, baina hori bakarrik egin daiteke jatorrizko diseinuak zutabe bat baino gehiago baditu. Balio ohikoenak 320, 480, 768 eta 1024 dira.</p>
+          <p>Etendura-puntu bat ezartzeko, <strong>max-width</strong> edo <strong>min-width</strong> gako-hitzak dituen Media Query bat deklaratu behar dugu; horrela, propietateak bistaratze-eremuaren tamainak muga horiek gainditzen dituenean aplikatuko dira. Erabiltzen dugun gako-hitza jarraitu nahi dugun norabidearen araberakoa da. Lehenik eta behin pantaila txikiko gailuetarako diseinatu nahi badugu, <strong>min-width</strong> duten gutxieneko tamainak ezarri behar ditugu, baina ordenagailu pertsonalen pantaila zabalei aplika dakiekeen diseinu orokor bat ezarri nahi badugu eta, ondoren, tamaina murriztu ahala propietateak aldatu nahi baditugu, hobe da maximoak <strong>max-width</strong> bidez ezartzea.</p>
+          <p>Adibidez, hurrengo estilo-orriak atzealdeko kolore lehenetsia esleitzen dio dokumentuaren gorputzari, baina pantailaren tamaina murrizten den heinean, kolorea aldatu egiten da.</p>
+    <pre>
+      <code>
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #990000;
+  }
+
+  @media (max-width: 1024px) {
+    body {
+      background-color: #3333FF;
+    }
+  }
+  @media (max-width: 768px) {
+    body {
+      background-color: #FF33FF;
+    }
+  }
+  @media (max-width: 480px) {
+    body {
+      background-color: #339933;
+    }
+  }
+  @media (max-width: 320px) {
+    body {
+      background-color: #CCCCCC;
+    }
+  }
+      </code><figcaption>Eten-puntu ugari adierazten</figcaption>
+    </pre>
+
+    <p>Goiko estiloak HTML dokumentuari esleitzen zaizkionean, nabigatzaileak 1024 pixeletik gorako bistaratze-eremuan hondo gorria duen orria aurkezten du, baina kolorez aldatzen da zabalera Batezbesteko Kitek ezarritako mugen azpitik dagoen bakoitzean.
+      <div class="garrantzi-oinarrizko">
+        <h3>Egizu zuk zeuk:</h3>
+          <p>Ordeztu <strong>denamoldagarri.css</strong> fitxategiko arauak goiko kodearekin. Ireki dokumentua zure nabigatzailean eta joan estutzen leihoaren zabalera. Bistaratzeko eremua 1024 pixeletik gorakoa bada, gorputza hondo gorri batekin erakusten da, baina tamaina 1024 pixelera edo gutxiagora murrizten bada, kolorea urdinera aldatzen da, 768 pixelera edo gutxiagora, arrosara aldatzen da, 480 pixelera edo gutxiagora berde bihurtzen da, eta 320 pixelera edo gutxiagora gris bihurtzen da.</p>
+        
+      </div>
+
+        <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
+<h3>Bistaratze-eremua</h3>
+<p>Bistaratze-eremua (viewport ingelesez) gure web orriak erakusten dituen nabigatzailearen leihoaren zatia da. Leihoaren eta bistaratze-eremuaren arteko erlazioa dela eta, biek tamaina bera izan beharko lukete gailu mugikorretan, baina hori ez da kasu guztietan betetzen. Lehenetsita, gailu batzuek 980 pixeleko zabalera esleitzen diote bistaratze-eremuari, tamaina erreala edo pantailaren benetako tamaina kontuan hartu gabe. Horrek esan nahi du gure estilo orrien Erdi Kitek 980 pixeleko zabalera izango dutela, bistaratze eremuaren tamaina guztiz desberdina denean.</p>
+<p>Egoera hori normalizatzeko eta nabigatzailea pantailaren benetako tamainaren berdina den bistaratze-eremuaren tamaina definitzera behartzeko, &lt;meta&gt; elementua adierazi behar dugu gure dokumentuen goiburuan, viewport izenarekin eta ikusi nahi dugun zabalera eta eskala zehazten duten balioekin. Width eta initial-scale balioak behar dira bistaratze-eremuaren zabalera eta eskala adierazteko. Hurrengo adibideak &lt;meta&gt; elementua nola konfiguratu behar dugun erakusten du, nabigatzaileari gailuaren pantailaren benetako tamaina eta eskala definitzeko eskatzeko.</p>
+<pre style="height:600px">
+  <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Orriaren izena hemen&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="description" content="Hau HTML5 dokumentua da"&gt;
+    &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+    <strong>&lt;meta name="viewport" content="width=device-width initial-scale=1"&gt;</strong>
+    &lt;link rel="stylesheet" href="denamoldagarri.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;section&gt;
+      &lt;div&gt;
+        &lt;article&gt;
+          &lt;h1&gt;Lehen artikuluaren izenburua&lt;/h1&gt;
+          &lt;img src="lehenIrudia.jpg"&gt;
+        &lt;/article&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;article&gt;
+          &lt;h1&gt;Bigarren artikuluaren izenburua&lt;/h1&gt;
+          &lt;img src="bigarrenIrudia.jpg"&gt;
+        &lt;/article&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;aside&gt;
+      &lt;div&gt;
+        &lt;h1&gt;Alboko informazioa&lt;/h1&gt;
+        &lt;p&gt;Lehen artikularen aipamena&lt;/p&gt;
+        &lt;p&gt;Bigarren artikuluaren aipamena&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/aside&gt;
+    &lt;div class="berrreskuratu"&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+  </code><figcaption>&lt;meta&gt; elementua erabili da bistaratze eremua eratzeko.</figcaption>
+</pre>
+
+<div class="garrantzi-oinarrizko">
+  <h3>Oinarrizkoa: </h3>
+  <p>Bistaratze-eremua deklaratzen duen &lt;meta&gt; elementuak beste balio batzuk izan ditzake atributuak konfiguratzeko, hala nola eskala minimoak eta maximoak (<strong>minimum-scale</strong> eta <strong>maximum-scale</strong>), edo erabiltzaileei web orria zabaltzen edo murrizten utzi nahi badiegu (<strong>user-scalable</strong>).</p>
+  <p>Informazio gehiago nahi izanez gero, bisitatu gure webgunea eta jarraitu kapitulu honetako estekak.</p>
+</div>
+             <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
+                         
       </article>
 
 
