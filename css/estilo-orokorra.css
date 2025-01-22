@@ -50,6 +50,7 @@ main .azalburua {
   text-align: center;
 }
 article{
+  width:95%;
   padding:10px;
 }
 h2{
@@ -109,6 +110,10 @@ p{
   text-align: center;
   width: 100%;
 }
+.irudiKutxa img{
+  width: 100%;
+}
+
 .irudiKutxaEzk{
   float: left;
   padding: 0px 20px 0px 0px;
@@ -157,14 +162,8 @@ pre{
 }
 @media (max-width: 1200px) {
   pre{
-    width:90%;
-    padding:6px;
-  }
-}
-@media (max-width: 650px) {
-  pre{
-    width:100%;
-    padding:6px;
+    width: 100%;
+    padding: 6px;
   }
 }
 
