@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Higikortasuna</title>
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+    <article>
+      <div>
+        <h3><strong>Moldagarritasuna, <em>Box-sizing</em>, Finko-moldakor</strong></h3>
+      </div>
+      <div class="banaketaTxikia"></div>
+      <p>Web diseinu moldagarri batean, gure orrialdeak malguak izatea ahalbidetu behar dugu, elementuak erabilgarri dagoen espaziora egokitzeko, bistaratze eremuaren zabalera etete puntuen artean dagoenean. Hori kutxa malguaren ereduarekin lor daiteke. Edukiontzi malguak sortu eta haien tamainak FLEX propietatearekin malgutzat jo besterik ez dugu egin behar (ikus 4. kapitulua), baina kutxa eredu hori ez dute nabigatzaile batzuek onartzen, eta, beraz, garatzaile gehienek kutxa eredu tradizionala ezartzen dute oraindik.</p>
+      <p>Kutxa-eredu tradizionala ez zen elementu malguekin lan egiteko diseinatu, baina malgu bihur ditzakegu elementuak, tamainak ehunekotan adierazita. Elementu baten tamaina ehunekotan adierazten dugunean, nabigatzaileak pixelen benetako tamaina kalkulatzen du, edukiontziaren tamainatik abiatuta. Adibidez, 1000 pixeleko tamaina duen beste elementu baten barruan dagoen elementu bati % 80ko zabalera esleitzen badiogu, elementuaren zabalera 800 pixelekoa izango da (1000koaren % 80). Edukiontzien tamainak aldatzen duen bakoitzean elementuen tamaina aldatu egiten denez, edukiontziak malguak bihurtzen dira.</p>
+      <h6>Aurreko ataleko kodea hartuko dugu abiapuntu atal honetako adibideak osatzeko.</h6>
+
+      <pre style="height:600px">
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;title&gt;Orriaren izena hemen&lt;/title&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="description" content="HTML5 dokumentu bat da hau"&gt;
+  &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+  &lt;link rel="stylesheet" href="denamoldagarri.css"&gt;
+  &lt;link rel="stylesheet" media="(max-width: 480px)" href="sakelakoakmoldagarri.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;section&gt;
+    &lt;div&gt;
+      &lt;article&gt;
+        &lt;h1&gt;Lehenengo artikuluaren izenburua&lt;/h1&gt;
+        &lt;img src="lehenIrudia.jpg"&gt;
+      &lt;/article&gt;
+      &lt;article&gt;
+        &lt;h1&gt;Bigarren artikuluaren izenburua&lt;/h1&gt;
+        &lt;img src="bigarrenIrudia.jpg"&gt;
+      &lt;/article&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+  &lt;aside&gt;
+    &lt;div&gt;
+      &lt;h1&gt;Alboko informazioa&lt;/h1&gt;
+      &lt;p&gt;Lehenengo artikuluari aipamena&lt;/p&gt;
+      &lt;p&gt;Bigarren artikuluari aipamena&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/aside&gt;
+  &lt;div class="berreskuratu"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </code><figcaption>Estiloan 'media query' ekin kargatzeko</figcaption>
+       </pre>
+       <p>Hurrengo adibideak bi zutabe sortzen ditu, &lt;section&gt; eta &lt;aside&gt; elementuekin. Bi zutabeak malguak izateko haien zabalerak ehunekotan adierazten ditu.</p>
+       <pre>
+        <code>
+* {
+    margin: 0px;
+    padding: 0px;
+    }
+  section {
+    float: left;
+    <strong>width: 65%;</strong>
+    background-color: #999999;
+    }
+  aside {
+    float: left;
+    <strong>width: 25%;</strong>
+    background-color: #CCCCCC;
+    }
+  .recuperar {
+    clear: both;
+    }
+        </code>
+       </pre>
+       <p>Goiko arauek  &lt;section&gt; eta &lt;aside&gt; elementuen tamaina adierazten dute. Lehenari edukiontziaren tamainaren % 65 eskaintzen dio eta bigarrenari, &lt;aside&gt; elementuari edukiontziaren % 25. Pantailaren tamaina aldatzen bada, nabigatzaileak berriro kalkulatzen du elementuen tamaina, eta, beraz, elementu horiek espazioaren arabera hedatzen edo murrizten dira.</p>
+
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/web-molda-malgu0.png" alt="Web moldagarria. Bi zutabe. Section eta Aside">
+        <figcaption>Elementu malguak ohiko kutxa ereduan</figcaption>
+      </div>
+      <p>Elementuaren zabalera ehunekotan aitortzen dugun bakoitzean, balioen batura osoa % 100etik gorakoa ez dela ziurtatu behar dugu. Bestela, elementuak ez dira espazio erabilgarrian sartuko eta lerro berri batera mugituko dira. Goiko kodearen adibidean, erraza izan zen hori lortzea, marjinarik gabeko bi elementu baino ez genituelako, betelanak edo ertzak, baina betelana bezalako balio gehigarri bat gehitu bezain laster, gogorarazi behar dugu balio horiek elementuaren zabalerari kendu behar dizkiogula edo guztizkoak % 100 gaindituko duela.</p>
+      <p>Adibidez, honako arau hauek &lt;section&gt; eta &lt;aside&gt; elementuen zabalera murrizten dute, alde bakoitzean % 2ko betegarria eta erdian % 5eko marjina gehitu ahal izateko.</p>
+
+        <pre>
+          <code>
+* {
+  margin: 0px;
+  padding: 0px;
+  }
+  section {
+  float: left;
+  width: 61%;
+  padding: 2%;
+  margin-right: 5%;
+  background-color: #999999;
+  }
+  aside {
+  float: left;
+  width: 26%;
+  padding: 2%;
+  background-color: #CCCCCC;
+  }
+  .recuperar {
+  clear: both;
+  }
+          </code><figcaption>Marginak eta betegarriak erantsi diegu elementuei.</figcaption>
+        </pre>
+
+        <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/web-molda-malgu1.png" alt="Web moldagarria. Bi zutabe. Section eta Aside">
+        <figcaption>Elementuei marginak eta betegarriak erantsi ondoren: 61 + (2+2) + 5 + 26 + (2+2) = 100</figcaption>
+        </div>
+
+        <div class="garrantzi-oinarrizko">
+          <h6>Egizu zuk zeuk:</h6>
+          <p>Ordeztu artxiboaren arauak <strong>denamoldagarri.css</strong> goiko kodearekin. Sartu lehenIrudia.jpg eta bigarrenIrudia.jpg irudiak dokumentuaren direktorioan. Ireki dokumentua zure nabigatzailean. Goiko irudiaren antzeko zerbait ikusi beharko zenuke</p>
+        </div>
+                    <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
+        <h3>Box-sizing</h3>
+        <p>Elementu batek hartzen duen eremuaren guztizkoa kalkulatzen den bakoitzean, nabigatzaileak amaierako balioa lortzen du, <em>tamaina + marjinak + betegarria + ertzak</em> formularekin. <strong>Width</strong> propietatea 100 pixeleko balioarekin aitortzen badugu, margina 20 pixelera, padding 10 pixelera eta ertzak pixel batera, elementuak okupatutako eremu horizontalaren guztizkoa 100 + 40 + 20 + 2 = 162 pixel izango da <em>(<strong>margin</strong>, <strong>padding</strong> eta <strong>border</strong> propietateen balioak formulan bikoiztu egin dira, kutxaren ezkerreko eta eskuineko aldeei balio berberak esleitu zaizkiela onartzen dugulako)</em>. </p>
+        <p>Horrek esan nahi du <strong>width</strong> propietatea duen elementu baten tamaina adierazten dugun bakoitzean, gogoratu behar dugula elementua erakusteko orrian behar den eremua handiagoa izan daitekeela. Egoera hori bereziki problematikoa da tamainak ehunekotan definitzen direnean, edo balioak ehunekotan beste unitate mota batzuekin konbinatzen saiatzen garenean, hala nola pixelekin. CSSk honako propietate hau du portaera hori aldatzeko.</p>
+        <ul class="zeerendaArruntak">
+          <li><strong>box-sizing — </strong>Propietate honek aukera ematen digu elementu baten tamaina nola kalkulatuko den erabakitzeko eta nabigatzaileak behartzeko betegarria eta ertza width propietateak adierazitako tamainan
+        </ul>
+        <p>Besterik adierazi ezean, box-sizing jabetzaren balioa content-box gisa aitortzen da, eta horrek esan nahi du nabigatzaileak padding eta border propietateen balioak gehituko dizkiola width propietateak zehaztutako tamainari. Aldiz, propietate horri border-box balioa esleitzen badiogu, nabigatzaileak betegarria eta ertza sartzen ditu zabaleraren zati gisa, eta, orduan, beste aukera batzuk ditugu, hala nola portzentajean definitutako zabalerak pixeletan egindako betegarriekin konbinatzea, hurrengo adibidean erakusten den bezala.</p>
+          <pre>
+            <code>
+* {
+  margin: 0px;
+  padding: 0px;
+  }
+  section {
+  float: left;
+  width: 65%;
+  padding: 20px;
+  margin-right: 5%;
+  background-color: #999999;
+  box-sizing: border-box;
+  }
+  aside {
+  float: left;
+  width: 30%;
+  padding: 20px;
+  background-color: #CCCCCC;
+  box-sizing: border-box;
+  }
+  .recuperar {
+  clear: both;
+  }
+            </code><figcaption>Betegarria eta ertza elementuaren tamainan sartuta</figcaption>
+          </pre>
+          <p>Goiko kodean <strong>box-sizing</strong> propietatea aitortzen dugu, bi elementuetarako <strong>border-box</strong> balioarekin, &lt;section&gt; eta &lt;aside&Gt;. Hori dela eta, jada ez dugu betegarria kontuan hartu behar elementuen tamaina kalkulatzen dugunean (65 + 5 + 30 = 100).</p>
+          <div class="garrantzi-oinarrizko">
+            <h6>Egizu zeuk:</h6>
+            <p>Ordeztu <strong>denamoldagarri.css</strong> fitxategiaren arauak goiko kodearekin. Ireki dokumentua zure nabigatzailean. mGoian arginak eta betegarriak erantsi ondoren lortu dugun irudiaren antzeko zerbait ikusi beharko zenuke, baina oraingoan betegarria ez da aldatzen leihoaren tamaina aldatzen denean, haren balioa pixeletan definitu delako.</p>
+          </div>
+                      <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
+          <h3>Finkoa eta malgua</h3>
+          <p>Aurreko adibideetan betegarri finkoak dituzten kutxa malguak nola definitu ikusi dugu, baina askotan zutabe osoak balio malgu eta finkoekin konbinatu behar izaten ditugu.</p>
+          <p>Berriro ere, hori lortzea oso erraza da kutxa malguaren ereduarekin; edukiontzi malgu bat sortu besterik ez dugu egin behar, <strong>flex</strong> propietatearekin malguak izatea nahi dugun elementuen tamaina adierazi eta <strong>width</strong> propietatearekin tamaina finkoa izatea nahi dugunenak (ikus 4. kapitulua, 4-37 kodea).</p>
+          <p>Baina kutxa-eredu tradizionala ez zen horrelako zereginak egiteko diseinatu. Zorionez, badira helburu hori lortzeko ezar ditzakegun trikimailu batzuk. Alternatibarik ezagunena da betegarri bat deklaratzea zutabe malguan, neurri finkoko zutabea kokatzeko eta betegarriak utzitako espazio hutsera zutabe hori desplazatzen duen marjina negatibo bat gehitzeko. Honako hauek dira &lt;section&gt; elementurako zabalera malgua eta gure dokumentuaren &lt;aside&gt; elementurako zabalera finkoa adierazteko behar ditugun arauak.</p>
+
+          <pre>
+            <code>
+* {
+  margin: 0px;
+  padding: 0px;
+  }
+  section {
+  float: left;
+  <strong>
+  width: 100%;
+  padding-right: 260px;
+  margin-right: -240px;
+  </strong>
+  box-sizing: border-box;
+  }
+  section > div {
+  padding: 20px;
+  background-color: #999999;
+  }
+  aside {
+  float: left;
+  width: 240px;
+  padding: 20px;
+  background-color: #CCCCCC;
+  box-sizing: border-box;
+  }
+  .berreskuratu {
+  clear: both;
+  }
+            </code><figcaption>Zutabe finko eta malguak deklatzeko</figcaption>
+          </pre>
+          <p>goiburuan arauek % 100eko zabalera eta 260 pixeleko betegarria esleitzen diote &lt;section&gt; elementuari. Betegarria <strong>width</strong> propietatearen balioan sartzeko <strong>box-sizing</strong> propietatea erabiltzen dugunez, elementuaren edukiak ezkerreko aldea bakarrik hartuko du, eta espazio huts bat utziko dugu eskuinean, tamaina finkoko zutabea kokatzeko. Azkenik, &lt;aside&gt; elementuak sortutako zutabea espazio horretara mugitzeko, 240 pixeleko marjina negatiboa deklaratzen dugu &lt;section&gt;> elementuaren eskuinaldean.</p>
+          <div class="garrantzi-oinarrizko">
+            <h6>Oinarrizkoena:</h6>
+            <p>Adibide horretan bi zutabeak ezkerretara flotarazten ditugu, eta horrek esan nahi du bata bestearen ondoan lerro berean kokatuko direla. Horrelako kasuetan, espazio bat sor dezakegu zutabeen erdian, <strong>padding</strong> propietatearen balioa handituz. Adibidean 260 pixeleko betegarria eta 240 pixeleko marjina deklaratzen ditugu; horrek esan nahi du tamaina finkoko zutabea 240 pixelera baino ez dela mugituko.
+            ezkerrekoa, 20 pixelen artean tartea utziz.</p>
+          </div>
+             
+            <p>Betegarria erabiltzen ari garenez eskuineko zutabea kokatzeko espazio huts bat sortzeko, zutabearen betegarri normala eta hondoaren kolorea &lt;div&gt; elementu edukiontziari esleitu behar dizkiogu, &lt;section&gt; elementuaren barruan. Horri esker, zutabearen edukiari betegarri bat gehitzeaz gain, atzealdeko kolore bat esleitu ahal izango diogu edukiak hartzen duen eremuari soilik, pantailako bi zutabeak bereiziz.</p>
+
+            <div class="irudiKutxa">
+            <img src="../../irudiak/CSS-DISEINU/web-molda-malgu1.png" alt="Web moldagarria. Bi zutabe. Section eta Aside">
+            <figcaption>Zutabe malguak eta finkoak</figcaption>
+            </div>
+
+            <div class="garrantzi-oinarrizko">
+              <h6>Egin ezazu zeuk: </h6>
+              <p>Ordeztu arauak zure <strong>denamoldagarri.css</strong> fitxategian  goiko kodearekin. Ireki dokumentua zure nabigatzailean. Arrastatu leihoaren alde bat tamaina aldatzeko. Ezkerreko zutabea zabaldu edo uzkurtu egin beharko litzateke, eta eskuineko zutabea beti tamaina berekoa (240 pixel).</p>
+            </div>
+                        <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
+            <p>Tamaina finkoko zutabea ezkerrean kokatu nahi badugu eskuinean kokatu beharrean, prozesua berdina da, baina ezkerreko zutabea eskuineko zutabearen azpian adierazi behar dugu kodean (5-6 zerrendan adierazi diren bezala) eta, ondoren, bere posizioak <strong>float</strong> propietatearekin konfiguratu, hurrengo adibidean egiten dugun bezala</p>
+            <pre>
+              <code>
+* {
+  margin: 0px;
+  padding: 0px;
+  }
+  section {
+  float: right;
+  width: 100%;
+  padding-left: 260px;
+  margin-left: -240px;
+  box-sizing: border-box;
+  }
+  section > div {
+  padding: 20px;
+  background-color: #999999;
+  }
+  aside {
+  float: left;
+  width: 240px;
+  padding: 20px;
+  background-color: #CCCCCC;  
+  box-sizing: border-box;
+  }
+  .berreskuratu {
+    clear: both;
+    }
+              </code><figcaption>Zutabe finkoa ezker aldera mugitzeko</figcaption>
+            </pre>
+            <p>&lt;section&gt; elementua gure dokumentuan adierazten da lehenik, baina float jabetzari <strong>right</strong> balioa esleitzen diogunez, pantailaren eskuineko aldean agertzen da. Elementuak kodean duen posizioak &lt;aside&gt; elementuaren gainean aurkeztuko dela ziurtatzen du, eta <strong>float</strong> propietatearen balioak orrian nahi dugun tokira mugitzen du. Kodearen gainerakoa aurreko adibidearen antzekoa da, baina oraingoan betelana eta ezkerreko aldeko &lt;section&gt; elementuaren marjina aldatu behar ditugu, eskuinekoaren ordez.</p>
+
+            <div class="irudiKutxa">
+            <img src="../../irudiak/CSS-DISEINU/web-molda-malgu2.png" alt="Web moldagarria. Bi zutabe. Section eta Aside">
+            <figcaption>Zutabe finkoa ezkerreko aldeank</figcaption>
+            </div>
+
+            <div class="garrantzi-oinarrizko">
+              <h6>Oinarrizkoa: </h6>
+              <p>Elementu bat posizio berri batera mugitzen dugunean, hurrengo elementuari marjina negatibo bat esleituz, nabigatzaileak lehen elementua bigarrenaren atzean aurkezten du, eta, beraz, lehen elementuak ez du gertaerarik jasotzen, hala nola erabiltzaileak esteketan egiten dituen klikak. Tamaina finkoko zutabea erabiltzailearentzat ikusgai eta eskuragarri dagoela ziurtatzeko, zutabe malguaren azpiko kodean adierazi behar dugu. Horregatik, &lt;aside&gt; elementuak sortutako zutabea ezkerrera mugitzeko ez dugu dokumentua aldatu behar izan. Zutabea orriaren barruan kokatzen da, <strong>float</strong> propietatearen bidez.</p>
+            </div>
+            <p>Mekanismo hori bera erabiliz, alboetan tamaina finkoko bi zutabe eta erdian zutabe malgu bat adierazi nahi baditugu, zutabeak edukiontzi baten barruan multzokatu behar ditugu, eta, ondoren, elementuei propietateak bi aldiz aplikatu, edukiontziaren barruan eta kanpoan. Hurrengo dokumentuan, &lt;section&gt; bi elementu multzokatuko ditugu &lt;div&gt; elementu baten barruan, edukiontzi izenarekin identifikatuta, ezkerreko eta erdiko zutabeak gordetzeko. Bi zutabe horiek <em>ezkerzutabea</em> eta <em>erdikozutabea</em> izenekin identifikatu dira.</p>
+
+            <pre style="height:600px">
+              <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Orriaren izena&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="description" content="Hau HTML5 dokumentua da"&gt;
+    &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;link rel="stylesheet" href="denamoldagarri.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="edukiontzia"&gt;
+      &lt;section id="erdikozutabea"&gt;
+        &lt;div&gt;
+          &lt;article&gt;
+            &lt;h1&gt;Lehen artikuluaren izenburua&lt;/h1&gt;
+            &lt;img src="nireirudia1.jpg"&gt;
+          &lt;/article&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;article&gt;
+            &lt;h1&gt;Bigarren artikuluaren izenburua&lt;/h1&gt;
+            &lt;img src="nireirudia2.jpg"&gt;
+          &lt;/article&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+      &lt;section id="ezkerzutabea"&gt;
+        &lt;div&gt;
+          &lt;h1&gt;Aukerak&lt;/h1&gt;
+          &lt;p&gt;Lehem aukera&lt;/p&gt;
+          &lt;p&gt;Bigarren aukera&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+      &lt;div class="berreskuratu"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+      &lt;aside&gt;
+        &lt;div&gt;
+          &lt;h1&gt;Albo informazioa&lt;/h1&gt;
+          &lt;p&gt;Lehen artikuluari aipamena&lt;/p&gt;
+          &lt;p&gt;Bigarren artikuluari aipamena&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/aside&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+              </code><figcaption>Bi zutabedun dokumentua sortzeko</figcaption>
+            </pre>
+            <p>Dokumentu honetarako CSS kodea erraza da. Elementu edukiontziak eta kolunnentralak malgutzat jo behar dira, eta, beraz, edukiontziari betegarri eta marjina egokiak esleitu behar dizkiogu &lt;aside&gt;> elementua eskuinean kokatzeko, eta, ondoren, betegarria eta zutabeko elementuaren marjina definitu behar ditugu, ezkerreko aldeko zutabe finkorako lekua egiteko.</p>
+            <pre style="height:600px">
+              <code>
+  * {
+  margin: 0px;
+  padding: 0px;
+  }
+  #edukiontzia {
+  float: left;
+  width: 100%;
+  padding-right: 260px;
+  margin-right: -240px;
+  box-sizing: border-box;
+  }
+  aside {
+  float: left;
+  width: 240px;
+  padding: 20px;
+  background-color: #CCCCCC;
+  box-sizing: border-box;
+  }
+  #erdikozutabea {
+  float: right;
+  width: 100%;
+  padding-left: 220px;
+  margin-left: -200px;
+  box-sizing: border-box;
+  }
+  #erdikozutabea > div {
+  padding: 20px;
+  background-color: #999999;
+  }
+  #ezkerzutabea {
+  float: left;
+  width: 200px;
+  padding: 20px;
+  background-color: #CCCCCC;
+  box-sizing: border-box;
+  }
+  .berreskuratu {
+  clear: both;
+  }
+              </code><figcaption>Alboetan zutabe finko bana jartzeko</figcaption>
+            </pre>
+            <p>Adibide honetan, ezkerzutabea elementua adierazten dugu, zutabeko elementuaren ondoren. Horrela, kolunnaizquierda zutabearen gainean agertzen dela eta, beraz, irisgarria dela ziurtatzen dugu. Lehen egin dugun bezala, elementu horien web orriko posizioak float propietatearekin definitzen dira. Ondorioz, columnaizquierda elementua orriaren ezkerraldean jartzen da, 200 pixeleko zabalera finkoarekin; zutabeko elementua erdian jartzen da, zabalera malguarekin, eta < aside> elementua eskuinean, 240 pixeleko zabalera finkoarekin.
+
+              <div class="irudiKutxa">
+                <img src="../../irudiak/CSS-DISEINU/web-molda-malgu3.png" alt="Web moldagarria. Bi zutabe. Section eta Aside">
+                <figcaption>Zutabe finkoa ezkerreko aldeank</figcaption>
+                </div>
+
+              <div class="garrantzi-oinarrizko">
+                <h6>Egin ezazu zeuk:</h6>
+                <p>Sortu HTML fitxategi berri bat goiko dokumentuarekin eta CSS fitxategi bat, denamoldagarri.css izenekoa, goiko CSS kodearekin. Sartu nireirudia.jpg fitxategia direktorio berean. Ireki dokumentua zure nabigatzailean eta aldatu leihoaren tamaina. Azken irudiaren antzeko zerbait ikusi beharko zenuke, zutabeak alboetan beti tamaina berekoak direla.</p></p>
+              </div>
+
+      </article>
+                  <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
+
+
+      
+
+</body>
+</html>
