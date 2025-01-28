@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Testu moldagarria</title>
+</head>
+<body>
+    <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
+    <article>
+      <div>
+        <h3><strong>Benetako aplikazioa</strong></h3>
+      </div>
+      <p>Webgune moldagarri bat sortzeko, ikasi ditugun teknika guztiak konbinatu behar dira. Batzuk hainbat aldiz aplikatu behar dira, eta, normalean, Media Query bat baino gehiago deklaratu behar dira diseinua gailu askotara egokitzeko. Baina etendura-puntuak ezartzen ditugun gunea eta teknika horiek nola inplementatzen diren gure webgunearen diseinuaren eta inplementatzen dugun kutxa-ereduaren araberakoa da. Web diseinu moldagarria eta kutxa tradizionalaren eredua duen webgune bat nola sortu erakusteko, 4. kapituluko 4-20 kodea duen dokumentua erabiliko dugu.</p>
+      <p>Dokumentu honen oinarrizko egiturak goiburu bat, nabigazio-barra bat, &lt;section&gt; &lt;aside&gt; elementuekin sortutako bi zutabe eta orri-oin bat ditu. Lehenik eta behin, elementu horiek elementu malgu bihurtzeko behar diren estilo lehenetsiak definitu behar dira.</p>
+      <p>Lehen aipatu dugun bezala, kutxa-eredu tradizionaleko elementu malgu batera itzultzeko, zabalerak ehunekotan definitu behar ditugu.</p>Hauek dira 4. kapituluko 4-20 kodean eskatzen diren estilo lehenetsiak (estilo hauek aplikatuko dira Media Query bat ez badator bistaratze-eremuaren tamainarekin). 4. kapituluan ez bezala, oraingoan tamainak ehunekotan deklaratzen dira, eta max-width propietatea erabiltzen dugu orriaren edukirako gehieneko zabalera zehazteko.</p>
+
+      <pre style="height:600px">
+        <code>
+* {
+  margin: 0px;
+  padding: 0px;
+  }
+  #goiburuko-irudia {
+  width: 96%;
+  height: 150px;
+  padding: 0% 2%;
+  background-color: #0F76A0;
+  }
+  #goiburuko-irudia > div {
+  max-width: 960px;
+  margin: 0px auto;
+  padding-top: 45px;
+  }
+  #goiburuko-irudia h1 {
+  font: bold 54px Arial, sans-serif;
+  color: #FFFFFF;
+  }
+  #menu-nagusia {
+  width: 96%;
+  height: 50px;
+  padding: 0% 2%;
+  background-color: #9FC8D9;
+  border-top: 1px solid #094660;
+  border-bottom: 1px solid #094660;
+  }
+  #menu-nagusia > div {
+  max-width: 960px;
+  margin: 0px auto;
+  }
+  #menu-nagusia li {
+  display: inline-block;
+  height: 35px;
+  padding: 15px 10px 0px 10px;
+  margin-right: 5px;
+  }
+  #menu-nagusia li:hover {
+  background-color: #6FACC6;
+  }
+  #menu-nagusia a {
+  font: bold 18px Arial, sans-serif;
+  color: #333333;
+  text-decoration: none;
+  }
+  main {
+  width: 96%;
+  padding: 2%;
+  background-image: url("fondo.png");
+  }
+  main > div {
+  max-width: 960px;
+  margin: 0px auto;
+  }
+  #artikulu-nagusiak {
+  float: left;
+  width: 65%;
+  padding-top: 30px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  }
+  #albo-informazioa {
+  float: right;
+  width: 29%;
+  padding: 2%;
+  background-color: #E7F1F5;
+  border-radius: 10px;
+  }
+  #albo-informazioa h1 {
+  font: bold 18px Arial, sans-serif;
+  color: #333333;
+  margin-bottom: 15px;
+  }
+  .berreskuratu {
+  clear: both;
+  }
+  article {
+  position: relative;
+  padding: 0px 40px 20px 40px;
+  }
+  article time {
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -70px;
+  width: 80px;
+  padding: 15px 5px;
+  background-color: #094660;
+  box-shadow: 3px 3px 5px rgba(100, 100, 100, 0.7);
+  border-radius: 5px;
+  }
+  .eguna-zenbakia {
+  font: bold 36px Verdana, sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+  }
+  .eguna-zenbakia {
+  font: 12px Verdana, sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+  }
+  article h1 {
+  margin-bottom: 5px;
+  font: bold 30px Georgia, sans-serif;
+  }
+  article p {
+  font: 18px Georgia, sans-serif;
+  }
+  figure {
+  margin: 10px 0px;
+  }
+  figure img {
+  max-width: 98%;
+  padding: 1%;
+  border: 1px solid;
+  }
+  #oineko-irudia {
+  width: 96%;
+  padding: 2%;
+  background-color: #0F76A0;
+  }
+  #oineko-irudia > div {
+  max-width: 960px;
+  margin: 0px auto;
+  background-color: #9FC8D9;
+  border-radius: 10px;
+  }
+  .oineko-saila {
+  float: left;
+  width: 27.33%;
+  padding: 3%;
+  }
+  .oineko-saila h1 {
+  font: bold 20px Arial, sans-serif;
+  }
+  .oineko-saila p {
+  margin-top: 5px;
+  }
+  .oineko-saila a {
+  font: bold 16px Arial, sans-serif;
+  color: #666666;
+  text-decoration: none;
+  }
+        </code><figcaption>5-25 kodea: Elementu malguak kutxa-eredu tradizionalarekin definituz</figcaption>
+      </pre>
+      <p>5-25 kodeko arauek malgutu egiten dituzte egiturazko elementuak, eta, beraz, webgunea eskuragarri dagoen espaziora egokitzen da, baina pantaila txikiegia denean, diseinua hautsi egiten da, elementu batzuk partzialki erakusten dira eta edukia ezin da irakurri, 5-13 irudian ikusten den bezala.</p>
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/web-molda-aplikazio1.png" alt="">
+        <figcaption>5-13 irudia: Webgune moldagarria elementu malguekin bakarrik</figcaption>
+      </div>
+      <div class="garrantzi-oinarrizko">
+        <h6>Egin ezazu zeuk</h6>
+          <p>Sortu HTML fitxategi berri bat 4-20 kodeko dokumentuarekin. Sortu nireaplikazioa.css izeneko CSS fitxategi bat, eta sartu 5-25 kodeko arauak. Ireki dokumentua zure nabigatzailean. Une horretan, elementuak espazioaren arabera zabaldu edo uzkurtzen dira, baina orria ez da ondo ikusten bistaratze-eremua oso txikia denean (ikus 5-13 irudia). Estilo-orriari Media Querie batzuk gehituko dizkiogu jarraian, egoera hori zuzentzeko.</p>
+      </div>
+        <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
+      <p>Diseinuan aldaketak pixkanaka egin behar dira. Adibidez, gure diseinuan, bistaratze-eremuaren tamaina 1120 pixelekoa edo txikiagoa denean, artikulua argitaratu den data adierazteko erabiltzen dugun &lt;time&gt; elementua leihotik kanpo geratzen da. Horrek adierazten digu gure diseinuak 1120 pixeleko etendura-puntu bat behar duela elementu hori beste posizio batera mugitzeko edo edukia berrantolatzeko. Kasu honetan, itzulera-data &lt;giltzarria&gt; elementuak okupatzen duen eremuaren barruan mugitzea erabaki dugu.</p> 
+      <pre>
+        <code>
+@media (max-width: 1120px) {
+  article time {
+  position: static;
+  width: 100%;
+  padding: 0px;
+  margin-bottom: 10px;
+  background-color: #ccc;
+  box-shadow: 0px 0px 0px;
+  border-radius: 0px;
+  }
+  .eguna-zenbakia {
+  display: inline-block;
+  font: bold 18px Verdana, sans-serif;
+  color: #337799;
+  padding-right: 5px;
+  }
+  .eguna-izena {
+  display: inline-block;
+  font: bold 14px Verdana, sans-serif;
+  color: #999999;
+  }
+  article h1 {
+  margin-bottom: 0px;
+  }
+}
+        </code><figcaption>5-26 kodea: &lt;time&gt; elementua birkokatzeko ;</figcaption>
+      </pre>
+      <p>Data birkokatzeko, lehenik eta behin &lt;time&gt; elementuaren posizionamendu-modua berrezarri behar dugu. 5-25 kodeko estilo-orrian sartutako arau lehenetsiek erabateko posizioa ematen diote elementuari elementua &lt;article&gt; elementuak okupatzen duen eremuaren eskuinaldera mugitzeko, baina pantaila posizio horretan erakusteko bezain handia ez denean, berriro mugitu behar dugu  bere kokapen naturalera, &lt;h1&gt; elementuaren azpira. Hori lortzeko, <strong>static</strong> balioa <strong>position</strong> propietateari esleitzen zaio (static modu lehenetsia da). Orain, &lt;time&gt; elementua artikuluaren izenburuaren azpian jartzen da, baina oraindik data eta eguna lerro berean kokatu behar ditugu. Adibide honetarako, elementuak <strong>inline-block</strong> elementu bihurtzea erabaki dugu, eta, beraz, bata bestearen ondoan jarriko ditugu, lerro berean (5-14 irudia).</p>
+      <div class="irudiKutxa" style="width:75%;text-align: center;">
+        <img src="../../irudiak/CSS-DISEINU/web-molda-aplikazio2.png" alt="Data tituluaren azpiko posiziora mugitzen da">
+        <figcaption>5-14 irudia: Data tituluaren azpiko posiziora mugitzen da.</figcaption>
+      </div>
+
+      <div class="garrantzi-oinarrizko">
+        <h6>Egin ezazu zeuk</h6>
+        <p>Erantsi 5-26 kodean definitutako Media Query zure estilo orriaren amaieran eta eguneratu orrialdea zure nabigatzailean. Leihoaren tamaina murriztu < time> elementua nola aldatzen den ikusteko.</p>
+      </div>
+        <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
+      <p>Diseinua aldatu behar den beste une bat da bi zutabeak txikiegiak bihurtzen direnean edukia behar bezala erakusteko. Edukiaren ezaugarrien arabera, ezkutatu egin dezakegu, beste eduki batekin ordezkatu edo zutabeak berrantolatu. Kasu honetan, bi zutaberen diseinua zutabe baten diseinu bihurtzea erabaki genuen, &lt;aside&gt; elementua &lt;section&gt; elementuaren azpian mugituz.
+        Helburu hori lortzeko hainbat modu daude. Adibidez, none balioa float propietateari esleitu diezaiokegu, elementuak alboetan flotatzea saihesteko, edo, besterik gabe, elementuen zabalera % 100 edo auto balioekin definitzeko, eta nabigatzaileari lerro bakoitzeko bat kokatzen uzteko. Gure adibiderako, zutabe bakarreko diseinu bat ezartzea erabaki genuen, bistaratze eremuak 720 pixeleko zabalera duenean edo gutxiago, bigarren aukera erabiliz.</p>
+        <pre>
+          <code>
+@media (max-width: 720px) {
+    #artikulu-nagusiak {
+    width: 100%;
+    }
+    #albo-informazioa {
+    width: 90%;
+    padding: 5%;
+    margin-top: 20px;
+    }
+  }
+          </code><figcaption>Zutabeak berrantolatzen</figcaption>
+        </pre>
+        <p>Dokumentua 720 pixeleko edo gutxiagoko pantaila batean agertzen den bakoitzean, erabiltzaileak zutabe bakar batean ikusiko du edukia antolatuta.</p>
+        <div class="irudiKutxa" style="width:50%;text-align: center;">
+          <img src="../../irudiak/CSS-DISEINU/web-molda-aplikazio3.png" alt="Zutabe bakarreko diseinua">
+          <figcaption>5-15 irudia: Zutabe bakarreko diseinua</figcaption>
+        </div>
+          <div class="garrantzi-oinarrizko">
+            <h6>Egin ezazu zeuk</h6>
+            <p>Erantsi 5-27 kodean definitutako Media Query zure estilo orriaren amaieran eta eguneratu orrialdea zure nabigatzailean. Bistaratzeko eremuaren zabalera 720 pixelekoa edo txikiagoa denean, edukia zutabe bakar batean ikusi beharko litzateke, 5-15 irudiak adierazten duen bezala.</p>
+          </div>
+            <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
+          <p>Une honetan, dokumentua ondo ikusten da ordenagailu pertsonaletan eta tabletetan, baina oraindik hainbat aldaketa egin behar ditugu telefono mugikorren pantaila txikietara egokitzeko. Orrialde hau 480 pixeleko edo beheragoko bistaratze-eremu batean erakusten denean, menuko aukerek ez dute nahikoa lekurik izango lerro bakar batean bistaratzeko, eta orri-oinaren edukiak, beharbada, ez du leku nahikorik izango erabat erakusteko. Arazo hori konpontzeko modu bat itemak bata bestearen gainean zerrendatzea da.</p>
+          
+          <pre>
+            <code>
+@media (max-width: 480px) {
+  #goiburuko-irudia > div {
+  text-align: center;
+  }
+  #goiburuko-irudia h1 {
+  font: bold 46px Arial, sans-serif;
+  }
+  #menu-nagusia {
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+  }
+  #menu-nagusia li {
+  display: block;
+  margin-right: 0px;
+  text-align: center;
+  }
+  .oineko-saila {
+  width: 94%;
+  text-align: center;
+  }
+}
+            </code><figcaption>5-28 kodea: Menu mugikor bat sortzen</figcaption>
+          </pre>: 
+          <p>5-28 kodeko arauekin elementuak aldatzen ditugu, nabigatzailea behartzeko lerro bakoitzeko bat erakustera eta edukiak zentratzera. Lehenengo bi arauek goiburuko elementuaren edukia zentratzen dute, eta beste tamaina bat esleitzen diote orrialdearen izenburuari, pantaila txikietan hobeto ager dadin. Jarraian, elementu menunagusiaren tamaina zehaztuko dugu (menuaren edukiontzia), ahalik eta zabalera handiena eta edukiagatik altuera jakin bat izan dezan (height: % 100). &lt;li&gt; elementuak elementu menunagusiaren barruan Block elementu gisa deklaratzen ditugu, menuko aukerak lerro bakoitzeko bat erakusteko. Azkenik, orri-oinaren barruko hiru atalen zabalerak ere zabaldu egiten dira, nabigatzailea lerro bakoitzeko bat erakustera behartzeko. 5-16 irudiak aldaketa horiek elementu batzuetan duten eragina erakusten du.</p>
+            
+          <div class="irudiKutxa" style="width:50%; text-align: center;">
+            <img src="../../irudiak/CSS-DISEINU/web-molda-aplikazio4.png" alt="">
+            <figcaption>5-16 irudia: Goiburua, Menu nagusia eta Oina sakelako telefonoentzako</figcaption>
+          </div>
+            <div class="garrantzi-oinarrizko">
+              <h6>Egin ezazu zeuk</h6>
+              <p>Erantsi 5-28 kodean definitutako Media Query zure estilo orriaren amaieran eta eguneratu orrialdea zure nabigatzailean. Murriztu leihoaren tamaina, menuko aukerak eta orri-oineko atalak erabilgarri dagoen espaziora nola egokitzen diren ikusteko.</p>
+            </div>
+              <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
+            <p>Arau horiek aplikatu ondoren, orri-oina ondo ikusten da, baina pantailaren goiko aldeko menuko aukerek eduki garrantzitsua beherantz desplazatzen dute, eta erabiltzailea orrialdea lekualdatzera behartzen dute, ikusi ahal izateko. Aukera bat da menua ordeztea botoi batekin eta aukerak erakustea botoia sakatzen denean bakarrik. Horretarako, irudi bat gehitu behar diogu dokumentuari, eta horrek menuaren lekua hartuko du bistaratze-eremuaren zabalera 480 pixelekoa edo txikiagoa denean.
+              <pre>
+                <code>
+&lt;nav id="menuikonoa"&gt;
+  &lt;img src="menu-ikonoa.png" width="35" height="28" id="menu-img"&gt;
+&lt;/nav&gt;
+&lt;nav id="menu-nagusia"&gt;
+  &lt;div&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="index.html"&gt;Orri nagusia&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="argazkiak.html"&gt;Fotos&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="familia.html"&gt;Familia&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="oporrak.html"&gt;Oporrak&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="harremanetarako.html"&gt;Harremanetaraklo&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+                </code><figcaption>5-29 kodea: Pantaila txikietarako menuaren botoia gehituz</figcaption>
+              </pre>
+              <p>Gure estilo orrian sartu behar dugun lehen aldaketa elementu menuikonoa ezkutatzen duen erregela bat da, pantaila txikietan bakarrik erakutsi nahi dugulako. Bi modu daude hori egiteko: jabetza visibility hidden balioarekin definitzea edo none gisa bistaratzeko modua display propietatearekin adieraztea. Lehenengo aukerak ez dio elementua erakusten erabiltzaileari, baina elementuak oraindik espazio bat hartzen du orrialdean; bigarrenak, berriz, nabigatzaileari esaten dio orrialdea dokumentuan sartu balitz bezala erakutsi behar duela, eta, beraz, azken hori da gure menurako inplementatu behar dugun aukera.</p>
+              <pre>
+                <code>
+#menuikonoa {
+  display: none;
+  width: 95%;
+  height: 38px;
+  padding: 12px 2% 0px 3%;
+  background-color: #9FC8D9;
+  border-top: 1px solid #094660;
+  border-bottom: 1px solid #094660;
+  }
+                </code><figcaption>5-30 kodea: Menuko botoia ezkutatzeko</figcaption>
+              </pre>
+              <p>Hurrengo urratsa botoia erakustea eta menua ezkutatzea da, bistaratzeko eremuaren zabalera 480 pixelekoa edo txikiagoa denean. Hauek dira i nterrupzio puntu honetan sartu behar ditugun aldaketak.</p>
+              <pre>
+                <code>
+@media (max-width: 570px) {
+  #menu-nagusia {
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+  }
+  #menu-nagusia li {
+  display: block;
+  margin-right: 0px;
+  text-align: center;
+  }
+  #menuikonoa {
+  display: block;
+  }
+  .oineko-saila {
+  width: 94%;
+  text-align: center;
+  }
+  #goiburuko-irudia > div {
+  text-align: center;
+  }
+}
+                </code><figcaption>5-31 kodea: Menuaren estekak botoiaz ordezkatzeko</figcaption>
+              </pre>
+              <p>Elementu txikitzailearen display propietateari none balioa esleituta, menua desagertuko da. Bistaratzeko eremuaren zabalera 480 pixelekoa edo txikiagoa bada, elementu menuikonoa eta haren edukia haren lekuan erakusten dira.</p>
+              <div class="irudiKutxa" style="width:50%; text-align: center;">
+                <img src="../../irudiak/CSS-DISEINU/web-molda-aplikazio5.png" alt="">
+                <figcaption>5-17 irudia: Menuaren botoia</figcaption>
+              </div>
+              
+
+              <div class="garrantzi-oinarrizko">
+                <h6>Egin ezazu zeuk</h6>
+                <p>Gehitu &lt;nav&gt; elementu bat, zure dokumentuan lehendik dagoen &lt;nav&gt; elementuaren gainean <strong>'menuikonoa'</strong> izenarekin identifikatua, 5-29 kodeak erakusten duen bezala. Gehitu 5-30 kodearen erregela zure estilo orriaren goiko aldean. Eguneratu Media Query 480px etete-punturako 5-31 kodeko kodearekin. Ireki dokumentua zure nabigatzailean eta murriztu leihoaren tamaina. Botoi berria ikusi beharko zenuke menuaren lekuan, bistaratze-eremuaren zabalera 480 pixelekoa edo txikiagoa denean.</p>
+              </div>
+                <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
+              <p>Une honetan, erabilgarri dagoen espaziora egokitzen den menu bat dugu, baina botoiak ez du erantzuten. Menua erakusteko, erabiltzaileak botoian klik egiten duenean, ekintza horri erantzuten dion programa bat gehitu behar diogu gure dokumentuari. Ekintza horiei gertaerak deitzen zaie, eta JavaScripten idatzitako kodearen bidez kontrolatzen dira. JavaScript eta ekitaldiak 6. kapituluan ikasiko ditugu, baina hemen egin beharreko lana erraza da. Elementu menunagusira ikusarazi behar dugu erabiltzaileak botoia sakatzen duenean. Honako hau da gure inplementazioa adibide honetarako.</p>
+              <pre>
+                <code>
+  &lt;script&gt;
+    var visible = false;
+    
+    function hasi() {
+      var elementua = document.getElementById("menuirudia");
+      elementua.addEventListener("click", agertuMenua);
+    }
+    
+    function agertuMenua() {
+      var elementua = document.getElementById("menu-nagusia");
+        if (!visible) {
+          elementua.style.display = "block";
+          visible = true;
+      } else {
+        elementua.style.display = "none";
+        visible = false;
+      }
+    }
+    
+    window.addEventListener("load", hasi);
+&lt;/script&gt;
+                </code><figcaption>5-32 kodea: Menua erakusteko botoia sakatzen denean</figcaption>
+              </pre>
+              <p>Aurrerago ikusiko dugunez, HTML dokumentu baten barruan JavaScript kodea txertatzeko modu bat &lt;script&gt; elementua da. Elementu hori normalean goiburuaren barruan kokatzen da (&lt;head &gt; elementua), baina dokumentuaren beste edozein lekutan ere koka daiteke.</p>
+              <p>JavaScript kodea, beste edozein programazio-kode bezala, modu sekuentzialean prozesatzen diren zenbait jarraibidek osatzen dute. 5-32 kodearen kodeak menu-img elementuaren erreferentzia lortzen du lehenik, eta elementu horren klik egitateari erantzungo dion funtzio bat gehitzen du. Gero, elementuak erabiltzailearen klik jasotzen duenean, kodeak elementu menunagusiaren display propietatearen balioa aldatzen du, egungo egoeraren arabera. Menua ikusgai ez badago, ikusgai jartzen du, edo alderantziz (kode horrek 6. kapituluan nola funtzionatzen duen azalduko dugu). 5-18 irudiak botoia sakatzean ikusten duguna erakusten du.</p>
+              <div class="garrantzi-oinarrizko">
+                <h6>Egin ezazu zeuk</h6>
+                <p>Erantsi 5-32 kodearen kodea &lt;head&gt; elementuaren barruan eta &lt;link&gt; elementuaren azpian zure dokumentuan. Eguneratu orria zure nabigatzailean. Egin klik botoian menua irekitzeko. 5-18 irudiaren antzeko zerbait ikusi beharko zenuke</p>
+              </div>
+              <p>Orain arte, kutxa-eredu tradizionalarekin lan egin dugu. Nabigatzaileen bertsio zaharrekin duen bateragarritasuna dela eta, gaur egun eredu hori da gogokoena, baina web diseinu moldagarria kutxa malguaren ereduarekin inplementatzeko aukera ere badugu. Eredu honekin egokitu daitekeen webgune bat nola garatu erakusteko, 4. kapituluko dokumentua erabiliko dugu, 4-52 kodea.</p>
+              <div class="irudiKutxa">
+                <img src="../../irudiak/CSS-DISEINU/web-molda-aplikazio6.png" alt="">
+                <figcaption>5-18 irudia: Menua nola ikusten den 'JavasCript'-en laguntzarekin</figcaption>
+
+              <p>Adibide honen arabera, dokumentuan 5-29 kodean erantsitako &lt;nav&gt; elementua eta 5-32 kodean sartutako JavaScript kodea duen &lt;link&gt; elementua sartu ditugu, baina kode hori aldatu egin behar da eredu horrekin lan egin dezan. Display propietateari esleitutako balioak, erabiltzaileak botoia sakatzen duenean menua ager dadin, blockaren ordez flex izan behar du, orain edukiontzi malguekin lan egiten ari garelako.</p>
+              <pre>
+                <code>
+&lt;script&gt;
+  var visible = false;
+
+  function hasi() {
+      var elementua = document.getElementById("menu-irudia");
+      elementua.addEventListener("click", agertuMenua);
+    }
+
+  function agertuMenua() {
+    var elementua = document.getElementById("menunagusia");
+      if (!visible) {
+        <strong>elementua.style.display = "flex";</strong>
+        visible = true;
+    } else {
+      elementua.style.display = "none";
+      visible = false; 
+    }
+  }
+
+  window.addEventListener("load", hasi);
+&lt;/script&gt;
+                </code><figcaption>5-33 kodea: Menua edukiontzi malgu gisa erakusten (...display="flex";)</figcaption>
+              </pre>
+                <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
+              <p>Behar dugun estilo orria kutxa eredu tradizionalarekin erabiltzen dugunaren oso antzekoa da; alde bakarra da edukiontzi malguak eraiki behar ditugula eta elementu malguak flex propietatearekin deklaratu behar ditugula.</p>
+              <p>Honako hauek dira dokumentu osorako estilo lehenetsiak.</p>
+              
+              <pre style="height:600px">
+                <code>
+* {
+  margin: 0px;
+  padding: 0px;
+  }
+  #goiburuko-irudia {
+  width: 96%;
+  height: 150px;
+  padding: 0% 2%;
+  background-color: #0F76A0;
+  }
+  #goiburuko-irudia > div {
+  max-width: 960px;
+  margin: 0px auto;
+  padding-top: 45px;
+  }
+  #goiburuko-irudia h1 {
+  font: bold 54px Arial, sans-serif;
+  color: #FFFFFF;
+  }
+  #menuikonoa {
+  display: none;
+  width: 95%;
+  height: 38px;
+  padding: 12px 2% 0px 3%;
+  background-color: #9FC8D9;
+  border-top: 1px solid #094660;
+  border-bottom: 1px solid #094660;
+  }
+  #menu-nagusia {
+  width: 96%;
+  height: 50px;
+  padding: 0% 2%;
+  background-color: #9FC8D9;
+  border-top: 1px solid #094660;
+  border-bottom: 1px solid #094660;
+  }
+  #menu-nagusia > div {
+  max-width: 960px;
+  margin: 0px auto;
+  }
+  #menu-nagusia li {
+  display: inline-block;
+  height: 35px;
+  padding: 15px 10px 0px 10px;
+  margin-right: 5px;
+  }
+  #menu-nagusia li:hover {
+  background-color: #6FACC6;
+  }
+  #menu-nagusia a {
+  font: bold 18px Arial, sans-serif;
+  color: #333333;
+  text-decoration: none;
+  }
+  main {
+  width: 96%;
+  padding: 2%;
+  background-image: url("fondo.png");
+  }
+  main > div {
+  max-width: 960px;
+  margin: 0px auto;
+  }
+  #artikulu-nagusiak {
+  float: left;
+  width: 65%;
+  padding-top: 30px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  }
+  #albo-informazioa {
+  float: right;
+  width: 29%;
+  padding: 2%;
+  background-color: #E7F1F5;
+  border-radius: 10px;
+  }
+  #albo-informazioa h1 {
+  font: bold 18px Arial, sans-serif;
+  color: #333333;
+  margin-bottom: 15px;
+  }
+  .berreskuratu {
+  clear: both;
+  }
+  article {
+  position: relative;
+  padding: 0px 40px 20px 40px;
+  }
+  article time {
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -70px;
+  width: 80px;
+  padding: 15px 5px;
+  background-color: #094660;
+  box-shadow: 3px 3px 5px rgba(100, 100, 100, 0.7);
+  border-radius: 5px;
+  }
+  .eguna-zenbakia {
+  font: bold 36px Verdana, sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+  }
+  .eguna-izena {
+  font: 12px Verdana, sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+  }
+  article h1 {
+  margin-bottom: 5px;
+  font: bold 30px Georgia, sans-serif;
+  }
+  article p {
+  font: 18px Georgia, sans-serif;
+  }
+  figure {
+  margin: 10px 0px;
+  }
+  figure img {
+  max-width: 98%;
+  padding: 1%;
+  border: 1px solid;
+  }
+  #oineko-irudia {
+  width: 96%;
+  padding: 2%;
+  background-color: #0F76A0;
+  }
+  #oineko-irudia > div {
+  max-width: 960px;
+  margin: 0px auto;
+  background-color: #9FC8D9;
+  border-radius: 10px;
+  }
+  .oineko-saila {
+  float: left;
+  width: 27.33%;
+  padding: 3%;
+  }
+  .oineko-saila h1 {
+  font: bold 20px Arial, sans-serif;
+  }
+  .oineko-saila p {
+  margin-top: 5px;
+  }
+  .oineko-saila a {
+  font: bold 16px Arial, sans-serif;
+  color: #666666;
+  text-decoration: none;
+  }
+
+  /*---------------------mediaqueri-ak-(1120px baino pantaila estuagoetarako)----------*/
+  @media (max-width: 1120px) {
+  article time {
+  position: static;
+  width: 100%;
+  padding: 0px;
+  margin-bottom: 10px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 0px;
+  border-radius: 0px;
+  }
+  .eguna-zenbakia {
+  display: inline-block;
+  font: bold 18px Verdana, sans-serif;
+  color: #337799;
+  padding-right: 5px;
+  }
+  .eguna-izena {
+  display: inline-block;
+  font: bold 14px Verdana, sans-serif;
+  color: #337799;
+  }
+  article h1 {
+  margin-bottom: 0px;
+  }
+}
+/*---------------------mediaqueri-ak-(720px baino pantaila estuagoetarako)----------*/
+@media (max-width: 720px) {
+    #artikulu-nagusiak {
+    width: 100%;
+    }
+    #albo-informazioa {
+    width: 90%;
+    padding: 5%;
+    margin-top: 20px;
+    }
+  }
+  /*---------------------mediaqueri-ak-(570px baino pantaila estuagoetarako)----------*/
+  @media (max-width: 570px) {
+  #goiburuko-irudia > div {
+  text-align: center;
+  }
+  #goiburuko-irudia h1 {
+  font: bold 30px Arial, sans-serif;
+  }
+  #menu-nagusia {
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+  }
+  #menu-nagusia li {
+  display: block;
+  margin-right: 0px;
+  text-align: center;
+  }
+  .oineko-saila {
+  width: 94%;
+  text-align: center;
+  }
+  #menu-nagusia {
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+  }
+  #menu-nagusia li {
+  display: block;
+  margin-right: 0px;
+  text-align: center;
+  }
+  #menuikonoa {
+  display: block;
+  }
+  .oineko-saila {
+  width: 94%;
+  text-align: center;
+  }
+  #goiburuko-irudia > div {
+  text-align: center;
+  }
+}
+                </code><figcaption>5-34 kodea: Kutxa malguaren ereduarekin egokitu daitekeen dokumentu bat diseinatzen</figcaption>
+              </pre>
+              <p>Dokumentu honetarako diseinu grafikoa lehen sortu genuen bera da, eta, beraz, etenaldi puntu berberak ezarri behar ditugu. Berriz ere, bistaratzeko eremuaren zabalera 1120 pixelekoa edo txikiagoa denean, &lt;time&gt; elementua artikuluaren izenburuaren azpira mugitu behar dugu. Bi ereduetan &lt;time&gt; elementuak balio absolutuak dituenez, Query Media honek ez du aldaketarik izan.</p>
+              <pre>
+                <code>
+@media (max-width: 1120px) {
+  article time {
+  position: static;
+  width: 100%;
+  padding: 0px;
+  margin-bottom: 10px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 0px;
+  border-radius: 0px;
+  }
+  .eguna-zenbakia {
+  display: inline-block;
+  font: bold 14px Verdana, sans-serif;
+  color: #999999;
+  padding-right: 5px;
+  }
+  .eguna-izena {
+  display: inline-block;
+  font: bold 14px Verdana, sans-serif;
+  color: #999999;
+  }
+  article h1 {
+  margin-bottom: 0px;
+  }
+}
+                </code><figcaption>5-35 kodea: &lt;time&gt; elementua mugitzen</figcaption>
+              </pre>
+              <p>Hurrengo urratsa da bi zutaberen diseinua zutabe baten diseinu bihurtzea, bistaratze eremuaren zabalera 720 pixelekoa edo txikiagoa denean. Zutabeek lerro bera partekatzea nahi ez dugunez, baizik eta bata bestearen gainean agertzea, edukiontzia Block elementu gisa deklaratu behar dugu. Behin hori eginda, erraza da elementuak alboetara zabaltzea, eta soilik % 100eko tamaina eman behar diegu (&lt;aside&gt; elementuak, lehenetsita, gehienez 280 pixeleko zabalera duenez, max-width propietatearen balioa % 100ekoa dela adierazi behar dugu muga hori ezabatzeko).</p>
+
+              <pre>
+                <code>
+@media (max-width: 720px) {
+  main > div {
+  display: block;
+  }
+  #artikulu-nagusiak {
+  width: 100%;
+  margin-right: 0px;
+  }
+  #albo-informazioa {
+  width: 90%;
+  max-width: 100%;
+  padding: 5%;
+  margin-top: 20px;
+  }
+}
+                </code><figcaption>5-36 kodea: Bi zutabeko diseinu batetik zutabe bateko diseinu batera igaro da</figcaption>
+              </pre>
+              <p>Azken eten-puntuan, menuko barra aldatu behar dugu, aukeren ordez menuko botoia erakusteko, eta edukiontzia orri-oinean Block elementu gisa adierazteko, atal bat bestearen gainean kokatzeko.</p>
+              <pre>
+                <code>
+@media (max-width: 570px) {
+  #goiburuko-irudia > div {
+  text-align: center;
+  }
+  #goiburuko-irudia h1 {
+  font: bold 46px Arial, sans-serif;
+  }
+  #menu-nagusia {
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+  }
+  #menu-nagusia li {
+  display: block;
+  margin-right: 0px;
+  text-align: center;
+  }
+  #menuikonoa {
+  display: block;
+  }
+  #oineko-irudia > div {
+  display: block;
+  }
+  .oineko-saila {
+  width: 94%;
+  text-align: center;
+  }
+}
+                </code><figcaption>5-37 kodea: Menua eta orri-oina egokituz</figcaption>
+              </pre>
+              <p>5-37 kodeko kodearekin, estilo orria prest dago. Azken diseinua kutxa-eredu tradizionalarekin lortzen dugunaren berdin-berdina da, baina oraingoan kutxa malguaren eredua erabiliz. Kutxa malguaren eredua hobekuntza handia da kutxa tradizionalaren ereduarekin alderatuta, eta webgune moldagarrien sorrera sinplifikatu dezake, elementuak aurkezten diren ordena aldatzeko aukera emanez eta tamaina malguko eta finkoko elementuen konbinazioa erraztuz, nahiz eta ez den bateragarria merkatuko nabigatzaile guztiekin.</p>
+              <p>Garatzaile batzuek dagoeneko erabiltzen dute eredu hau edo bere propietate batzuk inplementatzen dituzte, baina webgune gehienak oraindik kutxa eredu tradizionalarekin garatzen dira.</p>
+              <div class="garrantzi-oinarrizko">
+                <h6>Egin ezazu zeuk</h6>
+                <p>Sortu HTML fitxategi berri bat 4-52 kodeko dokumentuarekin (ikus kutxa malguaren eredua 4. kapituluan). Gehitu dokumentuari 5-29 kodean sartutako &lt;nav&gt; elementua eta 5-33 kodean sartutako &lt;script&gt; elementua, aurreko adibidean azaldu dugun bezala.</p>
+                <p>Sortu misestilos.css izeneko CSS fitxategi berri bat eta kopiatu 5-34, 5-35, 5-36 eta 5-37 kodeen kodeak barruan. Deskargatu miimagen.jpg eta iconomenu.png fitxategiak gure webgunetik eta mugitu zure dokumentuaren direktoriora. Ireki dokumentua zure nabigatzailean eta aldatu leihoaren tamaina, elementuak erabilgarri dagoen espaziora nola egokitzen diren ikusteko.</p>
+              </div>
+
+                <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
+        
+      </article>
+
+</body>
+</html>
