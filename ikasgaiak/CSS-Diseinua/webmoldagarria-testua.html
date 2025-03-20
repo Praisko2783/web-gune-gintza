@@ -3,31 +3,335 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/estiloa.css">
+    <link rel="stylesheet" href="../../css/estilo-orokorra.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Testu moldagarria</title>
 </head>
 <body>
     <!-- Hemen doa edukiaren ataleko TESTUA azpiatala  -->
-     <section>
-      
-     </section>
-    <article class="ikasgaia" id="html-egitura-elementua">
-      <div class="azpitituluak">
+    <article>
+      <div>
         <h3><strong>Testua eta irudiak</strong></h3>
       </div>
       <div class="banaketaTxikia"></div>
-      <h4>Testua</h4>
-      <div class="banaketaTxikia"></div>
-      <h5>Hainbat gailutara egokitu behar dugun diseinuaren beste alderdi bat testua da. Tamaina finkoko letra-mota bat deklaratzen dugunean (14 pixel), testua tamaina horretan agertzen da beti, gailua edozein dela ere. Ordenagailu pertsonaletan ondo ikus daiteke, baina pantaila txikietan zaila izango da horrelako testu bat irakurtzea. Letraren tamaina gailura doitzeko, letraren tamaina estandarra erabil dezakegu. Nabigatzaileak zehaztutako tamaina da, exekutatzen den gailuaren arabera eta erabiltzailearen lehentasunetara egokituta. Adibidez, ordenagailu pertsonaletan, iturriaren tamaina lehenetsia 16 pixelekoa izaten da normalean. Gure orrialdeko testua irakurtzeko modukoa dela ziurtatzeko, balio horren arabera defini dezakegu haren tamaina. CSSk honako neurketa-unitateak eskaintzen ditu helburu horrekin.</h5>
-      <div class="banaketaTxikia"></div>
-      <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis omnis aliquam voluptatem libero modi sequi deleniti distinctio deserunt, architecto facilis. Quidem hic magnam tempora aut laudantium. Provident iste architecto facere!</h6>
-      <div class="banaketaTxikia"></div>
-      <h4>Irudiak</h4>
-      <div class="banaketaTxikia"></div>
-      <h5>Irudiak berez agertzen dira jatorrizko tamainan, eta horrek esan nahi du eskuragarri dagoen espaziora egokitzen direla, esplizituki adierazi ezean. Irudi finko bat irudi malgu bihurtzeko, haren tamaina adierazi behar dugu ehunekotan. Adibidez, hurrengo arauak elementuen zabalera konfiguratzen du < img> gure dokumentuko < article> elementuen barruan, % 100eko balioarekin, eta, beraz, irudiek edukiontziaren zabalera bera izango dute.</h5>
-      <div class="banaketaTxikia"></div>
-      <h6>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At optio minus assumenda explicabo dignissimos ullam nulla alias quasi maxime non nemo nam, ut debitis deserunt tenetur veritatis ipsum maiores laboriosam.</h6>
-      <div class="banaketaTxikia"></div>
+      <h3>Testua</h3>
+      <p>Dispositibo desberdinetara egokitu behar dugun diseinuaren beste alderdi bat testua da. Letra mota bat tamaina finkoarekin deklaratzen dugunean (14 pixel, adibidez), testua beti tamaina horretan agertzen da, gailua edozein dela ere. Ordenagailu pertsonaletan ondo ikus daiteke, baina pantaila txikietan horrelako testu bat irakurtzea zaila izango da. Letraren tamaina gailura egokitzeko, letra neurri estandarra erabil dezakegu. Tamaina hori nabigatzaileak zehazten du, exekutatzen den gailuaren arabera eta erabiltzailearen lehentasunetara egokituta. Adibidez, ordenagailu pertsonaletan, iturriaren tamaina lehenetsia normalean 16 pixel izaten da. Gure orrialdeko testua irakurgarria dela ziurtatzeko, haren tamaina defini dezakegu balio horren arabera. CSSk honako neurketa-unitate hauek eskaintzen ditu helburu horrekin.</p>
+      <ul class="zerrendaArruntak">
+        <li><strong>em — </strong>Unitate hau elementuari esleitutako iturriaren tamainari dagokion neurria da. Zenbaki hamartarrak onartzen ditu. 1 balioa iturriaren egungo tamainaren berdina da.</li>
+        <li><strong>rem — </strong>Unitate honek erroko elementuari esleitutako iturriaren tamainari dagokion neurria adierazten du (normalean, < body> elementua). Zenbaki hamartarrak onartzen ditu. 1 balioa iturriaren egungo tamainaren berdina da.</li>
+      </ul>
+      <p>Iturriak lehen bezala definitzen dira, baina px unitatearen ordez em unitatea jarri behar da, elementuari esleitutako egungo iturriaren tamainari dagokion iturriaren tamaina adierazteko. Adibidez, estilo-orri honek &lt;h1&gt; eta &lt;p&gt; elementuetarako letra-tamainak definitzen ditu gure dokumentuan em unitateak erabiliz (arauak 5-6 zerrendako dokumentua kontuan hartuta definitu dira).</p>
+      <pre>
+        <code>
+* {
+  margin: 0px;
+  padding: 0px;
+  }
+  section {
+  float: left;
+  width: 61%;
+  padding: 2%;
+  margin-right: 5%;
+  background-color: #999999;
+  }
+  aside {
+  float: left;
+  width: 26%;
+  padding: 2%;
+  background-color: #CCCCCC;
+  }
+  .berreskuratu {
+  clear: both;
+  }
+  article h1 {
+    font: bold 2em Georgia, sans-serif;
+    }
+    aside h1 {
+    font: bold 1.2em Georgia, sans-serif;
+    }
+    aside p {
+    font: 1em Georgia, sans-serif;
+    }
+        </code><figcaption>5-14 kode zatia: Letra-tamaina erlatiboak deklaratzeko</figcaption>
+      </pre>
+      <p><strong>em </strong>unitateak <strong>px</strong> unitatea ordezkatzen du, eta, beraz, nabigatzailearen ardura da testuaren tamaina pixeletan kalkulatzea, gaur egun elementuari esleitutako iturriaren tamainatik abiatuta. Balio hori kalkulatzeko, nabigatzaileak <strong>em</strong> zenbakia biderkatu egiten du iturri estandarraren egungo tamainarekin.</p>
+      <p>Adibidez, 5-14 zerrendako h1 artikulazio-arauak 2em tamainako &lt;h1&gt; elementua esleitzen du &lt;article&gt; elementuen barruan. Horrek esan nahi du idazmahaiko ordenagailu batean elementu horien testuak 32 pixeleko tamaina izango duela (16 * 2).</p> 
+      <div class="irudiKutxa">
+        <img src="../../irudiak/CSS-DISEINU/web-molda-testu0.png" alt="Web moldagarria. Bi zutabe. Section eta Aside">
+        <figcaption>Letra erlatiboaren tamaina</figcaption>
+        </div>
+        
+      <div class="garrantzi-oinarrizko">
+        <h6>Egizu zerorrek: </h6>
+        <p>HTML5 dokumentuarekin ari gara lanean.</p>
+        <pre style="height:600px">
+          <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="es"&gt;
+          &lt;head&gt;
+            &lt;title&gt;Orriaren izena hemen&lt;/title&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="description" content="Hau HTML5 dokumentua da"&gt;
+            &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+            &lt;meta name="viewport" content="width=device-width initial-scale=1"&gt;
+            &lt;link rel="stylesheet" href="denamoldagarri.css"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;section&gt;
+              &lt;div&gt;
+                &lt;article&gt;
+                  &lt;h1&gt;Lehen artikuluaren izenburua&lt;/h1&gt;
+                  &lt;img src="lehenIrudia.jpg"&gt;
+                &lt;/article&gt;
+              &lt;/div&gt;
+              &lt;div&gt;
+                &lt;article&gt;
+                  &lt;h1&gt;Bigarren artikuluaren izenburua&lt;/h1&gt;
+                  &lt;img src="bigarrenIrudia.jpg"&gt;
+                &lt;/article&gt;
+              &lt;/div&gt;
+            &lt;/section&gt;
+            &lt;aside&gt;
+              &lt;div&gt;
+                &lt;h1&gt;Alboko informazioa&lt;/h1&gt;
+                &lt;p&gt;Lehen artikularen aipamena&lt;/p&gt;
+                &lt;p&gt;Bigarren artikuluaren aipamena&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/aside&gt;
+            &lt;div class="berrreskuratu"&gt;&lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+          </code><figcaption>&lt;meta&gt; elementua erabili da bistaratze eremua eratzeko.</figcaption>
+        </pre>
+
+        <p>Ordeztu arauak dokumentu honetarako sortutako denamoldagarri.css fitxategian, 5-14 Zerrendaren kodearekin, eta ireki dokumentua zure nabigatzailean. Goiko irudiaren antzeko zerbait ikusi beharko zenuke.</p>
+      </div>
+      <p><strong>em </strong>unitateak elementuari esleitutako iturriaren tamainari dagokion tamaina definitzen du. Horren arrazoia da elementuek edukiontzien propietateak heredatzen dituztela eta, beraz, haien letra-tamainak nabigatzaileak ezarritako estandarraz bestelakoak izan daitezkeela. Horrek esan nahi du elementu baten edukiontziaren letra tamaina aldatzen badugu, elementuari esleitutako letra neurriak eragina izango duela.</p>
+      <p>Adibidez, honako arau hauek letra-tamaina bat esleitzen diote &lt;article&gt; elementuari eta beste bat &lt;h1&gt; elementuari bere barruan.</p>
+      <pre>
+        <code>
+article {
+  font: bold 1.5em Georgia, sans-serif;
+  }
+  article h1 {
+    font: bold 2em Georgia, sans-serif;
+}
+        </code><figcaption>5-15 kode zatia: Elementuentzako eta horien edukiontzientzako tamaina erlatiboak adierazteko</figcaption>
+      </pre>
+
+      <p>Lehenengo erregelak 1.5em-eko letra-tamaina ematen dio &lt;article&gt; elementuari. Propietate hori aplikatu ondoren, &lt;article&gt; elementuaren edukiak, barruan &lt;h1&gt; elementuaren edukia barne, tamaina estandarra halako 1,5 izango du (24 pixel ordenagailu pertsonal batean). &lt;h1&gt; elementuak balio hori heredatzen du, eta, beraz, hurrengo araua aplikatzen denean, letraren tamaina ez da kalkulatzen tamaina estandarretik, edukiontziak ezarritako tamainatik baizik (16* 1.5* 2 = 48). Emaitza 5-7 irudian erakusten da.
+        
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS-DISEINU/web-molda-testu1.png" alt="Web moldagarria. Bi zutabe. Section eta Aside">
+          <figcaption>5-7 irudia: Edukiontziaren letra-tamaina</figcaption>
+          </div>
+        
+          <p>Portaera hori aldatu nahi badugu eta nabigatzailea letraren tamaina kalkulatzera behartu nahi badugu, betiere balio estandarretik abiatuta, rem unitateak erabil ditzakegu. Unitate horiek erroko elementuari buruzkoak dira, egungo elementuaren ordez, eta, beraz, balioak beti oinarrizko balio berarekin biderkatzen dira.</p>
+        <pre>
+          <code>
+article {
+  font: bold 1.5rem Georgia, sans-serif;
+  }
+  article h1 {
+  font: bold 2rem Georgia, sans-serif;
+  } 
+          </code><figcaption>5-16 kode zatia: Irudietarako gehieneko tamaina adierazten</figcaption>
+        </pre>
+        <p>5-16 Zerrendako arauak 5-14 Zerrendako adibideari aplikatuz gero, nabigatzaileak iturriaren tamaina kalkulatzen du balio estandarretik abiatuta, eta artikuluaren izenburua tamaina horren bikoitzean erakusten du, 5-6 irudiak ilustratzen duenaren arabera, edukiontzirako adierazitako tamaina kontuan hartu gabe.</p>
+
+        <div class="garrantzi-oinarrizko">
+          <h6>Oinarrizkoena:</h6>
+          <p>portzentajeen ordez em unitateak erabil ditzake elementuen tamaina zehazteko. em unitateak erabiltzen dituenean, iturriaren tamainak zehazten du tamaina, edukiontziaren ordez. Teknika hau diseinu elastikoak sortzeko erabiltzen da. Informazio gehiago nahi izanez gero, bisitatu gure webgunea eta jarraitu kapitulu honetako estekak.</p>
+        </div>
+        
+        <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
+        
+        <h3>Irudiak</h3>
+        <p>Irudiak berez erakusten dira jatorrizko tamainan, eta horrek esan nahi du eskuragarri dagoen espaziora egokitzen direla, esplizituki adierazi ezean. Irudi finko bat irudi malgu bihurtzeko, haren tamaina ehunekotan adierazi behar dugu. Adibidez, hurrengo erregelak <strong>&lt;img&gt; </strong>elementuen zabalera konfiguratzen du gure dokumentuko <strong>&lt;article&gt;</strong> elementuen barruan, % 100eko balioarekin, eta, beraz, irudiek edukiontziaren zabalera bera izango dute.</p>
+        <pre>
+          <code>
+article img {
+  width: 100%;
+  }
+          </code><figcaption>Irudien tamaina egokitzeko</figcaption>
+        </pre>
+        
+        
+        <p>5-18 kode zatiko erregelak irudia hedatzen uzten du, jatorrizko tamaina hartu arte. Irudia edukiontzia bezain zabala izango da, edukiontziak irudiaren jatorrizko tamaina baino handiagoa izan ezean.</p>
+        <div class="garrantzi-oinarrizko">
+          <h6>Egin ezazu zeuk: </h6>
+          <p>erantsi 5-17 Zerrendaren araua aurreko adibiderako sortutako estilo orriari eta ireki dokumentua zure nabigatzailean. Irudia zabaldu edo zutabearekin batera uzkurtu beharko litzateke leihoaren tamaina aldatu ahala.</p>
+        </div>
+        <p>Irudiaren zabalerari ehuneko bat esleitzean, nabigatzailea irudiaren tamaina bere edukiontziaren tamainaren arabera kalkulatzera behartzen da (<strong>&lt;article&gt;</strong> elementua gure dokumentuan). Era berean, % 100etik beherako balioak ere adieraz ditzakegu, baina irudiaren tamaina edukiontziaren tamainarekiko proportzionala izango da beti, eta horrek esan nahi du edukiontzia hedatuz gero, irudia jatorrizkoa baino tamaina handiagoarekin ager litekeela. Irudia hedatzeko edo biltzeko mugak ezarri nahi baditugu, <strong>max-width</strong> eta <strong>min-width</strong> propietateak erabili behar ditugu. Ikusi ditugu ezaugarri horiek kutxa malguaren ereduan aplikatuta, baina kutxa-eredu tradizionalean ere erabil daitezke, elementu malguetarako mugak adierazteko. Adibidez, irudia bere jatorrizko tamainan erakusteko leku nahikorik ez dagoenean bakarrik murriztea nahi badugu, <strong>max-width</strong> propietatea erabil dezakegu.</p>
+        <pre>
+          <code>
+article img {
+  max-width: 100%;
+  }
+          </code><figcaption>5-18 kode zatia: Irudietarako gehieneko tamaina adierazten</figcaption>
+        </pre>
+        <p>5-18 kode zatiko erregelak irudia hedatzen uzten du, jatorrizko tamaina hartu arte. Irudia edukiontzia bezain zabala izango da, edukiontziak irudiaren jatorrizko tamaina baino handiagoa izan ezean.</p>
+        <div class="garrantzi-oinarrizko">
+          <h6>Egin ezazu zeuk</h6>
+          <p>Ordeztu 5-17 Zerrendaren araua zure estilo orrian 5-18 Zerrendaren erregelarekin. Ireki dokumentua zure nabigatzailean eta aldatu leihoaren tamaina. Irudia jatorrizko tamainara iritsi arte zabaltzen ikusi beharko litzateke, 5-8 irudiak erakusten duen bezala.</p>
+        </div>
+          
+        <div class="irudiKutxa">
+          <img src="../../irudiak/CSS-DISEINU/web-molda-testu2.png" alt="Web moldagarria. Bi zutabe. Section eta Aside">
+          <figcaption>5-8 irudia: gehienezko tamaina esleitu zaion irudia</figcaption>
+          </div>
+          <p>Irudia eskuragarri dagoen espaziora egokitzeaz gain, webgune moldagarri batek irudi batzuk beste batzuekin ordezkatzea ere behar izaten du, baldintzak gehiegi aldatzen direnean. Gutxienez bi egoeratan da beharrezkoa hori: eskuragarri dagoen espazioa jatorrizko irudia erakusteko nahikoa ez denean (webgunearen logoa bertsio murriztu batez ordezkatu behar denean, adibidez) edo pantailaren pixelen dentsitatea desberdina denean eta bereizmen altuagoa edo baxuagoa duen irudi bat erakutsi behar dugunean. Arrazoia edozein dela ere, HTMLk elementu hau eskaintzen du erakutsi beharreko irudia hautatzeko.</p>
+          <p>
+            <ul class="garrantzi-oinarrizko">
+              <li><strong>&lt;picture&gt; — </strong>Elementu hori edukiontzi bat da, eta &lt;img&gt; elementu bererako iturri ugari zehazteko aukera ematen digu.</li>
+              <li><strong>&lt;source&gt; — </strong>Elementu horrek &lt;img&gt; elementurako iturri posible bat definitzen du. Batez besteko atributua izan dezake, irudia zein Media Queryrekin lotuta egongo den zehazteko, eta <strong>srcset</strong> atributua elementuaren iturri gisa deklaratu nahi ditugun irudien ibilbidea zehazteko.</li>
+            </ul>
+            <p>&lt;picture&gt; elementua &lt;source&gt; elementu bat edo gehiago dituen edukiontzi bat baino ez da, irudiaren iturri posibleak zehazteko, eta &lt;img&gt; elementu bat amaieran, hautatutako irudia pantailan erakusteko. Dokumentu honek erakusten du nola ordezkatu webgune baten logoa pantaila txikiak dituzten gailuen bertsio sinplifikatu batekin, elementu horiek erabiliz.</p>
+            <pre>
+              <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Orriaren izena hemen doa&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="description" content="Dokumentu hau HTML5a da"&gt;
+    &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;picture&gt;
+        &lt;source media="(max-width: 480px)" srcset="logotxikia.jpg"&gt;
+        &lt;img src="logo.jpg"&gt;
+      &lt;/picture&gt;
+    &lt;/header&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+              </code><figcaption>Irudia &lt;picture&gt; elementuarekin hautatuz</figcaption>
+            </pre>
+
+          <p>5-19 kode zatiko dokumentuan, irudirako iturri bakarra deklaratzen dugu, eta <strong>Media Query, max-width</strong> ekin lotzen dugu: 480px. Nabigatzaileak dokumentu hau irakurtzen duenean, lehenik &lt;source&gt; elementua prozesatzen du eta, ondoren, &lt;img&gt; elementuari iturria esleitzen dio, baldin eta bistaratze-eremuak Media Query-ren baldintzak betetzen baditu. Kointzidentziarik aurkitzen ez bada, &lt;img&gt; elementuaren src atributuak zehaztutako irudia agertuko da haren ordez. Horrek esan nahi du bistaratze eremua 480 pixeletik gorakoa den bakoitzean, logo.jpg irudia kargatu eta pantailan erakusten dela.</p>
+          <div class="irudiKutxa">
+            <img src="../../irudiak/CSS-DISEINU/logoak.png" max-width="100%"  alt="Logo jatorrizkoa pantaila handietarako">
+            <figcaption>5-9,10 irudia: Jatorrizko logoa eta pantaila txikietan erabiltzekoa.</figcaption>
+            </div>     
+          <p>Bistaratze-eremuaren zabalera 480 pixelekoa edo txikiagoa bada, nabigatzaileak &lt;source&gt; elementuak zehaztutako irudia &lt;img&gt; elementuari esleitzen dio, eta logotxikia.jpg irudia pantailan erakusten da.</p>
+
+          <div class="garrantzi-oinarrizko">
+            <h6>Egizu zeuk</h6>
+            <p>Sortu HTML fitxategi berri bat 5-19 zerrendako dokumentuarekin. Deskargatu logo.jpg eta <strong>logotxikia.jpg</strong> irudiak gure webgunetik, eta mugitu dokumentua dagoen direktoriora. Ireki dokumentua zure nabigatzailean eta aldatu leihoaren tamaina. Egungo tamainaren arabera, 5-9 irudiaren edo 5-10 irudiaren antzeko zerbait ikusi beharko zenuke.</p>
+          </div>
+
+                  
+        <!-- Frogalekura esteka -------------- -->
+<div class="banaketaTxikia"></div>
+<div style="padding:10px; font-size: 24px; font-weight:600; text-align: center; color:#258505; background:#bbeecc; border:2px solid #258505; cursor:pointer">
+  <h3><a href="../../atalak/kodetzeAutoKopia.html" target="_blank">Frogak egiteko 'frogalekua'</a></h3>
+  <div style="font-size: 16px;">
+    <p>Estekak froga simpleak egiteko aproposa den aplikazio bat irekiko dizu elementuek zer-nolako itxura hartzen duten ikusteko, baina hor egindako frogak komeni da <strong>kode editorera</strong> eramatea eta bertan egiaztatzea gure nahiari hurbiltzen zaion egindakoa.</p>
+  </div>
+</div>
+        
+          <p>Irudi bat tamaina edo eduki desberdineko beste batekin ordezkatu behar den egoerarik ohikoena hori den arren, bada beste baldintza bat gure erabiltzaileei irudiak erakusten dizkiegunean kontuan hartu behar duguna. 2010ean Applek erretina motako monitoreak sartu zituenetik, pixel dentsitate handiagoa duten pantailak daude. Dentsitate altuagoak hazbeteko pixel gehiago esan nahi du, eta horrek irudi argiagoak eta zehatzagoak ekartzen ditu. Baina ezaugarri hori aprobetxatu nahi badugu, bereizmen handiko irudiak eman behar ditugu pantaila horietan. Adibidez, tamaina bereko eremu baten barruan 300 pixeleko zabalera eta 200 pixeleko altuera duen irudi bat ondo ikusiko da dentsitate normala duten pantailetan, baina pixel dentsitate handia duten gailuek irudia luzatu beharko dute eremu berean eskuragarri dauden pixel guztiak okupatzeko. Irudi hori erretina pantailetan ere ondo ikustea nahi badugu, 2ko eskala batekin (pixel kopuru bikoitza areako), irudi berarekin ordezkatu behar dugu, bi aldiz bereizmen handiagoarekin (600 x 400 pixel).</p>
+          <p>Media Queries-ek <strong>“resolution”</strong> gako-hitzarekin ikusten dute egoera hori. Gako-hitz honek balioa zenbaki oso batekin eta dppx unitatearekin adieraztea eskatzen du. 1 balioak bereizmen estandarra adierazten du. Balio altuagoek pantailaren eskala definitzen dute.</p>
+          <p>Gaur egun, erretina pantailek 2 eta 3ko eskalak dituzte. Hurrengo dokumentuak pantailetarako iturri espezifiko bat adierazten du, 2ko eskala batekin (ohikoenak).</p>
+            </p>
+            <pre style="height:600px">
+              <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="eus"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hauxe da orriaren izena&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="description" content="Hau HTML5 dokumentua da"&gt;
+    &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;link rel="stylesheet" href="denamoldagarri.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;section&gt;
+      &lt;div&gt;
+        &lt;article&gt;
+          &lt;h1&gt;Lehen artikuluiaren izenburua&lt;/h1&gt;
+          <strong>
+          &lt;picture&gt;
+            &lt;source media="(resolution: 2dppx)" srcset="miimagen@2x.jpg"&gt;
+            &lt;img src="nireirudia1.jpg"&gt;
+          &lt;/picture&gt;
+        </strong>
+        &lt;/article&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;article&gt;
+          &lt;h1&gt;Bigarren artikuluaren izenburua&lt;/h1&gt;
+          &lt;picture&gt;
+            &lt;source media="(resolution: 2dppx)" srcset="miimagen@2x.jpg"&gt;
+            &lt;img src="nireirudia2.jpg"&gt;
+          &lt;/picture&gt;
+        &lt;/article&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;aside&gt;
+      &lt;div&gt;
+        &lt;h1&gt;Alboko informazioa&lt;/h1&gt;
+        &lt;p&gt;Lehen artikuluaren aipamena&lt;/p&gt;
+        &lt;p&gt;Bigarren artikuluaren aipamena&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/aside&gt;
+    &lt;div class="berreskuratu"&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+              </code><figcaption>5-20 kodea: Bereizmen desberdinetarako irudiak hautatzen</figcaption>
+            </pre>
+            <p>Dokumentu hau pixel dentsitate estandarra duen pantaila batean irekitzen bada, nabigatzaileak miimagen.jpg irudia erakusten du, baina gailuak pantaila bat duenean, 2ko eskala batekin erretinatzen du, nabigatzaileak miimagen @ 2x.jpg irudia &lt;img&gt; elementuari esleitzen dio eta pantailan erakusten du.</p>
+            <p>5-20 kodeko adibideak erakusten duen bezala, prozesua erraza da. Bi irudi sortu behar ditugu, bata bereizmen normalarekin eta bestea bereizmen altuagoarekin erretina pantaila duten gailuetarako, eta, ondoren, eskura dauden iturriak &lt;source&gt; elementuekin adierazi. Baina honek arazo bat dauka. Irudien tamaina zehazten ez badugu, tamaina originalean erakusten dira eta, beraz, bereizmen handiko irudiaren tamaina irudi arruntaren bikoitza izango da. Horregatik, bereizmen baxuko eta handiko irudiekin lan egiten dugun bakoitzean, haien tamainak esplizituki aitortu behar ditugu. Adibidez, ondorengo arauek irudiaren zabalera konfiguratu egiten dute, edukiontziaren tamainaren % 100eko balioarekin, eta horrek bi irudiek tamaina bera hartzea eragingo du.</p>
+            <pre>
+              <code>
+* {
+  margin: 0px;
+  padding: 0px;
+  }
+  section {
+  float: left;
+  width: 61%;
+  padding: 2%;
+  margin-right: 5%;
+  background-color: #999999;
+  }
+  aside {
+  float: left;
+  width: 26%;
+  padding: 2%;
+  background-color: #CCCCCC;
+  }
+  .berreskuratu {
+  clear: both;
+  }
+  article img {
+  width: 100%;
+  }
+              </code><figcaption>5-21 zerrenda: Bereizmen handiko irudi baten tamaina adierazten</figcaption>
+            </pre>
+            <p>Hori lehen egin dugun gauza bera da, baina oraingoan nabigatzaileak bereizmen desberdineko irudiak erakusten ditu, gailuaren ezaugarrien arabera. 5-11 irudiak erakusten du nola ikusten den dokumentua erretinako pantaila batean (miimagen @ 2x.jpg fitxategiaren behealdean "2X" testua gehitu dugu bereizmen txikiko irudia bereizmen handiko iruditik bereizteko)</p>
+
+            <div class="irudiKutxa">
+              <img src="../../irudiak/CSS-DISEINU/web-molda-irudi1.png" alt="Bereizmen handiko irudien tamaina adierazten">
+              <figcaption>5-11 irudia: Bereizmen handiko irudien tamaina adierazten</figcaption>
+              </div>
+
+              
+              
+
+
+           
+        
       </article>
 
 
